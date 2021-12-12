@@ -1,4 +1,4 @@
-# Linxu运维 学习笔记
+Linxu运维 学习笔记
 
 ## 第一章 Linxu基础
 
@@ -14,11 +14,11 @@ Linux 能运行主要的 UNIX 工具软件、应用程序和网络协议。它�
 
 Linux 的发行版说简单点就是将 Linux 内核与应用软件做一个打包。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\1511849829609658.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\1511849829609658.jpg)
 
 目前市面上较知名的发行版有：Ubuntu、RedHat、CentOS、Debian、Fedora、SuSE、OpenSUSE、Arch Linux、SolusOS 等。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\wKioL1bvVPWAu7hqAAEyirVUn3c446.jpg-wh_651x-s_3197843091.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\wKioL1bvVPWAu7hqAAEyirVUn3c446.jpg-wh_651x-s_3197843091.jpg)
 
 **Linux 应用领域：**
 
@@ -27,7 +27,7 @@ Linux 的发行版说简单点就是将 Linux 内核与应用软件做一个打�
 目前 Linux 不仅在家庭与企业中使用，并且在政府中也很受欢迎。
 
 - 巴西联邦政府由于支持 Linux 而世界闻名。
-- 有新闻报道俄罗斯军队自己制造的 Linux 发布版的，做为 G.H.ost 项目已经取得成果。
+- 有新闻报道俄罗斯军队自己制造的 Linux 发布版的，做为 j.H.ost 项目已经取得成果。
 - 印度的 Kerala 联邦计划在向全联邦的高中推广使用 Linux。
 - 中华人民共和国为取得技术独立，在龙芯处理器中排他性地使用 Linux。
 - 在西班牙的一些地区开发了自己的 Linux 发布版，并且在政府与教育领域广泛使用，如 Extremadura 地区的 gnuLinEx 和 Andalusia 地区的 Guadalinex。
@@ -77,9 +77,9 @@ Linux是一个全面、丰富多彩的生态圈，主流的IT技术都是各路�
 
 Windows的使用由于美观，便捷，早已深入人心，但是也仅限在PC端耀武扬威，由于Linux的开源、稳定、安全性、开发灵活性，同时因为WIndows系统的自身缺陷，也奠定了Linux操作系统在服务端的位置。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\28.jpeg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\28.jpeg)
 
-虽说如此，普通用户想要转变Windows的使用，转变使用Linux还是比较费劲的，因为你曾经的点点点...全部变成了`命令行`形式。必须系统的、全面的学习Linux基础知识，方可使用。
+虽说如此，普通用户想要转变Windows的使用，转变使用Linux还是比较费劲的，因为你曾经的点点点...全部变成了 `命令行` 形式。必须系统的、全面的学习Linux基础知识，方可使用。
 
 **免费与收费：**
 
@@ -110,7 +110,7 @@ Windows的使用由于美观，便捷，早已深入人心，但是也仅限在P
 
 ### 1.2 计算机基础
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\43.gif)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\43.gif)
 
 如果计算机是一个人体，那么计算机也是有胳膊腿的
 
@@ -136,7 +136,7 @@ Windows的使用由于美观，便捷，早已深入人心，但是也仅限在P
 - 输出设备：屏幕
 - 主机部分：机箱、机箱内的零件
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\37.jpeg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\37.jpeg)
 
 我们主要通过键盘鼠标将数据输入到主机里面，再由主机的处理器进行计算，输出图像或是文本信息输出到屏幕中。
 
@@ -144,11 +144,11 @@ Windows的使用由于美观，便捷，早已深入人心，但是也仅限在P
 
 计算机硬件分类：
 
-![image-20211008181018527](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211008181018527.png)
+![image-20211008181018527](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211008181018527.png)
 
 其他系统硬件：
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\55-16336876836319.jpeg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\55-16336876836319.jpeg)
 
 主板上有很多接口，包括网卡、显卡、磁盘阵列等，以及与游戏玩家最看重的显卡，它控制着游戏画面、色彩、分辨率，以及存储相关，包括内存条、硬盘、软盘、光驱等。
 
@@ -162,7 +162,7 @@ Windows的使用由于美观，便捷，早已深入人心，但是也仅限在P
 
 超级计算机是运行速度最快的电脑，但是他的维护、操作费用也最高！主要是用于需要有高速计算的计划中。 例如：国防军事、气象预测、太空科技，用在仿真的领域较多。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\57.jpeg)
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\57.jpeg" alt="img" style="zoom:50%;" />
 
 
 
@@ -170,19 +170,19 @@ Windows的使用由于美观，便捷，早已深入人心，但是也仅限在P
 
 大型计算机通常也具有数个高速的CPU，功能上虽不及超级计算机，但也可用来处理大量数据与复杂的运算。 例如大型企业的主机、全国性的证券交易所等每天需要处理数百万笔数据的企业机构， 或者是大型企业的数据库服务器等等。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\58.jpeg)
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\58.jpeg" alt="img" style="zoom:50%;" />
 
 `工作站:`
 
 工作站的价格又比迷你电脑便宜许多，是针对特殊用途而设计的电脑。在个人电脑的性能还没有提升到目前的状况之前， 工作站电脑的性能/价格比是所有电脑当中较佳的，因此在学术研究与工程分析方面相当常见。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\59.jpeg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\59.jpeg)
 
 `微型电脑:`
 
 属于个人笔记本、台式机等
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\60.jpeg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\60.jpeg)
 
 **计算机单位：**
 
@@ -196,7 +196,7 @@ Windows的使用由于美观，便捷，早已深入人心，但是也仅限在P
 
 同样的，由于计算机存储越来越大，Byte也太小了，计算机又出现简化的单位KB、MB、GB、TB
 
-![image-20211008181435739](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211008181435739-163368807701515.png)
+![image-20211008181435739](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211008181435739-163368807701515.png)
 
 `速度单位:`
 
@@ -204,7 +204,7 @@ CPU的运算单位通常用MHz或者GHz这样的单位，Hz意味 `秒分之一`
 
 网络传输数据中以bit为单位，因此网络单位通常是 ** `Mbps（Mbits per second） 每秒多少Mbit` **
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\63.jpg)
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\63.jpg" alt="img" style="zoom:50%;" />
 
 如图3000Mbps传输速度理论上是除以8，5G速度也就是375MByte每秒下载速度。
 
@@ -224,9 +224,9 @@ CPU的运算单位通常用MHz或者GHz这样的单位，Hz意味 `秒分之一`
 
 做虚拟化的宿主机(eg:安装 vmware(虚拟化软件)的服务器)，CPU 颗数 4-8 颗，内存总量一般是 48G-128G，6- 10 个虚拟机。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\134.jpg)
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\134.jpg" alt="img" style="zoom:50%;" />
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\42.gif)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\42.gif)
 
 无论是手机还是电脑，整个机器的最核心部件就是 `中央处理器(Central Processing Unit, CPU)` 
 
@@ -236,17 +236,17 @@ CPU工作主要在于调度与运算，在CPU内部主要分为两个单元：`�
 
 -  `算术逻辑单元(arithmetic and logic unit)` 是能实现多组算术运算和逻辑运算的组合逻辑电路，简称ALU。
 
-![image-20211008182614318](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211008182614318-163368877672419.png)
+![image-20211008182614318](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211008182614318-163368877672419.png)
 
 -  `控制单元（Control Unit）` 负责程序的流程管理。正如工厂的物流分配部门，控制单元是整个CPU的指挥控制中心，由指令寄存器IR(Instruction Register)、指令译码器ID(Instruction Decoder)和操作控制器OC(Operation Controller)三个部件组成，对协调整个电脑有序工作极为重要。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\47.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\47.jpg)
 
 CPU读取的数据都是从内存而来，内存中的数据从键盘等输入单元而来。
 
 CPU处理完毕的数据也必须写回内存中，最后到输出设备
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\48.png)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\48.png)
 
 如图的流向，所有的数据都是经过内存再转出去，这个出/入是CPU发出的控制命令
 
@@ -266,11 +266,11 @@ CPU要处理的数据完全来自于内存，无论是应用程序还是文件�
 
 常见的`RISC`微指令集CPU有甲骨文`Oracle`公司的SPARC系列、IDM公司的Power Architecture 系列、安某公司的ARM CPU系列。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\50.jpeg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\50.jpeg)
 
 日常生活离不开CPU，华为的麒麟芯片基于ARM的架构之上，进行了自主研发的芯片，世界上95%的电子产品都是使用的ARM的架构，包括手机与平板，诸如 `苹果、高通、三星、华为` 、这些企业的产品都是在ARM上发展起来的。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\51.jpeg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\51.jpeg)
 
 **复杂指令集（Complex Instruction Set Computer, CISC）**
 
@@ -280,17 +280,17 @@ CISC微指令集每个小指令都可以执行一些底层的硬件操作，指�
 
 x86架构的CPU大量使用在 `PC个人电脑` 上面。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\52.jpeg)
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\52.jpeg" alt="img" style="zoom: 33%;" />
 
 想必大家用电脑这么久了，也听过32位、64位这样的词，这是2003年以前Intel开发的x86架构的CPU由8位升级到16、32位、后来最新的64位，个人笔记本CPU也被称作是x86_64的架构。
 
 这里的位指的是CPU一次能够读取数据的最大量，64位CPU表示一次可以读写64bit的数据，而32位则是32bit的数据，因此从内存中读取数据是有限制的，32位的CPU最多只能搭配4G的内存。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\53.jpeg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\53.jpeg)
 
 不同的x86架构的CPU差异在于微指令集的不同，先进的微指令集可以加速多媒体程序的解析，如4k视频加速，也能加强虚拟化技术(Intel-VT)的性能，再如节省电量损耗，省点电费也是不错的。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\54.jpeg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\54.jpeg)
 
 **Intel主板架构：**
 
@@ -298,12 +298,12 @@ x86架构的CPU大量使用在 `PC个人电脑` 上面。
 
 早期的芯片组通常分为两个桥接器来控制各个元件的沟通。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\65.jpg)
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\65.jpg" alt="img" style="zoom:50%;" />
 
 - 北桥：负责链接速度较快的CPU、内存条、显卡等
 - 南桥：负责连接速度较慢的硬盘、USB、网卡等
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\66.png)
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\66.png" alt="img" style="zoom:50%;" />
 
 由于CPU需要大量运算，因此发热量很高，必须安装一颗风扇主动进行散热。
 
@@ -321,7 +321,7 @@ PGA的全称叫做“pin grid array”，或者叫“插针网格阵列封装”
 
 PGA的特点就是针脚在CPU上，而主板上是一片小洞洞（针孔）
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\67.jpg)
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\67.jpg" alt="img" style="zoom:50%;" />
 
 **LGA：**
 
@@ -329,7 +329,7 @@ LGA的全称叫做“land grid array”，或者叫“平面网格阵列封装�
 
 LGA去掉了钎料和铜柱针脚，只留触点，针脚是在主板上的。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\68.jpg)
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\68.jpg" alt="img" style="zoom:50%;" />
 
 **BGA：**
 
@@ -337,7 +337,7 @@ BGA的全称叫做“ball grid array”，或者叫“球柵网格阵列封装�
 
 BGA封装也就是焊接的。 焊接方法就是通过植球板将焊锡球先用热风枪吹在CPU触点上，然后对准主板PCB加热即可。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\69.jpg)
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\69.jpg" alt="img" style="zoom:50%;" />
 
 ---
 
@@ -351,7 +351,7 @@ BGA封装也就是焊接的。 焊接方法就是通过植球板将焊锡球先�
 
 为了提升效率，一般在开机或者软件在运行的时候，会将常用数据直接从硬盘直接读入内存，以待后续CPU使用，提高计算机运行效率。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\78.jpg)
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\78.jpg" alt="img" style="zoom:50%;" />
 
 - 内存是电脑的一个临时存储器，它只负责电脑数据的中转而不能永久保存。
 
@@ -359,7 +359,7 @@ BGA封装也就是焊接的。 焊接方法就是通过植球板将焊锡球先�
 
   理结果送回内存
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\71.png)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\71.png)
 
 **特点：**
 
@@ -386,7 +386,7 @@ CPU使用的所有数据都来自于内存(main memory)，无论是软件或是�
 - DDR3
 - DDR4
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\70.jpeg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\70.jpeg)
 
 **多通道设计：**
 
@@ -400,17 +400,17 @@ CPU使用的所有数据都来自于内存(main memory)，无论是软件或是�
 
 台式机内存：
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\72.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\72.jpg)
 
 
 
 笔记本内存：
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\73.gif)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\73.gif)
 
 **程序、进程、守护进程：**
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\135.gif)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\135.gif)
 
 程序：python / golang语言编写的代码文件，存放在磁盘中的静态数据
 
@@ -427,9 +427,7 @@ CPU使用的所有数据都来自于内存(main memory)，无论是软件或是�
 
 `门户(大网站 )极端案例：`
 
-大并发写入案例(抢红包、微博) 高并发、大数据量“写”数据:会把数据先写到内存，积累一定的量后，然后再定时或者定量的写到磁盘
-
-(减轻磁盘的压力，减少磁盘 IO Input/Output 磁盘的输入/输出 磁盘读写)，最终还是会把 数据加载到内存中再对外提供访问。
+大并发写入案例(抢红包、微博) 高并发、大数据量“写”数据:会把数据先写到内存，积累一定的量后，然后再定时或者定量的写到磁盘(减轻磁盘的压力，减少磁盘 IO Input/Output 磁盘的输入/输出 磁盘读写)，最终还是会把数据加载到内存中再对外提供访问。
 
 **特点：** 
 
@@ -440,13 +438,13 @@ CPU使用的所有数据都来自于内存(main memory)，无论是软件或是�
   - UPS(一组蓄电池)不间断供电(持续供电 10 分钟，IDC 数据中心机房-UPS 1 小时)。 UPS (Uninterruptible Power System/Uninterruptible Power Supply)，即不间断电源，是将蓄电池(多 为铅酸免维护蓄电池)与主机相连接，通过主机逆变器等模块电路将直流电转换成市电的系统 设备。
   - 选双路电的机房，使用双电源、分别接不同路的电，服务器要放到不同的机柜、地区。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\136.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\136.jpg)
 
 `中小企业案例：`
 
 对于并发不是很大、数据也不是特别大的网站，读多写少的业务，会先把数据写入到磁盘，然后再通过程序把写到磁盘的数据读入到内存里，再对外通过读内存提供访问服务。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\137.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\137.jpg)
 
 核心思想就是，由于内存特性，将数据放入内存读写，比磁盘要快的多。
 
@@ -458,7 +456,7 @@ CPU使用的所有数据都来自于内存(main memory)，无论是软件或是�
 
 显卡对于图像的显示至关重要，因为图像的显示会占用内存，因此显卡一般都会有一个内存的容量，这个显存容量的大小影响到屏幕分辨率与色彩的深度。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\80.gif)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\80.gif)
 
 早期一些3D运算工作还是交给CPU完成，但是CPU的任务太多，无力再去处理大量的图形计算，显卡厂家在显卡中嵌入了GPU加速的芯片。
 
@@ -482,7 +480,7 @@ CPU使用的所有数据都来自于内存(main memory)，无论是软件或是�
 
 而矿池则是由多个“个体户”加入一个组织一起挖矿，无论谁找到答案挖出虚拟币，所有人同时按贡献的计算能力获得相应的报酬，这种方式能使“个体户”收入更稳定。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\84.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\84.jpg)
 
 举一个通俗的例子：
 
@@ -501,9 +499,9 @@ CPU使用的所有数据都来自于内存(main memory)，无论是软件或是�
 
 显卡与主机连接的接口如下：
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\85.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\85.jpg)
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\86.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\86.jpg)
 
 - VGA，模拟信号传输，主要为15针的连接，较老
 - DVI，常与液晶屏幕的连接
@@ -530,7 +528,7 @@ CPU使用的所有数据都来自于内存(main memory)，无论是软件或是�
 - U盘
 - ...
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\87.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\87.jpg)
 
 **由于计算机在工作时，CPU、输入输出设备与存储器之间要大量地交换数据，因此存储器的 存取速度和容量也是影响计算机运行速度的主要因素之一。特别是在服务器优化场景，硬盘的性能 是决定网站性能的重要因素。**
 
@@ -552,7 +550,7 @@ CPU使用的所有数据都来自于内存(main memory)，无论是软件或是�
 
 **机械硬盘：**
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\88.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\88.jpg)
 
 常见的硬盘内部构造如图，由圆形盘片、磁头臂、磁头、主轴马达组成。
 
@@ -563,7 +561,7 @@ CPU使用的所有数据都来自于内存(main memory)，无论是软件或是�
 
 **盘片数据：**
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\90.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\90.jpg)
 
 磁盘数据有三个核心概念，分别是
 
@@ -585,7 +583,7 @@ CPU使用的所有数据都来自于内存(main memory)，无论是软件或是�
 
 **磁盘分区：**
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\327.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\327.jpg)
 
 **磁盘接口：**
 
@@ -599,7 +597,7 @@ CPU使用的所有数据都来自于内存(main memory)，无论是软件或是�
 
 SATA是Serial ATA的缩写，即串行ATA。它是一种电脑总线，主要功能是用作主板和大量存储设备(如硬盘及光盘驱动器)之间的数据传输之用。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\91.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\91.jpg)
 
 SATA是市场目前主流的接口，在机械硬盘上使用广泛，且主要分三代：
 
@@ -613,7 +611,7 @@ SATA是市场目前主流的接口，在机械硬盘上使用广泛，且主要�
 
 **SAS接口：**
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\92.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\92.jpg)
 
 SAS(Serial Attached SCSI)即串行连接SCSI，是新一代的SCSI技术，和现在流行的Serial ATA(SATA)硬盘相同，都是采用串行技术以获得更高的传输速度，并通过缩短连结线改善内部空间等。
 
@@ -635,7 +633,7 @@ USB即通用串行总线是连接计算机系统与外部设备的一种串口�
 
 如果磁盘是外接式的接口，那么与主板连接的就是USB接口了。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\93.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\93.jpg)
 
 传统USB2.0速度较慢，新一代USB3.0则快很多了
 
@@ -650,7 +648,7 @@ USB即通用串行总线是连接计算机系统与外部设备的一种串口�
 
 **固态磁盘：**
 
-![image-20211008211604470](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211008211604470-163369896686012.png)
+![image-20211008211604470](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211008211604470-163369896686012.png)
 
 传统机械磁盘由于在启动的时候，需要驱动马达转动磁盘片，然后再确定数据再哪个扇区，再让磁头正确的读取数据，整个读取速度延迟是很高的！并且机械磁盘由于马达转动，工作时候会有震动伴随着些噪音。
 
@@ -670,9 +668,9 @@ Linux**在设计时是一切接文件**
 
 **零散文件整理：**
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\95.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\95.jpg)
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\96.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\96.jpg)
 
 想必同学们曾经使用过这个碎片整理功能，那会你可知道为什么要碎片整理吗？
 
@@ -690,7 +688,7 @@ Linux**在设计时是一切接文件**
 
 磁盘阵列还能利用同位检查（Parity Check）的观念，在数组中任意一个硬盘故障时，仍可读出数据，在数据重构时，将数据经计算后重新置入新硬盘中。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\139.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\139.jpg)
 
 **你有很多土地，单独管理不方便，且效率很低，整合到一块，统一管理，发挥最大性能。**
 
@@ -729,9 +727,9 @@ RAID有多种整合方式
 
 现在主板一般情况下都集成了三卡(显卡、网卡、声卡)，也有的只集成了声卡和网卡。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\98.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\98.jpg)
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\145.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\145.jpg)
 
 **BIOS：**
 
@@ -739,11 +737,11 @@ RAID有多种整合方式
 
 但是由于频率非正常速度，可能会造成死机蓝屏。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\75.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\75.jpg)
 
 这样的修改动作是被记录到主板上的一个CMOS的芯片上，这个芯片需要额外的供电才可以达到记录功能，这就是为什么主板上有一块电池的原因！
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\74.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\74.jpg)
 
 
 
@@ -785,7 +783,7 @@ Tip：
 - 生产中一般单个服务器核心业务最好使用双电源 **AB** 线路。
 - 如果集群(一堆机器做一件事)的情况可以不用双电源。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\133.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\133.jpg)
 
 **UPS不间断电源：**
 
@@ -799,9 +797,9 @@ UPS（Uninterruptible Power System/Uninterruptible Power Supply），即不间�
 
 UPS 设备通常对电压过高或电压过低都能提供保护。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\102.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\102.jpg)
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\103.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\103.jpg)
 
 ---
 
@@ -817,7 +815,7 @@ UPS 设备通常对电压过高或电压过低都能提供保护。
 
 平时我们所见到的PC机上的网卡主要是将PC机和LAN（局域网）相连接，而服务器网卡，一般是用于服务器与交换机等网络设备之间的连接。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\105.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\105.jpg)
 
 **无线网卡：**
 
@@ -829,15 +827,15 @@ UPS 设备通常对电压过高或电压过低都能提供保护。
 
 - USB无线上网卡
 
-  ![image-20211008212924691](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211008212924691-163369976673726.png)
+  ![image-20211008212924691](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211008212924691-163369976673726.png)
 
 - 台式机的PCI无线接口网卡
 
-  ![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\236.jpeg)
+  ![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\236.jpeg)
 
 - 笔记本电脑内置的 MINI-PCI 无线网卡。
 
-  ![image-20211008212953586](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211008212953586-163369979478727.png)
+  ![image-20211008212953586](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211008212953586-163369979478727.png)
 
 **常见网卡故障：**
 
@@ -868,21 +866,21 @@ UPS 设备通常对电压过高或电压过低都能提供保护。
 
 服务器对比普通PC、`稳定性`、`安全性`、`性能`、`可扩展性`、`可管理性`等方面要求更高。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\106.gif)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\106.gif)
 
 我们能够7*24小时的访问淘宝网，这是因为服务器强大的稳定性，它甚至可以十年不关机，因为你无法保证某一个时段没有用户在购买商品，并且能够承受大量用户并发的访问网站压力。
 
 因此服务器的硬件配置更加强悍，需要大量的进行计算、处理，服务器可以安装多个处理器、更多的内存、更多的磁盘，因此主板、机箱都较大。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\112.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\112.jpg)
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\109.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\109.jpg)
 
 服务器对于屏幕显示的要求很低，基本上都是无显示器，通过`远程管理`的方式即可，因此服务器基本都是集成显卡，而无需单独装显卡。
 
 我们很难见识到真实的物理服务器，因为服务器一般都防止在`机房`托管，闲人免进，比如appe.com苹果公司网站的数据就放在了 `云上贵州`的服务器机房。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\111.png)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\111.png)
 
 **服务器分类：**
 
@@ -900,13 +898,13 @@ UPS 设备通常对电压过高或电压过低都能提供保护。
 - 邮件服务器
 - 视频点播服务器
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\240.jpeg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\240.jpeg)
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\241.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\241.jpg)
 
 **服务器以外形分类：**
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\113.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\113.jpg)
 
 **`机架式服务器：`**
 
@@ -915,7 +913,7 @@ UPS 设备通常对电压过高或电压过低都能提供保护。
 
 机架式服务器如下图所示。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\124.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\124.jpg)
 
 **`刀片式服务器：`**
 
@@ -928,7 +926,7 @@ UPS 设备通常对电压过高或电压过低都能提供保护。
 
 不过，管理员可以使用系统软件将这些母板集合成一个服 务器集群。在集群模式下，所有的母板可以连接起来提供高速的网络环境，并同时共享资源， 为相同的用户群服务。在集群中插入新的"刀片"，就可以提高整体性能。而由于每块"刀片"都是热插拔的，所以，系统可以轻松地进行替换，并且将维护时间减少到最小。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\125.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\125.jpg)
 
 **`塔式服务器-更强壮的服务器：`**
 
@@ -936,7 +934,7 @@ UPS 设备通常对电压过高或电压过低都能提供保护。
 - 因为它的外形以及结构都跟立式 PC 差不多，当然，由于服务器的主板扩展性较强、插槽也多出一堆，所以个头比普通主板大一些，因此塔式服务器的主机机箱也比标准的 ATX 机箱要大，一般都会预留足够的内部空间以便日后进行硬盘和电源的冗余扩展。
 - 但这种类型服务器也有不少局限性，在需要采用多台服务器同时工作以满足较高的服务器应用需求时，由于其个体比较大，占用空间多，也不方便管理，便显得很不适合。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\126.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\126.jpg)
 
 **服务器尺寸：**
 
@@ -951,11 +949,11 @@ UPS 设备通常对电压过高或电压过低都能提供保护。
 - 浪潮
 - 联想
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\114.jpeg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\114.jpeg)
 
 **服务器品牌与型号：**
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\127-163370013259140.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\127-163370013259140.jpg)
 
 Dell服务器品牌：
 
@@ -965,15 +963,15 @@ https://www.dell.com/zh-cn/work/shop/category/servers
 
 **Dell R720：**
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\128.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\128.jpg)
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\129.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\129.jpg)
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\130.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\130.jpg)
 
 **Dell R620：**
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\131.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\131.jpg)
 
 IBM品牌：
 
@@ -992,7 +990,7 @@ HP品牌：
 
 **DL380G7：**
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\132.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\132.jpg)
 
 **机房托管：**
 
@@ -1018,9 +1016,9 @@ HP品牌：
 
 3. 技术和业务口碑都比较好的机房更能提供好的技术服务和安全防护
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\115.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\115.jpg)
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\116.gif)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\116.gif)
 
 **云服务器：**
 
@@ -1046,15 +1044,15 @@ HP品牌：
 
 当然，除开这些显著特点以外，更重要的是要选择一个知名的服务商，这样云服务器才能更加简便高效，不会给企业带来不必要的损失。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\107.gif)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\107.gif)
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\239.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\239.jpg)
 
 **服务器与远程管理卡：**
 
 远程管理卡是安装在服务器上的硬件设备，提供一个以太网接口，使它可以连接到局域网内，提供远程访问。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\140.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\140.jpg)
 
 远程管理卡有服务器自带的，也有独立的。
 
@@ -1066,17 +1064,17 @@ HP品牌：
 
 大客户有 KVM 远程管理，特大客户会有自己的人员驻扎机房。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\141.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\141.jpg)
 
 **机房服务器布线：**
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\142.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\142.jpg)
 
 **专业和非专业：**
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\143.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\143.jpg)
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\144.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\144.jpg)
 
 ---
 
@@ -1104,7 +1102,7 @@ HP品牌：
 1TB=1024GB，1PB=1024TB，1EB=1024PB，1ZB=1024EB
 ```
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\117.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\117.jpg)
 
 早期的电脑利用真空管是否通电的特性，如果通电就是1，没通电就是0，言传至今，只有0/1的环境称之为二进制（binary）。
 
@@ -1145,7 +1143,7 @@ HP品牌：
 > 3.重复操作，一直到商为小于1时为止
 > 4.然后将得到的所有余数全部排列起来，再将它反过来（逆序排列），切记一定要反过来！
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\v2-8a76f66b03a3d63176194f2cb4f96ca2_720w.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\v2-8a76f66b03a3d63176194f2cb4f96ca2_720w.jpg)
 
 **字符编码：**
 
@@ -1153,7 +1151,7 @@ HP品牌：
 
 **软件编译运行：**
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\119.gif)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\119.gif)
 
 计算机插上电之后，只是一堆机器而已，想要赋予灵魂，还得安装软件、操作系统。
 
@@ -1172,11 +1170,11 @@ HP品牌：
 
 或者，你也立刻让这名翻译辅助你阅读，让他一句一句给你翻译，如果你想往回看某个章节，他也得重新给你翻译。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\120.png)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\120.png)
 
 **操作系统：**
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\121.jpeg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\121.jpeg)
 
 操作系统（Operating System, OS）其实也是一组程序， 这组程序的重点在于管理电脑的所有活动以及驱动系统中的所有硬件。
 
@@ -1188,7 +1186,7 @@ HP品牌：
 
 操作系统通常会提供好一组开发接口给程序员，程序员只需要遵循该接口就可以轻易的调用系统功能，例如python语言调用相关函数，操作系统核心就会主动将python语言转换成系统可以理解的语言。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\122.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\122.jpg)
 
 - 操作系统核心是参考硬件的调用，所以同一个操作系统不能在不同的硬件架构下运行，好比Windows操作系统无法直接给手机使用
 - 操作系统只是在管理硬件资源，如CPU、内存、文件系统等，只是让计算机处于准备工作的状态，想要达到如游戏、视频、浏览器等需求，还得额外开发软件
@@ -1200,25 +1198,25 @@ HP品牌：
 
 ### 2.1 Linux系统诞生
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\19.gif)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\19.gif)
 
 **操作系统：是一个人与计算机硬件的中介。**
 
 操作系统，英文名称 Operating System，简称 OS，是计算机系统中必不可少的基础系统软件，它是应用程序运行以及用户操作必备的基础环境支撑，是计算机系统的核心。
 
-操作系统的作用是管理和控制计算机系统中的硬件和软件资源，例如，它负责直接管理计算机系统 的各种硬件资源，如对 CPU、内存、磁盘等的管理，同时对系统资源供需的优先次序进行管理。
+操作系统的作用是管理和控制计算机系统中的硬件和软件资源，例如：它负责直接管理计算机系统 的各种硬件资源，如对 CPU、内存、磁盘等的管理，同时对系统资源供需的优先次序进行管理。
 
 操作系统还可以控制设备的输入、输出以及操作网络与管理文件系统等事务。
 
 同时，它也负责对计算机系统中各类软件资源的管理。例如各类应用软件的安装、运行环境设置等。下图给出了操作系统 与计算机硬件、软件之间的关系示意图。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\147.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\147.jpg)
 
 操作系统就是处于用户与计算机硬件之间用于传递信息的系统程序软件。
 
 操作系统在接收到用户输入后，将其传递给计算机系统硬件核心进行处理，然后再讲计算机硬件的处理结果返回给用户。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\148.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\148.jpg)
 
 目前 PC（Intel x86 系列）计算机上比较常见的操作系统有 Windows、Linux、DOS、Unix 等。
 
@@ -1239,7 +1237,7 @@ Linux主要用在服务器端、嵌入式开发和个人PC桌面中，服务器�
 - 可自由传播，无任何商业化版权制约;
 - 适合 Intel 等 x86 CPU 系列架构的计算机，可移植性很高
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\u=1831492981,10389919&fm=26&fmt=auto.jpeg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\u=1831492981,10389919&fm=26&fmt=auto.jpeg)
 
 **Unix历史：**
 
@@ -1251,7 +1249,7 @@ Unix系统在1969年的AT&T的贝尔实验室诞生，20世纪70年代，它逐�
 - IBM公司的AIX
 - HP公司的HP UNIX
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\151.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\151.jpg)
 
 在上图中可以看到，本章的“主人公”Linux 系统，诞生于 1991 年左右，因此，可以说 Linux 是从 Unix 发展而来的。
 
@@ -1276,17 +1274,17 @@ Unix系统在1969年的AT&T的贝尔实验室诞生，20世纪70年代，它逐�
 
 这个 GNU 系统后来没有流行起来。现在的 GNU 系统通常是使用 Linux 系统的内核， 以及使用了GNU项目贡献的一些组件加上其它相关程序组成，这样的组合被称为 `GNU/Linux`操作 系统。
 
-![image-20211009101245720](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009101245720-16337455667788.png)
+![image-20211009101245720](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009101245720-16337455667788.png)
 
 **Linux系统诞生：**
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20190114%2F138dde2e957b4117af1ad0fd5483bf16.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg)
+ ![img](J:\149.jpeg) 
 
 Linux 系统的诞生开始于芬兰赫尔辛基大学的一位计算机系的学生，名字为 Linus Torvalds。
 
 Linux 的标志和吉祥物为一只名字叫作 Tux 的企鹅——Torvalds’Unix，下图所示。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F16%2F12%2F28%2Fda530dbb798e3d7440539194a9f43d86.jpg&refer=http%3A%2F%2Fbpic.588ku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg)
+ ![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\150.jpg) 
 
 Linux Torvalds 林纳斯·托瓦兹1988年进入赫尔辛基大学选读计算机科学，他在学校接触到Unix这个操作系统，当时的Unix只提供16个终端，早期的计算机只有运算功能，终端提供输入输出，光是等待Unix的时间就很长，林纳斯这样的大神就决定自己开发一个操作系统！
 
@@ -1307,7 +1305,7 @@ Linux Torvalds 林纳斯·托瓦兹1988年进入赫尔辛基大学选读计算�
 
 我们一定要向前辈们致以深深地敬意，没有他们，就没有今天的 Linux 优秀系统存在了(下图所示)。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\152.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\152.jpg)
 
 **Linux核心概念**
 
@@ -1331,7 +1329,7 @@ FSF 的主要项目是 GNU 项目。
 
 GNU 项目本身产生的主要软件包括：`Emacs 编辑软件` 、 `gcc 编译软件` 、 `bash命令解释程序` 和 `编程语言` ，以及  `gawk (GNU’s awk)` 等。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\157.jpeg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\157.jpeg)
 
 **GNU知识：**
 
@@ -1343,7 +1341,7 @@ GNU，GNU 计划，又称 **革奴计划** ，是由Richard Stallman 在 1984 �
 
 在 Linus Torvalds 和其他开发人员的努力下， GNU 项目的部分组件又运行到了 Linux 内核之上，例如：GNU 项目里的 Emacs、gcc、bash、gawk 等，至今都是 Linux 系统中很重要的基础软件。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\158.jpeg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\158.jpeg)
 
 **GPL知识：**
 
@@ -1369,7 +1367,7 @@ Linux 操作系统=linux 内核+GNU 软件及系统软件+必要的应用程序�
 | --------------------- | ----------------------------------- | ---------------------------------------- |
 | 开发者 Linus Torvalds | 项目发起人 Richard Stallman(斯托曼) | BSD Unix和X Windows 以及成千上万的程序员 |
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\154.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\154.jpg)
 
 **Linux特点：**
 
@@ -1402,7 +1400,7 @@ Linux 作为企业级服务器的应用十分广泛，利用 Linux 系统可以�
 
 例如，在 `智能手机领域` ， `Android Linux` 已经在智能手机 开发平台牢牢地占据了一席之地。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\u=3742930320,3001723047&fm=26&fmt=auto.jpeg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\u=3742930320,3001723047&fm=26&fmt=auto.jpeg)
 
 **个人桌面 Linux 应用领域：**
 
@@ -1417,7 +1415,7 @@ Linux 作为企业级服务器的应用十分广泛，利用 Linux 系统可以�
 
 虽然 Linux 个人桌面系统的支持已经很广泛了，但是在当前的桌面市场份额还远远无法与 Windows系统竞争，这其中的障碍可能不在于 Linux 桌面系统产品本身，而在于用户的使用观念、操作习惯 和应用技能，以及曾经在 Windows 上开发的软件的移植问题。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\160.gif)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\160.gif)
 
 **Linux的发行版本介绍：**
 
@@ -1425,17 +1423,15 @@ Linux 内核(kernel)版本主要有 4 个系列，分别为 `Linux kernel 2.2`�
 
 Linux 的发行商包括 Slackware、Redhat、Debian、Fedora、TurboLinux、Mandrake、SUSE、**CentOS**、**Ubuntu**、红旗、麒麟......
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\src=http%3A%2F%2Fwww.pianshen.com%2Fimages%2F445%2Fb445cd19be19d7940098a971f014687d.png&refer=http%3A%2F%2Fwww.pianshen.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg)
-
 其中几个重要的发行版本：
 
 **Red Hat**：Red Hat Linux 9.0 的内核为 2.4.20。在版本 9.0 后，Red Hat 不再遵循 GPL 协议，成为收费 产品(但仍开源)，发展的新版本依次为 Red Hat 3.x、Red Hat 4.x、Red Hat 5.x、Red Hat 6.x、Red Hat 7.x、Red Hat Enterprise 6.x。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\161.jpeg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\161.jpeg)
 
 **Fedora**：为 Red Hat 的一个分支，仍遵循 GPL 协议，可以认为是 Red Hat 预发布版。(游戏公测)
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\162.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\162.jpg)
 
 **CentOS (Community Enterprise Operating System)**：与 redhat 做到二进制级别的一模一样。
 
@@ -1470,7 +1466,7 @@ CentOS Linux 是国内互联网公司使用最多的 Linux 系统版本，后面
 
 **查看操作系统发行版本**
 
-![image-20211009114334858](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009114334858.png)
+![image-20211009114334858](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009114334858.png)
 
 **下载CentOS系统ISO镜像：**
 
@@ -1504,7 +1500,7 @@ Downloads->Mirrors 链接
 
   当然，此时 32位的操作系统是无法发挥64位硬件性能的。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\164.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\164.jpg)
 
 - 运算速度不同：
 
@@ -1514,7 +1510,7 @@ Downloads->Mirrors 链接
 
   64 位CPU GPRs(General-Purpose Registers，通用寄存器)的数据宽度为64 位，64 位指令集可以运行64位数据指令，也就是说处理器一次可提取64位数据(只要两个指令，一次提取8个字节的数据)，比32位提高了一倍(32位需要四个指令，一次只能提取4个字节的数据)，性能会相应提升。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\165.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\165.jpg)
 
 - 寻址能力不同：
 
@@ -1575,7 +1571,7 @@ VMWare是真正“同时”运行，多个操作系统在主系统的平台上�
 
 安装在VMware操作系统性能上比直接安装在硬盘上的系统低不少，因此，比较适合学习操作系统使用。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\166.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\166.jpg)
 
 **VMware优点：**
 
@@ -1604,7 +1600,7 @@ vmware系统服务必须开启：
 win键+r 输入services.msc
 ```
 
-![image-20211009123319912](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009123319912.png)
+![image-20211009123319912](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009123319912.png)
 
 **安装CentOS 7操作系统：**
 
@@ -1612,11 +1608,11 @@ win键+r 输入services.msc
 
 1. 在 VMware 软件中，单击左上角的“文件”，在下拉菜单中选择“新建虚拟机”。
 
-   ![image-20211009134026300](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009134026300-163375802881623.png)
+   ![image-20211009134026300](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009134026300-163375802881623.png)
 
 2. 在弹出的“新建虚拟机向导”选项卡里面，选择“自定义(高级)”。选择完毕后，点击“下一步”。
 
-   ![image-20211009134117008](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009134117008-163375807955824.png)
+   ![image-20211009134117008](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009134117008-163375807955824.png)
 
 **选择虚拟机硬件兼容性**===**购买主机箱**
 
@@ -1624,19 +1620,19 @@ win键+r 输入services.msc
 
    如果使用的是 VMware14 版本，那此处就选择 Workstation14.0。 选择完毕后，点击“下一步”。
 
-![image-20211009150048522](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009150048522-163376285004025.png)
+![image-20211009150048522](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009150048522-163376285004025.png)
 
 **安装客户机操作系统**
 
 4. 我们后面要自己定制化安装 CentOS7 系统，所以此处选择“稍后安装操作系统”。选择完毕后，点击“下一步”。
 
-![image-20211009150116180](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009150116180-163376287759826.png)
+![image-20211009150116180](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009150116180-163376287759826.png)
 
 **选择客户机操作系统**===**安装什么样的系统**
 
 5. 我们要学习的是 linux 系统，CentOS 也属于 Linux 系统的一种，所以此处当然要选择“Linux”，版本选择“CentOS 64 位”。选择完毕后，点击“下一步”。
 
-![image-20211009150148136](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009150148136-163376291010227.png)
+![image-20211009150148136](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009150148136-163376291010227.png)
 
 **命名虚拟机**===**专业规范**
 
@@ -1644,13 +1640,13 @@ win键+r 输入services.msc
 
    位置一项，点击“浏览”后选择 事先规划好的位置即可。选择完毕后，点击“下一步”。
 
-![image-20211009151228321](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009151228321-163376354946729.png)
+![image-20211009151228321](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009151228321-163376354946729.png)
 
 **虚拟机硬件配置**
 
 7. 我们学习的时候都是在自己的笔记本电脑上安装虚拟机，所以处理器(其实就是 CPU 的意思)都给1个就可以。选择完毕后，点击“下一步”。
 
-![image-20211009151301150](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009151301150-163376358252230.png)
+![image-20211009151301150](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009151301150-163376358252230.png)
 
 **内存配置**
 
@@ -1658,13 +1654,13 @@ win键+r 输入services.msc
 
    此处可以在左边的树状条直接用鼠标点击选择内存大小，也可以在右边的框内手动输入数字，需要注意单位是 MB，所以 2G 内存需要输入的数字是 2048，而不是2。选择完毕后，点击“下一步”。
 
-![image-20211009151441075](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009151441075-163376368214731.png)
+![image-20211009151441075](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009151441075-163376368214731.png)
 
 **选择网络类型**
 
 9. 为了方便学习，“网络类型”这项，必须选择“使用网络地址转换(**NAT**)”，想要尝试其余几种网络类型的话，等变成 linux老鸟之后，再自行研究。选择完毕后，点击“下一步”。
 
-![image-20211009151523549](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009151523549-163376372473032.png)
+![image-20211009151523549](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009151523549-163376372473032.png)
 
 - VMware虚拟机常见的网络类型有 `bridged(桥接)`、 `**NAT**(地址转换`)、 `host-only(仅主机)` 3种，在分析如何选择之前，先要简单和大家介绍下这三种网络类型。
 - 每家每户都有家庭住址号。
@@ -1683,7 +1679,7 @@ NAT(Network Address Translation)，网络地址转换，NAT模式是比较简单
 
 VMWare DHCP Service 负责为虚拟机分配 IP 地址。NAT 网络类型的原理逻辑图如图所示。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\179.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\179.jpg)
 
 NAT 网络特别适合于家庭里电脑直接连接网线的情况，当然办公室的局域网环境也是适合的，优势就是不会和其他物理主机 IP 冲突，且在没有路由器的环境下也可以通过 SSH NAT 连接虚拟机学习，换了网络环境虚拟机 IP 等不影响，这是推荐的选择。
 
@@ -1699,7 +1695,7 @@ NAT 网络特别适合于家庭里电脑直接连接网线的情况，当然办�
 
 Bridged 网络类型的原理逻辑图如图所示。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\180.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\180.jpg)
 
 Bridged网络类型适合的场景：
 
@@ -1712,7 +1708,7 @@ Bridged网络类型适合的场景：
 
 Host-only 网络类型的原理逻辑图如图所示。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\181.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\181.jpg)
 
 ----
 
@@ -1720,13 +1716,13 @@ Host-only 网络类型的原理逻辑图如图所示。
 
 10. “I/O 控制器类型”这一项，直接默认默认即可，不需要改动。选择完毕后，点击“下一步”。
 
-    ![image-20211009152603581](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009152603581-163376436489736.png)
+    ![image-20211009152603581](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009152603581-163376436489736.png)
 
 **选择磁盘类型：**
 
 11. “磁盘类型”这一项，也直接默认即可，不需要改动。选择完毕后，点击“下一步”。
 
-    ![image-20211009152627283](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009152627283-163376438835137.png)
+    ![image-20211009152627283](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009152627283-163376438835137.png)
 
 **选择磁盘**
 
@@ -1736,7 +1732,7 @@ Host-only 网络类型的原理逻辑图如图所示。
 
     选择完毕后，点击“下一步”。
 
-    ![image-20211009152739850](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009152739850-163376446100138.png)
+    ![image-20211009152739850](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009152739850-163376446100138.png)
 
 
 
@@ -1746,37 +1742,37 @@ Host-only 网络类型的原理逻辑图如图所示。
 
     建议将磁盘存储为单个文件，比较方便，但这里不是硬性要求，看个人喜好。选择完毕后，点击“下一步”。
 
-![image-20211009153009174](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009153009174.png)
+![image-20211009153009174](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009153009174.png)
 
 **指定磁盘文件===存放vwware虚拟机系统文件**
 
 14. “磁盘文件”的名字，保持默认的即可。选择完毕后，点击“下一步”。
 
-![image-20211009153114363](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009153114363.png)
+![image-20211009153114363](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009153114363.png)
 
 **完成创建虚拟机----完成配置准备付款购买**
 
 15. 此时，一台新虚拟机的硬件就全部配置完毕了，检查确认无误后，就可以开机装系统了。确认完毕后，点击“完成”。
 
-![image-20211009153217998](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009153217998-163376474008640.png)
+![image-20211009153217998](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009153217998-163376474008640.png)
 
 **挂载 CentOS 镜像====光驱放入了DVD系统光盘**
 
 16. 在“硬件”选项卡里面，还需要配置一下要使用的操作系统 iso 文件。在左侧选中“新CD/DVD(SATA)”，在右侧选中“使用 ISO 映像文件”，点击“浏览”按钮，在弹出的窗口中找到本地的 CentOS 系统 iso文件。选择完毕后，点击“关闭”。
 
-![image-20211009153424417](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009153424417.png)
+![image-20211009153424417](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009153424417.png)
 
 **开启虚拟机：**
 
 17. 安装系统的第一步，要从开机开始。开机之前，请再次确认一下两块网卡的类型，一定要确保分别 是NAT。确认完毕硬件后，点击“开启此虚拟机”。
 
-![image-20211009153600966](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009153600966.png)
+![image-20211009153600966](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009153600966.png)
 
 **开始安装CentOS 7.5操作系统：**
 
 18. 虚拟机开机后，选择“Install CentOS7”这一项。此时鼠标是不好用的，都是使用键盘的上下箭头来进行操作的，选好后按键盘上的回车键即可。
 
-![image-20211016211646571](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211016211646571.png)
+![image-20211016211646571](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211016211646571.png)
 
 **修改CentOS7网卡命名规则，仍然以eth0命名：**
 
@@ -1788,43 +1784,43 @@ Host-only 网络类型的原理逻辑图如图所示。
 
     输入完成后检查，并按下回车继续安装系统
 
-![image-20211016211646571](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211016211646571.png)
+![image-20211016211646571](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211016211646571.png)
 
 **选择安装使用的语言**
 
 20. 作为一个 linux 的学习者，要适应英文环境，所以强烈建议此处选择英文，而不选择中文。 选择完毕后，点击“Continue”。
 
-    <img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\192.jpg" alt="img" style="zoom:50%;" />
+    <img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\192.jpg" alt="img" style="zoom:50%;" />
 
 **设置时区**
 
 21. 配置时区，点击“DATE&TIME”。
 
-    <img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\193.jpg" alt="img" style="zoom: 50%;" />
+    <img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\193.jpg" alt="img" style="zoom: 50%;" />
 
     ​	我们生活在中国嘛，所以时区选择“亚洲-上海”。时间不用管，待装完系统后，同步一下即可。 选择完毕后，点击“Done”。
 
-    <img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\194.jpg" alt="img" style="zoom:50%;" />
+    <img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\194.jpg" alt="img" style="zoom:50%;" />
 
 **最小化安装系统**
 
 22. 选择需要安装的软件，点击“SOFTWARE SELECTION”。
 
-    <img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\195.jpg" alt="img" style="zoom:50%;" />
+    <img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\195.jpg" alt="img" style="zoom:50%;" />
 
     安装 linux 系统，一般都采用最小化安装的原则，在初始时，只选择必要的几个软件包即可。学习期间，请点击跟下图中的红色框里的选择一模一样。选择完毕后，点击“Done”。
 
-    <img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\196.jpg" alt="img" style="zoom:50%;" />
+    <img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\196.jpg" alt="img" style="zoom:50%;" />
 
 **关闭KDUMP**
 
 23. 配置“KDUMP”，这是一个内核崩溃时使用的东西，暂时不需要开启，把它关闭掉。
 
-    <img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\197.jpg" alt="img" style="zoom:50%;" />
+    <img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\197.jpg" alt="img" style="zoom:50%;" />
 
     把“Enable kdump”的勾选去掉即可。选择完毕后，点击“Done”。
 
-    <img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\198.jpg" alt="img" style="zoom:50%;" />
+    <img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\198.jpg" alt="img" style="zoom:50%;" />
 
 ----
 
@@ -1876,47 +1872,47 @@ Host-only 网络类型的原理逻辑图如图所示。
 
 24. 配置磁盘，`点击“INSTALLATION DESTTINATION”。`
 
-    <img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\199.jpg" alt="img" style="zoom:50%;" />
+    <img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\199.jpg" alt="img" style="zoom:50%;" />
 
     选中磁盘后，选择“I will configure partitioning”。选择完毕后，点击“Done”。
 
-    <img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\200.jpg" alt="img" style="zoom:50%;" />
+    <img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\200.jpg" alt="img" style="zoom:50%;" />
 
 **分区方式**
 
 25. 在左侧中间的下拉菜单里面，选择“Standard Partition”。然后点击左下方的“+”号，添加/boot 分区。
 
-<img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\201.jpg" alt="img" style="zoom:50%;" />
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\201.jpg" alt="img" style="zoom:50%;" />
 
 ​	在弹出的对话框中，请按照下图中的内容配置。选择完毕后，点击“Add mount point”。
 
-<img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\202.jpg" alt="img" style="zoom:50%;" />
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\202.jpg" alt="img" style="zoom:50%;" />
 
 ​	再次点击左下角的“+”号，添加 swap 分区。
 
-<img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\203.jpg" alt="img" style="zoom:50%;" />
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\203.jpg" alt="img" style="zoom:50%;" />
 
 ​	在弹出的对话框中，请按照下图中的内容配置。选择完毕后，点击“Add mount point”。
 
-<img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\204.jpg" alt="img" style="zoom:50%;" />
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\204.jpg" alt="img" style="zoom:50%;" />
 
 ​	再次点击左下角的“+”号，添加根分区。
 
-<img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\205.jpg" alt="img" style="zoom:50%;" />
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\205.jpg" alt="img" style="zoom:50%;" />
 
 ​	在弹出的对话框中，请按照下图中的内容配置。选择完毕后，点击“Add mount point”。
 
-<img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\206.jpg" alt="img" style="zoom:50%;" />
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\206.jpg" alt="img" style="zoom:50%;" />
 
 ​	/boot、/、swap 三个分区都添加完毕后，检查确认无误，就可以写入磁盘了。确认完毕后，点击“Done”
 
-<img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\207.jpg" alt="img" style="zoom:50%;" />
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\207.jpg" alt="img" style="zoom:50%;" />
 
 **最终结果**
 
 26. 再次确认分区无误后，选择同意更改，即可将分区设置写入磁盘了。选择完毕后，点击“Accept Changes”。
 
-    <img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\208.jpg" alt="img" style="zoom:50%;" />
+    <img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\208.jpg" alt="img" style="zoom:50%;" />
 
     **提示：**这里采用的是生产环境中集群节点下的节点服务器的分区方式，即系统坏掉后硬盘数据不需要保留。此分区方式也适合大多数生产环境的服务器，如果是数据库以及存储等有重要数据的特殊业务服务，一般会单独分存放数据的分区如 /data。
 
@@ -1932,19 +1928,19 @@ Host-only 网络类型的原理逻辑图如图所示。
 
 27. 配置网络，点击“NETWORK$HOSTNAME”。
 
-<img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\209.jpg" alt="img" style="zoom:50%;" />
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\209.jpg" alt="img" style="zoom:50%;" />
 
 ​	**选择完毕后，点击“Begin Installation”。****设置root登录密码**
 
 ​	给 root 用户设置密码，点击“ROOT PASSWORD”。
 
-<img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\210.jpg" alt="img" style="zoom:50%;" />
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\210.jpg" alt="img" style="zoom:50%;" />
 
 ​		学习期间为了练习方便，root 用户的密码简单的设置为 123456 即可。但工作环境中，无论什么用 户，密码一定要设置得复杂些，增加安全性。
 
 ​		配置完后，点击“Done”。
 
-<img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\211.jpg" alt="img" style="zoom:50%;" />**提示：**如果是生产环境，root 口令要尽量复杂。比如，设置 8 位以上包含数字字母大小写甚至是特殊字符的口令。在企业运维工作中安全是至关重要的一环，安全要从每一件小事做起。
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\211.jpg" alt="img" style="zoom:50%;" />**提示：**如果是生产环境，root 口令要尽量复杂。比如，设置 8 位以上包含数字字母大小写甚至是特殊字符的口令。在企业运维工作中安全是至关重要的一环，安全要从每一件小事做起。
 
 **安装结束重启**
 
@@ -1956,7 +1952,7 @@ Host-only 网络类型的原理逻辑图如图所示。
 
     需要输入用户及其密码后，方可登录进入系统。
 
-![image-20211009160055734](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009160055734-163376645684763.png)
+![image-20211009160055734](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009160055734-163376645684763.png)
 
 **安装额外系统开发包：**
 
@@ -1992,7 +1988,7 @@ yum install -y bash-completion vim lrzsz wget expect net-tools nc nmap tree dos2
 
 ### 2.3 Linux远程连接
 
-在实际的工作场景中，虚拟机界面或者物理服务器本地的终端都是很少接触的，因为服务器装完系统之后，都要拉倒IDC机房托管，如果是购买的云主机，那更碰不到服务器本体了，只能通过远程连接的方式管理自己的Linux系统。
+在实际的工作场景中，虚拟机界面或者物理服务器本地的终端都是很少接触的，因为服务器装完系统之后，都要拉到IDC机房托管，如果是购买的云主机，那更碰不到服务器本体了，只能通过远程连接的方式管理自己的Linux系统。
 
 因此在装好Linux系统之后，使用的第一步应该是配置好客户端软件**（ssh软件进行连接）**连接Linux系统。
 
@@ -2025,41 +2021,39 @@ yum install -y bash-completion vim lrzsz wget expect net-tools nc nmap tree dos2
 
 安装完毕之后界面长这个样。
 
-<img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009175301379.png" alt="image-20211009175301379" style="zoom:50%;" />
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009175301379.png" alt="image-20211009175301379" style="zoom:50%;" />
 
 **3.创建SSH session**
 
 点击菜单栏 「sessions」 --> 「SSH」，即可弹出 「session setting」 对话框。由上面那一大串的连接方式我们就可以知道Moba的强大之处。
 
-![image-20211009175525256](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009175525256.png)
+![image-20211009175525256](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009175525256.png)
 
 点击确定后，输入密码(输入密码时并不会显示，只管输入后按确定即可，第一次登陆成功后会提示保存密码，一般选择同意)，就可以连接上虚拟机了。而且边上虚拟机之后，它会自动通过FTP也连接到虚拟机，直接拖拽就可以进行文件复制了。
 
 登陆后界面主要分两块，左边的是主机的文件，右边是终端。勾选左下角的 “Follow terminal folder” 可以让两个的工作路径保持一致。
 
-<img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009175843579.png" alt="image-20211009175843579"  />
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009175843579.png" alt="image-20211009175843579"  />
 
 **4.个性化设置，设置终端字体，右键复制、文件保存路径等**
 
-![image-20211009180308642](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009180308642.png)
+![image-20211009180308642](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009180308642.png)
 
 **5.快捷键配置**
 
-![image-20211009181119252](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009181119252.png)
+![image-20211009181119252](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009181119252.png)
 
-![image-20211009181127400](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009181127400.png)
+![image-20211009181127400](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009181127400.png)
 
 **6.同时操作多个终端**
 
-![image-20211009181206664](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009181206664.png)
+![image-20211009181206664](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009181206664.png)
 
-![image-20211009181216606](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009181216606.png)
+![image-20211009181216606](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009181216606.png)
 
 **7.支持搜到目录及文件**
 
-![image-20211009181314233](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009181314233.png)
-
-
+![image-20211009181314233](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009181314233.png)
 
 
 
@@ -2082,9 +2076,9 @@ yum install -y bash-completion vim lrzsz wget expect net-tools nc nmap tree dos2
 
 **Linux命令行：**
 
-![image-20211009182411116](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009182411116.png)
+![image-20211009182411116](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009182411116.png)
 
-```
+```powershell
 # 超级用户身份提示符
 $ 普通用户身份提示符
 ```
@@ -2093,11 +2087,11 @@ $ 普通用户身份提示符
 
 windows平台命令行目录分隔符：
 
-![image-20211009184120031](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009184120031.png)
+![image-20211009184120031](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009184120031.png)
 
 linux平台命令行目录分隔符：
 
-![image-20211009184207986](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009184207986.png)
+![image-20211009184207986](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009184207986.png)
 
 **Linux与Windows的目录结构比较：**
 
@@ -2105,13 +2099,13 @@ Linux首先是建立一个根"/"文件系统，所有的目录也都是由根目
 
 登录系统后，在当前命令窗口输入命令：
 
-```
+```powershell
 ls /
 ```
 
 结果如图：
 
-![image-20211009185240940](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009185240940.png)
+![image-20211009185240940](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009185240940.png)
 
 在Linux底下，所有的文件与目录都是由根目录开始，是目录与文件的源头，然后一个个的分支下来，如同树枝状，因此称为这种目录配置为：**目录树**。
 
@@ -2126,13 +2120,13 @@ ls /
 Linux与windows区别
 
 - windows特点：E:\学习视频\高清视频\
-- Linux目录特点：/etc/hosts /root/data/oldboy.txt
+- Linux目录特点：/etc/hosts /root/data/test.txt
 
-<img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\248.jpg" alt="img" style="zoom:50%;" />
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\248.jpg" alt="img" style="zoom:50%;" />
 
 **Linux** 系统目录结构基本特点：
 
-1. Linux下一切从`根`开始
+1. Linux下一切从 <font color="red">**根**</font> 开始
 
 2. Linux下面的目录是一个有层次的目录结构
 
@@ -2142,18 +2136,18 @@ Linux与windows区别
 
 **Linux目录挂载：**
 
-**挂载** 通常是将一个`存储设备`挂接到一个已经存在的`目录`上，访问这个`目录`就是访问该存储设备的内容。
+**挂载** 通常是将一个<font color="red">存储设备</font>挂接到一个已经存在的目录上，访问这个目录就是访问该存储设备的内容。
 
 对于Linux系统来说，一切接文件，所有文件都放在以`根目录`为起点的树形目录结构中，任何硬件设备也都是文件形式。
 
-<img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\321.jpg" alt="img" style="zoom:50%;" />
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\321.jpg" alt="img" style="zoom:50%;" />
 
 如图所示，是U盘存储设备和Linux系统自己的文件系统结构，此时Linux想要使用U盘的硬件设备，必须将Linux **本身的目录**和硬件设备的文件目录合二为一，此过程就称之为**挂载**。
 
 > 挂载操作会隐藏原本Linux目录中的文件，因此选择Linux本身的目录，最好是新建空目录用于挂载
 > 挂载之后，这个目录被称为挂载点
 
-<img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\322.jpg" alt="img" style="zoom:50%;" />
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\322.jpg" alt="img" style="zoom:50%;" />
 
 此时U盘文件系统已经是Linux文件系统的一部分，访问/sdb-u文件夹，即是访问访问U盘系统中的文件夹。
 
@@ -2161,7 +2155,7 @@ Linux与windows区别
 
 **Linux目录结构：**
 
-<img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\251.png" alt="img" style="zoom:50%;" />
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\251.png" alt="img" style="zoom:50%;" />
 
 - **/dev**：dev是Device(设备)的缩写, 该目录下存放的是Linux的外部设备，在Linux中访问设备的方式和访问文件的方式是相同的。
 
@@ -2253,7 +2247,7 @@ Linux命令学习方法
 
 我们知道切换目录的指令是cd，那么首先得知道如何切换目录。
 
-```shell
+```powershell
 .    当前目录
 ..    上一层目录
 -    前一个工作目录
@@ -2263,7 +2257,7 @@ Linux命令学习方法
 
 #### 3.2.1 **cd命令**
 
-cd是change directory的缩写，这是用来变换工作目录的命令，注意命令和目录之间有一个空格。
+cd 是 change directory 的缩写，这是用来变换工作目录的命令，注意命令和目录之间有一个空格。
 
 需要注意的是，在所有目录底下都存在两个目录，分别是【.】和【..】，分别代表当前目录，上层目录！那么如何证明它的存在呢？
 
@@ -2272,7 +2266,7 @@ cd是change directory的缩写，这是用来变换工作目录的命令，注�
 > 结论：ls - list directory contens (列出目录内容)
 > ls -la /  以竖状格式化显示列出 / 目录所有内容
 
-![image-20211009210615709](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009210615709.png)
+![image-20211009210615709](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009210615709.png)
 
 #### 3.3.2 **tree命令**
 
@@ -2280,7 +2274,7 @@ cd是change directory的缩写，这是用来变换工作目录的命令，注�
 
 tree命令可能需要单独安装，命令：
 
-```
+```powershell
 yum install tree -y
 ```
 
@@ -2288,13 +2282,13 @@ yum install tree -y
 >
 > tree常用参数：
 >
-> -C 在文件和目录清单加上色彩，便于区分各种类型。
-> -d 显示目录名称而非内容。
-> -D 列出文件或目录的更改时间。
-> -f 在每个文件或目录之前，显示完整的相对路径名称。
-> -F 在条目后加上文件类型的指示符号(* ， /， = ， @ ， | ，其中的一个) 目录/
+> -C  在文件和目录清单加上色彩，便于区分各种类型。
+> -d  显示目录名称而非内容。
+> -D  列出文件或目录的更改时间。
+> -f   在每个文件或目录之前，显示完整的相对路径名称。
+> -F  在条目后加上文件类型的指示符号(* ， /， = ， @ ， | ，其中的一个) 目录/
 
-```shell
+```powershell
 mkdir -p   a/b     c/d
 tree
 ```
@@ -2303,7 +2297,7 @@ tree
 
 显示目录下内容及属性信息的命令。
 
-> ```shell
+> ```powershell
 > ls命令语法：
 > 
 > ls常用参数：
@@ -2311,7 +2305,7 @@ tree
 > -a 显示指定目录下所有子目录与文件，包括以.开头的隐藏文件
 > -l 以列表方式显示文件的详细信息   ls -l 等于ll 用法
 > -h, --human-readable          与-l 一起，以易于阅读的格式输出文件大小
->                              (例如 1K 234M 2G)
+>                              	  (例如 1K 234M 2G)
 > -t 根据最后修改时间排序，默认是以文件名排序，通常与-l 连用
 > -F 在条目后加上文件类型的指示符号(* ， /， = ， @ ， | ，其中的一个)
 >  注:可以标识文件类型
@@ -2330,48 +2324,48 @@ tree
 
 示例：
 
-```shell
+```powershell
 ls -lt 按照时间进行排序
 ls -lrt 找出最新的文件
 ls -d */    列出当前所有目录
 ll -hS    ./*    显示出当前目录下所有内容详细，且以kb,mb,gb单位从大到小排序
 ```
 
-![image-20211009211748709](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009211748709.png)
+![image-20211009211748709](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009211748709.png)
 
-![image-20211009212124186](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009212124186-163378568572770.png)
+![image-20211009212124186](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009212124186-163378568572770.png)
 
 #### 3.3.4 **mkdir命令**
 
 创建文件夹
 
-> ```shell
+> ```powershell
 > mkdir命令语法：
 > 用法：mkdir [选项]... 目录...
 > 若指定目录不存在则创建目录。
 > 
 > mkdir常用参数：
-> -m, --mode=模式       # 设置权限模式(类似chmod)，而不是rwxrwxrwx 减umask
-> -p, --parents         # 需要时创建目标目录的上层目录，但即使这些目录已存在也不当作错误处理，递归创建目录
+> -m, --mode=模式    # 设置权限模式(类似chmod)，而不是rwxrwxrwx 减umask
+> -p, --parents     # 需要时创建目标目录的上层目录，但即使这些目录已存在也不当作错误处理，递归创建目录
 > mkdir # {1..3}加花括号创建连续的目录，用..隔开 花括号内可以是连续的数字、连续的字母mkdir {a..e}
 > ```
 
 示例：
 
-```shell
+```powershell
 mkdir {name1,name2,name3}  # 创建三个文件夹，逗号隔开
 mkdir aa{1..5}   # 创建连续的目录
 mkdir bb1 bb2  # 创建少量连续目录
 mkdir -p test1/test2/test3  # 创建递归目录
 ```
 
-![image-20211009213114704](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009213114704.png)
+![image-20211009213114704](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009213114704.png)
 
 #### 3.3.5 **touch命令**
 
 创建文件或修改文件时间戳
 
-> ```shell
+> ```powershell
 > touch命令语法：
 > 用法：touch [选项]... 文件...
 > 将每个文件的访问时间和修改时间改为当前时间。
@@ -2388,21 +2382,21 @@ mkdir -p test1/test2/test3  # 创建递归目录
 > -r, --reference=文件  # 使用指定文件的时间属性替代当前文件时间
 > ```
 
-![image-20211010110233510](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211010110233510.png)
+![image-20211010110233510](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211010110233510.png)
 
 ```shell
 修改文件时间
-touch -t 06010808 test1.txt    #修改test1.txt文件的时间是 6月1号8点8分
-touch -r test1.txt test2.txt        #把test2.txt的时间改成test1.txt 一样
+touch -t 06010808 test1.txt    # 修改test1.txt文件的时间是 6月1号8点8分
+touch -r test1.txt test2.txt   # 把test2.txt的时间改成test1.txt 一样
 ```
 
-![image-20211010110430699](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211010110430699.png)
+![image-20211010110430699](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211010110430699.png)
 
 #### 3.3.6 **cp命令**
 
 复制命令
 
-```shell
+```powershell
 cp语法命令：
 用法：cp [选项]... [-T] 源文件 目标文件
 　或：cp [选项]... 源文件... 目录
@@ -2419,32 +2413,33 @@ cp常用参数：
 
 示例：
 
-```shell
+```powershell
 语法：复制 > copy > cp
 
-# 1.移动xxx.py到/tmp目录下
+# 1.复制xxx.py到/tmp目录下
 cp xxx.py /tmp/
-# 2.移动xxx.py顺便改名为chaoge.py
+
+# 2.复制xxx.py顺便改名为chaoge.py
 cp xxx.py /tmp/chaoge.py
 
 # Linux下面很多命令，一般没有办法直接处理文件夹,因此需要加上（参数） 
 cp -r 递归,复制目录以及目录的子孙后代
-cp -p 复制文件，同时保持文件属性不变    可以用stat
+cp -p 复制文件，同时保持文件属性不变，可以用 stat
 cp -a 相当于-pdr
 
-#递归复制test文件夹，为test2
+# 3.递归复制test文件夹，为test2
 cp -r test test2
 
-# cp是个好命令，操作文件前，先备份
+# 4.cp是个好命令，操作文件前，先备份
 cp main.py main.py.bak
 
-# 移动多个文件，放入文件夹c中
+# 5.移动多个文件，放入文件夹c中
 cp -r  文件1  文件2  文件夹a   文件夹c
 ```
 
-![image-20211010112934869](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211010112934869.png)
+![image-20211010112934869](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211010112934869.png)
 
-![image-20211010113133343](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211010113133343.png)
+![image-20211010113133343](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211010113133343.png)
 
 取消cp别名的方式
 
@@ -2453,7 +2448,7 @@ cp -r  文件1  文件2  文件夹a   文件夹c
 - 取消cp命令别名
 - 写入环境变量配置文件
 
-```shell
+```powershell
 1.
 [root@localhost tmp]# which cp
 alias cp='cp -i'
@@ -2469,21 +2464,21 @@ alias cp='cp -i'
 [root@localhost tmp]# cp name1.zip name1.zip.bak
 
 4.
-[root@localhost tmp]# vim ~/.bashrc  #可以注释掉如下配置
+[root@localhost tmp]# vim ~/.bashrc  # 可以注释掉如下配置
 # .bashrc
 
 # User specific aliases and functions
 
 alias rm='rm -i'
-#alias cp='cp -i'
+# alias cp='cp -i'
 alias mv='mv -i'
 ```
 
 #### 3.3.7 **scp命令**
 
-```shell
+```powershell
 # 连接服务器
-ssh -p 22 root@192.168.125.265
+ssh -p 22 root@192.168.88.128
 
 # 从服务器上下载文件
 scp username@servername:/path/filename /var/www/local_dir（本地目录）
@@ -2500,7 +2495,7 @@ scp  -r local_dir username@servername:remote_dir
 
 示例：
 
-```shell
+```powershell
 # 把192.168.0.101上的/var/www/test.txt 的文件下载到/var/www/local_dir（本地目录）
 scp root@192.168.0.101:/var/www/test.txt
 
@@ -2518,23 +2513,23 @@ scp -r test  root@192.168.0.101:/var/www/
 
 为什么rm命令默认会有一个让用户确认删除的动作呢？
 
-```shell
-# 解答是因为 rm 的-i参数作用
+```powershell
+# 是因为 rm 的-i参数作用
 
-#直接输入可以查看当前系统的别名
+# 直接输入可以查看当前系统的别名
 alias
 ```
 
 示例：给系统添加一个别名
 
-```shell
+```powershell
 # 当你敲下start就是在执行后面的长串命令，很方便 
 alias start="python3  /home/mysite/manager.py runserver  0.0.0.0:8000"
 ```
 
 #### 3.3.9 **mv命令**
 
-```shell
+```powershell
 # mv语法命令：
 mv命令就是move的缩写，作用是移动或是重命名文件
 用法：mv [选项]... [-T] 源文件 目标文件
@@ -2550,13 +2545,13 @@ mv命令就是move的缩写，作用是移动或是重命名文件
 -u, --update                  # 只在源文件文件比目标文件新，或目标文件不存在时才进行移动
 ```
 
-![image-20211010115944683](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211010115944683.png)
+![image-20211010115944683](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211010115944683.png)
 
 #### 3.4.0 **rm命令**
 
 Linux在使用rm（删除）、cp（覆盖）、mv（搬家）等命令的时候，必须非常小心，因为这些命令都是“炸弹”，想必大家都听过“删库到跑路”，一言不合“rm -rf /”，假如你真的这么做了，那么。。。上帝保佑你
 
-```shell
+```powershell
 # rm命令语法:
 用法：rm [选项]... 文件...
 删除 (unlink) 文件。
@@ -2570,20 +2565,20 @@ Linux在使用rm（删除）、cp（覆盖）、mv（搬家）等命令的时候
 -r, -R, --recursive   # 递归删除目录及其内容
 -v, --verbose         # 详细显示进行的步骤
       --help          # 显示此帮助信息并退出
-      --version       #  显示版本信息并退出
+      --version       # 显示版本信息并退出
 ```
 
-![image-20211010121501619](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211010121501619.png)
+![image-20211010121501619](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211010121501619.png)
 
 **炸弹命令**
 
-务必看清楚敲打的命令，是否正确、不得有空格
+<font color="red">务必看清楚敲打的命令，是否正确、不得有空格</font>
 
-务必看清楚敲打的命令，是否正确、不得有空格
+<font color="red">务必看清楚敲打的命令，是否正确、不得有空格</font>
 
-务必看清楚敲打的命令，是否正确、不得有空格
+<font color="red">务必看清楚敲打的命令，是否正确、不得有空格</font>
 
-```shell
+```powershell
 # 1.强制删除且不让用户确认
 rm -rf 文件夹
 
@@ -2598,7 +2593,7 @@ rm -rf 文件夹
 已删除目录："./q"
 ```
 
-![image-20211010121744645](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211010121744645.png)
+![image-20211010121744645](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211010121744645.png)
 
 **注意文件恢复**
 
@@ -2606,7 +2601,7 @@ rm命令删除文件后可以通过如ext3grep工具恢复数据，若是想要�
 
 #### 3.4.1 **help命令**
 
-```shell
+```powershell
 # 语法：
 命令  --help
 
@@ -2618,7 +2613,7 @@ rm命令删除文件后可以通过如ext3grep工具恢复数据，若是想要�
 
 当你不知道linux命令如何使用的时候，使用man命令帮助你
 
-```shell
+```powershell
 # 命令语法;
 man 命令  
 
@@ -2628,13 +2623,13 @@ man  ls
 # 进入man帮助文档后，按下q退出
 ```
 
-![image-20211010122036216](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211010122036216.png)
+![image-20211010122036216](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211010122036216.png)
 
 #### 3.4.2 **echo命令**
 
 echo命令如同python的print一样，能够输出字符串到屏幕给用户看
 
-```shell
+```powershell
 [root@localhost tmp]# name="这是崇拜的你"
 [root@localhost tmp]# echo $name
 这是崇拜的你
@@ -2644,7 +2639,7 @@ echo命令如同python的print一样，能够输出字符串到屏幕给用户�
 
 #### 3.4.3 **info命令**
 
-```shell
+```powershell
 # 语法：
 info 命令
 ```
@@ -2655,51 +2650,51 @@ shutdown重启或者关机
 
 重启
 
-```shell
+```powershell
 # 语法：
-shutdown -r参数    -r --reboot    Reboot the machine
+shutdown -r 参数    -r --reboot    Reboot the machine
 
 shutdown -r 10    # 十分钟后重启
-shutdown -r 0        # 立刻重启
-shutdown -r now # 立刻重启
+shutdown -r 0     # 立刻重启
+shutdown -r now   # 立刻重启
 ```
 
 关机
 
-```shell
+```powershell
 # 语法：
 shutdown -h    --halt  # 停止的含义
 
-shutdown -h 10 # 十分钟后关机
-shutdown -h 0  
-shutdown -h now # 立即关机
+shutdown -h 10 		   # 十分钟后关机
+shutdown -h 0		   # 立即关机
+shutdown -h now 	   # 立即关机
 ```
 
 halt，poweroff，reboot命令关机与重启
 
-```shell
-reboot # 重启
+```powershell
+reboot    # 重启
 poweroff  # 关机
-halt # 关机
+halt      # 关机
 ```
 
 关机、重启、注销命令列表
 
-| 命令            | 说明                              |
-| --------------- | --------------------------------- |
-| shutdown -h now | 立刻关机，企业用法                |
-| shutdown -h 1   | 1分钟后关机，也可以写时间如 11:30 |
-| halt            | 立刻关闭系统，需手工切断电源      |
-| init 0          | 切换运行级别为0，0表示关机        |
-| poweroff        | 立刻关闭系统，且关闭电源          |
-| 重启            |                                   |
-| reboot          | 立刻重启机器，企业用法            |
-| Shutdown -r now | 立刻重启，企业用法                |
-| shutdown -r 1   | 一分钟后重启                      |
-| Init 6          | 切换运行级别为6，此级别是重启     |
-| 注销命令        |                                   |
-| logout          | 注销退出当前用户                  |
-| exit            | 注销退出当前用户，快捷键ctrl + d  |
+| 命令                              | 说明                              |
+| --------------------------------- | --------------------------------- |
+| shutdown -h now                   | 立刻关机，企业用法                |
+| shutdown -h 1                     | 1分钟后关机，也可以写时间如 11:30 |
+| halt                              | 立刻关闭系统，需手工切断电源      |
+| init 0                            | 切换运行级别为0，0表示关机        |
+| poweroff                          | 立刻关闭系统，且关闭电源          |
+| <font color="red">重启</font>     |                                   |
+| reboot                            | 立刻重启机器，企业用法            |
+| Shutdown -r now                   | 立刻重启，企业用法                |
+| shutdown -r 1                     | 一分钟后重启                      |
+| Init 6                            | 切换运行级别为6，此级别是重启     |
+| <font color="red">注销命令</font> |                                   |
+| logout                            | 注销退出当前用户                  |
+| exit                              | 注销退出当前用户，快捷键ctrl + d  |
 
 #### 3.4.5 **Linux命令行常用快捷键**
 
@@ -2710,6 +2705,8 @@ ctrl + d    # 退出当前用户
 ctrl + a    # 光标移到行首
 ctrl + e    # 光标移到行尾
 ctrl + u    # 删除光标到行首的内容
+ctrl + k	# 删除当前光标后面的文字
+ctrl + w	# 删除光标前面的单词的字符
 ```
 
 #### 3.4.6 **Linux的环境变量**
@@ -2718,9 +2715,9 @@ ctrl + u    # 删除光标到行首的内容
 
 那么如何查看Linux下的PATH环境变量呢？
 
-```shell
+```powershell
 # 1.为什么系统能够直接找到python解释器？
-[root@localhost tmp]# which python  #输出命令所在的绝对路径
+[root@localhost tmp]# which python  # 输出命令所在的绝对路径
 /bin/python
 
 # 2.学习linux的PATH，
@@ -2746,11 +2743,11 @@ echo $PATH
 
 PATH(一定是大写的)这个变量是由一堆目录组成，分隔符是":"号，而不同于windows的";"号。
 
-![image-20211012113727856](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211012113727856.png)
+![image-20211012113727856](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211012113727856.png)
 
 **修改linux的全局配置文件**
 
-```shell
+```powershell
 # 1.名字叫做 /etc/profile，里面是shell脚本语言
 
 # 2.编辑这个文件，写入你想永久生效的变量和值，系统每次开机都会读取这个文件，让其生效
@@ -2760,7 +2757,6 @@ vim  /etc/profile
 # 这是自定义的变量，每次开机都能够读取了，第一条是设置系统中文的变量
 export LC_ALL=zh_CN.UTF-8  #打开注释，系统支持中文
 #export LC_ALL=en_US.UTF-8  #打开注释，系统就支持英文了
-
 ```
 
 **绝对路径与相对路径**
@@ -2778,7 +2774,7 @@ Linux下特别注意文件名/路径的写法，可以将所谓的路径(path)�
 
 例如：你现在在/home 这个目录下，如要进入/var/log这个路径，如何写呢？
 
-```shell
+```powershell
 1. cd /var/log   (绝对路径)
 2. cd ../var/log (相对路径)
 ```
@@ -2825,43 +2821,43 @@ Linux下特别注意文件名/路径的写法，可以将所谓的路径(path)�
 
 **Linux开机启动流程**
 
-作为一个运维人，必须得保障服务器正确工作，机器宕机了，也得明确是什么问题，从何查起，那么了解启动流程就能够对症下药，排查问题。****
+作为一个运维人，必须得保障服务器正确工作，机器宕机了，也得明确是什么问题，从何查起，那么了解启动流程就能够对症下药，排查问题。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\275.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\275.jpg)
 
-- *BIOS自检*
+- BIOS自检
 
   检查硬件是否健康。如：cpu 风扇是否正常，内存是否正常，时钟是否正常，这个过程是读取 ROM 上的指令执行的。
 
-- *微控制器*
+- 微控制器
 
   系统想要启动必须先加载 BIOS，按下电源键时，给微控制器下达一条复位指令，各寄存器复位，最后下达一条跳转指令，跳转到 BIOS 的 ROM，使得硬件去读取主板上的 BIOS 程序，在这之前都是 由硬件来完成，之后硬件就会把控制权交给 BIOS。
 
-- *BIOS->POST*
+- BIOS->POST
 
   随后 BIOS 程序加载 CMOS(可读写的 RAM 芯片，保存 BIOS 设置硬件参数的数据)的信息，借 CMOS 取得主机的各项硬件配置。取得硬件配置的信息之后，BIOS 进行加电自检(Power-on self Test，POST)过程,检测计算机各种硬件信息，如果发现硬件错误则会报错(发出声音警告)。之后 BIOS 对硬件进行初始化。BIOS 将自己复制到物理内存中继续执行，开始按顺序搜寻可引导存储设 备，决定存储设备的顺序(即定义第一个可引导的磁盘，当然是在有两个磁盘的前提)，接下来就 会读取磁盘的内容，但是要读取磁盘文件必须要有文件系统，这对 BIOS 挂载文件系统来说是不可 能，因此需要一个不依赖文件系统的方法使得 BIOS 读取磁盘内容，这种方法就是引入 MBR。最后 BIOS 通过 INT13 硬件中断功能读取第一个可引导的存储设备的 MBR(0 磁道 0 扇区)中的 boot loader。将 MBR 加载到物理内存中执行。MBR 载入内存后，BIOS 将控制权转交给 MBR(准确的 说应该是 MBR 中的 boot loader)，然后 MBR 接管任务开始执行。
 
-- *MBR引导*
+- MBR引导
 
   载入了第一个可引导的存储设备的 MBR 后，MBR 中的 boot loader 就要读取所在磁盘的操作系统核 心文件(即后面所说的内核)了。 但是不同操作系统的文件系统格式不同，还有一个磁盘可以安装多个操作系统，如何让 boot loader 做到引导的就是用户想要的操作系统，这么多不同的功能单靠一个 446 字节的 boot loader 是远远不 够的。必须有一个相对应的程序来处理各自对应的操作系统核心文件，这个程序就是操作系统的 loader(注意不是 MBR 中的 boot loader)，这样一来 boot loader 只需要将控制权交给对应操作系统 的 loader，让它负责去启动操作系统就行了。 一个硬盘的每个分区的第一个扇区叫做 boot sector，这个扇区存放的就是操作系统的 loader，所以常 说一个分区只能安装一个操作系统。MBR 的 boot loader 有三个功能:提供选单，读取内核文件，转 交给其它 loader。 提供选单就是给用户提供一张选项单，让用户选择进入哪个操作系统;读取内核文件的意思是，系 统会有一个默认启动的操作系统，这个操作系统的 loader 在所在分区的 boot sector 有一份，除此之 外，也会将这个默认启动的操作系统的 loader 复制一份到 MBR 的 boot loader 中，这样一来 MBR 就 会直接读取 boot loader 中的 loader 了，然后就是启动默认的操作系统;转交给其它的 loader，当用 户选择其它操作系统启动的时候，boot loader 会将控制权转交给对应的 loader，让它负责操作系统的 启动。
 
-- *GRUB引导*
+- GRUB引导
 
   grub 是 boot loader 中的一种，就 grub 来说，为了打破在 MBR 中只有 446Bytes 用于存放 boot loader这一限制，所以这一步的实现是这样的:grub 是通过分成三个阶段来实现加载内核这一功能的，这三个阶段分别是:stage1, stage1.5 以及 stage2。 stage1:存放于 MBR 的前 446Bytes，用于加载 stage1.5 阶段，目的是为了识别并驱动 stage2(或者 /boot)所在分区的文件系统。 stage1.5:存放于 MBR 之后的扇区，加载 stage2 所在分区的文件系统驱动，让 stage1 中的 boot loader 能识别 stage2 所在分区的文件系统。 stage2:存放于磁盘分区之上，具体存放于/boot/grub 目录之下，主要用于加载内核文件(vmlinuz- VERSION-RELEASE)以及 ramdisk 这个临时根文件系统(initrd-VERSION-RELEASE.img 或 initramfs- VERSION-RELEASE.img)。 概述:假如要启动的是硬盘设备，首先硬件平台主板 BIOS 必须能够识别硬盘，然后 BIOS 才能加载 硬盘中的 boot loader，而 boot loader 自身加载后就能够直接识别当前主机上的硬盘设备了;不过， 能够识别硬盘设备不代表能够识别硬盘设备中的文件系统，因为文件系统是额外附加的一层软件组 织的文件结构，所以要对接一种文件系统，就必须要有对应的能够识别和理解这种文件系统的驱 动，这种驱动就称为文件系统驱动。而 stage1.5 就是向 grub 提供文件系统驱动的，这样 stage1 就能 访问 stage2 及内核所在的分区(/boot)了。
 
-- *加载内核*
+- 加载内核
 
   内核(Kerenl)在得到系统控制权之后，首先要进行自身初始化，而初始化的主要作用是: 探测可识别到的所有硬件设备; 加载硬件驱动程序，即加载真正的根文件系统所在设备的驱动程序(有可能会借助于 ramdisk 加载 驱动); 以只读方式挂载根文件系统(如果有借助于 ramdisk 这个临时文件系统(虚根)，则在这一步之后 会执行根切换;否则不执行根切换); 运行用户空间的第一个应用程序:/sbin/init。 到这里内核空间的启动流程就结束了，而接下来是用户空间完成后续的系统启动流程。 注意:ramdisk 和内核是由 boot loader 一同加载到内存当中的，ramdisk 是用于实现系统初始化的、 基于内存的磁盘设备，即加载至内存(的某一段空间)后把内存当磁盘使用，并在内存中作为临时 根文件系统提供给内核使用，帮助内核挂载真正的根文件系统。而之所以能够帮助内核挂载根文件 系统是因为在 ramdisk 这个临时文件系统的/lib/modules 目录下有真正的根文件系统所在设备的驱动 程序;除此之外，这个临时文件系统也遵循 FHS，例如有这些固定目录结构:/bin, /sbin, /lib, /lib64, /etc, /mnt, /media, ... 因为 Linux 内核有一个特性就是通过使用缓冲/缓存来达到加速对磁盘上文件的访问的目的，而 ramdisk 是加载到内存并模拟成磁盘来使用的，所以 Linux 就会为内存中的“磁盘”再使用一层缓冲 /缓存，但是 ramdisk 本来就是内存，它只不过被当成硬盘来使用罢了，这就造成双缓冲/缓存了，而 且不会起到提速效果，甚至影响了访问性能;CentOS 5 系列以及之前版本的 ramdisk 文件为 initrd- VERSION-RELEASE.img，就会出现上述所说到的问题;而为了解决一问题，CentOS 6/7 系列版本就将其改为 initramfs-VERSION-RELEASE.img，使用文件系统的方式就可以避免双缓冲/缓存了，可 以说这是一种提速机制。
 
-- *启动init进程*
+- 启动init进程
 
   grub 中默认指定 init=/sbin/init 程序，可以在 grub.conf 中 kernel 行自定义执行程序 init=/bin/bash,此时 可以绕过下面步骤直接进入 bash 界面。 内核源代码文件中显示 996 行左右，规定了 init 启动的顺序，/sbin/init->/etc/init->/bin/init->/bin/sh。
 
-- *读取/etc/inittab 文件*
+- 读取/etc/inittab 文件
 
   inittab 文件里面定义了系统默认运行级别，这一步做了一些工作如下: 初始运行级别(RUN LEVEL); 系统初始化脚本; 对应运行级别的脚本目录; 定义 UPS 电源终端/恢复脚本; 在虚拟控制台生成 getty,以生成终端; 在运行级别 5 初始化 X。
 
-- *执行/etc/rc.d/rc.sysinit 程序*
+- 执行/etc/rc.d/rc.sysinit 程序
 
   系统初始化一些脚本，主要完成以下工作。 设置主机名; 设置欢迎信息;
 
@@ -2869,13 +2865,13 @@ Linux下特别注意文件名/路径的写法，可以将所谓的路径(path)�
 
   激活 swap 设备; 根据/etc/sysctl.conf 文件设置内核参数; 激活 lvm 及 software raid 设备; 加载额外设备的驱动程序; 清理操作。 /etc/rc*.d/文件(各种服务) 里面定义的是各种服务的启动脚本，可以 ls 查看，S 开头代表开机启动的服务，K 开头的是关机要 执行的任务。#代表数字，一个数字代表一个运行级别，共 7 个运行级别。 /etc/rc.d/rc.local 文件 这里面可以自定义开机启动的命令。
 
-- *执行/bin/login*
+- 执行/bin/login
 
   执行/bin/login 程序，等待用户登录。
 
 **centos7启动流程**
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\276.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\276.jpg)
 
 CentOS7 和 CentOS6 启动流程差不多，只不过到 init 程序时候，改为了 systemd，因此详细解释一下 systemd 后的启动流程。
 
@@ -2939,7 +2935,7 @@ Vim是从 vi 发展出来的一个文本编辑器。代码补完、编译及错�
 
 底行模式：按下:(冒号)之后进入到的模式
 
-<img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\282.png" alt="img"  />
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\282.png" alt="img"  />
 
 **vim基础用法**
 
@@ -2949,7 +2945,7 @@ Vim是从 vi 发展出来的一个文本编辑器。代码补完、编译及错�
 - 修改完后，按 esc 退出编辑模式:wq
 - 保存退出 #注意":"必须是英文符号
 
-```shell
+```powershell
 :wq  # 保存并退出
 :q!  # 强制退出不保存
 :wq! # 强制保存退出
@@ -2961,7 +2957,7 @@ Vim是从 vi 发展出来的一个文本编辑器。代码补完、编译及错�
 
 此状态下敲击键盘动作会被Vim识别为命令，而非输入字符。比如我们此时按下i，并不会输入一个字符，i被当作了一个命令。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\283.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\283.jpg)
 
 **移动光标**
 
@@ -2976,7 +2972,7 @@ H　　　　# 移动光标到屏幕首行
 M　　　　# 移动到光标到屏幕的中间一行
 L　　　　# 移动光标到屏幕的尾行
 gg　　　 # 移动光标到文档的首行
-G　　　　# 移动光标到文档尾行
+j　　　　# 移动光标到文档尾行
 
 ctrl + f　　# 下一页
 ctrl + b　　# 上一页
@@ -3006,7 +3002,8 @@ dd    # 删除光标所在行
 D     # 删除当前光标到行尾的内容
 dG    # 删除当前行到文档尾部的内容
 p     # 粘贴yy所复制的内容
-x　　  # 先前删除字符
+x　　  # 向前删除字符
+X	  # 向后删除字符
 u     # 撤销上一步的操作
 .     # 重复前一个执行过的动作
 ```
@@ -3176,7 +3173,7 @@ vim批量缩进
 
 cat命令用于查看纯文本文件（常用于内容较少的）， 可以理解为是`猫`，瞄一眼文件内容，其单词是 `concatenate`，指的是可以连接多个文件且打印到屏幕，或是重定向到文件中。
 
-*cat功能*
+cat功能
 
 | 功能                   | 说明                                                        |
 | ---------------------- | ----------------------------------------------------------- |
@@ -3185,7 +3182,7 @@ cat命令用于查看纯文本文件（常用于内容较少的）， 可以理�
 | 非交互式编辑或追加内容 | cat >> file.txt << EOF 把什么内容写入到文件内 EOF           |
 | 清空文件内容           | cat /dev/null > file.txt 【/dev/null是linux系统的黑洞文件】 |
 
-```shell
+```powershell
 # cat命令语法：
 用法：cat [选项] [文件]...
 将[文件]或标准输入组合输出到标准输出。
@@ -3261,8 +3258,11 @@ cat命令用于查看纯文本文件（常用于内容较少的）， 可以理�
 波音747
 
 
-#cat写入内容，用ctrl+c 结束，一般不用
+# cat写入内容，用ctrl+c 结束，一般不用
 [root@localhost tmp]# cat > file.txt       
+
+# 查看服务器核数
+cat /proc/cpuinfo | grep "flags" | wc -l
 ```
 
 #### 4.2.2 **tac命令**
@@ -3296,9 +3296,9 @@ cat命令用于查看纯文本文件（常用于内容较少的）， 可以理�
 
 grep是linux强大的三剑客之一，从文本中，过滤有用信息的命令
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\291.png)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\291.png)
 
-```shell
+```powershell
 # 1.语法
 grep "你想过滤的字符串"   需要过滤的文件  #用法一
 
@@ -3319,8 +3319,8 @@ grep -i "al"  test.txt  # -i 忽略大小写
 [root@localhost ~]# grep -v  "^#"   test.txt | grep -v "^$"
 ```
 
-```shell
-# Linux提供的管道符“|”讲两条命令隔开，管道符左边命令的输出会作为管道符右边命令的输入。
+```powershell
+# Linux提供的管道符“|”将两条命令隔开，管道符左边命令的输出会作为管道符右边命令的输入。
 常见用法：
 
 # 检查python程序是否启动
@@ -3341,7 +3341,7 @@ netstat -tunlp |grep nginx
 
 More是一个过滤器, 用于分页显示 (一次一屏) 文本，以当前屏幕窗口尺寸为准。
 
-```shell
+```powershell
 # 命令语法
 more 参数  文件
 
@@ -3356,9 +3356,9 @@ Enter	# 向下显示一行
 
 示例：
 
-```shell
+```powershell
 # 显示5行内容
-[root@luffycity tmp]# more -5 alex.txt
+[root@localhost tmp]# more -5 alex.txt
 root:x:0:0:root:/root:/bin/bash
 root:x:0:0:root:/root:/bin/bash
 root:x:0:0:root:/root:/bin/bash
@@ -3367,18 +3367,18 @@ root:x:0:0:root:/root:/bin/bash
 --More--(0%)
 
 # 从6行开始输出内容到屏幕
-more +6 alex.txt
+more +6 test.txt
 
 
 #将显示结果分页输出，需控制窗口大小
-[root@luffycity tmp]# netstat -tunlp |more -3
+[root@localhost tmp]# netstat -tunlp |more -3
 ```
 
 #### 4.2.5 **less命令**
 
 less命令是more的反义词
 
-```shell
+```powershell
 # less命令语法：
 less [选项]... [文件]...
 
@@ -3450,7 +3450,7 @@ ike
 
 显示文件内容的末尾，默认输出后10行。
 
-```shell
+```powershell
 # tail命令语法：
 tail [选项]... [文件]...
 
@@ -3465,7 +3465,7 @@ tail [选项]... [文件]...
 
 示例：
 
-```shell
+```powershell
 # 显示文件后10行
 [root@localhost tmp]# tail file.txt
 
@@ -3493,7 +3493,7 @@ tail: cannot open ‘aa.txt’ for reading: No such file or directory
 
 cut - 在文件的每一行中提取片段，在每个文件FILE的各行中, 把提取的片段显示在标准输出。
 
-```shell
+```powershell
 # cut命令语法：
 cut [选项]... [文件]...
 
@@ -3509,14 +3509,14 @@ N-M       # 从 第 N 到 第 M (并包括 第M) 个 字节, 字符 或 字段
 -M        # 从 第 1 到 第 M (并包括 第M) 个 字节, 字符 或 字段
 ```
 
-示例：*以字节作为分隔符 -b参数*
+示例：字节作为分隔符 -b参数
 
-```shell
+```powershell
 # 切割出第5个字节
-[root@localhost tmp]# cat -b 5 file.txt
+[root@localhost tmp]# cut -b 5 file.txt
 
 # 切割出第5到第10的字节
-[root@localhost tmp]# cat -b 5-10 file.txt
+[root@localhost tmp]# cut -b 5-10 file.txt
 
 # 切割出第5和第10的字节
 [root@localhost tmp]# cut -b 5,10 file.txt
@@ -3528,26 +3528,26 @@ N-M       # 从 第 N 到 第 M (并包括 第M) 个 字节, 字符 或 字段
 [root@localhost tmp]# cut -b 5- file.txt
 ```
 
-示例：*以字符作为分隔符 -c 参数，区别在于中英文*
+示例：以字符作为分隔符 -c 参数，区别在于中英文
 
-```shell
+```powershell
 # 切割出第5个字符
-[root@localhost tmp]# cat -c 5 file.txt
+[root@localhost tmp]# cut -c 5 file.txt
 
 # 切割出第5到第10的字符
-[root@localhost tmp]# cat -b 5-10 file.txt
+[root@localhost tmp]# cut -c 5-10 file.txt
 
 # 切割出第5和第10的字符
-[root@localhost tmp]# cut -b 5,10 file.txt
+[root@localhost tmp]# cut -c 5,10 file.txt
 
 # 切割出第一到第5的字符
-[root@localhost tmp]# cut -b -5 file.txt
+[root@localhost tmp]# cut -c -5 file.txt
 
 # 切割出第5到最后的字符
-[root@localhost tmp]# cut -b 5- file.txt
+[root@localhost tmp]# cut -c 5- file.txt
 ```
 
-示例：*自定义分隔符*
+示例：自定义分隔符
 
 ```shell
 # 以冒号切割，显示第七区域信息
@@ -3562,7 +3562,7 @@ N-M       # 从 第 N 到 第 M (并包括 第M) 个 字节, 字符 或 字段
 
 sort命令将输入的文件内容按照规则排序，然后输出结果。
 
-```shell
+```powershell
 # sort命令语法：
 sort [选项]... [文件]...
 或：sort [选项]... --files0-from=F
@@ -3578,7 +3578,7 @@ sort [选项]... [文件]...
  -k, --key=位置1[,位置2]        # 在位置1 开始一个key，在位置2 终止(默认为行尾)
 ```
 
-```shell
+```powershell
 # sort 是默认以第一个数据来排序，而且默认是以字符串形式来排序,所以由字母 a 开始升序排序
 
 # 按照数字从大到小排序
@@ -3604,7 +3604,7 @@ sort -t " " -k 2 file.txt
 
 uniq命令可以输出或者忽略文件中的重复行，常与sort排序结合使用。
 
-```shell
+```powershell
 # uniq命令用法：
 uniq [选项]... [文件]
 
@@ -3619,7 +3619,7 @@ uniq [选项]... [文件]
 
 示例：
 
-```shell
+```powershell
 # 测试文件
 [root@localhost tmp]# cat efo.txt
 
@@ -3682,18 +3682,18 @@ uniq [选项]... [文件]
 
 #### 4.3.1 **du命令**
 
-```shell
+```powershell
 # du命令语法;
 du 【参数】【文件或目录】
 
 # 常用参数：
 -s 显示总计
--h 以k，M,G为单位显示，可读性强
+-h 以k，M,j为单位显示，可读性强
 ```
 
 示例：
 
-```shell
+```powershell
 # 统计/var/log/文件夹大小 
 du -sh  /var/log/  
 
@@ -3745,13 +3745,13 @@ cached Mem：缓冲的交换区总量，内存中的内容被换出到交换区�
 
 用于查看linux进程信息的命令 
 
-```shell
+```powershell
 # ps命令语法
 ps  -ef    # -ef，是一个组合参数，-e  -f 的缩写，默认显示linux所有的进程信息，以及pid，时间，进程名等信息 
 
 # 过滤系统有关vim的进程 
 [root@localhost ~]# ps -ef |  grep  "vim"
-root      24277   7379  0 16:09 pts/1    00:00:00 vim ps是怎么用的.txt
+root      24277   7379  0 16:09 pts/1    00:00:00 vim ps 是怎么用的.txt
 ```
 
 ```shell
@@ -3765,7 +3765,7 @@ root      24277   7379  0 16:09 pts/1    00:00:00 vim ps是怎么用的.txt
 
 杀死进程的命令
 
-```shell
+```powershell
 # 杀进程
 kill   进程的id号
 
@@ -3779,7 +3779,7 @@ pkill 用于杀死一个进程，与不同的是它会杀死指定名字的所�
 
 kill 命令杀死指定进程 PID，需要配合 ps 使用，而 pkill 直接对进程对名字进行操作，更加方便。
 
-```shell
+```powershell
 # pkill -9  php-fpm      # 结束所有的 php-fpm 进程
 ```
 
@@ -3787,7 +3787,7 @@ kill 命令杀死指定进程 PID，需要配合 ps 使用，而 pkill 直接对
 
 查看linux的网络端口情况 
 
-```shell
+```powershell
 # 安装netsta命令
 yum -y install net-tools
 
@@ -3826,7 +3826,7 @@ root@192.168.178.134's password:
 
 wc命令用于统计文件的行数、单词、字节数。
 
-```shell
+```powershell
 # wc命令语法：
 wc [选项]... [文件]
 
@@ -3840,7 +3840,7 @@ wc [选项]... [文件]
 
 示例：
 
-```shell
+```powershell
 # 统计文件的行数、单词、字节数
 [root@localhost tmp]# wc efo.txt
  17  16 151 efo.txt
@@ -3875,7 +3875,6 @@ wc [选项]... [文件]
 [root@localhost tmp]# echo "ike joker mac windows linux python" | cat -E
 ike joker mac windows linux python$
 
-
 # 统计有几个用户登录
 [root@localhost tmp]# who | wc -l
 2
@@ -3885,7 +3884,7 @@ ike joker mac windows linux python$
 
 tr命令从标准输入中替换、缩减或删除字符，将结果写入到标准输出。
 
-```shell
+```powershell
 # tr命令用法：
 tr [选项]... SET1 [SET2]
 # 从标准输入中替换、缩减和/或删除字符，并将结果写到标准输出。
@@ -3903,7 +3902,7 @@ tr [选项]... SET1 [SET2]
 
 示例：
 
-```shell
+```powershell
 # 将输入的字符变为大写
 [root@localhost tmp]#  echo "ike joker mac windows linux python" | tr "a-z" "A-Z"
 IKE JOKER MAC WINDOWS LINUX PYTHON
@@ -3920,7 +3919,7 @@ I
 [root@localhost tmp]# tr "a-z" "A-Z" < joker.txt
 JOKER
 
-#删除文中出现的换行符、制表符（tab键）
+# 删除文中出现的换行符、制表符（tab键）
 [root@localhost tmp]# tr -d "\n\t" < joker.txt
 jokerjokers[root@localhost tmp]#
 
@@ -3937,7 +3936,7 @@ aaaAAAAAAAAAAAAAAAAAAAAAAAaAA[root@localhost tmp]#
 
 stat命令用于显示文件的状态信息。stat命令的输出信息比ls命令的输出信息要更详细。
 
-```shell
+```powershell
 # stat命令语法:
 stat [选项]... SET1 [SET2]
 
@@ -3966,7 +3965,7 @@ change  # 最近改动，文件元数据改变，如文件名
 
 示例：
 
-```shell
+```powershell
 # 指定要显示信息的普通文件或者文件系统对应的设备文件名。
 [root@localhost tmp]# stat joker.txt
   File: ‘joker.txt’
@@ -3990,14 +3989,14 @@ Change: 2021-10-10 16:11:19.143268379 +0800
 > - **修改时间**（-mtime/天，-mmin/分钟）：文件最后一次修改时间（数据变动）。
 > - **变化时间**（-ctime/天，-cmin/分钟）：文件数据元（例如权限等）最后一次修改时间。
 >
-> ![image-20211010165239759](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211010165239759.png)
+> ![image-20211010165239759](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211010165239759.png)
 >
 > - 文件任何数据改变，change变化，无论是元数据变动，或是对文件mv，cp等
 > - 文件内容被修改时，modify和change更新
 > - 当change更新后，第一次访问该文件（cat，less等），access time首次会更新，之后则不会
 >
-> ```shell
-> touch -a ：仅更新Access time（同时更新Change为current time）
+> ```powershell
+> touch -a：仅更新Access time（同时更新Change为current time）
 > touch -m：仅更新Modify time（同时更新Change为current time）
 > touch -c：不创建新文件
 > touch -t：使用指定的时间更新时间戳（仅更改Access time与Modify time，Change time更新为current time）
@@ -4070,7 +4069,7 @@ efo.txt  file.txt  ike.txt  joker.txt  name2.zip  ptyhon1.pid  ptyhon2.pid  ptyh
 
 **find根据修改时间查找文件**
 
-```shell
+```powershell
 # 一天以内，被访问access过的文件
 find . -atime -1  
 
@@ -4089,7 +4088,7 @@ find . -mtime -1
 
 **find反向查找**
 
-```shell
+```powershell
 # 在当前目录下 查找最大目录深度为1 文件夹类型的数据
 [root@localhost tmp]# find . -maxdepth 1  -type d
 
@@ -4099,7 +4098,7 @@ find . -mtime -1
 
 **根据权限查找**
 
-```shell
+```powershell
 # 寻找权限类型是755的文件
 find /etc/ -maxdepth 2  -perm 755 -type f
 ```
@@ -4120,7 +4119,7 @@ find /etc/ -path "./conf.d" -prune -o -name "*.conf" -print
 
 **根据用户组匹配**
 
-```shell
+```powershell
 # 全局搜索深度为1，用户组是yu的文件
 [root@localhost tmp]# find / -maxdepth 1 -group root
 /
@@ -4149,7 +4148,7 @@ find /etc/ -path "./conf.d" -prune -o -name "*.conf" -print
 
 -ok比-exec更安全，存在用户提示确认
 
-```shell
+```powershell
 # 找出以.pid结尾的文件后执行删除动作且确认
 [root@localhost tmp]# find . -type f -name "*.pid" -ok rm {} \;
 < rm ... ./ptyhon5.pid > ? y
@@ -4178,7 +4177,7 @@ xargs 又称管道命令，构造参数等。
 
 是给命令传递参数的一个过滤器，也是组合多个命令的一个工具它把一个数据流分割为一些足够小的块，以方便过滤器和命令进行处理 。
 
-简单的说就是`把其他命令的给它的数据，传递给它后面的命令作为参数`
+简单的说就是 `把其他命令的给它的数据，传递给它后面的命令作为参数`
 
 ```shell
 # 常用参数：
@@ -4196,7 +4195,7 @@ xargs 又称管道命令，构造参数等。
 
 示例：
 
-```shell
+```powershell
 # 多行输入变单行
 [root@localhost tmp]# xargs < efo.txt
 
@@ -4208,7 +4207,7 @@ xargs 又称管道命令，构造参数等。
 
 # 找到当前目录所有的.txt文件，然后拷贝到其他目录下
 [root@localhost tmp]# find . -name "*.txt" | xargs -i cp {} heihei/
-[root@localhost tmp]# find . -name "*.txt" |xargs -I data cp data  heihei/
+[root@localhost tmp]# find . -name "*.txt" | xargs -I data cp data  heihei/
 
 # 找到当前目录下所有zip文件，然后删除
 # -i参数的用法，用{}替换传递的数据
@@ -4224,6 +4223,998 @@ xargs识别字符串的标识是空格或是换行符，因此如果遇见文件
 - -print0在find中表示每一个结果之后加一个NULL字符，而不是换行符（find默认在结果后加上\n，因此结果是换行输出的）
 - Xargs -0 表示xargs用NULL作为分隔符
 
+#### 4.4.1 sed命令
+
+sed是linux强大的三剑客之一，它是一个行(流)编辑器，非交互式的对文件内容进行增删改查的操作。
+
+##### 4.4.1.1 sed基本适用
+
+sed是linux中提供的一个外部命令，它是一个行(流)编辑器，非交互式的对文件内容进行增删改查的操作，使用者只能在命令行输入编辑命令、指定文件名，然后在屏幕上查看输出，它和文本编辑器有本质的区别。 
+
+```powershell
+区别是：
+
+文本编辑器: 编辑对象是文件
+
+行编辑器：编辑对象是文件中的行
+```
+
+也就是前者一次处理一个文本，而后者是一次处理一个文本中的一行。这个是我们应该弄清楚且必须牢记的，否者可能无法理解sed的运行原理和使用精髓。 
+
+ **sed数据处理原理** 
+
+ ![sed处理数据原理.png](J:\homework\Python学习笔记\Python_notes.assets\1601961286169.png) 
+
+**1. sed语法**
+
+>  sed [options]  ‘{command}[flags]’  [filename] 
+
+```powershell
+# 命令选项
+-e script  # 将脚本中指定的命令添加到处理输入时执行的命令中  多条件，一行中要有多个操作
+-f script  # 将文件中指定的命令添加到处理输入时执行的命令中
+-n         # 抑制自动输出
+-i         # 编辑文件内容
+-i.bak     # 修改时同时创建.bak备份文件。
+-r         # 使用扩展的正则表达式
+!          # 取反 （跟在模式条件后与shell有所区别）
+
+# command   对文件干什么
+sed 		# 常用内部命令
+a   		# 在匹配后面添加
+i   		# 在匹配前面添加
+d   		# 删除
+s   		# 查找替换 字符串
+c   		# 更改
+y   		# 转换   N D P 
+p   		# 打印
+
+
+
+# flags
+数字             # 表示新文本替换的模式
+g：             # 表示用新文本替换现有文本的全部实例
+p：             # 表示打印原始的内容
+w filename:     # 将替换的结果写入文件
+```
+
+**2. sed内部命令示例**
+
+- 文件内容增加操作，将数据追加到某个位置之后，使用命令 <font color="red">a</font> 。 
+
+```powershell
+# 1.在test.txt的每行后追加一行新数据内容: append data "haha"
+[root@localhost opt]# sed 'a\append data "haha"' test.txt
+1 the quick brown fox jumps over the lazy cat . dog
+append data "haha"
+2 the quick brown fox jumps over the lazy cat . dog
+append data "haha"
+3 the quick brown fox jumps over the lazy cat . dog
+append data "haha"
+4 the quick brown fox jumps over the lazy cat . dog
+append data "haha"
+5 the quick brown fox jumps over the lazy cat . dog
+append data "haha"
+
+# 2.在第二行后新开一行追加数据: append data "haha"
+[root@localhost opt]# sed '2a\append data "haha"' test.txt
+1 the quick brown fox jumps over the lazy cat . dog
+2 the quick brown fox jumps over the lazy cat . dog
+append data "haha"
+3 the quick brown fox jumps over the lazy cat . dog
+4 the quick brown fox jumps over the lazy cat . dog
+5 the quick brown fox jumps over the lazy cat . dog
+
+# 3.在第二行到第四行后新开一行追加数据: append data "haha"
+[root@localhost opt]# sed '2,4a\append data "haha"' test.txt
+1 the quick brown fox jumps over the lazy cat . dog
+2 the quick brown fox jumps over the lazy cat . dog
+append data "haha"
+3 the quick brown fox jumps over the lazy cat . dog
+append data "haha"
+4 the quick brown fox jumps over the lazy cat . dog
+append data "haha"
+5 the quick brown fox jumps over the lazy cat . dog
+[root@localhost opt]#
+
+# 4.匹配字符串追加: 找到包含"3 the"的行，在其后新开一行追加内容: append data "haha"
+[root@localhost opt]# sed '/3 the/a\append data "haha"' test.txt
+1 the quick brown fox jumps over the lazy cat . dog
+2 the quick brown fox jumps over the lazy cat . dog
+3 the quick brown fox jumps over the lazy cat . dog
+append data "haha"
+4 the quick brown fox jumps over the lazy cat . dog
+5 the quick brown fox jumps over the lazy cat . dog
+
+注：//开启匹配模式  /要匹配的字符串/
+```
+
+- 文件内容增加操作，将数据插入到某个位置之前，使用命令 <font color="red">**i**</font>。 
+
+```powershell
+# 1.在test.txt的每行前插入一行新数据内容: insert data "haha"
+[root@localhost opt]# sed 'i\insert data "haha"' test.txt
+insert data "haha"
+1 the quick brown fox jumps over the lazy cat . dog
+insert data "haha"
+2 the quick brown fox jumps over the lazy cat . dog
+insert data "haha"
+3 the quick brown fox jumps over the lazy cat . dog
+insert data "haha"
+4 the quick brown fox jumps over the lazy cat . dog
+insert data "haha"
+5 the quick brown fox jumps over the lazy cat . dog
+
+# 2.在第二行前新开一行插入数据: insert data "haha"
+[root@localhost opt]# sed '2i\insert data "haha"' test.txt
+1 the quick brown fox jumps over the lazy cat . dog
+insert data "haha"
+2 the quick brown fox jumps over the lazy cat . dog
+3 the quick brown fox jumps over the lazy cat . dog
+4 the quick brown fox jumps over the lazy cat . dog
+5 the quick brown fox jumps over the lazy cat . dog
+
+# 3.在第二到四行每行前新开一行插入数据: insert data "haha"
+[root@localhost opt]# sed '2,4i\insert data "haha"' test.txt
+1 the quick brown fox jumps over the lazy cat . dog
+insert data "haha"
+2 the quick brown fox jumps over the lazy cat . dog
+insert data "haha"
+3 the quick brown fox jumps over the lazy cat . dog
+insert data "haha"
+4 the quick brown fox jumps over the lazy cat . dog
+5 the quick brown fox jumps over the lazy cat . dog
+
+# 4.匹配字符串插入: 找到包含"3 the"的行，在其前新开一行插入内容: insert data "haha"
+[root@localhost opt]# sed '/3 the/i\insert data "haha' test.txt
+1 the quick brown fox jumps over the lazy cat . dog
+2 the quick brown fox jumps over the lazy cat . dog
+insert data "haha
+3 the quick brown fox jumps over the lazy cat . dog
+4 the quick brown fox jumps over the lazy cat . dog
+5 the quick brown fox jumps over the lazy cat . dog
+```
+
+- 文件内容修改操作–替换，将一行中匹配的内容替换为新的数据，使用命令<font color="red">s</font>。 
+
+```powershell
+# 1.从标准输出流中做替换，将test替换为text
+[root@localhost opt]# echo "this is a test" |sed 's/test/text/'
+this is a text
+
+# 2.将test.txt中每行的dog替换为cat
+[root@localhost opt]# sed 's/dog/cat/' test.txt
+1 the quick brown fox jumps over the lazy cat . cat
+2 the quick brown fox jumps over the lazy cat . cat
+3 the quick brown fox jumps over the lazy cat . cat
+4 the quick brown fox jumps over the lazy cat . cat
+5 the quick brown fox jumps over the lazy cat . cat
+
+# 3.将test.txt中第二行的dog替换为cat
+[root@localhost opt]# sed '2s/dog/cat/' test.txt
+1 the quick brown fox jumps over the lazy cat . dog
+2 the quick brown fox jumps over the lazy cat . cat
+3 the quick brown fox jumps over the lazy cat . dog
+4 the quick brown fox jumps over the lazy cat . dog
+5 the quick brown fox jumps over the lazy cat . dog
+
+# 4.将test.txt中第二到第四行的dog替换为cat
+[root@localhost opt]# sed '2,4s/dog/cat/' test.txt
+1 the quick brown fox jumps over the lazy cat . dog
+2 the quick brown fox jumps over the lazy cat . cat
+3 the quick brown fox jumps over the lazy cat . cat
+4 the quick brown fox jumps over the lazy cat . cat
+5 the quick brown fox jumps over the lazy cat . dog
+
+# 5.匹配字符串替换:将包含字符串"3 the"的行中的dog替换为cat
+[root@localhost opt]# sed '/3 the/s/dog/cat/' test.txt
+1 the quick brown fox jumps over the lazy cat . dog
+2 the quick brown fox jumps over the lazy cat . dog
+3 the quick brown fox jumps over the lazy cat . cat
+4 the quick brown fox jumps over the lazy cat . dog
+5 the quick brown fox jumps over the lazy cat . dog
+
+```
+
+-  文件内容修改操作–更改，将一行中匹配的内容替换为新的数据，使用命令 <font color="red">c</font>。 
+
+```powershell
+# 1.将test.txt文件中的所有行的内容更改为: change data "data"
+[root@localhost opt]# sed 'c\change data "hehe"' test.txt
+change data "hehe"
+change data "hehe"
+change data "hehe"
+change data "hehe"
+change data "hehe"
+
+# 2.将test.txt文件第二行的内容更改为: change data "haha"
+[root@localhost opt]# sed '2c\change data "hehe"' test.txt
+1 the quick brown fox jumps over the lazy cat . dog
+change data "hehe"
+3 the quick brown fox jumps over the lazy cat . dog
+4 the quick brown fox jumps over the lazy cat . dog
+5 the quick brown fox jumps over the lazy cat . dog
+
+# 3.将test.txt文件中的第二、三、四行的内容更改为：change data "haha"
+[root@localhost opt]# sed '2,4c\change data "hehe"' test.txt
+1 the quick brown fox jumps over the lazy cat . dog
+change data "hehe"
+5 the quick brown fox jumps over the lazy cat . dog
+
+# 4.将data1文件中包含"3 the"的行内容更改为: change data "haha"
+[root@localhost opt]# sed '/3 the/c\change data "hehe"' test.txt
+1 the quick brown fox jumps over the lazy cat . dog
+2 the quick brown fox jumps over the lazy cat . dog
+change data "hehe"
+4 the quick brown fox jumps over the lazy cat . dog
+5 the quick brown fox jumps over the lazy cat . dog
+
+```
+
+- 文件内容修改操作–字符转换，将一行中匹配的内容替换为新的数据，使用命令<font color="red">y</font>。 
+
+```powershell
+# 1.将test.txt中的a b c字符转换为对应的 A  B  C字符
+[root@localhost opt]# sed 'y/abc/ABC/' test.txt
+1 the quiCk Brown fox jumps over the lAzy CAt . dog
+2 the quiCk Brown fox jumps over the lAzy CAt . dog
+3 the quiCk Brown fox jumps over the lAzy CAt . dog
+4 the quiCk Brown fox jumps over the lAzy CAt . dog
+5 the quiCk Brown fox jumps over the lAzy CAt . dog
+```
+
+- 文件内容删除，将文件中的指定数据删除，使用命令<font color="red">d</font>。 
+
+```powershell
+# 1.删除文件test.txt中的所有数据
+[root@localhost opt]# sed 'd' test.txt
+
+# 2.删除文件test.txt中的第三行数据
+[root@localhost opt]# sed '3d' test.txt
+1 the quick brown fox jumps over the lazy cat . dog
+2 the quick brown fox jumps over the lazy cat . dog
+4 the quick brown fox jumps over the lazy cat . dog
+5 the quick brown fox jumps over the lazy cat . dog
+
+# 3.删除文件test.txt中包含字符串"3 the"的行
+[root@localhost opt]# sed '/3 the/d' test.txt
+1 the quick brown fox jumps over the lazy cat . dog
+2 the quick brown fox jumps over the lazy cat . dog
+4 the quick brown fox jumps over the lazy cat . dog
+5 the quick brown fox jumps over the lazy cat . dog
+
+```
+
+- 文件内容查看，将文件内容输出到屏幕，使用命令<font color="red">p</font>。 
+
+```powershell
+# 1.打印test.txt文件内容
+[root@localhost opt]# sed 'p' test.txt
+1 the quick brown fox jumps over the lazy cat . dog
+1 the quick brown fox jumps over the lazy cat . dog
+2 the quick brown fox jumps over the lazy cat . dog
+2 the quick brown fox jumps over the lazy cat . dog
+3 the quick brown fox jumps over the lazy cat . dog
+3 the quick brown fox jumps over the lazy cat . dog
+4 the quick brown fox jumps over the lazy cat . dog
+4 the quick brown fox jumps over the lazy cat . dog
+5 the quick brown fox jumps over the lazy cat . dog
+5 the quick brown fox jumps over the lazy cat . dog
+
+# 2.打印test.txt文件第3行内容
+[root@localhost opt]# sed '3p' test.txt
+1 the quick brown fox jumps over the lazy cat . dog
+2 the quick brown fox jumps over the lazy cat . dog
+3 the quick brown fox jumps over the lazy cat . dog
+3 the quick brown fox jumps over the lazy cat . dog
+4 the quick brown fox jumps over the lazy cat . dog
+5 the quick brown fox jumps over the lazy cat . dog
+
+# 3.打印test.txt文件第2行到第5行内容
+[root@localhost opt]# sed '2,5p' test.txt
+1 the quick brown fox jumps over the lazy cat . dog
+2 the quick brown fox jumps over the lazy cat . dog
+2 the quick brown fox jumps over the lazy cat . dog
+3 the quick brown fox jumps over the lazy cat . dog
+3 the quick brown fox jumps over the lazy cat . dog
+4 the quick brown fox jumps over the lazy cat . dog
+4 the quick brown fox jumps over the lazy cat . dog
+5 the quick brown fox jumps over the lazy cat . dog
+5 the quick brown fox jumps over the lazy cat . dog
+
+# 4.打印匹配到 3 the 的内容
+[root@localhost opt]# sed '/3 the/p' test.txt
+1 the quick brown fox jumps over the lazy cat . dog
+2 the quick brown fox jumps over the lazy cat . dog
+3 the quick brown fox jumps over the lazy cat . dog
+3 the quick brown fox jumps over the lazy cat . dog
+4 the quick brown fox jumps over the lazy cat . dog
+5 the quick brown fox jumps over the lazy cat . dog
+
+可以看得出，打印内容是重复的行，原因是打印了指定文件内容一次，又将读入缓存的所有数据打印了一次，所以会看到这样的效果，如果不想看到这样的结果，可以加命令选项-n 抑制内存输出即可。
+```
+
+##### 4.4.1.2 命令选项说明
+
+**在sed命令中，命令选项是对sed中的命令的增强** 
+
+- 在命令行中使用多个命令 -e 
+
+```powershell
+# 1.将brown替换为green dog替换为cat
+[root@localhost opt]# sed -e 's/brown/green/;s/dog/cat/' test.txt
+1 the quick green fox jumps over the lazy cat . cat
+2 the quick green fox jumps over the lazy cat . cat
+3 the quick green fox jumps over the lazy cat . cat
+4 the quick green fox jumps over the lazy cat . cat
+5 the quick green fox jumps over the lazy cat . cat
+
+# 2.从文件读取编辑器命令 -f 适用于日常重复执行的场景
+[root@localhost opt]# vim abc
+[root@localhost opt]# cat abc
+s/brown/green/
+s/dog/cat/
+s/fox/elephant/
+[root@localhost opt]# sed -f abc test.txt
+1 the quick green elephant jumps over the lazy cat . cat
+2 the quick green elephant jumps over the lazy cat . cat
+3 the quick green elephant jumps over the lazy cat . cat
+4 the quick green elephant jumps over the lazy cat . cat
+5 the quick green elephant jumps over the lazy cat . cat
+
+```
+
+- 抑制内存输出 -n 
+
+```powershell
+# 1.打印test.txt文件的第二行到最后一行内容  $最后的意思 
+[root@localhost opt]# sed -n '2,$p' test.txt
+2 the quick brown fox jumps over the lazy cat . dog
+3 the quick brown fox jumps over the lazy cat . dog
+4 the quick brown fox jumps over the lazy cat . dog
+5 the quick brown fox jumps over the lazy cat . dog
+```
+
+- 使用正则表达式 -r 
+
+```powershell
+# 1.打印text.txt中以字符串"3 the"开头的行内容
+[root@localhost opt]# sed -n -r '/^3 the/p' test.txt
+3 the quick brown fox jumps over the lazy cat . dog
+```
+
+ 从上述的演示中，大家可以看出，数据处理只是在缓存中完成的，并没有实际修改文件内容，如果需要修改文件内容可以直接使用-i命令选项。在这里我需要说明的是-i是一个不可逆的操作，一旦修改，如果想复原就很困难，几乎不可能，所以建议大家在操作的时候可以备份一下源文件。-i命令选项提供了备份功能，比如参数使用-i.bak，那么在修改源文件的同时会先备份一个以.bak结尾的源文件，然后再进行修改操作。 
+
+示例：
+
+```powershell
+# 1.查看文件列表，没有发现test.txt.bak
+
+# 2.执行替换命令并修改文件
+[root@localhost opt]# sed -i.bak 's/brown/green/' test.txt
+
+# 3.发现文件夹中多了一个data1.bak文件
+[root@localhost opt]# find ./test.txt.bak
+./test.txt.bak
+[root@localhost opt]# cat test.txt.bak
+1 the quick brown fox jumps over the lazy cat . dog
+2 the quick brown fox jumps over the lazy cat . dog
+3 the quick brown fox jumps over the lazy cat . dog
+4 the quick brown fox jumps over the lazy cat . dog
+5 the quick brown fox jumps over the lazy cat . dog
+[root@localhost opt]# cat test.txt
+1 the quick green fox jumps over the lazy cat . dog
+2 the quick green fox jumps over the lazy cat . dog
+3 the quick green fox jumps over the lazy cat . dog
+4 the quick green fox jumps over the lazy cat . dog
+5 the quick green fox jumps over the lazy cat . dog
+```
+
+##### 4.4.1.3 标志
+
+**在sed命令中，标志是对sed中的内部命令做补充说明** 
+
+数字标志：此标志是一个非零正数，默认情况下，执行替换的时候，如果一行中有多个符合的字符串，如果没有标志位定义，那么只会替换第一个字符串，其他的就被忽略掉了，为了能精确替换，可以使用数字位做定义。 
+
+```powershell
+[root@localhost opt]# cat test.txt
+1 the quick brown fox jumps over the lazy dog . dog
+2 the quick brown fox jumps over the lazy dog . dog
+3 the quick brown fox jumps over the lazy dog . dog
+4 the quick brown fox jumps over the lazy dog . dog
+5 the quick brown fox jumps over the lazy dog . dog
+```
+
+- 替换一行中的第二处dog为cat 
+
+```powershell
+[root@localhost opt]# sed 's/dog/cat/2' test.txt
+1 the quick brown fox jumps over the lazy dog . cat
+2 the quick brown fox jumps over the lazy dog . cat
+3 the quick brown fox jumps over the lazy dog . cat
+4 the quick brown fox jumps over the lazy dog . cat
+5 the quick brown fox jumps over the lazy dog . cat
+
+```
+
+- g标志:将一行中的所有符合的字符串全部执行替换 
+
+```powershell
+[root@localhost opt]# sed 's/dog/cat/g' test.txt
+1 the quick brown fox jumps over the lazy cat . cat
+2 the quick brown fox jumps over the lazy cat . cat
+3 the quick brown fox jumps over the lazy cat . cat
+4 the quick brown fox jumps over the lazy cat . cat
+5 the quick brown fox jumps over the lazy cat . cat
+
+```
+
+- p标志：打印文本内容，类似于-p命令选项 
+
+```powershell
+[root@localhost opt]# sed -n '3s/dog/cat/p' test.txt
+3 the quick brown fox jumps over the lazy cat . dog
+```
+
+- w filename标志：将修改的内容存入filename文件中 
+
+```powershell
+[root@localhost opt]# sed '3s/dog/cat/w txt' test.txt
+1 the quick brown fox jumps over the lazy dog . dog
+2 the quick brown fox jumps over the lazy dog . dog
+3 the quick brown fox jumps over the lazy cat . dog
+4 the quick brown fox jumps over the lazy dog . dog
+5 the quick brown fox jumps over the lazy dog . dog
+
+可以看出，将修改的第三行内容存在了text文件中
+[root@localhost opt]# cat txt
+3 the quick brown fox jumps over the lazy cat . dog
+```
+
+#### 4.4.2 awk命令
+
+awk是linux强大的三剑客之一，awk是一种可以处理数据、产生格式化报表的语言，功能十分强大。
+
+##### 4.4.2.1 awk基本适用
+
+在日常计算机管理中，总会有很多数据输出到屏幕或者文件，这些输出包含了标准输出、标准错误输出。默认情况下，这些信息全部输出到默认输出设备—屏幕。然而，大量的数据输出中，只有一小部分是我们需要重点关注的，我们需要把我们需要的或者关注的这些信息过滤或者提取以备后续需要时调用。早先的学习中，我们学过使用grep来过滤这些数据，使用cut、tr命令提出某些字段，但是他们都不具备提取并处理数据的能力，都必须先过滤，再提取转存到变量，然后在通过变量提取去处理，比如： 
+
+```powershell
+内存使用率的统计步骤
+
+1) 通过free -m提取出内存总量，赋值给变量 memory_totle
+
+2）通过free -m提取出n内存使用量，赋值给变量 memory_use
+
+3）通过数学运算计算内存使用率
+```
+
+需要执行多步才能得到内存使用率，那么有没有一个命令能够集过滤、提取、运算为一体呢？当然，就是今天我要给大家介绍的命令：awk
+
+平行命令还有gawk、pgawk、dgawk
+
+awk是一种可以处理数据、产生格式化报表的语言，功能十分强大。awk 认为文件中的每一行是一条记录 记录与记录的分隔符为换行符,每一列是一个字段 字段与字段的分隔符默认是一个或多个空格或tab制表符。
+
+awk的工作方式是读取数据，将每一行数据视为一条记录（record）每条记录以字段分隔符分成若干字段，然后输出各个字段的值。
+
+**1. awk语法**
+
+>  awk [options] ‘[BEGIN]{program}[END]’ [FILENAME] 
+
+```powershell
+常用命令选项
+-F fs 	指定描绘一行中数据字段的文件分隔符  默认为空格
+-f file 指定读取程序的文件名
+-v var=value 定义awk程序中使用的变量和默认值
+
+注意：awk 程序由左大括号和右大括号定义。 程序命令必须放置在两个大括号之间。由于awk命令行假定程序是单文本字符串，所以必须将程序包括在单引号内。
+1）程序必须放在大括号内
+2）程序必须要用单引号引起来
+
+awk程序运行优先级是:
+    1)BEGIN: 在开始处理数据流之前执行，可选项
+    2)program: 如何处理数据流，必选项
+    3)END: 处理完数据流后执行，可选项
+```
+
+**2. awk基本使用**
+
+能够熟练使用awk对标准输出的行、列、字符串截取 
+
+```powershell
+# 1.演示文稿
+[root@localhost opt]# cat test.txt
+1 the quick brown fox jumps over the lazy cat . dog
+2 the quick brown fox jumps over the lazy cat . dog
+3 the quick brown fox jumps over the lazy cat . dog
+4 the quick brown fox jumps over the lazy cat . dog
+5 the quick brown fox jumps over the lazy cat . dog
+```
+
+- awk对字段(列)的提取
+
+字段提取：提取一个文本中的一列数据并打印输出字段相关内置变量
+
+$0 表示整行文本
+
+$1 表示文本行中的第一个数据字段
+
+$2 表示文本行中的第二个数据字段
+
+$N 表示文本行中的第N个数据字段
+
+$NF 表示文本行中的最后一个数据字段
+
+```powershell
+# 1.读入test每行数据并把每行数据打印出来
+[root@localhost opt]# awk '{print $0}' test.txt
+1 the quick brown fox jumps over the lazy cat . dog
+2 the quick brown fox jumps over the lazy cat . dog
+3 the quick brown fox jumps over the lazy cat . dog
+4 the quick brown fox jumps over the lazy cat . dog
+5 the quick brown fox jumps over the lazy cat . dog
+
+# 2.打印test第六个字段
+[root@localhost opt]# awk '{print $6}' test.txt
+jumps
+jumps
+jumps
+jumps
+jumps
+
+# 3.打印test最后一个字段
+[root@localhost opt]# awk '{print $NF}' test.txt
+dog
+dog
+dog
+dog
+dog
+
+```
+
+- 命令选项详解
+
+ <font color="red"> -F</font>：指定字段与字段的分隔符
+
+当输出的数据流字段格式不是awk默认的字段格式时，我们可以使用-F命令选项来重新定义数据流字段分隔符。比如：处理的文件是/etc/passwd，希望打印第一列、第三列、最后一列
+
+```powershell
+[root@localhost opt]# awk -F ':' '{print $1,$3,$NF}' /etc/passwd
+root 0 /bin/bash
+bin 1 /sbin/nologin
+daemon 2 /sbin/nologin
+adm 3 /sbin/nologin
+lp 4 /sbin/nologin
+sync 5 /bin/sync
+shutdown 6 /sbin/shutdown
+halt 7 /sbin/halt
+mail 8 /sbin/nologin
+operator 11 /sbin/nologin
+games 12 /sbin/nologin
+ftp 14 /sbin/nologin
+nobody 99 /sbin/nologin
+systemd-network 192 /sbin/nologin
+dbus 81 /sbin/nologin
+polkitd 999 /sbin/nologin
+abrt 173 /sbin/nologin
+sshd 74 /sbin/nologin
+postfix 89 /sbin/nologin
+tcpdump 72 /sbin/nologin
+mysql 998 /sbin/nologin
+joker 1000 /bin/bash
+
+可以看的出，awk输出字段默认的分隔符也是空格
+```
+
+<font color="red"> -f file</font>：如果awk命令是日常重复工作，而又没有太多变化，可以将程序写入文件，每次使用-f调用程序文件就好，方便，高效。 
+
+```powershell
+[root@localhost opt]# cat abc
+{print $1,$3,$NF}
+[root@localhost opt]# awk -f abc test.txt
+1 quick dog
+2 quick dog
+3 quick dog
+4 quick dog
+5 quick dog
+
+```
+
+<font color="red">-v</font> 定义变量，既然作者写awk的时候就是按着语言去写的，那么语言中最重要的要素—变量肯定不能缺席，所以可以使用-v命令选项定义变量 
+
+```powershell
+[root@localhost opt]# awk -v name="joker" 'BEGIN{print name}'
+joker
+```
+
+- awk对记录(行)的提取
+
+记录提取：提取一个文本中的一行并打印输出
+
+记录的提取方法有两种：1. 通过行号  2. 通过正则匹配
+
+记录相关内置变量
+
+NR：指定行号 number row 
+
+```powershell
+提取test第三行数据
+
+# 1.指定行号为3
+[root@localhost opt]# awk 'NR==3{print $0}' test.txt
+3 the quick brown fox jumps over the lazy cat . dog
+
+# 2.指定行的第一个字段精确匹配字符串为5
+[root@localhost opt]# awk '$1=="5" {print $0}' test.txt
+5 the quick brown fox jumps over the lazy cat . dog
+```
+
+- awk对字符串提取
+
+ 记录和字段的汇合点就是字符串 
+
+```powershell
+# 1.打印test第三行的第六个字段
+[root@localhost opt]# awk 'NR==3{print $6}' test.txt
+jumps
+
+```
+
+##### 4.4.2.2 awk程序的优先级
+
+awk代码块的优先级
+
+关于awk程序的执行优先级，BEGIN是优先级最高的代码块，是在执行PROGRAM之前执行的，不需要提供数据源，因为不涉及到任何数据的处理，也不依赖与PROGRAM代码块；PROGRAM是对数据流干什么，是必选代码块，也是默认代码块。所以在执行时必须提供数据源；END是处理完数据流后的操作，如果需要执行END代码块，就必须需要PROGRAM的支持，单个无法执行。
+
+BEGIN：处理数据源之前干什么----不需要数据源就可以执行
+
+PROGRAM： 对数据源干什么----【默认必须有】 需要数据源
+
+END：处理完数据源后干什么----需要program 需要数据源
+
+```powershell
+# 1.优先级展示
+[root@localhost opt]# awk 'BEGIN{print "hello world"} {print $0} END{print "bye world"}' test.txt
+hello world
+1 the quick brown fox jumps over the lazy cat . dog
+2 the quick brown fox jumps over the lazy cat . dog
+3 the quick brown fox jumps over the lazy cat . dog
+4 the quick brown fox jumps over the lazy cat . dog
+5 the quick brown fox jumps over the lazy cat . dog
+bye world
+
+# 2.不需要数据源，可以直接执行
+[root@localhost opt]# awk 'BEGIN{print "hello world"}'
+hello world
+
+# 3.没有提供数据流，所以无法执行成功
+[root@localhost opt]# awk '{print "hello world"}'
+^C
+[root@localhost opt]# awk 'END{print "hello world"}'
+^C
+
+```
+
+##### 4.4.2.3 awk高级应用
+
+awk是一门语言，那么就会符合语言的特性，除了可以定义变量外，还可以定义数组，还可以进行运算，流程控制，我们接下来看看吧。 
+
+- awk定义变量和数组
+
+定义变量
+
+```powershell
+[root@localhost opt]# awk -v name="joker" 'BEGIN{print name}'
+joker
+[root@localhost opt]# awk 'BEGIN{name="JOKER";print name}'
+JOKER
+```
+
+ 数组定义方式：数组名[索引]=值 
+
+```powershell
+# 1.定义数组array，有两个元素，分别是100，200，打印数组元素。
+[root@localhost opt]# awk 'BEGIN{arry[0]=100;arry[1]=200;print arry[0],arry[1]}'
+100 200
+[root@localhost opt]# awk 'BEGIN{a[0]=100;a[1]=200;print a[1]}'
+200
+[root@localhost opt]# awk 'BEGIN{a[0]=100;a[1]=200;print a[0]}'
+100
+
+```
+
+- awk运算
+
+1. 赋值运算 =
+2. 比较运算 >  >=   ==  <   <=   !=
+3. 数学运算 +  -  *  /  %  **  ++  –
+4. 逻辑运算  &&  ||  ！
+5. 匹配运算 ~ !~ 精确匹配 == !=
+
+<font color="red">赋值运算：主要是对变量或者数组赋值</font>
+
+如：变量赋值：name=‘joker'' school=‘hello school’ 			数组赋值 array[0]=100
+
+```powershell
+[root@localhost ~]# awk -v name="joker" 'BEGIN{print name}'
+joker
+[root@localhost ~]# awk 'BEGIN{school="hello school";print school}'
+hello school
+[root@localhost ~]# awk 'BEGIN{arry[0]=100;print arry[0]}'
+100
+
+```
+
+<font color="red"> 比较运算：如果比较的是字符串则按ascii编码顺序表比较。如果结果返回为真则用1表示，如果返回为假则用0表示 </font>
+
+```powershell
+[root@localhost ~]# awk 'BEGIN{print "ab" == "b"}'
+0
+[root@localhost ~]# awk 'BEGIN{print "b" == "b"}'
+1
+
+[root@localhost opt]# awk '$1>3{print $0}' test.txt
+4 the quick brown fox jumps over the lazy cat . dog
+5 the quick brown fox jumps over the lazy cat . dog
+
+[root@localhost opt]# awk 'BEGIN{print 100 >= 1 }'
+1
+[root@localhost opt]# awk 'BEGIN{print 100 >= 101 }'
+0
+[root@localhost opt]# awk 'BEGIN{print 100 == 101 }'
+0
+[root@localhost opt]# awk 'BEGIN{print 100 < 101 }'
+1
+
+```
+
+<font color="red">数学运算</font>
+
+```powershell
+[root@localhost opt]# awk 'BEGIN{print 100+3 }'
+103
+[root@localhost opt]# awk 'BEGIN{print 100-3 }'
+97
+[root@localhost opt]# awk 'BEGIN{print 100*3 }'
+300
+[root@localhost opt]# awk 'BEGIN{print 100/3 }'
+33.3333
+[root@localhost opt]# awk 'BEGIN{print 100**3 }'
+1000000
+[root@localhost opt]# awk 'BEGIN{print 100%3 }'
+1
+[root@localhost opt]# awk -v 'count=0' 'BEGIN{count++;print count}'
+1
+[root@localhost opt]# awk -v 'count=0' 'BEGIN{count--;print count}'
+-1
+
+```
+
+<font color="red"> 逻辑运算 </font>
+
+```powershell
+# 1.与运算:真真为真，真假为假，假假为假
+[root@localhost opt]# awk 'BEGIN{print 100>=2 && 100>=3 }'
+1
+[root@localhost opt]# awk 'BEGIN{print 100>=2 && 1>=100}'
+0
+
+# 2.或运算:真真为真，真假为真，假假为假
+[root@localhost opt]# awk 'BEGIN{print 100>=2 || 1>=100}'
+1
+[root@localhost opt]# awk 'BEGIN{print 100>=200 || 1>=100}'
+0
+
+# 3.非运算
+[root@localhost opt]# awk 'BEGIN{print !(100>=2)}'
+0
+[root@localhost opt]# awk 'BEGIN{print !(100<=2)}'
+1
+
+```
+
+<font color="red">匹配运算</font>
+
+```powershell
+# 1.匹配以：分割，第一列以ro开头的一行数据
+[root@localhost opt]# awk -F ":" '$1 ~ "^ro" {print $0}' /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+
+# 2.匹配以：分割，第一行以ro开头的第一列数据
+[root@localhost opt]# awk -F ":" '$0 ~ "^ro" {print $1}' /etc/passwd
+root
+
+# 3.匹配以：分割，第一行不以ro开头的的整行数据
+[root@localhost opt]# awk -F ":" '$0 !~ "ro" {print $0}' /etc/passwd
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:99:99:Nobody:/:/sbin/nologin
+systemd-network:x:192:192:systemd Network Management:/:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+polkitd:x:999:998:User for polkitd:/:/sbin/nologin
+abrt:x:173:173::/etc/abrt:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+mysql:x:998:996::/home/mysql:/sbin/nologin
+joker:x:1000:1000::/home/joker:/bin/bash
+
+```
+
+##### 4.4.2.4 awk环境变量
+
+| 变量        | 描述                                                   |
+| :---------- | :----------------------------------------------------- |
+| FIELDWIDTHS | 以空格分隔的数字列表，用空格定义每个数据字段的精确宽度 |
+| FS          | 输入字段分隔符号 数据源的字段分隔符 -F                 |
+| OFS         | 输出字段分隔符号                                       |
+| RS          | 输入记录分隔符                                         |
+| ORS         | 输出记录分隔符号                                       |
+
+```powershell
+# 1.FIELDWIDTHS:重定义列宽并打印，注意不可以使用$0打印所有，因为$0是打印本行全内容，不会打印你定义的字段
+[root@localhost opt]# awk 'BEGIN{FIELDWIDTHS="5 2 8"} NR==1{print $1,$2,$3}' /etc/passwd
+root: x: 0:0:root
+
+# 2.FS:指定数据源中字段分隔符，类似命令选项-F
+[root@localhost opt]# awk 'BEGIN{FS=":"} NR==1{print $1,$3,$NF}' /etc/passwd
+root 0 /bin/bash
+
+# 3.OFS:指定输出到屏幕后字段的分隔符
+[root@localhost opt]# awk 'BEGIN{FS=":";OFS="-"}NR==1{print $1,$3,$NF}' /etc/passwd
+root-0-/bin/bash
+
+# 4.RS:指定记录的分隔符:将记录的分隔符修改为空行后，所有的行会变成一行，所以所有字段就在一行了。
+[root@localhost opt]# awk 'BEGIN{RS=""}{print $1,$13,$25,$37,$49}' test.txt
+1 2 3 4 5
+
+# 5.ORS:输出到屏幕后记录的分隔符，默认为回车，可以看出，提示符和输出在一行了，因为默认回车换成了*
+[root@localhost opt]# awk 'BEGIN{RS="";ORS="*"}{print $1,$13,$25,$37,$49}' test.txt
+1 2 3 4 5*[root@localhost opt]#
+
+```
+
+##### 4.4.2.5 流程控制
+
+- if判断语句
+
+```powershell
+# 模板
+[root@zutuanxue ~]# cat num
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+# 1.打印$1大于5的行
+[root@localhost opt]# awk '{if($1>5)print $0}' num
+6
+7
+8
+9
+
+# 2.假如$1大于5则除以2输出，否则乘以2输出
+[root@localhost opt]# awk '{if($1>5)print $1/2;else print $1*2}' num
+2
+4
+6
+8
+10
+3
+3.5
+4
+4.5
+
+```
+
+- for循环语句
+
+```powershell
+# 模板
+[root@localhost opt]# cat num2
+60 50 100
+150 30 10
+70 100 40
+
+# 1.将一行中的数据都加起来  $1+$2+$3
+[root@localhost opt]# awk '{sum=0;for (i=1;i<4;i++){sum+=$i}print sum}' num2
+210
+190
+210
+
+[root@localhost opt]# awk '{
+sum=0
+for (i=1;i<4;i++){
+sum+=$i}
+print sum}' num2
+210
+190
+210
+
+```
+
+-  while循环语句–先判断后执行 
+
+```powershell
+# 1.将文件中的每行的数值累加，和大于或等于150就停止累加
+[root@localhost opt]# awk '{sum=0;i=1;while(sum<150){sum+=$i;i++}print sum}' num2
+210
+150
+170
+
+[root@localhost opt]# awk '{
+> sum=0
+> i=1
+> while (sum<150) {
+>    sum+=$i
+>    i++
+> }
+> print sum
+> }' num2
+210
+150
+170
+
+```
+
+-  do…while循环语句–先执行后判断 
+
+```powershell
+# 1.将文件中的每行的数值累加，和大于或等于150就停止累加
+[root@localhost opt]# awk '{sum=0;i=1;do{sum+=$i;i++}while(sum<150);print sum}' num2
+210
+150
+170
+
+[root@localhost opt]# awk '{
+> sum=0
+> i=1
+> do {
+> sum+=$i
+> i++}
+> while (sum<150)
+> print sum}' num2
+210
+150
+170
+
+```
+
+##### 4.4.2.6  **循环控制语句** 
+
+- break 跳出循环,继续执行后续语句 
+
+```powershell
+# 1.累加每行数值，和大于150停止累加
+[root@localhost opt]# awk '{
+> sum=0
+> i=1
+> while (i<4){
+> sum+=$i
+> if (sum>150){
+> break}
+> i++}
+> print sum
+> }' num2
+210
+180
+170
+
+```
+
 ---
 
 ### 4.3 Linux文件属性与管理
@@ -4237,7 +5228,7 @@ xargs识别字符串的标识是空格或是换行符，因此如果遇见文件
 - 归属的用户和用户组
 - 最新修改时间
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\297.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\297.jpg)
 
 图解：
 
@@ -4322,7 +5313,7 @@ Linux通过文件属性区分文件类型
 
 #### 4.3.1 **file命令**
 
-```shell
+```powershell
 # 二进制解释器类型
 [root@localhost tmp]# file /usr/bin/python2.7
 /usr/bin/python2.7: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.32, BuildID[sha1]=8d75b23c27b98a6fc5656327f915409f6f1fba5b, stripped
@@ -4358,7 +5349,7 @@ lrwxrwxrwx. 1 root root 8 Oct 10 20:48 t.txt -> test.txt
 
 windows的一个快捷方式而已
 
-```shell
+```powershell
 # ln  -s  目标文件绝对路径     软连接绝对路径
 [root@localhost tmp]# ln -s test.txt /opt/t.txt
 
@@ -4369,7 +5360,7 @@ windows的一个快捷方式而已
 
 查找PATH环境变量中的文件，linux内置命令不在path中。
 
-```shell
+```powershell
 [root@localhost tmp]# which python
 /usr/bin/python
 ```
@@ -4378,14 +5369,14 @@ windows的一个快捷方式而已
 
 whereis命令用来定位指令的二进制程序、源代码文件和man手册页等相关文件的路径。
 
-```shell
+```powershell
 [root@localhost tmp]# whereis python
 python: /usr/bin/python /usr/bin/python2.7 /usr/lib/python2.7 /usr/lib64/python2.7 /etc/python /usr/include/python2.7 /usr/share/man/man1/python.1.gz
 ```
 
 #### 4.3.5 **tar命令**
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\304.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\304.jpg)
 
 tar命令在linux系统里，可以实现对多个文件进行，压缩、打包、解包
 
@@ -4427,7 +5418,7 @@ tar(选项)(参数)
 
 **案例1：打包/opt/目录下所有的内容，打包生成tar包allopt.tar**
 
-```shell
+```powershell
 # 第一步：创建一个大文件
 [root@localhost tmp]# echo afafa{1..800000} >> file.txt
 [root@localhost tmp]# ls
@@ -4455,7 +5446,7 @@ allopt.tar  file.txt  quanquan.txt
 
 **案例2：打包，且压缩/opt目录下所有内容，生成tar.gz包`allopt.tar.gz`**
 
-```shell
+```powershell
 # 第一步：打包，且压缩，就是加一个-z参数即可
 [root@localhost tmp]# tar -zcvf 1012allopt.tar.gz ./*
 [root@localhost tmp]# mv 1012allopt.tar.gz ../
@@ -4475,7 +5466,7 @@ allopt.tar  file.txt  quanquan.txt
 
 **列出tar包内的文件**
 
-```shell
+```powershell
 # 根据tar包文件后缀，决定是否添加z参数，调用gzip
 [root@localhost tmp]# tar -ztvf allopt.tar.gz
 ```
@@ -4495,20 +5486,20 @@ drwx------ root/root         0 2021-10-11 12:28 ./vmware-root_950-2697008400/
 
 **拆开tar的包**
 
-```shell
+```powershell
 # 拆开tar包
 [root@localhost tmp]# tar -xf allopt.tar
 ```
 
 **指定目录解tar包**
 
-```shell
+```powershell
 [root@localhost tmp]# tar -xf allopt.tar -C /opt/
 ```
 
 **排除文件解包**
 
-```shell
+```powershell
 # 注意--exclude 跟着文件名或是文件夹，不得加斜杠，排除多个文件，就写多个--exclude
 [root@localhost tmp]# tar -ztvf 1012allopt.tar.gz
 -rw-r--r-- root/root  21370880 2021-10-11 23:04 ./1011allopt.tar
@@ -4524,7 +5515,7 @@ drwx------ root/root         0 2021-10-11 12:28 ./vmware-root_950-2697008400/
 
 **打包/etc下所有普通文件**
 
-```shell
+```powershell
 # 找到etc目录下所有的普通文件进行打包
 [root@localhost tmp]# tar -zcvf etc_file.tar.gz `find /etc -type f`
 
@@ -4536,9 +5527,9 @@ drwx------ root/root         0 2021-10-11 12:28 ./vmware-root_950-2697008400/
 
 要说tar命令是个纸箱子用于打包，gzip命令就是压缩机器
 
-gzip通过压缩算法*lempel-ziv* 算法(*lz77*) 将文件压缩为较小文件，节省60%以上的存储空间，以及网络传输速率
+gzip通过压缩算法lempel-ziv 算法(lz77) 将文件压缩为较小文件，节省60%以上的存储空间，以及网络传输速率
 
-```shell
+```powershell
 # gzip命令语法：
 gzip(选项)(参数)
 
@@ -4565,7 +5556,7 @@ gzip(选项)(参数)
 
 示例：
 
-```shell
+```powershell
 # 压缩目录中每一个txt文件为.gz,文件夹无法压缩，必须先tar打包
 gzip *.txt       # gzip压缩，解压都会删除源文件
 
@@ -4602,7 +5593,7 @@ gzip *.txt       # gzip压缩，解压都会删除源文件
 
 zip 命令：是一个应用广泛的跨平台的压缩工具，压缩文件的后缀为 zip文件，还可以压缩文件夹。
 
-```shell
+```powershell
 # zip命令语法：
 zip 压缩文件名  要压缩的内容
 
@@ -4627,7 +5618,7 @@ zip 压缩文件名  要压缩的内容
 
 示例：
 
-```shell
+```powershell
 # 压缩当前目录下所有内容为alltmp.zip文件
 [root@localhost tmp]# zip 1013zip_all.zip ./*
 
@@ -4639,13 +5630,13 @@ zip 压缩文件名  要压缩的内容
 
 用于解压zip压缩包。
 
-```shell
+```powershell
 # 常用参数：
 -l # 显示压缩文件内所包含的文件；
 -d<目录>  # 指定文件解压缩后所要存储的目录。
 ```
 
-```shell
+```powershell
 # 查看压缩文件内容
 [root@localhost tmp]# unzip -l vim_zip.zip
 
@@ -4675,7 +5666,7 @@ date  参数   时间格式
 
 时间格式
 
-```shell
+```powershell
 %%	# 文本的 % 
 
 %a	# 当前区域的星期几的简写 (Sun..Sat)
@@ -4751,7 +5742,7 @@ date  参数   时间格式
 
 示例：显示当前系统部分时间
 
-```shell
+```powershell
 # 1.显示短年份
 date +%y
 
@@ -4782,7 +5773,7 @@ date +%T
 
 示例：-d参数指定时间显示，仅仅是显示
 
-```shell
+```powershell
 # 1.显示昨天
  date +%F -d "-1day"
 
@@ -4853,7 +5844,7 @@ date -s "2018/07/07 05:30:30"
 
 文件粉碎工具
 
-```shell
+```powershell
 # shred命令语法：
 用法：shred [选项]... 文件...
 
@@ -4866,7 +5857,7 @@ shred heihei.txt  随机覆盖文件内容，不删除源文件
 
 示例：彻底粉碎且删除文件
 
-```shell
+```powershell
 [root@localhost tmp]# ls -lh
 [root@localhost tmp]# shred -u quanquan.txt
 ```
@@ -4886,7 +5877,7 @@ Root用户登录系统后可以做很多事。
 
 多用户多任务：
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\300.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\300.jpg)
 
 多个用户使用同一个操作系统，每个人做自己的事；
 
@@ -4902,7 +5893,7 @@ Linux系统不同用户权限不一样，好比小张想用我的服务器，我
 
 用户角色划分：root、普通、虚拟用户
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\301.jpg)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\301.jpg)
 
 现代操作系统一般属于多用户的操作系统，也就是说，同一台机器可以为多个用户建立账户，一般这些用户都是为普通用户，这些普通用户能同时登录这台计算机，计算机对这些用户分配一定的资源。
 
@@ -4976,7 +5967,7 @@ tsh unix
 
 /etc/passwd 文件内容
 
-![image-20211013184552966](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211013184552966.png)
+![image-20211013184552966](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211013184552966.png)
 
 | 字段名      | 解释                                                         |
 | ----------- | ------------------------------------------------------------ |
@@ -5183,7 +6174,7 @@ useradd可用来建立用户帐号。帐号建好之后，再用passwd设定帐�
 -e<有效期限> # 指定帐号的有效期限；
 -f<缓冲天数> # 指定在密码过期后多少天即关闭该帐号；
 -g<群组> # 指定用户所属的群组；
--G<群组> # 指定用户所属的附加群组；
+-j<群组> # 指定用户所属的附加群组；
 -m # 自动建立用户的登入目录；
 -M # 不要自动建立用户的登入目录；
 -n # 取消建立以用户名称为名的群组；
@@ -5257,12 +6248,12 @@ ike  joker  like
 **多个参数用法，指定用户信息**
 
 ```shell
-[root@localhost ~]# useradd -u 789 -s /bin/sh -c learn_linux -G root,ike -e "2021-10-15" -f 2 -d /tmp/learn_linux_test2  test2
+[root@localhost ~]# useradd -u 789 -s /bin/sh -c learn_linux -j root,ike -e "2021-10-15" -f 2 -d /tmp/learn_linux_test2  test2
 [root@localhost ~]# id test2
 uid=789(test2) gid=1015(test2) 组=1015(test2),0(root),1001(ike)
 ```
 
-![image-20211014004622193](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211014004622193.png)
+![image-20211014004622193](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211014004622193.png)
 
 **-D参数用来修改配置文件 `/etc/default/useradd` 文件的默认值**
 
@@ -5319,7 +6310,7 @@ usermod(选项)(参数)
 -e<有效期限>  # 修改帐号的有效期限；
 -f<缓冲天数>  # 修改在密码过期后多少天即关闭该帐号；
 -g<群组>  # 修改用户所属的群组；
--G<群组>  # 修改用户所属的附加群组；
+-j<群组>  # 修改用户所属的附加群组；
 -l<帐号名称>  # 修改用户帐号名称；
 -L  # 锁定用户密码，使密码无效；
 -s<shell>  # 修改用户登入后所使用的shell；
@@ -5330,7 +6321,7 @@ usermod(选项)(参数)
 示例：
 
 ```shell
-[root@localhost ~]# usermod -u 788 -s /sbin/nologin -c changuser -G testnolog -e "2021/10/15" -f 2 -d /home/testnolog/ testnolog
+[root@localhost ~]# usermod -u 788 -s /sbin/nologin -c changuser -j testnolog -e "2021/10/15" -f 2 -d /home/testnolog/ testnolog
 [root@localhost ~]#
 [root@localhost ~]# id testnolog
 uid=788(testnolog) gid=1003(testnolog) 组=1003(testnolog)
@@ -5692,7 +6683,7 @@ sudo配置文件
 
 ### 4.5 Linux文件/夹权限
 
-![image-20211014180130276](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211014180130276.png)
+![image-20211014180130276](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211014180130276.png)
 
 **文件权限**
 
@@ -5713,7 +6704,7 @@ sudo配置文件
 
 **文件权限与数字转化**
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\315.png)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\315.png)
 
 ```shell
 # rwx权限表示
@@ -5746,7 +6737,7 @@ chmod命令用来变更文件或目录的权限。
 
 符号连接的权限无法变更，如果用户对符号连接修改权限，其改变会作用在被连接的原始文件。
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\316.jpg)
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\316.jpg" alt="img" style="zoom:50%;" />
 
 ```shell
 # 权限范围：
@@ -6138,11 +7129,11 @@ s
 iptables -F
 
 # 2.关闭防火墙的服务
+[root@localhost tmp]# systemctl status firewalld  # 对防火墙状态进行检车确认关闭
 [root@localhost tmp]# systemctl stop firewalld  # 关闭防火墙服务
 [root@localhost tmp]# systemctl disable firewalld  # 禁止防火墙开机自启
 Removed symlink /etc/systemd/system/multi-user.target.wants/firewalld.service.
 Removed symlink /etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service.
-
 ```
 
 #### 4.5.8 **DNS域名解析**
@@ -6194,7 +7185,7 @@ PING baidu.com (127.0.0.1) 56(84) bytes of data.
 
 >  安装命令：yum -y install bind-utils
 
-```shell
+```powershell
 [root@localhost tmp]# nslookup
 > baidu.com
 Server:         119.29.29.29
@@ -6224,7 +7215,7 @@ Address: 220.181.38.148
 
 #### 4.6.0 **crontab定时任务**
 
-<img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211016184727254.png" alt="image-20211016184727254" style="zoom: 25%;" />
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211016184727254.png" alt="image-20211016184727254" style="zoom: 25%;" />
 
 crond定时任务服务，提供了一个客户端管理命令crontab
 
@@ -6325,7 +7316,7 @@ linux平台的软件安装形式，有三个：
 
 **更换yum源**
 
-![image-20211016191224707](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211016191224707-16343827464062.png)
+![image-20211016191224707](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211016191224707-16343827464062.png)
 
 yum源的默认仓库文件夹是  `/etc/yum.repos.d/` ，只有在这个目录 `第一层` 的*.repo结尾的文件，才会被yum读取
 
@@ -6359,6 +7350,9 @@ systemctl  start redis
 [root@localhost yum.repos.d]# redis-cli
 127.0.0.1:6379> ping
 PONG
+
+# 注：查找自己需要安装的包的名字
+yum search 需要安装包的名字
 ```
 
 ### 4.7 inux文件管理练习题
@@ -6547,7 +7541,7 @@ linux安装软件有哪些方式？
 - 二进制源代码下载，此软件已经被编译安装过，生成了可执行的文件
   - 下载压缩包后，直接解压缩即可使用
 
-```shell
+```powershell
 # 1.很重要，必须执行此操作，安装好编译环境，c语言也是编译后运行，需要gcc编译器golang，对代码先编译，再运行，python是直接运行
 yum install gcc patch libffi-devel python-devel  zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel -y
 
@@ -6556,7 +7550,7 @@ yum install gcc patch libffi-devel python-devel  zlib-devel bzip2-devel openssl-
 mac的同学，可以用scp或者等传输工具
 windows的同学可以用lrzsz(yum install lrzsz -y )，xftp(自行去网站下载，支持断点续传，大文件传输)等文件传输工具
 
-[root@localhost yum.repos.d] #wget https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tgz
+[root@localhost yum.repos.d] # wget https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tgz
 
 # 3.下载完源代码包之后，进行解压缩
 [root@localhost yum.repos.d]# tar -zxvf Python-3.6.9.tgz
@@ -6601,7 +7595,7 @@ source  /etc/profile
 
 ### 5.2 django项目的搭建
 
-```shell
+```powershell
 # 1.安装django模块
 pip3 install -i https://pypi.douban.com/simple  django==1.11.25
 # 检查一下pip3的模块信息
@@ -6655,7 +7649,7 @@ django-admin  startproject  dj1
     [root@localhost app01]# python3  manage.py  runserver 0.0.0.0:9000
 
 # 7.如何访问django项目？
-访问linux的ip地址+django的端口
+访问linux的ip地址 + django的端口
 
 # 8.注意：前提一定要关闭防火墙，否则无法访问服务器地址
 ```
@@ -6722,13 +7716,13 @@ scp
 pip3 freeze > requirements.txt
 
 # 5.linux服务器安装所需要的依赖
-pip3 install -i https://pypi.douban.com/simple  -r  requirements.txt
+(venv_crm) [root@s25linux tf_crm]# pip3 install -i https://pypi.douban.com/simple  -r  requirements.txt
 
 # 6.缺少mysql，因此需要安装mariadb
 (venv_crm) [root@s25linux tf_crm]# yum install mariadb-server  mariadb -y
 
 # 7.启动mariadb数据库
-[root@localhost opt]# systemctl start mariadb
+(venv_crm) [root@s25linux tf_crm]# systemctl start mariadb
 
 # 8.还要注意，由于数据库是空的，还得进行数据库表的导入，导出本地数据库
 # 参数--all-databases能够导出所有的数据库、表，也可以指定某一个数据库、表导出
@@ -6760,7 +7754,7 @@ WSGI 是作为 Web 服务器与 Web 应用程序或应用框架之间的一种�
 
 也就是说，WSGI就像是一座桥梁，一边连着web服务器，另一边连着用户的应用。但是呢，这个桥的功能很弱，有时候还需要别的桥来帮忙才能进行处理。WSGI 的作用如图所示：
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\20160509174237093.png)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\20160509174237093.png)
 
 **WSGI的作用**
 
@@ -6857,7 +7851,7 @@ wsgi:http://192.168.254.130:9000/login
 
 **\- supervisorctl**
 
-是命令行管理工具，可以用来执行 stop、start、restart 等命令，来对这些子进程进行管理。
+是命令行进程管理工具，可以用来执行 stop、start、restart 等命令，来对这些子进程进行管理。
 
 supervisor是所有进程的父进程，管理着启动的子进展，supervisor以子进程的PID来管理子进程，当子进程异常退出时supervisor可以收到相应的信号
 
@@ -6890,7 +7884,7 @@ killasgroup=true     	  ; 默认为false，向进程组发送kill信号，包括
 # 先明确，启动uwsgi的绝对路径命令是什么：
 	8.1  找到虚拟环境uwsgi的绝对路径  /opt/venv_crm_uwsgi/bin/uwsgi
 	8.2  找到创建uwsgi.ini配置文件的绝对路径  /opt/venv_crm_uwsgi/uwsgi.ini
-	8.3   因此启动crm项目的 完整绝对路径命令是
+	8.3  因此启动crm项目的 完整绝对路径命令是
 			/opt/venv_crm_uwsgi/bin/uwsgi --ini /opt/venv_crm_uwsgi/uwsgi.ini
 
 # 2.修改supervisor的配置文件
@@ -6923,8 +7917,7 @@ root       3465   3461  0 06:55 ?        00:00:00 /opt/venv_crm_uwsgi/bin/uwsgi 
 root       3466   3461  0 06:55 ?        00:00:00 /opt/venv_crm_uwsgi/bin/uwsgi --ini /opt/venv_crm_uwsgi/uwsgi.ini
 root       3470   1655  0 06:56 pts/0    00:00:00 grep --color=auto uwsgi
 
-
-# 6.进度supervisor任务管理终端
+# 6.进入supervisor任务管理终端
 supervisorctl -c /etc/supervisord.conf
 
 # 7.访问url，看到了没有静态文件的crm界面，就是正确的了
@@ -6948,20 +7941,20 @@ supervisorctl -c /etc/supervisord.conf
 
 # 9.uwsgi异常崩溃的话，supervisor会立即重启uwsgi
 
-# 10.如果要运行多个 uwsgi项目，在supervisor中定义多个任务即可
+# 10.如果要运行多个uwsgi项目，在supervisor中定义多个任务即可
 ```
 
 6.supervisorctl的管理命令
 
-![image-20211019231158128](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211019231158128.png)
+![image-20211019231158128](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211019231158128.png)
 
 7.uwsgi异常崩溃的话，supervisor会立即重启uwsgi
 
-![image-20211019230609875](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211019230609875.png)
+![image-20211019230609875](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211019230609875.png)
 
 ### 5.6 nginx
 
-<img src="https://img2018.cnblogs.com/blog/1132884/201810/1132884-20181014124743540-1325157612.png" alt="img"  />
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20181014124743540-1325157612.png" alt="img"  />
 
  想必我们大多数人都是通过访问网站而开始接触互联网的吧。我们平时访问的网站服务 就是 Web 网络服务，一般是指允许用户通过浏览器访问到互联网中各种资源的服务。
 
@@ -6974,9 +7967,33 @@ Web 网络服务是一种被动访问的服务程序，即只有接收到互联�
 nginx**是一个开源的**，支持高性能，高并发的www服务和代理服务软件。它是一个俄罗斯人lgor sysoev开发的，作者将源代码开源出来供全球使用。
 nginx比它大哥apache性能改进许多，nginx占用的系统资源更少，支持更高的并发连接，有更高的访问效率。nginx不但是一个优秀的web服务软件，还可以作为反向代理，负载均衡，以及缓存服务使用。安装更为简单，方便，灵活。nginx可以说是非常nb了。
 
-<img src="https://images2018.cnblogs.com/blog/1132884/201808/1132884-20180813155012063-443835808.png" alt="img" style="zoom:50%;" />
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20180813155012063-443835808.png" alt="img" style="zoom:50%;" />
 
 Tengine是由淘宝网发起的Web服务器项目。它在Nginx的基础上，针对大访问量网站的需求，添加了很多高级功能和特性。Tengine的性能和稳定性已经在大型的网站如淘宝网，天猫商城等得到了很好的检验。它的最终目标是打造一个高效、稳定、安全、易用的Web平台。
+
+中文文档：http://www.nginx.cn/doc/index.html
+
+官网：http://nginx.org
+
+**为什么选择nginx**
+
+Nginx 是一个高性能的 Web 和反向代理服务器, 它具有有很多非常优越的特性：
+
+- 作为 Web 服务器：相比 Apache，Nginx 使用更少的资源，支持更多的并发连接，体现更高的效率，这点使 Nginx 尤其受到虚拟主机提供商的欢迎。能够支- 持高达 50,000 个并发连接数的响应，感谢 Nginx 为我们选择了 epoll and kqueue 作为开发模型。
+
+- 作为负载均衡服务器：Nginx 既可以在内部直接支持 Rails 和 PHP，也可以支持作为 HTTP代理服务器 对外进行服务。Nginx 用 C 编写, 不论是系统资源开销还是 CPU 使用效率都比 Perlbal 要好的多。
+
+- 作为邮件代理服务器: Nginx 同时也是一个非常优秀的邮件代理服务器（最早开发这个产品的目的之一也是作为邮件代理服务器），Last.fm 描述了成功并且美妙的使用经验。
+
+- Nginx 安装非常的简单，配置文件 非常简洁（还能够支持perl语法），Bugs非常少的服务器: Nginx 启动特别容易，并且几乎可以做到7*24不间断运行，即使运行数个月也不需要重新启动。你还能够在 不间断服务的情况下进行软件版本的升级。
+
+**nginx 与 apache 对比**
+
+- 静态文件处理能力：nginx高于apache
+- 资源消耗：nginx优于apache,因为nginx是异步处理模型，只需要几个进程就能够处理大量在线请求，而apache 2.4仍然是进程模型或者线程模型，即仍然采用大量线程来处理大量在线请求。
+- Apache支持的模块很多，而且也比较稳定。而nginx由于出现的比较晚，所以在这方面可能比不上Apache。
+- nginx本身就是一个反向代理服务器，而且支持7层负载均衡。
+- nginx处理动态页面很鸡肋，一般只用与处理静态页面和反向代理。
 
 **面试回答nginx**
 
@@ -6993,20 +8010,22 @@ web框架（django，flask）：开发web应用程序，处理接收到的数据
 
 #### 5.6.1 环境搭建
 
+**tenginx搭建**
+
 小提示： 如果你想删除编译安装的软件（1.清空PATH  2.删除文件夹即可）
 
 ```shell
 # 1.注意，编译软件之前，还是需要解决系统的开发环境，例如如下
 yum install gcc patch libffi-devel python-devel  zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel openssl openssl-devel -y
 
-# 2.进入淘宝nginx官网，下载源代码，进行编译安装
+# 2.进入淘宝tenginx官网，下载源代码，进行编译安装
 http://tengine.taobao.org/index_cn.html
 
 # 3.在linux的opt目录下，下载nginx源代码
 [root@localhost opt]# wget http://tengine.taobao.org/download/tengine-2.3.2.tar.gz
 
 # 4.解压缩源代码，准备编译三部曲
-tar -zxvf  tengine-2.3.2.tar.gz
+[root@localhost opt]# tar -zxvf  tengine-2.3.2.tar.gz
 
 # 5.进入源码目录，指定nginx的安装位置
 [root@localhost tengine-2.3.2]# ./configure --prefix=/opt/tngx232/
@@ -7042,6 +8061,53 @@ PATH="/opt/tng232/sbin:/opt/python369/bin:/usr/local/sbin:/usr/local/bin:/usr/sb
     
 # 11.默认访问nginx的首页站点url是
 http://192.168.254.130:80
+```
+
+**nginx搭建**
+
+```shell
+# 1.注意，编译软件之前，还是需要解决系统的开发环境，例如如下
+yum install gcc patch libffi-devel python-devel  zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel openssl openssl-devel -y
+
+# 2.进入nginx官网，下载源代码，进行编译安装
+[root@localhost opt]# wget http://nginx.org/download/nginx-1.16.0.tar.gz -P /usr/src/
+
+# 3.解压缩源代码，准备编译三部曲
+[root@localhost src]# cd /usr/src
+[root@localhost src]# tar -zxvf nginx-1.16.0.tar.gz
+[root@localhost nginx-1.16.0]# cd /usr/src/nginx-1.16.0
+
+# 4.检查环境是否满足安装条件，指定安装路径（配置文件、命令文件、开启模块功能）
+[root@localhost nginx-1.16.0]# ./configure --prefix=/usr/local/nginx
+
+# 5.编译，使用gcc将源码生成可执行程序
+[root@localhost nginx-1.16.0]# make -j4
+
+# 6.安装
+[root@localhost nginx-1.16.0]# make install
+
+# 7.nginx相关目录
+ nginx path prefix: "/usr/local/nginx"
+ nginx binary file: "/usr/local/nginx/sbin/nginx"
+ nginx modules path: "/usr/local/nginx/modules"
+ nginx configuration prefix: "/usr/local/nginx/conf"
+ nginx configuration file: "/usr/local/nginx/conf/nginx.conf"
+ nginx pid file: "/usr/local/nginx/logs/nginx.pid"
+ nginx error log file: "/usr/local/nginx/logs/error.log"
+ nginx http access log file: "/usr/local/nginx/logs/access.log"
+ 
+# 8.添加环境变量
+[root@localhost sbin]# vim /etc/profile
+PATH="/usr/local/nginx/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin"
+[root@localhost sbin]# source /etc/profile
+
+# 9.启动nginx并验证
+[root@localhost sbin]# yum install lsof -y
+[root@localhost sbin]# yum install elinks -y
+[root@localhost sbin]# netstat -ntlp
+[root@localhost sbin]# lsof -i :80
+[root@localhost sbin]# nginx
+[root@localhost sbin]# elinks http://127.0.0.1:80 -dump
 ```
 
 #### 5.6.2 主配置文件解析
@@ -7123,7 +8189,7 @@ http {
 # 注意 ，注意，server{} 标签快，是平级的关系，不得嵌套，检查好你的花括号
 # 这里是第二个虚拟主机的配置了
     server  {
-    listen 89;
+    listen 80;
     server_name  _;
     #nginx的域名匹配
     # 当用户访问 192.168.178.140:89的时候，返回该目录的内容
@@ -7135,7 +8201,173 @@ http {
 }
 ```
 
-#### 5.6.3 nginx的web站点功能
+##### 5.6.2.1 默认网站
+
+```shell
+server {
+listen       80;
+server_name  localhost;
+
+location / {
+root   html;
+index  index.html index.htm;
+}
+
+error_page   500 502 503 504  /50x.html;
+location = /50x.html {
+root   html;
+}
+}
+
+
+# 1.在html目录中创建测试目录
+mkdir {a..c}
+echo aaaa > a/index.html
+echo bbbb > b/index.html
+echo cccc > c/index.html
+
+# 2.访问网站
+elinks http:127.0.0.1 -dump
+elinks http:127.0.0.1/a -dump
+elinks http:127.0.0.1/b -dump
+elinks http:127.0.0.1/c -dump
+```
+
+##### 5.6.2.2 目录访问权限
+
+```shell
+# 只允许本机访问，其他人拒绝访问
+location /a {
+                allow 127.0.0.1;   # 允许此ip的用户可以访问
+                allow 192.168.254.131;  # 允许此ip的用户可以访问
+                deny all;
+                # return 502;  # 打开return后，所有人访问都返回502
+        }
+
+# 1.修改配置文件如上
+[root@localhost html]# vim ../conf/nginx.conf
+
+# 2.修改后平滑重启
+[root@localhost html]# nginx -t
+[root@localhost html]# nginx -s reload
+
+# 3.测试 or chrome浏览器访问，看效果
+[root@localhost html]# elinks http://192.168.254.131/a -dump
+```
+
+##### 5.6.2.3 登录验证
+
+```shell
+location /c {
+auth_basic "登陆验证";
+auth_basic_user_file /etc/nginx/htpasswd;
+}
+
+# 1.安装加密工具
+[root@localhost conf]# rpm -qf `which htpasswd`
+httpd-tools-2.4.6-97.el7.centos.2.x86_64
+[root@localhost conf]# yum install httpd-tools -y
+
+# 2.清除配置文件内的注释行和空行
+[root@localhost conf]# sed -i "/#/d" nginx.conf.default1
+[root@localhost conf]# sed -i "/^$/d" nginx.conf.default1
+
+# 3.对sky进行加密 -m 已有目录加密，-c 目录不存在创建目录
+htpasswd -m /etc/nginx/htpasswd sky
+
+# 4.编辑配置文件，写入以上内容
+# 5.访问http://192.168.254.131/c/
+需要输入用户名和密码
+```
+
+##### 5.6.2.4 日志管理
+
+Nginx访问日志主要有两个参数控制：
+
+> - log_format  # 用来定义记录日志的格式（可以定义多种日志格式，取不同名字即可）
+>
+> - access_log  # 用来指定日至文件的路径及使用的何种日志格式记录日志
+>
+> - access_log logs/access.log main;
+>
+> 
+>
+> log_format格式变量：
+>
+>  $remote_addr #记录访问网站的客户端地址
+>
+>  $remote_user #远程客户端用户名
+>
+>  $time_local #记录访问时间与时区
+>
+>  $request #用户的http请求起始行信息
+>
+>  $status #http状态码，记录请求返回的状态码，例如：200、301、404等 $body_bytes_sent #服务器发送给客户端的响应body字节数
+>
+>  $http_referer #记录此次请求是从哪个连接访问过来的，可以根据该参数进行防盗链设置。
+>
+>  $http_user_agent #记录客户端访问信息，例如：浏览器、手机客户端等
+>
+>  $http_x_forwarded_for #当前端有代理服务器时，设置web节点记录客户端地址的配置，此参数生效的前提是代理服务器也要进行相关的x_forwarded_fo设置
+
+```shell
+# 自定义一个json格式的访问地址
+log_format main_json '{"@timestamp":"$time_local",'
+'"client_ip": "$remote_addr",'
+'"request": "$request",'
+'"status": "$status",'
+'"bytes": "$body_bytes_sent",'
+'"x_forwarded": "$http_x_forwarded_for",'
+'"referer": "$http_referer"'
+'}';
+access_log logs/access_json.log main_json;
+
+# 1.编辑配置文件，新增以上内容
+[root@localhost conf]# vim nginx.conf
+
+# 2.监测实时日志
+[root@localhost conf]# tailf ../logs/access.log
+```
+
+##### 5.6.2.5 防盗链
+
+```shell
+# 防盗链配置，盗链：访问地址重定向到另一个地址的内容
+location /c {
+# location ~* \.(png|gif|bpm)$ {
+valid_referers none blocked *.ayitula.com;
+if ($invalid_referer) {
+return 403;
+}
+}
+
+# 1.机器133安装httpd
+[root@localhost ~]# yum install httpd -y
+
+# 2.启动httpd
+[root@localhost ~]# systemctl start httpd
+
+# 3.把index.html文件拷贝到 /var/www/html/路径下
+[root@localhost html]# cat index.html
+<html>
+<head>
+<title>fang dao lian ce shi</title>
+</head>
+<body>
+<font size="5">
+<a href="http://192.168.254.131/a/0.png">dao lian</a>
+<br></br>
+</font>
+</body>
+</html>
+
+# 4.把0.png图片拷贝到131的机器上/usr/local/nginx/html/目录下
+# 5.访问192.168.254.133
+```
+
+#### 5.6.3 nginx虚拟机
+
+虚拟主机：就是把⼀台物理服务器划分成多个“虚拟”的服务器，每⼀个虚拟主机都可以有独⽴的域名和独⽴的⽬录
 
 也称之为是nginx的虚拟主机站点配置，指的就是在nginx中，能够通过文件目录的不同，可以定义多个不同的网站
 
@@ -7155,16 +8387,147 @@ http {
 
 **nginx多站点功能**
 
+- 基于IP的多虚拟机主机
+
+```shell
+http {
+    server {
+        listen       80;
+        server_name  192.168.254.131;
+        location / {
+            root   html/web1;
+            index  index.html index.htm;
+        }
+    }
+
+ server {
+        listen       80;
+        server_name  192.168.254.132;
+        location / {
+            root   html/web2;
+            index  index.html index.htm;
+        }
+    }
+}
+
+
+# 1.添加一个子网卡
+[root@localhost conf]# ifconfig ens33:1 192.168.254.131/24 up
+
+# 2.html文件夹下创建站点
+
+# 3.写入内容
+echo web1 > nginx/html/web1/index.html
+echo web2 > nginx/html/web2/index.html
+
+# 4.测试完关闭子网卡
+[root@localhost conf]# ifconfig ens33:1 down
+
+# 5.访问配置好的链接
+[root@web131 conf]# elinks http:192.168.254.131 -dump
+   web1111
+[root@web131 conf]# elinks http:192.168.254.132 -dump
+   web2222
+
+
+# 缺点
+每个网站都需要一个IP
+缺点：需要多个IP，如果是公网IP，每个IP都需要付费
+```
+
 - 基于域名的多虚拟主机
 
 ```shell
-# 修改hosts文件，强制写入域名对应关系，比较麻烦
+# 1.修改hosts文件，强制写入域名对应关系
+vim /etc/hostes
+192.168.254.130   www.jd.com
+192.168.254.131   www.baidu.com
+
+# 2.修改nginx配置文件
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+
+    sendfile        on;
+    keepalive_timeout  65;
+
+
+    server {
+        listen       80;
+        server_name  www.jd.com;
+
+        location / {
+            root   html/web1;
+            index  index.html index.htm;
+        }
+
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+
+    }
+
+ server {
+        listen       80;
+        server_name  www.baidu.com;
+
+        location / {
+            root   html/web2;
+            index  index.html index.htm;
+        }
+
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+}
+
+
+# 3.平滑重启，访问域名
+[root@web131 conf]# nginx -s reload
+[root@web131 conf]# elinks www.jd.com -dump
+   web1111
+[root@web131 conf]# elinks www.baidu.com -dump
+   web2222
 ```
 
 - 基于端口的多虚拟主机
 
 ```shell
-# 修改nginx.conf配置如下，定义2个server{} 区域块即可，如上
+# 1.修改nginx.conf配置如下，定义2个server{} 区域块即可，如下
+http {
+    server {
+        listen       80;
+        server_name  192.168.254.131;
+        location / {
+            root   html/web1;
+            index  index.html index.htm;
+        }
+    }
+
+ server {
+        listen       8080;
+        server_name  192.168.254.131;
+        location / {
+            root   html/web2;
+            index  index.html index.htm;
+        }
+    }
+}
+
+# 2.访问链接
+[root@web131 conf]# elinks http:192.168.254.131 -dump
+   web1111
+[root@web131 conf]# elinks http:192.168.254.131:8080 -dump
+   web2222
+
+
+# 缺点
+只需要一个IP
+缺点：断开你是无法告诉公网用户  无法适用于公网   适合内部用户
 ```
 
 改完配置文件后，分别创建2个站点的资源目录
@@ -7228,15 +8591,76 @@ $http_x_forwarded_for　　# 记录客户端的来源真实ip 97.64.34.118，机
 
 我是一个用户，我访问不了某网站，但是我能访问一个代理服务器，这个代理服务器呢，他能访问那个我不能访问的网站，于是我先连上代理服务器，告诉他我需要那个无法访问网站的内容，代理服务器去取回来，然后返回给我。正向代理，代理的是客户端。
 
+作用：
+
+（1）访问原来无法访问的资源，如google
+
+（2） 可以做缓存，加速访问资源
+
+（3）对客户端访问授权，上网进行认证
+
+（4）代理可以记录用户访问记录（上网行为管理），对外隐藏用户信息
+
 **反向代理**
 
-对于客户端而言，代理服务器就像是原始服务器。反向代理，代理的是服务端。
+代理服务器，客户机在发送请求时，不会直接发送给⽬的主机，⽽是先发送给代理服务器，代理服务接受客户机请求之后，再向主机发出，并接收⽬的主机返回的数据，存放在代理服务器的硬盘中，再发送给客户机。
 
-<img src="https://img2018.cnblogs.com/blog/1132884/201811/1132884-20181118222354608-408861475.png" alt="img" style="zoom:50%;" />
+作用：
+
+（1）保证内网的安全，阻止web攻击，大型网站，通常将反向代理作为公网访问地址，Web服务器是内网
+
+（2）负载均衡，通过反向代理服务器来优化网站的负载
+
+<font color="red">正向代理即是客户端代理, 代理客户端, 服务端不知道实际发起请求的客户端. </font>
+<font color="red">反向代理即是服务端代理, 代理服务端, 客户端不知道实际提供服务的服务端.</font>
+
+**应用场景**
+
+- 堡垒机场景
+- 内网服务器发布场景
+- 缓存场景
+
+![1639293901196](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639293901196.png)
+
+![1639293922891](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639293922891.png)
+
+![1639293934357](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639293934357.png)
+
+![1639293943870](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639293943870.png)
 
 **nginx实现反向代理**
 
-![image-20211021220239420](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211021220239420-16348249609553.png)
+![image-20211021220239420](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211021220239420-16348249609553.png)
+
+**反向代理原理**
+
+> 1. 客户端通过浏览器向代理服务器发起请求 
+> 2. 代理服务器接受请求
+> 3. 代理服务器向业务服务器发起请求
+> 4. 业务服务器接收请求
+> 5. 业务服务器处理请求
+> 6. 业务服务器向代理服务器发送响应
+> 7. 代理服务器向客户端发送响应
+> 8. 客户端浏览器渲染请求并展示给用户
+
+```shell
+location / {
+	index index.php index.html index.htm;  # 定义⾸⻚索引⽂件的名称
+	proxy_pass http://mysvr ; # 请求转向mysvr 定义的服务器列表
+	proxy_set_header Host $host;
+	proxy_set_header X-Real-IP $remote_addr;
+	proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+	client_max_body_size 10m;  # 允许客户端请求的最⼤单⽂件字节数
+	client_body_buffer_size 128k;  # 缓冲区代理缓冲⽤户端请求的最⼤字节数，
+	proxy_connect_timeout 90;  # nginx跟后端服务器连接超时时间(代理连接超时)
+	proxy_send_timeout 90;  # 后端服务器数据回传时间(代理发送超时)
+	proxy_read_timeout 90;  # 连接成功后，后端服务器响应时间(代理接收超时)
+	proxy_buffer_size 4k; #  设置代理服务器（nginx）保存⽤户头信息的缓冲区⼤⼩
+	proxy_buffers 4 32k;  # proxy_buffers缓冲区，⽹⻚平均在32k以下的话，这样设置
+	proxy_busy_buffers_size 64k;  # ⾼负荷下缓冲⼤⼩（proxy_buffers*2）
+	proxy_temp_file_write_size 64k;  # 设定缓存⽂件夹⼤⼩，⼤于这个值，将从upstream服务器传
+}
+```
 
 第一个server{}标签，用于反向代理的作用，修改nginx.conf 如下：
 
@@ -7289,11 +8713,602 @@ server_name  _;
 # 5.测试访问代理服务器，查看页面效果
 ```
 
-![image-20211021215953107](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211021215953107.png)
+![image-20211021215953107](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211021215953107.png)
 
-#### 5.6.5 nginx负载均衡
+#### 5.6.5 限速
 
-##### 5.6.5.1 集群简介
+限流（rate limiting）是NGINX众多特性中最有用的，也是经常容易被误解和错误配置的，特性之一。该特性可以限制某个用户在一个给定时间段内能够产生的HTTP请求数。请求可以简单到就是一个对于主页的GET请求或者一个登陆表格的POST请求。
+
+限速也可以⽤于安全⽬的上，⽐如暴⼒密码破解攻击。通过限制进来的请求速率，并且（结合⽇志）标记出⽬标URLs来帮助防范DDoS攻击。⼀般地说，限流是⽤在保护上游应⽤服务器不被在同⼀时刻的⼤量⽤户请求湮没。
+
+**应用场景**
+
+- DDOS防御
+- 下载场景保护IO
+
+**限速原理**
+
+![1639293988653](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639293988653.png)
+
+算法思想：
+
+> ⽔（请求）从上⽅倒⼊⽔桶，从⽔桶下⽅流出（被处理）； 来不及流出的⽔存在⽔桶中（缓冲），以固定速率流出； ⽔桶满后⽔溢出（丢弃）。
+>
+>  这个算法的核⼼是：缓存请求、匀速处理、多余的请求直接丢弃。
+>
+> 相比漏桶算法，令牌桶算法不同之处在于它不但有一只“桶”，还有个队列，这个桶是用来存放令牌的，队列才是用来存放请求的。
+
+**实现方式**
+
+Nginx官⽅版本限制IP的连接和并发分别有两个模块：
+
+- limit_req_zone ⽤来限制单位时间内的请求数，即速率限制。采用的漏桶算法"leaky bucket"。
+- limit_req_conn ⽤来限制同⼀时间连接数，即并发限制。
+
+**limit_req_zone 参数配置**
+
+- Syntax: limit_req zone=name [burst=number] [nodelay];
+
+- Default: —
+
+- Context: http, server, location
+
+限速案例一：
+
+> ```
+> 说明：区域名称为joker，大小为10m，平均处理的请求频率不能超过每秒一次,键值是客户端IP。
+> 使用$binary_remote_addr变量， 可以将每条状态记录的大小减少到64个字节，这样1M的内存可以保存大约1万6千个64字节的记录。
+> 如果限制域的存储空间耗尽了，对于后续所有请求，服务器都会返回 503 (Service Temporarily Unavailable)错误。
+> 速度可以设置为每秒处理请求数和每分钟处理请求数，其值必须是整数，
+> 所以如果你需要指定每秒处理少于1个的请求，2秒处理一个请求，可以使用 “30r/m”。
+> 
+> 说明：limit_rate_after定义当一个文件下载到指定大小（本例中为512k）之后开始限速；
+> limit_rate 定义下载速度为150k/s。
+> 注意：这两个参数针对每个请求限速。
+> ```
+
+```shell
+worker_processes  1;
+events {
+    worker_connections  1024;
+}
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+    
+	# 基于IP做连接限制 限制同⼀IP并发为1 下载速度为100K
+    limit_req_zone $binary_remote_addr zone=joker:10m rate=1r/s;
+    server {
+        listen       80;
+        server_name  localhost;
+        location / {
+            root   html;
+            index  index.html index.htm;
+        }
+
+        location /xiansu/ {
+             limit_req zone=joker burst=5 nodelay;  # 限制并发数量
+             limit_rate 100k;  # 限制100的速度下载
+         }
+
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+}
+
+limit_req_zone $binary_remote_addr zone=baism:10m rate=1r/s;
+# 第⼀个参数：$binary_remote_addr 表示通过remote_addr这个标识来做限制，“binary_”的⽬的是缩写内存占⽤量，是限制同⼀客户端ip地址。
+# 第⼆个参数：zone=baism:10m表示⽣成⼀个⼤⼩为10M，名字为one的内存区域，⽤来存储访问的频次信息。
+# 第三个参数：rate=1r/s表示允许相同标识的客户端的访问频次这⾥限制的是每秒1次还可以有⽐如30r/m的。
+
+limit_req zone=baism burst=5 nodelay
+# 第⼀个参数：zone=baism 设置使⽤哪个配置区域来做限制，与上⾯limit_req_zone ⾥的name对应。
+# 第⼆个参数：burst=5，重点说明⼀下这个配置，burst爆发的意思，这个配置的意思是设置⼀个⼤⼩为5的缓冲区当有⼤量请求（爆发）过来时，超过了访问频次限制的请求可以先放到这个缓冲区内。
+# 第三个参数：nodelay，如果设置，超过访问频次⽽且缓冲区也满了的时候就会直接返回503，如果没有设置，则所有请求会等待排队。
+
+
+# 1.以上配置好后，平滑重启，
+[root@web131 html]# nginx -s reload
+
+# 2.快速访问链接，模拟并发数量
+[root@web131 html]# elinks http:192.168.254.131/xiansu -dump
+
+# 3.下载大文件，限制下载速度
+[root@web131 tmp]# wget http://127.0.0.1/xiansu/bigfile
+```
+
+限速案例二：
+
+> ```
+> 说明：首先用limit_conn_zone定义了一个内存区块索引aming，大小为10m，它以$binary_remote_addr作为key。
+> 该配置只能在http里面配置，不支持在server里配置。
+> 
+> limit_conn 定义针对addr这个zone，并发连接为10个。在这需要注意一下，这个10指的是单个IP的并发最多为1个。
+> ```
+
+```shell
+worker_processes  1;
+events {
+    worker_connections  1024;
+}
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+    
+	# 基于IP对下载速率做限制 限制每秒处理1次请求，对突发超过5个以后的请求放⼊缓存区
+    limit_conn_zone $binary_remote_addr zone=addr:10m;
+    server {
+        listen       80;
+        server_name  localhost;
+        location / {
+            root   html;
+            index  index.html index.htm;
+        }
+
+        location /xiansu/ {
+             limit_conn addr 1;
+         }
+
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+}
+
+# 1.平滑重启
+[root@web131 tmp]# nginx -t
+[root@web131 tmp]# nginx -s reload
+
+# 2.打开两个终端下载文件，限制只允许一次请求
+[root@web131 tmp]# wget http://127.0.0.1/xiansu/bigfile
+--2021-11-28 10:55:59--  http://127.0.0.1/xiansu/bigfile
+Connecting to 127.0.0.1:80... connected.
+HTTP request sent, awaiting response... 503 Service Temporarily Unavailable
+2021-11-28 10:55:59 ERROR 503: Service Temporarily Unavailable.
+```
+
+#### 5.6.6 URL重写
+
+**URL模板语法**
+
+- set：设置变量
+- if：负责语句中的判断
+- return：返回 响应或URL
+- bread：终止后续后rewrite规则
+- rewrite：重定向URL
+
+**set指令**：⾃定义变量
+
+> Syntax:
+>
+> set $variable value;
+>
+> Default:
+>
+> —
+>
+> Context:
+>
+> server, location, if
+
+将http://192.168.254.131 重写为 http://192.168.254.131/web1
+
+```shell
+worker_processes  1;
+events {
+    worker_connections  1024;
+}
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+    server {
+        listen       80;
+        server_name  localhost;
+        location / {
+			set $name web1;
+			rewrite ^(.*)$ http://192.168.254.131/$name;
+        }
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+}
+
+# 1.平滑重启
+[root@web131 tmp]# nginx -t
+[root@web131 tmp]# nginx -s reload
+
+# 2.访问192.168.254.131
+```
+
+![1639294074414](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639294074414.png)
+
+**if and return 指令**：判断和返回数据	
+
+> Syntax:
+>
+> if (condition) { ... }
+>
+> Default:
+>
+> —
+>
+> Context:
+>
+> server, location
+
+```shell
+worker_processes  1;
+events {
+    worker_connections  1024;
+}
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+    server {
+        listen       80;
+        server_name  localhost;
+        location / {
+            if ($http_user_agent ~* 'Chrome') {
+            return 403;
+            #return http://www.jd.com;
+            }
+        }
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+}
+
+# 1.平滑重启
+[root@web131 tmp]# nginx -t
+[root@web131 tmp]# nginx -s reload
+
+# 2.chrome访问192.168.254.131，返回403，其他浏览器访问，正确返回
+```
+
+**break指令**：停⽌执⾏当前虚拟主机的后续rewrite指令集
+
+> Syntax: break;
+>
+> Default:—
+>
+> Context:server, location, if
+
+```shell
+worker_processes  1;
+events {
+    worker_connections  1024;
+}
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+    server {
+        listen       80;
+        server_name  localhost;
+        location / {
+            if ($http_user_agent ~* 'Chrome') {
+            break;
+            return 403;
+            #return http://www.jd.com;
+            }
+        }
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+}
+
+# 1.平滑重启
+[root@web131 tmp]# nginx -t
+[root@web131 tmp]# nginx -s reload
+
+# 2.chrome访问192.168.254.131，没有返回403
+```
+
+**rewrite指令**
+
+>  rewrite <regex> <replacement> [flflag];
+>
+> ​	关键字  	正则  		替代内容 		flag标记
+
+> flag:
+>
+> last 
+>
+> \# 本条规则匹配完成后，继续向下匹配新的location URI规则
+>
+> break 
+>
+> \# 本条规则匹配完成即终⽌，不再匹配后⾯的任何规则
+>
+> redirect 
+>
+> \# 返回302临时重定向，浏览器地址会显示跳转后的URL地址
+>
+> permanent
+>
+> 返回301永久重定向，浏览器地址栏会显示跳转后的URL地址
+
+```shell
+worker_processes  1;
+events {
+    worker_connections  1024;
+}
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+    server {
+        listen       80;
+        server_name localhost;
+        location / {
+			rewrite ^/$ http://www.jd.com permanent;
+        }
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+}
+
+# 1.修改hosts文件
+[root@web131 conf]# cat /etc/hosts
+192.168.254.131 www.ayitula.com
+
+# 2.浏览器访问192.168.254.131
+permanent：接口返回状态码301
+redirect：接口返回状态码302
+break:接口返回状态码302
+last:见下图
+```
+
+![1639294112119](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639294112119.png)
+
+根据⽤户浏览器重写访问⽬录：如果是chrome浏览器 就将 http://192.168.254.131/$URI 重写为 http://192.168.254.131/chrome/$URI
+
+```shell
+orker_processes  1;
+events {
+    worker_connections  1024;
+}
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+    server {
+        listen       80;
+                server_name localhost;
+        location / {
+                        #rewrite ^/$ http://www.jd.com redirect;
+                        if ($http_user_agent ~* 'chrome'){
+                                rewrite ^(.*)$ /chrome$1 last;
+                                 }
+                         location /chrome {
+                                  root html ;
+                                   index index.html;
+                                    }
+        }
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+}
+
+# 1.修改配置文件，平滑重启
+[root@web131 conf]# nginx -s load
+
+# 2.地址栏输入 192.168.254.131/b
+```
+
+#### 5.6.7 nginx优化
+
+标准情况下，软件默认的参数都是对安装软件的硬件标准来设置的，⽬前我们服务器的硬件资源远远⼤于要求的标准，所以为了让服务器性能更加出众，充分利⽤服务器的硬件资源，我们⼀般需要优化APP的并发数来提升服务器的性能。
+
+1. **工作进程优化**
+
+优化方案：
+
+- Nginx是主进程+⼯作进程模型
+- worker_processes 1； ⼯作进程数量 按CPU的总核⼼调整
+- worker_cpu_affiffiffinity 0010 0100 1000; CPU的亲和⼒
+- worker_connections 1024； ⼀个⼯作进程的并发数
+
+并发优化
+
+```shell
+worker_processes  4;
+worker_cpu_affinity 0001 0010 0100 1000;
+events {
+    worker_connections  10240;
+}
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+    server {
+        listen       80;
+        server_name  localhost;
+        location / {
+            root   html;
+            index  index.html index.htm;
+        }
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+}
+
+
+# 1.平滑重启
+[root@localhost conf]# nginx -t
+[root@localhost conf]# nginx -s reload
+
+# 2.查看并发数
+[root@localhost conf]# ps -eo psr,pid,args | grep "nginx"
+  3   4741 nginx: master process nginx
+  0  34994 nginx: worker process
+  1  34995 nginx: worker process
+  2  34996 nginx: worker process
+  3  34997 nginx: worker process
+  2  34999 grep --color=auto nginx
+[root@localhost conf]# lsof -i :80
+COMMAND   PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+nginx    4741   root    6u  IPv4  26352      0t0  TCP *:http (LISTEN)
+nginx   34994 nobody    6u  IPv4  26352      0t0  TCP *:http (LISTEN)
+nginx   34995 nobody    6u  IPv4  26352      0t0  TCP *:http (LISTEN)
+nginx   34996 nobody    6u  IPv4  26352      0t0  TCP *:http (LISTEN)
+nginx   34997 nobody    6u  IPv4  26352      0t0  TCP *:http (LISTEN)
+
+# 3.统计连接个数
+[root@localhost conf]# netstat -antlp | grep nginx | grep ESTABLISHED -wc -l
+```
+
+2. **长连接**
+
+http协议属于TCP协议
+
+优化⽬标:减少三次握⼿和四次断开的次数 
+
+优化方案：
+
+-  keepalive_timeout 5; ⻓连接时间  
+-  keepalive_requests 8192; 每个⻓连接接受最⼤请求数 
+
+```shell
+worker_processes  4;
+worker_cpu_affinity 0001 0010 0100 1000;
+events {
+    worker_connections  10240;
+}
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout 5;
+    keepalive_requests 8192;
+    server {
+        listen       80;
+        server_name  localhost;
+        location / {
+            root   html;
+            index  index.html index.htm;
+        }
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+}
+
+# timeout修改成0，代表关闭，看响应头里的keepalive
+```
+
+3. **数据压缩**
+
+- gzip on;   （启⽤ gzip 压缩功能）
+- gzip_proxied any; （nginx 做前端代理时启⽤该选项，表示⽆论后端服务器的headers头返回什么信息，都⽆条件启⽤压缩）
+- gzip_min_length 1024; （最⼩压缩的⻚⾯，如果⻚⾯过于⼩，可能会越压越⼤，这⾥规定⼤于1K的⻚⾯才启⽤压缩） 
+-  gzip_buffers   4 8k; （设置系统获取⼏个单位的缓存⽤于存储gzip的压缩结果数据流 按照原始数据⼤⼩以8K为单位申请4倍内存空间） 
+-  gzip_comp_level 3; （压缩级别，1压缩⽐最⼩处理速度最快，9压缩⽐最⼤但处理最慢，同时也最消耗CPU,⼀般设置为3就可以了） 
+-  gzip_types    text/plain text/css application/x-javascript application/javascript application/xml; （什么类型的⻚⾯或⽂档启⽤压缩）  
+
+```shell
+worker_processes  1;
+events {
+    worker_connections  1024;
+}
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+    gzip  on;
+
+   gzip_proxied any;
+   gzip_min_length 1k;
+   gzip_buffers 4 8k;
+   gzip_comp_level 6;
+   gzip_types text/plain text/css application/x-javascript application/javascript
+   application/xml;
+
+
+    server {
+        listen       80;
+        server_name  localhost;
+        location / {
+            root   html;
+            index  index.html index.htm;
+        }
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+}
+
+
+# 访问页面，打开控制台查看压缩时间
+```
+
+4. **客户端缓存**
+
+语法： expires [time|epoch|max|off] 
+
+默认值： expires off 
+
+作⽤域： http, server, location 
+
+```shell
+ server {
+        listen       80;
+        server_name  localhost;
+        location / {
+            root   html;
+            index  index.html index.htm;
+        }
+
+        location ~* \.(png|gif)$ {
+             expires 1h;
+        }
+
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+
+# 测试: 浏览器刷新，以Chrome为例：
+# 1. ctrl+f5 清空本地缓存从服务器拿数据
+# 2. F5或者 点击 浏览器的刷新图标 优先从本地找 然后 去找服务器核对信息
+# 3. 是否一致 一致 返回304 从本地那数据
+# 4. 回车 从本地缓存拿数据 
+```
+
+#### 5.6.6 nginx集群
+
+##### 5.6.6.1 集群简介
 
 **集群介绍**
 
@@ -7303,7 +9318,7 @@ server_name  _;
 
 ​	若要用一句话描述集群，即一堆服务器合作做同一件事，这些机器可能需要整个技术团队架构、设计和统一协调管理，这些机器可以分布在一个机房，也可以分布在全国全球各个地区的多个机房。
 
-##### 5.6.5.2 集群的特点
+**集群特点**
 
 想了解为什么要使用集群，就要从集群的特点开始讲。
 
@@ -7335,7 +9350,815 @@ server_name  _;
 
 ​	多个独立计算机组成的松耦合集群系统构成一个虚拟服务器。用户或客户端程序访问集群系统时，就像访问一台高性能、高可哦那个的服务器一样，集群中一部分服务器的上、下线不会中断整个系统服务，这对用户也时透明的。
 
-##### 5.6.5.3 nginx负载均衡概述
+##### 5.6.6.2 nginx集群原理
+
+Nginx集群其实是：虚拟主机+反向代理+upstream分发模块组成的
+
+- 虚拟主机：接受和响应请求
+- 反向代理: 带⽤户去数据服务器拿数据
+- upstream: 告诉Nginx去哪个数据服务器拿数据
+
+数据⾛向：
+
+1. 虚拟主机接受⽤户请求
+2. 虚拟主机去找反向代理
+3. 反向代理让去找upstream
+4. upstream 告诉 ⼀个数据服务器IP
+5. Nginx去找数据服务器 并发起⽤户的请求
+6. 数据服务器接受请求并处理请求
+7. 数据服务器响应请求给Nginx
+8. Nginx响应请求给⽤户
+
+##### 5.6.6.3 集群的实现
+
+![1639294233000](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639294233000.png)
+
+方案一：单点故障解决方案
+
+> 1.部署⼀台备份服务器，宕机直接切换
+>
+> 2.部署多台服务器,根据DNS的轮询解析机制去实现⽤户分发
+>
+> 问题：
+>
+> 1.服务器利⽤率低，成本⾼，切换不及时，服务器压⼒依然⼤
+>
+> 2.优势是⽤户处理速度得到了提升，但是当其中⼀台故障，就会有⼀部分⽤户访问不了⽹站
+
+方案二：并行处理解决方案
+
+> 1.上述的DNS轮询解析⽅案
+>
+> 2.多机阵列---集群模式
+
+![1639294220464](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639294220464.png)
+
+**集群实现**
+
+将多个物理机器组成⼀个逻辑计算机，实现负载均衡和容错；
+
+计算机集群简称集群，是⼀种计算机系统， 它通过⼀组松散集成的计算机软件或硬件连接起来⾼度紧密地协作完成计算 ⼯作。在某种意义上，他们可以被看作是⼀台计算机。 （百度解释）
+
+组成要素：
+
+- VIP：⼀个IP地址
+- 分发器：nginx
+- 数据服务器：web服务器
+
+**nginx集群**
+
+- 在该集群中Nginx扮演的⻆⾊是： 分发器
+- 任务：接受请求、分发请求、响应请求
+- 功能模块：
+  - ngx_http_upstream_module 基于应⽤层分发模块
+  - ngx_stream_core_module 基于传输层分发模块 （1.9开始提供）
+
+1. 数据服务器1：relase1
+
+```shell
+# 1.安装nginx后，index写入内容，启动nginx
+[root@localhost ~]# echo relase1 > /usr/local/nginx/html/index.html
+[root@localhost ~]# nginx
+
+# 2.访问本地，确认nginx已开启
+[root@localhost ~]# elinks http://localhost -dump
+```
+
+2. 数据服务器2：relase2
+
+```shell
+# 1.安装nginx后，index写入内容，启动nginx
+[root@localhost ~]# echo relase2 > /usr/local/nginx/html/index.html
+[root@localhost ~]# nginx
+
+# 2.访问本地，确认nginx已开启
+[root@localhost ~]# elinks http://localhost -dump
+```
+
+3. 分发器：master
+
+```shell
+# 1.nginx配置如下
+[root@localhost conf]# cat nginx.conf
+worker_processes  1;
+events {
+    worker_connections  1024;
+}
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+
+    upstream web {
+        server 192.168.88.129;
+        server 192.168.88.130;
+    }
+
+    server {
+        listen       80;
+        server_name  localhost;
+        location / {
+            proxy_pass http://web;
+        }
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+}
+```
+
+4. 数据服务器1访问：
+
+```shell
+[root@localhost ~]# elinks http://192.168.88.128 -dump
+   relase1
+[root@localhost ~]# elinks http://192.168.88.128 -dump
+   relase2
+[root@localhost ~]# elinks http://192.168.88.128 -dump
+   relase1
+[root@localhost ~]# elinks http://192.168.88.128 -dump
+   relase2
+```
+
+##### 5.6.6.4 nginx服务器状态及默认算法
+
+```shell
+# nginx服务器状态
+nginx的upstream⽬前⽀持4种⽅式的分配
+# 1.轮询（默认）
+每个请求按时间顺序逐⼀分配到不同的后端服务器，如果后端服务器down掉，能⾃动剔除。
+
+# 2.weight
+指定轮询⼏率，weight和访问⽐率成正⽐，⽤于后端服务器性能不均的情况。
+
+# 3.ip_hash
+每个请求按访问ip的hash结果分配，这样每个访客固定访问⼀个后端服务器，可以解决session的问题。
+
+# 4.fair（第三⽅）
+按后端服务器的响应时间来分配请求，响应时间短的优先分配。
+
+# 5.url_hash（第三⽅）
+按访问url的hash结果来分配请求，使每个url定向到同⼀个后端服务器，后端服务器为缓存时⽐较有效。
+```
+
+> nginx服务器算法
+>
+> 每个设备的状态设置为:
+>
+> 1. down 表示当前的server暂时不参与负载
+> 2. weight 默认为1，weight越⼤，负载的权重就越⼤。
+> 3. max_fails ：允许请求失败的次数默认为1，当超过最⼤次数时，返回proxy_next_upstream 模块定义的错误
+> 4. fail_timeout:失败超时时间，在连接Server时，如果在超时时间之内超过max_fails指定的失败次数，会认为在fail_timeout时间内Server不可⽤，默认为10s。
+> 5. backup： 其它所有的⾮backup机器down或者忙的时候，请求backup机器。所以这台机器压⼒会最轻。
+
+1. 轮询分发
+
+```shell
+worker_processes  1;
+events {
+    worker_connections  1024;
+}
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+
+    upstream web {
+        server 192.168.88.129;
+        server 192.168.88.130;
+    }
+
+    server {
+        listen       80;
+        server_name  localhost;
+        location / {
+            proxy_pass http://web;
+        }
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+}
+
+[root@localhost ~]# elinks http://192.168.88.128 -dump
+   relase1
+[root@localhost ~]# elinks http://192.168.88.128 -dump
+   relase2
+[root@localhost ~]# elinks http://192.168.88.128 -dump
+   relase1
+[root@localhost ~]# elinks http://192.168.88.128 -dump
+   relase2
+```
+
+2. 基于权重算法
+
+```shell
+worker_processes  1;
+events {
+    worker_connections  1024;
+}
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+
+    upstream web {
+        server 192.168.88.129 weight=1;
+        server 192.168.88.130 weight=2;
+    }
+
+    server {
+        listen       80;
+        server_name  localhost;
+        location / {
+            proxy_pass http://web;
+        }
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+}
+
+[root@localhost conf]# elinks http://192.168.88.128 -dump
+   relase1
+[root@localhost conf]# elinks http://192.168.88.128 -dump
+   relase2
+[root@localhost conf]# elinks http://192.168.88.128 -dump
+   relase2
+
+```
+
+3. ip_hash：ip_hash算法能够保证来⾃同样源地址的请求，都分发到同⼀台主机
+
+```shell
+worker_processes  1;
+events {
+    worker_connections  1024;
+}
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+
+    upstream web {
+        ip_hash;
+        server 192.168.88.129;
+        server 192.168.88.130 down;
+    }
+
+    server {
+        listen       80;
+        server_name  localhost;
+        location / {
+            proxy_pass http://web;
+        }
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+}
+
+
+# 两个数据服务器访问，都分发到同一台主机
+[root@localhost ~]# elinks http://192.168.88.128 -dump
+   relase2
+[root@localhost ~]# elinks http://192.168.88.128 -dump
+   relase2
+   
+# 如果数据服务器用down标识
+[root@localhost ~]# elinks http://192.168.88.128 -dump
+   relase1
+[root@localhost ~]# elinks http://192.168.88.128 -dump
+   relase1
+```
+
+4. back_up
+
+```shell
+worker_processes  1;
+events {
+    worker_connections  1024;
+}
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+
+    upstream web {
+        server 192.168.88.129 down;
+        server 192.168.88.130 backup;
+    }
+
+    server {
+        listen       80;
+        server_name  localhost;
+        location / {
+            proxy_pass http://web;
+        }
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+}
+
+
+# 129加入down，模拟relase1服务器挂掉，则访问relase2服务器，relase1忙不过来的时候则分发到relase2服务器
+[root@localhost ~]# elinks http://192.168.88.128 -dump
+   relase2
+[root@localhost ~]# elinks http://192.168.88.128 -dump
+   relase2
+```
+
+##### 5.6.6.5 nginx分发
+
+**基于host多集群分发**
+
+通过域名分发，实现分发到不同的服务器下的host，适用于多个网站
+
+```shell
+worker_processes  1;
+events {
+    worker_connections  1024;
+}
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+
+    upstream web1 {
+        server 192.168.88.129;
+    }
+    upstream web2 {
+        server 192.168.88.130;
+    }
+
+# relase1
+    server {
+        listen       80;
+        server_name  www.relase1.com;
+        location / {
+            proxy_pass http://web1;
+        }
+    }
+# relase2
+    server {
+        listen       80;
+        server_name  www.relase2.com;
+        location / {
+            proxy_pass http://web2;
+        }
+    }
+}
+
+# 1.配置relase集群服务器
+# 2.设置域名
+# 3.在业务服务器设置域名
+192.168.88.128 www.relase1.com
+192.168.88.128 www.relase2.com
+# 4.访问域名
+[root@localhost ~]# elinks http://www.relase1.com -dump
+   relase1
+[root@localhost ~]# elinks http://www.relase2.com -dump
+   relase2
+```
+
+**基于开发语言分发**
+
+适用于混合开发网站
+
+```shell
+worker_processes  1;
+events {
+    worker_connections  1024;
+}
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+
+    upstream php {
+        server 192.168.88.129;
+    }
+    upstream html {
+        server 192.168.88.130;
+    }
+
+    server {
+        listen  80;
+        server_name localhost;
+        location ~* \.php$ {
+            proxy_pass http://php;
+        }
+
+         location ~* \.html$ {
+            proxy_pass http://html;
+        }
+    }
+}
+
+# 1.relase1集群中的服务器安装php
+[root@localhost ~]# yum -y install httpd php
+
+# 2.停掉nginx服务器，开启httpd
+[root@localhost ~]# pkill -9 nginx
+[root@localhost ~]# systemctl start httpd
+
+# 3.写入php页面
+[root@localhost ~]# echo "<?php phpinfo(); ?>" > /var/www/html/index.php
+
+# 4.浏览器访问
+http://192.168.88.128/index.html
+http://192.168.88.128/index.php
+```
+
+**浏览器分发**
+
+通过不同的浏览器访问，返回的不一样，适用于不同浏览器或浏览器与移动端区分
+
+```shell
+worker_processes  1;
+events {
+    worker_connections  1024;
+}
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+
+    upstream elinks { server 192.168.88.129; }
+    upstream chrome { server 192.168.88.130; }
+    upstream any { server 192.168.88.129:81; }
+
+    server {
+        listen  80;
+        server_name localhost;
+
+        location / {
+            proxy_pass http://any;
+
+            if ( $http_user_agent ~* elinks ) {
+                proxy_pass http://elinks;
+            }
+
+            if ( $http_user_agent ~* chrome ) {
+                 proxy_pass http://chrome;
+            }
+         }
+    }
+}
+
+# 1.relase1集群中的服务器停掉httpd
+[root@localhost ~]# systemctl start httpd
+
+# 2.写入页面，配置nginx
+[root@localhost nginx]# mkdir web1
+[root@localhost nginx]# echo web1 > web1/index.html
+worker_processes  1;
+events {
+    worker_connections  1024;
+}
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+    server {
+        listen       80;
+        server_name  localhost;
+        location / {
+            root   html;
+            index  index.html index.htm;
+        }
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+
+    server {
+        listen       81;
+        server_name  localhost;
+        location / {
+            root   web1;
+            index  index.html index.htm;
+        }
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+
+}
+
+# 3.master修改配置文件
+[root@localhost conf]# cat nginx.conf
+worker_processes  1;
+events {
+    worker_connections  1024;
+}
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+
+    upstream elinks { server 192.168.88.129; }
+    upstream chrome { server 192.168.88.130; }
+    upstream any { server 192.168.88.129:81; }
+
+    server {
+        listen  80;
+        server_name localhost;
+
+        location / {
+            proxy_pass http://any;
+
+            if ( $http_user_agent ~* elinks ) {
+                proxy_pass http://elinks;
+            }
+
+            if ( $http_user_agent ~* chrome ) {
+                 proxy_pass http://chrome;
+            }
+         }
+    }
+}
+
+# 4.适用不同的浏览器访问192.168.88.128，根据浏览器进行分发返回结果
+```
+
+**源IP分发**
+
+```shell
+worker_processes  1;
+events {
+    worker_connections  1024;
+}
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+
+
+    upstream bj.server {
+        server 192.168.88.129;
+    }
+
+    upstream sh.server {
+        server 192.168.88.130;
+    }
+
+    upstream default.server {
+        server 192.168.88.129:81;
+    }
+
+    geo $geo {
+        default default;
+        192.168.88.149/32 bj;
+        192.168.88.139/32 sh;
+    }
+
+    server {
+        listen  80;
+        server_name localhost;
+
+        location / {
+            proxy_pass http://$geo.server$request_uri;
+         }
+    }
+}
+# 测试服务器地址192.168.88.129
+# 192.168.88.129/32 bj：对应的找bj的服务器
+# 192.168.88.129/32 sh：对应的找sh的服务器
+# 没有匹配到129、139的机器，走的是默认的服务器129.81
+[root@localhost conf]# elinks http://192.168.88.128 -dump
+   relase2
+[root@localhost conf]# elinks http://192.168.88.128 -dump
+   relase1
+[root@localhost conf]# elinks http://192.168.88.128 -dump
+   web1
+```
+
+##### 5.6.6.6 构建高可用集群
+
+**高可用介绍**
+
+![1639294313132](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639294313132.png)
+
+- 分发器宕机怎么办
+- 数据服务器宕机怎么办
+
+Keepalived的作⽤是检测服务器的状态，如果有⼀台web服务器宕机，或⼯作出现故障， Keepalived将检测到，并将有故障的服务器从系统中剔除，同时使⽤其他服务器代替该服 务器的⼯作，当服务器⼯作正常后Keepalived⾃动将服务器加⼊到服务器群中，这些⼯作全部⾃动完成，不需要⼈⼯⼲涉，需要⼈⼯做的只是修复故障的服务器。
+
+运⾏ vrrp 协议；主分发器的Keepalived会向⽹络中发主播，告诉自己还活着（224.0.0.18）
+
+分发器上安装：Nginx+keepalvied来实现高可用的配置
+
+1. 分发器安装nginx+keepalived
+
+```shell
+# 1.在主分发器获取tar包
+[root@localhost src]# wget http://www.keepalived.org/software/keepalived-2.0.8.tar.gz -P /usr/src/
+
+# 2.编写安装脚本
+[root@localhost src]# cat keepalived_install.sh
+#!/bin/bash
+pkg=keepalived-2.0.8.tar.gz
+tar xf $pkg
+yum -y install kernel-devel
+ln -s /usr/src/kernels/3.10.0-862.14.4.el7.x86_64/ /usr/src/linux
+cd keepalived-2.0.8/
+yum install openssl-* -y
+./configure --prefix=/usr/local/keepalived
+make
+make install
+mkdir -pv /etc/keepalived
+cp /usr/local/keepalived/etc/keepalived/keepalived.conf /etc/
+keepalived/
+ln -s /usr/local/keepalived/sbin/keepalived /sbin/
+
+# 3.执行安装脚本
+[root@localhost src]# sh keepalived_install.sh
+
+# 4.安装成功后把安装包和脚本拷贝到备用分发器，安装一次
+[root@localhost src]# scp keepalived_install.sh root@192.168.88.131:/usr/src/
+[root@localhost src]# scp keepalived-2.0.8.tar.gz root@192.168.88.131:/usr/src/
+```
+
+2. 配置数据服务器 Nginx
+
+```shell
+# 1.安装nginx并启动
+```
+
+3. 配置Nginx分发器
+
+```shell
+# 1..在主分发器配置如下
+[root@localhost conf]# cat nginx.conf
+worker_processes  1;
+events {
+    worker_connections  1024;
+}
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+
+    upstream web{
+        server 192.168.88.129 max_fails=2 fail_timeout=3;
+        server 192.168.88.130 max_fails=2 fail_timeout=3;
+    }
+
+    server {
+        listen  80;
+        server_name localhost;
+
+        location / {
+            proxy_pass http://web;
+         }
+    }
+}
+
+# 2.拷贝到备分发器
+[root@localhost keepalived]# scp /usr/local/nginx/conf/nginx.conf root@192.168.88.131:/usr/local/nginx/conf/
+```
+
+4. 配置keepalived.conf
+
+```shell
+# 1.主分发器配置keepalived，如下
+[root@localhost keepalived]# cat /etc/keepalived/keepalived.conf
+! Configuration File for keepalived
+global_defs {
+    router_id NGINX_DEVEL
+}
+
+vrrp_script check_nginx {
+    script "/etc/keepalived/nginx_pid.sh"
+    interval 2
+    fall 1
+}
+vrrp_instance nginx {
+    state MASTER
+    interface ens33
+    mcast_src_ip 192.168.88.128
+    virtual_router_id 51
+    priority 100
+    advert_int 1
+    authentication {
+    auth_type PASS
+    auth_pass 1111
+}
+
+track_script {
+    check_nginx
+}
+
+virtual_ipaddress {
+    192.168.88.213/24
+}
+}
+
+# 2.编写nginx检查脚本
+[root@localhost keepalived]# cat /etc/keepalived/nginx_pid.sh
+#!/bin/bash
+nginx_kp_check () {
+nginxpid=`ps -C nginx --no-header |wc -l`
+if [ $nginxpid -eq 0 ];then
+    /usr/local/nginx/sbin/nginx
+    sleep 1
+    nginxpid=`ps -C nginx --no-header |wc -l`
+    if [ $nginxpid -eq 0 ];then
+    systemctl stop keepalived
+    fi
+fi
+}
+nginx_kp_check
+
+# 3.授予执行的权限
+[root@localhost keepalived]# chmod 755  nginx_pid.sh
+
+# 4.把nginx配置文件、keepalived配置文件和nginx检测脚本拷贝到备分发器，授予执行权限
+[root@localhost keepalived]# scp /etc/keepalived/keepalived.conf root@192.168.88.131:/etc/keepalived/
+[root@localhost keepalived]# scp nginx_pid.sh root@192.168.88.131:/etc/keepalived/
+
+# 5.备分发器配置keepalived，如下
+[root@localhost keepalived]# cat /etc/keepalived/keepalived.conf
+! Configuration File for keepalived
+global_defs {
+    router_id NGINX_DEVEL
+}
+
+vrrp_script check_nginx {
+    script "/etc/keepalived/nginx_pid.sh"
+    interval 2
+    fall 1
+}
+vrrp_instance nginx {
+    state BACKUP
+    interface ens33
+    mcast_src_ip 192.168.88.131
+    virtual_router_id 51
+    priority 90
+    advert_int 1
+    authentication {
+    auth_type PASS
+    auth_pass 1111
+}
+
+track_script {
+    check_nginx
+}
+
+virtual_ipaddress {
+    192.168.88.213/24
+}
+}
+```
+
+5. 测试：模拟分发器宕机，模拟数据服务器宕机
+
+```shell
+# 10.查看keepalived状态，启动主、备分发器keepalived，启动nginx检测脚本
+[root@localhost keepalived]# systemctl status keepalived
+[root@localhost keepalived]# systemctl restart keepalived
+[root@localhost keepalived]# sh nginx_pid.sh
+[root@localhost keepalived]# ip add show
+
+# 11.抓包检查
+[root@localhost keepalived]# tcpdump -nn -vvv -i ens33 vrrp
+
+# 12.模拟分发器宕机测试
+[root@localhost keepalived]# watch -n1 killall nginx
+[root@localhost keepalived]# lsof -i :80
+
+# 13.查看主/备分发器keepalived状态及备份ip
+[root@localhost keepalived]# systemctl status keepalived
+[root@localhost keepalived]# ip add show
+
+# 14.模拟129数据服务器宕机测试，访问虚拟ip
+[root@localhost html]# pkill nginx
+[root@localhost ~]# elinks http://192.168.88.213 -dump
+   relase2
+```
+
+##### 5.6.6.7 nginx负载均衡概述
 
 Web服务器，直接面向用户，往往要承载大量并发请求，单台服务器难以负荷，使用多台WEB服务器组成集群，前端使用Nginx负载均衡，将请求分散的打到我们的后端服务器集群中，实现负载的分发。那么会大大提升系统的吞吐率、请求性能、高容灾。
 
@@ -7424,7 +10247,7 @@ server {
 # 访问：192.168.254.130：80端口，轮询机制访问服务器
 ```
 
-#### 5.6.6 负载均衡算法
+#### 5.6.7 负载均衡算法
 
 ```shell
 # 1.默认是轮询机制，每台服务器处理一次
@@ -7469,7 +10292,11 @@ upstream 1021real_server {
 # 3.先创建一个目录放置虚拟环境
 [root@localhost tng232]# mkdir ~/.virtualenvs
 
-# 4.配置环境变量
+# 4.查看virtualenvwrapper的安装路径
+[root@localhost bin]# sudo find / -name virtualenvwrapper.sh
+/opt/python369/bin/virtualenvwrapper.sh
+
+# 5.配置环境变量
 [root@localhost tng232]# vim ~/.bashrc
 
 	# 4.1 根据自己的环境修改路径追加到配置文件中
@@ -7477,7 +10304,7 @@ upstream 1021real_server {
     export WORKON_HOME=$HOME/.virtualenvs
     source /opt/python369/bin/virtualenvwrapper.sh  # virtualenvwrapper安装目录
 
-# 5.配置完成之后需要执行如下命令，才可以让编辑后的配置文件生效 
+# 6.配置完成之后需要执行如下命令，才可以让编辑后的配置文件生效 
 [root@localhost bin]# source ~/.bashrc
 virtualenvwrapper.user_scripts creating /root/.virtualenvs/premkproject
 virtualenvwrapper.user_scripts creating /root/.virtualenvs/postmkproject
@@ -7492,9 +10319,6 @@ virtualenvwrapper.user_scripts creating /root/.virtualenvs/preactivate
 virtualenvwrapper.user_scripts creating /root/.virtualenvs/postactivate
 virtualenvwrapper.user_scripts creating /root/.virtualenvs/get_env_details
 
-# 6.查看virtualenvwrapper的安装路径
-[root@localhost bin]# sudo find / -name virtualenvwrapper.sh
-/opt/python369/bin/virtualenvwrapper.sh
 
 # 7.mkvirtualenv -p python3 创建的虚拟环境名称
 [root@localhost bin]# mkvirtualenv -p python3 crm_nginx
@@ -7532,7 +10356,7 @@ Removing app01...
 
 ```shell
 # 1.解压代码
-(crm_nginx) [root@localhost cs_book02]#unzip cs_book02.zip
+(crm_nginx) [root@localhost cs_book02]# unzip cs_book02.zip
 
 # 2.安装jdanggo==2.0.1
 (crm_nginx) [root@localhost cs_book02]# pip3 install -i https://pypi.douban.com/simple django==2.0.1
@@ -7657,6 +10481,304 @@ supervisor: started
     # 当请求django的static文件下的静态文件的时候，都告诉nginx，去linux的/book_static目录下进行匹配，就等于是重定向到/book_static目录。
 ```
 
+基于：**Cnetos7.5** + **Nginx** + **python** + **Django** + **uwsgi** + **mysql**
+
+实现部署流程：
+
+1. 安装nginx
+2. 安装python
+3. 安装mysql
+4. 部署发布平台
+5. 测试 
+
+- 安装nginx见以上章节
+- 安装mysql
+
+前期准备：
+
+1.依赖包：cmake命令 2.8以上
+
+> https://cmake.org/download/
+
+2.boost Boost库是⼀个可移植、提供源代码的C++库，作为标准库的后备，是C++标准化进 
+
+程的开发引擎之⼀
+
+> https://www.boost.org/
+
+3.mysql
+
+> https://dev.mysql.com/downloads/mysql/5.7.html#downloads
+
+**安装mysql**
+
+```shell
+# 1.配置开发环境
+[root@localhost sbin]# yum -y install ncurses-devel gcc-* bzip2-* bison
+
+# 2.安装cmake
+[root@localhost src]# wget https://github.com/Kitware/CMake/releases/download/v3.22.0/cmake-3.22.0.tar.gz /usr/src/
+[root@localhost src]# tar -zxvf cmake-3.22.0.tar.gz
+[root@localhost cmake-3.22.0]# cd cmake-3.22.0
+[root@localhost cmake-3.22.0]# ./configure
+[root@localhost cmake-3.22.0]# make
+[root@localhost cmake-3.22.0]# make install
+
+# 3.安装boost
+[root@localhost cmake-3.22.0]# wget https://sourceforge.net/projects/boost/files/boost/1.59.0/boost_1_59_0.tar.gz/download /usr/src
+[root@localhost src]# tar -zxvf boost_1_59_0.tar.gz
+[root@localhost src]# mv boost_1_59_0 /usr/local/boost
+
+# 4.安装mysql，官网下载
+[root@localhost src]# tar -zxvf mysql-5.7.24.tar.gz
+[root@localhost src]# mkdir -pv /usr/local/mysql/data
+[root@localhost mysql-5.7.24]# cd /usr/src/mysql-5.7.24
+[root@localhost mysql-5.7.24]# rm -rf CMakeLists.txt  # 重新配置需要删除的文件
+[root@localhost mysql-5.7.24]# cmake . -DCMAKE_INSTALL_PREFIX=/usr/local/mysql \
+-DMYSQL_DATADIR=/usr/local/mysql/data/ \
+-DMYSQL_UNIX_ADDR=/usr/local/mysql/mysql.sock \
+-DWITH_INNOBASE_STORAGE_ENGINE=1 \
+-DWITH_MYISAM_STORAGE_ENGINE=1 \
+-DENABLED_LOCAL_INFILE=1 \
+-DEXTRA_CHARSETS=all -DDEFAULT_CHARSET=utf8 -DDEFAULT_COLLATION=utf8_general_ci \
+-DWITH_DEBUG=0 \
+-DWITH_EMBEDDED_SERVER=1 \
+-DDOWNLOAD_BOOST=1 -DENABLE_DOWNLOADS=1 -DWITH_BOOST=/usr/local/boost
+[root@localhost mysql-5.7.24]# make
+[root@localhost mysql-5.7.24]# make install
+[root@localhost src]# cp /usr/local/mysql/support-files/mysql.server /etc/init.d/mysql
+[root@localhost init.d]# useradd -s /sbin/nologin -r mysql
+[root@localhost init.d]# chown mysql.mysql /usr/local/mysql/ -R
+[root@localhost init.d]# ln -sf /usr/local/mysql/bin/* /usr/bin/
+[root@localhost init.d]# ln -sf /usr/local/mysql/lib/* /usr/lib/
+[root@localhost init.d]# ln -sf /usr/local/mysql/libexec/* /usr/local/libexec
+[root@localhost init.d]# ln -sf /usr/local/mysql/share/man/man1/* /usr/share/man/man1
+[root@localhost init.d]# ln -sf /usr/local/mysql/share/man/man8/* /usr/share/man/man8
+
+# 5.修改配置文件
+[root@localhost etc]# vim /ect/my.cnf
+[root@localhost etc]# cat /ect/my.cnf
+[mysqld]
+basedir=/usr/local/mysql
+datadir=/usr/local/mysql/data
+socket=/usr/local/mysql/mysql.sock
+symbolic-links=0
+[mysqld_safe]
+log-error=/var/log/mysql/mysql.log
+pid-file=/var/run/mysql/mysql.pid
+!includedir /etc/my.cnf.d
+
+# 6.初始化
+[root@localhost etc]# chown -R mysql.mysql /var/log/mysql/
+[root@localhost etc]# chown -R mysql.mysql /var/run/mysql/
+[root@localhost etc]# /usr/local/mysql/bin/mysqld --initialize --user=mysql --basedir=/usr/local/mysql/ --datadir=/usr/local/mysql/data/
+root@localhost: UtgafXHO96/q
+
+# 7.启动mysql
+[root@localhost data]# /etc/init.d/mysql start
+# 如果报错，检查权限|查看mysqld进程
+
+# 7.修改密码
+[root@localhost data]# mysql_secure_installation
+
+# 8.登录mysql
+[root@localhost data]# mysql -u root -p 123456789
+```
+
+**安装python3+虚拟环境+django**
+
+```shell
+# 1.下载安装包，解压，检测
+[root@localhost src]# wget https://www.python.org/ftp/python/3.9.8/Python-3.9.8.tgz /usr/src/
+[root@localhost src]# tar -zxvf Python-3.9.8.tgz
+[root@localhost Python-3.9.8]# yum -y install gcc-* openssl-* libffidevel sqlite-devel
+[root@localhost Python-3.9.8]# ./configure --enable-optimizations --with-openssl=/usr/bin/openssl
+
+# 2.编译安装
+[root@localhost Python-3.9.8]# make -j4
+[root@localhost Python-3.9.8]# make install
+
+# 3.升级pip3
+[root@localhost Python-3.9.8]# vim Modules/Setup  # 去掉下面的注释
+214 SSL=/usr/local/ssl
+215 _ssl _ssl.c \
+216     -DUSE_SSL -I$(SSL)/include -I$(SSL)/include/openssl \
+217     -L$(SSL)/lib -lssl -lcrypto
+
+[root@localhost Python-3.9.8]# make -j4
+[root@localhost Python-3.9.8]# make install
+[root@localhost Python-3.9.8]# pip3 install --upgrade pip
+
+# 4.安装virtualenvwrapper
+[root@localhost bin]# pip3 install virtualenv
+[root@localhost bin]# pip3 install virtualenvwrapper
+
+# 5.先创建一个目录放置虚拟环境
+[root@localhost bin]# mkdir ~/.virtualenvs
+
+# 6.查看virtualenvwrapper的安装路径
+[root@localhost bin]# sudo find / -name virtualenvwrapper.sh
+/opt/python369/bin/virtualenvwrapper.sh
+
+# 5.配置环境变量
+[root@localhost bin]# vim ~/.bashrc
+	# 5.1 根据自己的环境修改路径追加到配置文件中
+    export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+	export WORKON_HOME=$HOME/.virtualenvs
+	source /usr/local/bin/virtualenvwrapper.sh
+
+# 6.配置完成之后需要执行如下命令，才可以让编辑后的配置文件生效 
+[root@localhost bin]# source ~/.bashrc
+
+# 7.mkvirtualenv -p python3 创建的虚拟环境名称
+[root@localhost bin]# mkvirtualenv -p python3 nginx_python
+
+# 8.安装django
+(nginx_python) [root@localhost bin]# pip3 install django==2.1.8
+
+# 9.创建一个项目
+(nginx_python) [root@localhost bin]# django-admin.py startproject myweb
+
+# 10.启动django，浏览器访问
+(nginx_python) [root@localhost myweb]# python3 manage.py runserver 192.168.88.128:8000
+```
+
+**安装uwsgi**
+
+```shell
+# 1.下载uwsgi
+(nginx_python) [root@localhost myweb]# pip3 install uwsgi
+
+# 2. 编写uwsgi配置文件
+(nginx_python) [root@localhost myweb]# mkdir /etc/uwsgi
+(nginx_python) [root@localhost myweb]# /etc/uwsgi/uwsgi.ini
+[uwsgi]
+uid = root
+gid = root
+socket = 127.0.0.1:9090
+master = true		# 启动主进程
+vhost = true		# 多站模式
+no-site = true		# 多站模式时不设置⼊⼝模块和⽂件
+workers = 2			# ⼦进程数
+reload-mercy = 10	# 平滑的重启
+vacuum = true		# 退出、重启时清理⽂件
+max-requests = 1000	# 开启10000个进程后, ⾃动respawn下
+limit-as = 512		# 开启10000个进程后, ⾃动respawn下
+buffer-size = 30000
+pidfile = /var/run/uwsgi9090.pid	# pid⽂件，⽤于下⾯的脚本启动、停⽌该进程
+daemonize = /var/log/uwsgi9090.log
+pythonpath = /root/.virtualenvs/nginx_python/lib/python3.9/site-packages	# django路径
+
+# 3.编写uwsgi启动脚本
+(nginx_python) [root@localhost ~]# cat /etc/init.d/uwsgi
+#!/bin/sh
+ DESC="uwsgi daemon"
+ NAME=uwsgi
+ DAEMON=/root/.virtualenvs/nginx_python/bin/uwsgi
+ CONFIGFILE=/etc/uwsgi/$NAME.ini
+ PIDFILE=/var/run/${NAME}9090.pid
+ SCRIPTNAME=/etc/init.d/$NAME
+ FIFOFILE=/tmp/uwsgififo
+ set -e
+ [ -x "$DAEMON" ] || exit 0
+ do_start() {
+ if [ ! -f $PIDFILE ];then
+ $DAEMON $CONFIGFILE || echo -n "uwsgi running"
+ else
+ echo "The PID is exist..."
+ fi
+ }
+ do_stop() {
+ if [ -f $PIDFILE ];then
+ $DAEMON --stop $PIDFILE || echo -n "uwsgi not running"
+ rm -f $PIDFILE
+ echo "$DAEMON STOPED."
+ else
+ echo "The $PIDFILE doesn't found"
+ fi
+ }
+ do_reload() {
+ if [ -p $FIFOFILE ];then
+ echo w > $FIFOFILE
+ else
+ $DAEMON --touch-workers-reload $PIDFILE || echo -n "uwsgi
+can't reload"
+ fi
+ }
+ do_status() {
+ ps aux|grep $DAEMON
+ }
+ case "$1" in
+ status)
+ echo -en "Status $NAME: \n"
+ do_status
+ ;;
+ start)
+ echo -en "Starting $NAME: \n"
+ do_start
+ ;;
+ stop)
+ echo -en "Stopping $NAME: \n"
+ do_stop
+ ;;
+ reload|graceful)
+ echo -en "Reloading $NAME: \n"
+ do_reload
+ ;;
+ *)
+ echo "Usage: $SCRIPTNAME {start|stop|reload}" >&2
+ exit 3
+ ;;
+ esac
+ exit 0
+
+# 4.修改nginx配置文件
+(nginx_python) [root@localhost ~]# cat /usr/local/nginx/conf/nginx.conf
+worker_processes  1;
+events {
+    worker_connections  1024;
+}
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+
+    server {
+        listen  80;
+        server_name localhost;
+
+        location / {
+            include uwsgi_params;
+            uwsgi_pass 127.0.0.1:9090;
+            uwsgi_param UWSGI_SCRIPT myweb.wsgi;
+            uwsgi_param UWSGI_CHDIR /usr/local/bin/myweb;
+            index index.html index.htm;
+            client_max_body_size 35m;
+            uwsgi_cache_valid 1m;
+            uwsgi_temp_file_write_size 64k;
+            uwsgi_busy_buffers_size 64k;
+            uwsgi_buffers 8 64k;
+            uwsgi_buffer_size 64k;
+            uwsgi_read_timeout 300;
+            uwsgi_send_timeout 300;
+            uwsgi_connect_timeout 300;
+         }
+    }
+}
+
+# 5.启动uwsgi
+(nginx_python) [root@localhost uwsgi]# /etc/init.d/uwsgi status
+(nginx_python) [root@localhost uwsgi]# /etc/init.d/uwsgi stop
+(nginx_python) [root@localhost uwsgi]# /etc/init.d/uwsgi start
+
+# 6.启动nginx，页面访问 192.168.88.128，前提关闭防火墙
+(nginx_python) [root@localhost uwsgi]# systemctl disable firewalld
+(nginx_python) [root@localhost uwsgi]# vim /etc/selinux/config
+SELINUX=disabled
+(nginx_python) [root@localhost uwsgi]# /usr/local/nginx/sbin/nginx
+```
+
 ### 5.8 前后端项目分离部署
 
 基于：**vue** + **nginx** + **uwsgi** + **django(drf)** + **mariadb** + **redis** + **virtualenv** + **supervisor** 部署前后端分离代码
@@ -7675,7 +10797,7 @@ supervisor: started
 
 前后端分离部署示意图：
 
-![image-20211023183620148](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211023183620148.png)
+![image-20211023183620148](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211023183620148.png)
 
 #### 5.8.1 部署前端
 
@@ -7887,11 +11009,13 @@ http://192.168.254.130:81/
 127.0.0.1:6379>
 ```
 
-### 5.9 redis持久化存储
+
+
+## 第六章 redis持久化存储
 
 `Redis` 是一种内存型数据库，一旦服务器进程退出，数据库的数据就会丢失，为了解决这个问题，`Redis` 提供了两种持久化的方案，将内存中的数据保存到磁盘中，避免数据的丢失。
 
-#### 5.9.1 RDB持久化
+### 6.1 RDB持久化
 
 `redis` 提供了 `RDB持久化` 的功能，这个功能可以将`redis`在内存中的的状态保存到硬盘中，它可以 **手动执行**。
 
@@ -8037,7 +11161,7 @@ total 12
 # 注：rdb的弊端在于什么，如果没有触发持久化机制，就发生了机器宕机，数据就会丢失了，因此redis有一个更好的aof机制
 ```
 
-#### 5.9.2 AOF持久化
+### 6.2 AOF持久化
 
 把修改类的redis命令操作，记录下来，追加写入到 **aof** 文件中，且是我们能够看得懂的日志文件
 
@@ -8088,7 +11212,7 @@ OK
 # 注：如果该aof日志文件被删除，数据也就无法恢复了
 ```
 
-#### 5.9.3 redis安全相关
+### 6.3 redis安全相关
 
 由于发现众多同学，在使用云服务器时，安装的redis3.0+版本都关闭了protected-mode，因而都遭遇了挖矿病毒的攻击，使得服务器99%的占用率！！
 
@@ -8138,9 +11262,9 @@ redis-cli -p 6350 -a xxxx
 config set "xxxxxx"
 ```
 
-#### 5.9.3 redis数据同步复制
+### 6.4 redis数据同步复制
 
-<img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20180922122856003-755522114.png" alt="img" style="zoom:50%;" />
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20180922122856003-755522114.png" alt="img" style="zoom:50%;" />
 
 1. 从服务器向主服务器发送 SYNC 命令。
 
@@ -8282,7 +11406,7 @@ OK
 
 你会发现，如此的手动切换复制关系，其实是很难受的。手动操作总有不及时的时候，比如在夜深人静的时候，引入以下自动切换主库。
 
-#### 5.9.4 高可用哨兵
+### 6.5 高可用哨兵
 
 Redis-Sentinel是redis官方推荐的高可用性解决方案，当用redis作master-slave的高可用时，如果master本身宕机，redis本身或者客户端都没有实现主从切换的功能。而redis-sentinel就是一个独立运行的进程，用于监控多个master-slave集群，自动发现master宕机，进行自动切换slave > master。
 
@@ -8325,21 +11449,21 @@ Redis-Sentinel是redis官方推荐的高可用性解决方案，当用redis作ma
 
 那么这个问题，redis-sentinel就可以解决了
 
-<img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20180928114913282-867816204-163582532667312.png" alt="img" style="zoom: 33%;" />
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20180928114913282-867816204-163582532667312.png" alt="img" style="zoom: 33%;" />
 
-<img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20180928115021716-2071889796-163582532212110.png" alt="img" style="zoom:33%;" />
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20180928115021716-2071889796-163582532212110.png" alt="img" style="zoom:33%;" />
 
 **Redis Sentinel架构：**
 
 redis的一个进程，但是不存储数据，只是监控redis。
 
-<img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20181124181822218-1125753774-16358253160028.png" alt="img" style="zoom: 50%;" />
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20181124181822218-1125753774-16358253160028.png" alt="img" style="zoom: 50%;" />
 
-<img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20180928115711245-1503702880-16358253106106.png" alt="img" style="zoom: 67%;" />
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20180928115711245-1503702880-16358253106106.png" alt="img" style="zoom: 67%;" />
 
 <img src="https://img2018.cnblogs.com/blog/1132884/201809/1132884-20180928145626051-1360651849.png" alt="img" style="zoom: 67%;" />
 
-<img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20180928145734973-1288883859-163582538011315.png" alt="img" style="zoom:67%;" />
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20180928145734973-1288883859-163582538011315.png" alt="img" style="zoom:67%;" />
 
 **补充知识：**
 
@@ -8495,7 +11619,7 @@ slave0:ip=127.0.0.1,port=6381,state=online,offset=136117,lag=0
 # 3.如果你想恢复他们的主从关系，全部kill掉，重新启动，默认就会以配置文件分配主从关系了
 ```
 
-#### 5.9.5 redis-cluster
+### 6.6 redis-cluster
 
 **为什么要使用redis-cluster**
 
@@ -8518,7 +11642,7 @@ slave0:ip=127.0.0.1,port=6381,state=online,offset=136117,lag=0
 
 2. 正确的应该是考虑分布式，加机器。把数据分到不同的位置，分摊集中式的压力，**一堆机器做一件事**
 
-![img](G:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20181024161047230-851823170.png)
+![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20181024161047230-851823170.png)
 
 **客户端分片**
 
@@ -8528,7 +11652,7 @@ slave0:ip=127.0.0.1,port=6381,state=online,offset=136117,lag=0
 
 **数据分布原理图**
 
-<img src="https://img2018.cnblogs.com/blog/1132884/201811/1132884-20181125134928388-1528161304.png" alt="img" style="zoom:50%;" />
+ ![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20181125134928388-1528161304.png) 
 
 **数据分布理论**
 
@@ -8540,13 +11664,13 @@ slave0:ip=127.0.0.1,port=6381,state=online,offset=136117,lag=0
 - 一致性哈希分区
 - 虚拟槽区分区（**redis-cluster采用的方式**）
 
-**顺序分许原理图**
+**顺序分区原理图**
 
-<img src="https://img2018.cnblogs.com/blog/1132884/201810/1132884-20181024161255329-1946317777.png" alt="img" style="zoom: 80%;" />
+![1639294725729](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639294725729.png)
 
 **哈希分区原理图**
 
-<img src="https://img2018.cnblogs.com/blog/1132884/201810/1132884-20181024161354680-200751267.png" alt="img" style="zoom:80%;" />
+![1639294763567](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639294763567.png)
 
 例如按照节点取余的方式，分三个节点
 
@@ -8573,9 +11697,9 @@ slave0:ip=127.0.0.1,port=6381,state=online,offset=136117,lag=0
 # 4.每个节点负责一定数量的槽。
 ```
 
-<img src="https://img2018.cnblogs.com/blog/1132884/201811/1132884-20181125140406355-792376591.png" alt="img" style="zoom: 50%;" />
+![1639294819755](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639294819755.png)
 
-##### 5.9.5.1 搭建redis cluster
+#### 6.6.1 搭建redis cluster
 
 搭建集群分为几步骤：
 
@@ -8591,7 +11715,7 @@ redis-cluster集群架构
 # 3.ruby的脚本自动就把分配槽位这事做了
 ```
 
-<img src="https://img2018.cnblogs.com/blog/1132884/201810/1132884-20181024170727913-1418417703.png" alt="img" style="zoom:50%;" />
+ ![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20181024170727913-1418417703.png) 
 
 **安装方式**
 
@@ -8733,7 +11857,7 @@ OK
 
 **工作原理：redis客户端任意访问一个redis实例，如果数据不在该实例中，通过重定向引导客户端访问所需要的redis实例。**
 
-##### 5.9.5.2 redis面试题
+### 6.7redis面试题
 
 ```shell
 # 1.redis和memcached比较？
@@ -8781,7 +11905,7 @@ OK
 # 22.如何高效的找到redis中所有以oldboy开头的key？
 ```
 
-#### 5.9.6 配置文件详解
+### 6.8 配置文件详解
 
 ```shell
 # Redis 配置文件
@@ -9165,7 +12289,9 @@ activerehashing yes
 redis.conf详解--补充--
 ```
 
-### 5.10 Docker
+---
+
+## 第七章 Docker
 
 **什么是docker**
 
@@ -9188,11 +12314,11 @@ redis.conf详解--补充--
 
 我们先看看之前，服务器是怎么部署应用的
 
-<img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20180922153951410-114250843.png" alt="img" style="zoom: 33%;" />
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20180922153951410-114250843.png" alt="img" style="zoom: 25%;" />
 
 由于物理机的诸多问题，后来出现了虚拟机
 
-<img src="https://img2018.cnblogs.com/blog/1132884/201809/1132884-20180922154359164-1082041085.png" alt="img" style="zoom: 33%;" />
+<img src="https://img2018.cnblogs.com/blog/1132884/201809/1132884-20180922154359164-1082041085.png" alt="img" style="zoom: 25%;" />
 
 ```shell
 # 但是虚拟化也是有局限性的，每一个虚拟机都是一个完整的操作系统，要分配系统资源，虚拟机多道一定程度时，操作系统本身资源也就消耗殆尽，或者说必须扩容
@@ -9200,7 +12326,7 @@ redis.conf详解--补充--
 
 **docker与虚拟机的区别**
 
-<img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211105112934600.png" alt="image-20211105112934600" style="zoom:50%;" />
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211105112934600.png" alt="image-20211105112934600" style="zoom:50%;" />
 
 | 特性       | 容器（docker）     | 虚拟机（VM） |
 | ---------- | ------------------ | ------------ |
@@ -9297,7 +12423,7 @@ redis.conf详解--补充--
 
 <img src="https://img2018.cnblogs.com/blog/1132884/201809/1132884-20180922162938061-1646086257.png" alt="img" style="zoom:50%;" />
 
-#### 5.10.1 docker三大概念
+### 7.1 docker三大概念
 
 容器三大基本概念
 
@@ -9361,7 +12487,7 @@ Docker Registry 公开服务是开放给用户使用、允许用户管理镜像�
 由于某些原因，在国内访问这些服务可能会比较慢。国内的一些云服务商提供了针对 Docker Hub 的镜像服务(Registry Mirror)，这些镜像服务被称为加速器。常见的有阿里云加速器、DaoCloud 加速器、灵雀云加速器等。使用加速器会直接从国内的地址下载 Docker Hub 的镜像，比直接从官方网站下载速度会提高很多。
 国内也有一些云服务商提供类似于 Docker Hub 的公开服务。比如，时速云镜像仓 库、网易云镜像服务、DaoCloud 镜像市场、阿里云镜像库等。
 
-#### 5.10.2 搭建docker
+### 7.2 搭建docker
 
 **docker版本**
 
@@ -9610,9 +12736,9 @@ docker logs -f  容器id   # 实时刷新容器内的日志，例如检测nginx�
 docker port  容器id  # 查看容器的端口转发
 ```
 
-<img src="G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211106105949792.png" alt="image-20211106105949792" style="zoom:50%;" />
+<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211106105949792.png" alt="image-20211106105949792" style="zoom:50%;" />
 
-#### 5.10.3 Dockerfile
+### 7.3 Dockerfile
 
 > 镜像是容器的基础，每次执行docker run的时候都会指定哪个镜像作为容器运行的基础。我们之前的例子都是使用来自docker hub的镜像，直接使用这些镜像只能满足一定的需求，当镜像无法满足我们的需求时，就得自定制这些镜像。
 
@@ -9798,18 +12924,6 @@ linux就即将结束了，祝大家，找到好工作，有linux问题呢，尽�
 修改成功了[root@localhost docker-build]#
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
 **docker基础命令注释**
 
 ```shell
@@ -9943,59 +13057,3136 @@ hub中搜索镜像
 Run 'docker COMMAND --help' for more information on a command.  #运行docker命令在帮助可以获取更多信息
 ```
 
+---
+
+## 第八章 自动化运维
+
+### 8.1 自动化运维介绍
+
+传统的IT运维是将数据中⼼中的⽹络设备、服务器、数据 库、中间件、存储、虚拟化、硬件等资源进⾏统⼀监 控，当资源出现告警时，运维⼈员通过⼯具或者基于经验进⾏排查，找出问题并加以解决。但是，随着互联⽹+时代的到来，移动互联⽹、云计算和⼤数据技术得到了 ⼴泛应⽤，从⽽导致企业所管理的IT架构不断扩⼤，服务 器、虚拟化、存储设备的数量越来越多，⽹络也变得更加复杂，业务流程越来越繁琐，传统的运维管理也越来越⼒不从⼼。
+
+![1639295365737](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639295365737.png)
+
+**⾃动化运维**
+
+⾃动化运维，可实现⽇常设备监控、主动发现问题、⾃动分析定位、基于标准化流程⼯具规范化处理、通过⾃动化运维操作⼯具处理修复等功能，最终实现监管治⾃动化运维。
+
+**⾃动化**
+
+- 监控⾃动化 
+
+- 数据采集⾃动化 
+
+- 数据分析⾃动化 
+
+- ⽇常巡检⾃动化 
+
+- 设备配置⽐对⾃动化 
+
+- 故障定位⾃动化  
+
+- 故障处理⾃动化 
+
+- 流程处理⾃动化 
+
+- ⽇常备份⾃动化 
+
+- 系统优化⾃动化  
+
+- ⼤批量配置⾃动化 
+
+![1639295446358](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639295446358.png)
+
+> SALTSTACK: https://docs.saltstack.com/en/latest/
+>
+> PUPPET: https://puppet.com/?_ga=2.223205342.4314246.1540783578-2053614486.1540783578
+>
+> ANSIBIE: https://www.ansible.com/
+
+![1639295392252](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639295392252.png)
+
+### 8.2 Saltstack部署
+
+- SaltStack管理⼯具允许管理员对多个操作系统创建⼀个⼀致的管理系统
+- Saltstack最主要的两个功能是：配置管理与远程执⾏
+- Saltstack不只是⼀个配置管理⼯具，还是⼀个云计算与数据中⼼架构编排的利器
+- 采⽤订阅者模式的分布式管理⼯具 管理节点【发命令】——>被管理节点 【去执⾏ 返回结果】
+- 采⽤⾃定义协议zeromq ⽐SSH（⼀对⼀）速度更快
+
+![1639295473334](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639295473334.png)
+
+**salt ⼯作原理**
+
+SaltStack 采⽤ C/S模式，server端就是salt的master，client端就是minion， minion与master之间通过ZeroMQ消息队列通信。
+
+minion上线后先与master端联系，把⾃⼰的pub key发过去，这时master端通过salt-key -L命令就会看到minion的key，接受该minion-key后，也就是master与minion已经互信。
+
+master可以发送任何指令让minion执⾏了，salt有很多可执⾏模块，⽐如说cmd模块，在安装minion的时候已经⾃带了，它们通常位于你的python库中，locate salt |  grep /usr/ 可以看到salt⾃带的所有东⻄。
+
+这些模块是python写成的⽂件，⾥⾯会有好多函数，如cmd.run，当我们执⾏salt '*' cmd.run 'uptime'的时候，master下发任务匹配到的minion上去，minion执⾏模块函数，并返回结果。master监听4505和4506端⼝，4505对应的是ZMQ的PUB system，⽤来发送消息，4506对应的是REP system是来接受消息的。
+
+⾃⼰也可以管理⾃⼰  
+
+1) 安装包 
+
+2）配置⽂件  
+
+3）调整平台 
+
+4）应⽤ 
+
+5）部署⼀个环境使⽤salt
+
+**salt-master安装**
+
+- yum install salt-syndic 分布式代理
+- yum install salt-cloud 也是基于openstack来做的，它可以⽀持多种云的使⽤
+
+如：Aliyun、Azure、DigitalOcean、EC2、Google Compute Engine、HP Cloud、OpenStack
+
+```shell
+# 1.运行以下命令来安装 SaltStack 存储库和密钥
+sudo rpm --import https://repo.saltproject.io/py3/redhat/7/x86_64/3004/SALTSTACK-GPG-KEY.pub
+curl -fsSL https://repo.saltproject.io/py3/redhat/7/x86_64/3004.repo | sudo tee /etc/yum.repos.d/salt.repo
+cd /etc/yum.repos.d
+
+# 2.清理缓存
+[root@localhost yum.repos.d]# sudo yum clean expire-cache
+
+# 3.安装
+[root@localhost yum.repos.d]# yum install salt-master  # salt-master
+[root@localhost yum.repos.d]# yum install salt-minion  # salt-minion
+
+# 4.把下载的包放到/usr/src目录下，执行以下命令
+[root@localhost master]# cd /usr/src/master 或 minion
+[root@localhost master]# yum -y localinstall -y ./*
+
+# 5.修改配置文件
+[root@localhost salt]# cd /etc/salt/
+[root@localhost salt]# cp master master.bak 或 minion
+[root@localhost salt]# cat /etc/salt/master | head -2
+master: 192.168.88.128
+user: root
+
+[root@localhost salt]# cat /etc/salt/minion | head -3
+master: 192.168.88.128
+user: root
+id: minion-01
+
+# 6.启动，查看主机端口
+[root@localhost salt]# service salt-master start
+[root@localhost salt]# systemctl start salt-minion
+[root@localhost salt]# netstat -ntlp
+tcp        0      0 0.0.0.0:4505            0.0.0.0:*               LISTEN      6091/python3
+tcp        0      0 0.0.0.0:4506            0.0.0.0:*               LISTEN      6097/python3
+
+# 7.列出待加入的机器
+[root@localhost salt]# salt-key -L
+Accepted Keys:  # 同意加⼊的
+Denied Keys:	# 未被加入的
+Unaccepted Keys: # 检测到未处理的
+minion-01
+Rejected Keys:	# 备拒绝的
+```
+
+salt-key相关命令：
+
+- salt-key -L 列出来认⼤哥的
+- salt-key -A 所有⼩弟一起认
+- salt-key -a 单个小弟认
+- salt-key -D 剔除所有⼩弟
+- salt-key -d 删除某个
+
+```shell
+# 1.把minion-01加入
+[root@localhost salt]# salt-key -a minion-01
+The following keys are going to be accepted:
+Unaccepted Keys:
+minion-01
+Proceed? [n/Y] y
+Key for minion minion-01 accepted.
+```
+
+**使用salt**
+
+```shell
+# 1.查看模块列表module
+[root@localhost salt]# salt 'minion-01' sys.list_modules
+
+# 2.查看指定module的function⽤法
+[root@localhost salt]# salt 'minion-01' sys.list_functions uptime
+
+# 3.查看指定模块的详细⽤法
+[root@localhost salt]# salt 'minion-01' sys.doc uptime.create
+```
+
+**查看minion**
+
+```shell
+# 1.查看minion的状态
+[root@localhost salt]# salt-run manage.status
+down:
+up:
+    - minion-01
+    
+# 2.查看minion在线状态
+[root@localhost salt]# salt-run manage.up
+- minion-01
+
+# 3.查看minion不在线状态
+[root@localhost salt]# salt-run manage.down
+```
+
+**salt-cp** 拷贝单个文件到minion上，不支持目录分发，通常在master上执行
+
+```shell
+# 1.拷贝单个文件
+[root@localhost salt]# salt-cp minion-01 roster /tmp
+minion-01:
+    ----------
+    /tmp/roster:
+        True
+
+# 2.拷贝单文个文件到minion的指定目录并改名
+[root@localhost salt]# salt-cp minion-01 proxy /tmp/test.py
+minion-01:
+    ----------
+    /tmp/test.py:
+        True
+
+```
+
+**salt-call** minion执⾏本地命令，自己执行可执行模块，不是通过master下发job
+
+```shell
+# 1.minion本地执行命令
+[root@localhost tmp]# salt-call test.ping
+local:
+    True
+
+# 2.master执行i检测minion机器状态
+[root@localhost salt]# salt "*" test.ping
+minion-01:
+    True
+
+```
+
+模块命令
+
+```shell
+# 1.minion查看用户
+[root@localhost salt]# vipw
+
+# 2.给minion插入一个用户
+[root@localhost salt]# salt 'minion-01' user.add xxx
+minion-01:
+    True
+```
+
+系统命令
+
+```shell
+# 通过master向minion下发系统命令
+[root@localhost srv]# salt "minion-01" cmd.run 'hostname'
+minion-01:
+    relase1
+```
+
+执行脚本
+
+```shell
+# 1.新建一个测试脚本
+[root@localhost srv]# cat test.sh
+#!/bin/bash
+
+echo "$HOSTNAME"
+echo
+echo
+echo "`date +%F`"
+echo "this is a test for salt"
+
+# 2.通过master向minion下发脚本
+[root@localhost salt]# salt "*" cmd.script "salt://test.sh"
+minion-01:
+    ----------
+    pid:
+        3152
+    retcode:
+        0
+    stderr:
+    stdout:
+        relase1
+
+
+        2021-12-03
+        this is a test for salt
+        
+# 注意：/srv/salt 脚本路径 默认，所以要先创建好路径
+```
+
+查看salt minion在执⾏什么操作
+
+```shell
+# 1.开启两个master，一个监控，一个执行
+[root@localhost ~]# salt-run jobs.active
+20211203105133957541:
+    ----------
+    Arguments:
+        - yum update -y
+    Function:
+        cmd.run
+    Returned:
+    Running:
+        |_
+          ----------
+          minion-01:
+              3168
+    StartTime:
+        2021, Dec 03 10:51:33.957541
+    Target:
+        *
+    Target-type:
+        glob
+    User:
+        root
+
+[root@localhost salt]# salt "*" cmd.run "yum update -y"
+
+```
+
+查看正在运⾏的任务,找到jid
+
+```shell
+# 1.查看正在执行任务的jid
+[root@localhost ~]# salt 'minion-01' saltutil.running
+
+# 2.根据jid杀掉任务
+[root@localhost ~]# salt 'minion-01' saltutil.kill_job 20181029231137078329
+
+# 3.清除minion缓存
+[root@localhost ~]# salt '*' saltutil.clear_cache
+```
+
+## 第九章 shell脚本
+
+ 通过shell语言将完成一个任务的所有代码写入一个文件，并给执行权限。 
+
+**shell优势**
+
+- 解放运维人员：7X24小时监控，监控为例，监控帮你干活，你只需要处理问题就好。
+- 提升业务能力：业务初始化，自动备份，日志分析，你的工作脚本来做，效率更高。
+- 提升管理能力：从系统安装到业务部署，再到服务器管理维护，实现自动化运维，批量管理机器与业务。
+- 提升运维薪资：技术能力和工资成正比。
+
+- 上手快
+- 入门简单
+- 学习周期短
+
+**shell能干什么**
+
+**重点：重复性的工作，全部通过脚本来完成。高效的同时还不出错。**
+
+- 根据企业架构自定义监控系统，量身打造企业级监控系统
+- 业务初始化部署系统，业务初始化全部一键搞定，省去繁琐的安装与排错
+- 一键备份，分分钟搞定备份问题
+- 日志分析，繁琐又复杂的日志分析让机器取做吧。
+- 三方软件模块插件的编写：根据业务定制三方软件的功能，更贴合自己的业务。
+
+ ![shell学习路线图.png](J:\homework\Linux学习笔记\Linux学习笔记.assets\1600908281266.png) 
+
+**成长路径**
+
+  ![shell编程掌握等级图.png](J:\homework\Linux学习笔记\Linux学习笔记.assets\1600908316400.png) 
+
+```shell
+# 1.能看到代码实现的算法、原理
+# 2.能根据自己的脚本应用要求修改脚本
+# 3.能根据业务需求写脚本
+# 4.能根据脚本执行问题优化脚本代码
+```
+
+### 9.1 常用命令复习
+
+ shell脚本可以让降低大家的工作强度，提升大家的管理能力和薪资报酬，还可以让大家有时间学习提升自己。所以，学好shell那就是非常必要的啦，那么在学习shell之前我们得热热身，做一下准备工作了。 
+
+> ```
+> shell脚本本质上就是要将完成一件事情的所有命令按照执行的先后顺序写入一个文件，并给予文件执行权限
+> ```
+
+ 想学好shell脚本首先要考核一下自己的linux命令学的是否扎实，接下来为了能让大家学习shell更加顺畅，我把常用的一些数据处理的命令给大家回顾一下。 
+
+```shell
+# 我们重点回顾以下几类命令
+
+# 1.数据检索命令
+	# 1.1 行检索：grep  egrep
+    # 1.2 字符串检索:cut  tr
+
+# 2.数据处理命令       
+	# 2.1 数据排序：sort
+  	# 2.2 数据去重: uniq
+  	# 2.3 文本数据合并: paste
+  	# 2.4 数据输出: tee
+  	# 2.5 数据处理: xargs    
+```
+
+#### 9.1.1 数据处理命令
+
+**grep: 负责从数据源中检索对应的字符串，行过滤。**
+
+```shell
+# grep用于根据关键字进行行过滤
+grep options 'keys' filename
+OPTIONS:
+    -i: # 不区分大小写
+    -v: # 查找不包含指定内容的行,反向选择
+    -w: # 按单词搜索
+    -n: # 显示行号
+    -A: # 显示匹配行及后面多少行 -A 5
+    -B: # 显示匹配行及前面多少行
+    
+    -o: # 打印匹配关键字
+    -c: # 统计匹配到的次数
+    -r: # 逐层遍历目录查找
+    -C: # 显示匹配行前后多少行
+    -l:	# 只列出匹配的文件名
+    -L:	# 列出不匹配的文件名
+    -e:	# 使用正则匹配
+    -E:	# 使用扩展正则匹配
+    ^key:	# 以关键字开头
+    key$:	# 以关键字结尾
+    ^$:		# 匹配空行
+    --color=auto ： # 可以将找到的关键词部分加上颜色的显示
+```
+
+常用命令必会，示例：
+
+```shell
+grep -i root passwd		# 忽略大小写匹配包含root的行
+grep -w ftp passwd 		# 精确匹配ftp单词
+grep -wo ftp passwd 	# 打印匹配到的关键字ftp
+grep -n root passwd 	# 打印匹配到root关键字的行号
+grep -ni root passwd 	# 忽略大小写匹配统计包含关键字root的行
+grep -nic root passwd 	# 忽略大小写匹配统计包含关键字root的行数
+grep -i ^root passwd 	# 忽略大小写匹配以root开头的行
+grep bash$ passwd 		# 匹配以bash结尾的行
+grep -n ^$ passwd 		# 匹配空行并打印行号
+grep ^# /etc/vsftpd/vsftpd.conf 	# 匹配以#号开头的行
+grep -v ^# /etc/vsftpd/vsftpd.conf 	# 匹配不以#号开头的行
+grep -A 5 mail passwd   # 匹配包含mail关键字及其后5行
+grep -B 5 mail passwd   # 匹配包含mail关键字及其前5行
+grep -C 5 mail passwd 	# 匹配包含mail关键字及其前后5行
+```
+
+centos8中已经为大家设置了，存放在/etc/profile.d/colorgrep.sh文件中，如若大家使用的系统中没有设置颜色输出，可以使用以下方法来自行设置。
+
+```shell
+# 临时设置：
+alias grep='grep --color=auto'  # 只针对当前终端和当前用户生效
+
+# 永久设置：全局
+vim /etc/bashrc
+alias grep='grep --color=auto'
+source /etc/bashrc
+
+# 局部：针对某个用户
+vim ~/.bashrc
+alias grep='grep --color=auto'
+
+# 注意：如果希望你对环境变量的设置立刻生效，可以使用以下命令而不需要重启计算机
+source ~/.bashrc
+```
+
+#### 9.1.2 cut数据截取
+
+```shell
+# cut用于列截取
+-c:  # 以字符为单位进行分割。
+-d:  # 自定义分隔符，默认为制表符。\t
+-f:  # 与-d一起使用，指定显示哪个区域。
+
+# 示例：
+cut -d ":" -f3 1.txt 		# 以:冒号分割，截取第3列内容
+cut -d ":" -f 1,3,5 1.txt	# 以:冒号分割，截取第1,3,5列内容
+cut -c 4 1.txt				# 截取文件中每行第4个字符
+cut -c1-4 1.txt				# 截取文件中每行的1-4个字符
+cut -c4-10 1.txt			# 截取文件中每行第4-10个字符
+cut -c5- 1.txt 				# 从第5个字符开始截取后面所有字符
+```
+
+#### 9.1.3 tr字符转换
+
+```shell
+# tr用来从标准输入中通过替换或删除操作进行字符转换；主要用于删除文件中控制字符或进行字符转换。
+# 使用tr时要转换两个字符串：字符串1用于查询，字符串2用于处理各种转换。
+
+语法：
+commands|tr  'string1'  'string2'
+tr  'string1'  'string2' < filename
+
+tr options 'string1' < filename
+
+-d : # 删除字符串1中所有输入字符。
+-s : # 删除所有重复出现字符序列，只保留第一个；即将重复出现字符串压缩为一个字符串。
+
+a-z 任意小写
+A-Z 任意大写
+0-9 任意数字
+
+# 示例：
+tr -d '[:/]' < 3.txt 		# 删除文件中的:和/
+cat 3.txt |tr -d '[:/]' 	# 删除文件中的:和/
+tr '[0-9]' '@' < 3.txt 		# 将文件中的数字替换为@符号
+tr '[a-z]' '[A-Z]' < 3.txt 	# 将文件中的小写字母替换成大写字母
+tr -s '[a-z]' < 3.txt		# 匹配小写字母并将重复的压缩为一个
+tr -s '[a-z0-9]' < 3.txt	# 匹配小写字母和数字并将重复的压缩为一个
+tr -d '[0-9]' < 1.txt       # 删除文件中0-9字符
+```
+
+#### 9.1.4 sort排序
+
+```shell
+# 将文件的每一行作为一个单位;从首字符向后;依次按ASCII码值进行比较，最后将他们按升序输出。
+
+语法：
+sort [options] [filename]
+
+-u ：# 去除重复行
+-r ：# 降序排列，默认是升序
+-o : # 将排序结果输出到文件中  类似 重定向符号 >
+-n ：# 以数字排序，默认是按字符排序
+-t ：# 分隔符
+-k ：# 第N列
+
+-b ： # 忽略前导空格。
+-R ： # 随机排序，每次运行的结果均不同。
+ 
+# 示例：
+sort -n -t: -k3 1.txt 	# 按照用户的uid进行升序排列
+sort -nr -t: -k3 1.txt 	# 按照用户的uid进行降序排列
+sort -n 2.txt 			# 按照数字排序
+sort -nu 2.txt 			# 按照数字排序并且去重
+sort -nr 2.txt 			# 按数字降序排序
+sort -nru 2.txt 		# 按数字降序排序去重
+sort -n 2.txt -o 3.txt 	# 按照数字排序并将结果重定向到文件
+sort -R 2.txt 			# 随机排序
+sort -u 2.txt 			# 去重
+```
+
+#### 9.1.5 uniq 连续去重
+
+ **应用技巧：先排序后去重** 
+
+```shell
+# 去除连续重复行、
+
+语法：
+uniq [options] [filename]
+
+-i: 	# 忽略大小写
+-c: 	# 统计重复行次数
+-d: 	# 只显示重复行
+
+sort -n test.txt | uniq		# 按数字排序后去重
+sort -n test.txt | uniq -c	# 按数字排序去重，统计去重个数
+sort -n test.txt | uniq -dc	# 按数字排序去重，显示重复行，统计重复个数
+```
+
+#### 9.1.6 tee双向输出
+
+```shell
+# tee工具从标准输入读取并写入标准输出和文件，即：双向覆盖重定向<屏幕输出|文本输入>
+somecommand |tee filename
+
+-a 	# 双向追加重定向
+
+echo hello world			# 打印hello world
+echo hello world|tee file1	# 打印hello world 输入到文件
+cat file1 					# 查看文件
+echo 999|tee -a file1		# 打印 999 追加到file1
+cat file1 					# 查看文件
+```
+
+#### 9.1.7 paste合同文件
+
+```shell
+# paste工具用于合并文件行输出到屏幕，不会改动源文件
+-d：	# 自定义间隔符，默认是tab,只接受一个字符
+-s：	# 将每个文件中的所有内容按照一行输出，文件中的行与行以TAB间隔。
+
+[root@localhost opt]# paste b.txt a.txt
+world   hello
+888
+999
+[root@localhost opt]# paste -d "#" b.txt a.txt
+world#hello
+888#
+999#
+[root@localhost opt]# paste -s b.txt a.txt
+world   888     999
+hello
+
+```
+
+#### 9.1.8 xargs命令
+
+```shell
+# 上一个命令的输出作为下一个命令的输入，做的是数据源。
+
+命令格式：
+''[somecommand]|[filename]'' |xargs -item  command
+
+OPTIONS:
+-a 	# file 从文件中读入作为sdtin
+-E 	# flag flag必须是一个以空格分隔的标志，当xargs分析到含有flag这个标志的时候就停止。
+-p 	# 当每次执行一个argument的时候询问一次用户。
+-n 	# num 后面加次数，表示命令在执行的时候一次用的argument的个数，默认是用所有的。
+-t 	# 表示先打印命令，然后再执行。
+-i 	# 或者是-I，这得看linux支持了，将xargs的每项名称，一般是一行一行赋值给 {}，可以用 {} 代替。
+-r 	# no-run-if-empty 当xargs的输入为空的时候则停止xargs，不用再去执行了。
+-d 	# delim 分隔符，默认的xargs分隔符是回车，argument的分隔符是空格，这里修改的是xargs的分隔符。
+
+[root@localhost opt]# touch test.txt
+[root@localhost opt]# find ./ -name test.txt | xargs gzip
+[root@localhost opt]# ll
+total 8
+-rw-r--r-- 1 root root 25 Dec  4 16:18 1.txt
+-rw-r--r-- 1 root root 29 Dec  4 16:22 test.txt.gz
+[root@localhost opt]# xargs -a 1.txt
+1 2 3 4 5 6 7 8 9 10 11
+[root@localhost opt]# xargs -a 1.txt -E 6
+1 2 3 4 5
+[root@localhost opt]# xargs -a 1.txt -p
+echo 1 2 3 4 5 6 7 8 9 10 11 ?...y
+1 2 3 4 5 6 7 8 9 10 11
+[root@localhost opt]# xargs -a 1.txt -t
+echo 1 2 3 4 5 6 7 8 9 10 11
+1 2 3 4 5 6 7 8 9 10 11
+[root@localhost opt]# xargs -a 1.txt -d " "
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+```
+
+#### 9.1.9 shell字符
+
+```shell
+# 1.有基础的同学不要和正则表达式中的符号含义搞混淆了。
+    !:               #  执行历史命令   !! 执行上一条命令
+    $:               #  变量中取内容符
+    + - * / %:       #  对应数学运算  加 减 乘 除 取余数  
+    &:               #  后台执行
+    ;：				# 分号可以在shell中一行执行多个命令，命令之间用分号分割    
+    \:               #  转义字符
+    ``:              #  反引号 命令中执行命令    echo "today is `date +%F`"
+    ' ':             #  单引号，脚本中字符串要用单引号引起来，但是不同于双引号的是，单引号不解释变量
+    " ":             #  双引号，脚本中出现的字符串可以用双引号引起来
+    
+# 2.通配符 
+    ~:                # 家目录    # cd ~ 代表进入用户家目录
+    *:                # 星号是shell中的通配符  匹配所有
+    ?:                # 问号是shell中的通配符  匹配除回车以外的一个字符
+    [list]: 		  # 匹配[list]中的任意单个字符
+	[!list]: 		  # 匹配除list中的任意单个字符
+{string1,string2,...}：# 匹配string1,string2或更多字符串
+
+# 3.重定向
+	>       		  # 覆盖输入 
+	>> 				  # 追加输入
+	< 				  # 输出
+	<< 				  # 追加输出
+
+# 4.管道命令
+    |：               # 管道符 上一个命令的输出作为下一个命令的输入   cat filename | grep "abc"
+```
+
+#### 9.2.0 组合命令实战
+
+```shell
+# 1.job1: 检索本机的IP、NETMASK、MAC地址、广播地址
+    IP:  172.20.10.3
+    NetMask:  255.255.255.240
+    Broadcast:  172.20.10.15
+    MAC Address:  00:0c:29:8d:49:ea
+[root@localhost opt]# ifconfig ens33|grep -w "inet"|tr -s " "|cut -d " " -f3|xargs echo "ip: "
+ip:  192.168.88.128
+[root@localhost opt]# ifconfig ens33|grep -w "inet"|tr -s " "|cut -d " " -f5|xargs echo "netmask: "
+netmask:  255.255.255.0
+[root@localhost opt]# ifconfig ens33|grep -w "inet"|tr -s " "|cut -d " " -f7|xargs echo "broadcast: "
+broadcast:  192.168.88.255
+[root@localhost opt]# ifconfig ens33|grep -w "ether"|tr -s " "|cut -d " " -f3|xargs echo "MAC: "
+MAC:  00:0c:29:32:06:9d
+
+# 2.job2: 将系统中root的用户名、密码和默认shell保存到一个文件中，要求用户名密码和默认shell之间用tab键分割
+ayitula x /bin/bash
+[root@localhost opt]# grep -i "bash" /etc/passwd|cut -d ":" -f1,2,7|tr ":" "\t" > root.txt
+root    x       /bin/bash
+
+# 组合命令应用的精髓：先处理成统一格式，然后再截取
+	1.先截取行
+	2.统一数据格式
+	3.截取字符串
+	4.处理字符串
+```
+
+### 9.2 shell脚本介绍
+
+**编程语言介绍：**
+
+编程语言是指计算机能理解的语言，人类通过使用计算机语言可以给计算机批量下达任务，让其按照人类的思想去完成工作。最常见的语言有：汇编语言、C语言、java语言、php语言、Python语言、golang语言等等。
+
+编程语言分类：
+
+- 编译型语言
+  程序在执行之前需要一个专门的编译过程，把程序编译成为机器语言文件，运行时不需要重新翻译，直接使用编译的结果就行了。程序执行效率高，依赖编译器，跨平台性差些。如C、C++、java
+- 解释型语言
+  程序不需要编译，程序在运行时由解释器翻译成机器语言，每执行一次都要翻译一次。因此效率比较低。比如Python/JavaScript/ Perl /ruby/Shell等都是解释型语言。
+
+> 计算机的本质：输入、运算、输出
+
+- 总结
+
+1. 编译型语言比解释型语言快，但是没有解释性语言跨平台性好。
+2. 如果做底层开发或者大型应用程序或者操作系统，一般都用编译型语言。
+3. 如果是一些服务器脚本，或一些辅助接口，对速度要求不高，对各个平台有要求的话，选择解释性语言。
+
+**shell语言介绍：**
+
+ shell在计算机中起到什么作用呢？为什么要求shell呢，我们可以看看计算机操作系统的组成： 
+
+  <img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\1600050867343.png" alt="OS分层.png" style="zoom:50%;" /> 
+
+看图之前问大家个问题，两个人在电话聊天：只会说法语的法国人，只会说汉语的你。如何沟通呢？
+
+请个翻译在你两中间
+
+同理，系统内核只知道二进制
+
+如果你想给计算机内核下任务，让其驱动硬件干活，那么有两种选择
+
+1、你学会二进制
+
+2、找个翻译
+
+**shell介绍**
+
+shell就是我们找来的翻译。
+
+shell是一个程序，采用C语言编写，是用户和linux内核沟通的桥梁。它既是一种命令语言，又是一种解释性的编程语言。通过一个图表来查看一下shell的作用。
+
+  ![00_shell.png](J:\homework\Linux学习笔记\Linux学习笔记.assets\1600050927043.png) 
+
+**bash shell基本特性**
+
+知己知彼方可百战百胜，如何应用Bash shell，我们先看看他的特性，有助于我们快速应用。
+
+- 命令和文件自动补全
+
+  Tab只能补全命令和文件 （RHEL6/Centos6）
+
+- 常见的快捷键—提升操作熟练度
+
+```shell
+^c    		# 终止前台运行的程序
+^z    		# 将前台运行的程序挂起到后台
+^d    		# 退出 等价exit
+^l    		# 清屏 
+^a |home    # 光标移到命令行的最前端
+^e |end   	# 光标移到命令行的后端
+^u    		# 删除光标前所有字符
+^k    		# 删除光标后所有字符
+^r   		# 搜索历史命令
+```
+
+**shell脚本介绍**
+
+ 简单来说就是将需要完成某个任务所执行的命令按照执行顺序保存到文本中，并给予执行权限。 
+
+- 按照顺序执行。
+
+- 它是解释型的，意味着不需要编译。
+
+- 准确来说：若干命令 + 脚本的基本格式 + 脚本特定语法 + 思想= shell脚本
+
+```shell
+# 脚本命令演示
+创建一个用户：harry     useradd harry
+密码设置为:yunwei.98989 echo "yunwei.98989"|passwd --stdin harry
+该用户创建文件夹/tmp/zutuanxue   mkdir /tmp/zutuanxue
+该用户创建文件/tmp/zutuanxue/README  touch /tmp/zutuanxue/README
+将“hello world“输入到/tmp/zutuanxue/README  echo 'hello world' > /tmp/zutuanxue/README
+
+# 实现代码 01_task.sh
+#!/bin/bash
+
+#DESC: this is a test script 
+#AUTHOR: Bai Shuming
+#RELEASE: 1.0
+
+#main 
+
+#创建用户harry
+useradd harry
+
+#设置用户密码 yunwei.98989
+echo "yunwei.98989"|passwd --stdin harry
+
+#使用harry创建文件夹，文件，输入文件中内容
+su - harry -c "mkdir /tmp/zutuanxue"
+su - harry -c "touch /tmp/zutuanxue/README"
+su - harry -c "echo 'hello world' > /tmp/zutuanxue/README"
+```
+
+什么时候用到脚本？
+
+重复化、复杂化的工作，通过把工作的命令写成脚本，以后仅仅需要执行脚本就能完成这些工作。
+
+1. 自动化分析处理
+
+2. 自动化备份
+
+3. 自动化批量部署安装
+
+4. 等等…
+
+如何学习shell脚本？
+
+尽可能记忆更多的命令
+
+掌握脚本的标准的格式（指定魔法字节、使用标准的执行方式运行脚本）
+
+必须熟悉掌握脚本的基本语法（重点)
+
+学习脚本的秘诀：多看（看懂）——>多模仿（多练）——>多思考
+
+### 9.3 shell脚本语法
+
+shell脚本组成
+
+  ![shell程序组成.png](J:\homework\Linux学习笔记\Linux学习笔记.assets\1600051087772.png) 
+
+- 脚本命名
+  nginx_install.sh 脚本名称 脚本扩展名 .sh
+  名字不要太长 26个字节内
+- 代码规范：
+
+```shell
+1、#!/bin/bash
+脚本第一行， #！魔法字符，指定脚本代码执行的程序。即它告诉系统这个脚本需要什么解释器来执行，也就是使用
+哪一种Shell
+
+2、# 代表注释，#！特例 
+
+3、以下内容是对脚本的基本信息的描述,大家可以根据实际情况尽可能的写详细一些，方便后续使用者
+# Name: 脚本名字
+# Desc:描述describe
+# Path:存放路径
+# Usage:用法
+# Update:更新时间
+# Author:作者
+# Release: 分发版本
+
+下面就是脚本的具体内容
+commands
+...
+```
+
+- 脚本执行方法：
+
+1. 标准脚本执行方法（建议）：
+
+```shell
+[root@zutuanxue shell01]# cat 1.sh 
+#!/bin/bash
+#xxxx
+#xxx
+#xxx
+hostname
+date
+[root@zutuanxue shell01]# chmod +x 1.sh 
+[root@zutuanxue shell01]# ll
+total 4
+-rwxr-xr-x 1 root root 42 Jul 22 14:40 1.sh
+[root@zutuanxueshell01]# /shell/shell01/1.sh 
+zutuanxue
+Sun Jul 22 14:41:00 CST 2018
+[root@zutuanxue shell01]# ./1.sh 
+zutuanxue
+Sun Jul 22 14:41:30 CST 2018
+```
+
+2. 非标准的执行方法（不建议）：
+
+```shell
+[root@zutuanxue shell01]# bash 1.sh 
+zutuanxue
+Sun Jul 22 14:42:51 CST 2018
+[root@zutuanxue shell01]# sh 1.sh
+zutuanxue
+Sun Jul 22 14:43:01 CST 2018
+[root@zutuanxue shell01]# 
+[root@zutuanxue shell01]# bash -x 1.sh
++ hostname
+zutuanxue
++ date
+Sun Jul 22 14:43:20 CST 2018
+
+-x:		# 一般用于排错，查看脚本的执行过程
+-n:		# 用来查看脚本的语法是否有问题
+
+# 注意：如果脚本没有加可执行权限，不能使用标准的执行方法执行，bash 1.sh
+
+其他：
+[root@zutuanxueshell01]# source 2.sh
+server
+Thu Nov 22 15:45:50 CST 2018
+[root@zutuanxue shell01]# . 2.sh
+server
+Thu Nov 22 15:46:07 CST 2018
+
+source 和 . 表示读取文件，执行文件里的命令
+```
+
+3. 命令式脚本执行方法： 
+
+```shell
+# 定义命令路径变量  PATH
+PATH=$PATH:脚本路径
+
+# 备注：脚本必须给执行权限
+```
+
+### 9.4 shell变量
+
+在编程中，我们总有一些数据需要临时存放在内存，以待后续使用时快速读出。先了解一下计算机的存储单位吧。 
+
+```shell
+# 计算机的单位:
+1B=8bit
+
+1KB=1024B
+1MB=1024KB
+1GB=1024MB
+1TB=1024GB
+1PB=1024TB
+1EB=1024PB
+1ZB=1024EB
+...
+好了，已经够大了！当然还有YB、BB更大的单位，同样进制也是1024.
+
+1G=1024*1024*1024=1073741824B
+```
+
+假如你将一个1B的字符存入内存，如何读出呢？有没有一种大海捞针的感觉啊！我们讨论一下计算机是如何通过让我们人类快速将数据存在内存，如何从内存中读出数据的。我们研究过变量后就明白了。
+
+**变量：变量是编程中最常用的一种临时在内存中存取数据的一种方式。**
+
+ 变量存取原理 
+
+```shell
+# 关于内存的说明
+a、系统启动    内存被按照1B一个单位划分成N块     并且以十六进制为每一个空间编号
+
+b、内存跟踪表记录  使用和未使用的内存的地址编号
+
+c、内存申请    系统从未使用的内存中拿出一个或者一段连续空间  给你使用   同时在内存跟踪表中记录
+该地址被占用不在分给别人，同时在系统中建立映射机制   
+比如:变量名 STRING1=‘ABC’
+
+name<==>0x5
+
+d、释放内存
+从内存跟踪表中将记录删除，下次存数据直接覆盖
+```
+
+  ![变量存储.png](J:\homework\Linux学习笔记\Linux学习笔记.assets\1600685218168.png) 
+
+```
+CHAR1(0x3)=A
+从图片可以看出，当我们在脚本中定义变量存值的时候，可以从以下方面看到变化：
+a、内存占用：如果存的是一个字符则占用1个字节，如果存的是字符串则是字符串的长度加1个字节长度(\0是一个
+特殊字符，代表字符串结束)。
+
+b、变量名与内存空间关系：计算机中会将对应的内存空间地址和变量名称绑定在一起，此时代表这段内存空间已经被
+程序占用，其他程序不可复用；然后将变量名对应的值存在对应内存地址的空间里。
+```
+
+**1. 变量定义**
+
+- 什么时候需要定义变量？
+
+   如果某个内容需要多次使用，并且在代码中重复出现，那么可以用变量代表该内容。这样在修改内容的时候，仅仅需要修改变量的值。
+  在代码运作的过程中，可能会把某些命令的执行结果保存起来，后续代码需要使用这些结果，就可以直接使用这个变量。 
+
+- ##### 定义一个变量
+
+  变量格式： 变量名=值
+
+  在shell编程中的变量名和等号之间不能有空格。
+
+```shell
+# 变量名命名规则：
+    1.命名只能使用英文字母，数字和下划线，首个字符不能以数字开头。
+    2.中间不能有空格，可以使用下划线（_）。
+    3.不能使用标点符号。
+    4.不能使用bash里的关键字（可用help命令查看保留关键字）。
+
+# 定义变量举例：
+VAR1=1
+age=18 	# 整形
+name=‘baism’ # 字符串
+score=88.8 # 浮点 
+```
+
+ 定义变量演示：
+
+```shell
+[root@localhost ~]# name="joker"
+[root@localhost ~]# school="xiamen"
+[root@localhost ~]# age=30
+[root@localhost ~]# score=36.8
+```
+
+取消变量：
+
+```shell
+# 取消当前环境中的变量，如果是变量设置是保存在文件中，下次重启又会恢复
+[root@localhost ~]# echo $name
+joker
+[root@localhost ~]# unset name
+```
+
+有类型变量：
+
+```shell
+-i 	# 将变量看成整数
+-r 	# 使变量只读 readonly,该变量的值无法改变，并且不能为unset
+-x 	# 标记变量通过环境导出 export
+-a 	# 指定为索引数组（普通数组）；查看普通数组
+-A 	# 指定为关联数组；查看关联数组
+
+[root@localhost ~]# declare -i num='asa'
+[root@localhost ~]# echo $num
+0
+[root@localhost ~]# num=100
+[root@localhost ~]# echo $num
+100
+[root@localhost ~]# declare -r num
+[root@localhost ~]# unset num
+-bash: unset: num: cannot unset: readonly variable
+
+[root@localhost ~]# declare -x
+declare -x DISPLAY="localhost:10.0"
+declare -x HISTCONTROL="ignoredups"
+declare -x HISTSIZE="1000"
+declare -x HOME="/root"
+declare -x HOSTNAME="localhost.localdomain"
+declare -x LANG="en_US.UTF-8"
+declare -x LESSOPEN="||/usr/bin/lesspipe.sh %s"
+declare -x LOGNAME="root"
+```
+
+**2. 变量分类**
+
+系统中的变量根据作用域及生命周期可以分为四类：本地变量、环境变量、全局变量、内置变量。
+
+- 本地变量
+
+ 用户自定义的变量，定义在<font color="red">脚本或者当前终端中</font>，脚本执行完毕或终端结束变量失效。 
+
+- 环境变量
+
+   定义在用户<font color="red">家目录下的.bashrc或.bash_profile</font>文件中，用户私有变量，只能本用户使用。 
+
+   查看当前用户的环境变量 **env** 
+
+   查询当前用户的所有变量(临时变量与环境变量) **set** 
+
+示例：将当前便令变成环境变量  <font color="red">export</font>
+
+```shell
+# 1.定义一个临时变量
+[root@localhost ~]# name=joker
+[root@localhost ~]# export name
+[root@localhost ~]# env | grep name
+name=joker
+
+# 2.定义一个永久生效的变量
+vim .bash_profile 或者 ~/.bashrc
+name=joker
+```
+
+> 关于export说明
+> **用户登录时:**
+> 1) 用户登录到Linux系统后，系统将启动一个用户shell。在这个shell中，可以使用shell命令或声明变量，也可以创建并运行 shell脚本程序。
+>
+> **运行脚本时:**
+> 2) 运行shell脚本程序时，系统将创建一个子shell。此时，系统中将有两个shell，一个是登录时系统启动的shell，另一个是系统为运行脚本程序创建的shell。当一个脚本程序运行完毕，它的脚本shell将终止，可以返回到执行该脚本之前的shell。
+>
+> 从这种意义上来说，用户可以有许多 shell，每个shell都是由某个shell（称为父shell）派生的。
+> 在子shell中定义的变量只在该子shell内有效。如果在一个shell脚本程序中定义了一个变量，当该脚本程序运行时，这个定义的变量只是该脚本程序内的一个局部变量，其他的shell不能引用它，要使某个变量的值可以在其他shell中被改变，可以使用export命令对已定义的变量进行输出。 
+>
+> export命令将使系统在创建每一个新的shell时定义这个变量的一个拷贝。这个过程称之为变量输出。
+
+  ![shell父子关系.png](J:\homework\Linux学习笔记\Linux学习笔记.assets\1600685550727.png) 
+
+- 全局变量
+
+**使用export**命令将本地变量输出为当前shell中的环境变量；
+所有用户及shell都可以使用，可以在/etc/profile /etc/bashrc下永久定义 。
+
+```shell
+# 打印全局变量
+[root@localhost ~]# export name=joker
+[root@localhost ~]# printenv | grep name
+name=joker
+[root@localhost ~]# su - joker
+Last login: Sun Dec  5 11:36:55 CST 2021 on pts/0
+[joker@localhost ~]$ printenv | grep name
+```
+
+- 内置变量
+
+ 系统变量(内置bash中变量) ： shell本身已经固定好了它的名字和作用。
+
+```shell
+$?：上一条命令执行后返回的状态，当返回状态值为0时表示执行正常，非0值表示执行异常或出错
+ 若退出状态值为0，表示命令运行成功
+ 若退出状态值为127,表示command not found
+ 若退出状态值为126,表示找到了该命令但无法执行（权限不够）
+ 若退出状态值为1&2,表示没有那个文件或目录
+ 
+$$：当前所在进程的进程号     echo $$   eg：kill -9 `echo $$`  = exit   退出当前会话
+
+$!：后台运行的最后一个进程号  （当前终端）  # gedit &
+!$ 调用最后一条命令历史中的参数
+!! 调用最后一条命令历史
+
+
+$#：脚本后面接的参数的个数
+$*：脚本后面所有参数，参数当成一个整体输出，每一个变量参数之间以空格隔开
+$@: 脚本后面所有参数，参数是独立的，也是全部输出
+
+$0：当前执行的进程/程序名  echo $0     
+$1~$9 位置参数变量
+${10}~${n} 扩展位置参数变量  第10个位置变量必须用{}大括号括起来
+./1.sh a b c
+```
+
+示例：
+
+```shell
+[root@localhost opt]# cat 2.sh
+#!/bin/bash
+#xxxxxxxx
+echo "\$0 = $0"
+echo "\$# = $#"
+echo "\$* = $*"
+echo "\$@ = $@"
+echo "\$1 = $1"
+echo "\$2 = $2"
+echo "\$3 = $3"
+echo "\$11 = ${11}"
+echo "\$12 = ${12}"
+[root@localhost opt]# sh 2.sh a b c d e f g h i j k l m n
+$0 = 2.sh
+$# = 14
+$* = a b c d e f g h i j k l m n
+$@ = a b c d e f g h i j k l m n
+$1 = a
+$2 = b
+$3 = c
+$11 = k
+$12 = l
+```
+
+$*和$@的区别：
+$* ：表示将变量看成一个整体
+$@ ：表示变量是独立的
+
+```shell
+[root@localhost opt]# sh 3.sh a b c
+a
+b
+c
+======我是分割线=======
+a b c
+```
+
+**变量总结说明：**
+
+本地变量：当前用户自定义的变量。当前进程中有效，其他进程及当前进程的子进程无效。
+
+环境变量：当前进程有效，并且能够被子进程调用。
+
+全局变量：全局所有的用户和程序都能调用，且继承，新建的用户也默认能调用.
+
+内置变量：shell本身已经固定好了它的名字和作用.
+
+| 变量类型 | 作用域                                                    | 生命周期           |
+| -------- | --------------------------------------------------------- | ------------------ |
+| 本地变量 | 当前shell环境(子shell不能用)                              | 脚本结束或终端结束 |
+| 环境变量 | 当前shell或者子shell,文件中，用户私有变量，只能本用户使用 | 当前进程结束       |
+| 全局变量 | 所有用户及shell环境                                       | 关机               |
+| 内置变量 | 所有用户及shell环境                                       | 关机               |
+
+**3. 变量取值**
+
+```shell
+[root@localhost opt]# name=joker
+[root@localhost opt]# echo '$name'
+$name
+[root@localhost opt]# echo "$name"
+joker
+
+# 注意
+# 变量读取过程中，默认单引号是不解释变量的.比如
+[root@localhost opt]# echo '$name'
+$name
+
+# 如果必须使用单引号还要读取变量的值可以使用eval命令[重新运算求出参数的内容] 
+[root@localhost opt]# eval  echo '$name'
+joker
+```
+
+**4. 其他变量**
+
+```shell
+1）取出一个目录下的目录和文件：dirname和 basename 
+2）变量"内容"的删除和替换
+一个“%”代表从右往左去掉一个/key/
+两个“%%”代表从右往左最大去掉/key/
+一个“#”代表从左往右去掉一个/key/
+两个“##”代表从左往右最大去掉/key/
+
+[root@localhost opt]# A=/root/Desktop/shell/mem.txt 
+[root@localhost opt]# echo $A
+/root/Desktop/shell/mem.txt
+[root@localhost opt]# dirname $A   # 取出目录
+/root/Desktop/shell
+[root@localhost opt]# basename $A  # 取出文件
+mem.txt
+
+url=www.taobao.com
+echo ${#url}      	 # 获取变量的长度
+echo ${url#*.}       # 以分隔符.界限  *匹配所有
+echo ${url##*.}
+echo ${url%.*}
+echo ${url%%.*}
+```
+
+### 9.5 数据磁盘初始化
+
+**1. 应用场景**
+
+生产环境中的服务器一般会分为系统盘和数据盘两种磁盘，以dell R730举例，该服务器是一个2U的机架式服务器，满载可以挂载14块磁盘[2块在机箱内做系统盘，12块在面板做数据盘]，我们一般的策略是系统盘做raid1，保障系统稳定性12块数据磁盘我们做raid10 或者 raid50，保障数据盘容错的同时还能做到优化IO的效果。
+
+raid磁盘的容量是一定的，线上的数据又是不断增长的，也就是说总有一天会把你的数据磁盘填满，那怎么办？为了解决这个问题，人们想到了LVM[逻辑卷管理系统]，当前数据盘容量不够用的时候，我们可以通过san存储获得网络磁盘，然后将该网络存储动态加入LVM中的卷组后就可以扩大LV了。整个过程采用在线扩容的方式，不会影响线上业务正是基于这个原因，我们又在系统中把raid数据盘在存数据之前做成了LVM磁盘，方便后续的扩容。
+
+<font color="red"> 注意：有数据的磁盘不能再做LVM，因为需要格式化，数据会全部丢失。必须提前布局，否则就得提前准备跑路资金了。 </font>
+
+**2. 案例需求**
+
+```shell
+# 给虚拟机添加一块磁盘(以sdb为例)，要求使用脚本对该磁盘分三个区：
+
+ 1）主分区 /dev/sdb3 543M 文件系统 ext4 要求开机自动挂载到/data/data1目录
+
+ 2) 逻辑分区 /dev/sdb5 2G
+
+ 3) 逻辑分区 /dev/sdb6 3G
+
+使用/dev/sdb5 /dev/sdb6 新建卷组vg100，并创建一个PE为16M,容量为2.5G的逻辑卷lv100，
+格式化为xfs,默认开机自动挂载到/data/data2目录
+```
+
+**3. 案例算法**
+
+ 算法：完成一个任务的代码思路。 
+
+```shell
+# 脚本思路---算法
+1、分区
+2、创建逻辑卷
+    2.1  创建物理卷
+    2.2  创建卷组
+    2.3  创建逻辑卷
+3、格式化 /dev/sdb3   /dev/vg100/lv100
+4、修改/etc/fstab文件
+5、挂载分区
+6、验证并输出挂载结果
+```
+
+**4. 代码实现**
+
+ 代码实现的要点：要清楚每一步的步骤，不同的系统可能有细微的差别，一味的复制可不行的，需要提前手动做一下，把步骤捋清楚。 
+
+```shell
+# disk_partition.sh
+
+#!/bin/bash
+# 
+#Author: Bai Shuming
+#Created Time: 2019/11/1 21:05
+#Release: 
+#Description:
+#
+#给虚拟机添加一块磁盘(以sdb为例)，要求使用脚本对该磁盘分三个区：
+#  1）主分区 /dev/sdb3   543M   文件系统 ext4  要求开机自动挂载到/data/data1目录
+#  2)   逻辑分区  /dev/sdb5   2G
+#  3)   逻辑分区  /dev/sdb6   3G
+#使用/dev/sdb5   /dev/sdb6   新建卷组vg100，并创建一个PE为16M,容量为2.5G的逻辑卷lv100，
+#格式化为xfs,默认开机自动挂载到/data/data2目录
+
+# 1、分区
+fdisk /dev/sdb <<EOF
+n
+p
+3
+
++543M
+n
+e
+4
+
+
+n
+
++2G
+n
+
++3G
+w
+EOF
+
+# 2、创建逻辑卷
+   #2.1 创建物理卷
+    pvcreate /dev/sdb5 /dev/sdb6
+   #2.2 创建卷组
+    vgcreate -s 16M vg100 /dev/sdb{5..6}
+   #2.3 创建逻辑卷
+    lvcreate -L 2.5G -n lv100 vg100
+# 3、格式化
+mkfs.ext4 /dev/sdb3
+mkfs.xfs /dev/vg100/lv100
+
+# 4、修改/etc/fstab,实现自动挂载
+echo  "/dev/sdb3   /data/data1 ext4  defaults   0 0" >> /etc/fstab
+echo "/dev/vg100/lv100 /data/data2  xfs   defaults 0 0" >> /etc/fstab
+
+# 5、挂载分区
+mkdir -p /data/data{1..2}
+mount -a
+
+# 6、验证并输出挂载结果
+mount |grep "/dev/sdb3"
+test $? -eq 0&&echo "/dev/sdb3 挂载成功" || echo "/dev/sdb3挂载失败"
+
+##注意检索的时候，mount输出中LV的表示方式，或者直接检索挂载点/data/data2也可以。
+mount |grep "vg100-lv100"
+test $? -eq 0&&echo "/dev/vg100/lv100 挂载成功" || echo "/dev/vg100/lv100挂载失败"
+```
+
+### 9.6 shell脚本格式化输出
+
+计算机程序其实就是三步:输入、运算、输出，这个理论也适应于shell编程。
+
+那么计算机是如何将信息按照比较舒服的格式输出到屏幕或者KFC的打印纸上的呢！如果让计算机能够输出一种格式，让人看起来很舒服，那么我们就要学习一下计算机的格式化输出，让计算机程序将信息输出的时候美美哒！让人一目了然看到需要的信息。
+
+**1. shell格式化输出**
+
+ 一个赏心悦目的界面是一个程序给用户的第一个映像，好的界面可以让用户更加容易上手使用。windows之所以能被个人用户喜欢就是因为它的界面更加容易和用户交互，只要用户能识别文字，懂得点击鼠标就能操作电脑；而linux之所以无法被广大个人用户使用的瓶颈就是图形界面无法完成所有工作，需要命令配合才可以，这就把非专业用户拒之门外了，想用就必须去学习命令。
+我们在使用shell写一个程序的时候，如果想让广大的用户都能使用，都能快速上手，那么好的交互界面就太重要了。我们可以使用多种方法开发好的、易交互的界面，常用的工具有：dialog、echo、printf等命令。
+本节课主要给大家介绍一个最简单易用的命令：echo 
+
+**echo命令**
+
+**功能：将内容输出到默认显示设备**
+
+**应用场景：需要计算机程序输出的地方**
+
+echo命令的功能是在显示器上显示一段文字，一般起到一个提示的作用。 功能说明:显示文字。 
+
+```shell
+# 语法:echo [-ne][字符串]
+
+# 补充说明:
+1、echo会将输入的字符串送往标准输出。
+2、输出的字符串间以空白字符隔开,并在最后加上换行号。
+
+# OPTIONS：
+-n	不要在最后自动换行
+-e	若字符串中出现以下字符，则特别加以处理，而不会将它当成一般文字输出:
+
+转义字符
+\a	# 发出警告声;
+\b	# 删除前一个字符;
+\t	# 插入tab;
+\n	# 换行且光标移至行首;
+
+\c	# 最后不加上换行符号;
+\f	# 换行但光标仍旧停留在原来的位置;
+\r	# 光标移至行首，但不换行;
+\v	# 与\f相同;
+\		# 插入\字符;
+\0nnn	# 打印nnn(八进制)所代表的ASCII字符;  备注：数字0  不要理解成字母o
+\xNN  	# 打印NN(十六进制)所代表的ASCII字符;
+
+-–help		# 显示帮助
+-–version	# 显示版本信息
+```
+
+**输出颜色字体**
+
+脚本中echo显示内容带颜色显示，echo显示带颜色，**需要使用参数-e** 
+
+```shell
+# 格式如下：
+echo -e "\033[字背景颜色；文字颜色m字符串\033[0m"
+
+示例：
+echo -e "\033[41;36m something here \033[0m"
+```
+
+其中41的位置代表底色， 36m的位置是代表字的颜色
+
+1、字背景颜色和文字颜色之间是英文的
+
+2、文字颜色后面有个m
+
+3、字符串前后可以没有空格，如果有的话，输出也是同样有空格
+
+```shell
+# 下面是相应的字和背景颜色，可以自己来尝试找出不同颜色搭配
+　　echo -e "\033[31m 红色字 \033[0m
+　　echo -e "\033[34m 黄色字 \033[0m
+　　echo -e "\033[41;33m 红底黄字 \033[0m
+　　echo -e "\033[41;37m 红底白字 \033[0m
+　　
+# 字颜色：30—–37
+　　echo -e "\033[30m 黑色字 \033[0m"
+　　echo -e "\033[31m 红色字 \033[0m"
+　　echo -e "\033[32m 绿色字 \033[0m"
+　　echo -e "\033[33m 黄色字 \033[0m"
+　　echo -e "\033[34m 蓝色字 \033[0m"
+　　echo -e "\033[35m 紫色字 \033[0m"
+　　echo -e "\033[36m 天蓝字 \033[0m"
+　　echo -e "\033[37m 白色字 \033[0m"
+
+　　
+# 字背景颜色范围：40—–47
+　　echo -e "\033[40;37m 黑底白字 \033[0m"
+　　echo -e "\033[41;37m 红底白字 \033[0m"
+　　echo -e "\033[42;37m 绿底白字 \033[0m"
+　　echo -e "\033[43;37m 黄底白字 \033[0m"
+　　echo -e "\033[44;37m 蓝底白字 \033[0m"
+　　echo -e "\033[45;37m 紫底白字 \033[0m"
+　　echo -e "\033[46;37m 天蓝底白字 \033[0m"
+　　echo -e "\033[47;30m 白底黑字 \033[0m"
+　　
+# 最后面控制选项说明
+　　\033[0m  # 关闭所有属性
+　　\033[1m  # 设置高亮度
+　　\033[4m  # 下划线
+　　\033[5m  # 闪烁
+　　\033[7m  # 反显
+　　\033[8m  # 消隐
+
+　　\033[30m — \33[37m 
+
+# 设置前景色
+　　\033[40m — \33[47m  # 设置背景色
+　　
+　　
+　　\033[nA 		# 光标上移n行
+　　\033[nB 		# 光标下移n行
+　　\033[nC 		# 光标右移n行
+　　\033[nD 		# 光标左移n行
+　　\033[y;xH		# 设置光标位置
+　　\033[2J 		# 清屏
+　　\033[K 		# 清除从光标到行尾的内容
+　　\33[s 		# 保存光标位置
+　　\033[u 		# 恢复光标位置
+　　\033[?25l 	# 隐藏光标
+　　\033[?25h 	# 显示光标
+　　
+# 用法例子  光标下移三行　　
+[root@localhost opt]# echo -e "\033[0m today is fine \033[3B"
+ today is fine
 
 
 
+```
+
+示例：
+
+- echo输出缩进问题
+- 字体颜色输出
+
+```shell
+# [root@localhost opt]# cat fruite.sh
+#!/bin/bash
+echo -e "\t\t\033[32m Fruits List \033[0m\n"
+echo -e "\033[31mFruit\033[0m\t\t\033[31m Price\033[0m\t\t\033[31m Weight\033[0m"
+echo -e "\033[34m1)Apple \t￥10.00\t\t1KG\033[0m"
+echo -e "\033[34m1)Banana\t￥9.00\t\t1KG\033[0m"
+echo -e "\033[34m1)Orange\t￥15.20\t\t1KG\033[0m"
+```
+
+### 9.7 脚本用户交互
+
+**read命令**
+
+功能：默认接受键盘的输入，回车符代表输入结束
+应用场景：人机交互
+命令选项 ：
+
+> -p打印信息
+> -t限定时间
+> -s不回显
+> -n输入字符个数
+
+示例：
+
+**案例需求：**
+写一个系统用户交互登录界面脚本，仿linux文本界面登录
+**案例要点：**
+了解linux文本界面登陆所需要的输出信息及界面布局 
+
+```shell
+[root@localhost opt]# cat login.sh
+#!/bin/sash
+
+IP=`ifconfig ens33|egrep -w "inet"|awk '{print $2}'`
+clear
+echo "CentOS Linux 8 (Core)"
+echo -e "Kernel `uname -r` on an `uname -m`\n"
+echo -e "Web console: https://localhost:9090/ or https://$IP:9090/ \n"
+
+# 输入用户名
+echo -n "$HOSTNAME login: "
+read account
+# 输入密码
+read -p "password: " -s -t 30 pwd
+
+```
+
+### 9.8 shell运算详解
+
+**计算机编程就是三大步：输入、运算、输出**
+
+那么计算机运算有哪些呢，计算机能做哪些运算呢？
+
+**我们来看看常见的计算机运算**
+
+#### 9.8.1 赋值运算
+
+赋值运算 **=**
+
+```shell
+a=10
+name="joker"
+# 注意：字符串必须用引号引起来
+```
+
+#### 9.8.2 四则运算
+
+> 运算符于命令
+>
+> 四则运算： + - * /
+>
+> 扩展：% **
+>
+> 运算命令：
+>
+> - 整形运算
+>   - expr
+>   - let
+>   - (())
+>   - bc
+>
+> - 浮点运算
+>   - bc
+
+**1. 整形运算**
+
+ expr 命令：只能做整数运算，格式比较古板，注意空格 
+
+```shell
+[root@localhost opt]# expr 1 + 2
+3
+[root@localhost opt]# expr 5 - 2
+3
+[root@localhost opt]# expr 5 * 2
+expr: syntax error
+[root@localhost opt]# expr 5 \* 2
+10
+[root@localhost opt]# expr 5 / 2
+2
+```
+
+ let命令：只能做整数运算，且运算元素必须是变量，无法直接对整数做运算 
+
+```shell
+[root@localhost opt]# let a=100+3;echo $a
+103
+[root@localhost opt]# let a=100-3;echo $a
+97
+[root@localhost opt]# let a=100*3;echo $a
+300
+[root@localhost opt]# let a=100/3;echo $a
+33
+[root@localhost opt]# let a=100%3;echo $a
+1
+[root@localhost opt]# let a=100**3;echo $a
+1000000
+```
+
+ 双小圆括号运算，在shell中(( ))也可以用来做数学运算 
+
+```shell
+[root@localhost opt]# echo $((100+3))
+103
+[root@localhost opt]# echo $((100-3))
+97
+[root@localhost opt]# echo $((100/3))
+33
+[root@localhost opt]# echo $((100*3))
+300
+```
+
+**2. 浮点运算**
+
+ 浮点运算是采用的命令组合的方式来实现的 echo “scale=N;表达式”|bc 
+
+```shell
+[root@localhost opt]# echo "scale=2;100+3"|bc
+103
+[root@localhost opt]# echo "scale=2;100-3"|bc
+97
+[root@localhost opt]# echo "scale=2;100/3"|bc
+33.33
+[root@localhost opt]# echo "scale=2;100*3"|bc
+300
+```
+
+示例一：实现一个四则运算的计算器
+
+```shell
+[root@localhost opt]# cat calculator.sh
+#!/bin/bash
+echo "$1 $2 $3"|bc
+
+[root@localhost opt]# sh calculator.sh 1+2+3
+6
+```
+
+示例二：内存使用率统计，要求打印内存使用率
+
+案例思考：
+
+- 内存总量 获得方式是什么 free top /proc/meminfo
+- 内存使用量
+- 内存使用率公式 使用量/总量*100%
+
+```shell
+[root@localhost opt]# cat memory_use.sh
+#!/bin/bash
+
+# 获得内存总量
+memory_total=`free -m|grep -i "mem"|tr -s " "|cut -d " " -f2`
+# 获得内存适用量
+memory_use=`free -m|grep -i "mem"|tr -s " "|cut -d " " -f3`
+
+echo "内存使用率：`echo "scale=2;$memory_use*100/$memory_total"|bc`%"
+
+[root@localhost opt]# sh memory_use.sh
+内存使用率：10.55%
+```
+
+#### 9.8.3 比较运算
+
+ 计算机除了算术和赋值运算外，还有比较运算，比如说比较两个数的关系，比较两个字符串的关系【用户登录系统】等。
+
+**整形比比较运算**
+
+```shell
+# 运算符解释：
+
+# 精确比较
+	-eq   # 等于 equal
+
+	-gt   # 大于
+
+	-lt   # 小于
+
+# 模糊比较
+	-ge   # 大于或等于
+
+	-le   # 小于或等于
+
+	-ne   # 不等于
+```
+
+ 通过test命令比较两个整数关系
+
+```shell
+[root@localhost opt]# test 100 -gt 300;echo $?
+1
+[root@localhost opt]# test 100 -lt 300;echo $?
+0
+[root@localhost opt]# test 100 -eq 300;echo $?
+1
+[root@localhost opt]# test 100 -ge 300;echo $?
+1
+[root@localhost opt]# test 100 -le 300;echo $?
+0
+[root@localhost opt]# test 100 -ne 300;echo $?
+0
+# 备注：linux命令test只能比较两个整数的关系，不会返回结果，需要通过$?才能看到结果
+```
+
+示例一：写一个脚本实现对两个整数关系的判断
+
+```shell
+[root@localhost opt]# cat yunsuan.sh
+#!/bin/bash
+
+if [ $1 -gt $2 ];then
+  echo "$1 > $2 "
+elif [ $1 -eq $2 ];then
+  echo "$1 = $2"
+else
+  echo "$1 < $2"
+fi
+[root@localhost opt]# sh yunsuan.sh 3 6
+3 < 6
+[root@localhost opt]# sh yunsuan.sh 7 6
+7 > 6
+```
+
+示例二：判断两个浮点数的关系
+
+> 默认情况下shell是不能判断浮点的，那么在linux中又避免不了需要进行浮点运算，那怎么解决
+> 解决思路如下：
+> 1）两个数据同时放大到整数倍
+> 2）处理掉小数点位，保留整数位
+> 3）进行整形判断
+
+```shell
+#!/bin/bash
+# 
+#Author: www.zutuanxue.com
+#
+#Release: 
+#Description:判断两位小数点的关系
+
+#1、交互或者外传参的方式获得两个整数
+#$1 $2
+[ $# -lt 2 ]&&echo "need two args"&&exit 1
+
+#采用外传参的方式接收数据并放大100倍,并处理为整数
+num1=`echo "scale=2;$1*100"|bc|cut -d "." -f1`
+num2=`echo "scale=2;$2*100"|bc|cut -d "." -f1`
+
+#2、比较运算
+if [ $num1 -gt $num2 ];then
+   #3、输出结果
+   echo "$1 > $2"
+elif [ $num1 -lt $num2 ];then
+   echo "$1 < $2"
+else
+   echo "$1 = $2"
+fi
+[root@localhost opt]# sh yunsuan2.sh 2.5 6.2
+2.5 < 6.2
+[root@localhost opt]# sh yunsuan2.sh 2.5 0
+2.5 > 0
+[root@localhost opt]# sh yunsuan2.sh 3
+need two args
+```
+
+**字符串比较运算**
+
+```shell
+# 运算符解释，注意字符串一定别忘了使用引号引起来
+  ==   # 等于   
+  !=   # 不等于
+  -n   # 检查字符串的长度是否大于0  
+  -z   # 检查字符串的长度是否为0
+```
+
+```shell
+[root@localhost opt]# test 'root' == 'root';echo $?
+0
+[root@localhost opt]# test 'root' == 'roo1t';echo $?
+1
+[root@localhost opt]# test 'root' != 'roo1t';echo $?
+0
+[root@localhost opt]# test -n "$a";echo $?
+0
+[root@localhost opt]# test -z "$a";echo $?
+1
+```
+
+示例： 模拟一个linux文本界面登陆程序，要求账号密码验证成功进入系统，账号密码验证失败退回登陆界面
+
+```shell
+[root@localhost opt]# cat login1.sh
+#!/bin/bash
+default_account='root'
+default_pw='123456'
+
+#1、清屏
+clear
+#2、输出提示信息
+echo "CentOS Linux 7 (Core)"
+echo -e "Kernel `uname -r` on an `uname -m`\n"
+
+#3、交互输入登陆名
+echo -n "$HOSTNAME login: "
+read account
+
+#4、交互输入密码
+read -s -t30 -p "Password: " pw
+
+#5、判断用户输入是否正确
+if [ "$default_account" == "$account" ] && [ "$default_pw" == "$pw" ];then
+   clear
+   echo -e "\nwelcome to root"
+else
+   echo  "用户名或密码错误..."
+   #输入错误，再次调用本脚本
+   sh $0
+fi
+```
+
+#### 9.8.4 逻辑运算
+
+完成一个任务中需要多个条件都满足或者多个条件中只要满足一个即可，那么这就是我们的逻辑运算。
+通过多个条件判断结果，才能得出结论。
+
+**逻辑运算符**
+
+-  逻辑与运算 &&
+-  逻辑或运算 ||
+-  逻辑非运算 !
+
+> ```shell
+> # 逻辑运算注意事项：
+>     逻辑与 或 运算都需要两个或以上条件
+>     逻辑非运算只能一个条件。
+>     口诀:     逻辑与运算               真真为真 真假为假   假假为假
+>              逻辑或运算               真真为真 真假为真   假假为假
+>              逻辑非运算               非假为真   非真为假
+>              
+>              
+> # 逻辑与或的短路运算
+> # 逻辑与中靠前的条件中出现了假，后面的就不在判断了，因为已经是假的了
+> # 逻辑或中靠前的条件中出现了真，就不在往后判断了，结果已经为真了
+> ```
+
+示例：
+
+```shell
+[root@localhost opt]# cat login2.sh
+#!/bin/bash
+default_account='root'
+default_pw='123456'
 
 
+#1、清屏
+clear
+#2、输出提示信息
+echo "CentOS Linux 7 (Core)"
+echo -e "Kernel `uname -r` on an `uname -m`\n"
+
+#3、交互输入登陆名
+echo -n "$HOSTNAME login: "
+read account
+
+#4、交互输入密码
+read -s -t30 -n6 -p "Password: " pw
+
+#5、判断用户输入是否正确
+[ "$default_account" == "$account" ] && [ "$default_pw" == "$pw" ] && echo yew || echo no
+```
+
+**文件判断**
+
+linux的设计思路：一切皆文件，对文件系统的操作其实可以狭隘的理解为对文件的操作。如果希望对文件类型和权限或者两个文件做新旧或者是否同一个文件进行判断。 
+
+命令功能：检测文件类型和比较运算
+
+命令用法： test [命令选项] 表达式
+
+命令选项：
+
+```shell
+-d   # 检查文件是否存在且为目录
+-e   # 检查文件是否存在
+-f   # 检查文件是否存在且为文件
+-r   # 检查文件是否存在且可读
+-s   # 检查文件是否存在且不为空
+-w   # 检查文件是否存在且可写
+-x   # 检查文件是否存在且可执行
+-O   # 检查文件是否存在并且被当前用户拥有
+-G   # 检查文件是否存在并且默认组为当前用户组
+-nt  # file1 -nt file2  检查file1是否比file2新
+-ot  # file1 -ot file2  检查file1是否比file2旧     
+-ef  # file1 -ef file2  检查file1是否与file2是同一个文件，判定依据的是i节点
+
+# 以上只列出部分命令选项，详细的可以通过:man test获得。
+```
+
+示例：
+
+```shell
+[root@localhost opt]# test -f /etc/;echo $?
+1
+[root@localhost opt]# test -f /etc/passwd;echo $?
+0
+[root@localhost opt]# test -d /etc/;echo $?
+0
+[joker@localhost ~]$ test -w /etc/passwd;echo $?
+1
+[root@localhost opt]# test -w /etc/passwd; echo $?
+0
+```
+
+### 9.9 shell数组详解
+
+数组可以让用户一次赋予多个值，需要读取数据时只需通过索引调用就可以方便读出了。
+
+普通数组：只能使用整数作为数组索引(元素的索引)
+关联数组：可以使用字符串作为数组索引(元素的索引)
+
+#### 9.9.1 普通数组
+
+**数组定义**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+
+> 数组名称=(元素1 元素2 元素3 ...)
+
+**数组赋值方式**
+
+- 一次附一个值
+
+```powershell
+变量名=变量值
+array[0]=v1
+array[1]=v2
+array[3]=v3
+```
+
+- 一次赋多个值
+
+```powershell
+array=(var1 var2 var3 var4)
+array1=(`cat /etc/passwd`)			# 将文件中每一行赋值给array1数组
+array2=(`ls /root`)
+array3=(harry amy jack "Miss zhang")
+array4=(1 2 3 4 "hello world" [10]=linux
+```
+
+**数组取值**
+
+取值方式: 
+
+> ${数组名称[索引]} 
+
+示例：
+
+```powershell
+${array[i]}  # i表示元素的索引
+使用@ 或 * 可以获取数组中的所有元素：
+echo ${array[0]}		# 获取第一个元素
+echo ${array[*]}		# 获取数组里的所有元素
+echo ${#array[*]}		# 获取数组里所有元素个数
+echo ${!array[@]}    	# 获取数组元素的索引索引
+echo ${array[@]:1:2}    # 访问指定的元素；1代表从索引为1的元素开始获取；2代表获取后面几个元素
+```
+
+```powershell
+[root@localhost ~]# sh array.sh
+var4
+root:x:0:0:root:/root:/bin/bash
+anaconda-ks.cfg
+Miss zhang
+linux
+[root@localhost ~]# cat array.sh
+#!/bin/bash
+
+array=(var1 var2 var3 var4)
+array1=(`cat /etc/passwd`)
+array2=(`ls /root`)
+array3=(harry amy jack "Miss zhang")
+array4=(1 2 3 4 "hello world" [10]=linux)
+
+echo ${array[3]}
+echo ${array1[0]}
+echo ${array2[0]}
+echo ${array3[3]}
+echo ${array4[10]}
+
+```
+
+#### 9.9.2 关联数组
+
+**1. 定义管理数组**
+
+ 关联数组使用首先需要申明该数组为关联数组，申明方式： <font color="red">declare -A 数组名称 </font>
+
+```powershell
+# 首先声明关联数组
+declare -A asso_array1
+declare -A asso_array2
+declare -A asso_array3
+```
+
+**2. 关联数组赋值**
+
+- 一次赋一个值
+
+```powershell
+# 数组名[索引]=变量值
+[root@localhost opt]# asso_array1[linux]=one
+[root@localhost opt]# asso_array1[java]=two
+[root@localhost opt]# asso_array1[php]=three
+```
+
+- 一次附多个值
+
+```powershell
+[root@localhost opt]# asso_array2=([name1]=harry [name2]=jack [name3]=amy [name4]="Miss zhang")
+```
+
+- 查看关联数组
+
+```powershell
+[root@localhost opt]# declare -A
+declare -A asso_array1='([php]="three" [java]="two" [linux]="one" )'
+declare -A asso_array2='([name3]="amy" [name2]="jack" [name1]="harry" [name4]="Miss zhang" )'
+```
+
+示例：
+
+```shell
+[root@localhost ~]# cat array2.sh
+#!/bin/bash
+
+declare -A asso_array1
+declare -A asso_array2
+
+asso_array1[linux]=one
+asso_array1[java]=two
+asso_array1[php]=three
+
+asso_array2=([name1]=harry [name2]=jack [name3]=amy [name4]="Miss zhang")
+
+echo ${asso_array1[linux]}	# 取索引linux的值
+echo ${asso_array1[php]}	# 取索引php的值
+echo ${asso_array1[*]}		# 取array1所有的值
+echo ${!asso_array1[*]}		# 取array1所有的索引
+echo ${#asso_array1[*]}		# 取array1的数量
+echo ${#asso_array2[*]}		# 取array2的数量
+echo ${!asso_array2[*]}		# 取array2所有的索引
+
+[root@localhost ~]# sh array2.sh
+one
+three
+three two one
+php java linux
+3
+4
+
+```
+
+### 9.10 shell流程判断
+
+#### 9.10.1 if介绍
+
+如何写一个高可用性的脚本，赋予脚本智能化，赋予脚本执行逻辑。
+
+比如：nginx安装脚本中
+
+- configure执行成功在执行make,
+- make执行成功在执行make install
+- 上一步错误就不需要执行后面的代码了。
+
+answer: 加入判断
+
+只要你想在代码中判断一下的时候就第一时间想到if就行了，适用于99%的语言。
+
+当我们在写程序的时候，时常对上一步执行是否成功如何判断苦恼，当我们今天学习了if就可以解决你的苦恼。if语句在我们程序中就是用来做判断的，以后大家不管学习什么语言，以后只要涉及到判断的部分，大家就可以直接拿if来使用，不同的语言之间的if只是语法不同，原理是相同的。
+
+**1. 单if语法**
+
+ 适用范围：只需要一步判断，条件返回真干什么。 
+
+> ```powershell
+> # 格式
+> if [ condition ]           condition 值为 true or false
+>    then                    条件为真的时候执行
+>       commands             代码块 一行或者多行代码
+> fi			   			   语句的结束
+> 
+> 注：格式非常重要，条件判断一定要注意前后空格
+> ```
+
+  ![流程判断11.png](J:\homework\Linux学习笔记\Linux学习笔记.assets\1601016825298.png) 
+
+示例：
+
+```powershell
+[joker@localhost opt]$ sh if-1.sh
+ERROR: need to be root so that!
+[joker@localhost opt]$ cat if-1.sh
+#!/bin/bash
+
+if [ $USER != "root" ]
+    then
+        echo "ERROR: need to be root so that!"
+   
+```
+
+**2. if...else语句**
+
+ 适用范围：两步判断，条件为真干什么，条件为假干什么。 
+
+> ```powershell
+> if [ condition ]     
+>      then           		条件为真
+>           commands1     	真  要执行代码块
+> else                		条件为假
+>           commands2     	假   要执行的代码块
+> fi  
+> ```
+
+  ![流程判断2.png](J:\homework\Linux学习笔记\Linux学习笔记.assets\1601016994805.png) 
+
+示例：
+
+```powershell
+[root@localhost opt]# sh if-2.sh
+hey admin
+[root@localhost opt]# cat if-2.sh
+#!/bin/bash
+
+if [ $USER == "root" ]
+    then
+        echo "hey admin"
+else
+        echo "hey guest"
+fi
+
+```
+
+**3. if...elif...else语句**
+
+ 适用范围：多于两个以上的判断结果，也就是多于一个以上的判断条件。 
+
+> ```powershell
+> if [ condition 1]     满足第一个条件
+>      then          	  真
+>             command1  执行command1代码块
+> elif [ condition 2]   满足第二个条件
+>      then             真
+>             commands2 执行command2代码块
+>   .......
+> else      			  如果条件都不满足
+>             commandsX 执行commandX代码块
+> fi 					   结束判断
+> ```
+
+  ![流程判断3.png](J:\homework\Linux学习笔记\Linux学习笔记.assets\1601017300715.png) 
+
+案例需求：
+判断内存的使用率
+60以下 ok
+60以上 黄色警告
+70以上 橙色严重警告
+80以上 红色警告 
+
+```powershell
+[root@localhost opt]# cat if-3.sh
+#!bin/bash
+if [ $1 -gt 80 ]
+then
+    echo -e "\033[31m 警告 \033[0m"
+elif [ $1 -gt 70 ]
+then
+    echo -e "\033[35m 警告 \033[0m"
+elif [ $1 -gt 60  ]
+then
+    echo -e "\033[33m 警告 \033[0m"
+else
+    echo -e "\033[32m 警告 \033[0m"
+fi
+```
+
+#### 9.10.2 if语句与shell运算
+
+**1. 与文件是否存在的运算**
+
+```powershell
+-e	 # 是否存在，不管是文件还是目录，只要存在，条件就成立
+-f	 # 是否为普通文件
+-d	 # 是否为目录
+-S	 # socket
+-p	 # pipe
+-c	 # character
+-b	 # block
+-L	 # 软link
+```
+
+- 文件权限相关的判断
+
+```powershell
+-r	 # 当前用户对其是否可读
+-w	 # 当前用户对其是否可写
+-x	 # 当前用户对其是否可执行
+-u	 # 是否有suid
+-g	 # 是否sgid
+-k	 # 是否有t位
+```
+
+- 两个文件的比较判断
+
+```shell
+file1 -nt  file2	# 比较file1是否比file2新	
+file1 -ot  file2 	# 比较file1是否比file2旧
+file1 -ef  file2	# 比较是否为同一个文件，或者用于判断硬连接，是否指向同一个inode
+```
+
+- 整数之间的判断
+
+```powershell
+-eq	 # 相等
+-ne	 # 不等
+-gt	 # 大于
+-lt	 # 小于
+-ge  # 大于等于
+-le	 # 小于等于
+
+# 浮点比较运算
+比较两个浮点数字的大小
+给脚本两个浮点数字，返回他俩的关系
+
+# 浮点比较思路
+1、获得两个浮点数字
+2、处理为整形
+3、比较
+4、输出
+```
+
+- 字符之间的判断
+
+```powershell
+-z  					# 是否为空字符串   	 字符串长度为0，就成立
+-n  					# 是否为非空字符串    	只要字符串非空，就是成立
+string1 == string2 		# 是否相等
+string1 != string2 		# 不等
+```
+
+示例：字符之间的判断
+
+```powershell
+[root@localhost opt]# cat if-5.sh
+#!/bin/bash
+
+read -p "username: " myuser
+read -p "password: " mypass
+
+if [ -z "$myuser" ];then
+    echo "用户名不能为空"
+    exit 1
+
+elif [ -n "$mypass" ];then
+    if [ $myuser == "root" ] && [ $mypass == "123456" ];then
+        echo "welcome $root"
+    else
+        echo "用户名或密码错误"
+        exit 1
+    fi
+else
+    echo "密码不能为空"
+    exit 1
+fi
+```
+
+#### 9.10.3 if高级用法
+
+**1. 条件符号使用双圆括号，可以在条件中植入数学表达式 if (())**
+
+```shell
+[root@localhost opt]# cat if-6.sh
+#!/bin/bash
+
+if (( (5+5)*5/5+10 > 10 ));then
+    echo "yes"
+else
+    echo "no"
+fi
+```
+
+**2. 使用双方括号,可以在条件中使用通配符**
+
+ 通过代码看下 ，为字符串提供高级功能，模式匹配 r* 匹配r开头的字符串 
+
+```powershell
+[root@localhost opt]# cat if-7.sh
+#!/bin/bash
+
+for var in ab ac bc aa dd ee
+    do
+        if [[ $var == a* ]];then
+            echo "$var"
+        fi
+done
+```
+
+#### 9.10.4 if简写
+
+省去了关键字，条件为真采用<font color="red">&& </font>符号链接命令块，条件为假采用<font color="red">||</font>链接命令块
+
+简写if一般用在简单的判断中
+
+```powershell
+[root@localhost opt]# cat if-8.sh
+#!/bin/bash
+
+#if [ ! -d /tmp/joker ];then
+#    mkdir /tmp/joker
+#fi
+
+简写
+[ ! -d /tmp/joker ] && mkdir /tmp/joker
+
+#if [ $USER == "root" ];then
+#    echo "hello $USER"
+#else
+#    echo "hello guest"
+#fi
+
+简写
+[ $USER == "root" ] && echo "hello $USER" || echo "hello guest"
+```
+
+### 9.11 shell流程控制-for
+
+#### 9.11.1 for介绍
+
+脚本在执行任务的时候，总会遇到需要循环执行的时候，比如说我们需要脚本每隔五分钟执行一次ping的操作，除了计划任务，我们还可以使用脚本来完成，那么我们就用到了循环语句。 
+
+**1. for基本语法**
+
+列表for循环：用于将一组命令执行已知的次数，下面给出了for循环语句的基本格式：
+
+```powershell
+for variable_name in {list}
+     do
+          command 
+          command
+          …
+     done
+或者
+for variable in a b c
+     do
+         command
+         command
+         -
+     done
+```
+
+**2. for条件应用**
+
+ for条件不同的赋值方式 
+
+```powershell
+# 1.赋值来自一个范围
+for var in {1..10}
+do 
+	echo $var
+done
+
+# 2.直接赋值
+for var in 1 2 3 4 5
+do 
+	echo $var
+done
+
+# 3.赋值来自命令
+for var in `seq  10`
+do 
+	echo $var
+done
+```
+
+示例：
+
+```powershell
+[root@localhost opt]# cat for-1.sh
+#!/bin/bash
+
+# 1.从1-10正序循环
+for var in $(seq 10)
+do
+    echo $var
+done
+
+# 2.从1-10，步长为2循环
+for var in {1..10..2}
+do
+    echo $var
+done
+
+# 3.从10-1倒叙循环
+for var in {10..1}
+do
+    echo $var
+done
+
+# 4..从10-1倒叙，步长为2循环
+for var in {10..1..2}
+do
+    echo $var
+done
+
+# 5.从10-1倒叙，步长为3循环
+for var in `seq 10 -3 1`
+    do
+            echo $var
+done
+```
+
+**3. 不带列表循环**
+
+ 不带列表的for循环执行时由<font color="red">用户指定参数和参数的个数</font>，下面给出了不带列表的for循环的基本格式： 
+
+```powershell
+[root@localhost opt]# cat for-2.sh
+#!/bin/bash
+
+for var in $inter
+do
+    echo $var
+done
+
+echo "脚本后面有$#个参数"
+```
+
+**4. for C语言格式**
+
+**1. 类C风格的for循环**
+
+expr1：定义变量并赋初值   变量初始值 
+
+expr2：决定是否进行循环（条件）  变量的条件 
+
+expr3：决定循环变量如何改变,决定循环什么时候退出 自增或自减运算 
+
+```powershell
+[root@localhost opt]# cat for-3.sh
+#!/bin/bash
+for ((i=1;i<=10;i++));do
+    echo $i
+done
+
+```
+
+多变量用法
+
+```powershell
+[root@localhost opt]# cat for-3.sh
+#!/bin/bash
+for ((A=1,B=10;A<B,B>A;A++,B--));do
+    echo $A
+    echo $B
+done
+
+```
+
+#### 9.11.2 循环控制
+
+**1. bread语句**
+
+作用：跳出当前循环，执行后续的代码
+
+示例： 循环打印输出数字1到9，当执行输出到5时终止循环。 
+
+```powershell
+[root@localhost opt]# cat for-4.sh
+#!/bin/bash
+
+for var in $(seq 10);do
+    echo $var
+    if [ $var -eq 5 ];then
+        break
+    fi
+done
+echo "执行完毕"
+```
+
+**2. continue语句**
+
+作用： 结束本次循环，继续执行下一次循环
+
+示例： 循环打印输出数字1到9，当执行输出到5时跳过本次循环。 
+
+```powershell
+[root@localhost opt]# cat for-5.sh
+#!/bin/bash
+
+for var in `seq 10`;do
+    if [ $var -eq 5 ];then
+        continue
+    fi
+        echo $var
+done
+echo "执行完成"
+```
+
+**3. sleep语句**
+
+ 作用： 外部传参到循环时，参数管理命令 ，使位置参数向左移动，默认移动1位，可以使用shift 2 传参要是N的整数倍。
+
+示例：通过外部传参的方式向脚本内的循环传递参数，要求打印每次循环使用的参数。
+
+```powershell
+[root@localhost opt]# cat for-6.sh
+#!/bin/bash
+
+# 1.判断外传参的数量
+[ $# -lt 3 ] && echo "最少输入三个参数" $0 "$1 $2 $3.." && exit 1
+count=$#
+
+# 2.通过shift左移参数输出
+# 3.使位置参数向左移动，默认移动1位，可以使用shift 2 传参要是N的整数倍
+for (( i=1;i<=$count;i++ ));do
+    echo "参数数量$#"
+    echo "当前$1的数值是: $1"
+    shift 2
+    sleep 1
+done
+echo "执行完毕"
+```
+
+**4. 脚本退出命令**
+
+ 作用：退出程序并释放占用的系统资源 
+
+示例： 循环输出数字1-9，当循环到5时退出脚本。 
+
+```powershell
+[root@localhost opt]# cat for-7.sh
+#!/bin/bash
+for i in `seq 1 9`;do
+    echo $i
+    if [ $i -eq 5 ];then
+        exit 1
+    fi
+done
+```
+
+#### 9.11.3 for嵌套
+
+**1. for嵌套if **
+
+示例： 输出1-9，当输出5时停止输出 
+
+```pow
+[root@localhost opt]# cat for-8.sh
+#!/bin/bash
+
+for ((i=1;i<=10;i++));do
+    echo $i
+    [ $i -eq 5 ] && break
+done
+
+```
+
+**2.  for嵌套for** 
+
+示例： 打印99乘法表 
+
+```powershell
+[root@localhost opt]# cat for-9.sh
+#!/bin/bash
+for ((a=1;a<=9;a++));do
+    for ((b=1;b<=$a;b++));do
+        echo -e -n "$b*$a=$(($a*$b))\t"
+    done
+    echo
+done
+
+```
+
+#### 9.11.4 for与数组
+
+示例： 使用for循环遍历读出数组 
+
+```powershell
+[root@localhost opt]# cat for-10.sh
+#!/bin/bash
+name=('tom' 'jarry' 'harry' 'barry')
+for i in 0 1 2 3
+  do
+      echo ${name[$i]}
+ done
+
+```
+
+示例：使用for循环进行数组存值 
+
+```shell
+[root@localhost opt]# cat for-11.sh
+#!/bin/bash
+
+for i in `seq 1 10`;do
+    read -p "name: " name[$i]
+done
+
+```
+
+### 9.12 shell流程控制-while
+
+#### 9.12.1 while介绍
+
+**特点：**条件为真就进入循环；条件为假就退出循环，一般应用在未知循环次数的环境。 
+
+**1. 基本语法**
+
+```powershell
+while [ 表达式 ]
+	do
+		command...
+	done
+	
+while  [ 1 -eq 1 ] 或者 (( 1 > 2 ))
+  do
+     command
+     command
+     ...
+ done
+```
+
+示例： 使用for循环和while循环分别循环打印数组1-5 
+
+```powershell
+#!/bin/bash
+
+# 1.for循环
+for i in $(seq 1 5);do
+    echo $i
+done
+
+# 2.while循环
+num=1
+while [ $num -le 5 ];do
+    echo $num
+    let num++
+done
+
+```
+
+**备注：** 知道循环次数就可以用for，比如说一天需要循环24次；如果不知道代码要循环多少次，那就用while，比如我们作业中要求写的猜数字，每个人猜对一个数字的次数都是不能固定的，也是未知的。 
+
+#### 9.12.2 while与shell运算
+
+**1. 比较运算**
+
+示例：循环交互输入一个小写字母，按Q退出循环
+
+```powershell
+[root@localhost opt]# cat for-13.sh
+#!/bin/bash
+
+read -p "输入一个小写字母，按Q退出：" chose
+while [ $chose !=  "Q" ];do
+    echo "你输入的是：$chose"
+    read -p "输入一个小写字母，按Q退出：" chose
+done
+
+```
+
+**2. 逻辑运算**
+
+示例： 使用循环语句帮助丈母娘批量选择女婿
+
+```powershell
+[root@localhost opt]# cat for-14.sh
+#!/bin/bash
+read -p "多少钱：" money
+read -p "几辆车：" car
+read -p "几套房：" house
+
+while [[ $money -lt 10000 || $car -lt 2 || $house -lt 2 ]];do
+    echo "下一个"
+    read -p "多少钱：" money
+    read -p "几辆车：" car
+    read -p "几套房：" house
+done
+echo "搞定！
+```
+
+**3. 文件类型判断**
+
+示例： 使用循环判断/tmp/xxx目录下的文件，如果不是文件类型的打印字符串"目录" 
+
+```powershell
+[root@localhost opt]# cat for-15.sh
+#!/bin/bash
+while [ ! -f /tmp/abc ];do
+    echo "目录不存在"
+    sleep 1
+done
+
+```
+
+**4. 特殊条件**
+
+ while语句中可以使用特殊条件来进行循环 ：
+
+- 符号":" 条件代表真，适用与无限循环
+- 字符串 “true” 条件代表真，适用与无限循环
+- 字符串 "false"条件代表假
+
+```powershell
+[root@localhost opt]# cat while-4.sh
+#!/bin/bash
+
+# 1. 符号":" 条件代表真，适用与无限循环
+while :;do
+    echo haha
+    sleep 1
+done
+
+# 2.字符串 “true” 条件代表真，适用与无限循环
+while true;do
+    echo haha
+    sleep 1
+done
+
+# 3.字符串 "false"条件代表假
+
+while 为 false 字符串代表假，在while中不会开始循环
+```
+
+#### 9.12.3 while与循环控制语句
+
+**1. sleep语句**
+
+```powershell
+[root@localhost opt]# cat while-5.sh
+#!/bin/bash
+time=9
+
+while [ $time -ge 0 ];do
+     echo -n -e  "\b$time"
+     let time--
+     sleep 1
+done
+
+```
+
+**2. break语句**
+
+```powershell
+[root@localhost opt]# cat while-6.sh
+#!/bin/bash
+
+num=1
+
+while [ $num -lt 10 ];do
+    echo $num
+    if [ $num -eq 5 ];then
+        break
+    fi
+    let num++
+done
+
+```
+
+**3. continue语句**
+
+```powershell
+[root@localhost opt]# cat while-7.sh
+#!/bin/bash
+
+num=0
+while [ $num -lt 9 ];do
+    let num++
+    if [ $num -eq 5 ];then
+        continue
+    fi
+    echo $num
+done
+
+```
+
+#### 9.12.4 while嵌套其他语句
+
+**1. while嵌套if**
+
+```powershell
+[root@localhost opt]# cat while-8.sh
+#!/bin/bash
+
+num=1
+
+while [ $num -lt 10 ];do
+    echo $num
+    if [ $num -eq 5 ];then
+        break
+    fi
+    let num++
+done
+
+```
+
+**2. while嵌套for**
+
+```powershell
+[root@localhost opt]# cat while-9.sh
+#!/bin/bash
+
+A=1
+
+while [ $A -lt 10 ];do
+    for ((b=1;b<=$A;b++));do
+        echo -n -e "$b*$A=$((A*b)) \t"
+    done
+    echo
+    let A++
+done
+
+```
+
+**3.while嵌套while**
+
+```powershell
+[root@localhost opt]# cat while-10.sh
+#!/bin/bash
+a=1
+while [ $a -lt 10 ];do
+    b=1
+    while [ $b -le $a ];do
+        echo -n -e "$a*$b=$((a*b)) \t"
+        let b++
+    done
+    echo
+    let a++
+done
+
+```
+
+### 9.13 shell流程控制-untile
+
+系统中还有一个类似while的循环语句，不同于while的是，当条件为假时开始until循环。 
+
+特点：条件为假就进入循环，条件为真就退出循环 。
+
+```powershell
+until expression   [ 1 -eq 1 ]  (( 1 >= 1 ))
+	do
+		command
+		command
+		...
+	done
+```
+
+示例：使用while循环和until循环打印数字接龙，要求while循环输出1-5，until循环输出6-9。
+
+```powershell
+[root@localhost opt]# cat while-11.sh
+#!/bin/bash
+a=1
+while [ $a -le 5 ];do
+    echo $a
+    let a++
+    until [ $a -le 5 ];do
+        echo $a
+    let a++
+    [ $a -eq 10 ] && break
+    done
+done
+
+```
+
+### 9.14 shell流程控制-case
+
+#### 9.14.1 case介绍
+
+在生产环境中，我们总会遇到一个问题需要根据不同的状况来执行不同的预案，那么我们要处理这样的问题就要首先根据可能出现的情况写出对应预案，根据出现的情况来加载不同的预案。 
+
+特点：根据给予的不同条件执行不同的代码块 
+
+```powershell
+比如你去相亲：你会在脑子里出现以下的预案：
+第一眼看到对方父亲，你应该说：伯父好
+第一眼看到对方母亲，你应该说：伯母好
+第一眼看到对方奶奶，你应该说：奶奶好
+。。。。
 
 
+而这个例子中触发就是你第一眼看到了对方的谁，预案则是叫什么称呼。
+
+再来说一个计算机的相关例子---监控内存使用率
+内存使用率低于80%，脚本输出： 绿色字体的 Memory use xx%
+内存使用率大于80%小于90%，脚本输出： 黄色字体的 Memory use xx%
+内存使用大于90%，脚本输出： 红色字体的 Memory use xx%
+```
+
+```powershell
+# 语法
+case $var in             定义变量;var代表是变量名
+pattern 1)               模式1;用 | 分割多个模式，相当于or
+    command1             需要执行的语句
+    ;;                   两个分号代表命令结束
+pattern 2)
+    command2
+    ;;
+pattern 3)
+    command3
+    ;;
+		  *)              default，不满足以上模式，默认执行*)下面的语句
+    command4
+    ;;
+esac							esac表示case语句结束
+```
+
+示例：nginx启动脚本
+
+```powershell
+#!/bin/bash
+
+# 1.variables
+nginx_install_doc=/usr/local/nginx
+proc=nginx
+nginxd=$nginx_install_doc/sbin/nginx
+pid_file=$nginx_install_doc/logs/nginx.pid
+
+# 2.source function library
+if [ -f /etc/init.d/functions ];then
+    . /etc/init.d/functions
+else
+    echo "not found file /etc/init.d/functions"
+    exit
+fi
+
+# 3.determine whether pid exists
+if [ -f $pid_file ];then
+    nginx_process_id=`cat $pid_file`
+    nginx_process_num=`ps aux |grep $nginx_process_id |grep -v "grep" |wc -l`
+fi
+
+# 4.function_start
+function start {
+    # 如果nginx没有启动，直接移动，否则报已启动
+    if [ -f $pid_file ] && [ $nginx_process_num -ge 1 ];then
+        echo "nginx running......"
+    # 如果pid文件存在，但是没有进程，说明上一次非法关闭了nginx,造成pid文件没有自动删除,所以启动nginx之前先删除旧的pid文件
+    else
+        if [[ -f $pid_file && $nginx_process_num -lt 1 ]];then
+            rm -rf $pid_file
+            # 两种方法执行命令，返回执行结果：
+            # 1.daemon
+            # 2.action
+
+            # echo "nginx start `deamon $nginxd`"
+            action "nginx start" $nginxd
+        fi
+        # echo "nginx start `deamon $nginxd`"
+         action "nginx start" $nginxd
+    fi
+}
+
+# 5.function_stop
+function stop {
+    # 判断nginx启动的情况下才会执行关闭，如果没有启动直接报错，或者提示用户服务没启动
+    if [ -f $pid_file ] && [ $nginx_process_num -ge 1 ];then
+        action "nginx stop" killall -s QUIT $proc
+        rm -rf $pid_file
+    else
+        action "nginx stop" killall -a QUIT $proc 2>/dev/null
+    fi
+}
+
+# 6.function_restart
+function restart {
+    stop
+    sleep 1
+    start
+}
+
+# 7.function_reload
+function reload {
+    # 重载的目的是让主进程重新加载配置文件,但是前提是服务必须开启
+    # 这里先判断服务是否开启，开启就执行加载，没有开启直接报加载错误
+    if [[ -f $pid_file && $nginx_process_num -ge 1 ]];then
+        action "nginx reload" killall -s HUP $proc
+    else
+        action "nginx reload" killall -s HUP $proc 2>/dev/null
+    fi
+}
+
+# 8.status
+function status {
+    if [[ -f $pid_file && $nginx_process_num -ge 1 ]];then
+        echo "nginx running..."
+    else
+        echo "ningx stop"
+    fi
+}
+
+# 9.callable
+case $1 in
+start) start;;
+stop) stop;;
+restart) restart;;
+reload) reload;;
+status) status;;
+*) echo "USAGE: $0 start|stop|restart|reload|status";;
+esac
+
+```
+
+### 9.15 shell函数
+
+shell脚本中的代码是按照执行的优先级的顺序从上往下抒写的，代码量越大，在脚本调试的时候就越难排错，当因执行需要调整代码执行顺序的时候就需要不断的复制粘贴，或者删除部分代码来完成，这和从写一个脚本花费的时候相比甚至需要更长的时间。 
+
+代码量大后遇到的问题：
+
+- 单个脚本代码量大 （300-500行）
+- 阅读修改耗时费力
+- 排错困难
+- 改变执行顺序困难
+
+为了解决这些问题，我们可以把代码模块化，按需调用。
+
+#### 9.15.1 函数定义
+
+shell中允许将 **一组命令集合** 或 **语句** 形成一段 **可用代码** ，这些代码块称为shell函数。给这段代码起个名字称为函数名，后续可以直接调用该段代码的功能。
+
+将完成一个功能的一段代码进行命名、封装
+
+函数的优点：
+
+1. 代码模块化，调用方便，节省内存
+2. 代码模块化，代码量少，排错简单
+3. 代码模块化，可以改变代码的执行顺序
+
+**1. 函数的定义**
+
+```powershell
+语法一:
+
+函数名 () {
+    代码块
+    return N
+    }
 
 
+语法二：
+function 函数名 {
+      代码块
+      return N
+      }
+      
+      
+函数中return说明：
+1.return可以结束一个函数，类似于前面讲的循环控制语句break(结束当前循环，执行循环体后面的代码)
+2.return默认返回函数中最后一个命令的退出状态，也可以给定参数值，该参数值的范围是0-256之间。
+3.如果没有return命令，函数将返回最后一个Shell的退出值。
+```
 
+**2. 函数调用**
 
+- 当前命令行调用
 
+```powershell
+[root@localhost opt]# cat fun1.sh
+#!/bin/bash
+function hello {
+    echo "hello world $1"
+    hostname
+}
 
+menu(){
+cat <<-EOF
+1.mysql
+2.web
+3.app
+4.exit
+EOF
+}
 
+[root@localhost opt]# source fun1.sh
+[root@localhost opt]# . fun1.sh
+[root@localhost opt]# hello 6666
+hello world 6666
+localhost.localdomain
+[root@localhost opt]# menu
+1.mysql
+2.web
+3.app
+4.exit
+```
 
+- 定义到用户变量中
 
+```powershell
+/etc/profile	/etc/bashrc		~/.bash_profile 	~/.bashrc
+[root@localhost opt]# cat ~/.bashrc
+# .bashrc
 
+# User specific aliases and functions
 
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
 
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
 
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
 
+注意：
+当用户打开bash的时候会读取该文件
+```
 
+- 在脚本中调用
 
+```powershell
+[root@localhost opt]# cat while-12.sh
+#!/bin/bash
 
+source ./fun1.sh
+menu(){
+cat <<-END
+    h   显示命令帮助
+    f   显示磁盘分区
+    d   显示磁盘挂载
+    m   查看内存使用
+    u   查看系统负载
+    q   退出程序
+END
+}
+menu
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
 
 
 
@@ -10008,10 +16199,10 @@ Run 'docker COMMAND --help' for more information on a command.  #运行docker命
 安装xorg-x11-xauth
 
 ```python
-yum install xorg-x11-xauth
+yum install xorg-x11-xauth -y
 ```
 
-![image-20211009183345880](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009183345880.png)
+![image-20211009183345880](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009183345880.png)
 
 打了绿色的勾说明已经解决
 
@@ -10038,7 +16229,7 @@ sudo fuser -k 8001/tcp  # (8001需要填你的端口)
 
 启动docker报错，查看docker状态报错信息如下：
 
-![image-20211106101208350](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211106101208350.png)
+![image-20211106101208350](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211106101208350.png)
 
 解决方案：卸载docker重新安装新的docker
 
@@ -10066,4 +16257,40 @@ yum intall docker -y
 [root@localhost lib]# systemctl status docker
 ```
 
-![image-20211106101500854](G:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211106101500854.png)
+![image-20211106101500854](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211106101500854.png)
+
+#### 4. elink命令
+
+```shell
+elinks http://192.168.254.130  --dump
+```
+
+#### 5.linux没有ip地址
+
+```shell
+# 确认ONBOOT是否开启
+cd /etc/sysconfig/network-scripts
+vi ifcfg-ens33
+```
+
+#### 6.vim设置缩进4格
+
+```shell
+vim /etc/vimsrc
+
+set tabstop=4  # 表示一个 tab 显示出来是多少个空格的长度，默认 8
+set softtabstop=4  # 表示在编辑模式的时候按退格键的时候退回缩进的长度，当使用 expandtab 时特别有用
+set shiftwidth=4  # 表示每一级缩进的长度，一般设置成跟 softtabstop 一样
+set noexpandtab / expandtab  # 当设置成 expandtab 时，缩进用空格来表示，noexpandtab 则是用制表符表示一个缩进
+```
+
+#### 7.以不安全的方式连接keepalived
+
+```shell
+# 1.先安装下边的包
+[root@localhost src]# yum install ca-certificates -y
+
+# 2.然后再获取tar包
+[root@localhost src]# wget http://www.keepalived.org/software/keepalived-2.0.8.tar.gz -P /usr/src/
+```
+

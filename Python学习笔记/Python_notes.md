@@ -117,7 +117,7 @@
 
 - 4.安装,勾选 Add Python 3.3 to PATH.
 
-![img](https://pythonav.com/media/uploads/2019/02/21/1548322161259.png)
+<img src="https://pythonav.com/media/uploads/2019/02/21/1548322161259.png" alt="img" style="zoom:50%;" />
 
 - 5.下一步
 
@@ -133,18 +133,18 @@
 
 - 8.进行验证,打开终端,输入python,进入到交互模式,说明安装成功
 
-![1639016562219](J:\homework\Python学习笔记\Python_notes.assets\1639016562219.png)
+![1639296246484](J:\homework\Python学习笔记\Python_notes.assets\1639296246484.png)
 
 #### 2.3.2 开发工具安装
 
 - 下载`Pycharm`
-  - 1.官网:`<http://www.jetbrains.com/pycharm/download/#section=windows>`,选择专业版下载![img](https://pythonav.com/media/uploads/2019/02/21/1548323345533.png)
-- 2.双击安装,一路下一步,显示下图为成功![img](https://pythonav.com/media/uploads/2019/02/21/1548324124987.png)
-- 3.首次使用![img](https://pythonav.com/media/uploads/2019/02/21/1548326046866.png)
-- 4.用户许可选择Accept![img](https://pythonav.com/media/uploads/2019/02/21/1548326092371.png)
+  - 1.官网:`<http://www.jetbrains.com/pycharm/download/#section=windows>`,选择专业版下载<img src="J:\homework\Python学习笔记\Python_notes.assets\1548323345533.png" alt="img" style="zoom:50%;" />
+- 2.双击安装,一路下一步,显示下图为成功<img src="J:\homework\Python学习笔记\Python_notes.assets\1548324124987.png" alt="img" style="zoom:50%;" />
+- 3.首次使用![img](J:\homework\Python学习笔记\Python_notes.assets\1548326046866.png)
+- 4.用户许可选择Accept![img](J:\homework\Python学习笔记\Python_notes.assets\1548326092371.png)
 - 5.激活`Pycharm`
-  - 激活详情`<http://idea.lanyus.com/>`页面![img](https://pythonav.com/media/uploads/2019/02/21/1548326302535.png)
-- 6.启动成功![img](https://pythonav.com/media/uploads/2019/02/21/1548326451573.png)
+  - 激活详情`<http://idea.lanyus.com/>`页面![img](J:\homework\Python学习笔记\Python_notes.assets\1548326302535.png)
+- 6.启动成功![img](J:\homework\Python学习笔记\Python_notes.assets\1548326451573.png)
 
 ### 2.4 编码基础
 
@@ -4119,10 +4119,6 @@ print(v3, id(v3))  # [44, 55, 300] 2541783994312
 v4 = func(400)
 print(v4, id(v4))  # [11, 22, 100, 200, 400] 2541783991624
 ```
-
-
-
-
 
 ### 6.4 返回值
 
@@ -27285,14 +27281,14 @@ jquery的$.ajax()方法 是做ajax技术经常使用的一个方法。
 
 django请求生命周期：
 
- ![202011130830231.png](J:\homework\Python学习笔记\Python_notes.assets\202011130830231.png) 
+ <img src="J:\homework\Python学习笔记\Python_notes.assets\202011130830231.png" alt="202011130830231.png"  /> 
 
 1. wsgi，他就是socket服务端，用于接收用户请求并将请求进行初次封装，然后将请求交给web框架
 2. 中间件，帮助我们对请求进行校验或在请求对象中添加其他相关数据，例如：csrf
 3. 路由匹配，进行分发，分发给对应的视图
 4. 视图函数，在视图函数中进行业务逻辑处理，涉及到ORM取数据、tmplates渲染页面
 5. 中间件，对相应的数据进行处理
-6. wsgi，将相应的内容发送给浏览器
+6. wsgi，将响应的内容发送给浏览器
 
 ### 13.2 web框架
 
@@ -27955,7 +27951,7 @@ template-index.html
 
 语法:
 
-```
+```python
 {{obj|filter__name:param}}
 ```
 
@@ -27981,7 +27977,7 @@ template-index.html
 
 语法:
 
-```
+```python
 {{ value|default:"nothing" }}
 ```
 
@@ -28111,7 +28107,7 @@ template-index.html
 
 语法:
 
-```js
+```python
 {{ value|safe}}
 ```
 
@@ -28710,7 +28706,7 @@ ORM的方法论基于三个核心原则：
 - 传达性：数据库结构被任何人都能理解的语言文档化
 - 精确性：基于数据模型创建正确标准化了的结构。 
 
-![img](https://hcdn1.luffycity.com/data/python-book/10102/08.png)
+![1639297421284](J:\homework\Python学习笔记\Python_notes.assets\1639297421284.png)
 
 ```python
 #sql中的表                                                      
@@ -28760,8 +28756,6 @@ Employee.objects.filter(name="alex").delete()
 #### 13.9.2 Django使用mysql数据库
 
 1. 创建模型
-
-![1561902414017](C:\Users\ike\AppData\Roaming\Typora\typora-user-images\1561902414017.png)
 
 在工程下新建app01项目,在项目下的models.py中创建模型:
 
@@ -38727,15 +38721,13 @@ MQ全称为Message Queue 消息队列（MQ）是一种应用程序对应用程�
 
 队列是一种先进先出的数据结构。
 
-<img src="http://p3.pstatp.com/large/pgc-image/3f33dd7829dd47d79725aba489128a3c" alt="什么是消息队列？" style="zoom: 80%;" />
-
 消息队列可以简单理解为：把要传输的数据放在队列中。
 
 消息队列中间件是分布式系统中重要的组件，主要解决应用**解耦，异步消息，流量削锋**等问题，实现高性能，高可用，可伸缩和最终一致性架构。目前使用较多的消息队列有ActiveMQ，RabbitMQ，ZeroMQ，Kafka，MetaMQ，RocketMQ。
 
 接下来利用一个外卖系统的消息推送给大家解释下MQ的意义。
 
-<img src="j:\homework\Python学习笔记\Python_notes.assets\1588750-20200114204948765-1197950209.png" alt="img" style="zoom:50%;" />
+![1639297222548](J:\homework\Python学习笔记\Python_notes.assets\1639297222548.png)
 
 **RabbitMQ**
 
