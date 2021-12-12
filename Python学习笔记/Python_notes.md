@@ -1,5 +1,3 @@
-
-
 # Python全栈开发 学习笔记
 
 ## 第一章 计算机基础
@@ -123,15 +121,15 @@
 
 - 5.下一步
 
-![img](https://pythonav.com/media/uploads/2019/02/21/1548322484875.png)
+<img src="https://pythonav.com/media/uploads/2019/02/21/1548322484875.png" alt="img" style="zoom:50%;" />
 
 - 6.勾选并安装
 
-![img](https://pythonav.com/media/uploads/2019/02/21/1548322828889.png)
+<img src="https://pythonav.com/media/uploads/2019/02/21/1548322828889.png" alt="img" style="zoom:50%;" />
 
 - 7.安装成功
 
-![img](https://pythonav.com/media/uploads/2019/02/21/1548322916218.png)
+<img src="https://pythonav.com/media/uploads/2019/02/21/1548322916218.png" alt="img" style="zoom:50%;" />
 
 - 8.进行验证,打开终端,输入python,进入到交互模式,说明安装成功
 
@@ -27275,11 +27273,26 @@ jquery的$.ajax()方法 是做ajax技术经常使用的一个方法。
 
     Get方法安全性低，效率高；Post方法安全性高，效率低（耗时稍长）
 
-- 请求格式![1561477190047](C:\Users\ike\AppData\Roaming\Typora\typora-user-images\1561477190047.png)
+- 请求格式
+
+     ![img](J:\homework\Python学习笔记\Python_notes.assets\Python学习笔记.md) 
 
     请求首行与请求头的部分用\r\n分隔,请求头与请求体以\r\n\r\n分隔
 
-- 响应格式![1561477206961](C:\Users\ike\AppData\Roaming\Typora\typora-user-images\1561477206961.png)
+- 响应格式
+
+      ![img](J:\homework\Python学习笔记\Python_notes.assets\yuan_6.png) 
+
+django请求生命周期：
+
+ ![202011130830231.png](J:\homework\Python学习笔记\Python_notes.assets\202011130830231.png) 
+
+1. wsgi，他就是socket服务端，用于接收用户请求并将请求进行初次封装，然后将请求交给web框架
+2. 中间件，帮助我们对请求进行校验或在请求对象中添加其他相关数据，例如：csrf
+3. 路由匹配，进行分发，分发给对应的视图
+4. 视图函数，在视图函数中进行业务逻辑处理，涉及到ORM取数据、tmplates渲染页面
+5. 中间件，对相应的数据进行处理
+6. wsgi，将相应的内容发送给浏览器
 
 ### 13.2 web框架
 
@@ -39268,11 +39281,11 @@ Git本身完全可以做到版本控制，但其所有内容以及版本记录�
 目前已使用Git的四个命令，这四个命令已经可以代替本地多个文件保存版本的方式：
 
 ```shell
-git init  	    		  # 初始化，表示即将对当前文件夹进行版本控制。
-git status				  # 查看Git当前状态，如：那些文件被修改过、那些文件还未提交到版本库等。
-git add 文件名	  			 # 将指定文件添加到版本库的暂存状态。
-git commit -m '提交信息'    # 将暂存区的文件提交到版本库的分支。
-git log					  # 查看提交记录，即：历史版本记录
+git init					# 初始化，表示即将对当前文件夹进行版本控制。
+git status					# 查看Git当前状态，如：那些文件被修改过、那些文件还未提交到版本库等。
+git add 文件名	  			  # 将指定文件添加到版本库的暂存状态。
+git commit -m '提交信息'	 # 将暂存区的文件提交到版本库的分支。
+git log					  	# 查看提交记录，即：历史版本记录
 ```
 
 ##### 16.3.2.2 第二节点：拓展新功能
@@ -39284,7 +39297,9 @@ git commit -m "短视频"
 
 ##### 16.3.2.3 第三阶段：约饭事件
 
-- 回归到之前的版本
+已经开发好的功能，先下掉，回滚到之前的版本。等到上的时候再回滚到现在开发好的版本。
+
+- 回滚到之前的版本
 
     ```shell
     git log  # 查看现有的版本
@@ -39518,7 +39533,7 @@ $ git branch		# 查看分支
   master
 
 Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/dbhot (dev)
-$ vim vim views-master.py  # 修改bug
+$ vim views-master.py  # 修改bug
 
 Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/dbhot (dev)
 $ git status		# 查看状态，即：在dev分支修改了views-dev.py文件
@@ -39567,7 +39582,7 @@ $ git branch
 
 学习参考上图，小P也可以按照着这样的流程进行开发，如果遇到上文开发到一般需要临时修复Bug的情况，可以按照下图的流程进行：
 
-![img](j:\homework\Python学习笔记\Python_notes.assets\425762-20170811163633632-1586077696.png)
+![1639276593788](J:\homework\Python学习笔记\Python_notes.assets\1639276593788.png)
 
 ```shell
 Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
@@ -39713,9 +39728,9 @@ GitHub，一个基于Git实现的代码托管的平台，可以将内容以及�
 - 创建完后，会生成一个仓库地址
 - git可以是用该URL进行向远程推送版本信息或获取版本信息
 
-<img src="j:\homework\Python学习笔记\Python_notes.assets\image-20211117164521207.png" alt="image-20211117164521207" style="zoom:50%;" />
+![1639276866245](J:\homework\Python学习笔记\Python_notes.assets\1639276866245.png)
 
-<img src="j:\homework\Python学习笔记\Python_notes.assets\image-20211117164632300.png" alt="image-20211117164632300" style="zoom:50%;" />
+![1639276940571](J:\homework\Python学习笔记\Python_notes.assets\1639276940571.png)
 
 <img src="https://images2017.cnblogs.com/blog/425762/201708/425762-20170812194454960-1674213106.png" alt="img" style="zoom:50%;" />
 
@@ -39737,10 +39752,10 @@ GitHub，一个基于Git实现的代码托管的平台，可以将内容以及�
 
 ```shell
 Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
-$ git remote add db-hot https://github.com/zhangzhqiang/dbhot.git  # 给远程仓库起个别名
+$ git remote add pythonall git@github.com:zhangzhqiang/python-.git  # 给远程仓库起个别名
 
 Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
-$ git push db-hot master		# 将master分支推送到远程仓库
+$ git push pythonall master		# 将master分支推送到远程仓库
 Enumerating objects: 36, done.
 Counting objects: 100% (36/36), done.
 Delta compression using up to 8 threads
@@ -39752,7 +39767,7 @@ To https://github.com/zhangzhqiang/dbhot.git
  * [new branch]      master -> master
 
 Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
-$ git push db-hot dev		# 将dev分支推送到远程仓库
+$ git push pythonall dev		# 将dev分支推送到远程仓库
 Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
 remote:
 remote: Create a pull request for 'dev' on GitHub by visiting:
@@ -39767,7 +39782,7 @@ To https://github.com/zhangzhqiang/dbhot.git
 
 ```shell
 Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot (master)
-$ git clone https://github.com/zhangzhqiang/dbhot.git		# 克隆远程仓库代码
+$ git clone https://github.com/zhangzhqiang/python-.git		# 克隆远程仓库代码
 Cloning into 'dbhot'...
 remote: Enumerating objects: 36, done.
 remote: Counting objects: 100% (36/36), done.
@@ -39808,7 +39823,7 @@ Switched to branch 'master'
 Your branch is up to date with 'origin/master'.
 
 Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (master)
-$ git merge dev													# dev分支似乎最新的，将dev分支合到master
+$ git merge dev								# dev分支似乎最新的，将dev分支合到master
 Updating b48e9ad..5b9e013
 Fast-forward
  a1.py | 1 +
@@ -39816,7 +39831,7 @@ Fast-forward
  create mode 100644 a1.py
 
 Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (master)
-$ git push db-hot master										# 将master分支的代码推到GitHub仓库的master分支
+$ git push db-hot master					# 将master分支的代码推到GitHub仓库的master分支
 Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
 To https://github.com/zhangzhqiang/dbhot.git
    b48e9ad..5b9e013  master -> master
@@ -39896,7 +39911,7 @@ Fast-forward
  create mode 100644 a2.py
 
 Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (dev)
-$ vim a2.py							# 卡覅新的功能
+$ vim a2.py							# 开发新的功能
 
 Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (dev)
 $ git add .							# 把代码推到版本暂存区
@@ -40004,7 +40019,7 @@ Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (dev)
 $ git add .					# 提交到版本暂存区
 
 Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (dev)
-$ git commit -m "开发在家没有push的a2"		# 提交大版本库分支
+$ git commit -m "开发在家没有push的a2"		# 提交到版本库分支
 [dev 01d86f7] 开发在家没有push的a2
  1 file changed, 1 insertion(+)
 
@@ -40065,12 +40080,11 @@ To https://github.com/zhangzhqiang/dbhot.git
 
 **其他**
 
-```shell
-git pull db-hot dev
-# 等于
-git fetch db-hot dev
-git merge db-hot dev
+```powershell
+git pull db-hot dev 等于 git fetch db-hot dev 加 git merge db-hot dev
 ```
+
+![1639278963127](J:\homework\Python学习笔记\Python_notes.assets\1639278963127.png)
 
 ###### 16.3.2.5.1 rebase的作用
 
@@ -40111,10 +40125,6 @@ Date:   Wed Nov 17 21:28:34 2021 +0800
     a1
 ```
 
-![image-20211117213733831](j:\homework\Python学习笔记\Python_notes.assets\image-20211117213733831.png)
-
-![image-20211117213924954](j:\homework\Python学习笔记\Python_notes.assets\image-20211117213924954.png)
-
 **注意：合同并记录时，建议不要合并已经push到GitHub仓库的记录**
 
 方式二：
@@ -40142,8 +40152,6 @@ git merge dev
 git log --graph
 git log --graph --pretty=format:"%h %s"  # 查看格式化后的分支记录
 ```
-
-![image-20211117220754585](j:\homework\Python学习笔记\Python_notes.assets\image-20211117220754585.png)
 
 方式三：
 
@@ -40258,11 +40266,21 @@ git log --graph --pretty=format:"%h %s"
 
     > https://docs.github.com/cn/account-and-profile/setting-up-and-managing-your-github-user-account/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository
 
-![image-20211118181653906](j:\homework\Python学习笔记\Python_notes.assets\image-20211118181653906.png)
+![1639279335914](J:\homework\Python学习笔记\Python_notes.assets\1639279335914.png)
 
 2. 组织：将成员邀请进入组织，组织下可以创建多个仓库，组织成员可以向组织下仓库提交代码。
 
-![image-20211118181916778](j:\homework\Python学习笔记\Python_notes.assets\image-20211118181916778.png)
+![1639279591028](J:\homework\Python学习笔记\Python_notes.assets\1639279591028.png)
+
+![1639279910643](J:\homework\Python学习笔记\Python_notes.assets\1639279910643.png)
+
+![1639280079225](J:\homework\Python学习笔记\Python_notes.assets\1639280079225.png)
+
+![1639280182089](J:\homework\Python学习笔记\Python_notes.assets\1639280182089.png)
+
+![1639280256781](J:\homework\Python学习笔记\Python_notes.assets\1639280256781.png)
+
+![1639280294887](J:\homework\Python学习笔记\Python_notes.assets\1639280294887.png)
 
 ```shell
 git add .
@@ -40281,13 +40299,13 @@ git clone -b v3.0 地址  # 指定tag下载代码
 - 邀请同事进入组织（默认对项目的组织具有读权限）
 - 接受后，就加进来了
 
-![image-20211118203704311](j:\homework\Python学习笔记\Python_notes.assets\image-20211118203704311.png)
+![1639280471746](J:\homework\Python学习笔记\Python_notes.assets\1639280471746.png)
 
-![image-20211118204002950](j:\homework\Python学习笔记\Python_notes.assets\image-20211118204002950.png)
+![1639280536295](J:\homework\Python学习笔记\Python_notes.assets\1639280536295.png)
 
 邀请新成员成为项目的协作者，在项目中添加成员，并给予写的权限，在组织内只有查的权限，无法写其他的项目
 
-![image-20211118204548631](j:\homework\Python学习笔记\Python_notes.assets\image-20211118204548631.png)
+![1639280570502](J:\homework\Python学习笔记\Python_notes.assets\1639280570502.png)
 
 ###### 16.3.2.6.3 新人下载代码开发
 
