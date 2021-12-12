@@ -1,9 +1,5 @@
 
 
-[TOC]
-
-
-
 # Python全栈开发 学习笔记
 
 ## 第一章 计算机基础
@@ -88,6 +84,8 @@
 | 1111   | 17     | 15     | F        |
 | 10000  | 20     | 16     | 10       |
 
+---
+
 ## 第二章 Python入门
 
 ### 2.1 Python起源
@@ -137,14 +135,7 @@
 
 - 8.进行验证,打开终端,输入python,进入到交互模式,说明安装成功
 
-![1559884330104](C:\Users\ike\AppData\Roaming\Typora\typora-user-images\1559884330104.png)
-
-- 9.`python2`安装步骤同以上1-7步骤,需要配置环境变量
-  - 注意的点
-    - 配置环境变量:计算机-->右键-->属性-->-->高级系统设置-->环境变量-->系统变量中找到Path-->编辑-->把`python2`的安装路径粘贴进去.注意前后都各有一个封号![1559884691345](C:\Users\ike\AppData\Roaming\Typora\typora-user-images\1559884691345.png)
-    - `python2`与`python3`的应用程序命名不能一致,因为系统是个傻子,无法分辨,需要手动修改重命名.只要不一致就可以.
-    - ![1559884881193](C:\Users\ike\AppData\Roaming\Typora\typora-user-images\1559884881193.png)
-    - ![1559884904775](C:\Users\ike\AppData\Roaming\Typora\typora-user-images\1559884904775.png)
+![1639016562219](J:\homework\Python学习笔记\Python_notes.assets\1639016562219.png)
 
 #### 2.3.2 开发工具安装
 
@@ -155,10 +146,7 @@
 - 4.用户许可选择Accept![img](https://pythonav.com/media/uploads/2019/02/21/1548326092371.png)
 - 5.激活`Pycharm`
   - 激活详情`<http://idea.lanyus.com/>`页面![img](https://pythonav.com/media/uploads/2019/02/21/1548326302535.png)
-  - 点击选择的内容生成激活码,然后将激活码复制到code选项中![1559885494364](C:\Users\ike\AppData\Roaming\Typora\typora-user-images\1559885494364.png)
 - 6.启动成功![img](https://pythonav.com/media/uploads/2019/02/21/1548326451573.png)
-- 7.创建项目![1559885600740](C:\Users\ike\AppData\Roaming\Typora\typora-user-images\1559885600740.png)
-- 8.创建文件,接下来就可以在创建好的python文件中写代码了![1559885828056](C:\Users\ike\AppData\Roaming\Typora\typora-user-images\1559885828056.png)
 
 ### 2.4 编码基础
 
@@ -173,8 +161,8 @@
 
 对于Python默认解释器编码：
 
-- `py2`： `ascii`
-- `py3`： `utf-8`
+- `py2`：`ascii`
+- `py3`：`utf-8`
 
 如果想要修改默认编码，则可以使用：
 
@@ -199,7 +187,7 @@ print('hello world')
 运行:解释器+文件路径
 
 - 给文件赋予一个可执行的权限
-- `./a.py `通过文件的第一行找python解释器 = `/usr/bin/env/python a.py`
+- `./a.py ` 通过文件的第一行找python解释器 = `/usr/bin/env/python a.py`
 
 ### 2.5 输出
 
@@ -2192,9 +2180,9 @@ The default mode is 'rt' (open for reading text).
 
 - 相对路径：运行程序中写的文件路径为相对路径，在终端运行可以报找不到文件路径
 
-![image-20210531133025734](G:\homework\Python学习笔记\Python_notes.assets\image-20210531133025734.png)
+![image-20210531133025734](j:\homework\Python学习笔记\Python_notes.assets\image-20210531133025734.png)
 
-![image-20210531132954308](G:\homework\Python学习笔记\Python_notes.assets\image-20210531132954308.png)
+![image-20210531132954308](j:\homework\Python学习笔记\Python_notes.assets\image-20210531132954308.png)
 
 解决：
 
@@ -2216,7 +2204,7 @@ a.close()
 
 - 绝对路径：windows中文件绝对路径容易出现问题，需要加r或双\\
 
-![image-20210531133237191](G:\homework\Python学习笔记\Python_notes.assets\image-20210531133237191.png)
+![image-20210531133237191](j:\homework\Python学习笔记\Python_notes.assets\image-20210531133237191.png)
 
 #### 5.3.2 写文件
 
@@ -2831,7 +2819,7 @@ root = ET.XML(content)
 print(root)  # <Element 'data' at 0x00000217E6955778>
 ```
 
-![image-20210601141917428](G:\homework\Python学习笔记\Python_notes.assets\image-20210601141917428.png)
+![image-20210601141917428](j:\homework\Python学习笔记\Python_notes.assets\image-20210601141917428.png)
 
 ##### 6.1.3.2 读取节点数据
 
@@ -3147,7 +3135,7 @@ sheet = wb.worksheets[0]
 
 - 读取合并单元格的数据
 
-![image-20210602201719149](G:\homework\Python学习笔记\Python_notes.assets\image-20210602201719149.png)
+![image-20210602201719149](j:\homework\Python学习笔记\Python_notes.assets\image-20210602201719149.png)
 
 ```python
 # 读取合并单元格
@@ -5330,7 +5318,7 @@ POOL.shutdown()
 
 ### 6.11 内置函数
 
-![image-20201230201618164](G:\homework\Python学习笔记\Python_notes.assets\image-20201230201618164.png)
+![image-20201230201618164](j:\homework\Python学习笔记\Python_notes.assets\image-20201230201618164.png)
 
 - 编码相关
 
@@ -6952,7 +6940,7 @@ v2 = v1.timestamp()
 print(v2)  # 1623924093.286256
 ```
 
-![image-20210104171741529](G:\homework\Python学习笔记\Python_notes.assets\image-20210104171741529.png)
+![image-20210104171741529](j:\homework\Python学习笔记\Python_notes.assets\image-20210104171741529.png)
 
 时间相关的操作，时间有三种表示方式：
 
@@ -7440,14 +7428,14 @@ C:                              ntfs  232G   50G  183G  22% /c
 F:/cmder/vendor/git-for-windows ntfs  310G   12G  298G   4% /
 D:                              ntfs  175G  108G   68G  62% /d
 E:                              ntfs  175G   18G  158G  10% /e
-G:                              ntfs   40G   93M   40G   1% /g
+j:                              ntfs   40G   93M   40G   1% /g
 >>> a = subprocess.call('df -hT',shell=True)
 Filesystem                      Type  Size  Used Avail Use% Mounted on
 C:                              ntfs  232G   50G  183G  22% /c
 F:/cmder/vendor/git-for-windows ntfs  310G   12G  298G   4% /
 D:                              ntfs  175G  108G   68G  62% /d
 E:                              ntfs  175G   18G  158G  10% /e
-G:                              ntfs   40G   93M   40G   1% /g
+j:                              ntfs   40G   93M   40G   1% /g
 >>> print(a)
 0
 ```
@@ -7461,7 +7449,7 @@ C:                              ntfs  232G   50G  183G  22% /c
 F:/cmder/vendor/git-for-windows ntfs  310G   12G  298G   4% /
 D:                              ntfs  175G  108G   68G  62% /d
 E:                              ntfs  175G   18G  158G  10% /e
-G:                              ntfs   40G   93M   40G   1% /g
+j:                              ntfs   40G   93M   40G   1% /g
 >>> print(a)
 0
 >>> a = subprocess.check_call('dfdsf',shell=True)
@@ -10646,6 +10634,52 @@ if 'egon' == info['name'] and 18 == info['age']:
 
 我们开发的软件都是应用软件，应用软件必须应用于操作系统上，操作系统必须运行硬件上，应用软件是无法直接应用到硬件上的，应用软件对硬件的操作必须调用操作系统的接口，由操作系统操控硬件。
 
+**TCP的三次握手和四次挥手**
+
+三次握手
+
+ ![img](J:\homework\Python学习笔记\Python_notes.assets\format,png)
+
+ 这张图展示了建立TCP连接所需的三次握手过程。
+
+首先需要明确，三次握手的目的是建立可靠的通信信道，即双方确认彼此的信息发送与接收是正常的。
+
+其次需要明确，客户端与服务器的身份并不是固定的，在某些情况下的客户端，在另外的情况下可能会承担服务器的角色。
+
+下面我们依次来看三次握手的过程和目的。
+
+第一次握手：客户端向服务端发送SYN。此时客户端什么都不能确认；服务端确认对方发送正常，自己接收正常。
+
+第二次握手：服务端向客户端发送SYN/ACK。此时客户端确认自己发送、接收正常，对方发送、接收正常；服务端确认对方发送正常，自己接收正常。
+
+第三次握手：客户端向服务端发送ACK。此时客户端确认自己发送、接收正常，对方发送、接收正常；服务端确认自己发送、接收正常，对方发送、接收正常。
+
+综上所述，当且仅当三次握手之后，双方都能够确认收发功能正常。
+
+四次挥手：
+
+ ![img](J:\homework\Python学习笔记\Python_notes.assets\format1,png)
+
+这张图展示了断开TCP连接所需的四次挥手过程。
+
+下面我们依次来看四次挥手的过程和目的。
+
+第一次挥手：客户端向服务端发送FIN。用来关闭客户端到服务器的数据传送。
+
+第二次挥手：服务器向客户端发送ACK。表示服务端收到了客户端的连接释放通知。
+
+第三次挥手：服务器向客户端发送FIN。用来关闭与客户端的数据传送。
+
+第四次挥手：客户端向服务端发送ACK。表示客户端收到了服务端的连接释放通知。
+
+同样，这里所说的客户端和服务器并不是一个固定的概念。事实上，建立TCP连接的任何一方都可以在数据传送结束后发出连接释放通知，待对方确认后进入半关闭状态。当另一方也没有数据再发送的时候，则发出连接释放通知，对方确认后就完全关闭了TCP连接。
+
+另外，值得注意的是，在第四次挥手之后，客户端并非立马进入关闭状态，而是会进入TIME-WAIT状态，在等待2MSL时间后，才会进入关闭状态。这样做的原因主要有以下两点：
+
+第一，防止客户端发送的最后一个ACK报文丢失而引起服务端不能正常关闭。
+
+第二，防止已经失效的连接请求报文段对新连接造成影响。
+
 ### 9.1 网络应用开发架构
 
 - C/S架构
@@ -11344,7 +11378,7 @@ client.close()
     - 阻塞/非阻塞：进程/线程需要操作的数据如果尚未就绪，是否妨碍了当前进程/线程的后续操作。
     - 同步/异步 ：数据尚未准备就绪，是否等待数据结果。
 - 运行的三状态图
-    - 就绪、运行、阻塞![进程的三种状态](G:\homework\img\进程的三种状态.png)
+    - 就绪、运行、阻塞![进程的三种状态](j:\homework\img\进程的三种状态.png)
 
 #### 10.2.5 开启进程的两种方式
 
@@ -11398,8 +11432,6 @@ if __name__ == '__main__':
 ```
 
 查看进程的pid和ppid：
-
-示例：
 
 ```python
 import os
@@ -12227,7 +12259,7 @@ ps aux |grep python
 
 解决这个问题就是加GIL锁处理，保证python解释器同一时间只能执行一个任务的代码，如图：
 
-![GIL解释器锁](G:\homework\img\GIL解释器锁.png)
+![GIL解释器锁](j:\homework\img\GIL解释器锁.png)
 
 ##### 10.3.7.2 GIL与LOCK的区别
 
@@ -14058,7 +14090,7 @@ if __name__ == '__main__':
 
 #### 10.5.1 阻塞IO
 
-socket默认情况下都是blocking，一个典型的读操作流程是这样的：![阻塞IO](G:\homework\img\阻塞IO.png)
+socket默认情况下都是blocking，一个典型的读操作流程是这样的：![阻塞IO](j:\homework\img\阻塞IO.png)
 
 当用户进程调用了recvfrom这个系统调用，kernel就开始了IO的第一个阶段：准备数据。对于network io来说，很多时候数据在一开始还没有到达，这个时候kernel就要等待足够的数据到来。
 
@@ -14163,7 +14195,7 @@ client.close()
 
 #### 10.5.2 非阻塞IO
 
-通过设置socket使其变为non-blocking。当对一个non-blocking socket执行读操作时，流程是这个样子：![非阻塞IO](G:\homework\img\非阻塞IO.png)
+通过设置socket使其变为non-blocking。当对一个non-blocking socket执行读操作时，流程是这个样子：![非阻塞IO](j:\homework\img\非阻塞IO.png)
 
 非阻塞的recvform系统调用调用之后，进程并没有被阻塞，内核马上返回给进程，如果数据还没准备好，此时会返回一个error。进程在返回之后，可以干点别的事情，然后再发起recvform系统调用。重复上面的过程，循环往复的进行recvform系统调用。这个过程通常被称之为轮询。
 
@@ -14265,7 +14297,7 @@ client.close()
 
 IO multiplexing这个词可能有点陌生，但是如果我说select/epoll，大概就都能明白了。有些地方也称这种IO方式为**事件驱动IO**(event driven IO)。
 
-select/epoll的好处就在于单个process就可以同时处理多个网络连接的IO。它的基本原理就是select/epoll这个function会不断的轮询所负责的所有socket，当某个socket有数据到达了，就通知用户进程。![多路复用IO](G:\homework\img\多路复用IO.png)
+select/epoll的好处就在于单个process就可以同时处理多个网络连接的IO。它的基本原理就是select/epoll这个function会不断的轮询所负责的所有socket，当某个socket有数据到达了，就通知用户进程。![多路复用IO](j:\homework\img\多路复用IO.png)
 
 当用户进程调用了select，那么整个进程会被block，而同时，kernel会“监视”所有select负责的socket，当任何一个socket中的数据准备好了，select就会返回。这个时候用户进程再调用read操作，将数据从kernel拷贝到用户进程。这个图和blocking IO的图其实并没有太大的不同，事实上还更差一些。因为这里需要使用两个系统调用\(select和recvfrom\)，而blocking IO只调用了一个系统调用\(recvfrom\)。但是，用select的优势在于它可以同时处理多个connection。
 
@@ -14444,7 +14476,7 @@ while True:
 
 #### 10.5.4 异步IO
 
-asynchronous IO其实用得不多，从内核2.6版本才开始引入。先看一下它的流程：![异步IO](G:\homework\img\异步IO.png)
+asynchronous IO其实用得不多，从内核2.6版本才开始引入。先看一下它的流程：![异步IO](j:\homework\img\异步IO.png)
 
 用户进程发起read操作之后，立刻就可以开始去做其它的事。而另一方面，从kernel的角度，当它受到一个asynchronous read之后，首先它会立刻返回，所以不会对用户进程产生任何block。然后，kernel会等待数据准备完成，然后将数据拷贝到用户内存，当这一切都完成之后，kernel会给用户进程发送一个signal，告诉它read操作完成了。
 
@@ -18008,7 +18040,7 @@ HTML 标记标签通常被称为 HTML 标签 (HTML tag)。
 
 #### 12.1.5 HTML文档结构
 
-​	下面是一个可视化的HTML页面结构：![前端HTML](G:/homework/%E5%89%8D%E7%AB%AF/Users/zhangzhiqiang/Desktop/web%E5%89%8D%E7%AB%AF/img/%E5%89%8D%E7%AB%AFHTML.png)
+​	下面是一个可视化的HTML页面结构：![前端HTML](j:/homework/%E5%89%8D%E7%AB%AF/Users/zhangzhiqiang/Desktop/web%E5%89%8D%E7%AB%AF/img/%E5%89%8D%E7%AB%AFHTML.png)
 
 ##### 12.1.5.1 HTML实例
 
@@ -18088,7 +18120,7 @@ HTML注释的注意事项：
 </html>
 ```
 
-![title图片](G:/homework/%E5%89%8D%E7%AB%AF/Users/zhangzhiqiang/Desktop/web%E5%89%8D%E7%AB%AF/img/title%E5%9B%BE%E7%89%87.png)
+![title图片](j:/homework/%E5%89%8D%E7%AB%AF/Users/zhangzhiqiang/Desktop/web%E5%89%8D%E7%AB%AF/img/title%E5%9B%BE%E7%89%87.png)
 
 ##### 12.1.7.2 meta标签
 
@@ -22576,19 +22608,19 @@ React-native inoic
 
 以var x = 12，y=5来演示示例：
 
-![js赋值运算符](G:\homework\img\js赋值运算符.png)
+![js赋值运算符](j:\homework\img\js赋值运算符.png)
 
 算数运算符：
 
 var a = 5，b=2
 
-![js算数运算符](G:\homework\img\js算数运算符.png)
+![js算数运算符](j:\homework\img\js算数运算符.png)
 
 比较运算符：
 
 var x = 5；
 
-![js比较运算符](G:\homework\img\js比较运算符.png)
+![js比较运算符](j:\homework\img\js比较运算符.png)
 
 注意：==比较的是值的相同，===比较的是值和数据类型（内存地址）
 
@@ -23662,7 +23694,7 @@ Browser Object Model ，简称（BOM）浏览器内核主要指的是浏览器�
 
 BOM骨架图:
 
-![BOM](G:\homework\img\BOM.png)
+![BOM](j:\homework\img\BOM.png)
 
 - **window对象是BOM的顶层(核心)对象**，所有对象都是通过它延伸出来的，也可以称为window的子对象。
 - document 对象，文档对象；
@@ -23906,7 +23938,7 @@ HTML加载完毕，渲染引擎会在内存中把HTML文档，生成一个DOM树
 
 **DOM骨架树（一切皆是节点）**
 
-![ct_htmltree](G:\homework\img\ct_htmltree.gif)
+![ct_htmltree](j:\homework\img\ct_htmltree.gif)
 
 - **元素节点**：HMTL标签。
 - **文本节点**：标签中的文字（比如标签之间的空格、换行）
@@ -29829,11 +29861,11 @@ Django 模型类的Meta是一个内部类，它用于定义一些Django模型类
 
   如果verbose_name 后面没有_plural选项，则会在网站上类名后面自动拼接一个‘s'，效果如下：
 
-  ![image-20210930143230212](G:\homework\Python学习笔记\Python_notes.assets\image-20210930143230212.png)
+  ![image-20210930143230212](j:\homework\Python学习笔记\Python_notes.assets\image-20210930143230212.png)
 
   将verbose_name = 'hello'改为verbose_name_plural = 'hello'，效果如下：
 
-  ![image-20210930143338661](G:\homework\Python学习笔记\Python_notes.assets\image-20210930143338661.png)
+  ![image-20210930143338661](j:\homework\Python学习笔记\Python_notes.assets\image-20210930143338661.png)
 
 
 
@@ -31148,7 +31180,7 @@ class CustomerMiddleware2(SecurityMiddleware):
 
 注意：如果当请求到达请求2的时候直接不符合条件返回，即return HttpResponse("Md2中断")，程序将把请求直接发给中间件2返回，然后依次返回到请求者。
 
-流程图：![中间件1](G:\homework\img\中间件1.png)
+流程图：![中间件1](j:\homework\img\中间件1.png)
 
 自定义中间件2：process_view
 
@@ -31192,7 +31224,7 @@ class CustomerMiddleware2(SecurityMiddleware):
 
 注意：process_view如果有返回值，会越过其他的process_view以及视图函数，但是所有的process_response都还会执行。
 
-流程图：![中间件2](G:\homework\img\中间件2.png)
+流程图：![中间件2](j:\homework\img\中间件2.png)
 
 之定义中间件3：process_exception
 
@@ -31238,7 +31270,7 @@ class CustomerMiddleware2(SecurityMiddleware):
 
 当views出现错误时：
 
-流程图：![中间件3](G:\homework\img\中间件3.png)
+流程图：![中间件3](j:\homework\img\中间件3.png)
 
 
 
@@ -31265,7 +31297,7 @@ class CustomerMiddleware2(SecurityMiddleware):
 
 君子协议：robots.txt协议规定了网站中那些数据可以被爬虫爬取，那些数据不可以被爬取。
 
-![image-20210620152318684](G:\homework\Python学习笔记\Python_notes.assets\image-20210620152318684.png)
+![image-20210620152318684](j:\homework\Python学习笔记\Python_notes.assets\image-20210620152318684.png)
 
 http协议：就是服务器和客户端进行数据交互的一种形式。
 
@@ -32978,7 +33010,7 @@ IMAGES_STORE = './8.scrapy/imgPro/imgs'
 
 #### 18.8.4 五大核心组件
 
-![image-20210721114046503](G:\homework\Python学习笔记\Python_notes.assets\image-20210721114046503.png)
+![image-20210721114046503](j:\homework\Python学习笔记\Python_notes.assets\image-20210721114046503.png)
 
 爬虫（Spider）：爬虫是主要干活的，用于特定的网页中提取自己需要的信息，即所谓的实体（item），用户也可以从中提取出链接，让Scrapy继续抓取下一个页面。
 
@@ -33398,17 +33430,17 @@ class SunproPipeline:
 
 在前面我们已经实现了Scrapy爬虫，虽然爬虫是异步加多线程的，但是我们只能在一台主机上运行，所以爬取效率还是有限的，分布式爬虫则是将多台主机组合起来，共同完成一个爬取任务，这将大大提高爬取的效率。
 
-![20180525220702269](G:\homework\Python学习笔记\Python_notes.assets\20180525220702269.png)
+![20180525220702269](j:\homework\Python学习笔记\Python_notes.assets\20180525220702269.png)
 
 Scrapy单机爬虫中有一个本地爬取队列Queue，这个队列是利用deque模块实现的。如果新的Request生成就会放到队列里面，随后Request被Scheduler调度。之后，Request交给Downloader执行爬取，简单的调度架构如下图所示。
 
-![20180525220738869](G:\homework\Python学习笔记\Python_notes.assets\20180525220738869.png)
+![20180525220738869](j:\homework\Python学习笔记\Python_notes.assets\20180525220738869.png)
 
 如果两个Scheduler同时从队列里面取Request，每个Scheduler都有其对应的Downloader，那么在带宽足够、正常爬取且不考虑队列存取压力的情况下，爬取效率会有什么变化？没错，爬取效率会翻倍。
 
 这样，Scheduler可以扩展多个，Downloader也可以扩展多个。而爬取队列Queue必须始终为一个，也就是所谓的共享爬取队列。这样才能保证Scheduer从队列里调度某个Request之后，其他Scheduler不会重复调度此Request，就可以做到多个Schduler同步爬取。这就是分布式爬虫的基本雏形，简单调度架构如下图所示。
 
-![20180525220747525](G:\homework\Python学习笔记\Python_notes.assets\20180525220747525.png)
+![20180525220747525](j:\homework\Python学习笔记\Python_notes.assets\20180525220747525.png)
 
 我们需要做的就是在多台主机上同时运行爬虫任务协同爬取，而协同爬取的前提就是共享爬取队列。这样各台主机就不需要各自维护爬取队列，而是从共享爬取队列存取Request。但是各台主机还是有各自的Scheduler和Downloader，所以调度和下载功能分别完成。如果不考虑队列存取性能消耗，爬取效率还是会成倍提高。
 
@@ -33767,11 +33799,11 @@ class ZlsPipeline(object):
 
 1. **前后端不分离**：客户端看到的内容和所有界面效果都是由服务端提供出来的，这种情况下，前端页面中会出现很多涉及到服务器端的模板语法。
 
-![depended_frontend_backend](G:\homework\Python学习笔记\Python_notes.assets\depended_frontend_backend.png)
+![depended_frontend_backend](j:\homework\Python学习笔记\Python_notes.assets\depended_frontend_backend.png)
 
 2. **前后端分离**：把前端的界面效果（html，css，js分离到另一个项目中，python服务端只需要返回数据即可。）前端形成一个独立的网站，服务端构成一个独立的网站。
 
-![indepent_frontend_backend](G:\homework\Python学习笔记\Python_notes.assets\indepent_frontend_backend.png)
+![indepent_frontend_backend](j:\homework\Python学习笔记\Python_notes.assets\indepent_frontend_backend.png)
 
 django，一般都是做Web网站，如果可以利用django实现前后端分离，则django就可以完成地铁站的运营调度系统，路由的终端系统，pos机的服务端系统，游戏的服务端后台，软件的服务端后台。
 
@@ -33802,7 +33834,7 @@ django，一般都是做Web网站，如果可以利用django实现前后端分�
 
 ### 15.3 RESTful API规范
 
-![restful](G:\homework\Python学习笔记\Python_notes.assets\restful.gif)
+![restful](j:\homework\Python学习笔记\Python_notes.assets\restful.gif)
 
 REST全称是Representational State Transfer，中文意思是表述（编者注：通常译为表征）性状态转移。 它首次出现在2000年Roy Fielding的博士论文中。  
 
@@ -34065,7 +34097,7 @@ Django REST framework是一个建立在Django基础之上的Web 应用开发框�
 
 在REST framework中，提供了序列化器对象Serialzier的定义，可以帮助我们简化序列化与反序列化的过程，不仅如此，还提供丰富的类视图、扩展类、视图集来简化视图的编写工作。REST framework还提供了认证、权限、限流、过滤、分页、接口文档等功能支持。REST framework提供了一个用于测试API接口 的可视化Web界面【可以浏览器直接访问接口，drf的api接口测试页面非常美观】。
 
-![drf_logo](G:\homework\Python学习笔记\Python_notes.assets\drf_logo.png)
+![drf_logo](j:\homework\Python学习笔记\Python_notes.assets\drf_logo.png)
 
 中文文档：
 
@@ -34409,29 +34441,29 @@ python manage.py run server
 
 1）在浏览器中输入`http://127.0.0.1:8000/app01/`，可以看到drf提供的api web浏览页面
 
-![image-20210817223350583](G:\homework\Python学习笔记\Python_notes.assets\image-20210817223350583.png)
+![image-20210817223350583](j:\homework\Python学习笔记\Python_notes.assets\image-20210817223350583.png)
 
 2）输入 `http://127.0.0.1:8000/app01/student/`，获取所有数据接口
 
-![image-20210817223521767](G:\homework\Python学习笔记\Python_notes.assets\image-20210817223521767.png)
+![image-20210817223521767](j:\homework\Python学习笔记\Python_notes.assets\image-20210817223521767.png)
 
 3）在页面底部可以访问添加学生的接口，
 
-![image-20210817223610516](G:\homework\Python学习笔记\Python_notes.assets\image-20210817223610516.png)
+![image-20210817223610516](j:\homework\Python学习笔记\Python_notes.assets\image-20210817223610516.png)
 
 4）添加学生后输入`http://127.0.0.1:8000/app01/student/3/`，可以访问获取单个学生信息的接口
 
-![image-20210817223729027](G:\homework\Python学习笔记\Python_notes.assets\image-20210817223729027.png)
+![image-20210817223729027](j:\homework\Python学习笔记\Python_notes.assets\image-20210817223729027.png)
 
 
 
 5）获取单个学生信息后，可以修改访问修改学生的接口
 
-![image-20210817223916174](G:\homework\Python学习笔记\Python_notes.assets\image-20210817223916174.png)
+![image-20210817223916174](j:\homework\Python学习笔记\Python_notes.assets\image-20210817223916174.png)
 
 6）点delete按钮，可以访问删除学生的接口
 
-![image-20210817223949348](G:\homework\Python学习笔记\Python_notes.assets\image-20210817223949348.png)
+![image-20210817223949348](j:\homework\Python学习笔记\Python_notes.assets\image-20210817223949348.png)
 
 ### 15.7 序列化器-Serializer
 
@@ -35077,9 +35109,9 @@ response["company"] = "testing"
 return response
 ```
 
-![image-20210831152058256](G:\homework\Python学习笔记\Python_notes.assets\image-20210831152058256.png)
+![image-20210831152058256](j:\homework\Python学习笔记\Python_notes.assets\image-20210831152058256.png)
 
-![image-20210831152144117](G:\homework\Python学习笔记\Python_notes.assets\image-20210831152144117.png)
+![image-20210831152144117](j:\homework\Python学习笔记\Python_notes.assets\image-20210831152144117.png)
 
 ### 15.9 视图
 
@@ -36263,11 +36295,11 @@ class BookMixinViewSet(ModelViewSet):
 
 1. SimpleRouter
 
-![SimpleRouter](G:\homework\Python学习笔记\Python_notes.assets\SimpleRouter.png)
+![SimpleRouter](j:\homework\Python学习笔记\Python_notes.assets\SimpleRouter.png)
 
 2. DefaultRouter
 
-![DefaultRouter](G:\homework\Python学习笔记\Python_notes.assets\DefaultRouter.png)
+![DefaultRouter](j:\homework\Python学习笔记\Python_notes.assets\DefaultRouter.png)
 
 DefaultRouter与SimpleRouter的区别是，DefaultRouter会多附带一个默认的API根视图，返回一个包含所有列表视图的超链接响应数据。
 
@@ -36869,7 +36901,7 @@ class ExceptionAPIView(ModelViewSet):
         return Response("ok")
 ```
 
-![image-20210930101648428](G:\homework\Python学习笔记\Python_notes.assets\image-20210930101648428.png)
+![image-20210930101648428](j:\homework\Python学习笔记\Python_notes.assets\image-20210930101648428.png)
 
 在主应用的配置文件settings.py中声明自定义的异常处理
 
@@ -37019,7 +37051,7 @@ REST framework可以自动帮助我们生成接口文档。
 
 浏览器访问 `127.0.0.1:8000/docs/`，即可看到自动生成的接口文档。
 
-![image-20210930113831669](G:\homework\Python学习笔记\Python_notes.assets\image-20210930113831669.png)
+![image-20210930113831669](j:\homework\Python学习笔记\Python_notes.assets\image-20210930113831669.png)
 
 **两点说明：**
 
@@ -37065,7 +37097,7 @@ python manage.py createsuperuser
 
 访问地址：http://127.0.0.1:8000/admin，访问效果如下：
 
-![image-20210930154641861](G:\homework\Python学习笔记\Python_notes.assets\image-20210930154641861.png)
+![image-20210930154641861](j:\homework\Python学习笔记\Python_notes.assets\image-20210930154641861.png)
 
 admin站点默认并没有提供其他的操作给我们，所以一切功能都需要我们进行配置，在项目中，我们每次创建子应用的时候都会存在一个admin.py文件，这个文件就是用于配置admin站点功能的文件。
 
@@ -37492,7 +37524,7 @@ redis 是一个开源（BSD许可）的，内存中的数据结构存储系统�
 
 Redis 中缓存热点数据，能够保护数据库，提高查询效率。如下图所示，我们在碰到需要执行耗时特别久，且结果不频繁变动的SQL，就特别适合将运行结果放入缓存。这样，后面的请求就去缓存中读取，使得请求能够迅速响应。
 
-![img](G:\homework\Python学习笔记\Python_notes.assets\20180531085918614.jpeg)
+![img](j:\homework\Python学习笔记\Python_notes.assets\20180531085918614.jpeg)
 
 （二）并发
 
@@ -38668,6 +38700,8 @@ r.publish("fm104.5", "Hi,yuan!")
 
 发布订阅的特性用来做一个简单的实时聊天系统再适合不过了，当然这样的东西开发中很少涉及到。再比如在分布式架构中，常常会遇到读写分离的场景，在写入的过程中，就可以使用redis发布订阅，使得写入值及时发布到各个读的程序中，就保证数据的完整一致性。再比如，在一个博客网站中，有100个粉丝订阅了你，当你发布新文章，就可以推送消息给粉丝们拉。
 
+---
+
 ### 16.2 RabbitMQ
 
 **什么是消息队列**
@@ -38688,7 +38722,7 @@ MQ全称为Message Queue 消息队列（MQ）是一种应用程序对应用程�
 
 接下来利用一个外卖系统的消息推送给大家解释下MQ的意义。
 
-<img src="G:\homework\Python学习笔记\Python_notes.assets\1588750-20200114204948765-1197950209.png" alt="img" style="zoom:50%;" />
+<img src="j:\homework\Python学习笔记\Python_notes.assets\1588750-20200114204948765-1197950209.png" alt="img" style="zoom:50%;" />
 
 **RabbitMQ**
 
@@ -39144,6 +39178,8 @@ channel.basic_consume(queue=queue_name, auto_ack=True, on_message_callback=callb
 channel.start_consuming()
 ```
 
+----
+
 ### 16.3 Git
 
 #### 16.3.1 Git简介
@@ -39164,7 +39200,7 @@ Linux 内核开源项目有着为数众多的参与者。 绝大多数的 Linux 
 
 **Git** 是一个开源的分布式版本控制软件,用以有效、高速的处理从很小到非常大的项目版本管理。 Git 最初是由*Linus Torvalds*设计开发的，用于管理Linux内核开发。Git 是根据GNU通用公共许可证版本2的条款分发的自由/免费软件，安装参见：https://git-scm.com/book/zh
 
-**GitHub**是一个基于Git的远程文件托管平台（同GitCafe、BitBucket和GitLab等）。
+**GitHub** 是一个基于Git的远程文件托管平台（同GitCafe、BitBucket和GitLab等）。
 
 Git本身完全可以做到版本控制，但其所有内容以及版本记录只能保存在本机，如果想要将文件内容以及版本记录同时保存在远程，则需要结合GitHub来使用。使用场景：
 
@@ -39184,7 +39220,7 @@ Git本身完全可以做到版本控制，但其所有内容以及版本记录�
 
 - 进入需要管理的文件夹
 
-- 执行初始化命令
+- 执行初始化命令，表示即将对当前文件夹进行版本控制
 
     ```shell
     git init
@@ -39225,7 +39261,7 @@ Git本身完全可以做到版本控制，但其所有内容以及版本记录�
     git log
     ```
 
-![img](G:\homework\Python学习笔记\Python_notes.assets\425762-20170811093733792-860907399.png)
+<img src="j:\homework\Python学习笔记\Python_notes.assets\425762-20170811093733792-860907399.png" alt="img" style="zoom:67%;" />
 
 **版本库**：工作区检测到有文件发生变化，那么意味着较上一个版本之后对程序进行了修改，修改完成之后，可以当做下一版本进行提交，那么就是执行 【git add .】 将所有文件提交到暂存区，然后再执行【git commit -m '又一个版本'】提交到版本库的分支即可，之后可以使用【git log】命令查看版本记录。
 
@@ -39242,7 +39278,7 @@ git log					  # 查看提交记录，即：历史版本记录
 ##### 16.3.2.2 第二节点：拓展新功能
 
 ```shell
-git add
+git add 文件名
 git commit -m "短视频"
 ```
 
@@ -39267,88 +39303,146 @@ git commit -m "短视频"
 示例：
 
 ```shell
-Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/dbhot (master)
-$ touch a.py
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ touch views-master.py		# 模拟新建一个项目
 
-Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/dbhot (master)
-$ git status
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ vim views-master.py		# 编写新的项目
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ git status				# 查看git状态，是否被修改过
 On branch master
+
+No commits yet
+
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
-        a.py
+        views-master.py
 
 nothing added to commit but untracked files present (use "git add" to track)
 
-Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/dbhot (master)
-$ git add .
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ git add .					# 将文件添加到版本库的暂存区
+warning: LF will be replaced by CRLF in views-master.py.
+The file will have its original line endings in your working directory
 
-Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/dbhot (master)
-$ git commit -m "又一次提交"
-[master 8b38e05] 又一次提交
- 1 file changed, 0 insertions(+), 0 deletions(-)
- create mode 100644 a.py
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ git commit -m "第一版提交"	 # 将缓存区的文件提交到版本库的分支
+[master (root-commit) 5a1a8f0] 第一版提交
+ 1 file changed, 1 insertion(+)
+ create mode 100644 views-master.py
 
-Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/dbhot (master)
-$ git log
-commit 8b38e05cda7b8f9fd1a71a078c2a535609a28964 (HEAD -> master)
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ git status				# 查看git状态
+On branch master
+nothing to commit, working tree clean
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ vim views-master.py		# 模拟提交第二版
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ git status				# 查看git状态
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   views-master.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ git add .					# 将文件添加到缓存区
+warning: LF will be replaced by CRLF in views-master.py.
+The file will have its original line endings in your working directory
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ git commit -m "第二版提交"		# 将缓存区的文件提交到版本库的分支
+[master 3def87c] 第二版提交
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ git log						# 查看提交记录
+commit 3def87cc65afb2ab9919272e644e70a186d4f6f2 (HEAD -> master)
 Author: zzq <zq15010008824@163.com>
-Date:   Mon Nov 15 16:13:31 2021 +0800
+Date:   Wed Nov 17 10:41:54 2021 +0800
 
-    又一次提交
+    第二版提交
 
-commit 2f48b9d590ea7e6110c4fd7ae84e684fad49a4dd
+commit 5a1a8f040455e946497b85b51d9347953f8a3cf8
 Author: zzq <zq15010008824@163.com>
-Date:   Mon Nov 15 16:05:31 2021 +0800
+Date:   Wed Nov 17 10:38:35 2021 +0800
 
-    第一次修改
+    第一版提交
 
-commit a4ba4ef8226a7d9a8d60cbe7b2147270583fa45b
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ vim views-master.py		# 新增短视频功能
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ git add .					# 提交到暂存区
+warning: LF will be replaced by CRLF in views-master.py.
+The file will have its original line endings in your working directory
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ git commit -m "提交短视频功能"		# 提交到版本库分支
+[master 8b82e98] 提交短视频功能
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ git status				# 查看git状态
+On branch master
+nothing to commit, working tree clean
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ git log					# 查看提交记录
+commit 8b82e9878fd9df05b030cad7e7106f0dc6be5887 (HEAD -> master)
 Author: zzq <zq15010008824@163.com>
-Date:   Mon Nov 15 13:10:47 2021 +0800
+Date:   Wed Nov 17 10:43:39 2021 +0800
 
-    dbhot上线
-Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/dbhot (master)
-$ git reset --hard 2f48b9d590ea7e6110c4fd7ae84e684fad49a4dd
-HEAD is now at 2f48b9d 第一次修改
+    提交短视频功能
 
-Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/dbhot (master)
-$ git log
-commit 2f48b9d590ea7e6110c4fd7ae84e684fad49a4dd (HEAD -> master)
+commit 3def87cc65afb2ab9919272e644e70a186d4f6f2
 Author: zzq <zq15010008824@163.com>
-Date:   Mon Nov 15 16:05:31 2021 +0800
+Date:   Wed Nov 17 10:41:54 2021 +0800
 
-    第一次修改
+    第二版提交
 
-commit a4ba4ef8226a7d9a8d60cbe7b2147270583fa45b
+commit 5a1a8f040455e946497b85b51d9347953f8a3cf8
 Author: zzq <zq15010008824@163.com>
-Date:   Mon Nov 15 13:10:47 2021 +0800
+Date:   Wed Nov 17 10:38:35 2021 +0800
 
-    dbhot上线
-Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/dbhot (master)
-$ git reflog
-2f48b9d (HEAD -> master) HEAD@{0}: reset: moving to 2f48b9d590ea7e6110c4fd7ae84e684fad49a4dd
-8b38e05 HEAD@{1}: commit: 又一次提交
-2f48b9d (HEAD -> master) HEAD@{2}: reset: moving to 2f48b9d
-a4ba4ef HEAD@{3}: reset: moving to a4ba4ef8226a7d9a8d60cbe7b2147270583fa45b
-2f48b9d (HEAD -> master) HEAD@{4}: commit: 第一次修改
-a4ba4ef HEAD@{5}: commit (initial): dbhot上线
-Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/dbhot (master)
-$ git log
-commit 8b38e05cda7b8f9fd1a71a078c2a535609a28964 (HEAD -> master)
-Author: zzq <zq15010008824@163.com>
-Date:   Mon Nov 15 16:13:31 2021 +0800
+    第一版提交
 
-    又一次提交
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ git reset --hard 3def87cc65afb2ab9919272e644e70a186d4f6f2		# 回到之前的版本
+HEAD is now at 3def87c 第二版提交
 
-commit 2f48b9d590ea7e6110c4fd7ae84e684fad49a4dd
-Author: zzq <zq15010008824@163.com>
-Date:   Mon Nov 15 16:05:31 2021 +0800
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ cat views-master.py
+print("开发新程序，完成")
+print("提交新功能")
 
-    第一次修改
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ git reflog					# 查看所有的提交记录
+3def87c (HEAD -> master) HEAD@{0}: reset: moving to 3def87cc65afb2ab9919272e644e70a186d4f6f2
+8b82e98 HEAD@{1}: commit: 提交短视频功能
+3def87c (HEAD -> master) HEAD@{2}: commit: 第二版提交
+5a1a8f0 HEAD@{3}: commit (initial): 第一版提交
 
-commit a4ba4ef8226a7d9a8d60cbe7b2147270583fa45b
-Author: zzq <zq15010008824@163.com>
-Date:   Mon Nov 15 13:10:47 2021 +0800
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ git reset --hard 8b82e98			# 回到之后的记录
+HEAD is now at 8b82e98 提交短视频功能
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ cat views-master.py				# 成功返回到之后的记录
+print("开发新程序，完成")
+print("第二版提交")
+print("提交短视频")
+
 ```
 
 ##### 16.3.2.4 第四阶段：紧急修复bug
@@ -39424,7 +39518,7 @@ $ git branch		# 查看分支
   master
 
 Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/dbhot (dev)
-$ vim views-dev.py  # 修改bug
+$ vim vim views-master.py  # 修改bug
 
 Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/dbhot (dev)
 $ git status		# 查看状态，即：在dev分支修改了views-dev.py文件
@@ -39468,8 +39562,961 @@ $ git branch -d dev		# 删除分支
 Deleted branch dev (was c4a0e18).
 
 Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/dbhot (master)
-$ git branc
+$ git branch
 ```
+
+学习参考上图，小P也可以按照着这样的流程进行开发，如果遇到上文开发到一般需要临时修复Bug的情况，可以按照下图的流程进行：
+
+![img](j:\homework\Python学习笔记\Python_notes.assets\425762-20170811163633632-1586077696.png)
+
+```shell
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ git branch			# 当前在master分支
+  dev
+* master
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ git checkout dev		# 切换到dev分支用来开发新功能
+Switched to branch 'dev'
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (dev)
+$ vim views-master.py		# 开发新功能
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (dev)
+$ git add .				# 提交到版本暂存区
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (dev)
+$ git commit -m "新开发到一半"	# 将暂存区的文件提交到版本分支
+[dev 411b503] 新开发到一半
+ 1 file changed, 1 insertion(+)
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (dev)
+$ git checkout master		# 切换到master分支
+Switched to branch 'master'
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ git branch			# 当前在master分支
+  dev
+* master
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ git branch bug		# 新建bug分支，用来紧急修复bug
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ git checkout bug		# 切换到bug分支
+Switched to branch 'bug'
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (bug)
+$ vim views-master.py	# 修复bug
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (bug)
+$ git add .				# 提交到版本暂存区
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (bug)
+$ git commit -m "新功能开发一半，紧急修复bug"	# 提交到版本库
+[bug 2b30ea1] 新功能开发一半，紧急修复bug
+ 1 file changed, 2 insertions(+)
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (bug)
+$ git checkout master		# 切换到master分支
+Switched to branch 'master'
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ git merge bug				# 合并修复的bug
+Updating 8713dfe..2b30ea1
+Fast-forward
+ views-master.py | 2 ++
+ 1 file changed, 2 insertions(+)
+ 
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master|MERGING)
+$ git add .			# 将bug提交到暂存区
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master|MERGING)
+$ git commit -m "紧急bug上线"		# 将暂存区的bug发到版本库分支
+[master 2e6b428] 紧急bug上线
+
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ git checkout dev		# 切换到dev分支
+Switched to branch 'dev'
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (dev)
+$ vim views-master.py	# 继续开发新功能
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (dev)
+$ git add .				# 提交到版本暂存区
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (dev)
+$ git commit -m "继续开发"	# 提交到版本库分支
+[dev 132bb26] 继续开发
+ 1 file changed, 1 insertion(+)
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (dev)
+$ git checkout master		# 切换到master分支
+Switched to branch 'master'
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ git merge dev				# 将新功能合并到主分支
+Auto-merging views-master.py
+CONFLICT (content): Merge conflict in views-master.py
+Automatic merge failed; fix conflicts and then commit the result.
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master|MERGING)
+$ cat views-master.py		# 产生冲突
+print("开发新程序，完成")
+print("第二版提交")
+print("提交短视频")
+print("在dev环境紧急修复bug")
+<<<<<<< HEAD
+print("新功能开发到一半")
+print("新功能紧急修复bug")
+=======
+print("模拟开发到一半，需要紧急修复bug")
+print("修复完bug继续开发")
+>>>>>>> dev
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master|MERGING)
+$ vim views-master.py		# 解决冲突
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master|MERGING)
+$ git status		# 查看分支状态
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   views-master.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master|MERGING)
+$ git add .		# 将新功能提交到暂存区
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master|MERGING)
+$ git commit -m "新功能上线"
+```
+
+注意：git merge 时也可能会出现冲突，解决冲突的方式上述stash相同，即：找到冲突文件，手动修改冲突并提交，此处不再敖述。
+
+##### 16.3.2.5 第五阶段：进军三里屯
+
+GitHub，一个基于Git实现的代码托管的平台，可以将内容以及版本记录在远程也保存一份，这样就不用U盘咯（类似于云盘）。PS: 类似GitHub的产品还有许多，如：GitLab、Bitbucket、码云等。
+
+<img src="https://images2017.cnblogs.com/blog/425762/201708/425762-20170811191610632-470737695.png" alt="img" style="zoom: 50%;" />
+
+基于GitHub实现代码托管：
+
+- 注册一个GitHub账号
+- 创建仓库
+- 创建完后，会生成一个仓库地址
+- git可以是用该URL进行向远程推送版本信息或获取版本信息
+
+<img src="j:\homework\Python学习笔记\Python_notes.assets\image-20211117164521207.png" alt="image-20211117164521207" style="zoom:50%;" />
+
+<img src="j:\homework\Python学习笔记\Python_notes.assets\image-20211117164632300.png" alt="image-20211117164632300" style="zoom:50%;" />
+
+<img src="https://images2017.cnblogs.com/blog/425762/201708/425762-20170812194454960-1674213106.png" alt="img" style="zoom:50%;" />
+
+命令总结：
+
+- 给远程仓库起个别名
+
+    ```shell
+    git remote add origin 远程仓库地址
+    ```
+
+- 向远程推送代码
+
+    ```shell
+    git push -u origin 分支
+    ```
+
+**在把家**，里电脑的代码推送到GitHub
+
+```shell
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ git remote add db-hot https://github.com/zhangzhqiang/dbhot.git  # 给远程仓库起个别名
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ git push db-hot master		# 将master分支推送到远程仓库
+Enumerating objects: 36, done.
+Counting objects: 100% (36/36), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (23/23), done.
+Writing objects: 100% (36/36), 3.25 KiB | 554.00 KiB/s, done.
+Total 36 (delta 9), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (9/9), done.
+To https://github.com/zhangzhqiang/dbhot.git
+ * [new branch]      master -> master
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
+$ git push db-hot dev		# 将dev分支推送到远程仓库
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'dev' on GitHub by visiting:
+remote:      https://github.com/zhangzhqiang/dbhot/pull/new/dev
+remote:
+To https://github.com/zhangzhqiang/dbhot.git
+ * [new branch]      dev -> dev
+
+```
+
+**在公司**，新电脑第一次使用，需要将代码从GitHub中获取并继续开发，开发完事下班就下班回家。
+
+```shell
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot (master)
+$ git clone https://github.com/zhangzhqiang/dbhot.git		# 克隆远程仓库代码
+Cloning into 'dbhot'...
+remote: Enumerating objects: 36, done.
+remote: Counting objects: 100% (36/36), done.
+remote: Compressing objects: 100% (14/14), done.
+remote: Total 36 (delta 9), reused 36 (delta 9), pack-reused 0
+Receiving objects: 100% (36/36), done.
+Resolving deltas: 100% (9/9), done.
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework (dev)
+$ cd home-dbhot/
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot (master)
+$ git checkout dev											# 切换分支
+Switched to branch 'dev'
+M       "Python\345\255\246\344\271\240\347\254\224\350\256\260/Python_notes.md"
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot (dev)
+$ git merge master											# 把master分支合并到dev（仅合并一次）
+Already up to date.
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (dev)
+$ git remote add db-hot https://github.com/zhangzhqiang/dbhot.git  # 给远程仓库起个别名
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (dev)
+$ git push db-hot dev												# 把代码推到dev分支
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 333 bytes | 333.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/zhangzhqiang/dbhot.git
+   c1191cf..5b9e013  dev -> dev
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (dev)
+$ git checkout master											# 切换到master分支
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (master)
+$ git merge dev													# dev分支似乎最新的，将dev分支合到master
+Updating b48e9ad..5b9e013
+Fast-forward
+ a1.py | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 a1.py
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (master)
+$ git push db-hot master										# 将master分支的代码推到GitHub仓库的master分支
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/zhangzhqiang/dbhot.git
+   b48e9ad..5b9e013  master -> master
+```
+
+**在家里**，由于白天在公司已经开发一部分功能并提交到GitHub，家里电脑的代码还是昨晚的版本，所以需要从GitHub拉去最新代码，然后继续开发。
+
+```shell
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (dev)
+$ git checkout dev								# 切换到dev分支
+Already on 'dev'
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (dev)
+$ git pull db-hot dev							# 从GitHub把代码拉下来
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 313 bytes | 1024 bytes/s, done.
+From https://github.com/zhangzhqiang/dbhot
+ * branch            dev        -> FETCH_HEAD
+   c1191cf..5b9e013  dev        -> db-hot/dev
+Updating c1191cf..5b9e013
+Fast-forward
+ a1.py | 1 +
+ 1 file changed, 1 insertion(+)
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (dev)
+$ vim a2.py										# 继续开发
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (dev)
+$ git add .										# 提交到版本暂存区
+warning: LF will be replaced by CRLF in a2.py.
+The file will have its original line endings in your working directory
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (dev)
+$ git commit -m "在家开发a2"					# 将暂存区的文件提交到版本库分支
+[dev 870d772] 在家开发a2
+ 1 file changed, 1 insertion(+)
+ create mode 100644 a2.py
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (dev)
+$ git push db-hot dev							# 将代码推送到GitHub的dev分支
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 339 bytes | 339.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/zhangzhqiang/dbhot.git
+   5b9e013..870d772  dev -> dev
+```
+
+**在公司**，由于昨天晚上在家已经开发了一部分功能，在公司需要先把昨晚开发的功能从GitHub中拉取，并继续开发。
+
+```shell
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (master)
+$ git checkout dev					# 切换到dev分支
+Switched to branch 'dev'
+Your branch is ahead of 'origin/dev' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (dev)
+$ git pull db-hot dev				# 把最新的代码拉下来
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 319 bytes | 1024 bytes/s, done.
+From https://github.com/zhangzhqiang/dbhot
+ * branch            dev        -> FETCH_HEAD
+   5b9e013..870d772  dev        -> db-hot/dev
+Updating 5b9e013..870d772
+Fast-forward
+ a2.py | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 a2.py
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (dev)
+$ vim a2.py							# 卡覅新的功能
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (dev)
+$ git add .							# 把代码推到版本暂存区
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (dev)
+$ git commit -m "在公司继续开发a2"		# 把代码提交到版本库分支
+[dev d721fb6] 在公司继续开发a2
+ 1 file changed, 1 insertion(+)
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (dev)
+$ git push db-hot dev				# 把代码提交到GitHub的dev分支
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 364 bytes | 364.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/zhangzhqiang/dbhot.git
+   870d772..d721fb6  dev -> dev
+```
+
+在公司开发完毕上线
+
+```shell
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (dev)
+$ git checkout master		# 切换到master分支
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (master)
+$ git merge dev				# 把dev分支合到master
+Updating 5b9e013..d721fb6
+Fast-forward
+ a2.py | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 a2.py
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (master)
+$ git push db-hot master	# 把master分支提交到GitHub的master分支
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/zhangzhqiang/dbhot.git
+   5b9e013..d721fb6  master -> master
+```
+
+在公司开发，下班忘记push代码
+
+```shell
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (master)
+$ git checkout dev		# 切换到dev分支
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (dev)
+$ git pull db-hot dev		# 把GitHub的dev分支的代码拉下来
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 319 bytes | 1024 bytes/s, done.
+From https://github.com/zhangzhqiang/dbhot
+ * branch            dev        -> FETCH_HEAD
+   5b9e013..870d772  dev        -> db-hot/dev
+Updating 5b9e013..870d772
+Fast-forward
+ a2.py | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 a2.py
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (dev)
+$ vim a2.py				# 继续编写代码
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (dev)
+$ git add .				# 把代码提交到版本暂存区
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (dev)
+$ git commit -m "在公司继续开发a2,忘记push"	# 把暂存区的代码提交的版本区分支，没有push到GitHub
+[dev 884664d] 在公司继续开发a2,忘记push
+ 1 file changed, 1 insertion(+)
+```
+
+回家继续写代码
+
+```shell
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (master)
+$ git checkout dev			# 切换到dev分支
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (dev)
+$ git pull db-hot dev			# 把GitHub仓库的dev分支拉下来
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 344 bytes | 2.00 KiB/s, done.
+From https://github.com/zhangzhqiang/dbhot
+ * branch            dev        -> FETCH_HEAD
+   870d772..d721fb6  dev        -> db-hot/dev
+Updating 870d772..d721fb6
+Fast-forward
+ a2.py | 1 +
+ 1 file changed, 1 insertion(+)
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (dev)
+$ vim a2.py					# 继续编写代码
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (dev)
+$ git add .					# 提交到版本暂存区
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (dev)
+$ git commit -m "开发在家没有push的a2"		# 提交大版本库分支
+[dev 01d86f7] 开发在家没有push的a2
+ 1 file changed, 1 insertion(+)
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (dev)
+$ git push db-hot dev			# 提交到GitHub
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 391 bytes | 391.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/zhangzhqiang/dbhot.git
+   d721fb6..01d86f7  dev -> dev
+```
+
+到公司继续写代码
+
+```shell
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (master)
+$ git checkout dev			# 切换到dev分支
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (dev)
+$ git pull db-hot dev		# 从GitHub拉代码
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 371 bytes | 2.00 KiB/s, done.
+From https://github.com/zhangzhqiang/dbhot
+ * branch            dev        -> FETCH_HEAD
+   d721fb6..01d86f7  dev        -> db-hot/dev
+Auto-merging a2.py
+CONFLICT (content): Merge conflict in a2.py		 # 发aa2冲突了，原因上次在公司写的时候没有push到远程仓库
+Automatic merge failed; fix conflicts and then commit the result.
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (dev|MERGING)
+$ vim a2.py						# 解决冲突并继续开发
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (dev|MERGING)
+$ git add .					# 提交到版本暂存区
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (dev|MERGING)
+$ git commit -m "解决拉代码的冲突后继续开发"			# 提交到版本库分支
+[dev d6a7441] 解决拉代码的冲突后继续开发
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/home-dbhot/dbhot (dev)
+$ git push db-hot dev		# 提交到GitHub
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 798 bytes | 798.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/zhangzhqiang/dbhot.git
+   01d86f7..d6a7441  dev -> dev
+```
+
+**其他**
+
+```shell
+git pull db-hot dev
+# 等于
+git fetch db-hot dev
+git merge db-hot dev
+```
+
+###### 16.3.2.5.1 rebase的作用
+
+rebase 可以保持提交记录简洁 **变基** ，不分叉。
+
+方式一：
+
+```shell
+# 1.创建4个文件，并提交到版本库分支
+touch a1.py  ..... a4.py
+git add .
+git commit -m "a1...a4"
+git log
+
+# 2.合并版本记录
+git rebase 版本号   # 把版本号之间的的版本合并
+#  或者
+git rebase -i HEAD~3  # 当前版本的前三个版本合并
+# 2.1把要合并的的分支pick该为s
+pick 54e571f a2
+s b7ef5da a3
+s 8e11d41 a4
+# 2.2以哪种描述信息链接分支记录
+ a2 & a3 & a4
+ 
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/pro_rebase (master)
+$ git log
+commit ce51f797fb007e30abb6f3234851fefc5a76b4d5 (HEAD -> master)
+Author: zzq <zq15010008824@163.com>
+Date:   Wed Nov 17 21:28:56 2021 +0800
+
+    a2 & a3 & a4
+
+commit 7889b94d30ab7b5a5dcc6089625a8b04c608bdb6
+Author: zzq <zq15010008824@163.com>
+Date:   Wed Nov 17 21:28:34 2021 +0800
+
+    a1
+```
+
+![image-20211117213733831](j:\homework\Python学习笔记\Python_notes.assets\image-20211117213733831.png)
+
+![image-20211117213924954](j:\homework\Python学习笔记\Python_notes.assets\image-20211117213924954.png)
+
+**注意：合同并记录时，建议不要合并已经push到GitHub仓库的记录**
+
+方式二：
+
+```shell
+# 1.切换到dev分支创建dev1文件
+git checkout dev
+touch dev1.py
+git add .
+git commit -m "dev commit 1"
+
+# 2.切换到master分支创建master1，提交到版本库
+git checkout master
+touch master1.py
+git add .
+git commit -m "master commit 1"
+
+# 3.切换到到dev分支，合并分支记录
+git checkout dev
+git rebase master
+
+# 4.切换到master分支，合同dev分支
+git checkout master
+git merge dev
+git log --graph
+git log --graph --pretty=format:"%h %s"  # 查看格式化后的分支记录
+```
+
+![image-20211117220754585](j:\homework\Python学习笔记\Python_notes.assets\image-20211117220754585.png)
+
+方式三：
+
+```shell
+# 当拉代码的时候有冲突，我们叫做分叉
+# 把 git pull db-hot dev 改为
+git feach db-hot dev
+git rebase db-hot/dev
+```
+
+示例：
+
+```shell
+# 1.切换到master分支，创建a1文件，提交到版本库分支
+git checkout master
+vim a1.py
+git add .
+git commit -m "master a1"
+
+# 2.切换到devs分支，创建a1文件，提交到版本库分支
+git checkout dev
+vim a1.py
+git add .
+git commit -m "dev a1"
+
+# 3.将master分支记录合并到dev分支
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/pro_rebase (dev)
+$ git rebase master
+error: could not apply 8c85548... dev a1  # dev合master都修改了a1产生了冲突
+Resolve all conflicts manually, mark them as resolved with
+"git add/rm <conflicted_files>", then run "git rebase --continue".
+You can instead skip this commit: run "git rebase --skip".
+To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 8c85548... dev a1
+Auto-merging a1.py
+CONFLICT (content): Merge conflict in a1.py
+
+# 4.解决冲突，提交文件到版本暂存区，继续合并master分支记录
+vim a1.py
+git status
+git add a1.py
+git rebase --continue
+git log --graph --pretty=format:"%h %s"
+```
+
+###### 16.3.2.5.2 快速解决冲突
+
+1. 安装beyond compare
+
+2. 在git中配置beyond compare， --local 只对当前的项目生效
+
+    ```shell
+    git config --local merge.tool bc3			# 给合并工具起个别名
+    git config --local mergetool.path "F:\Program Files\Beyond Compare 4\BCompare.exe"  # 指定安装目录
+    git config --local mergetool.keepBackup false		# 在合并的时候是否进行备份
+    ```
+
+3. 应用beyond compare
+
+    ```shell
+    git mergetool
+    ```
+
+###### 16.3.2.5.3 命令总结
+
+- 添加远程链接
+
+    ```shell
+    git remote add origin 链接地址
+    ```
+
+- 推送代码
+
+    ```shell
+    git push origin dev
+    ```
+
+- 下载代码
+
+    ```shell
+    git clone 链接地址
+    ```
+
+- 拉去代码
+
+    ```shell
+    git pull origin dev
+    # 等价于
+    git fectch origin dev
+    git merge origin/dev 或 git rebase origin/dev
+    ```
+
+- 保持代码清洁（变基）
+
+    ```shell
+    git rebase 分支
+    ```
+
+- 记录图形展示
+
+    ```shell
+    git log --graph --pretty=format:"%h %s"
+    ```
+
+##### 16.3.2.6 第六阶段：多人协同开发
+
+###### 16.3.2.6.1 创建项目 & 邀请成员
+
+协同开发时，需要所有成员都可以对同一个项目进行操作，需要邀请成员并赋予权限，否则无法开发。github支持两种创建项目的方式（多人协同开发）
+
+1. 合作者：将用户添加到仓库合作者中之后，该用户就可以向当前仓库提交代码。
+
+    > https://docs.github.com/cn/account-and-profile/setting-up-and-managing-your-github-user-account/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository
+
+![image-20211118181653906](j:\homework\Python学习笔记\Python_notes.assets\image-20211118181653906.png)
+
+2. 组织：将成员邀请进入组织，组织下可以创建多个仓库，组织成员可以向组织下仓库提交代码。
+
+![image-20211118181916778](j:\homework\Python学习笔记\Python_notes.assets\image-20211118181916778.png)
+
+```shell
+git add .
+git commit -m "conmmit org master"
+git tag -a v1.0 -m "1.0的tag"	# 本地创建tag信息
+git tag -d v1.0	# 删除tag
+git push org --tags	# 将本地tag信息推送到远程仓库
+git pull org --tags	# 更新本地tag版本信息
+git checkout v2.0	# 切换tag
+git clone -b v3.0 地址  # 指定tag下载代码
+```
+
+###### 16.3.2.6.2 协同开发
+
+- 新人创建GitHub 或 GitLab账号
+- 邀请同事进入组织（默认对项目的组织具有读权限）
+- 接受后，就加进来了
+
+![image-20211118203704311](j:\homework\Python学习笔记\Python_notes.assets\image-20211118203704311.png)
+
+![image-20211118204002950](j:\homework\Python学习笔记\Python_notes.assets\image-20211118204002950.png)
+
+邀请新成员成为项目的协作者，在项目中添加成员，并给予写的权限，在组织内只有查的权限，无法写其他的项目
+
+![image-20211118204548631](j:\homework\Python学习笔记\Python_notes.assets\image-20211118204548631.png)
+
+###### 16.3.2.6.3 新人下载代码开发
+
+```shell
+git checkout -b dev	# 创建dev分支并切换
+git push origin dev # 推送到远程仓库
+
+Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/organization/dbhot-org (dev)
+$ pwd
+/g/homework/organization/dbhot-org
+mkdir brother
+cd brother 
+
+# 模拟新人在自己的电脑上下载代码
+git clone https://github.com/joker1-org/dbhot.git
+cd dbhot/
+git checkout dev
+git checkout -b ddz
+touch 斗地主.py
+git add .
+git commit -m "斗地主第一版"
+git push origin ddz
+
+vim 斗地主.py
+git add .
+git commit -m "斗地主第一版"
+git push origin ddz
+git commit -m "斗地主开发完毕"
+```
+
+###### 16.3.2.6.4 code review
+
+1. 先配置代码review后，才能合并到dev分支
+
+![image-20211119111131604](j:\homework\Python学习笔记\Python_notes.assets\image-20211119111131604.png)
+
+![image-20211119111254233](j:\homework\Python学习笔记\Python_notes.assets\image-20211119111254233.png)
+
+2. 小弟提交code review申请
+
+![image-20211119113529938](j:\homework\Python学习笔记\Python_notes.assets\image-20211119113529938.png)
+
+3. 组长做code review
+
+![image-20211119112537894](j:\homework\Python学习笔记\Python_notes.assets\image-20211119112537894.png)
+
+![image-20211119112959108](j:\homework\Python学习笔记\Python_notes.assets\image-20211119112959108.png)
+
+###### 16.2.6.5 提测上线（预发布）
+
+由公司质量部门或团队leader执行以下步骤：
+
+1. 基于dev分支创建release分支
+
+```shell
+git checkout dev
+git pull origin dev
+git checkout -d release
+```
+
+2. 质量部门拉release分支代码进行测试
+
+3. 合并到master
+
+```shell
+# 使用 pull request 或本地将 release 合并到 master分支
+```
+
+4. 在master分支打tag
+
+```shell
+git tag -a v2.0 -m "第二版 斗地主功能"
+git push origin --tags
+```
+
+5. 删除release分支
+
+```shell
+git branch -d release
+```
+
+6. 运维人员就可以下载代码做上线了
+
+```shell
+git clone -b v2.0 地址
+```
+
+##### 16.3.2.7 第七阶段：给开源软件贡献代码
+
+1. fork源代码，将别人的源代码拷贝到自己的远程仓库
+
+![image-20211119153149653](j:\homework\Python学习笔记\Python_notes.assets\image-20211119153149653.png)
+
+2. 在自己的仓库进行修改代码
+
+```shell
+git checkout -d tornado
+git clone https://github.com/zhangzhqiang/tornado.git
+# 阅读源代码，找出bug提交
+git add .
+git commit -m "修改了一个源码bug"
+git push origin tornado
+```
+
+3. 给源代码的作者提交修复bug申请（pull request）
+
+#### 16.3.3 其他
+
+##### 16.3.3.1 配置
+
+- 项目配置文件：项目/.git/config
+
+```shell
+git config --local user.name "joker"
+git config --local user.email "zq15010008824@163.com"
+```
+
+- 全局配置文件：~/.gitconfig 
+
+```shell
+git config --global user.name "joker"
+git config --global user.email "zq15010008824@163.com"
+```
+
+- 系统配置文件：/etc/.gitconfig
+
+```shell
+git config --system user.name "joker"
+git config --system user.email "zq15010008824@163.com"
+
+# 注：需要由root权限
+```
+
+应用场景：
+
+```shell
+git config --local user.name "joker"
+git config --local user.email "zq15010008824@163.com"
+
+git config --local merge.tool bc3			# 给合并工具起个别名
+git config --local mergetool.path "F:\Program Files\Beyond Compare 4\BCompare.exe"  # 指定安装目录
+git config --local mergetool.keepBackup false		# 在合并的时候是否进行备份
+
+git remote add origin 地址  # 默认添加在项目配置文件中
+```
+
+##### 16.3.3.2 免密登录
+
+- URL中体现
+
+```shell
+原来的url：https://github.com/joker1-org/dbhot.git
+修改的url：https://用户名:密码@github.com/joker1-org/dbhot.git
+
+git remote add origin https://用户名:密码@github.com/joker1-org/dbhot.git
+git push origin master
+```
+
+- SSH实现
+
+```shell
+# 1.生成公钥 和 私钥 （默认放在 ~/.ssh目录下，id_rsa私钥，id_rsa.pub公钥）
+ssh-keygen.exe  # 生成公钥、私钥
+
+# 2.拷贝公钥的内容，并设置到github中（头像--settings--SSH）
+cat id_rsa.pub
+
+# 3.项目中拷贝SSH链接
+git remote add dbhot git@github.com:joker1-org/dbhot.git
+
+# 4.以后使用
+git push origin master
+```
+
+##### 16.3.3.3 忽略文件
+
+让git不再管理当前目录下的某些文件，比如：用户名密码，数据库文件等
+
+```shell
+# 1.在当前目录下新建 .gitignore 文件
+# 2.内容编辑参考：https://github.com/github/gitignore/blob/master/Python.gitignore
+```
+
+##### 16.3.3.4 项目管理
+
+- issues：文档以及任务的管理
+- wiki：项目文档管理
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -39525,22 +40572,22 @@ $ git branc
 
         - 初始化
 
-          - 进入一个任意文件夹，如：G:\homework\
+          - 进入一个任意文件夹，如：j:\homework\
           - git init
           - git config 邮箱
           - git config 姓名
           - git remode add origin https://gitee.com/python-ike/cn-ike.git
 
-          注意：至此git已经将G:\homework\管理起来了，此后本文件夹有任何的变动，git都会检测到(使用git status命令可以查看状态)
+          注意：至此git已经将j:\homework\管理起来了，此后本文件夹有任何的变动，git都会检测到(使用git status命令可以查看状态)
 
         - 代码收集并提交
 
           - git status
           - git add .
           - git commit -m '备注内容'
-          - git push origin master 将本地G:\homework\目录同步到码云仓库
+          - git push origin master 将本地j:\homework\目录同步到码云仓库
 
-        - 修改代码或删除文件等对本地G:\homework\目录下的内容同步到码云仓库，执行－－代码收集并提交步骤
+        - 修改代码或删除文件等对本地j:\homework\目录下的内容同步到码云仓库，执行－－代码收集并提交步骤
 
         - 如果远程有本地没有的代码，必须先执行：[可能会引发合并问题]
 
