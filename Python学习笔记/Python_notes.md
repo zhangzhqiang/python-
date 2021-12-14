@@ -37492,6 +37492,8 @@ class StudentsConfig(AppConfig):
 default_app_config = "students.apps.StudentsConfig"
 ```
 
+---
+
 ## 第十六章 工具使用
 
 ### 16.1 redis基础
