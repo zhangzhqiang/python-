@@ -11013,8 +11013,6 @@ http://192.168.254.130:81/
 127.0.0.1:6379>
 ```
 
-
-
 ## 第六章 redis持久化存储
 
 `Redis` 是一种内存型数据库，一旦服务器进程退出，数据库的数据就会丢失，为了解决这个问题，`Redis` 提供了两种持久化的方案，将内存中的数据保存到磁盘中，避免数据的丢失。
@@ -13162,12 +13160,12 @@ cd /etc/yum.repos.d
 [root@localhost yum.repos.d]# yum install salt-minion  # salt-minion
 
 # 4.把下载的包放到/usr/src目录下，执行以下命令
-[root@localhost master]# cd /usr/src/master 或 minion
+[root@localhost master]# cd /usr/src/master 配置minion  cd /usr/src/minion
 [root@localhost master]# yum -y localinstall -y ./*
 
 # 5.修改配置文件
 [root@localhost salt]# cd /etc/salt/
-[root@localhost salt]# cp master master.bak 或 minion
+[root@localhost salt]# cp master master.bak 配置minion cp minion minion.bak
 [root@localhost salt]# cat /etc/salt/master | head -2
 master: 192.168.88.128
 user: root
@@ -13177,7 +13175,7 @@ master: 192.168.88.128
 user: root
 id: minion-01
 
-# 6.启动，查看主机端口
+# 6.启动，查看主/minion机端口
 [root@localhost salt]# service salt-master start
 [root@localhost salt]# systemctl start salt-minion
 [root@localhost salt]# netstat -ntlp
@@ -13299,7 +13297,7 @@ minion-01:
 执行脚本
 
 ```shell
-# 1.新建一个测试脚本
+# 1.在/srv/salt新建一个测试脚本
 [root@localhost srv]# cat test.sh
 #!/bin/bash
 

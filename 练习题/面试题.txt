@@ -44,6 +44,8 @@ MTV各部分的解释
 5.所有的响应都要穿过中间件，对相应的数据进行处理
 6.wsgi将响应的内容发送给浏览器
 
+
+
 # 4.virtualenv工具
 使用virtualenv实现解释器环境的隔离，在系统中建立多个不同并且相互不干扰的虚拟环境，避免项目之间相互受干扰
 
@@ -60,3 +62,17 @@ supervisorctl命令行进程管理工具，可以执行stop、start、restart等
 2.资源消耗少，在3万并发连接下开启10个nginx线程消耗的内存不到200M
 3.可以做http反向代理和负载均衡
 4.支持异步网络i/o事件模型epoll
+
+# 8.saltstack工具
+saltStack管理工具允许管理员对多个操作系统创建一个一致的管理系统
+采用订阅者模式的分布式管理工具，对所管理节点发命令，被管理的节点去执行，然后返回结果
+# 原理
+SaltStack 采用C/S模式，server端就是salt的master，client端就是minion， minion与master之间通过ZeroMQ消息队列通信。
+minion上线后先与master端联系，把自己的pub key发过去，这时master端通过salt-key -L命令就会看到minion的key，接受该minion-key后，也就是master与minion已经互信。
+在master端就可以查看minion状态，salt-run manage.status
+在master端拷贝文件到minion端，salt-cp minion-01 test /tmp
+在master端向minion端执行命令，salt "*" cmd.script "salt://test.sh"
+
+# 9.
+
+
