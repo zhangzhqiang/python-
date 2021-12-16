@@ -11214,6 +11214,10 @@ OK
 # 注：如果该aof日志文件被删除，数据也就无法恢复了
 ```
 
+```powershell
+由于单纯 RDB 的话，可能存在数据的丢失，而频繁的 AOF 又会影响了性能，在 Redis 4.0 之后，支持了混合持久化，也就是每次启动时候通过 RDB+增量的 AOF 文件来进行回复，由于增量的 AOF 仅记录了开始持久化到持久化结束期间发生的增量，这样日志不会太大，性能相对较高。
+```
+
 ### 6.3 redis安全相关
 
 由于发现众多同学，在使用云服务器时，安装的redis3.0+版本都关闭了protected-mode，因而都遭遇了挖矿病毒的攻击，使得服务器99%的占用率！！
@@ -11349,12 +11353,11 @@ slaveof  127.0.0.1  6379
     protected-mode no
     slaveof 127.0.0.1 6379
 
-
 # 2.创建数据文件夹
 [root@localhost bin]# mkdir -p /usr/local/data/6399slave
 
 # 3.启动6399的数据库，查看身份复制关系
-[root@localhost bin]# redis-cli -p 6399 info replication
+[root@localhost bin]# redis-cli -p 6379 info replication
 
 # 4.分别查看redis的复制关系
 [root@localhost bin]# redis-cli -p 6389 info replication
@@ -11415,13 +11418,13 @@ Redis-Sentinel是redis官方推荐的高可用性解决方案，当用redis作ma
 **sentinel主要功能如下：**
 
 - 不时的监控redis是否良好运行，如果节点不可达就会对节点进行下线标识
-- 如果被标识的是主节点，sentinel就会和其他的sentinel节点“协商”，如果其他节点也人为主节点不可达，就会选举一个sentinel节点来完成自动故障转义
+- 如果被标识的是主节点，sentinel就会和其他的sentinel节点“协商”，如果其他节点也认为主节点不可达，就会选举一个sentinel节点来完成自动故障转移
 - 在master-slave进行切换后，master_redis.conf、slave_redis.conf和sentinel.conf的内容都会发生改变，即master_redis.conf中会多一行slaveof的配置，sentinel.conf的监控目标会随之调换
 
 **Sentinel的工作方式：**
 
-```shell
-1.每个Sentinel以每秒钟一次的频率向它所知的Master，Slave以及其他 Sentinel 实例发送一个 PING 命令
+```powershell
+1.每个Sentinel以每秒钟一次的频率向它所知的Master，Slave以及其他 Sentinel 实例发送一个 PING 命令。
 2.如果一个实例（instance）距离最后一次有效回复 PING 命令的时间超过 down-after-milliseconds 选项所指定的值， 则这个实例会被 Sentinel 标记为主观下线。
 3.如果一个Master被标记为主观下线，则正在监视这个Master的所有 Sentinel 要以每秒一次的频率确认Master的确进入了主观下线状态。
 4.当有足够数量的 Sentinel（大于等于配置文件指定的值）在指定的时间范围内确认Master的确进入了主观下线状态， 则Master会被标记为客观下线
@@ -11572,7 +11575,7 @@ sentinel parallel-syncs sentinel-redis-26379 1
 sentinel failover-timeout sentinel-redis-26379 180000
 daemonize yes
 
-[root@localhost bin]# vim sentinel-26389.conf
+[root@localhost bin]# vim sentinel-26399.conf
 port 26399
 dir "/usr/local/data/redis-sentinel"
 logfile "26399.log"
@@ -11617,7 +11620,8 @@ role:master
 connected_slaves:1
 slave0:ip=127.0.0.1,port=6381,state=online,offset=136117,lag=0
 
-# 2.故障的修复，修复6379这个redis数据库，且检查它的一个复制关系,6379数据库会重新假如到主从复制，且变为一个新的从库
+# 2.故障的修复，修复6379这个redis数据库，且检查它的一个复制关系,6379数据库会重新加入到主从复制，且变为一个新的从库
+
 # 3.如果你想恢复他们的主从关系，全部kill掉，重新启动，默认就会以配置文件分配主从关系了
 ```
 
@@ -12322,8 +12326,8 @@ redis.conf详解--补充--
 
 <img src="https://img2018.cnblogs.com/blog/1132884/201809/1132884-20180922154359164-1082041085.png" alt="img" style="zoom: 25%;" />
 
-```shell
-# 但是虚拟化也是有局限性的，每一个虚拟机都是一个完整的操作系统，要分配系统资源，虚拟机多道一定程度时，操作系统本身资源也就消耗殆尽，或者说必须扩容
+```powershell
+但是虚拟化也是有局限性的，每一个虚拟机都是一个完整的操作系统，要分配系统资源，虚拟机多道一定程度时，操作系统本身资源也就消耗殆尽，或者说必须扩容
 ```
 
 **docker与虚拟机的区别**
@@ -12415,7 +12419,7 @@ redis.conf详解--补充--
 ```shell
 # 1.持续交付和部署
 对开发和运维(DevOps)人员来说，最希望的就是一次创建或配置，可以在任意地方正常运行。
-使用Docker可以通过定制应用镜像来实现持续集成、持续交付、部署。开发人员可以通过Dockerfile来进行镜像构建，并结合持续集成(Continuous Integration)系统进行集成测试，而运维人员则可以直接在生产环境中快速部署该镜像，甚至结合持续部署(Continuous Delivery/Deployment)系统进行自动部署。而且使用Dockerfile使镜像构建透明化，不仅仅开发团队可以理解应用运行环 境，也方便运维团队理解应用运行所需条件，帮助更好的生产环境中部署该镜像。
+使用Docker可以通过定制应用镜像来实现持续集成、持续交付、部署。开发人员可以通过Dockerfile来进行镜像构建，并结合持续集成(Continuous Integration)系统进行集成测试，而运维人员则可以直接在生产环境中快速部署该镜像，甚至结合持续部署(Continuous Delivery/Deployment)系统进行自动部署。而且使用Dockerfile使镜像构建透明化，不仅仅开发团队可以理解应用运行环境，也方便运维团队理解应用运行所需条件，帮助更好的生产环境中部署该镜像。
 ```
 
 ```shell
@@ -12433,7 +12437,7 @@ redis.conf详解--补充--
 - 容器：container
 - 仓库：repository
 
-docker整个声明周期就是这三个概念。
+docker整个生命周期就是这三个概念。
 
 **docker镜像**
 
@@ -12449,13 +12453,14 @@ docker整个声明周期就是这三个概念。
 
 > ```shell
 > # 因为镜像包含完整的root文件系统，体积是非常庞大的，因此docker在设计时按照Union FS的技术，将其设计为分层存储的架构。
+> 
 > # 镜像不是ISO那种完整的打包文件，镜像只是一个虚拟的概念，他不是一个完整的文件，而是由一组文件组成，或者多组文件系统联合组成。
 > ```
 
 **docker容器(container)**
 
 > ```shell
-> # image和container的关系，就像面向对象程序设计中的 类和实例一样，镜像是静态的定义（class），容器是镜像运行时的实体（object）。
+> # image和container的关系，就像面向对象程序设计中的类和实例一样，镜像是静态的定义（class），容器是镜像运行时的实体（object）。
 > # 容器可以被创建、启动、停止、删除、暂停
 > # Docker利用容器来运行应用。
 > 
@@ -12473,7 +12478,7 @@ docker整个声明周期就是这三个概念。
 > 
 > # 仓库分为公开仓库(Public)和私有仓库(Private)两种形式。
 > 
-> 最大的公开仓库是Docker Hub，存放了数量庞大的镜像供用户下载。国内的公开仓库包括Docker Pool等，可以提供大陆用户更稳定快读的访问。
+> 最大的公开仓库是Docker Hub，存放了数量庞大的镜像供用户下载。国内的公开仓库包括Docker Pool等，可以提供大陆用户更稳定快速的访问。
 > 
 > 当用户创建了自己的镜像之后就可以使用push命令将它上传到公有或者私有仓库，这样下载在另外一台机器上使用这个镜像时候，只需要从仓库上pull下来就可以了。
 > 
@@ -12486,14 +12491,13 @@ docker整个声明周期就是这三个概念。
 
 Docker Registry 公开服务是开放给用户使用、允许用户管理镜像的 Registry 服务。一般这类公开服务允许用户免费上传、下载公开的镜像，并可能提供收费服务 供用户管理私有镜像。
 最常使用的 Registry 公开服务是官方的 Docker Hub，这也是默认的 Registry，并拥有大量的高质量的官方镜像。除此以外，还有 CoreOS 的 Quay.io，CoreOS 相关的镜像存储在这里；Google 的 Google Container Registry，Kubernetes 的镜像使用的就是这个服务。
-由于某些原因，在国内访问这些服务可能会比较慢。国内的一些云服务商提供了针对 Docker Hub 的镜像服务(Registry Mirror)，这些镜像服务被称为加速器。常见的有阿里云加速器、DaoCloud 加速器、灵雀云加速器等。使用加速器会直接从国内的地址下载 Docker Hub 的镜像，比直接从官方网站下载速度会提高很多。
-国内也有一些云服务商提供类似于 Docker Hub 的公开服务。比如，时速云镜像仓 库、网易云镜像服务、DaoCloud 镜像市场、阿里云镜像库等。
+由于某些原因，在国内访问这些服务可能会比较慢。国内的一些云服务商提供了针对 Docker Hub 的镜像服务(Registry Mirror)，这些镜像服务被称为加速器。常见的有阿里云加速器、DaoCloud 加速器、灵雀云加速器等。使用加速器会直接从国内的地址下载 Docker Hub 的镜像，比直接从官方网站下载速度会提高很多。国内也有一些云服务商提供类似于 Docker Hub 的公开服务。比如，时速云镜像仓 库、网易云镜像服务、DaoCloud 镜像市场、阿里云镜像库等。
 
 ### 7.2 搭建docker
 
 **docker版本**
 
-```shell
+```powershell
 Docker 是一个开源的商业产品，有两个版本：社区版（Community Edition，缩写为 CE）和企业版（Enterprise Edition，缩写为 EE）。
 企业版包含了一些收费服务，个人开发者一般用不到。本文的介绍都针对社区版。
 ```
@@ -12514,7 +12518,6 @@ https://docs.docker.com/install/linux/docker-ce/centos/#upgrade-docker-after-usi
 
 ```shell
 # 使用阿里云的yum源，可以直接安装docker软件，阿里云的docker软件版本可能较低，如果要下载新的，去docker官网找
-
 
 # docker最低支持centos7且在64位平台上，内核版本在3.10以上
 [root@localhost bin]# uname -r
@@ -12621,7 +12624,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 6d9f3d17dcfb        centos              "/bin/bash"         About a minute ago   Exited (0) 19 seconds ago                       jolly_franklin
 
 # 5.运行出一个活着的容器，在后台不断执行程序的容器
-#  docker run  运行镜像文件 -d 是让容器后台运行 -c 指定一段shell代码
+# docker run  运行镜像文件 -d 是让容器后台运行 -c 指定一段shell代码
 # 运行centos镜像，生成容器实例，且有一段shell代码，在后台不断运行，死循环打印一句话，每秒钟打印一次
 [root@localhost bin]# docker run -d centos /bin/sh -c "while true;do echo 我在学习docker;sleep 1;done"
 2380d2c942c628362ce5ea627a31a828e0bacacbb4626e1c9def53933010a20b
