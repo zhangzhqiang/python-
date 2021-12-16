@@ -3005,6 +3005,7 @@ p     # 粘贴yy所复制的内容
 x　　  # 向前删除字符
 X	  # 向后删除字符
 u     # 撤销上一步的操作
+ctrl + r	# 回到上一步的操作
 .     # 重复前一个执行过的动作
 ```
 
@@ -7707,7 +7708,7 @@ deactivate
 scp
 
 # 2.新建一个虚拟环境，用于运行crm
-[root@localhost auto_crm]# virtualenv --python=python  venv_crm
+[root@localhost auto_crm]# virtualenv --python=python3  venv_crm
 
 # 3.激活venv_crm环境
 [root@localhost opt]# source /opt/auto_crm/venv_crm/bin/activate
@@ -7869,12 +7870,12 @@ supervisor是所有进程的父进程，管理着启动的子进展，supervisor
 
 # 4.写入以下内容，[program:xx]是被管理的进程配置参数，xx是进程的名称
 [program:s25crm]
-command=写入启动uwsgi的命令  ;supervisor其实就是在帮你执行命令而已！
-autostart=true       	  ; 在supervisord启动的时候也自动启动
-startsecs=10         	  ; 启动10秒后没有异常退出，就表示进程正常启动了，默认为1秒
-autorestart=true     	  ; 程序退出后自动重启,可选值：[unexpected,true,false]，默认为unexpected，表示进程意外杀死后才重启
-stopasgroup=true     	  ; 默认为false,进程被杀死时，是否向这个进程组发送stop信号，包括子进程
-killasgroup=true     	  ; 默认为false，向进程组发送kill信号，包括子进程
+command=写入启动uwsgi的命令  # supervisor其实就是在帮你执行命令而已！
+autostart=true       	  # 在supervisord启动的时候也自动启动
+startsecs=10         	  # 启动10秒后没有异常退出，就表示进程正常启动了，默认为1秒
+autorestart=true     	  # 程序退出后自动重启,可选值：[unexpected,true,false]，默认为unexpected，表示进程意外杀死后才重启
+stopasgroup=true     	  # 默认为false,进程被杀死时，是否向这个进程组发送stop信号，包括子进程
+killasgroup=true     	  # 默认为false，向进程组发送kill信号，包括子进程
 ```
 
 示例：
@@ -7938,7 +7939,6 @@ supervisorctl -c /etc/supervisord.conf
     supervisor                       RUNNING   pid 3547, uptime 0:00:31
     supervisor> restart all
 
-
 # 9.uwsgi异常崩溃的话，supervisor会立即重启uwsgi
 
 # 10.如果要运行多个uwsgi项目，在supervisor中定义多个任务即可
@@ -7979,13 +7979,13 @@ Tengine是由淘宝网发起的Web服务器项目。它在Nginx的基础上，�
 
 Nginx 是一个高性能的 Web 和反向代理服务器, 它具有有很多非常优越的特性：
 
-- 作为 Web 服务器：相比 Apache，Nginx 使用更少的资源，支持更多的并发连接，体现更高的效率，这点使 Nginx 尤其受到虚拟主机提供商的欢迎。能够支- 持高达 50,000 个并发连接数的响应，感谢 Nginx 为我们选择了 epoll and kqueue 作为开发模型。
+- 作为 Web 服务器：相比 Apache，Nginx 使用更少的资源，支持更多的并发连接，体现更高的效率，这点使 Nginx 尤其受到虚拟主机提供商的欢迎。能够支持高达 50,000 个并发连接数的响应，感谢 nginx 为我们选择了 epoll and kqueue 作为开发模型。
 
-- 作为负载均衡服务器：Nginx 既可以在内部直接支持 Rails 和 PHP，也可以支持作为 HTTP代理服务器 对外进行服务。Nginx 用 C 编写, 不论是系统资源开销还是 CPU 使用效率都比 Perlbal 要好的多。
+- 作为负载均衡服务器：nginx 既可以在内部直接支持 Rails 和 PHP，也可以支持作为 HTTP代理服务器 对外进行服务。nginx 用 C 编写, 不论是系统资源开销还是 CPU 使用效率都比 Perlbal 要好的多。
 
-- 作为邮件代理服务器: Nginx 同时也是一个非常优秀的邮件代理服务器（最早开发这个产品的目的之一也是作为邮件代理服务器），Last.fm 描述了成功并且美妙的使用经验。
+- 作为邮件代理服务器: nginx 同时也是一个非常优秀的邮件代理服务器（最早开发这个产品的目的之一也是作为邮件代理服务器），Last.fm 描述了成功并且美妙的使用经验。
 
-- Nginx 安装非常的简单，配置文件 非常简洁（还能够支持perl语法），Bugs非常少的服务器: Nginx 启动特别容易，并且几乎可以做到7*24不间断运行，即使运行数个月也不需要重新启动。你还能够在 不间断服务的情况下进行软件版本的升级。
+- nginx 安装非常的简单，配置文件 非常简洁（还能够支持perl语法），Bugs非常少的服务器: nginx 启动特别容易，并且几乎可以做到7*24不间断运行，即使运行数个月也不需要重新启动。你还能够在 不间断服务的情况下进行软件版本的升级。
 
 **nginx 与 apache 对比**
 
@@ -8112,7 +8112,8 @@ PATH="/usr/local/nginx/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/r
 
 #### 5.6.2 主配置文件解析
 
-```shell
+```powershell
+详见：https://www.runoob.com/w3cnote/nginx-setup-intro.html
 # 1.定义Nginx运行的用户和用户组
 # user  nobody;
 # 2.nginx进程数，建议设置为等于CPU总核心数。以cpu核数为准
@@ -8130,22 +8131,23 @@ pid        logs/nginx.pid;
 events {
     worker_connections  1024;
 }
+
 # 5.这个http区域，是nginx的核心功能区域
 http {
-    include       mime.types;
-    default_type  application/octet-stream;
+    include       mime.types;	# 文件扩展名与文件类型映射表
+    default_type  application/octet-stream;	# 默认文件类型，默认为text/plain
 	# 6.打开此nginx的访问日志功能，即可查看日志
     log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
                       '$status $body_bytes_sent "$http_referer" '
                       '"$http_user_agent" "$http_x_forwarded_for"';
 
-    access_log  logs/access.log  main;
+    access_log  logs/access.log  main;	# combined为日志格式的默认值
 
-    sendfile        on;
+    sendfile        on;	# 允许sendfile方式传输文件，默认为off，可以在http块，server块，location块
     #tcp_nopush     on;
 
     #keepalive_timeout  0;
-    keepalive_timeout  65;
+    keepalive_timeout  65;	# 连接超时时间，默认为75s，可以在http，server，location块。
 	# 7.nginx开启静态资源压缩，比如nginx返回磁盘的html文件特别大，里面包含了诸多的js css，图片引用
     #  一个html文件 达到4m大小
     #  传输图片 等等都是高清的 1080p图片
@@ -8155,7 +8157,7 @@ http {
     # 提供静态资源缓存功能，第一次访问过网页之后，nginx能够让图片js等静态资源，缓存到浏览器上
     # 浏览器下次访问网站，速度就几乎是秒开了
     # 想要用这些功能，只需要在nginx里打开某些配置即可，作者都已经写好了该功能
-    #
+    
 	# 8.这里的server区域配置，就是虚拟主机的核心配置
     # nginx支持编写多个server{} 区域块，以达到多虚拟主机，多个站点的功能
     # server{} 区域块，可以存在多个，且默认是自上而下去加载，去匹配的
@@ -8203,7 +8205,7 @@ http {
 
 ##### 5.6.2.1 默认网站
 
-```shell
+```powershell
 server {
 listen       80;
 server_name  localhost;
@@ -8235,7 +8237,7 @@ elinks http:127.0.0.1/c -dump
 
 ##### 5.6.2.2 目录访问权限
 
-```shell
+```powershell
 # 只允许本机访问，其他人拒绝访问
 location /a {
                 allow 127.0.0.1;   # 允许此ip的用户可以访问
@@ -8257,7 +8259,7 @@ location /a {
 
 ##### 5.6.2.3 登录验证
 
-```shell
+```powershell
 location /c {
 auth_basic "登陆验证";
 auth_basic_user_file /etc/nginx/htpasswd;
@@ -8284,33 +8286,35 @@ htpasswd -m /etc/nginx/htpasswd sky
 
 Nginx访问日志主要有两个参数控制：
 
+> ```powershell
 > - log_format  # 用来定义记录日志的格式（可以定义多种日志格式，取不同名字即可）
->
-> - access_log  # 用来指定日至文件的路径及使用的何种日志格式记录日志
->
-> - access_log logs/access.log main;
->
 > 
->
+> - access_log  # 用来指定日至文件的路径及使用的何种日志格式记录日志
+> 
+> - access_log logs/access.log main;
+> 
+> 
+> 
 > log_format格式变量：
->
->  $remote_addr #记录访问网站的客户端地址
->
->  $remote_user #远程客户端用户名
->
->  $time_local #记录访问时间与时区
->
->  $request #用户的http请求起始行信息
->
->  $status #http状态码，记录请求返回的状态码，例如：200、301、404等 $body_bytes_sent #服务器发送给客户端的响应body字节数
->
->  $http_referer #记录此次请求是从哪个连接访问过来的，可以根据该参数进行防盗链设置。
->
->  $http_user_agent #记录客户端访问信息，例如：浏览器、手机客户端等
->
->  $http_x_forwarded_for #当前端有代理服务器时，设置web节点记录客户端地址的配置，此参数生效的前提是代理服务器也要进行相关的x_forwarded_fo设置
+> 
+> $remote_addr #记录访问网站的客户端地址
+> 
+> $remote_user #远程客户端用户名
+> 
+> $time_local #记录访问时间与时区
+> 
+> $request #用户的http请求起始行信息
+> 
+> $status #http状态码，记录请求返回的状态码，例如：200、301、404等 $body_bytes_sent #服务器发送给客户端的响应body字节数
+> 
+> $http_referer #记录此次请求是从哪个连接访问过来的，可以根据该参数进行防盗链设置。
+> 
+> $http_user_agent #记录客户端访问信息，例如：浏览器、手机客户端等
+> 
+> $http_x_forwarded_for #当前端有代理服务器时，设置web节点记录客户端地址的配置，此参数生效的前提是代理服务器也要进行相关的x_forwarded_fo设置
+> ```
 
-```shell
+```powershell
 # 自定义一个json格式的访问地址
 log_format main_json '{"@timestamp":"$time_local",'
 '"client_ip": "$remote_addr",'
@@ -8331,7 +8335,7 @@ access_log logs/access_json.log main_json;
 
 ##### 5.6.2.5 防盗链
 
-```shell
+```powershell
 # 防盗链配置，盗链：访问地址重定向到另一个地址的内容
 location /c {
 # location ~* \.(png|gif|bpm)$ {
@@ -8371,7 +8375,7 @@ return 403;
 
 也称之为是nginx的虚拟主机站点配置，指的就是在nginx中，能够通过文件目录的不同，可以定义多个不同的网站
 
-```shell
+```powershell
 # 1.如何修改nginx的首页地址，进入html目录下，找到index.html文件，默认读取的是这个文件
 [root@localhost html]# pwd
 /opt/tngx232/html
@@ -8389,7 +8393,7 @@ return 403;
 
 - 基于IP的多虚拟机主机
 
-```shell
+```powershell
 http {
     server {
         listen       80;
@@ -8437,7 +8441,7 @@ echo web2 > nginx/html/web2/index.html
 
 - 基于域名的多虚拟主机
 
-```shell
+```powershell
 # 1.修改hosts文件，强制写入域名对应关系
 vim /etc/hostes
 192.168.254.130   www.jd.com
@@ -8496,7 +8500,7 @@ http {
 
 - 基于端口的多虚拟主机
 
-```shell
+```powershell
 # 1.修改nginx.conf配置如下，定义2个server{} 区域块即可，如下
 http {
     server {
@@ -8532,7 +8536,7 @@ http {
 
 改完配置文件后，分别创建2个站点的资源目录
 
-```shell
+```powershell
 [root@localhost conf]# mkdir /1021linux  /1021python
 [root@localhost conf]# echo "this is python" > /1021python/index.html
 [root@localhost conf]#
@@ -8549,7 +8553,7 @@ nginx: configuration file /opt/tng232//conf/nginx.conf test is successful
 
 - nginx的404页面优化
 
-```shell
+```powershell
 # 修改nginx.conf，修改一行参数即可
 error_page  404  /40x.html;
 ```
@@ -8800,13 +8804,13 @@ http {
     }
 }
 
-limit_req_zone $binary_remote_addr zone=baism:10m rate=1r/s;
+limit_req_zone $binary_remote_addr zone=joker:10m rate=1r/s;
 # 第⼀个参数：$binary_remote_addr 表示通过remote_addr这个标识来做限制，“binary_”的⽬的是缩写内存占⽤量，是限制同⼀客户端ip地址。
-# 第⼆个参数：zone=baism:10m表示⽣成⼀个⼤⼩为10M，名字为one的内存区域，⽤来存储访问的频次信息。
+# 第⼆个参数：zone=joker:10m表示⽣成⼀个⼤⼩为10M，名字为zone的内存区域，⽤来存储访问的频次信息。
 # 第三个参数：rate=1r/s表示允许相同标识的客户端的访问频次这⾥限制的是每秒1次还可以有⽐如30r/m的。
 
-limit_req zone=baism burst=5 nodelay
-# 第⼀个参数：zone=baism 设置使⽤哪个配置区域来做限制，与上⾯limit_req_zone ⾥的name对应。
+limit_req zone=joker burst=5 nodelay
+# 第⼀个参数：zone=joker 设置使⽤哪个配置区域来做限制，与上⾯limit_req_zone ⾥的name对应。
 # 第⼆个参数：burst=5，重点说明⼀下这个配置，burst爆发的意思，这个配置的意思是设置⼀个⼤⼩为5的缓冲区当有⼤量请求（爆发）过来时，超过了访问频次限制的请求可以先放到这个缓冲区内。
 # 第三个参数：nodelay，如果设置，超过访问频次⽽且缓冲区也满了的时候就会直接返回503，如果没有设置，则所有请求会等待排队。
 
@@ -9026,7 +9030,7 @@ http {
 
 >  rewrite <regex> <replacement> [flflag];
 >
-> ​	关键字  	正则  		替代内容 		flag标记
+> 关键字  	正则  		替代内容 		flag标记
 
 > flag:
 >
@@ -11009,8 +11013,6 @@ http://192.168.254.130:81/
 127.0.0.1:6379>
 ```
 
-
-
 ## 第六章 redis持久化存储
 
 `Redis` 是一种内存型数据库，一旦服务器进程退出，数据库的数据就会丢失，为了解决这个问题，`Redis` 提供了两种持久化的方案，将内存中的数据保存到磁盘中，避免数据的丢失。
@@ -11212,6 +11214,10 @@ OK
 # 注：如果该aof日志文件被删除，数据也就无法恢复了
 ```
 
+```powershell
+由于单纯 RDB 的话，可能存在数据的丢失，而频繁的 AOF 又会影响了性能，在 Redis 4.0 之后，支持了混合持久化，也就是每次启动时候通过 RDB+增量的 AOF 文件来进行回复，由于增量的 AOF 仅记录了开始持久化到持久化结束期间发生的增量，这样日志不会太大，性能相对较高。
+```
+
 ### 6.3 redis安全相关
 
 由于发现众多同学，在使用云服务器时，安装的redis3.0+版本都关闭了protected-mode，因而都遭遇了挖矿病毒的攻击，使得服务器99%的占用率！！
@@ -11347,12 +11353,11 @@ slaveof  127.0.0.1  6379
     protected-mode no
     slaveof 127.0.0.1 6379
 
-
 # 2.创建数据文件夹
 [root@localhost bin]# mkdir -p /usr/local/data/6399slave
 
 # 3.启动6399的数据库，查看身份复制关系
-[root@localhost bin]# redis-cli -p 6399 info replication
+[root@localhost bin]# redis-cli -p 6379 info replication
 
 # 4.分别查看redis的复制关系
 [root@localhost bin]# redis-cli -p 6389 info replication
@@ -11413,13 +11418,13 @@ Redis-Sentinel是redis官方推荐的高可用性解决方案，当用redis作ma
 **sentinel主要功能如下：**
 
 - 不时的监控redis是否良好运行，如果节点不可达就会对节点进行下线标识
-- 如果被标识的是主节点，sentinel就会和其他的sentinel节点“协商”，如果其他节点也人为主节点不可达，就会选举一个sentinel节点来完成自动故障转义
+- 如果被标识的是主节点，sentinel就会和其他的sentinel节点“协商”，如果其他节点也认为主节点不可达，就会选举一个sentinel节点来完成自动故障转移
 - 在master-slave进行切换后，master_redis.conf、slave_redis.conf和sentinel.conf的内容都会发生改变，即master_redis.conf中会多一行slaveof的配置，sentinel.conf的监控目标会随之调换
 
 **Sentinel的工作方式：**
 
-```shell
-1.每个Sentinel以每秒钟一次的频率向它所知的Master，Slave以及其他 Sentinel 实例发送一个 PING 命令
+```powershell
+1.每个Sentinel以每秒钟一次的频率向它所知的Master，Slave以及其他 Sentinel 实例发送一个 PING 命令。
 2.如果一个实例（instance）距离最后一次有效回复 PING 命令的时间超过 down-after-milliseconds 选项所指定的值， 则这个实例会被 Sentinel 标记为主观下线。
 3.如果一个Master被标记为主观下线，则正在监视这个Master的所有 Sentinel 要以每秒一次的频率确认Master的确进入了主观下线状态。
 4.当有足够数量的 Sentinel（大于等于配置文件指定的值）在指定的时间范围内确认Master的确进入了主观下线状态， 则Master会被标记为客观下线
@@ -11570,7 +11575,7 @@ sentinel parallel-syncs sentinel-redis-26379 1
 sentinel failover-timeout sentinel-redis-26379 180000
 daemonize yes
 
-[root@localhost bin]# vim sentinel-26389.conf
+[root@localhost bin]# vim sentinel-26399.conf
 port 26399
 dir "/usr/local/data/redis-sentinel"
 logfile "26399.log"
@@ -11615,7 +11620,8 @@ role:master
 connected_slaves:1
 slave0:ip=127.0.0.1,port=6381,state=online,offset=136117,lag=0
 
-# 2.故障的修复，修复6379这个redis数据库，且检查它的一个复制关系,6379数据库会重新假如到主从复制，且变为一个新的从库
+# 2.故障的修复，修复6379这个redis数据库，且检查它的一个复制关系,6379数据库会重新加入到主从复制，且变为一个新的从库
+
 # 3.如果你想恢复他们的主从关系，全部kill掉，重新启动，默认就会以配置文件分配主从关系了
 ```
 
@@ -12320,8 +12326,8 @@ redis.conf详解--补充--
 
 <img src="https://img2018.cnblogs.com/blog/1132884/201809/1132884-20180922154359164-1082041085.png" alt="img" style="zoom: 25%;" />
 
-```shell
-# 但是虚拟化也是有局限性的，每一个虚拟机都是一个完整的操作系统，要分配系统资源，虚拟机多道一定程度时，操作系统本身资源也就消耗殆尽，或者说必须扩容
+```powershell
+但是虚拟化也是有局限性的，每一个虚拟机都是一个完整的操作系统，要分配系统资源，虚拟机多道一定程度时，操作系统本身资源也就消耗殆尽，或者说必须扩容
 ```
 
 **docker与虚拟机的区别**
@@ -12413,7 +12419,7 @@ redis.conf详解--补充--
 ```shell
 # 1.持续交付和部署
 对开发和运维(DevOps)人员来说，最希望的就是一次创建或配置，可以在任意地方正常运行。
-使用Docker可以通过定制应用镜像来实现持续集成、持续交付、部署。开发人员可以通过Dockerfile来进行镜像构建，并结合持续集成(Continuous Integration)系统进行集成测试，而运维人员则可以直接在生产环境中快速部署该镜像，甚至结合持续部署(Continuous Delivery/Deployment)系统进行自动部署。而且使用Dockerfile使镜像构建透明化，不仅仅开发团队可以理解应用运行环 境，也方便运维团队理解应用运行所需条件，帮助更好的生产环境中部署该镜像。
+使用Docker可以通过定制应用镜像来实现持续集成、持续交付、部署。开发人员可以通过Dockerfile来进行镜像构建，并结合持续集成(Continuous Integration)系统进行集成测试，而运维人员则可以直接在生产环境中快速部署该镜像，甚至结合持续部署(Continuous Delivery/Deployment)系统进行自动部署。而且使用Dockerfile使镜像构建透明化，不仅仅开发团队可以理解应用运行环境，也方便运维团队理解应用运行所需条件，帮助更好的生产环境中部署该镜像。
 ```
 
 ```shell
@@ -12431,7 +12437,7 @@ redis.conf详解--补充--
 - 容器：container
 - 仓库：repository
 
-docker整个声明周期就是这三个概念。
+docker整个生命周期就是这三个概念。
 
 **docker镜像**
 
@@ -12447,13 +12453,14 @@ docker整个声明周期就是这三个概念。
 
 > ```shell
 > # 因为镜像包含完整的root文件系统，体积是非常庞大的，因此docker在设计时按照Union FS的技术，将其设计为分层存储的架构。
+> 
 > # 镜像不是ISO那种完整的打包文件，镜像只是一个虚拟的概念，他不是一个完整的文件，而是由一组文件组成，或者多组文件系统联合组成。
 > ```
 
 **docker容器(container)**
 
 > ```shell
-> # image和container的关系，就像面向对象程序设计中的 类和实例一样，镜像是静态的定义（class），容器是镜像运行时的实体（object）。
+> # image和container的关系，就像面向对象程序设计中的类和实例一样，镜像是静态的定义（class），容器是镜像运行时的实体（object）。
 > # 容器可以被创建、启动、停止、删除、暂停
 > # Docker利用容器来运行应用。
 > 
@@ -12471,7 +12478,7 @@ docker整个声明周期就是这三个概念。
 > 
 > # 仓库分为公开仓库(Public)和私有仓库(Private)两种形式。
 > 
-> 最大的公开仓库是Docker Hub，存放了数量庞大的镜像供用户下载。国内的公开仓库包括Docker Pool等，可以提供大陆用户更稳定快读的访问。
+> 最大的公开仓库是Docker Hub，存放了数量庞大的镜像供用户下载。国内的公开仓库包括Docker Pool等，可以提供大陆用户更稳定快速的访问。
 > 
 > 当用户创建了自己的镜像之后就可以使用push命令将它上传到公有或者私有仓库，这样下载在另外一台机器上使用这个镜像时候，只需要从仓库上pull下来就可以了。
 > 
@@ -12484,14 +12491,13 @@ docker整个声明周期就是这三个概念。
 
 Docker Registry 公开服务是开放给用户使用、允许用户管理镜像的 Registry 服务。一般这类公开服务允许用户免费上传、下载公开的镜像，并可能提供收费服务 供用户管理私有镜像。
 最常使用的 Registry 公开服务是官方的 Docker Hub，这也是默认的 Registry，并拥有大量的高质量的官方镜像。除此以外，还有 CoreOS 的 Quay.io，CoreOS 相关的镜像存储在这里；Google 的 Google Container Registry，Kubernetes 的镜像使用的就是这个服务。
-由于某些原因，在国内访问这些服务可能会比较慢。国内的一些云服务商提供了针对 Docker Hub 的镜像服务(Registry Mirror)，这些镜像服务被称为加速器。常见的有阿里云加速器、DaoCloud 加速器、灵雀云加速器等。使用加速器会直接从国内的地址下载 Docker Hub 的镜像，比直接从官方网站下载速度会提高很多。
-国内也有一些云服务商提供类似于 Docker Hub 的公开服务。比如，时速云镜像仓 库、网易云镜像服务、DaoCloud 镜像市场、阿里云镜像库等。
+由于某些原因，在国内访问这些服务可能会比较慢。国内的一些云服务商提供了针对 Docker Hub 的镜像服务(Registry Mirror)，这些镜像服务被称为加速器。常见的有阿里云加速器、DaoCloud 加速器、灵雀云加速器等。使用加速器会直接从国内的地址下载 Docker Hub 的镜像，比直接从官方网站下载速度会提高很多。国内也有一些云服务商提供类似于 Docker Hub 的公开服务。比如，时速云镜像仓 库、网易云镜像服务、DaoCloud 镜像市场、阿里云镜像库等。
 
 ### 7.2 搭建docker
 
 **docker版本**
 
-```shell
+```powershell
 Docker 是一个开源的商业产品，有两个版本：社区版（Community Edition，缩写为 CE）和企业版（Enterprise Edition，缩写为 EE）。
 企业版包含了一些收费服务，个人开发者一般用不到。本文的介绍都针对社区版。
 ```
@@ -12512,7 +12518,6 @@ https://docs.docker.com/install/linux/docker-ce/centos/#upgrade-docker-after-usi
 
 ```shell
 # 使用阿里云的yum源，可以直接安装docker软件，阿里云的docker软件版本可能较低，如果要下载新的，去docker官网找
-
 
 # docker最低支持centos7且在64位平台上，内核版本在3.10以上
 [root@localhost bin]# uname -r
@@ -12619,7 +12624,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 6d9f3d17dcfb        centos              "/bin/bash"         About a minute ago   Exited (0) 19 seconds ago                       jolly_franklin
 
 # 5.运行出一个活着的容器，在后台不断执行程序的容器
-#  docker run  运行镜像文件 -d 是让容器后台运行 -c 指定一段shell代码
+# docker run  运行镜像文件 -d 是让容器后台运行 -c 指定一段shell代码
 # 运行centos镜像，生成容器实例，且有一段shell代码，在后台不断运行，死循环打印一句话，每秒钟打印一次
 [root@localhost bin]# docker run -d centos /bin/sh -c "while true;do echo 我在学习docker;sleep 1;done"
 2380d2c942c628362ce5ea627a31a828e0bacacbb4626e1c9def53933010a20b
@@ -13158,12 +13163,12 @@ cd /etc/yum.repos.d
 [root@localhost yum.repos.d]# yum install salt-minion  # salt-minion
 
 # 4.把下载的包放到/usr/src目录下，执行以下命令
-[root@localhost master]# cd /usr/src/master 或 minion
+[root@localhost master]# cd /usr/src/master 配置minion  cd /usr/src/minion
 [root@localhost master]# yum -y localinstall -y ./*
 
 # 5.修改配置文件
 [root@localhost salt]# cd /etc/salt/
-[root@localhost salt]# cp master master.bak 或 minion
+[root@localhost salt]# cp master master.bak 配置minion cp minion minion.bak
 [root@localhost salt]# cat /etc/salt/master | head -2
 master: 192.168.88.128
 user: root
@@ -13173,7 +13178,7 @@ master: 192.168.88.128
 user: root
 id: minion-01
 
-# 6.启动，查看主机端口
+# 6.启动，查看主/minion机端口
 [root@localhost salt]# service salt-master start
 [root@localhost salt]# systemctl start salt-minion
 [root@localhost salt]# netstat -ntlp
@@ -13295,7 +13300,7 @@ minion-01:
 执行脚本
 
 ```shell
-# 1.新建一个测试脚本
+# 1.在/srv/salt新建一个测试脚本
 [root@localhost srv]# cat test.sh
 #!/bin/bash
 

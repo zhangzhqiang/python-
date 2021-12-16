@@ -37492,6 +37492,8 @@ class StudentsConfig(AppConfig):
 default_app_config = "students.apps.StudentsConfig"
 ```
 
+---
+
 ## 第十六章 工具使用
 
 ### 16.1 redis基础
@@ -37501,14 +37503,14 @@ Redis是业界主流的key-value nosql 数据库之一。和Memcached类似，�
 Redis 是一个高性能的key-value数据格式的内存缓存，NoSQL数据库(not only sql)，泛指非关系型数据库。
 
 - 非关系型数据库：(redis，hadoop，mangoDB)
-  1. 数据存放在表中，表之间有关系。
-  2. 通用的SQL操作语言。
-  3. 大部分支持事务。
-
-- 关系型数据库: (mysql, oracle, sql server, sqlite)
   1. 没有数据表的概念，不同的nosql数据库存放数据位置不同。
   2. nosql数据库没有通用的操作语言。
   3. 基本不支持事务。   redis支持简单事务
+
+- 关系型数据库: (mysql, oracle, sql server, sqlite)
+  1. 数据存放在表中，表之间有关系。
+  2. 通用的SQL操作语言。
+  3. 大部分支持事务。
 
 **Redis特性：**
 
@@ -37520,7 +37522,7 @@ redis 是一个开源（BSD许可）的，内存中的数据结构存储系统�
 
 - 支持丰富的数据类型 : Redis支持最大多数开发人员已经知道如列表，集合，可排序集合，哈希等数据类型。
 
-- 原子 – Redis的所有操作都是原子性的，意思就是要么成功执行要么失败完全不执行。单个操作是原子性的。多个操作也支持事务，即原子性，通过MULTI和EXEC指令包起来。
+- 原子 – Redis的所有操作都是原子性的，意思就是要么成功执行，要么失败完全不执行。单个操作是原子性的。多个操作也支持事务，即原子性，通过MULTI和EXEC指令包起来。
 
 - Redis是一个多功能实用工具，可以在很多场景使用。如：消息传递队列中使用（Redis原生支持发布/订阅）。
 - 单线程特性，秒杀系统，基于redis是单线程特征，防止出现数据库“爆破”。
@@ -37670,7 +37672,7 @@ print(r.get("foo"))
 
 - string类型：字符串类型是 Redis 中最为基础的数据存储类型，它在 Redis 中是二进制安全的，也就是byte类型。
 - hash类型： hash用于存储对象，对象的结构为属性、值，值的类型为string。key:{域:值[这里的值只能是字符串]}。
-- list类型：列表的元素类型为string。key:[ 值1，值2,值3..... ]。
+- list类型：列表的元素类型为string。key:[ 值1,值2,值3..... ]。
 - set类型：无序集合，元素为string类型，元素唯一不重复，没有修改操作。{值1,值4,值3,值5}。
 - zset类型：有序集合，元素为string类型，元素唯一不重复，没有修改操作。
 
@@ -37694,7 +37696,7 @@ redis中的String在内存中按照一个name对应一个value来存储。
 
   ​	nx，如果设置为True，则只有name不存在时，当前set操作才执行
 
-  ​	xx，如果设置为True，则只有name存在时，岗前set操作才执行
+  ​	xx，如果设置为True，则只有name存在时，当前set操作才执行
 
 ```python
 # 新建
