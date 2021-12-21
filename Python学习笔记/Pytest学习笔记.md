@@ -150,6 +150,7 @@ pytest trademark_case -sv
 定义setup_module和treardown_module全局函数，如下：
 
 ```python
+# trademark_case.py
 def setup_module():
 	print('--初始化模块module--')
 def teardown_module():
@@ -199,11 +200,12 @@ F--用例apply011--
 如下定义 setup_class 和 teardown_class 类方法
 
 ```python
+# cases.py
 def setup_module():
     print('\n *** 初始化-模块 ***')
 
 def teardown_module():
-    print('\n ***   清除-模块 ***')
+    print('\n *** 清除-模块 ***')
 
 class Test_错误密码:
 
@@ -274,6 +276,7 @@ F
 如下定义 setup_method 和 teardown_method 实例方法
 
 ```python
+# cases.py
 def setup_module():
     print('\n *** 初始化-模块 ***')
 
@@ -375,9 +378,7 @@ def st_emptyEnv():
     print(f'\n#### 清除-目录甲')
 ```
 
-注意：这里清除环境的代码就是 yield 之后的代码。 这是一个生成器，具体的说明参见视频讲解。
-
-
+<font color="red">**注意：这里清除环境的代码就是 yield 之后的代码。 这是一个生成器，具体的说明参见视频讲解。**</font>
 
 我们可以在多个目录下面放置这样的文件，定义该目录的初始化清除。
 
@@ -471,7 +472,7 @@ pytest -k C001001 -s
 
 **5. 根据标签**
 
- 可以这样给 某个方法加上标签 webtest 
+可以这样给 某个方法加上标签 webtest 
 
 ```python
 import pytest
@@ -484,13 +485,13 @@ class Test_错误密码2:
         assert 1 == 1
 ```
 
- 然后，可以这样运行指定标签的用例 
+然后，可以这样运行指定标签的用例 
 
 ```python
 pytest cases -m webtest -s
 ```
 
- 也可以这样给整个类加上标签 
+也可以这样给整个类加上标签 
 
 ```python
 @pytest.mark.webtest
@@ -710,5 +711,108 @@ dexdump [dex文件路径]
 aapt dump xmltree [apk包] [需要查看的资源文件xml]
 例:aapt  dump xmltree mm.apk AndroidMainfest.xml > demo.txt(讲mm应用中的AndroidMainfest.xml文件导入到新建的demo.txt文本中)
 这里可能大家有个误区,aapt命令是与adb命令不是同一个命令,如果要使用和adb一样需要配置环境变量,也可以在SDK的build-tools文件夹内,shift+右键在此处打开命令窗口使用该命令!
+```
+
+---
+
+## 附录 注意事项
+
+### 1.自动化等待时间优化
+
+1. 强制等待
+
+```python
+'''
+设置固定休眠时间，单位为秒。 由python的time包提供, 导入 time 包后就可以使用。
+缺点：不智能，使用太多的sleep会影响脚本运行速度。
+'''
+
+import time
+sleep(10)  #等待10秒
+```
+
+2.  隐式等待:implicitly_wait() 
+
+说明：隐式等待是全局的是针对所有元素，设置等待时间如10秒，如果10秒内出现，则继续向下，否则抛异常。可以理解为在10秒以内，不停刷新看元素是否加载出来。
+
+使用场景：隐式等待只需要声明一次，一般在打开浏览器后进行声明。声明之后对整个drvier的生命周期都有效，后面不用重复声明。隐式等待存在一个问题，那就是程序会一直等待整个页面加载完成，也就是一般情况下你看到浏览器标签栏那个小圈不再转，才会执行下一步，但有时候页面想要的元素早就在加载完成了，但是因为个别js之类的东西特别慢，仍得等到页面全部完成才能执行下一步。
+
+```python
+'''
+由webdriver提供的方法，一旦设置，这个隐式等待会在WebDriver对象实例的整个生命周期起作用，
+它不针对某一个元素，是全局元素等待，即在定位元素时，需要等待页面全部元素加载完成，才会执行下一个语句。
+如果超出了设置时间的则抛出异常。
+'''
+driver.implicitly_wait(10) # 隐式等待10秒
+```
+
+<font color="red"> 需要特别说明的是：隐性等待对整个driver的周期都起作用，所以只要设置一次即可，有人把隐性等待当成了sleep在用，走哪儿都来一下… </font>
+
+3.  显示等待:WebDriverWait() 
+
+说明：显示等待是单独针对某个元素，设置一个等待时间如5秒，每隔0.5秒检查一次是否出现，如果在5秒之前任何时候出现，则继续向下，超过5秒尚未出现则抛异常。显示等待与隐式等待相对，显示等待必须在每个需要等待的元素前面进行声明。
+
+使用场景：当打开一个新页面，执行第一个元素操作的时候；当某一步操作会引发页面的加载，并且加载的内容包含了下一步需要操作的元素。一句话，就是当某个元素有加载过程的时候，就需要加上显示等待。
+
+```python
+from selenium.webdriver.support.wait import WebDriverWait
+
+WebDriverWait(driver,timeout,poll_frequency=0.5,ignored_exceptions=None)
+
+'''
+driver: 传入WebDriver实例，即我们上例中的driver
+timeout: 超时时间，等待的最长时间（同时要考虑隐性等待时间）
+poll_frequency: 调用until或until_not中的方法的间隔时间，默认是0.5秒
+ignored_exceptions: 忽略的异常，如果在调用until或until_not的过程中抛出这个元组中的异常，则不中断代码，继续等待，如果抛出的是这个元组外的异常，则中断代码，抛出异常。默认只有NoSuchElementException。
+until
+method: 在等待期间，每隔一段时间调用这个传入的方法，直到返回值不是False
+message: 如果超时，抛出TimeoutException，将message传入异常
+until_not 与until相反，until是当某元素出现或什么条件成立则继续执行，until_not是当某元素消失或什么条件不成立则继续执行，参数也相同，不再赘述。
+'''
+```
+
+看了以上内容基本上很清楚了，调用方法如下：
+
+```python
+WebDriverWait(driver, 超时时长, 调用频率, 忽略异常).until(可执行方法, 超时时返回的信息)
+```
+
+可执行方法包含：
+
+expected_conditions是selenium的一个模块，其中包含一系列可用于判断的条件：
+
+```python
+from selenium.webdriver.support import expected_conditions as EC
+```
+
+ ![img](J:\homework\Python学习笔记\Pytest学习笔记.assets\1437068-20200214160557341-574663931.png) 
+
+```python
+# 判断当前页面标题是否为title
+title_is(title)
+title：	# 期望的页面标题判断当前页面标题是否包含titletitle_contains(title)
+title：	# 期望的页面标题判断此定位的元素是否存在presence_of_element_located(locator)
+locator：# 元素的定位信息判断页面网址中是否包含urlurl_contains(url)
+url：	# 期望的页面网址判断页面网址是否为urlurl_to_be(url)
+url：	# 期望的页面网址判断页面网址不是urlurl_changes(url)
+url：	# 期望的页面网址判断此定位的元素是否可见visibility_of_element_located(locator)
+locator：	# 元素的定位信息判断此元素是否可见visibility_of(element)
+element：	# 所获得的元素判断此定位的一组元素是否至少存在一个presence_of_all_elements_located(locator)
+locator：	# 元素的定位信息判断此定位的一组元素至少有一个可见visibility_of_any_elements_located(locator)
+locator：	# 元素的定位信息判断此定位的一组元素全部可见visibility_of_all_elements_located(locator)
+locator：	# 元素的定位信息判断此定位中是否包含text_的内容text_to_be_present_in_element(locator, text_)
+locator：	# 元素的定位信息text_：期望的文本信息判断此定位中的value属性中是否包含text_的内容text_to_be_present_in_element_value(locator, text_)
+locator：	# 元素的定位信息text_：期望的文本信息判断定位的元素是否为frame，并直接切换到这个frame中frame_to_be_available_and_switch_to_it(locator)
+locator：	# 元素的定位信息判断定位的元素是否不可见invisibility_of_element_located(locator)
+locator：	# 元素的定位信息判断此元素是否不可见invisibility_of_element(element)
+element：	# 所获得的元素判断所定位的元素是否可见且可点击element_to_be_clickable(locator)
+locator：	# 元素的定位信息判断此元素是否不可用staleness_of(element)
+element：	# 所获得的元素判断该元素是否被选中element_to_be_selected(element)
+element：	# 所获得的元素判断定位的元素是否被选中element_located_to_be_selected(locator)
+locator：	# 元素的定位信息判断该元素被选中状态是否和期望状态相同element_selection_state_to_be(element,Boolean)
+element：所获得的元素Boolean：期望的状态（True/False）	# 判断定位的元素被选中状态是否和期望状态相同element_located_selection_state_to_be(locator,Boolean)
+locator：	# 元素的定位信息Boolean：期望的状态（True/False）判断当前浏览器页签数量是否为numnumber_of_windows_to_be(num)
+num：	# 期望的页签数量判断此handles页签不是唯一打开的页签new_window_is_opened(handles)
+handles：	# 页签判断是否会出现alert窗口警报alert_is_present()
 ```
 

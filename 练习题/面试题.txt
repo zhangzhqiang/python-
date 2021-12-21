@@ -45,7 +45,6 @@ MTV各部分的解释
 6.wsgi将响应的内容发送给浏览器
 
 
-
 # 4.virtualenv工具
 使用virtualenv实现解释器环境的隔离，在系统中建立多个不同并且相互不干扰的虚拟环境，避免项目之间相互受干扰
 
@@ -63,6 +62,10 @@ supervisorctl命令行进程管理工具，可以执行stop、start、restart等
 3.可以做http反向代理和负载均衡
 4.支持异步网络i/o事件模型epoll
 
+
+
+
+
 # 8.saltstack工具
 saltStack管理工具允许管理员对多个操作系统创建一个一致的管理系统
 采用订阅者模式的分布式管理工具，对所管理节点发命令，被管理的节点去执行，然后返回结果
@@ -79,11 +82,37 @@ minion上线后先与master端联系，把自己的pub key发过去，这时mast
 执行耗时特别久，且结果不频繁变动的sql，适合将运行结果放入缓存。这样，后面的请求就去缓存中读取，使得请求能够迅速响应。
 大并发的情况下，所有请求直接访问数据库，数据库会出现链接异常，这个时候就需要使用redis做一个缓冲操作，先让请求访问到redis，而不是数据库。
 
-
-
 # 11.docker
 启动快、资源占用少、体积小。
 启动慢，占用资源多、冗余步骤多。
-1.容器不需要进行硬件虚拟以及运行完整系统等额外的开销，只占用需要的资源，所以资源李永利高
-2.直接运行于宿主内核，无需启动完整的操作系统，因此启动速度快
-3.docker镜像提供了除内核外完整的运行环境，确保了应用运行环境一致性，确保代码在同样的环境下执行
+1.容器不需要进行硬件虚拟以及运行完整系统等额外的开销，只占用需要的资源，所以资源利用率高;
+2.直接运行于宿主内核，无需启动完整的操作系统，因此启动速度快;
+3.docker镜像提供了除内核外完整的运行环境，确保了应用运行环境一致性，确保代码在同样的环境下执行;
+
+# 12.unittest && pytest
+unittest最核心的四部分是：TestCase，TestSuite，TestRunner，TestFixture
+
+TestCase：用户自定义的测试case的基类，调用run()方法，会依次调用setUp方法、执行用例的方法、tearDown方法。
+
+TestSuite：测试用例集合，可以通过addTest()方法手动增加Test Case，也可以通过TestLoader自动添加Test Case，TestLoader在添加用例时，会没有顺序。
+
+TestRunner：运行测试用例的驱动类，可以执行TestCase，也可以执行TestSuite，执行后TestCase和TestSuite会自动管理TESTResult。
+
+TestFixture：简单来说就是做一些测试过程中需要准备的东西，比如创建临时的数据库，文件和目录等，其中setUp()和setDown()是最常用的方法
+
+整个的流程就是首先要写好TestCase，然后由TestLoader加载TestCase到TestSuite，然后由TestTestRunner来运行TestSuite，运行的结果保存在TextTestReusult中，整个过程集成在unittest.main模块中。
+
+
+pytest:执行命令
+pytest -k 指定函数、类、模块、目录名包含的关键字，可以使用逻辑运算符
+pytest -m 标签，给函数、类、模块加上装饰器，pytest.mark.webtest
+
+
+POM模型：
+● webpage---selenium的基类,对selenium进行封装
+● pageelements---页面元素,把页面元素单独提取出来,放在一个文件
+● trademarkpage---页面对象类,把selenium方法和页面元素进行整合,实现解耦
+● test_trademark_case---使用pytest对整合的trademarkpage进行测试用例编写
+总结：通过POM模型思维,把selenium方法,页面元素,页面对象,测试用例进行了拆分,在自动化测试中很少情况会新增代码,
+但当用例多的情况下,代码量会在用例增加的情况下明显嫌少,减少冗余代码，并且以后维护代码更加直观,代码可读性也比工厂化模式强很多,
+极大得提高了代码复用率。

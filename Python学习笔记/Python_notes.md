@@ -224,7 +224,7 @@ print(msg)
 
 ### 2.7 变量
 
-变量是可变的,一旦定义后会加载到内容,方便以后的调用,变量定义不仅可以使用数字,还可以使用任意数据类型,但是我们一般定义的时候要遵循一定的规范,在代码中会更清晰,更整洁,容易理解.
+变量是可变的，一旦定义后会加载到内容,方便以后的调用，变量定义不仅可以使用数字，还可以使用任意数据类型，但是我们一般定义的时候要遵循一定的规范，在代码中会更清晰,更整洁,容易理解。
 
 变量定义规范:
 
@@ -233,9 +233,9 @@ print(msg)
 - 变量不能使用python关键字 **`[‘and’, ‘as’, ‘assert’, ‘break’, ‘class’, ‘continue’, ‘def’, ‘del’, ‘elif’, ‘else’, ‘except’, ‘exec’, ‘finally’, ‘for’, ‘from’, ‘global’, ‘if’, ‘import’, ‘in’, ‘is’, ‘lambda’, ‘not’, ‘or’, ‘pass’, ‘print’, ‘raise’, ‘return’, ‘try’, ‘while’, ‘with’, ‘yield’]`**
 - 变量一般使用英文，不要使用拼音
 - 变量要以下划线连接两个英文单词
-- 变量可以使用驼峰式命名：`BaseName = 'ike'`,但一般是使用下划线
+- 变量可以使用驼峰式命名：`BaseName = 'ike'`，但一般是使用下划线
 
-建议:变量命名要见名知意,比如:name = `"ike"`  age = 18
+建议：变量命名要见名知意，比如:name = `"ike"`  age = 18
 
 ```python
 # 第一题
@@ -276,7 +276,7 @@ print = 666 # 关键字
 
 ### 2.8 常量
 
-常量一旦定义,一般不会去修改.但Python中针对常量没有一个规范,程序猿一般使用变量大写来定义常量,这也是Python中的'潜规则'
+常量一旦定义，一般不会去修改。但Python中针对常量没有一个规范，程序猿一般使用变量大写来定义常量，这也是Python中的'潜规则'
 
 ```python
 USER_LIST = [11,22,3]
@@ -292,11 +292,9 @@ print(USER_LIST)
 
 ### 2.9 注释
 
-在我们学习中,经常会对一些不好理解的东西在傍边会加一些标记或说明,在我们的代码中也是这样的.
+在我们学习中，经常会对一些不好理解的东西在旁边会加一些标记或说明，在我们的代码中也是这样的。
 
-我们写代码的时候,有些逻辑过于复杂,我们在写的时候能看懂,但随着代码量的增加,回头再让你看某一段代码,
-
-也学你不是一下能看明白的.所以在写代码的时候,我们要养成加注释的习惯.
+我们写代码的时候，有些逻辑过于复杂，我们在写的时候能看懂，但随着代码量的增加，回头再让你看某一段代码。也学你不是一下能看明白的。所以在写代码的时候，我们要养成加注释的习惯。
 
 ```python
 # print('hello') 这样就是对这个代码进行注释,并且这个代码不会执行
@@ -393,7 +391,7 @@ else:
 - 通过循环,打印1-10
 
   ```python
- count = 1
+count = 1
   while True:
       print(count)
       if count == 10:
@@ -1528,7 +1526,7 @@ age = 18
     # print(info)
     ```
 
-  - update--->键不存在,则添加,存在,则更新
+    - update--->键不存在,则添加,存在,则更新
 
     ```python
     info = {'k1': 'v1', 'k2': 'v2'}
@@ -2176,7 +2174,7 @@ The default mode is 'rt' (open for reading text).
 
 注意事项：文件路径
 
-- 相对路径：运行程序中写的文件路径为相对路径，在终端运行可以报找不到文件路径
+- 相对路径：运行程序中写的文件路径为相对路径，在终端运行可能报找不到文件路径
 
 ![image-20210531133025734](j:\homework\Python学习笔记\Python_notes.assets\image-20210531133025734.png)
 
@@ -2586,7 +2584,7 @@ with open("练习题/gupiap.log", "r", encoding="utf-8") as file_obj:
 
 5. 根据要求修改文件的内容，原文件内容如下：`ha.conf`  
 
-   ```
+   ```python
    global
            log 127.0.0.1 local2
            daemon
@@ -10632,7 +10630,7 @@ if 'egon' == info['name'] and 18 == info['age']:
 
 三次握手
 
- ![img](J:\homework\Python学习笔记\Python_notes.assets\format,png)
+ ![三次握手](J:\homework\Python学习笔记\Python_notes.assets\format,png) 
 
  这张图展示了建立TCP连接所需的三次握手过程。
 
@@ -10652,7 +10650,7 @@ if 'egon' == info['name'] and 18 == info['age']:
 
 四次挥手：
 
- ![img](J:\homework\Python学习笔记\Python_notes.assets\format1,png)
+  ![四次挥手](J:\homework\Python学习笔记\Python_notes.assets\format1,png) 
 
 这张图展示了断开TCP连接所需的四次挥手过程。
 
@@ -40852,5 +40850,95 @@ sudo apt-get -y purge wodim #命令刻碟
    sudo service network-manager start
    ```
 
-   
+### 3. 面试记录
+
+#### 3.1 可hash的数据类型
+
+hash值得计算过程是依据这个值的一些特征计算的，这就要求hash值必须固定，因此hash的值必须是不可变的。 
+
+| 不可变类型 | 可变类型 |
+| ---------- | -------- |
+| 数字       |          |
+| 字符串     | 列表     |
+| 元组       |          |
+| 字典的key  |          |
+
+#### 3.2 sort 与sorted的区别
+
+sort()与sorted()的不同在于，sort是在原位重新排列列表，而sorted()是产生一个新的列表。
+
+sort 是应用在 list 上的方法，sorted 可以对所有可迭代的对象进行排序操作。
+
+**list 的 sort 方法返回的是对已经存在的列表进行操作，而内建函数 sorted 方法返回的是一个新的 list，而不是在原来的基础上进行的操作**。
+
+示例一：
+
+```python
+>>> a=[1,2,5,3,9,4,6,8,7,0,12]
+>>> a.sort()
+>>> a
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12]
+>>> a=[1,2,5,3,9,4,6,8,7,0,12]
+>>> a
+[1, 2, 5, 3, 9, 4, 6, 8, 7, 0, 12]
+>>> sorted(a)
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12]
+>>> a
+[1, 2, 5, 3, 9, 4, 6, 8, 7, 0, 12]
+
+# 区别：
+# 对于一个无序的列表a，调用a.sort()，对a进行排序后返回a，sort()函数修改待排序的列表内容。
+# 而对于同样一个无序的列表a，调用sorted(a)，对a进行排序后返回一个新的列表，而对a不产生影响
+```
+
+示例二：
+
+```python
+>>> list1=[(8, 'Logan', 20), (2, 'Mike', 22), (5, 'Lucy', 19)]
+>>> list1.sort()
+>>> list1
+[(2, 'Mike', 22), (5, 'Lucy', 19), (8, 'Logan', 20)]
+
+>>> list1=[(8, 'Logan', 20), (2, 'Mike', 22), (5, 'Lucy', 19)]
+>>> sorted(list1)
+[(2, 'Mike', 22), (5, 'Lucy', 19), (8, 'Logan', 20)]
+>>> list1
+[(8, 'Logan', 20), (2, 'Mike', 22), (5, 'Lucy', 19)]
+
+# 小结：
+# 由示例可以看出，当列表由list（或者tuple）组成时，默认情况下，sort和sorted都会根据list[0]（或者tuple[0]）作为排序的key，进行排序。
+# 以上都是默认的排序方式，我们可以编写代码控制两个函数的排序行为。主要有三种方式：基于key函数；基于cmp函数和基于reverse函数
+```
+
+基于key函数排序
+
+```python
+>>> list1=[(8, 'Logan', 20), (2, 'Mike', 22), (5, 'Lucy', 19)]
+>>> list1.sort(key=lambda x:x[2])
+>>> list1
+[(5, 'Lucy', 19), (8, 'Logan', 20), (2, 'Mike', 22)]
+
+>>> list1=[(8, 'Logan', 20), (2, 'Mike', 22), (5, 'Lucy', 19)]
+>>> sorted(list1, key=lambda x:x[2])
+[(5, 'Lucy', 19), (8, 'Logan', 20), (2, 'Mike', 22)]
+>>> list1
+[(8, 'Logan', 20), (2, 'Mike', 22), (5, 'Lucy', 19)]
+```
+
+ 基于reverse函数
+
+```python
+>>> a=[1,2,5,3,9,4,6,8,7,0,12]
+>>> a.sort(reverse=False)
+>>> a
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12]
+
+>>> a=[1,2,5,3,9,4,6,8,7,0,12]
+>>> a.sort(reverse=True)
+>>> a
+[12, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+>>> a.sort(reverse=True)
+
+# 小结：reverse=False为升序排序(默认)；reverse=True为降序排序
+```
 
