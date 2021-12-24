@@ -9274,7 +9274,14 @@ print(dog.all_type)
 
 ### 8.10 多态与多态性
 
+**让具有不同功能的函数可以使用相同的函数名，这样就可以用一个函数名调用不同内容(功能)的函数**
+
 - 多态：指的是同一类事物的多种形态
+
+    - 1、只关心对象的实例方法是否同名，不关心对象所属的类型；
+    - 2、对象所属的类之间，继承关系可有可无；
+    - 3、多态的好处可以增加代码的外部调用灵活度，让代码更加通用，兼容性比较强；
+    - 4、多态是调用方法的技巧，不会影响到类的内部设计；
 
 - 多态性：指的是可以在不考虑对象的类型的情况下而直接使用对象，多态性分为静态多态性和动态多态性
 
@@ -9282,28 +9289,66 @@ print(dog.all_type)
 
     - 动态多态性：如下
 
+        调用同一个函数`func()`, 传入不同的参数（对象），可以达成不同的功能 
+        
         ```python
+        import abc  # 利用abc模块实现抽象类
+        
+        
+        class Animal(metaclass=abc.ABCMeta):  # 抽象类只能被继承,不能被实例化
+            all_type = 'animal'
+        
+            @abc.abstractmethod  # 继承后,加装饰器的,必须遵循类的方法
+            def run(self):
+                pass
+        
+            @abc.abstractmethod  # 继承后,加装饰器的,必须遵循类的方法
+            def eat(self):
+                pass
+        
+        
+        class People(Animal):  # 子类继承抽象类，但是必须定义run和eat方法
+            def run(self):
+                print('people is walking')
+        
+            def eat(self):
+                print('people is eating')
+        
+        
+        class Pig(Animal):  # 子类继承抽象类，但是必须定义run和eat方法
+            def run(self):
+                print('pig is walking')
+        
+            def eat(self):
+                print('pig is eating')
+        
+        
+        class Dog(Animal):  # 子类继承抽象类，但是必须定义run和eat方法
+            def run(self):
+                print('dog is walking')
+        
+            def eat(self):
+                print('dog is eating')
+        
+        
         # 多态性:指的是可以在不考虑对象的类型的情况下而直接使用对象
         peo = People()
         dog = Dog()
         pig = Pig()
-        cat = Cat()
         
-        
-        peo.talk()
-        dog.talk()
-        pig.talk()
+        # peo.eat()
+        # dog.eat()
+        # pig.eat()
         
         
         # 更进一步,我们可以定义一个统一的接口来使用
         def func(obj):
-            obj.talk()
+            obj.eat()
         
         
         func(peo)
-        func(cat)
-        func(pig)
         func(dog)
+        func(pig)
         ```
 
 多态性的优点：
@@ -9314,6 +9359,11 @@ print(dog.all_type)
     - 通过继承animal类创建了一个新的类，使用者无需更改自己的代码，还是用`func(animal)`去调用
 
 ### 8.11 鸭子类型
+
+调用不同的子类将会产生不同的行为，而无须明确知道这个子类实际上是什么，这是多态的重要应用场景。而在python中，因为鸭子类型(duck typing)使得其多态不是那么酷。
+鸭子类型是动态类型的一种风格。在这种风格中，一个对象有效的语义，不是由继承自特定的类或实现特定的接口，而是由"当前方法和属性的集合"决定。这个概念的名字来源于由James Whitcomb Riley提出的鸭子测试，“鸭子测试”可以这样表述：“当看到一只鸟走起来像鸭子、游泳起来像鸭子、叫起来也像鸭子，那么这只鸟就可以被称为鸭子。”
+在鸭子类型中，关注的不是对象的类型本身，而是它是如何使用的。例如，在不使用鸭子类型的语言中，我们可以编写一个函数，它接受一个类型为"鸭子"的对象，并调用它的"走"和"叫"方法。在使用鸭子类型的语言中，这样的一个函数可以接受一个任意类型的对象，并调用它的"走"和"叫"方法。如果这些需要被调用的方法不存在，那么将引发一个运行时错误。任何拥有这样的正确的"走"和"叫"方法的对象都可被函数接受的这种行为引出了以上表述，这种决定类型的方式因此得名。
+**鸭子类型通常得益于不测试方法和函数中参数的类型，而是依赖文档、清晰的代码和测试来确保正确使用。** 
 
 python中有一句谚语说的好，你看起来像鸭子，那么你就是鸭子。
 
@@ -9337,27 +9387,34 @@ class Text:
     def write(self):
         print('text write')
 
+# 鸭子类型：我们并不关心这个对象的类型本身，而是这个类是如何被使用的
+def func(obj):
+    obj.write()
+    obj.read()
 
 disk = Disk()
 text = Text()
 
-disk.read()
-disk.write()
-
-text.read()
-text.write()
+func(disk)
+func(text)
 ```
+
+ 可以很明显的看出，`Disk`类拥有跟`Text`类一样的方法，当有一个函数调用`Disk`类，并利用到了两个方法`read()`和`write()`。我们传入`Disk`类也一样可以运行，函数并不会检查对象的类型是不是`Disk`，只要他拥有`read()`和`write()`方法，就可以正确的被调用。 
+再举例，如果一个对象实现了`__getitem__`方法，那python的解释器就会把它当做一个`collection`，就可以在这个对象上使用切片，获取子项等方法；如果一个对象实现了`__iter__`和`next`方法，python就会认为它是一个`iterator`，就可以在这个对象上通过循环来获取各个子项。 
 
 Disk和 Text两个类完全没有耦合性，但是在某种意义上他们却统一了一个标准。
 
+以上可以看出，func函数不会检查对象的类型，而是直接调用这个对象的走和游的方法，如果所需要的方法不存在就会报错。
+
 对相同的功能设定了相同的名字，这样方便开发，这两个方法就可以互称为鸭子类型。
 
-例如：序列类型有多种形态：字符串，列表，元组，但他们直接没有直接的继承关系
+例如：序列类型有多种形态：字符串，列表，元组，但他们之间没有直接的继承关系
 
 ```python
-l = list([1, 2, 3])
-t = tuple((1, 2, 3, 4, 5))
+l = [1, 2, 3]
+t = (1, 2, 3, 4, 5)
 s = 'hahaha'
+d = {"a": 100}
 
 
 # print(l.__len__())
@@ -9373,6 +9430,34 @@ print(len(l))
 print(len(t))
 print(len(s))
 ```
+
+```python
+a = [1, 2, 3]
+b = (4, 5, 6)  # 元组
+c = "123"  # 字符串
+d = {"a": 100}  # 字典
+e = 1  # int
+
+# a.extend(b)
+# print(a)
+# a.extend(c)
+# print(a)
+a.extend(d)
+print(a)
+# a.extend(e)  # e 不可迭代，无法调用extend函数
+# print(a)
+
+# 打印：
+[1, 2, 3, 4, 5, 6]
+[1, 2, 3, 4, 5, 6, '1', '2', '3']
+[1, 2, 3, 4, 5, 6, '1', '2', '3', 'a']
+Traceback (most recent call last):
+  File "H:/Luffycity/test_pro/trademark_apply/test.py", line 13, in <module>
+    a.extend(e)  # e 不可迭代，无法调用extend函数
+TypeError: 'int' object is not iterabl
+```
+
+
 
 这样的例子很多：字符串，列表，元组都有len方法，这就是统一了规范，这样的现象就是可以互称为鸭子类型。
 
@@ -9773,6 +9858,8 @@ Sex = 'female'
 
 
 class People:
+    addr = "厦门"
+
     def __init__(self, name, age, sex):
         self.id = self.create_id()
         self.name = name
@@ -9780,7 +9867,7 @@ class People:
         self.sex = sex
 
     def tell(self):  # 绑定到对象的方法
-        print('Name:%s Age:%s Sex:%s' % (self.name, self.age, self.sex))
+        print('Name:%s Age:%s Sex:%s AAA:%s' % (self.name, self.age, self.sex, self.addr))
 
     @classmethod  # 绑定到类的方法
     def from_conf(cls):
@@ -9796,11 +9883,16 @@ class People:
 p = People('ike', 18, 'male')
 
 # 绑定给对象,就应该由对象来调用,自动将对象本身当做第一个参数传入
-p.tell()
+p.tell()  # Name:ike Age:18 Sex:male
 
 # 绑定给类,就应该由类来调用,自动将类本身当做第一个参数传入
 p = People.from_conf()
-p.tell()
+p.tell()  # Name:egon Age:18 Sex:female
+
+a = p.from_conf()
+print(a.addr)  # egon
+
+# 注意：绑定给对象，可以由类的对象来调用成员变量和类变量；绑定给类，可以调用类变量，不能调用成员变量；
 
 # 非绑定方法,不与类或者对象绑定,谁都可以调用,没有自动传值一说
 p1 = People('ike', 18, 'male')
@@ -9837,13 +9929,13 @@ class Mariadb(MySQL):
 
 
 m = Mariadb.from_conf()
-print(m)
+print(m)	# classmethod：<192.168.1.203:9090>	staticmethod：就不告诉你
 ```
 
 我们发现：
 
-- `@classmethod`修饰后，自动将类当作第一个参数传入
-- `@staticmethod`修饰后，不会自动将类当作第一个参数传入
+- `@classmethod` 修饰后，自动将类当作第一个参数传入
+- `@staticmethod` 修饰后，不会自动将类当作第一个参数传入
 
 ### 8.14 内置方法
 
@@ -40940,5 +41032,49 @@ sort 是应用在 list 上的方法，sorted 可以对所有可迭代的对象�
 >>> a.sort(reverse=True)
 
 # 小结：reverse=False为升序排序(默认)；reverse=True为降序排序
+```
+
+#### 3.3 类变量、成员变量、静态变量、局部变量概念
+
+首先，Python语言并不支持静态变量。因为Python是动态语言，不存在完全静态的变量。 
+Python中，静态成员变量称为类变量，非静态成员变量称为实例变量，成员变量。
+
+**基本概念：**
+
+<font color="red"> 类变量：</font> 类变量定义在类中且在函数体之外。类变量通常不作为实例变量使用。类变量在整个实例化的对象中是公用的。 
+
+<font color="red"> 实例变量：</font>  定义在方法中的变量，用 self 绑定到实例上，只作用于当前实例的类。 
+
+```python
+class TestClass(object):
+    val1 = 100
+
+    def __init__(self):
+        self.val2 = 200
+
+    def fnc(self, val=400):
+        val3 = 300
+        self.val4 = val
+        self.val5 = 500
+
+
+if __name__ == '__main__':
+    inst = TestClass()
+
+    print(TestClass.val1)
+    print(inst.val1)
+    print(TestClass.val2)  # 会报错，类不能访问成员变量
+    print(inst.val2)
+    print(inst.val3)  # 会报错
+    print(inst.val4)  # 会报错
+    print(inst.val5)  # 会报错
+```
+
+```powershell
+
+val1 是类变量，可以由类名直接调用，也可以由对象来调用；
+val2 是成员变量，可以由类的对象来调用，这里可以看出成员变量一定是以self.的形式给出的，因为self的含义就是代表实例对象；如果__init__内的变量没有加self，那就变成一个__init__的局部变量；
+val3 不是成员变量，它只是函数fnc内部的局部变量；
+val4和val5 是成员变量，但并没有初始化，所以这里会报错
 ```
 
