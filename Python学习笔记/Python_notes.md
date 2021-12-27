@@ -14723,8 +14723,8 @@ MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，
 
 - 官网下载：MySQL Community Server 5.7.16
 - 解压下载包：如果想要让MySQL安装在指定目录，那么就将解压后的文件夹移动到指定目录，如：C:\mysql-5.7.16-winx64
-- 添加环境变量步骤：右键计算机-->属性-->高级系统设置-->环境变量-->系统变量中找到path-->将MySQL的安装目录下的bin目录路径放到path中，用分号分割
-- 以管理员的身份打开cmd，初始化，制作系统服务：mysqld --initialize
+- 添加环境变量步骤：右键计算机-->属性-->高级系统设置-->环境变量-->系统变量中找到path-->将MySQL的安装目录下的bin目录路径放到path中，用分号分割   *Rd3;Yz5kwEx
+- 以管理员的身份打开cmd，初始化，制作系统服务：mysqld --initialize --user=mysql --console
 - 启动MySQL服务：以管理员身份打开cmd，输入 net start mysql
 - 关闭MySQL服务：以管理员身份打开cmd，输入 net stop mysql
 
@@ -14734,6 +14734,9 @@ MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，
 # 初始状态下，管理员root，密码为空，默认只允许从本机登录localhost
 mysqladmin -uroot -p password "123"  # 设置初始密码 由于原密码为空，因此-p可以不用
 mysqladmin -uroot -p "123" password "456"  # 修改mysql密码,因为已经有密码了，所以必须输入原密码才能设置新密码
+
+# 提示：You must reset your password using ALTER USER statement before executing this statement.修改密码
+alter user user() identified by "123456";
 ```
 
 ### 11.5 破解密码
