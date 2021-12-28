@@ -816,9 +816,9 @@ class QuickStartUser(HttpUser):
 
 ![1640407817809](J:\homework\Python学习笔记\Test学习笔记.assets\1640407817809.png)
 
-> - Number of users to simulate 设置虚拟用户总数
-> - Hatch rate (users spawned/second) 每秒启动虚拟用户数
-> - 点击Start swarming 开始运行性能测试
+> - Number of users to simulate  设置虚拟用户总数
+> - Hatch rate (users spawned/second)  每秒启动虚拟用户数
+> - 点击Start swarming  开始运行性能测试
 
 ![1640407277999](J:\homework\Python学习笔记\Test学习笔记.assets\1640407277999.png)
 
@@ -872,9 +872,23 @@ class QuickStartUser(HttpUser):
 
 ![1640407766332](J:\homework\Python学习笔记\Test学习笔记.assets\1640407766332.png)
 
+每秒请求总数：如果上下波动较大，说明性能不稳定
+
+- 每秒总的请求数，也需要看趋势
+- 有没有某些时刻，请求数大幅度波动
+
 ![1640407777866](J:\homework\Python学习笔记\Test学习笔记.assets\1640407777866.png)
 
+响应时间：黄色为最大时间，绿色为最小时间。一般3-5秒为最佳，超过10秒为较差，最大值如果持续高位就需要进行性能优化。 
+
+- 接口响应时间，主要看趋势，是否平稳
+- 有无某些时刻，响应时间有大幅度波动
+
 ![1640407785854](J:\homework\Python学习笔记\Test学习笔记.assets\1640407785854.png)
+
+虚拟用户数
+
+- 两秒钟有上了一个虚拟用户（线程），且一直是一个线程
 
 > #### Charts 图表
 >
@@ -914,31 +928,40 @@ class QuickStartUser(HttpUser):
 | 任务       | 目标         | 操作                 | 参数              | 条件                   |
 | ---------- | ------------ | -------------------- | ----------------- | ---------------------- |
 | 100%       | 接口：login  | 发送登录请求         | username,password |                        |
-| 25% - stp1 | 页面：/hello | 浏览 hello 页面      | /                 |                        |
-| 25% -stp2  | 页面：/world | 浏览 world 页面      | /                 |                        |
-| 75%        | 页面：/item  | 浏览指定项目id的页面 | id                | 随机浏览id值范围为1~10 |
+| 25% - stp1 | 页面：/index | 浏览 index 页面      | /                 |                        |
+| 25% - stp2 | 页面：/view  | 浏览 view 页面       | /                 |                        |
+| 75%        | 页面：/item  | 浏览指定项目id的页面 | id                | 随机浏览id值范围为1~11 |
 
 脚本实现：
 
 ```python
+import os
 import random
 from locust import HttpUser, task, between
 
+
 class QuickStartUser(HttpUser):
     wait_time = between(5, 9)
+    header = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"
+    }
 
     @task
     def index_page(self):
-        self.client.get("/hello")
-        self.client.get("/world")
+        self.client.get("/studentcenter/adv/GetAdvertList", headers=self.header)
 
     @task(3)
     def view_item(self):
-        item_id = random.randint(1, 10)
-        self.client.get(f"/item?id={item_id}", name="/item")
+        item_id = random.randint(1, 11)
+        self.client.get("/StudentCenter/Navigation/menu?bust=1640683458756&id=%s&_=1640683458093" % item_id, headers=self.header, name="/item")
 
     def on_start(self):
-        self.client.post("/login", {"username":"foo", "password":"bar"})
+        data = {"loginName": "zzq283814", "passWord": "283814zzq"}
+        self.client.post("/Account/UnitLogin", headers=self.header, data=data)
+
+
+if __name__ == '__main__':
+    os.system("locust -f aopeng.py --host=https://learn.open.com.cn")
 ```
 
 脚本解释：
@@ -970,37 +993,484 @@ class QuickstartUser(HttpUser):
 ```python
 @task
 def index_page(self):
-    self.client.get("/hello")
-    self.client.get("/world")
+    self.client.get("/studentcenter/adv/GetAdvertList", headers=self.header)
 
 @task(3)
 def view_item(self):
-    ...
+	item_id = random.randint(1, 11)
+	self.client.get("/StudentCenter/Navigation/menu?bust=1640683458756&id=%s&_=1640683458093" % item_id, headers=self.header, name="/item")
 ```
 
-> 在定义的两个任务  index_page 和 view_item 通过装饰器控制了他们执行的权重为1：3，你可以理解为在每轮迭代的循环中，index_page将有25%的概率被执行，而view_item将有75%的概率被执行，执行index_page时，将有两个页面按访问请求，分别是 /hello 和 /world
+> 在定义的两个任务  index_page 和 view_item 通过装饰器控制了他们执行的权重为1：3，你可以理解为在每轮迭代的循环中，index_page将有25%的概率被执行，而view_item将有75%的概率被执行，执行index_page时，将有两个页面按访问请求，分别是 /index_page 和 /view_item
 
 ```python
 @task(3)
 def view_item(self):
-    item_id = random.randint(1, 10000) 
-    self.client.get(f"/item?id={item_id}", name="/item")
+	item_id = random.randint(1, 11)
+	self.client.get("/StudentCenter/Navigation/menu?bust=1640683458756&id=%s&_=1640683458093" % item_id, headers=self.header, name="/item")
 ```
 
-> 在 view_item 任务中，通过使用1~10000的随机查询参数加载动态URL。为了不在 Locust 的统计信息中获得 10000 个单独的条目。
+> 在 view_item 任务中，通过使用1~11的随机查询参数加载动态URL。为了不在 Locust 的统计信息中获得 11 个单独的条目。
 > 为了把这个动态 URL 的所有响应样本作为一个整体进行统计，使用 name 参数将所有这些请求分组到名为“ / item”的条目下。
 > 只有定义了 @task 的任务才会被执行。 
 
 ```python
 def on_start(self):
-    self.client.post("/login", {"username":"foo", "password":"bar"})
+    data = {"loginName": "zzq283814", "passWord": "283814zzq"}
+    self.client.post("/Account/UnitLogin", headers=self.header, data=data)
 ```
 
 > 在这里，我们声明了一个 on_start，用于模拟用户启动的时候，每个用户必须执行的初始化操作，在此，它是一个 login 接口请求。
 
+![1640693892429](J:\homework\Python学习笔记\Test学习笔记.assets\1640693892429.png)
+
+1. Fails
+
+- 先观察请求失败的数量
+- 一般请求通过率需要99.99%，达不到标准需要跟开发沟通
+
+2. Current RPS 和 Average（ms）
+
+- Current RPS 每秒请求数，分析是否达到预期标准
+- 如果 current RPS 达到标准，分析下 Average（平均响应时间）是否达到预期标准
+- 如果有 没有达标项，需要跟开发沟通
+
+3. Average size
+
+- 请求数据大小是分析网络的标准之一
+- 如果请求大小过大，可能会造成网络问题，发现可以跟开发沟通
+
+### 3.4 脚本开发入门(1)
+
+#### 1. 脚本基本构成
+
+一个Locust测试脚本iu是一个普通的python文件，它的基本组成十分简单：
+
+- **定义用户类型**
+
+  所有用户的属性都需要集成自User Class，我们最常用的 **HttpUser** 也是如此，你也可以定义一个如TcpUser，或者 WebSocketUser，甚至基于你测试的业务系统做一个， 例如 QQUser，但是最终都必须继承至 User Class，类似于过去 LoadRunner、Jmeter 的选择应用的通讯协议或选择请求插件。
+
+- **等待时间的方法**
+
+  声明一个等待时间的方法，用于确定模拟用户在任务之间执行的等待停留时间。Locust 附带了一些内置函数用于返回等待时间的方法，包括：
+
+  1. between：在指定范围内的随机；
+  2. constant：基于响应到下一次请求之间的固定的等待时间；
+  3. constant_pacing：基于请求到下一次请求的固定间隔时间 ;
+
+- **主机属性**
+
+  用于定义测试的主机信息，比如 [http://www.cnblogs.com](http://www.cnblogs.com/)，如果在脚本中没有定义，那在命令行启动测试或 WebUI 中将作出定义 
+
+- **任务属性**
+
+  用于定义任务的执行逻辑，你可以定义多个任务，让模拟的用户按照不同任务的权重配置随机执行，也可以让任务按照你的编排顺序执行 
+
+#### 2. 脚本入门开发
+
+我们采用循序渐进的方式来，你不需要特别关注下面的每个范例所具备的实际意义，只需要关心脚本的结构 
+
+```python
+from locust import HttpUser, task, between
 
 
-`
+class QuickStartUser(HttpUser):
+    wait_time = between(5, 10)
+
+    @task(2)
+    def open_blog(self):
+        self.client.get("/cnike")
+
+    @task
+    def open_links(self):
+        self.client.get("/cnike/p/10783949.html")
+        self.client.get("/cnike/p/10726706.html")
+
+    def on_start(self):
+        self.client.get("/")
+```
+
+脚本实现：
+
+- 把 User 替换为 HttpUser
+- 通过 @task，配置了两个函数的执行权重分别为 2：1
+- 在 open_blog 函数内，任务是模拟用户打开我的博客首页路径（Host + "/cnike/"，即：
+  https://www.cnblogs.com/cnike/）
+- 在 open_links 函数内，任务是模拟用户依次浏览 2 篇博客，注意，在这2篇博客的浏览过程中，是没有时间间隔的
+- 定义了每次任务结束以后，随机等待时间的间隔区间仍然为 5~10 秒
+
+执行命令
+
+```python
+locust -f 2.blogs.py
+```
+
+![1640697665150](J:\homework\Python学习笔记\Test学习笔记.assets\1640697665150.png)
+
+从上面的运行情况可以发现
+
+- 标注1：作为 on_start 任务的内容，请求主机根目录只执行了 1 次（# Requests）
+- 标注2：open_links 任务内依次访问 2 篇博文的执行顺序是可控的，并且同在一个任务内，次数也是一致
+- 权重控制 2：1，实际的执行比例约为 20%：10%，但是随着场景执行时间越来越长，会越来越趋近于 2:1
+
+**现在我们对这个脚本进行一些修改，让它更像一个真实的用户访问行为：**
+
+- 任务等待时间：任务之间按照特定的等待时间进行间隔
+- 步骤等待时间：在任务内加入步骤之间的时间间隔
+- 参数化：文章页面参数
+- 任务：按照顺序的方式执行
+- 自定义 Locust 发出的 HTTP 请求头
+
+### 3.5 脚本开发入门(2)
+
+接上： 现在我们对这个脚本进行一些修改，让它更像一个真实的用户访问行为 
+
+**1. 任务等待时间：任务之间按照特定的等待时间进行间隔**
+
+Locust 的任务之间等待时间控制包括：
+
+方法1：between 类，指定范围内随机（5~10秒）等待 
+
+```python
+wait_time = between(5, 10)
+```
+
+方法2：constant 类，从上一次响应结束后，等待特定时间（3秒），再发起下一次请求 
+
+```python
+wait_time = constant(3)
+```
+
+方法3：constant_pacing 类，从上一次请求发起后，等待特定时间（3秒），再发起下一次请求，如果上一次请求的响应时间大于指定的时间（3秒），则在响应后立即发起下一次请求 
+
+```python
+wait_time = constant_pacing(3)
+```
+
+**2. 步骤等待时间：在任务内加入步骤之间的时间间隔**
+
+方法1：从 time 导入 sleep 类即可
+
+```python
+from locust import HttpUser, task, between
+from time import sleep
+
+
+class QuickStartUser(HttpUser):
+    wait_time = between(5, 10)
+
+    @task(2)
+    def open_blog(self):
+        self.client.get("/cnike")
+
+    @task
+    def open_links(self):
+        self.client.get("/cnike/p/10783949.html")
+        sleep(1 )
+        self.client.get("/cnike/p/10726706.html")
+        sleep(1 )
+
+    def on_start(self):
+        self.client.get("/")
+```
+
+**3. 参数化：从页面解析博客文章 ID**
+
+由上面 open_links 任务的内容可知，10783949、10726706 是文章 ID，但是随着日后博客内容的增删改，这些博客链接可能随之失效、新增，因此为了让我们的脚本行为更符合一个真实用户的访问行为，现需要脚本在打开我博客的首页后从首页的页面源码中，解析出文章链接进行点击。所以在下面的脚本中，我将会：
+
+1. 导入 re，在 open_blog 任务中对博客的页面html源码进行解析，获得文章列表的url
+2. 在 open_links 任务中，对 open_blog 任务解析得出的文章url列表进行遍历访问
+
+```python
+import re
+from locust import HttpUser, task, constant
+
+
+class CnBlogUser(HttpUser):
+    wait_time = constant(3)
+
+    @task(2)
+    def open_blog(self):
+        with self.client.get("/cnike/") as resp:
+            print(resp)
+            if resp.status_code < 300:
+                pattern = re.compile(r'<a href="(.*)" class="c_b_p_desc_readmore">')
+                self.url_list = pattern.findall(resp.text)
+            else:
+                pass
+
+    @task(1)
+    def open_links(self):
+        # 由于权重配置，无法确保 open_links 任务执行时 self.urlList 包含文章链接列表
+        for url in self.url_list:
+            self.client.get(url)
+
+    def on_start(self):
+        self.client.get("/")
+```
+
+但是，上面脚本存在一个问题，由于当前任务的执行是依据权重配置执行的，无法保证 open_blog 和 open_links 的先后执行顺序。当然，你也可以把 open_blog 和 open_links 两个任务内的工作合并为一个任务就可以达到顺序执行的目的。 
+
+**3. 任务控制：按照顺序的方式执行（SequentialTaskSet 类）**
+
+主要步骤：
+
+- 导入 SequentialTaskSet 类
+- 创建一个 任务类，继承自 SequentialTaskSet，在里面编排好任务执行的顺序
+- 在 cnblogUser 类内部，通过 tasks 转载需要执行的任务
+
+```python
+import re
+from locust import HttpUser, task, constant, SequentialTaskSet
+
+
+# 继承 SequentialTaskSet 的一个任务类，内部编排好任务的执行顺序
+class TaskCase(SequentialTaskSet):
+
+    # 初始化
+    def on_start(self):
+        self.client.get("/")
+
+    # @task 装饰器说明下面是一个任务
+    @task
+    def open_blog(self):
+        with self.client.get("/cnike/") as resp:
+            if resp.status_code < 300:
+                pattern = re.compile(r'<a href="(.*)" class="c_b_p_desc_readmore">')
+                self.urlList = pattern.findall(resp.text)
+            else:
+                pass
+
+    @task
+    def open_links(self):
+        for url in self.urlList:
+            self.client.get(url)
+
+
+# 继承 httpUser
+class CnBlogUser(HttpUser):
+    tasks = [TaskCase]
+    wait_time = constant(3)
+```
+
+至此，任务执行顺序将为：on_start -> open_blog -> open_links，执行压测场景看看 
+
+![1640703670039](J:\homework\Python学习笔记\Test学习笔记.assets\1640703670039.png)
+
+由上面的结果，可以看到，虚拟用户实现了 打开博客首页，进入我的博客并解析页面上的文章链接，再逐个访问，但是，浏览多篇文章本质上只是不同的文章id传参请求，没有在结果中分别统计的需要，因此我们给请求指定一下name，进行合并统计。
+
+```python
+@task
+def open_links(self):
+    for url in self.urlList:
+        self.client.get(url, name="open_link")
+```
+
+再次执行，可见多篇文章遍历访问的请求响应已经被合并统计 
+
+![1640703996146](J:\homework\Python学习笔记\Test学习笔记.assets\1640703996146.png)
+
+### 3.6 脚本开发入门(3)
+
+**在前面的两节里面，我们已经演示了 Locust 的：**
+
+- 脚本的基本构成
+- 脚本的初始化：on_start
+- 脚本的任务规划：通过 @task 装饰器实现
+- 任务的控制：按权重执行、按顺序执行
+- 等待的控制：任务之间的3种间隔、步骤之间采用sleep
+- 响应的解析：状态码、响应正文（requests 库）
+- Web UI 中发起压测
+
+接下来主要是对 Locust 脚本种实现 HTTP 请求的进一步演示 
+
+**在绝大部分的测试场景下，HTTP 请求需要进行一些处理才能满足我们的测试需求，例如：**
+
+- 在调试过程中，打印 HTTP 响应信息
+- 对 HTTP 响应进行断言 / 结果标记
+- 修改 Locust 发出的默认 HTTP 请求头信息，以满足系统的要求
+- 对 HTTP 的 接口响应（Json 格式）进行解析
+
+**示例：输出响应调试信息**
+
+在下面的脚本中，你可以多尝试几个 host，执行这个脚本，看看 Locust 打印的调试信息和你浏览器反馈的页面是不是一致的。
+
+```python
+from locust import HttpUser, task, constant, SequentialTaskSet
+
+
+class TaskCase(SequentialTaskSet):
+    header = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"
+    }
+
+    @task
+    def search_page(self):
+        data = {"loginName": "zzq283814", "passWord": "283814zzq"}
+        with self.client.post("/Account/UnitLogin", headers=self.header, data=data) as resp:
+            # HTTP 响应状态码
+            print(resp.status_code)
+
+            # HTTP 响应头
+            print(resp.headers)
+
+            # HTTP 响应正文（需要对文本字符串做提取时）
+            print(resp.text)
+
+            # HTTP 响应正文（需要对文件、图片做提取时）
+            print(resp.content)
+
+
+class CustomUser(HttpUser):
+    tasks = [TaskCase]
+    wait_time = constant(5)
+
+```
+
+执行命令：
+
+```python
+locust -f 3.cnblogs.py --host=https://learn.open.com.cn
+```
+
+打印如下：
+
+```python
+(venv) H:\Locust\locust1202>locust -f 3.cnblogs.py
+[2021-12-28 23:18:05,660] DESKTOP-C09SST2/INFO/locust.main: Starting web interface at http://0.0.0.0:8089 (accepting connections from all network interfaces)
+[2021-12-28 23:18:05,675] DESKTOP-C09SST2/INFO/locust.main: Starting Locust 2.5.1.dev20
+[2021-12-28 23:18:18,104] DESKTOP-C09SST2/INFO/locust.runners: Ramping to 3 users at a rate of 1.00 per second
+200
+{'Date': 'Tue, 28 Dec 2021 15:18:12 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '102', 'Connection': 'keep-alive', 'Cache-Control': 'private', 'X-AspNetMvc-Version': '4.0', 'X-AspNet-Version': '4.0.30319', 'X-Via-JSL': '88b83ec,-', 'S
+et-Cookie': '__jsluid_s=cbe181d32773b7efa0a3b19dbb9d5b58; max-age=31536000; path=/; HttpOnly; SameSite=None; secure', 'X-Cache': 'bypass'}
+{
+  "status": 1,
+  "message": "设备指纹异常，请刷新页面重新提交",
+  "data": null
+}
+b'{\r\n  "status": 1,\r\n  "message": "\xe8\xae\xbe\xe5\xa4\x87\xe6\x8c\x87\xe7\xba\xb9\xe5\xbc\x82\xe5\xb8\xb8\xef\xbc\x8c\xe8\xaf\xb7\xe5\x88\xb7\xe6\x96\xb0\xe9\xa1\xb5\xe9\x9d\xa2\xe9\x87\x8d\xe6\x96\xb0\xe6\x8f\x90\xe4\xba\xa4",\r\n  "data": null\r\n}'
+
+```
+
+#### 1. 基于状态码判断
+
+当把 **catch_response** 参数 设置为 **True** 时，你可以手动控制在 Locust 的统计信息中报告的内容，例如下面的基于状态码判断 
+
+```python
+from locust import HttpUser, task, constant, SequentialTaskSet
+
+
+class TaskCase(SequentialTaskSet):
+    header = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"
+    }
+
+    @task
+    def search_page(self):
+        data = {"loginName": "zzq283814", "passWord": "283814zzq"}
+        with self.client.post("/Account/UnitLogin", headers=self.header, data=data, catch_response=True) as resp:
+            if resp.status_code == 200:
+                print("success")
+                resp.success()
+            else:
+                # 否则输出响应报文进一步排查
+                resp.failure(resp.text)
+
+
+class CustomUser(HttpUser):
+    tasks = [TaskCase]
+    wait_time = constant(5)
+```
+
+#### 2. 基于响应报文判断
+
+基于响应的状态码判断业务请求是否正确处理不够严谨，错误页面并不一定会以404状态码返回，错误的业务响应通常也是200，所以，这时候你可能还想对响应报文做进一步校验以确定请求是否处理成功 
+
+```python
+from locust import HttpUser, task, constant, SequentialTaskSet
+
+
+class TaskCase(SequentialTaskSet):
+    header = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"
+    }
+
+    @task
+    def search_page(self):
+        data = {"loginName": "zzq283814", "passWord": "283814zzq"}
+        with self.client.post("/Account/UnitLogin", headers=self.header, data=data, catch_response=True) as resp:
+            if 'data' in resp.text:
+                print("success")
+                resp.success()
+            else:
+                # 否则输出响应报文进一步排查
+                resp.failure(resp.text)
+
+
+class CustomUser(HttpUser):
+    tasks = [TaskCase]
+    wait_time = constant(5)
+```
+
+#### 3. 基于响应时间判断
+
+有时候过慢的响应时间也可以算作一种不可接受的错误，譬如你肯定就无法忍受人工客服电话那头为了查询你的个人信息还让你等上个半分钟，那一头的呼叫中心也无法忍受为了查询一个用户信息导致坐席干等阻塞半分钟，所以还可以这样处理： 
+
+```python
+from locust import HttpUser, task, constant, SequentialTaskSet
+
+
+class TaskCase(SequentialTaskSet):
+    header = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"
+    }
+
+    @task
+    def search_page(self):
+        data = {"loginName": "zzq283814", "passWord": "283814zzq"}
+        with self.client.post("/Account/UnitLogin", headers=self.header, data=data, catch_response=True) as resp:
+            # 如果响应时间大于 3 秒标记为响应失败
+            if resp.elapsed.total_seconds() > 3:
+                resp.failure("Request took too long")
+            else:
+                # 否则不做业务判断直接标记为成功
+                resp.success()
+
+
+class CustomUser(HttpUser):
+    tasks = [TaskCase]
+    wait_time = constant(5)
+```
+
+一个 HTTP 请求不能被正确处理，无非三点原因：
+
+- HTTP 请求头错误，自定义一个 HTTP 请求头即可
+- HTTP 请求报文内容错误，检查 url、参数格式、业务参数
+- 会话状态丢失，检查 session、cookie，在 Locust 中大部分情况下都自动保持会话
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
