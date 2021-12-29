@@ -1012,7 +1012,7 @@ def view_item(self):
 
 > 在 view_item 任务中，通过使用1~11的随机查询参数加载动态URL。为了不在 Locust 的统计信息中获得 11 个单独的条目。
 > 为了把这个动态 URL 的所有响应样本作为一个整体进行统计，使用 name 参数将所有这些请求分组到名为“ / item”的条目下。
-> 只有定义了 @task 的任务才会被执行。 
+> 只有定义了 @task 的任务才会被执行。  **@task**接受一个可选的权重参数，可用于指定任务的执行率。在以下示例中，*task2*被选中的机会是*task1 的*两倍： 
 
 ```python
 def on_start(self):
@@ -1056,15 +1056,38 @@ def on_start(self):
 
   1. between：在指定范围内的随机；
   2. constant：基于响应到下一次请求之间的固定的等待时间；
-  3. constant_pacing：基于请求到下一次请求的固定间隔时间 ;
+  3. constant_pacing： 确保任务每 X 秒（最多）运行一次的自适应时间（它是constant_throughput的数学倒数）；  
+  4. constant_throughput： 确保任务每秒运行（最多）X 次的自适应时间；
 
 - **主机属性**
 
-  用于定义测试的主机信息，比如 [http://www.cnblogs.com](http://www.cnblogs.com/)，如果在脚本中没有定义，那在命令行启动测试或 WebUI 中将作出定义 
+  用于定义测试的主机信息，比如 [http://www.cnblogs.com](http://www.cnblogs.com/)，如果在脚本中没有定义，那在命令行启动测试或 WebUI 中将作出定义。 通常，这是在 Locust 的 Web UI 或命令行中指定的`--host`，在 locust 启动时使用该 选项。 
 
 - **任务属性**
 
-  用于定义任务的执行逻辑，你可以定义多个任务，让模拟的用户按照不同任务的权重配置随机执行，也可以让任务按照你的编排顺序执行 
+  User 类可以使用@task装饰器将任务声明为它的方法，但也可以使用*tasks*属性指定任务，用于定义任务的执行逻辑，你可以定义多个任务，让模拟的用户按照不同任务的权重配置随机执行，也可以让任务按照你的编排顺序执行 
+  
+- **权重属性**
+
+  如果文件中存在多个用户类，并且没有在命令行中指定用户类，Locust 将生成相同数量的每个用户类。您还可以通过将它们作为命令行参数传递来指定要从同一个 locustfile 使用哪些用户类： 
+
+  ```python
+  locust -f locust_file.py WebUser MobileUser
+  ```
+
+- **环境属性**
+
+  environment 对用户正在运行的 的引用。使用它与环境或其 runner 包含的环境进行交互。例如，从任务方法中停止跑步者：
+
+  ```python
+  self.environment.runner.quit()
+  ```
+
+  如果在独立的 locust 实例上运行，这将停止整个运行。如果在工作节点上运行，它将停止该特定节点。
+
+  **on_start 和 on_stop 方法**
+
+  用户（和TaskSets可以声明一个 on_start 方法和/或  on_stop 方法。User on_start 在开始运行时会调用它的方法，on_stop 在它停止运行时会调用它的 方法 。对于 TaskSet，该 on_start 方法在模拟用户开始执行该 TaskSet on_stop 时调用，并在模拟用户停止执行该 TaskSet 时 interrupt() 调用（当被调用时，或者用户被杀死时）。
 
 #### 2. 脚本入门开发
 
@@ -1354,7 +1377,7 @@ b'{\r\n  "status": 1,\r\n  "message": "\xe8\xae\xbe\xe5\xa4\x87\xe6\x8c\x87\xe7\
 
 #### 1. 基于状态码判断
 
-当把 **catch_response** 参数 设置为 **True** 时，你可以手动控制在 Locust 的统计信息中报告的内容，例如下面的基于状态码判断 
+当把 **catch_response** 参数 设置为 **True** 时, 您可以使用catch_response参数、with语句 ，你可以手动控制在 Locust 的统计信息中报告的内容，例如下面的基于状态码判断 
 
 ```python
 from locust import HttpUser, task, constant, SequentialTaskSet
@@ -1448,15 +1471,559 @@ class CustomUser(HttpUser):
 - HTTP 请求报文内容错误，检查 url、参数格式、业务参数
 - 会话状态丢失，检查 session、cookie，在 Locust 中大部分情况下都自动保持会话
 
+**对 HTTP 的 接口响应（Json 格式）进行解析**
+
+在对服务接口执行压测过程中，响应报文如果是以Json作为数据格式返回，取值会更加方便，以下面以接口为例： 
+
+```python
+from locust import HttpUser, task, constant, SequentialTaskSet
+import json
 
 
+class TaskCase(SequentialTaskSet):
+
+    @task
+    def search_page(self):
+        header = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"}
+        with self.client.get(
+                "/j/search_subjects?type=movie&tag=%E7%83%AD%E9%97%A8&page_limit=10&page_start=0",
+                headers=header) as resp:
+            resp_json = json.loads(resp.text)
+            print(resp_json["subjects"])
 
 
+class CustomUser(HttpUser):
+    tasks = [TaskCase]
+    wait_time = constant(5)
 
 
+if __name__ == '__main__':
+    import os
+
+    os.system("locust -f 4.test1.py --host=https://movie.douban.com/")
+
+```
+
+### 3.7 脚本入门开发(4)
+
+以下主要介绍Locust执行参数化的方法，参数化的目的无非就是以下几种：
+
+- 模拟用户在不同场景下的传参差异化，比如说所有并发对同一个订单执行支付，也许你需要检验这样是否能发现到一些别的异常，但这是不符合性能测试需求的
+
+- 满足业务对用户传参的约束条件，比方说你如果压测的是即时通讯的消息收发，即便支持多终端在线，但大量并发登录一个账号也是是不符合实际的
+
+- 满足系统对用户传参的约束条件
+
+对一个参数执行参数化，首先得分清楚这个参数是属于 **“基础数据”** 还是 **“业务数据”** ，比如 性别、省份、年月日，这些可以归纳为基础数据，而对于与被测试系统业务有一定关联性的，你可以归为业务数据，例如 账号密码、userId、orderId。 通常来说，基础数据 的数据范围是相对数量固定的、内容有限的，即便切换测试环境也不影响的，所以一般在脚本中内实现随机抽取，例如：
+
+```python
+import random
+
+sex = random.choice(['男性', '女性'])
+year = random.randint(1949,2020)
+```
+
+而业务数据动辄几百上千条，相对来说数量和内容都是可变的，则应该通过读取外部文件实现（注意：Locust 的负载是通过 单进程 + 多协程 的实现，并非 多进程 + 多线程）。 
+
+**1. 从 CSV 中读取参数实现参数化**
+
+```powershell
+# user_info.csv
+aaa,123
+bbb,123
+ccc,123
+```
+
+```python
+from locust import HttpUser, task, constant, SequentialTaskSet
+import queue
 
 
+class TaskCase(SequentialTaskSet):
 
+    @task
+    def login(self):
+        user = self.user.user_list.get()
+
+        ret = self.client.get("/login")
+        aa = ret.headers['Set-Cookie']
+        csrf1 = aa.split(";")[0].split("=")[1]
+        csrf2 = aa.split(";")[0]
+        header = {
+            "Cookie": csrf2}
+
+        data = {
+            "user": user["username"],
+            "pwd": user["password"],
+            "csrfmiddlewaretoken": csrf1
+        }
+
+        ret = self.client.post(
+            "/login/", headers=header, data=data)
+
+        print(ret.status_code)
+        # 登录后的一系列操作
+        self.user.user_list.put_nowait(user)
+
+
+class ApiUser(HttpUser):
+    wait_time = constant(0)
+    tasks = [TaskCase]
+
+    user_list = queue.Queue()
+    with open("./user_info.csv") as file:
+        for line in file:
+            userInfo = line.split(',')
+            data = {
+                "username": userInfo[0],
+                "password": userInfo[1]
+            }
+
+            user_list.put_nowait(data)
+
+if __name__ == '__main__':
+    import os
+
+    os.system("locust -f test1.py --host=http://127.0.0.1:8000/")
+```
+
+**实现效果**
+
+登录3个用户，a、b、c三个用户，执行登录
+
+### 3.8 其他属性
+
+#### 3.8.1 @task装饰器
+
+当负载测试开始时，将为每个模拟用户创建一个 User 类的实例，并且他们将开始在自己的绿色线程中运行。当这些用户运行时，他们选择他们执行的任务，睡一会儿，然后选择一个新任务等等。
+
+这些任务是普通的 Python 可调用项，如果我们对拍卖网站进行负载测试，它们可以执行诸如“加载起始页”、“搜索某些产品”、“出价”等操作。 为用户添加任务的最简单方法是使用  @task 装饰器。
+
+```python
+@task
+def index_page(self):
+    self.client.get("/studentcenter/adv/GetAdvertList", headers=self.header)
+
+@task(3)
+def view_item(self):
+	item_id = random.randint(1, 11)
+	self.client.get("/StudentCenter/Navigation/menu?bust=1640683458756&id=%s&_=1640683458093" % item_id, headers=self.header, name="/item")
+```
+
+ **@task** 接受一个可选的权重参数，可用于指定任务的执行率。在以下示例中，*task2*被选中的机会是task1的3倍
+
+#### 3.8.2 @tag装饰器
+
+通过使用 @tag 装饰器标记任务，您可以使用`--tags`和`--exclude-tags`参数对在测试期间执行的任务进行挑剔。考虑以下示例： 
+
+```python
+from locust import User, constant, task, tag
+
+class MyUser(User):
+    wait_time = constant(1)
+
+    @tag('tag1')
+    @task
+    def task1(self):
+        pass
+
+    @tag('tag1', 'tag2')
+    @task
+    def task2(self):
+        pass
+
+    @tag('tag3')
+    @task
+    def task3(self):
+        pass
+
+    @task
+    def task4(self):
+        pass
+```
+
+```powershell
+--tags tag1   --tags tag2 tag3：
+如果您使用 开始此测试，则在测试期间只会执行task1和task2。如果以 开头，则只会执行task2和task3。 
+--exclude-tags：
+会以完全相反的方式表现。所以，如果你开始测试 ，只有 TASK1 ，TASK2 和 task4 将被执行。排除总是胜过包含，所以如果一个任务有一个你已经包含的标签和一个你已经排除的标签，它就不会被执行。--exclude-tags tag3
+```
+
+#### 3.8.2 侦听器
+
+如果你想运行一些设置代码作为测试的一部分，通常将它放在 locustfile 的模块级别就足够了，但有时你需要在运行中的特定时间做一些事情。为了这个需求，Locust 提供了事件钩子。 
+
+ 如果您需要在负载测试开始或停止时运行一些代码，您应该使用  on_test_start 和 on_test_stop 事件。您可以在 locustfile 的模块级别为这些事件设置侦听器： 
+
+```python
+from locust import events
+
+@events.test_start.add_listener
+def on_test_start(environment, **kwargs):
+    print("A new test is starting")
+
+@events.test_stop.add_listener
+def on_test_stop(environment, **kwargs):
+    print("A new test is ending")
+```
+
+该 init 事件在每个 Locust 进程开始时触发。这在分布式模式中特别有用，在这种模式下，每个工作进程（而不是每个用户）都需要有机会进行一些初始化。例如，假设您有一些全局状态，所有从此进程生成的用户都需要： 
+
+```python
+from locust import events
+from locust.runners import MasterRunner
+
+@events.init.add_listener
+def on_locust_init(environment, **kwargs):
+    if isinstance(environment.runner, MasterRunner):
+        print("I'm on master node")
+    else:
+        print("I'm on a worker or standalone node")
+```
+
+```python
+import time
+from locust import HttpUser, task, between, events
+import urllib3
+from locust.contrib.fasthttp import FastHttpLocust
+
+urllib3.disable_warnings()
+
+
+@events.test_start.add_listener
+def on_test_start(**kwargs):
+    print('===测试最开始提示===')
+
+
+@events.test_stop.add_listener
+def on_test_stop(**kwargs):
+    print('===测试结束了提示===')
+
+
+class TestTask(HttpUser):
+    wait_time = between(1, 5)
+
+    # host = 'https://www.baidu.com'
+
+    def on_start(self):
+        print('这是SETUP，每次实例化User前都会执行！')
+
+    @task(1)
+    def getBaidu(self):
+        self.client.get(url="/", verify=False)
+
+    def on_stop(self):
+        print('这是TEARDOWN，每次销毁User实例时都会执行！')
+
+
+if __name__ == "__main__":
+    import os
+
+    os.system("locust -f locust1.py --host=https://www.baidu.com")
+```
+
+执行结果：
+
+```powershell
+===测试最开始提示===
+[2021-12-29 18:48:50,820] DESKTOP-C09SST2/INFO/locust.runners: Ramping to 1 users at a rate of 1.00 per second
+[2021-12-29 18:48:50,821] DESKTOP-C09SST2/INFO/locust.runners: All users spawned: {"TestTask": 1} (1 total users)
+这是SETUP，每次实例化User前都会执行！
+这是TEARDOWN，每次销毁User实例时都会执行！
+===测试结束了提示===
+```
+
+#### 3.8.3 HttpUser类
+
+HttpUser是最常用的User，它添加了一个 client用于发出Http请求的属性。
+
+```python
+from locust import HttpUser, task, between
+
+class MyUser(HttpUser):
+    wait_time = between(5, 15)
+
+    @task(4)
+    def index(self):
+        self.client.get("/")
+
+    @task(1)
+    def about(self):
+        self.client.get("/about/")
+```
+
+### 3.9 配置
+
+**环境配置**
+
+大多数可以通过命令行参数设置的选项也可以通过环境变量设置。例子：
+
+```python
+$ LOCUST_LOCUSTFILE=custom_locustfile.py locust
+```
+
+**配置文件**
+配置文件路径：~/.locust.conf		./locust.conf     可以使用 --config 标志指定一个附加文件
+
+示例：
+
+```python
+# master.conf in current directory
+locustfile = locust_files/my_locust_file.py
+headless = true
+master = true
+expect-workers = 5
+host = http://target-system
+users = 100
+spawn-rate = 10
+run-time = 10m
+```
+
+```python
+locust --config=master.conf
+```
+
+**配置选项**
+
+| 命令行                      | 环境                             | 配置文件                  | 描述                                                         |
+| --------------------------- | -------------------------------- | ------------------------- | ------------------------------------------------------------ |
+| `-f`, `--locustfile`        | `LOCUST_LOCUSTFILE`              | `locustfile`              | 要导入的 Python 模块文件，例如“../other.py”。默认值：locustfile |
+| `-H`, `--host`              | `LOCUST_HOST`                    | `host`                    | 主机按以下格式进行负载测试：[http](http://10.21.32.33/) : [//10.21.32.33](http://10.21.32.33/) |
+| `-u`, `--users`             | `LOCUST_USERS`                   | `users`                   | 并发 Locust 用户的峰值数量。主要与 –headless 或 –autostart 一起使用。可以在测试期间通过键盘输入 w、W（生成 1、10 个用户）和 s、S（停止 1、10 个用户）更改 |
+| `-r`, `--spawn-rate`        | `LOCUST_SPAWN_RATE`              | `spawn-rate`              | 产生用户的速率（每秒用户数）。主要与 –headless 或 –autostart 一起使用 |
+| `--hatch-rate`              | `LOCUST_HATCH_RATE`              | `hatch-rate`              | ==抑制==                                                     |
+| `-t`, `--run-time`          | `LOCUST_RUN_TIME`                | `run-time`                | 在指定的时间后停止，例如（300s、20m、3h、1h30m 等）。仅与 –headless 或 –autostart 一起使用。默认永远运行。 |
+| `--web-host`                | `LOCUST_WEB_HOST`                | `web-host`                | 将 Web 界面绑定到的主机。默认为“*”（所有接口）               |
+| `--web-port`, `-P`          | `LOCUST_WEB_PORT`                | `web-port`                | 运行网络主机的端口                                           |
+| `--headless`                | `LOCUST_HEADLESS`                | `headless`                | 禁用 Web 界面，并立即开始测试。使用 -u 和 -t 来控制用户数量和运行时间 |
+| `--autostart`               | `LOCUST_AUTOSTART`               | `autostart`               | 立即开始测试（不禁用 Web UI）。使用 -u 和 -t 来控制用户数量和运行时间 |
+| `--autoquit`                | `LOCUST_AUTOQUIT`                | `autoquit`                | 在运行完成 X 秒后完全退出 Locust。仅与–autostart 一起使用。默认是保持 Locust 运行，直到您使用 CTRL+C 将其关闭 |
+| `--headful`                 | `LOCUST_HEADFUL`                 | `headful`                 | ==抑制==                                                     |
+| `--web-auth`                | `LOCUST_WEB_AUTH`                | `web-auth`                | 为 Web 界面启用基本身份验证。应按以下格式提供：用户名：密码  |
+| `--tls-cert`                | `LOCUST_TLS_CERT`                | `tls-cert`                | 用于通过 HTTPS 提供服务的 TLS 证书的可选路径                 |
+| `--tls-key`                 | `LOCUST_TLS_KEY`                 | `tls-key`                 | 用于通过 HTTPS 提供服务的 TLS 私钥的可选路径                 |
+| `--master`                  | `LOCUST_MODE_MASTER`             | `master`                  | 设置 locust 以分布式模式运行，此进程作为主进程               |
+| `--master-bind-host`        | `LOCUST_MASTER_BIND_HOST`        | `master-bind-host`        | locust master 应该绑定的接口（主机名、ip）。仅在使用 –master 运行时使用。默认为 *（所有可用接口）。 |
+| `--master-bind-port`        | `LOCUST_MASTER_BIND_PORT`        | `master-bind-port`        | locust master 应该绑定的端口。仅在使用 –master 运行时使用。默认为 5557。 |
+| `--expect-workers`          | `LOCUST_EXPECT_WORKERS`          | `expect-workers`          | 在开始测试之前，master 应该连接多少工人（仅当使用 –headless/autostart 时）。 |
+| `--expect-workers-max-wait` | `LOCUST_EXPECT_WORKERS_MAX_WAIT` | `expect-workers-max-wait` | 在放弃之前，主人应该等待工人连接多长时间。默认永远等待       |
+| `--worker`                  | `LOCUST_MODE_WORKER`             | `worker`                  | 设置 locust 以分布式模式运行，此进程作为工作线程             |
+| `--master-host`             | `LOCUST_MASTER_NODE_HOST`        | `master-host`             | 用于分布式负载测试的locust master的主机或IP地址。仅在与 –worker 一起运行时使用。默认为 127.0.0.1。 |
+| `--master-port`             | `LOCUST_MASTER_NODE_PORT`        | `master-port`             | locust master 使用的连接端口用于分布式负载测试。仅在与 –worker 一起运行时使用。默认为 5557。 |
+| `-T`, `--tags`              | `LOCUST_TAGS`                    | `tags`                    | 要包含在测试中的标签列表，因此只会执行具有任何匹配标签的任务 |
+| `-E`, `--exclude-tags`      | `LOCUST_EXCLUDE_TAGS`            | `exclude-tags`            | 要从测试中排除的标签列表，因此只会执行没有匹配标签的任务     |
+| `--csv`                     | `LOCUST_CSV`                     | `csv`                     | 将当前请求统计信息以 CSV 格式存储到文件中。设置此选项将生成三个文件：[CSV_PREFIX]_stats.csv、[CSV_PREFIX]_stats_history.csv 和 [CSV_PREFIX]_failures.csv |
+| `--csv-full-history`        | `LOCUST_CSV_FULL_HISTORY`        | `csv-full-history`        | 将每个统计条目以 CSV 格式存储到 _stats_history.csv 文件。您还必须指定“–csv”参数以启用此功能。 |
+| `--print-stats`             | `LOCUST_PRINT_STATS`             | `print-stats`             | 在控制台打印统计信息                                         |
+| `--only-summary`            | `LOCUST_ONLY_SUMMARY`            | `only-summary`            | 只打印汇总统计信息                                           |
+| `--reset-stats`             | `LOCUST_RESET_STATS`             | `reset-stats`             | 生成完成后重置统计信息。在分布式模式下运行时，应在 master 和 worker 上都设置 |
+| `--html`                    | `LOCUST_HTML`                    | `html`                    | 存储 HTML 报告文件                                           |
+| `--skip-log-setup`          | `LOCUST_SKIP_LOG_SETUP`          | `skip-log-setup`          | 禁用 Locust 的日志记录设置。相反，配置由 Locust 测试或 Python 默认值提供。 |
+| `--loglevel`, `-L`          | `LOCUST_LOGLEVEL`                | `loglevel`                | 在调试/信息/警告/错误/关键之间进行选择。默认为信息。         |
+| `--logfile`                 | `LOCUST_LOGFILE`                 | `logfile`                 | 日志文件的路径。如果未设置，日志将转到 stderr                |
+| `--exit-code-on-error`      | `LOCUST_EXIT_CODE_ON_ERROR`      | `exit-code-on-error`      | 设置当测试结果包含任何失败或错误时使用的进程退出代码         |
+| `-s`, `--stop-timeout`      | `LOCUST_STOP_TIMEOUT`            | `stop-timeout`            | 在退出之前等待模拟用户完成任何正在执行的任务的秒数。默认是立即终止。该参数只需要在运行 Locust 分布式时为 master 进程指定。 |
+
+### 3.10 执行模式
+
+**1. Web UI 模式：**
+
+在这个模式下，你可以通过 Web 控制场景的执行、实时的了解被测试应用性能表现趋势，但是 Locust 没有提供主流压测工具那样的丰富图表，你能看到的只有：
+
+- 每秒发出的请求数
+- 请求的响应事件
+- 运行中的“用户数”
+
+其实，从性能测试的角度来看，图表只要足够表示负载的增加对性能趋势的影响、事件关系就足够了。
+
+**2. 命令行模式：**
+
+- 脚本开发调试过程中，出于工作效率的目的，建议使用该模式
+- 如果你使用了远程主机作为负载机，不想麻烦运维同学开通端口权限，可以使用命令行模式运行压测
+
+```python
+locust --headless --users 10 --spawn-rate 1 -H http://your-server.com
+```
+
+你可以在没有 Web UI 的情况下运行 locust - 例如，如果你想在一些自动化流程中运行它，比如 CI 服务器 - 通过将`--headless`标志与`-u`and一起使用`-r`： 
+
+```python
+locust -f locust_files/my_locust_file.py --headless -u 1000 -r 100
+```
+
+ `-u`指定生成的用户数，并`-r`指定生成速率（每秒启动的用户数）。 
+
+在测试运行时，您可以手动更改用户计数，即使在启动完成后也是如此。按 w 添加 1 个用户或按 W 添加 10。按 s 删除 1 或按 S 删除 10。 
+
+**2.1 设置测试时间限制：**
+
+如果要指定测试的运行时间，可以使用`--run-time`或 来完成`-t`：
+
+```python
+$ locust -f --headless -u 1000 -r 100 --run-time 1h30m
+```
+
+一旦时间到，Locust 将关闭。
+
+**2.2 允许任务在关闭时完成迭代：**
+
+默认情况下，locust 会立即停止您的任务（甚至无需等待请求完成）。如果你想让你的任务完成它们的迭代，你可以使用.`--stop-timeout ` 
+
+```python
+locust -f --headless -u 1000 -r 100 --run-time 1h30m --stop-timeout 99
+```
+
+**2.3 在没有 Web UI 的情况下运行 Locust 分布式：**
+
+如果要在没有 Web UI 的情况下运行 Locust 分布式，则应`--expect-workers`在启动主节点时指定该选项，以指定预期连接的工作节点数。然后它会等到许多工作节点连接后才开始测试。
+
+**2.4 控制 Locust 进程的退出代码**
+
+在 CI 环境中运行 Locust 时，您可能希望控制 Locust 进程的退出代码。您可以通过设置实例的来在测试脚本 process_exit_code 中执行此操作 Environment。
+
+下面是一个示例，如果满足以下任何条件，则将退出代码设置为非零：
+
+- 超过 1% 的请求失败
+- 平均响应时间大于200毫秒
+- 响应时间的第 95 个百分位数大于 800 毫秒
+
+```python
+import logging
+from locust import events
+
+@events.quitting.add_listener
+def _(environment, **kw):
+    if environment.stats.total.fail_ratio > 0.01:
+        logging.error("Test failed due to failure ratio > 1%")
+        environment.process_exit_code = 1
+    elif environment.stats.total.avg_response_time > 200:
+        logging.error("Test failed due to average response time ratio > 200 ms")
+        environment.process_exit_code = 1
+    elif environment.stats.total.get_response_time_percentile(0.95) > 800:
+        logging.error("Test failed due to 95th percentile response time > 800 ms")
+        environment.process_exit_code = 1
+    else:
+        environment.process_exit_code = 0
+```
+
+**2.5 以 CSV 格式检索测试统计信息**
+
+您可能希望通过 CSV 文件使用 Locust 结果。在这种情况下，有两种方法可以做到这一点。
+
+首先，当使用 Web UI 运行 Locust 时，您可以在“下载数据”选项卡下检索 CSV 文件。
+
+其次，您可以使用一个标志运行 Locust，该标志将定期保存三个 CSV 文件。如果您计划使用以下`--headless`标志以自动方式运行 Locust，这将特别有用：
+
+```python
+$ locust -f examples/basic.py --csv=example --headless -t10m
+```
+
+这些文件将被命名为`example_stats.csv`,`example_failures.csv`和`example_history.csv` （使用时`--csv=example`）。前两个文件将包含整个测试运行的统计信息和失败情况，每个统计信息条目（URL 端点）各占一行，聚合行占一行。该`example_history.csv` 会得到新行*电流*（10秒滑动窗口）在整个试运行期间追加统计。默认情况下，只有 Aggregate 行会定期附加到历史统计数据中，但如果 Locust 以该`--csv-full-history`标志启动，则每次写入统计数据时都会为每个 stats 条目（和 Aggregate）附加一行（默认情况下每 2 秒一次） .
+
+如果您希望更快（或更慢）写入，您还可以自定义写入的频率：
+
+```python
+import locust.stats
+locust.stats.CSV_STATS_INTERVAL_SEC = 5 # default is 1 second
+locust.stats.CSV_STATS_FLUSH_INTERVAL_SEC = 60 # Determines how often the data is flushed to disk, default is 10 seconds
+```
+
+### 3.11 分布式负载
+
+运行 Locust 的单个进程可以模拟相当高的吞吐量。对于一个简单的测试计划，它应该能够每秒发出数百个请求，如果使用 FastHttpUser 则可以发出数千个请求。
+
+但是，如果您的测试计划很复杂，或者您想要运行更多负载，则需要扩展到多个进程，甚至可能是多台机器。
+
+为此，您使用该`--master`标志以主模式启动 Locust 的一个实例，并使用该标志启动多个工作器实例`--worker`。如果 worker 与 master 不在同一台机器上，您可以`--master-host`将它们指向运行 master 的机器的 IP/主机名。
+
+主实例运行 Locust 的 Web 界面，并告诉工作人员何时产生/停止用户。工作人员运行您的用户并将统计信息发送回主人。主实例本身不运行任何用户。
+
+运行 Locust 分布式时，master 和 worker 机器都必须有 locustfile 的副本。
+
+示例：
+
+以主模式启动
+
+```python
+locust -f my_locustfile.py --master
+```
+
+然后在每个工人上（用主机的 IP替换，或者如果您的工人与主机在同一台机器上，则完全省略参数）： 
+
+```python
+locust -f my_locustfile.py --worker --master-host=192.168.254.132
+```
+
+> **--master**
+>
+> 将蝗虫设置为主模式。Web 界面将在此节点上运行。
+>
+> **--worker**
+>
+> 将蝗虫设置为工人模式。
+>
+> **--master-host=X.X.X.X**
+>
+> 可选地与`--worker`设置主节点的主机名/IP一起使用（默认为 127.0.0.1）
+>
+> **--master-port=5557**
+>
+> 可选地与 with`--worker`一起设置主节点的端口号（默认为 5557）。
+>
+> **--master-bind-host=X.X.X.X**
+>
+> 可选择与`--master`. 确定主节点将绑定到的网络接口。默认为 *（所有可用接口）。
+>
+> **--master-bind-port=5557**
+>
+> 可选择与`--master`. 确定主节点将侦听哪些网络端口。默认为 5557。
+>
+> **--expect-workers=X**
+>
+> 用 启动主节点时使用`--headless`。在开始测试之前，主节点将等待 X 个工作节点连接。
+
+### 3.12 Doocker中运行
+
+假如 locustfie.py存在于当前工作目录中：
+
+```python
+docker run -p 8089:8089 -v $PWD:/mnt/locust locustio/locust -f /mnt/locust/locustfile.py
+```
+
+这是一个示例 Docker Compose 文件，可用于启动主节点和工作节点： 
+
+```
+version: '3'
+
+services:
+  master:
+    image: locustio/locust
+    ports:
+     - "8089:8089"
+    volumes:
+      - ./:/mnt/locust
+    command: -f /mnt/locust/locustfile.py --master -H http://master:8089
+  
+  worker:
+    image: locustio/locust
+    volumes:
+      - ./:/mnt/locust
+    command: -f /mnt/locust/locustfile.py --worker --master-host master
+```
+
+上面的 compose 配置可用于使用以下命令启动一个主节点和 4 个工作节点：
+
+```python
+docker-compose up --scale worker=4
+```
+
+拥有依赖第三方 python 包的测试脚本是很常见的。在这些情况下，您可以使用官方 Locust docker 镜像作为基础镜像：
+
+```python
+FROM locustio/locust
+RUN pip3 install some-python-package
+```
 
 
 
