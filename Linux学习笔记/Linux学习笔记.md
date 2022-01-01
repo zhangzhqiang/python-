@@ -8112,6 +8112,18 @@ PATH="/usr/local/nginx/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/r
 
 #### 5.6.2 主配置文件解析
 
+Nginx配置文件由三部分组成：
+
+- 全局块：主要设置一些影响Nginx服务器整体运行的配置指定，比如：worker_processes，值越大，可以支持并发处理两就越多。
+
+- Events块：涉及的指令主要影响nginx服务器于用户的网络连接，比如：worker_connections，支持的最大连接数。
+
+- HTTP块：包括http全局块和server块，是服务器配置中最频繁的部分，包括配置代理，缓存，日志定义等绝大多数功能。
+
+  server块：配置虚拟主机的相关参数。
+
+  location块：配置请求路由，以及各种页面的处理情况。
+
 ```powershell
 详见：https://www.runoob.com/w3cnote/nginx-setup-intro.html
 # 1.定义Nginx运行的用户和用户组
