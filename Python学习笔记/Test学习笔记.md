@@ -778,7 +778,7 @@ locust 1.0.3
 pip install --upgrade locust
 ```
 
-### 3.2 入门
+### 3.2 快速入门
 
 locust里面请求是基于requests的，每个方法请求和requests差不多，请求参数、方法、响应对象和requests一样的使用，之前学过requests库的，这里就非常简单了
 
@@ -914,7 +914,7 @@ class QuickStartUser(HttpUser):
 
 ### 3.3 一个简单的脚本
 
-案例：一个用户登录胡，随机的访问指定页面的测试脚本
+案例：一个用户登录，随机的访问指定页面的测试脚本
 
 **首先：**
 
@@ -1753,6 +1753,34 @@ class MyUser(HttpUser):
         self.client.get("/about/")
 ```
 
+#### 3.8.4 weight 属性
+
+如果文件中存在多个 locust 类，并且在命令行上未指定 locust;
+
+则每个新的实例都会从现有 locust 类中随机选择。
+
+如果不想这么做，您可以从同一文件中指定要使用的 locust；
+
+如下所示：
+
+```python
+$ locust -f locust_file.py WebUserLocust MobileUserLocust
+```
+
+如果希望让某个 locust 类经常被执行，可以在这些类上设置一个 weight 属性。
+
+举例来说，PC 浏览用户的可能性是手机端用户的三倍，可以像下面这种设置：
+
+```python
+class WebUserLocust(Locust):    
+    weight = 3    
+    ...
+
+class MobileUserLocust(Locust):    
+    weight = 1    
+    ...
+```
+
 ### 3.9 配置
 
 **环境配置**
@@ -2025,23 +2053,905 @@ FROM locustio/locust
 RUN pip3 install some-python-package
 ```
 
+### 3.13 提高HTTP请求性能
 
+Locust 的默认 HTTP客户端 是使用 `python-requests`来实现的，它提供了许多python开发人员都熟悉的API。
 
+因此，在通常情况下，我们建议您使用这个作为 HttpLocust 的默认。
 
+但是，如果你打算真实的跑一个大规模测试，Locust有一个备用的HTTP客户端 `FastHttpLocust`，它使用 `geventhttpclient` 代替 `requests`。
 
+这个http客户端的速度提高非常明显，经过测试发现HTTP请求的性能提高了5到6倍（还是非常给力的）。
 
+但是这并不意味每个CPU内核可以模拟的用户数量会增加5到6倍，因为这还取决于负载测试脚本的多方面因素。
 
+但是，如果你的 `locust` 脚本在执行HTTP请求时花费了大量的CPU时间，切换到 `FastHttpLocust` 会让你看到明显的性能提升。
 
+**注意：这是属于提高你的HTTP请求的性能，只做这一件事，和其它流程中的性能是没关系的；** 
 
+**如何使用FastHttpLocust**
 
+First, you need to install the geventhttplocust python package:
 
+首先，您需要安装 `geventhttplocust` 的python包：
 
+```python
+pip install geventhttpclient
+```
 
+然后，您只将FastHttpLocust而不是HttpLocust子类化：
 
+```python
+from locust import TaskSet, task
+from locust.contrib.fasthttp import FastHttpLocust
+class MyTaskSet(TaskSet):
+    @task
+    def index(self):
+        response = self.client.get("/")
+class MyLocust(FastHttpLocust):
+    task_set = MyTaskSet
+    min_wait = 1000
+    max_wait = 60000
+```
 
+注意：与使用**python-requests**的默认HttpLocust相比，`FastHttpLocust`的实现API会不同。这取决于如何使用HttpClient，FastHttpLocust可能无法完全替代HttpLocust。 
 
+**API：**
 
+> ### 类 FastHttpSession(`base_url`, `**kwargs`)
+>
+> - `__init__(base_url, **kwargs)`
+>
+>   - x.__init__(…) 初始化x; 参见help（type（x））进行签名
+>
+> - `get(path, **kwargs)`
+>
+>   - 发送一个GET请求
+>
+> - `head(path, **kwargs)`
+>
+>   - 发送HEAD请求
+>
+> - `options(path, **kwargs)`
+>
+>   - 发送一个OPTIONS请求
+>
+> - `patch(path, data=None, **kwargs)`
+>
+>   - 发送POST请求
+>
+> - `post(path,data=None, **kwargs)`
+>
+>   - 发送POST请求
+>
+> - `put(path, data=None, **kwargs)`
+>
+>   - 发送一个PUT请求
+>
+> - `request(method, path, name=None, data=None, catch_response=False, stream=False, headers=None, auth=None, **kwargs)`
+>
+>   发送和HTTP请求返回`locust.contrib.fasthttp.FastResponse`对象。
 
+| 参数           | is_necessary | 说明                                                         |
+| :------------- | :----------- | :----------------------------------------------------------- |
+| method         | 必须         | 新Request对象的方法。                                        |
+| path           | 必须         | 将与指定的基本主机URL并置的路径。也可以是完整URL，在这种情况下，将请求完整URL，并且忽略基本主机。 |
+| name           | 可选         | 一个参数，可以指定为在Locust的统计信息中用作标签，而不是URL路径。这可用于在Locust的统计信息中将请求的不同URL分组为单个条目。 |
+| catch_response | 可选         | 布尔型参数，如果已设置，则可用于发出请求，以返回上下文管理器以用作with语句的参数。即使响应代码正常（2xx），也可以根据响应的内容将请求标记为失败。相反的方法也可行，即使没有响应代码（即500或404），也可以使用catch_response来捕获请求，然后将其标记为成功。 |
+| 数据           | 可选         | 在请求正文中发送的字典或字节。                               |
+| 标头           | 可选         | 与请求一起发送的HTTP 标头字典。                              |
+| auth           | 可选         | 身份验证（用户名，密码）元组，以启用基本HTTP身份验证。       |
+| stream         | 可选         | 如果设置为true，则不会立即使用响应主体，而是可以通过访问Response对象上的stream属性来使用它。将流设置为True的另一个副作用是，在Locust报告的请求时间中不会考虑下载响应内容的时间。 |
+
+类 FastResponse(`ghc_response`, `request=None`, `sent_request=None`)
+
+- content
+  - 必要时解压缩并缓冲接收到的正文。小心大文件！
+- headers= None
+  - 包含响应头的类对象字典
+- text
+  - 以解码字符串的形式返回响应的文本内容（python2上的unicode）
+
+### 3.14 日志设置
+
+**日志记录**
+
+Locust带有基本的日志记录配置，可以选择采用 `--loglevel` 和 `/` 或 `--logfile` 修改配置。
+
+如果要控制日志记录配置，则可以提供 `--skip-log-setup` 标志，该标志将忽略其他参数。
+
+**Options**
+
+`--skip-log-setup`
+
+禁用 Locust 的日志记录设置。用 Locust 测试 或 Python默认设置提 供配置。
+
+`--loglevel`
+
+在 DEBUG/INFO/WARNING/ERROR/CRITICAL 选择。默认值为 INFO 。 简写为`-L`。
+
+`--logfile`
+
+日志文件的路径。如果未设置，则日志将转到 stdout/stderr。
+
+### 3.15 Locust API
+
+#### 3.15.1 Locust 类
+
+```python
+class Locust
+```
+
+表示要被孵化并攻击要进行负载测试的系统的“用户”。
+
+该用户的行为由 `task_set` 属性定义，该属性应指向一个 `TaskSet` 类。
+
+此类通常应由定义某种客户端的类继承。
+
+例如，当对 `HTTP` 系统进行负载测试时，您可能想使用 `HttpUser` 类。
+
+##### 1. between
+
+```python
+wait_time = between(5, 10)
+```
+
+between 类，指定范围内随机（5~10秒）等待 
+
+##### 2. constant
+
+```python
+wait_time = constant(3)
+```
+
+执行 Locust 任务之间的最短等待时间
+
+##### 3.constant_pacing
+
+```python
+wait_time = constant_pacing(3)
+```
+
+constant_pacing 类，从上一次请求发起后，等待特定时间（3秒），再发起下一次请求，如果上一次请求的响应时间大于指定的时间（3秒），则在响应后立即发起下一次请求 
+
+##### 4. task_set
+
+```python
+task_set = None
+```
+
+定义此 Locust 的执行行为的 TaskSet 类
+
+##### 5. wait_function
+
+```python
+wait_function()
+```
+
+用于计算 Locust 任务执行之间的等待时间的函数（以毫秒为单位）
+
+##### 6. weight
+
+```python
+weight = 10
+```
+
+locust 选择该 Locust 的可能性。
+
+weight 越高，选择它的机会就越大。
+
+#### 3.15.2 HttpLocust 类
+
+```python
+class HttpUser
+```
+
+表示要被孵化并攻击要进行负载测试的系统的 HTTP “用户”。
+
+该用户的行为由 task_set 属性定义，该属性应指向一个 `TaskSet` 类。
+
+此类在实例化时创建一个客户端属性，该属性是一个 HTTP 客户端，支持在请求之间保持用户会话。
+
+##### 1. client
+
+```
+client  = None
+```
+
+在 Locust 实例化后创建的 HttpSession 实例。客户端支持 cookie，因此保持 HTTP 请求之间的会话。
+
+#### 3.15.3 TaskSet 类
+
+```python
+classTaskSet(parent)
+```
+
+定义 Locust 用户将执行的一组任务的类。
+
+当 TaskSet 开始运行时，它将从 task 属性中选择一个任务，执行该任务，并调用其 wait_function 来定义睡眠时间。默认为 min_wait 和 max_wait 毫秒之间的均匀分布的随机数。然后它将安排另一个任务执行，依此类推。
+
+TaskSet 可以嵌套，这意味着 TaskSet 的 task 属性可以包含另一个 TaskSet。如果嵌套 TaskSet 计划执行，则将从当前正在执行的 TaskSet 中实例化并调用它。然后，当前正在运行的 TaskSet 中的执行将移交给嵌套的 TaskSet，它将继续运行，直到它抛出 InterruptTaskSet 异常为止，该异常在`TaskSet.interrupt()`调用时完成 。（然后执行将在第一个 TaskSet 中继续）。
+
+##### 1. client
+
+引用 `client` 根 Locust 实例的属性。
+
+##### 2. interrupt
+
+```python
+interrupt(reschedule=True)
+```
+
+中断 TaskSet 并将执行控制移交给父 TaskSet。
+
+如果 **reschedule** 为 True（默认值），则父 Locust 将立即重新安排并执行新任务
+
+此方法不应由根 TaskSet（立即附加到 Locust 类的 task_set 属性的那个）调用，而应在层次结构中更深的嵌套 TaskSet 类中调用。
+
+##### 3. locust
+
+```python
+locust = None
+```
+
+实例化 TaskSet 时，将引用根 Locust 类实例
+
+##### 4. max_wait
+
+```python
+max_wait = None
+```
+
+执行 Locust 任务之间的最长等待时间。可用于覆盖在根 Locust 类中定义的 **max_wait** ，如果未在 TaskSet 上设置，则将使用它。
+
+##### 5. min_wait
+
+```python
+min_wait = None
+```
+
+执行 Locust 任务之间的最短等待时间。可用于覆盖在根 Locust 类中定义的 **min_wait** ，如果未在 TaskSet 上设置，则将使用它们。
+
+##### 6. parent
+
+```python
+parent = None
+```
+
+实例化 TaskSet 时，将引用父 `TaskSet` 或 `Locust` 类实例。对于嵌套 TaskSet 类很有用。
+
+##### 7. schedule_task
+
+```python
+schedule_task(task_callable, args=None, kwargs=None, first=False)
+```
+
+将任务添加到 Locust 的任务执行队列中。
+
+| 参数          | 说明                                                      |
+| :------------ | :-------------------------------------------------------- |
+| task_callable | Locust 任务计划                                           |
+| args          | 将传递给可调用任务的参数                                  |
+| kwargs        | 将传递给可调用任务的关键字参数的字典。                    |
+| first         | 可选关键字参数。如果为 True，则将任务放在队列中的第一位。 |
+
+##### 8. tasks
+
+```python
+tasks= []
+```
+
+带有代表 Locust 用户任务的 python 可调用对象的列表。
+
+如果任务是列表，则将随机选择要执行的任务。
+
+如果任务是一个包含两个元组的（可调用，整数）列表，或者是一个{`callable：int`}字典，则将随机选择要执行的任务，但是将根据每个任务的相应 int 值对它们进行加权。因此，在以下情况下，选择 ThreadPage 的可能性是 write_post 的十五倍：
+
+```
+class ForumPage(TaskSet):    tasks = {ThreadPage:15, write_post:1}
+```
+
+##### 9. wait_function
+
+```python
+wait_function= None
+```
+
+在 Locust 任务执行之间用于计算等待时间的函数（以毫秒为单位）。可用于覆盖在根 Locust 类中定义的 `wait_function` ，如果未在 TaskSet 上设置，则将使用它。
+
+#### 3.15.4 task decorator
+
+##### 1.task
+
+```python
+task(weight=1)
+```
+
+用作便捷装饰器，以便能够为类中的 TaskSet 内联声明任务。例：
+
+```python
+class ForumPage(TaskSet):    
+    
+	@task(100)    
+	def read_thread(self):        
+	pass    
+	
+	@task(7)    
+	def create_thread(self):        
+	pass
+```
+
+#### 3.15.5 TaskSequence 类
+
+```python
+class TaskSequence(parent)
+```
+
+定义 Locust 用户将执行的任务序列的类。
+
+当 TaskSequence 开始运行时，它将从 task 属性中选择索引中的任务，执行该任务，并调用其 `wait_function` 来定义睡眠时间。默认为 `min_wait` 和 `max_wait` 毫秒之间的均匀分布的随机数。
+
+然后，它将安排 索引 + 1％len（tasks）任务执行，依此类推。
+
+TaskSequence 可以与 TaskSet 嵌套，这意味着 TaskSequence 的 task 属性可以包含 TaskSet 实例以及其他 TaskSequence 实例。
+
+如果嵌套的 TaskSet 被安排执行，它将从当前正在执行的 TaskSet 中实例化并调用。然后，当前正在运行的 TaskSet 中的执行将移交给嵌套的 TaskSet，它将继续运行，直到它抛出 InterruptTaskSet 异常为止，该异常在 TaskSet.interrupt() 调用时完成 。
+
+（然后执行将在第一个 TaskSet 中继续）。
+
+在此类中，应将任务定义为列表，或仅使用 @seq_task 装饰器定义任务
+
+##### 1. client
+
+引用 `client` 根 Locust 实例的属性。
+
+##### 2. interrupt
+
+```python
+interrupt(reschedule=True)
+```
+
+中断 TaskSet 并将执行控制移交给父 TaskSet。
+
+如果 reschedule 为 True（默认值），则父 Locust 将立即重新安排并执行新任务
+
+此方法不应由根 TaskSet（立即附加到 Locust 类的 task_set 属性的那个）调用，而应在层次结构中更深的嵌套 TaskSet 类中调用。
+
+##### 3. schedule_task
+
+```python
+schedule_task(task_callable, args=None, kwargs=None, first=False)
+```
+
+将任务添加到 Locust 的任务执行队列中。
+
+| 参数          | 说明                                                      |
+| :------------ | :-------------------------------------------------------- |
+| task_callable | Locust 任务计划                                           |
+| args          | 将传递给可调用任务的参数                                  |
+| kwargs        | 将传递给可调用任务的关键字参数的字典。                    |
+| first         | 可选关键字参数。如果为 True，则将任务放在队列中的第一位。 |
+
+#### 3.15.6 seq_task decorator
+
+```
+seq_task(order)
+```
+
+用作便捷装饰器，以便能够为类中的 TaskSequence 内联声明任务。
+
+例如：
+
+```python
+class NormalUser(TaskSequence):   
+
+	@seq_task(1)    
+	def login_first(self):        
+	pass    
+	
+	@seq_task(2)    
+	@task(25) 
+	# You can also set the weight in order to execute the task for `weight` times one after another.    
+	def then_read_thread(self):        
+	pass    
+	
+	@seq_task(3)    
+	def then_logout(self):        
+	pass
+```
+
+#### 3.15.7 HttpSession 类
+
+```python
+HttpSession(base_url, *args, **kwargs)
+```
+
+用于执行 Web 请求和在请求之间保留（会话）Cookie 的类（以便能够登录和注销网站）。
+
+记录每个请求，以便 Locust 可以显示统计信息。
+
+这是 `python-request` 的 `requests.Session` 类的稍微扩展的版本，大多数情况下，该类的工作原理完全相同。但是，发出请求的方法 (get, post, delete, put, head, options, patch, request)
+
+现在可以采用 url 参数，该参数仅是 URL 的路径部分，在这种情况下，URL 的主机部分将被添加带有通常从 Locust 类的 host 属性继承的 `HttpSession.base_url` 。
+
+每个发出请求的方法还带有两个附加的可选参数，这些参数是 Locust 特定的，并且在 **python-requests** 中不存在。这些是： 
+
+| 参数               | is_necessary | 说明                                                         |
+| :----------------- | :----------- | :----------------------------------------------------------- |
+| **name**           | （可选）     | 一个参数，可以指定为在 Locust 的统计信息中用作标签，而不是 URL 路径。这可用于在 Locust 的统计信息中将请求的不同 URL 分组为单个条目。 |
+| **catch_response** | （可选）     | 布尔型参数，如果已设置，则可用于发出请求，以返回上下文管理器以用作 with 语句的参数。即使响应代码正常（2xx），也可以根据响应的内容将请求标记为失败。相反的方法也可行，即使没有响应代码（即 500 或 404），也可以使用 catch_response 来捕获请求，然后将其标记为成功。 |
+
+##### 1. `__init__`
+
+```
+__init__(base_url, *args, **kwargs)
+```
+
+x.__init__(…) 初始化 x; 参见 help（type（x））进行签名
+
+##### 2. delete
+
+```
+delete(url, **kwargs)
+```
+
+发送一个 DELETE 请求。返回 `Response` 对象。
+
+| 参数       | 说明                       |
+| :--------- | :------------------------- |
+| url        | 新 `Request` 对象的 URL 。 |
+| `**kwargs` | 可选参数 `request` 。      |
+
+ 返回类型 ：requests.Response
+
+##### 3. get
+
+```
+get(url, **kwargs)
+```
+
+发送 GET 请求。返回 `Response` 对象。
+
+| 参数       | 说明                       |
+| :--------- | :------------------------- |
+| url        | 新 `Request` 对象的 URL 。 |
+| `**kwargs` | 可选参数 `request` 。      |
+
+**返回类型** ：requests.Response
+
+##### 4. head
+
+```
+head(url, **kwargs)
+```
+
+发送 HEAD 请求。返回 `Response` 对象。
+
+| 参数       | 说明                       |
+| :--------- | :------------------------- |
+| url        | 新 `Request` 对象的 URL 。 |
+| `**kwargs` | 可选参数 `request` 。      |
+
+**返回类型** ：requests.Response
+
+##### 5. options
+
+```
+options(url, **kwargs)
+```
+
+发送一个 OPTIONS 请求。返回 `Response` 对象。
+
+| 参数       | 说明                       |
+| :--------- | :------------------------- |
+| url        | 新 `Request` 对象的 URL 。 |
+| `**kwargs` | 可选参数 `request` 。      |
+
+**返回类型** ：requests.Response
+
+##### 6. patch
+
+```
+patch(url, data=None, **kwargs)
+```
+
+发送 PATCH 请求。返回 `Response` 对象。
+
+| 参数       | 说明                                                         |
+| :--------- | :----------------------------------------------------------- |
+| url        | 新 `Request` 对象的 URL 。                                   |
+| data       | （可选）字典，元组列表，字节或要在的正文中发送的类似文件的对象 `Request` 。 |
+| `**kwargs` | 可选参数 request。                                           |
+
+**返回类型** ：requests.Response
+
+##### 7. post
+
+```
+post(url, data=None, json=None, **kwargs)
+```
+
+发送 POST 请求。返回 `Response` 对象。
+
+| 参数       | 说明                                                         |
+| :--------- | :----------------------------------------------------------- |
+| url        | 新 `Request` 对象的 URL 。                                   |
+| data       | （可选）字典，元组列表，字节或要在的正文中发送的类似文件的对象 `Request` 。 |
+| json       | （可选）要发送的正文的 json `Request` 。                     |
+| `**kwargs` | 可选参数 request。                                           |
+
+**返回类型** ：requests.Response
+
+##### 8. put
+
+```
+put（url，data = None，** kwargs ）
+```
+
+发送一个 PUT 请求。返回 `Response` 对象。
+
+| 参数       | 说明                                                         |
+| :--------- | :----------------------------------------------------------- |
+| url        | 新 `Request` 对象的 URL 。                                   |
+| data       | （可选）字典，元组列表，字节或要在的正文中发送的类似文件的对象 `Request` 。 |
+| `**kwargs` | 可选参数 request。                                           |
+
+**返回类型** ：requests.Response
+
+##### 9. request
+
+```
+request（method，url，name = None，catch_response = False，** kwargs ）
+```
+
+构造并发送 `requests.Request`。返回 `requests.Response` 对象。
+
+| 参数                    | 说明                                                         |
+| :---------------------- | :----------------------------------------------------------- |
+| method                  | 新 Request 对象的方法。                                      |
+| url                     | 新 Request 对象的 URL 。                                     |
+| name                    | （可选）一个参数，可以指定为在 Locust 的统计信息中用作标签，而不是 URL 路径。这可用于在 Locust 的统计信息中将请求的不同 URL 分组为单个条目。 |
+| catch_response          | （可选）布尔型参数，如果已设置，则可用于发出请求，以返回上下文管理器以用作 with 语句的参数。即使响应代码正常（2xx），也可以根据响应的内容将请求标记为失败。相反的方法也可行，即使没有响应代码（即 500 或 404），也可以使用 catch_response 来捕获请求，然后将其标记为成功。 |
+| params                  | （可选）要在查询字符串中发送的字典或字节 Request。           |
+| data                    | （可选）要在中发送的字典或字节 Request。                     |
+| headers                 | （可选）与一起发送的 HTTP 标头字典 Request                   |
+| cookies                 | （可选）与一起发送的 Dict 或 CookieJar 对象 Request。        |
+| files                   | （可选）多部分编码上传的字典。‘filename’: file-like-objects  |
+| auth                    | （可选）Auth 元组或可调用以启用基本 / 摘要 / 自定义 HTTP 身份验证。 |
+| timeout(float or tuple) | （可选）在放弃之前，等待服务器发送数据的时间，以秒为单位，以 float 或（连接超时，读取超时）tuple 为单位。 |
+| allow_redirects(bool)   | （可选）默认情况下设置为 True。                              |
+| proxies                 | （可选）字典到代理 URL 的映射协议。                          |
+| stream                  | （可选）是否立即下载响应内容。默认为 False。                 |
+| verify                  | （可选）如果为 True，将验证 SSL 证书。也可以提供 CA_BUNDLE 路径。 |
+| cert                    | （可选）如果为 String，则为 ssl 客户端证书文件（.pem）的路径。如果是元组，（“证书”，“密钥”）配对。 |
+
+#### 3.15.8 Response 类
+
+该类实际上位于 python-requests 库中，因为这是 Locust 用来发出 HTTP 请求的方法，但是由于在编写 Locust 负载测试时它是如此的重要，因此该类已包含在 locust 的 API 文档中。您也可以 `Response` 在请求文档中查看 该类 。
+
+class Response
+
+该 Response 对象，包含服务器对 HTTP 请求的响应。
+
+##### 1. apparent_encoding
+
+由 chardet 库提供的表观编码。
+
+##### 2. close()
+
+将连接释放回池。一旦调用了此方法，就 `raw` 不能再次访问基础对象。
+
+注意：通常不需要显式调用。
+
+##### 3. content
+
+响应的内容，以字节为单位。
+
+##### 4. cookies
+
+```python
+cookies= None
+```
+
+服务器发送回的 Cookie 的 CookieJar。
+
+##### 5. elapsed
+
+`elapsed` *= None*
+
+从发送请求到响应到达之间经过的时间（以时间增量为单位）。此属性专门测量发送请求的第一个字节与完成头解析之间的时间。因此，通过使用响应内容或 stream 关键字参数的值不会受到影响。
+
+##### 6. encoding
+
+```python
+encoding = None
+```
+
+访问 **r.text** 时进行编码以进行解码。
+
+##### 7. headers
+
+```python
+headers= None
+```
+
+不区分大小写的响应标题字典。
+
+例如，`headers['content-encoding']`将返回`'Content-Encoding'`响应头的值。
+
+##### 8. history
+
+```python
+history= None
+```
+
+Response 请求历史记录中的对象列表。任何重定向响应都将在此处结束。
+
+该列表从最早的请求到最新的请求进行排序。
+
+##### 9. is_permanent_redirect
+
+如果此响应是重定向的永久版本之一，则为 True。
+
+##### 10. is_redirect
+
+如果此响应是格式正确的 HTTP 重定向，并且可能已经被自动处理（由`Session.resolve_redirects()`），则为 true 。
+
+##### 11. iter_content
+
+```python
+iter_content（chunk_size = 1，decode_unicode = False ）
+```
+
+遍历响应数据。当在请求上设置 stream = True 时，这避免了立即将内容读取到内存中以获得较大响应。块大小是它应读入内存的字节数。由于解码可以发生，这不一定是返回的每个项目的长度。
+
+chunk_size 必须为 int 或 None 类型。值 None 将根据 stream 的值而有所不同。stream = True 将以到达接收到的块的大小读取数据。如果 stream = False，则将数据作为单个块返回。
+
+如果 decode_unicode 为 True，将根据响应使用最佳可用编码对内容进行解码。
+
+##### 12. iter_lines
+
+```python
+iter_lines(chunk_size=512, decode_unicode=False, delimiter=None)
+```
+
+遍历响应数据，一次一行。当在请求上设置 stream = True 时，这避免了立即将内容读取到内存中以获得较大响应。
+
+> 注意：此方法不是可重入的安全方法。
+
+##### 13. json
+
+```
+json(**kwargs)
+```
+
+返回响应的 json 编码内容（如果有）。
+
+| Item       | 参数       | 说明                                              |
+| :--------- | :--------- | :------------------------------------------------ |
+| Parameters | `**kwargs` | Optional arguments that json.loads takes.         |
+| Raises     | ValueError | If the response body does not contain valid json. |
+
+##### 14. links
+
+返回响应的已解析头链接（如果有）。
+
+##### 15. next
+
+如果存在重定向请求，则为重定向链中的下一个请求返回 `PreparedRequest` 。
+
+##### 16. ok
+
+如果 status_code 小于 400，则返回 True；否则，则返回 False。
+
+此属性检查响应的状态码是否在 400 到 600 之间，以查看是否存在客户端错误或服务器错误。如果状态码在 200 到 400 之间，则返回 True。这不是检查响应代码是否为 `200 OK`.
+
+##### 17. raise_for_status()
+
+Raises stored `HTTPError`, if one occurred.
+
+##### 18. reason
+
+```python
+reason= None
+```
+
+HTTP 状态响应的文字原因，例如 “Not Found” or “OK”.
+
+##### 19. request
+
+```python
+request= None
+```
+
+`PreparedRequest`这是响应的对象。
+
+##### 20. status_code
+
+```python
+status_code= None
+```
+
+响应的 HTTP 状态的整数代码，例如 404 或 200。
+
+##### 21. text
+
+```python
+text
+```
+
+响应的内容，以 unicode 表示。
+
+如果 **Response.encoding** 为 **None** ，将使用猜测编码 `chardet` 。
+
+响应内容的编码仅基于 HTTP 头确定，该字母遵循 RFC 2616。如果可以利用非 HTTP 知识来更好地猜测编码，则应`r.encoding` 在访问此属性之前进行适当的设置。
+
+##### 22. url
+
+```python
+url= None
+```
+
+响应的最终 URL 位置。
+
+#### 3.15.9 ResponseContextManager 类
+
+```python
+classResponseContextManager(response)
+```
+
+Response 类还可以用作上下文管理器，该类提供了手动控制 HTTP 请求是否应在 Locust 统计信息中标记为成功还是失败的能力。
+
+此类是 Response 带有两个附加方法的的子类： `success` 和 `failure` 。
+
+##### 1. failure
+
+```python
+failure(exc)
+```
+
+将响应报告为失败。
+
+exc 可以是 python 异常，也可以是字符串，在这种情况下，它将包装在 CatchResponseError 中。
+
+Example:
+
+```python
+with self.client.get("/", catch_response=True) as response:    
+	if response.content == b"":        
+	response.failure("No data")
+```
+
+##### 2. success
+
+```python
+success()
+```
+
+报告响应成功
+
+Example:
+
+```python
+with self.client.get("/does/not/exist", catch_response=True) as response:    
+	if response.status_code == 404:        
+	response.success()
+```
+
+#### 3.15.10 InterruptTaskSet 异常
+
+```python
+exceptionInterruptTaskSet(reschedule=True)
+```
+
+抛出任务时会打断 locust 的异常
+
+#### 3.15.11 Event hooks
+
+The event hooks are instances of the **locust.events.EventHook** class:
+
+事件钩子 是 `locust.events.EventHook` 类的实例：
+
+```python
+class EventHook
+```
+
+简单事件类，用于为 Locust 中的不同类型的事件提供钩子。
+
+这是使用 EventHook 类的方法：
+
+```python
+my_event = EventHook()
+def on_my_event(a, b, **kw):    
+	print "Event was fired with arguments: %s, %s" % (a, b)
+	my_event += on_my_eventmy_event.fire(a="foo", b="bar")
+```
+
+如果 reverse 为 True，则处理程序将以插入时的相反顺序运行
+
+#### 3.15.12 Available hooks
+
+**locust.events**模块下提供以下事件挂钩：
+
+```python
+request_success= <locust.events.EventHook object>
+```
+
+成功完成请求后，将触发 `request_success` 。
+
+监听器应采用以下参数：
+
+- request_type：使用的请求类型方法
+- name：所调用 URL 的路径（如果在调用客户端时使用，则覆盖名称）
+- response_time：响应时间（以毫秒为单位）
+- response_length：响应的内容长度
+
+```python
+request_failure= <locust.events.EventHook object>
+```
+
+请求失败时会触发 `request_failure`
+
+使用以下参数触发事件：
+
+- request_type：使用的请求类型方法
+- name：所调用 URL 的路径（如果在调用客户端时使用，则覆盖名称）
+- response_time：引发异常之前的时间（以毫秒为单位）
+- exception：抛出的异常实例
+
+```python
+locust_error= <locust.events.EventHook object>
+```
+
+当在 Locust 类的执行中发生异常时，将触发 locust_error。
+
+使用以下参数触发事件：
+
+- locust_instance：发生异常的 Locust 类实例
+- exception：抛出的异常
+- tb：追溯对象（来自 sys.exc_info（）[2]）
+
+```python
+report_to_master= <locust.events.EventHook object>
+```
+
+当 Locust 在–slave 模式下运行时，将使用 `report_to_master` 。它可用于将数据附加到定期发送给主服务器的字典。要将报表发送到主服务器时会定期触发。
+
+注意，键 “stats” 和 “errors” 由 Locust 使用，不应被覆盖。
+
+使用以下参数触发事件：
+
+- client_id：正在运行的 Locust 进程的客户端 ID。
+- data：数据字典，可以修改以附加应发送到主数据库的数据。
+
+```python
+slave_report= <locust.events.EventHook object>
+```
+
+当 Locust 在 **master** 模式下运行时，将使用 `slave_report` ；当主服务器从 **Locust** 从属服务器收到报告时，将触发 `slave_report` 。
+
+此事件可用于聚集来自 Locust 从属服务器的数据。
+
+使用以下参数触发事件：
+
+- client_id：报告 Locust 从属的客户端 ID
+- data：数据字典与从属节点的数据
+
+```python
+hatch_complete= <locust.events.EventHook object>
+```
+
+产生所有 Locust 用户后会触发 hatch_complete。
+
+使用以下参数触发事件：
+
+- user_count：已孵化的用户数
+
+```python
+quitting= <locust.events.EventHook object>
+```
+
+Locust 进程退出时触发退出。
 
 
 
