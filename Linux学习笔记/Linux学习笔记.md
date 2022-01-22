@@ -2325,10 +2325,10 @@ tree
 示例：
 
 ```powershell
-ls -lt 按照时间进行排序
-ls -lrt 找出最新的文件
+ls -lt 		按照时间进行排序
+ls -lrt 	找出最新的文件
 ls -d */    列出当前所有目录
-ll -hS    ./*    显示出当前目录下所有内容详细，且以kb,mb,gb单位从大到小排序
+ll -hS ./*    显示出当前目录下所有内容详细，且以kb,mb,gb单位从大到小排序
 ```
 
 ![image-20211009211748709](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009211748709.png)
@@ -2379,14 +2379,14 @@ mkdir -p test1/test2/test3  # 创建递归目录
 > 
 > -c, --no-create       # 不创建任何文件
 > -t STAMP              # 使用[[CC]YY]MMDDhhmm[.ss] 格式的时间替代当前时间
-> -r, --reference=文件  # 使用指定文件的时间属性替代当前文件时间
+> -r, --reference=文件   # 使用指定文件的时间属性替代当前文件时间
 > ```
 
 ![image-20211010110233510](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211010110233510.png)
 
 ```shell
 修改文件时间
-touch -t 06010808 test1.txt    # 修改test1.txt文件的时间是 6月1号8点8分
+touch -t 10011010 test1.txt    # 修改test1.txt文件的时间是 10月1号10点10分
 touch -r test1.txt test2.txt   # 把test2.txt的时间改成test1.txt 一样
 ```
 

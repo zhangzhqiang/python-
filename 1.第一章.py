@@ -10,24 +10,24 @@
 [ ] 实现用户输入用户名和密码,当用户名为 seven 或 alex 且 密码为 123 时,显示登陆成功,否则登陆失败,失败时允许重复输入三次
 """
 
-# count = 1
-#
-# while True:
-#     username = input("用户名：").strip()
-#     password = input("密码:").strip()
-#
-#     if count < 3:
-#         if password == "123":
-#             if username.lower() == "seven" or username.lower() == "alex":
-#                 print("登录成功")
-#                 break
-#             else:
-#                 print("登录失败,剩余{}次机会".format(3 - count))
-#         else:
-#             print("登录失败,剩余{}次机会".format(3-count))
-#     else:
-#         break
-#     count += 1
+count = 1
+
+while True:
+    username = input("用户名：").strip()
+    password = input("密码:").strip()
+
+    if count < 3:
+        if password == "123":
+            if username.lower() == "seven" or username.lower() == "alex":
+                print("登录成功")
+                break
+            else:
+                print("登录失败,剩余{}次机会".format(3 - count))
+        else:
+            print("登录失败,剩余{}次机会".format(3-count))
+    else:
+        break
+    count += 1
 
 """
 使用 while 循环实现输出 1,2,3,4,5, 7,8,9, 11,12
@@ -41,7 +41,7 @@
 使用while循环实现输出2-3+4-5+6…+100 的和
 """
 
-# 1.
+# # 1.
 # count = 0
 # while count < 12:
 #     count += 1
@@ -49,8 +49,8 @@
 #         pass
 #     else:
 #         print(count)
-
-# 2.
+#
+# # 2.
 # count = 100
 # num = 0
 # while True:
@@ -62,14 +62,14 @@
 #         num += 1
 #         if num > 50:
 #             break
-
-# 3.
+#
+# # 3.
 # count = 100
 # while count > 0:
 #     if count % 2 == 1:
 #         print(count)
 #     count -= 1
-
+#
 # count = 100
 # while True:
 #     count -= 1
@@ -77,13 +77,13 @@
 #         print(count)
 #     if count == 0:
 #         break
-
+#
 # count = 0
 # while count < 100:
 #     if count % 2 == 0:
 #         print(count)
 #     count += 1
-
+#
 # count = 2
 # total = 0
 #
@@ -108,67 +108,67 @@
 
 如：敬爱可爱的xxx，最喜欢在xxx地方干xxx
 """
-# username = input("姓名：")
-# addr = input("地点：")
-# hobbit = input("爱好：")
-# print("敬爱的 %s,最新欢在 %s地方干%s" % (username, addr, hobbit))
+username = input("姓名：")
+addr = input("地点：")
+hobbit = input("爱好：")
+print("敬爱的 %s,最新欢在 %s地方干%s" % (username, addr, hobbit))
 
 """
 输入一年份，判断该年份是否是闰年并输出结果。（编程题）
 
 注：凡符合下面两个条件之一的年份是闰年。 （1） 能被4整除但不能被100整除。 （2） 能被400整除。
 """
-# while True:
-#     year = input("输入年份：")
-#     if year.isdigit():
-#         pass
-#     if int(year) % 4 == 0 and int(year) % 100 != 0:
-#         print("%s是闰年" % year)
-#     elif int(year) % 400 == 0:
-#         print("%s是闰年" % year)
-#     else:
-#         print("%s是平年" % year)
+while True:
+    year = input("输入年份：")
+    if year.isdigit():
+        pass
+    if int(year) % 4 == 0 and int(year) % 100 != 0:
+        print("%s是闰年" % year)
+    elif int(year) % 400 == 0:
+        print("%s是闰年" % year)
+    else:
+        print("%s是平年" % year)
 
-# year = 0
-# salary = 10000
-# rate = 0.0325
-#
-# while salary < 20000:
-#     year += 1
-#     instance = year * rate
-#     salary += instance
-#     print("过了 %s年，%s的利息能翻到 %s" % (year, rate, salary))
+year = 0
+salary = 10000
+rate = 0.0325
 
-# count = 0
-# while count < 10:
-#     count += 1
-#     if count <= 5:
-#         print(count * "*")
-#     else:
-#         print((10 - count) * "*")
+while salary < 20000:
+    year += 1
+    instance = year * rate
+    salary += instance
+    print("过了 %s年，%s的利息能翻到 %s" % (year, rate, salary))
+
+count = 0
+while count < 10:
+    count += 1
+    if count <= 5:
+        print(count * "*")
+    else:
+        print((10 - count) * "*")
 
 """一球从100米高度自由落下，每次落地后反跳回原高度的一半；再落下，求它在第10次落地时，共经过多少米？第10次反弹多高？"""
-# height = 100
-# times = 0
-# total = 0
-#
-# while times < 10:
-#     times += 1
-#     new_height = height / 2
-#     total += 2 * new_height
-#     height += new_height
-# print("经过了%s次,共经过了%s米反弹%s米" % (times, new_height, total+100))
+height = 100
+times = 0
+total = 0
 
-# height = 100
-# times = 0
-# total = 0
-#
-# while times < 10:
-#     times += 1
-#     new_height = height / 2
-#     height = new_height
-#     total += 2 * new_height
-# print("第%s次落地是 %s米，共经过 %s米" % (times, new_height, total + 100))
+while times < 10:
+    times += 1
+    new_height = height / 2
+    total += 2 * new_height
+    height += new_height
+print("经过了%s次,共经过了%s米反弹%s米" % (times, new_height, total+100))
+
+height = 100
+times = 0
+total = 0
+
+while times < 10:
+    times += 1
+    new_height = height / 2
+    height = new_height
+    total += 2 * new_height
+print("第%s次落地是 %s米，共经过 %s米" % (times, new_height, total + 100))
 
 """双色球彩票 选购程序
 
