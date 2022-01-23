@@ -40427,7 +40427,7 @@ git commit -m "斗地主开发完毕"
 
 1. 先配置代码review后，才能合并到dev分支
 
-![image-20211119111131604](j:\homework\Python学习笔记\Python_notes.assets\image-20211119111131604.png)
+![image-20211119111131604](J:\homework\Python学习笔记\Python_notes.assets\image-20211119111131604.png)
 
 ![image-20211119111254233](j:\homework\Python学习笔记\Python_notes.assets\image-20211119111254233.png)
 
@@ -40484,7 +40484,7 @@ git clone -b v2.0 地址
 
 1. fork源代码，将别人的源代码拷贝到自己的远程仓库
 
-![image-20211119153149653](j:\homework\Python学习笔记\Python_notes.assets\image-20211119153149653.png)
+![image-20211119153149653](J:\homework\Python学习笔记\Python_notes.assets\image-20211119153149653.png)
 
 2. 在自己的仓库进行修改代码
 
