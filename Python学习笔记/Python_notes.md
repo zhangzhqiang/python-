@@ -27709,7 +27709,7 @@ urlpatterns = [
 
 - 在frist_demo.urls.py里导入include函数,匹配到app01/路径,找到urls文件
 
-- 这样就可以通过http://127.0.0.1:8080/frist_demo/articles/...匹配frist_demo.urls.py文件中urlpatterns列表中的模式了
+- 这样就可以通过http://127.0.0.1:8080/app01/articles/...匹配app01.py文件中urlpatterns列表中的模式了
 
     但是url地址中每次都需要输入app01,我们可以通过正则匹配,用第二种方法就可以实现
 
@@ -27774,8 +27774,8 @@ def login(request):
             return HttpResponse('username or password error!')
 ```
 
-- html 文件中以{%  %}语法匹配路径,html中路径不需要修改,永远都是获取最新的.
-- urls文件中login路径可以随便修改,在html文件中永远获取到最新路径这就是反向解析.
+- html 文件中以{%  %}语法匹配路径,html中路径不需要修改，永远都是获取最新的。
+- urls文件中login路径可以随便修改，在html文件中永远获取到最新路径这就是反向解析。
 
 ##### 13.5.4.2 在脚本中反向解析
 
@@ -27881,14 +27881,14 @@ urlpatterns = [
 re_path('articles/(?P<year>[0-9]{4})/', views.year_archive),
 re_path('article/(?P<article_id>[a-zA-Z0-9]+)/detail/', views.detail_view),
 re_path('articles/(?P<article_id>[a-zA-Z0-9]+)/edit/', views.edit_view),
-re_path('articles/(?P<article_id>[a-zA-Z0-9]+)/delete/', delete_view),
+re_path('articles/(?P<article_id>[a-zA-Z0-9]+)/delete/', views.delete_view),
 ]
 ```
 
 问题:
 
-- 函数 year_archive 中year参数是字符串类型的,因此需要先转化为整数类型的变量值,在视图函数逻辑中year=int(year)就可以转换.有没有一种方法，在url中Django自动完成.
-- 三个路由中article_id都是同样的正则表达式，但是你需要写三遍，当之后article_id规则改变后，需要同时修改三处代码，那么有没有一种方法，只需修改一处即可.
+- 函数 year_archive 中year参数是字符串类型的，因此需要先转化为整数类型的变量值,在视图函数逻辑中year=int(year)就可以转换。有没有一种方法，在url中Django自动完成.
+- 三个路由中article_id都是同样的正则表达式，但是你需要写三遍，当之后article_id规则改变后，需要同时修改三处代码，那么有没有一种方法，只需修改一处即可。
 
 示例:
 
@@ -28010,7 +28010,7 @@ def index(request):
 return render(request, "index.html", locals())
 ```
 
-template-index.html
+index.html
 
 ```html
 <p>字符串:{{ name }}</p>
@@ -28086,7 +28086,7 @@ def index(request):
     return render(request, "index.html", locals())
 ```
 
-template-index.html
+index.html
 
 ```python
 <p>{{ person_lis|default:'是一个空列表' }}</p>
@@ -28112,7 +28112,7 @@ def index(request):
     return render(request, "index.html", locals())
 ```
 
-template-index.html
+index.html
 
 ```html
 <p>长度:{{ len|length }}</p>
@@ -28136,7 +28136,7 @@ def index(request):
     return render(request, "index.html", locals())	
 ```
 
-template-index.html
+index.html
 
 ```html
 <p>{{ len|slice:'::2' }}</p>
@@ -28226,7 +28226,7 @@ template-index.html
 
 ##### 13.7.3.1 for标签
 
-遍历每一个元素,例如:
+遍历每一个元素,例如：
 
 views.py
 
@@ -39371,8 +39371,16 @@ Git本身完全可以做到版本控制，但其所有内容以及版本记录�
 git init					# 初始化，表示即将对当前文件夹进行版本控制。
 git status					# 查看Git当前状态，如：那些文件被修改过、那些文件还未提交到版本库等。
 git add 文件名	  			  # 将指定文件添加到版本库的暂存状态。
+git rm --cached a			# 将文件从暂存区移到工作目录
+git rm -f a					# 删除暂存区的文件，同时删除本地文件
+git mv a  a.txt				# 改动暂存区和本地的文件名
+git diff a					# 比对本地和暂存区的文件区别
+git diff --cached a			# 比对暂存区和版本库文件区别
 git commit -m '提交信息'	 # 将暂存区的文件提交到版本库的分支。
 git log					  	# 查看提交记录，即：历史版本记录
+git log --online			# 查看提交记录，简写形式
+git log --online --decorate	# 查看提交记录，简写形式，包括分支
+git log -p					# 查看提交记录，详细信息
 ```
 
 ##### 16.3.2.2 第二节点：拓展新功能
@@ -39397,7 +39405,7 @@ git commit -m "短视频"
 
     ```shell
     git reflog  # 查看所有的版本
-    git reset --hard 版本号
+    git 
     ```
 
     <img src="j:\homework\Python学习笔记\Python_notes.assets\425762-20170811110830683-181174888.png" alt="img" style="zoom:67%;" />
@@ -40229,7 +40237,7 @@ touch master1.py
 git add .
 git commit -m "master commit 1"
 
-# 3.切换到到dev分支，合并分支记录
+# 3.切换到dev分支，合并分支记录
 git checkout dev
 git rebase master
 
@@ -40386,6 +40394,12 @@ git clone -b v3.0 地址  # 指定tag下载代码
 - 邀请同事进入组织（默认对项目的组织具有读权限）
 - 接受后，就加进来了
 
+**1. 邀请新人加入组织，组织默认只有读的权限，可以去看其他项目的代码，但不可以写**
+
+![1639371179037](J:\homework\Python学习笔记\Python_notes.assets\1639371179037.png)
+
+**2. 邀请加入项目，针对项目给写的权限**
+
 ![1639280471746](J:\homework\Python学习笔记\Python_notes.assets\1639280471746.png)
 
 ![1639280536295](J:\homework\Python学习笔记\Python_notes.assets\1639280536295.png)
@@ -40396,85 +40410,101 @@ git clone -b v3.0 地址  # 指定tag下载代码
 
 ###### 16.3.2.6.3 新人下载代码开发
 
-```shell
-git checkout -b dev	# 创建dev分支并切换
-git push origin dev # 推送到远程仓库
-
-Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/organization/dbhot-org (dev)
-$ pwd
-/g/homework/organization/dbhot-org
-mkdir brother
-cd brother 
-
-# 模拟新人在自己的电脑上下载代码
-git clone https://github.com/joker1-org/dbhot.git
-cd dbhot/
-git checkout dev
-git checkout -b ddz
-touch 斗地主.py
+```powershell
+# 1.组织者创建好项目
+mkdir tongchengre
+cd tongchengre
+touch app.py
+git init
 git add .
-git commit -m "斗地主第一版"
-git push origin ddz
+git commit -m "tongchengre"
+git remote add origin git@github.com:python-pra/tongchengre.git
+git push -u origin master
+git tag -a v1.0 -m "1.0版本"
+git push origin --tags
+git checkout -b dev
+git push origin dev
+```
+
+1. 邀请新人加入组织，加入组织后默认只有读的权限
+2. 邀请新人加入项目，对项目进行开发
+
+```shell
+# 2.模拟新人在自己的电脑上下载代码
+mkdir brother
+cd brother/
+git clone https://github.com/python-pra/tongchengre.git
+cd tongchengre/
+git checkout dev
+git checkout -b tongchengre	# 在dev分支基础上再创建分支
+touch tongchengre.py
+git add .
+git commit -m "同城热50%"
+git push origin tongchengre
 
 vim 斗地主.py
 git add .
-git commit -m "斗地主第一版"
-git push origin ddz
-git commit -m "斗地主开发完毕"
+git commit -m "同乘热项目开发完成"
+git push origin tongchengre
 ```
 
 ###### 16.3.2.6.4 code review
 
 1. 先配置代码review后，才能合并到dev分支
 
-![image-20211119111131604](J:\homework\Python学习笔记\Python_notes.assets\image-20211119111131604.png)
+![1639375742980](J:\homework\Python学习笔记\Python_notes.assets\1639375742980.png)
 
-![image-20211119111254233](j:\homework\Python学习笔记\Python_notes.assets\image-20211119111254233.png)
+![1639375841685](J:\homework\Python学习笔记\Python_notes.assets\1639375841685.png)
 
 2. 小弟提交code review申请
 
-![image-20211119113529938](j:\homework\Python学习笔记\Python_notes.assets\image-20211119113529938.png)
+![1639375945589](J:\homework\Python学习笔记\Python_notes.assets\1639375945589.png)
 
-3. 组长做code review
+![1639379748254](J:\homework\Python学习笔记\Python_notes.assets\1639379748254.png)
 
-![image-20211119112537894](j:\homework\Python学习笔记\Python_notes.assets\image-20211119112537894.png)
+3. 组长做code review后可以删除分支
 
-![image-20211119112959108](j:\homework\Python学习笔记\Python_notes.assets\image-20211119112959108.png)
+![1639380027265](J:\homework\Python学习笔记\Python_notes.assets\1639380027265.png)
 
 ###### 16.2.6.5 提测上线（预发布）
 
-由公司质量部门或团队leader执行以下步骤：
+测试部门完成测试，可以在github上pull request进行验证合并，后删除release分支，也可以通过merge进行合并
+
+由测试部门或团队leader执行以下步骤：
 
 1. 基于dev分支创建release分支
 
 ```shell
-git checkout dev
-git pull origin dev
-git checkout -d release
+git branch
+git checkout -b release
+git push origin release
 ```
 
-2. 质量部门拉release分支代码进行测试
+2. 测试部门拉release分支代码进行测试
 
-3. 合并到master
+```powershell
+git pull origin release
+```
+
+3. 合并到dev
 
 ```shell
-# 使用 pull request 或本地将 release 合并到 master分支
+# 使用 pull request 或通过merge将 release 合并到 dev分支
+git checkout dev
+git merge release
+git branch -d release
 ```
 
 4. 在master分支打tag
 
 ```shell
-git tag -a v2.0 -m "第二版 斗地主功能"
+git checkout master
+git pull origin master
+git tag -a v2.0 -m "第二版 开发完成"
 git push origin --tags
 ```
 
-5. 删除release分支
-
-```shell
-git branch -d release
-```
-
-6. 运维人员就可以下载代码做上线了
+5. 运维人员就可以下载代码做上线了
 
 ```shell
 git clone -b v2.0 地址
@@ -40484,8 +40514,7 @@ git clone -b v2.0 地址
 
 1. fork源代码，将别人的源代码拷贝到自己的远程仓库
 
-![image-20211119153149653](J:\homework\Python学习笔记\Python_notes.assets\image-20211119153149653.png)
-
+![1639380158307](J:\homework\Python学习笔记\Python_notes.assets\1639380158307.png)
 2. 在自己的仓库进行修改代码
 
 ```shell
@@ -40580,68 +40609,6 @@ git push origin master
 
 - issues：文档以及任务的管理
 - wiki：项目文档管理
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -40945,6 +40912,7 @@ sudo apt-get -y purge wodim #命令刻碟
    sudo service network-manager start
    ```
 
+<<<<<<< HEAD
 ### 3. 面试记录
 
 #### 3.1 可hash的数据类型
@@ -41079,5 +41047,50 @@ val1 是类变量，可以由类名直接调用，也可以由对象来调用；
 val2 是成员变量，可以由类的对象来调用，这里可以看出成员变量一定是以self.的形式给出的，因为self的含义就是代表实例对象；如果__init__内的变量没有加self，那就变成一个__init__的局部变量；
 val3 不是成员变量，它只是函数fnc内部的局部变量；
 val4和val5 是成员变量，但并没有初始化，所以这里会报错
+=======
+#### 2.10 上传github报错如下
+
+**报错1：**
+
+​```powershell
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/python-pra/tongchengre.git/
+```
+
+解决方法
+
+```powershell
+# 1.执行如下命令
+git config http.sslVerify "false"
+有报错提示时执行  git init 再执行一遍命令
+
+# 2.删除github凭证
+# 3.创建个人访问令牌
+# 4.清除缓存
+git credential-manager uninstall
+
+# 5.再执行clone命令，密码输入生成的tonken令牌登录
+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
+
+参考博客：https://blog.csdn.net/m0_46332820/article/details/119708248
+```
+
+![1639373585717](J:\homework\Python学习笔记\Python_notes.assets\1639373585717.png)
+
+**报错2：**
+
+![1639379354254](J:\homework\Python学习笔记\Python_notes.assets\1639379354254.png)
+
+```powershell
+# 1.检查是否设置review代码，如果设置删除
+# 2.再执行以下命令，上传
+git add .
+git commit -m "提交的信息"
+
+git remote add origin 远程仓库地址
+
+git push -u origin 分支名
+>>>>>>> dev
 ```
 
