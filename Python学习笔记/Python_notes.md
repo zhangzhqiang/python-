@@ -39278,8 +39278,16 @@ Git本身完全可以做到版本控制，但其所有内容以及版本记录�
 git init					# 初始化，表示即将对当前文件夹进行版本控制。
 git status					# 查看Git当前状态，如：那些文件被修改过、那些文件还未提交到版本库等。
 git add 文件名	  			  # 将指定文件添加到版本库的暂存状态。
+git rm --cached a			# 将文件从暂存区移到工作目录
+git rm -f a					# 删除暂存区的文件，同时删除本地文件
+git mv a  a.txt				# 改动暂存区和本地的文件名
+git diff a					# 比对本地和暂存区的文件区别
+git diff --cached a			# 比对暂存区和版本库文件区别
 git commit -m '提交信息'	 # 将暂存区的文件提交到版本库的分支。
 git log					  	# 查看提交记录，即：历史版本记录
+git log --online			# 查看提交记录，简写形式
+git log --online --decorate	# 查看提交记录，简写形式，包括分支
+git log -p					# 查看提交记录，详细信息
 ```
 
 ##### 16.3.2.2 第二节点：拓展新功能
@@ -39304,7 +39312,7 @@ git commit -m "短视频"
 
     ```shell
     git reflog  # 查看所有的版本
-    git reset --hard 版本号
+    git 
     ```
 
     <img src="j:\homework\Python学习笔记\Python_notes.assets\425762-20170811110830683-181174888.png" alt="img" style="zoom:67%;" />
@@ -40136,7 +40144,7 @@ touch master1.py
 git add .
 git commit -m "master commit 1"
 
-# 3.切换到到dev分支，合并分支记录
+# 3.切换到dev分支，合并分支记录
 git checkout dev
 git rebase master
 

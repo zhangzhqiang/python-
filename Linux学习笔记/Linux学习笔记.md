@@ -1,4 +1,4 @@
-Linxu运维 学习笔记
+# Linxu运维 学习笔记
 
 ## 第一章 Linxu基础
 
@@ -16192,6 +16192,567 @@ END
 menu
 
 ```
+
+---
+
+## 第十章 持续化集成
+
+### 10.1 持续集成基础概念
+
+**1. 持续集成**
+
+持续集成（Continuous integration）是一种软件开发实践，即团队开发成员经常集成他们的工作，通常每个成员每天至少集成一次，也就意味着每天可能会发生多次集成。每次集成都通过自动化的构建（包括编译，发布，自动化测试)来验证，从而尽快地发现集成错误。许多团队发现这个过程可以大大减少集成的问题，让团队能够更快的开发内聚的软件。 
+
+持续集成强调开发人员提交了新代码之后，立刻进行构建、（单元）测试。根据测试结果，我们可以确定新代码和原有代码能否正确地集成在一起。 
+
+**持续集成的好处主要有两个**: 
+
+1. 快速发现错误，每完成一点更新，就集成到主干，可以快速发现错误，定位错误也比较容易。 
+
+2. 防止分支大幅偏离主干，如果不是经常集成，主干又在不断更新，会导致以后集成的难度变大，甚至难以集成。 
+
+持续集成的目的，就是让产品可以快速迭代，同时还能保持高质量。它的核心措施是，代码集成到主干之前，必须通过自动化测试。只要有一个测试用例失败，就不能集成。 持续集成并不能消除 Bug，而是让它们非常容易的发现和改正。 
+
+![1642994536826](J:\homework\Linux学习笔记\Linux学习笔记.assets\1642994536826.png)
+
+**2. 持续交付**
+
+持续交付（Continuous delivery）指的是，频繁地将软件的新版本，交付给质量团队或者用户，以供评审。如果评审通过，代码就进入生产阶段。 持续交付可以看作持续集成的下一步，它强调的是，不管怎么更新，软件是随时随地可以交付的。
+
+![1642994556738](J:\homework\Linux学习笔记\Linux学习笔记.assets\1642994556738.png)
+
+**3. 持续部署**
+
+持续部署（continuous deployment）是持续交付的下一步，指的是代码通过评审以后， 自动部署到生产环境。 持续部署的目标是，代码在任何时刻都是可部署的，可以进入生产阶段。持续部署的前提是能自动化完成测试、构建、部署等步骤。
+
+**4. 持续集成的一般流程**
+
+根据持续集成的设计，代码从提交到生产，整个过程有以下几步： 
+
+**1. 提交** 
+
+流程的第一步，是开发者向代码仓库提交代码。所有后面的步骤都始于本地代码的一次提交（commit）。 
+
+**2. 测试（第一轮）** 
+
+代码仓库对 commit 操作配置了钩子（hook），只要提交代码或者合并进主干，就会跑自动化测试。 
+
+**3. 构建** 
+
+通过第一轮测试，代码就可以合并进主干，就算可以交付了。交付后，就先进行构建（build），再进入第二轮测试。所谓构建，指的是将源码转换为可以运行的实际代码，比如安装依赖，配置各种资源（样式表、JS 脚本、图片）等等。 常用的构建工具如下。jeknins、Travis、codeship 等 
+
+**4. 测试（第二轮）** 
+
+构建完成，就要进行第二轮测试。如果第一轮已经涵盖了所有测试内容，第二轮可以省略，当然，这时构建步骤也要移到第一轮测试前面。第二轮是全面测试，单元测试和集成测试都会跑，有条件的话，也要做端对端测试。所有测试以自动化为主，少数无法自动化的测试用例，就要人工跑。 
+
+**5. 部署** 
+
+通过了第二轮测试，当前代码就是一个可以直接部署的版本（artifact）。将这个版本 的所有文件打包（ tar filename.tar * ）存档，发到生产服务器。生产服务器将打包文件，解包成本地的一个目录，再将运行路径的符号链接（symlink）指向这个目录，然后重新启动应用。这方面的部署工具有 Ansible，Chef，Puppet 等。 
+
+**6. 回滚** 
+
+一旦当前版本发生问题，就要回滚到上一个版本的构建结果。最简单的做法就是修改一下符号链接，指向上一个版本的目录。
+
+### 10.2 认识 DevOps
+
+#### 10.2.1 什么是DevOps
+
+**1. 什么是DevOps**
+
+DevOps 一词的来自于 Development 和 Operations 的组合，突出重视软件开发人员和运维人员的沟通合作，通过自动化流程来使得软件构建、测试、发布更加快捷、频繁和可靠。
+
+目前对 DevOps 有太多的说法和定义，不过它们都有一个共同的思想：“解决开发者与运维者之间曾经不可逾越的鸿沟，增强开发者与运维者之间的沟通和交流”。而我个人认为，DevOps可以用一个公式表达：
+
+​	文化观念的改变 + 自动化工具 = 不断适应快速变化的市场
+
+​	强调：DevOps 是一个框架，是一种方法论，并不是一套工具，他包括一系列的基本原则和实践。
+
+其核心价值在于以下两点：
+
+​	更快速地交付，响应市场的变化，更多地关注业务的改进与提升。
+
+**2. 为什么需要DevOps**
+
+**2.1 产品迭代**
+
+在现实工作中，往往都是用户不知道自己想要什么，但是当我们设计完一个产品后，他告诉我们他们不需要什么，这样我们的产品需要反复的迭代，而且过程可能是曲折的，那我们有什么好的办法快速的交付价值，灵活的响应变化呢？答案就是 DevOps。因为 DevOps是面向业务目标，助力业务成功的最佳实践。
+
+**2.2 技术革新**
+
+现在的 IT 技术架构随着系统的复杂化不断的革新，从最期的所有服务在一个系统中，发展到现在的微服务架构、从纯手动操作到全自动流程、从单台物理机到云平台。
+
+![1643008013285](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643008013285.png)
+
+**3. DevOps如何落地**
+
+落实DevOps的指导思想：
+
+- 高效的协作和沟通
+- 自动化流程和工具
+- 迅速敏捷的开发
+- 持续交付和部署
+- 不断学习和创新
+
+![1643008234612](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643008234612.png)
+
+敏捷管理：一支训练有素的敏捷开发团队是成功实施 DevOps 的关键。
+
+持续交付部署：实现应用程序的自动化构建、部署、测试和发布。
+
+通过技术工具，把传统的手工操作转变为自动化流程，这不仅有利于提高产品开发、运维部署的效率，还将减少人为因素引起的失误和事故，提早发现问题并及时地解决问题，这样也保证了产品的质量。下图展示了 DevOps 自动化的流程：
+
+![1643008343092](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643008343092.png)
+
+IT 服务管理：可持续的、高可用的 IT 服务是保障业务正常的关键要素，它与业务是一个整体。
+
+IT 服务管理（ITSM），它是传统的“IT 管理”转向为“IT 服务”为主的一种模式，前者可能更关注具体服务器管理、网络管理和系统软件安装部署等工作；而后者更关注流程的规范化、标准化，明确定义各个流程的目标和范围、成本和效益、运营步骤、关键成功因素和绩效指标、有关人员的责权利，以及各个流程之间的关系等，比如建立线上事故解决流程、服务配置管理流程等；
+
+​	精益管理：建立一个流水线式的 IT 服务链，打通开发与运维的鸿沟，实现开发运维一体化的敏捷模式。
+
+​	精益生产主要来源于丰田生产方式 (TPS)的生产哲学，它以降低浪费、提升整体客户价值而闻名，它主要利用优化自动化流程来提高生产率、降低浪费。所以精益生产的精髓是即时制（JIT）和自动化（Jidoka）。
+
+​	精益管理贯穿于整个 DevOps 阶段，它鼓励主动发现问题，不断的优化流程，从而达到持续交付、快速反馈、降低风险和保障质量的目的。
+
+#### 10.2.2 实施DevOps
+
+**建立快速敏捷的团队**
+
+按照业务功能划分团队，建立沟通群组，设置产品负责人（一个策划人员）、Scrum Master（我们一般选择测试人员担任，测试驱动开发模式）和开发者团队（前端工程师、后端工程师、测试各一名），形成如下的组织结构和系统架构：
+
+**提交：**工程师将代码在本地测试后，提交到版本控制系统，如 Git 代码仓库中。 
+
+构建：持续整合系统（如 Jenkins CI），在检测到版本控制系统更新时，便自动从 Git 代码仓库里拉取最新的代码，进行编译、构建。 
+
+**单元测试：**Jenkins 完成编译构建后，会自动执行指定的单元测试代码。 
+
+**部署到测试环境：**在完成单元测试后，Jenkins 可以将应用程序部署到与生产环境相近 的测试环境中进行测试。 
+
+**预生产环境测试：**在预生产测试环境里，可以进行一些最后的自动化测试，例如使用 Appium自动化测试工具进行测试，以及与实际情况类似的一些测试可由开发人员或客户人 员手动进行测试。 
+
+**部署到生产环境：**通过所有测试后，便可以使用灰度更新将最新的版本部署到实际生产环境里。
+
+**DepOps 在落地实施过程中经常会遇到的问题**
+
+- 人手紧缺
+- 跨部门协作，前期沟通培训成本高
+- 前期投入工作量大见效少
+
+#### 10.2.3 DevOps技术栈
+
+**敏捷管理工具**
+
+- Trello
+- Teambition
+- Worktile
+- Tower
+
+**产品&质量管理**
+
+- confluence
+- 禅道
+- Jira
+- Bugzila
+
+其中 confluence 和禅道主要是产品的需求、定义、依赖和推广等的全面管理工具；而Jira 和 Bugzilla 是产品的质量管理和监控能力，包括测试用例、缺陷跟踪和质量监控等。目前我们使用 Jira 和禅道较多。
+
+**代码仓库管理**
+
+- Git
+- Gitlab
+- Github
+
+Git 是一个开源的分布式版本控制系统；Gitlab 和 Github 是用于仓库管理系统的开源项目，它们使用 Git 作为代码管理工具，并在此基础上搭建起来的 web 服务。我们主要使用的是 Git 和 Gitlab。
+
+**自动化构建脚本**
+
+- Gradle
+- Maven
+- SBT
+- ANT
+
+**虚拟机与容器化**
+
+- VMware
+- VirtualBox
+- Vagrant
+
+- Docker
+
+**持续集成（CI）&持续部署（CD）**
+
+- Jenkins
+- Hudson
+- Travis CI
+- CircleCI
+
+Jenkins 是一个开源软件项目，是基于 Java 开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件的持续集成变成可能，它的前身为Hudson。 
+
+Travis CI 是目前新兴的开源持续集成构建项目，它与 jenkins 很明显的区别在于采用yaml 格式，简洁清新独树一帜。 
+
+CircleCI 是一个为 web 应用开发者提供服务的持续集成平台，主要为开发团队提供测试，持续集成，以及代码部署等服务。
+
+**自动化测试**
+
+- Appium
+
+Appium 是一个移动端的自动化框架，可用于测试原生应用，移动网页应用和混合型应用，且是跨平台的。可用于 IOS 和 Android 以及 firefox 的操作系统。
+
+- Selenium
+
+Selenium 测试直接在浏览器中运行，就像真实用户所做的一样。Selenium 测试可以在Windows、Linux 和 Macintosh 上的 Internet Explorer、Mozilla 和 Firefox 中运行。
+
+- Mock 测试
+
+Mock 测试就是在测试过程中，对于某些不容易构造或者不容易获取的对象，用一个虚拟的对象来创建以便测试的测试方法。这个虚拟的对象就是 Mock 对象，Mock 对象就是真实对象在调试期间的代替品。Java 中的 Mock 框架常用的有 EasyMock 和 Mockito 等。
+
+- 消费者驱动契约测试
+
+契约测试是一种针对外部服务的接口进行的测试，它能够验证服务是否满足消费方期待的契约。当一些消费方通过接口使用某个组件的提供的行为时，它们之间就产生了契约。这个契约包含了对输入和输出的数据结构的期望，性能以及并发性。而 PACT 是目前比较流的消费者驱动契约测试框架。
+
+**自动化运维工具**
+
+- Ansible
+- Puppet
+- Chef
+- SaltStack
+
+**监控管理工具**
+
+- Zabbix
+
+Zabbix 是一个基于 WEB 界面的提供分布式系统监视以及网络监视功能的企业级开源解决方案。
+
+- ELK Stack 日志分析系统
+
+ELK Stack 是开源日志处理平台解决方案，背后的商业公司是 Elastic。它由日志采集解析工具 Logstash、基于 Lucene 的全文搜索引擎 Elasticsearch、分析可视化平台Kibana 三部分组成。
+
+- 云监控（如 Amazon CloudWatch）
+
+Amazon CloudWatch 是一项针对 AWS 云资源和在 AWS 上运行的应用程序进行监控的服务。您可以使用 Amazon CloudWatch 收集和跟踪各项指标、收集和监控日志文件、设置警报以及自动应对 AWS 资源的更改。
+
+### 10.3 Git基本使用
+
+- 初始化
+
+```shell
+git init
+```
+
+- 查看当前状态
+
+```powershell
+git status
+```
+
+- 提交到暂存区
+
+```powershell
+git add .
+```
+
+- 从暂存区回滚到本地
+
+```python
+git rm --cached a
+```
+
+- 删除暂存区的文件同时删除本地文件
+
+```powershell
+git rm -f b
+```
+
+- 同时修改暂存区和本地的文件名
+
+```python
+git mv a  a.txt
+```
+
+- 比对本地与暂存区的区别
+
+```python
+git diff a
+```
+
+- 将暂存区的文件提交到版本库
+
+```powershell
+git commit -m "提交备注"
+```
+
+- 比对暂存区和版本库的区别
+
+```powershell
+git diff --cached a
+```
+
+- 查看提交记录
+
+```powershell
+git log
+```
+
+- 查看详细提交记录
+
+```powershell
+git log --online			# 查看提交记录，简写形式
+git log --online --decorate	# 查看提交记录，简写形式，包括分支
+git log -p					# 查看提交记录，详细信息
+```
+
+- 查看历史操作
+
+```powershell
+git reflog
+```
+
+- 回滚到指定的版本，**这个操作等于 --soft + head + checkout  以下**
+
+```powershell
+git reset --hard 版本号
+```
+
+- 1.指定某个版本从版本库回滚到缓存区
+
+```powershell
+git reset --soft eedd50d77f1ad
+```
+
+- 2.从暂存区回滚到本地，重新提交add
+
+```powershell
+git reset head a
+```
+
+- 3.暂存区的的文件覆盖本地文件内容--危险！
+
+```powershell
+git checkout -- a
+```
+
+- 指定某个版本从版本库回滚到本地，重新提交，**这个操作等于 --soft + head** 以上
+
+```powershell
+git reset --mix eedd50d77f1a
+```
+
+- 创建分支
+
+```powershell
+git branch dev
+```
+
+- 查看分支
+
+```powershell
+git branch
+```
+
+- 切换分支
+
+```powershell
+git checkout 
+```
+
+- 合并分支
+
+```powershell
+git merge dev
+```
+
+- 删除分支
+
+```powershell
+git branch -d dev
+```
+
+-  创建标签
+
+```powershell
+git tag -a v1.0
+```
+
+- 删除标签
+
+```powershell
+git tag -d v1.0
+```
+
+- 查看标签
+
+```powershell
+git show v1.0
+git tag
+```
+
+### 10.4 Gitlab
+
+GitLab 是一个用于仓库管理系统的开源项目。使用Git作为代码管理工具，并在此基础上搭建起来的web服务。可通过Web界面进行访问公开的或者私人项目。它拥有与Github类似的功能，能够浏览源代码，管理缺陷和注释。可以管理团队对仓库的访问，它非常易于浏览提交过的版本并提供一个文件历史库。团队成员可以利用内置的简单聊天程序(Wall)进行交流。它还提供一个代码片段收集功能可以轻松实现代码复用。
+
+> 国内镜像下载地址：https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/yum/el7/
+
+**1. 安装依赖**
+
+```powershell
+yum install curl policycoreutils openssh-server openssh-clients policycoreutils-python
+systemctl enable sshd
+systemctl start sshd
+yum install postfix
+systemctl enable postfix
+systemctl start postfix
+```
+
+**2. 获取rpm安装包**
+
+```powershell
+cd /usr/local/src/
+wget https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/yum/el7/gitlab-ce-10.0.6-ce.0.el7.x86_64.rpm
+rpm -ivh gitlab-ce-10.0.6-ce.0.el7.x86_64.rpm
+```
+
+**3. 修改配置**
+
+```powershell
+vim /etc/gitlab/gitlab.rb
+# 修改如下信息
+external_url 'http://192.168.88.128'
+gitlab-ctl reconfigure	# 重新配置gitlab
+```
+
+**4. 启动**
+
+重新配置gitlba后，在浏览地址栏中输入 http://192.168.88.128
+
+#### 10.4.1 常用命令
+
+```powershell
+gitlab-ctl start	# 启动全部服务
+gitlab-ctl restart	# 重启全部服务
+gitlab-ctl stop		# 停止全部服务
+gitlab-ctl reconfigure	# 使配置文件生效（一般修改完主配置文件/etc/gitlab/gitlab.rb，需要执行此命令）
+gitlab-ctl show-config	# 验证配置文件
+gitlab-ctl uninstall	# 删除gitlab（保留数据）
+gitlab-ctl cleanse	# 删除所有数据，从新开始
+gitlab-ctl tail <service name>	# 查看服务的日志
+```
+
+#### 10.4.2 服务与目录
+
+> nginx：静态Web服务器
+>
+> gitlab-shell：用于处理Git命令和修改authorized keys列表，我们的gitlab是以Git做为最层的，你操作实际上最后就是调用gitlab-shell命令进行处理。
+>
+> gitlab-workhorse:轻量级的反向代理服务器
+>
+> logrotate：日志文件管理工具
+>
+> postgresql：数据库
+>
+> redis：缓存数据库
+>
+> sidekiq：用于在后台执行队列任务（异步执行）
+>
+> unicorn：GitLab Rails应用是托管在这个服务器上面的
+
+```powershell
+/var/opt/gitlab/git-data/repositories	# 库默认存储目录
+/opt/gitlab	# 应用代码和相应的依赖程序
+/var/opt/gitlab	# gitlab-ctl reconfigure命令编译后的应用数据和配置文件，不需要人为修改配置
+/etc/gitlab	# 配置文件目录
+/var/log/gitlab	# 此目录下存放了gitlab各个组件产生的日志
+/var/opt/gitlab/backups	# 备份文件生成的目录
+```
+
+#### 10.4.3 Gitlab基本配置
+
+**1.关闭注册**
+
+由于我们Gitlab系统是私有仓库，一般用户都是由管理员创建和分派的，所以我们需要关闭注册。
+
+![1643026716504](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643026716504.png)
+
+![1643026767340](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643026767340.png)
+
+
+
+**2. 创建组**
+
+group（项目）下面可以创建subgroup，创建project（项目下的具体工程），添加user。group就是把相关的project或者user放在一起，进行统一的权限管理。
+
+![1643026806614](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643026806614.png)
+
+![1643026915121](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643026915121.png)
+
+visibility Level：选择谁可以访问该组：我们默认选择private,因为我建设的是私有仓库
+
+Private:只有授权的用户才可以看到
+
+Internal：只要是登录gitlab的用户就可以看到
+
+Public：只要可以访问gitlab web页面的人就可以看到
+
+**3. 创建项目**
+
+![1643027943935](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643027943935.png)
+
+选择对应的组
+
+![1643027917707](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643027917707.png)
+
+**4. 创建用户**
+
+![1643027614970](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643027614970.png)
+
+添加用户到组
+
+![1643027656004](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643027656004.png)
+
+选择角色
+
+![1643027687961](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643027687961.png)
+
+**5.添加SSH Key**
+
+生成公钥
+
+```powershell
+[root@localhost ~]# ssh-keygen -t rsa
+[root@localhost ~]# cat .ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCuDQc9AnjAuRbJ891lJlzDKmdojxhG7rB9ZmhY2triib2z/gsIV+ejBgxv8bYVk9YZ8q5N+TIg3UG4sB44zMbDUprdDajSuRGUebUMYWuHaYAGvWloMpjEcBTnX874VgAUZmHF3wyKuCPKkTOqcIfMxA63WjpMb6Zm62LxmNv1x50omteBFcliepFgAHVXIfFRYQ62SHK4ylPhowRIL94WDTqxlEljrL34Xt7VCCzgoWN3ieIB3QWMrMaRagvmEoQ3bui4XW6O4C0aixhD2VQN9UWVaRjucix3k17XhyoARfW4vunXztDwcRDB8rE/0nAfPZ/TjeY49JYrmZtHPiF1 root@localhost.localdomain
+```
+
+绑定到root用户
+
+![1643028551476](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643028551476.png)
+
+![1643028572522](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643028572522.png)
+
+把代码推到gitlab
+
+```powershell
+[root@localhost git_test]# git remote add test_gitlab git@192.168.88.128:test_Gitlab/git_test.git
+[root@localhost git_test]# git push test_gitlab master
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
