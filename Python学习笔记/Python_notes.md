@@ -10724,6 +10724,8 @@ if 'egon' == info['name'] and 18 == info['age']:
 
  ![三次握手](J:\homework\Python学习笔记\Python_notes.assets\format,png) 
 
+  ![1643078023700](J:\homework\Python学习笔记\Python_notes.assets\1643078023700.png)
+
  这张图展示了建立TCP连接所需的三次握手过程。
 
 首先需要明确，三次握手的目的是建立可靠的通信信道，即双方确认彼此的信息发送与接收是正常的。
@@ -10743,6 +10745,8 @@ if 'egon' == info['name'] and 18 == info['age']:
 四次挥手：
 
   ![四次挥手](J:\homework\Python学习笔记\Python_notes.assets\format1,png) 
+
+ ![1643078043420](J:\homework\Python学习笔记\Python_notes.assets\1643078043420.png)
 
 这张图展示了断开TCP连接所需的四次挥手过程。
 
@@ -11454,15 +11458,20 @@ client.close()
         - 本身的任务和func任务各自执行各自的，没有io操作
     - 异步阻塞：\
 - 阻塞
+  
     - 阻塞的概念往往伴随着线程。线程一般是指：在调用结果返回前，当前线程会被挂起。调用线程只有在得到结果后才会被唤醒执行后续的操作。
 - 非阻塞
+  
     - 阻塞的反向操作，非阻塞的调用是指：在结果没有返回前，该调用不会阻塞住当前的线程
 - 阻塞/非阻塞 同步/异步
     - 两者有本质的区别，主要是面向对象的不同
     - 阻塞/非阻塞：进程/线程需要操作的数据如果尚未就绪，是否妨碍了当前进程/线程的后续操作。
     - 同步/异步 ：数据尚未准备就绪，是否等待数据结果。
 - 运行的三状态图
-    - 就绪、运行、阻塞![进程的三种状态](j:\homework\img\进程的三种状态.png)
+  
+    - 就绪、运行、阻塞
+    
+    ![1643078171945](J:\homework\Python学习笔记\Python_notes.assets\1643078171945.png)
 
 #### 10.2.5 开启进程的两种方式
 
@@ -12343,7 +12352,7 @@ ps aux |grep python
 
 解决这个问题就是加GIL锁处理，保证python解释器同一时间只能执行一个任务的代码，如图：
 
-![GIL解释器锁](j:\homework\img\GIL解释器锁.png)
+![1643078259276](J:\homework\Python学习笔记\Python_notes.assets\1643078259276.png)
 
 ##### 10.3.7.2 GIL与LOCK的区别
 
@@ -14174,7 +14183,9 @@ if __name__ == '__main__':
 
 #### 10.5.1 阻塞IO
 
-socket默认情况下都是blocking，一个典型的读操作流程是这样的：![阻塞IO](j:\homework\img\阻塞IO.png)
+socket默认情况下都是blocking，一个典型的读操作流程是这样的：
+
+![1643078596539](J:\homework\Python学习笔记\Python_notes.assets\1643078596539.png)
 
 当用户进程调用了recvfrom这个系统调用，kernel就开始了IO的第一个阶段：准备数据。对于network io来说，很多时候数据在一开始还没有到达，这个时候kernel就要等待足够的数据到来。
 
@@ -14279,7 +14290,9 @@ client.close()
 
 #### 10.5.2 非阻塞IO
 
-通过设置socket使其变为non-blocking。当对一个non-blocking socket执行读操作时，流程是这个样子：![非阻塞IO](j:\homework\img\非阻塞IO.png)
+通过设置socket使其变为non-blocking。当对一个non-blocking socket执行读操作时，流程是这个样子：
+
+![1643078400826](J:\homework\Python学习笔记\Python_notes.assets\1643078400826.png)
 
 非阻塞的recvform系统调用调用之后，进程并没有被阻塞，内核马上返回给进程，如果数据还没准备好，此时会返回一个error。进程在返回之后，可以干点别的事情，然后再发起recvform系统调用。重复上面的过程，循环往复的进行recvform系统调用。这个过程通常被称之为轮询。
 
@@ -14381,7 +14394,9 @@ client.close()
 
 IO multiplexing这个词可能有点陌生，但是如果我说select/epoll，大概就都能明白了。有些地方也称这种IO方式为**事件驱动IO**(event driven IO)。
 
-select/epoll的好处就在于单个process就可以同时处理多个网络连接的IO。它的基本原理就是select/epoll这个function会不断的轮询所负责的所有socket，当某个socket有数据到达了，就通知用户进程。![多路复用IO](j:\homework\img\多路复用IO.png)
+select/epoll的好处就在于单个process就可以同时处理多个网络连接的IO。它的基本原理就是select/epoll这个function会不断的轮询所负责的所有socket，当某个socket有数据到达了，就通知用户进程。
+
+![1643078336325](J:\homework\Python学习笔记\Python_notes.assets\1643078336325.png)
 
 当用户进程调用了select，那么整个进程会被block，而同时，kernel会“监视”所有select负责的socket，当任何一个socket中的数据准备好了，select就会返回。这个时候用户进程再调用read操作，将数据从kernel拷贝到用户进程。这个图和blocking IO的图其实并没有太大的不同，事实上还更差一些。因为这里需要使用两个系统调用\(select和recvfrom\)，而blocking IO只调用了一个系统调用\(recvfrom\)。但是，用select的优势在于它可以同时处理多个connection。
 
@@ -14560,7 +14575,9 @@ while True:
 
 #### 10.5.4 异步IO
 
-asynchronous IO其实用得不多，从内核2.6版本才开始引入。先看一下它的流程：![异步IO](j:\homework\img\异步IO.png)
+asynchronous IO其实用得不多，从内核2.6版本才开始引入。先看一下它的流程：
+
+![1643078454115](J:\homework\Python学习笔记\Python_notes.assets\1643078454115.png)
 
 用户进程发起read操作之后，立刻就可以开始去做其它的事。而另一方面，从kernel的角度，当它受到一个asynchronous read之后，首先它会立刻返回，所以不会对用户进程产生任何block。然后，kernel会等待数据准备完成，然后将数据拷贝到用户内存，当这一切都完成之后，kernel会给用户进程发送一个signal，告诉它read操作完成了。
 
@@ -22695,19 +22712,19 @@ React-native inoic
 
 以var x = 12，y=5来演示示例：
 
-![js赋值运算符](j:\homework\img\js赋值运算符.png)
+![1643078679798](J:\homework\Python学习笔记\Python_notes.assets\1643078679798.png)
 
 算数运算符：
 
 var a = 5，b=2
 
-![js算数运算符](j:\homework\img\js算数运算符.png)
+![1643078694572](J:\homework\Python学习笔记\Python_notes.assets\1643078694572.png)
 
 比较运算符：
 
 var x = 5；
 
-![js比较运算符](j:\homework\img\js比较运算符.png)
+![1643078665588](J:\homework\Python学习笔记\Python_notes.assets\1643078665588.png)
 
 注意：==比较的是值的相同，===比较的是值和数据类型（内存地址）
 
@@ -23781,7 +23798,7 @@ Browser Object Model ，简称（BOM）浏览器内核主要指的是浏览器�
 
 BOM骨架图:
 
-![BOM](j:\homework\img\BOM.png)
+![1643078868914](J:\homework\Python学习笔记\Python_notes.assets\1643078868914.png)
 
 - **window对象是BOM的顶层(核心)对象**，所有对象都是通过它延伸出来的，也可以称为window的子对象。
 - document 对象，文档对象；
@@ -24025,7 +24042,7 @@ HTML加载完毕，渲染引擎会在内存中把HTML文档，生成一个DOM树
 
 **DOM骨架树（一切皆是节点）**
 
-![ct_htmltree](j:\homework\img\ct_htmltree.gif)
+![1643078838013](J:\homework\Python学习笔记\Python_notes.assets\1643078838013.png)
 
 - **元素节点**：HMTL标签。
 - **文本节点**：标签中的文字（比如标签之间的空格、换行）
@@ -31280,7 +31297,9 @@ class CustomerMiddleware2(SecurityMiddleware):
 
 注意：如果当请求到达请求2的时候直接不符合条件返回，即return HttpResponse("Md2中断")，程序将把请求直接发给中间件2返回，然后依次返回到请求者。
 
-流程图：![中间件1](j:\homework\img\中间件1.png)
+流程图：
+
+![1643078499115](J:\homework\Python学习笔记\Python_notes.assets\1643078499115.png)
 
 自定义中间件2：process_view
 
@@ -31324,7 +31343,9 @@ class CustomerMiddleware2(SecurityMiddleware):
 
 注意：process_view如果有返回值，会越过其他的process_view以及视图函数，但是所有的process_response都还会执行。
 
-流程图：![中间件2](j:\homework\img\中间件2.png)
+流程图：
+
+![1643078536810](J:\homework\Python学习笔记\Python_notes.assets\1643078536810.png)
 
 之定义中间件3：process_exception
 
@@ -31370,7 +31391,9 @@ class CustomerMiddleware2(SecurityMiddleware):
 
 当views出现错误时：
 
-流程图：![中间件3](j:\homework\img\中间件3.png)
+流程图：
+
+![1643078563298](J:\homework\Python学习笔记\Python_notes.assets\1643078563298.png)
 
 
 
@@ -40912,7 +40935,6 @@ sudo apt-get -y purge wodim #命令刻碟
    sudo service network-manager start
    ```
 
-<<<<<<< HEAD
 ### 3. 面试记录
 
 #### 3.1 可hash的数据类型
