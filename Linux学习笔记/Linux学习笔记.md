@@ -16711,7 +16711,7 @@ Public：只要可以访问gitlab web页面的人就可以看到
 
 ![1643027687961](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643027687961.png)
 
-**5.添加SSH Key**
+**5. 添加SSH Key**
 
 生成公钥
 
@@ -16734,19 +16734,283 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCuDQc9AnjAuRbJ891lJlzDKmdojxhG7rB9ZmhY2tri
 [root@localhost git_test]# git push test_gitlab master
 ```
 
+**6. clone到dev用户的机器**
 
+```powershell
+[root@localhost ~]# yum install -y git
+# 1.生成公钥
+[root@localhost ~]# ssh-keygen -t rsa
+# 2.查看公钥，配置到dev用户
+[root@localhost ~]# cat .ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDLaRtrkYgDWNvWcD8O0Rcn9uhTvGckIzLCs8XHuopdVRYYazsKPEyXs1dlxlOXPIGsjcv/a1ik4APtPfvCXVOzlpTjNDnyB/SEnvRu2mUUPiVlMbF3LjGH7qiKNMiv3szgWrJeJaZfcZUa+QRWLVbOUOnHbH1rlZUWrkorY+LQw9thjgyl+OQXmI5G6ReY1S1NLL/wZo3dmzY7TE74oCMNYavKGKYPyxGZ/MHnyK/QDXVvPNRoIypjuqmtbwOLZ3T7S44LinJyR/2WlkliDQHSI0LJQatPtZXNIi54A7grd/T2YjqXu+NbmDcaGPFXDz2xJ0H3XHXDioqKcmrBLycf root@localhost.localdomain
+# 3.clone到本地
+[root@localhost ~]# git clone git@192.168.88.128:test_Gitlab/git_test.git
+# 4.创建一个文件
+[root@localhost ~]# touch dev
+# 5.提交到远程仓库
+[root@localhost git_test]# git add .
+[root@localhost git_test]# git commit -m "commit dev to dev branch"
+[root@localhost git_test]# git push origin dev
+```
 
+**7. root用户设置master分支保护**
 
+![1643099304281](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643099304281.png)
 
+![1643099392703](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643099392703.png)
 
+```powershell
+# dev用户不允许推master分支，dev用户没有master和owner权限
+[root@localhost git_test]# git push origin -u master
+Total 0 (delta 0), reused 0 (delta 0)
+remote: GitLab: You are not allowed to push code to protected branches on this project.
+To git@192.168.88.128:test_Gitlab/git_test.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'git@192.168.88.128:test_Gitlab/git_test.git'
+```
 
+**8. dev用户提交dev分支代码，提合并代码申请**
 
+![1643100181876](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643100181876.png)
 
+![1643100255343](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643100255343.png)
 
+root用户进行合并
 
+![1643100912718](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643100912718.png)
 
+#### 10.4.4 Gitlab备份管理
 
+默认的备份文件目录为：/var/opt/gitlab/backups，如果自定义备份目录需要赋予目录 git 权限，具体操作如下：
 
+```powershell
+# 修改配置文件
+[root@localhost git_test]# vim /etc/gitlab/gitlab.rb
+gitlab_rails['backup_path'] = '/data/backup/gitlab'
+gitlab_rails['backup_keep_time'] = 604800
+
+# 使用配置生效
+[root@localhost git_test]# gitlab-ctl reconfigure
+
+# 自动创建了配置的目录，如果没有创建，则需要手动创建并修改权限
+[root@localhost git_test]# mkdir /data/backup/gitlab -p
+[root@localhost git_test]# chown -R git.git /data/backup/gitlab
+
+# 执行备份命令
+[root@localhost backup]# gitlab-rake gitlab:backup:create
+[root@localhost gitlab]# ll /data/backup/gitlab
+total 2812
+-rw------- 1 git git 2877440 Jan 26 15:53 1643183615_2022_01_26_10.2.2_gitlab_backup.tar
+
+```
+
+测试：删库再恢复
+
+![1643102320577](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643102320577.png)
+
+GitLab 的恢复只能还原到与备份文件相同的 gitlab 版本的系统中，恢复时，停止连接到数据库的进程（也就是停止数据写入服务），但是保持 GitLab 是运行的。
+
+```powershell
+[root@localhost gitlab]# gitlab-ctl stop unicorn
+ok: down: unicorn: 0s, normally up
+[root@localhost gitlab]# gitlab-ctl stop sidekiq
+ok: down: sidekiq: 1s, normally up
+[root@localhost gitlab]# gitlab-ctl status
+run: gitaly: (pid 902) 18982s; run: log: (pid 900) 18982s
+run: gitlab-monitor: (pid 904) 18982s; run: log: (pid 903) 18982s
+run: gitlab-workhorse: (pid 914) 18982s; run: log: (pid 905) 18982s
+run: logrotate: (pid 36036) 981s; run: log: (pid 906) 18982s
+run: nginx: (pid 915) 18982s; run: log: (pid 912) 18982s
+run: node-exporter: (pid 893) 18982s; run: log: (pid 888) 18982s
+run: postgres-exporter: (pid 899) 18982s; run: log: (pid 898) 18982s
+run: postgresql: (pid 894) 18982s; run: log: (pid 882) 18982s
+run: prometheus: (pid 892) 18982s; run: log: (pid 886) 18982s
+run: redis: (pid 895) 18982s; run: log: (pid 887) 18982s
+run: redis-exporter: (pid 890) 18982s; run: log: (pid 889) 18982s
+down: sidekiq: 13s, normally up; run: log: (pid 896) 18982s
+down: unicorn: 60s, normally up; run: log: (pid 885) 18982s
+
+# 执行数据恢复命令
+[root@localhost gitlab]# gitlab-rake gitlab:backup:restore BACKUP=1643183615_2022_01_26_10.2.2
+
+# 重启服务即可
+[root@localhost gitlab]# gitlab-ctl restart
+```
+
+#### 10.4.5 Gitlab升级
+
+```powershell
+# 关闭部分服务
+[root@localhost gitlab]# gitlab-ctl stop unicorn
+[root@localhost gitlab]# gitlab-ctl stop nginx
+[root@localhost gitlab]# gitlab-ctl stop sidekiq
+
+# 执行升级命令
+[root@localhost gitlab]# rpm -Uvh gitlab-ce-10.0.4-ce.0.el7.x86_64.rpm
+
+# 重启服务即可
+[root@localhost gitlab]# gitlab-ctl restart
+```
+
+<font color="red">注：升级操作不建议进行。如果确实需要，也可以采取在一台新的服务器上安装新版本的 Gitlab，然后采用导入库的方式将旧系统的代码仓库导入到新 Gitlab 上。</font>
+
+### 10.5 Jenkins
+
+#### 10.5.1 Jenkins安装配置
+
+Jenkins 官方网站及清华镜像站下载 jenkins 安装包，可以使用 YUM 方式安装 JDK1.8 版本
+
+```powershell
+# 1.安装jdk
+[root@localhost src]# rpm -ivh jdk-8u121-linux-x64.rpm
+
+# 2.安装Jenkins
+[root@localhost src]# rpm -ivh jenkins-2.99-1.1.noarch.rpm
+
+# 3.启动Jenkins
+[root@localhost src]# systemctl start jenkins
+[root@localhost src]# systemctl status jenkins
+● jenkins.service - LSB: Jenkins Automation Server
+   Loaded: loaded (/etc/rc.d/init.d/jenkins; bad; vendor preset: disabled)
+   Active: active (exited) since Wed 2022-01-26 19:30:34 CST; 14s ago
+     Docs: man:systemd-sysv-generator(8)
+  Process: 57691 ExecStart=/etc/rc.d/init.d/jenkins start (code=exited, status=0/SUCCESS)
+
+Jan 26 19:30:33 localhost.localdomain systemd[1]: Starting LSB: Jenkins Automation Server...
+Jan 26 19:30:33 localhost.localdomain runuser[57696]: pam_unix(runuser:session): session opened for user jenkins by (uid=0)
+Jan 26 19:30:34 localhost.localdomain runuser[57696]: pam_unix(runuser:session): session closed for user jenkins
+Jan 26 19:30:34 localhost.localdomain jenkins[57691]: Starting Jenkins [  OK  ]
+Jan 26 19:30:34 localhost.localdomain systemd[1]: Started LSB: Jenkins Automation Server.
+
+# 4.查看端口
+[root@localhost src]# netstat -nuplt | grep 8080
+tcp6       0      0 :::8080                 :::*                    LISTEN      2219/java
+```
+
+浏览器输入 http://您服务器的ip地址:8080，访问 jenkins 服务
+
+![1643116431683](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643116431683.png)
+
+查看默认密码
+
+```powershell
+[root@localhost src]# cat /var/lib/jenkins/secrets/initialAdminPassword
+268183ea81ea4352a35a470ba039b78c
+```
+
+此页面要用户选择初始化安装的插件，我们选择跳过此步，后面我们采用其他方式安装插件。
+
+![1643117194496](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643117194496.png)
+
+点击Jenkins安装配置
+
+![1643117593143](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643117593143.png)
+
+进入Jenkins页面
+
+![1643117502811](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643117502811.png)
+
+#### 10.5.2 Jenkins插件管理
+
+Jenkins 本身是一个引擎、一个框架，只是提供了很简单功能，其强大的功能都是通过插件来实现的，jenkins 有一个庞大的插件生态系统，为 Jenkins 提供丰富的功能扩展。
+
+**1. 自动安装**
+
+![1643120871088](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643120871088.png)
+
+进入插件管理页面，点击可选插件，选择你需要安装的插件
+
+![1643120922700](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643120922700.png)
+
+**2. 手动安装插件**
+
+除了上面的插件安装方法，Jenkins 还为我们提供了手工安装插件的方式，特别是在国内，由于网络的原因，有时候我们使用上述方法安装插件会经常不成功，所以我们可以采用下载插件，然后再上传的方式来安装插件。
+
+> 官方的插件下载地址：http://updates.jenkins-ci.org/
+>
+> 国内的源：https://mirrors.tuna.tsinghua.edu.cn/jenkins/plugins/
+
+![1643125495364](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643125495364.png)
+
+![1643125621374](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643125621374.png)
+
+下载完成后，手动上传
+
+![1643125698207](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643125698207.png)
+
+#### 10.5.3 覆盖插件安装
+
+我们可以备份已经安装好插件的 Jenkins 服务器上的/var/lib/jenkins/plugins 目录，然后把备份文件上传到我们需要安装插件的新 Jenkins 服务器的对应目录上，然后重启Jenkins。
+
+这种方法其实给我们提供了一种更加快速的安装 Jenkins 插件的方法。建议在初始安装jenkins 时，可以使用此方法，其他时候尽量使用前两种方式。我们本教程使用此方式安装插件。前面我们在初始化 jenkins 的时候，跳过了插件的安装，现在我们的 Jenkins 插件目录为空，因为我们没有安装任何插件：
+
+```powershell
+[root@localhost src]# cd /var/lib/jenkins/plugins/
+[root@localhost plugins]# ll
+total 0
+[root@localhost plugins]# ll
+-rw-r--r--.   1 root root 232436856 Jan 26 23:55 plugins.tar.gz
+[root@localhost plugins]# tar -zxvf plugins.tar.gz
+[root@localhost plugins]# cd plugins
+[root@localhost plugins]# mv * ../
+[root@localhost plugins]# systemctl restart jenkins
+```
+
+重启到我们在插件管理页面可以看到我们已经安装的插件
+
+![1643126492015](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643126492015.png)
+
+#### 10.5.4 Jenkins 常用目录及文件
+
+学习 Jenkins，首先要明白一点，那就是 jenkins 下一切兼文件，也就是说 jenkins 没有数据库，所有的数据都是以文件的形式存在，所以我要了解 Jenkins 的主要目录及文件，通过命令我们可以查看到所有的 jenkins 目录及文件的位置。
+
+```powershell
+[root@localhost plugins]# rpm -ql jenkins
+/etc/init.d/jenkins	# Jenkins启动文件
+/etc/logrotate.d/jenkins
+/etc/sysconfig/jenkins	# 配置文件目录
+/usr/lib/jenkins
+/usr/lib/jenkins/jenkins.war
+/usr/sbin/rcjenkins
+/var/cache/jenkins	# 程序文件目录
+/var/lib/jenkins
+/var/log/jenkins	# 日志文件目录
+```
+
+/etc/sysconfig/jenkins是Jenkins的主配置文件：我们在这里主要配置Jenkins的工作目录、启动用户、启动端口。
+
+![1643127237682](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643127237682.png)
+
+Jenkins默认的用户为jenkins,强烈建议生产环境使用jenkins用户，然后使用sudo进行授权。
+
+```powershell
+[root@localhost jenkins]# ll /var/lib/jenkins
+total 68
+-rw-------.   1 jenkins jenkins   788 Jan 26 23:59 com.dabsquared.gitlabjenkins.connection.GitLabConnectionConfig.xml
+-rw-------.   1 jenkins jenkins   365 Jan 26 23:59 com.dabsquared.gitlabjenkins.GitLabPushTrigger.xml
+-rw-------.   1 jenkins jenkins  1822 Jan 26 23:59 config.xml
+-rw-------.   1 jenkins jenkins   156 Jan 26 23:59 hudson.model.UpdateCenter.xml
+-rw-------.   1 jenkins jenkins   370 Jan 26 23:59 hudson.plugins.git.GitTool.xml
+-rw-------.   1 jenkins jenkins  1712 Jan 26 21:08 identity.key.enc
+-rw-------.   1 jenkins jenkins    94 Jan 26 21:08 jenkins.CLI.xml
+-rw-r--r--.   1 jenkins jenkins     4 Jan 26 21:27 jenkins.install.InstallUtil.lastExecVersion
+-rw-r--r--.   1 jenkins jenkins     4 Jan 26 21:27 jenkins.install.UpgradeWizard.state
+drwxr-xr-x.   2 jenkins jenkins     6 Jan 26 21:08 jobs
+drwxr-xr-x.   4 jenkins jenkins    37 Jan 26 23:59 logs
+-rw-------.   1 jenkins jenkins   907 Jan 26 23:59 nodeMonitors.xml
+drwxr-xr-x.   2 jenkins jenkins     6 Jan 26 21:08 nodes
+drwxr-xr-x. 116 jenkins jenkins 12288 Jan 26 23:57 plugins
+-rw-------.   1 jenkins jenkins   129 Jan 26 23:59 queue.xml.bak
+-rw-------.   1 jenkins jenkins    64 Jan 26 21:08 secret.key
+-rw-r--r--.   1 jenkins jenkins     0 Jan 26 21:08 secret.key.not-so-secret
+drwx------.   4 jenkins jenkins  4096 Jan 26 21:08 secrets
+-rw-r--r--.   1 jenkins jenkins     0 Jan 27 00:18 ThinBackup Worker Thread.log
+drwxr-xr-x.   2 jenkins jenkins    24 Jan 26 21:08 userContent
+drwxr-xr-x.   3 jenkins jenkins    19 Jan 26 21:08 users
+drwxr-xr-x.   2 jenkins jenkins     6 Jan 26 23:59 workflow-libs
+```
+
+其中主要的目录为jobs目录：存放jobs的配置及每次构建的结果；plugins目录：Jenkins插件目录，存放我们已经安装的插件；worksspace：工作区目录。
 
 
 
@@ -16858,5 +17122,14 @@ set noexpandtab / expandtab  # 当设置成 expandtab 时，缩进用空格来�
 
 # 2.然后再获取tar包
 [root@localhost src]# wget http://www.keepalived.org/software/keepalived-2.0.8.tar.gz -P /usr/src/
+```
+
+#### 8.  使用git clone项目报错
+
+```powershell
+# 错误: remote: The project you were looking for could not be found.
+
+# 解决，清除本地git账户，重新输入用户名与密码
+git config --system --unset  credential.helper
 ```
 
