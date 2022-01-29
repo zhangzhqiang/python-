@@ -16781,7 +16781,7 @@ To git@192.168.88.128:test_Gitlab/git_test.git
 error: failed to push some refs to 'git@192.168.88.128:test_Gitlab/git_test.git'
 ```
 
-**8. dev用户提交dev分支代码，提合并代码申请**
+**8. 用户提交dev分支代码，提合并代码申请**
 
 ![1643100181876](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643100181876.png)
 
@@ -17024,11 +17024,154 @@ drwxr-xr-x.   2 jenkins jenkins     6 Jan 26 23:59 workflow-libs
 
 其中主要的目录为jobs目录：存放jobs的配置及每次构建的结果；plugins目录：Jenkins插件目录，存放我们已经安装的插件；worksspace：工作区目录。
 
+#### 10.5.5 创建一个freestyle
 
+![1643130887221](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643130887221.png)
 
+勾选丢弃旧的构建：
 
+![1643131044560](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643131044560.png)
 
+由于每次构建都会生成很多构建产物，如果频繁构建会占用很多的空间，我们可以通过这几个选项控制构建产物的保留。一般建议选择保留最近5-10的构建为适宜，他会保留最后一次成功构建的job。
 
+![1643131222322](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643131222322.png)
+
+保存后构建
+
+![1643131419806](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643131419806.png)
+
+![1643131748202](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643131748202.png)
+
+构建成功
+
+![1643131855836](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643131855836.png)
+
+在 /var/lib/jenkins/jobs/my-freestyle-job 目录可以看到具体的配置及构建的目录文件。
+
+#### 10.5.6 连接gitlab获取代码
+
+我们使用上面的 job 进行配置，在“源码管理”部分配置拉取 Gitlab 上的 monitor 仓库，该仓库是一个纯 html 代码项目，首先在 Gitlab 上复制仓库地址。
+
+![1643354202322](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643354202322.png)
+
+然后回到 Jenkins 上 My-freestyle-job 配置页面，下拉到“源码管理”部分，勾选 git选项
+
+![1643354421340](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643354421340.png)
+
+如果报错有以下两种情况：
+
+1.没有安装git
+
+2.key认证失败，需要配置ssh认证
+
+![1643355344574](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643355344574.png)
+
+![1643354689050](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643354689050.png)
+
+根据提示信息显示为 key 认证失败，因为我们使用的 SSH 方式连接仓库，所以需要配置SSH 认证，实际上在前面我们学习 Gitlab 的时候，我们已经配置了 ci-node2 这台机子的 root用户的公钥在 Gitlab 上的 dev 用户。
+
+根据提示添加用户认证后，回到配置仓库页面，选择认证方式为新添加的认证，错误消失。
+
+![1643356282095](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643356282095.png)
+
+保存配置后，回到 job 主页面，点击“立即构建”，构建完成后，我们在工作空间内可以看到从 Gitlab 仓库拉到的代码。
+
+![1643356366912](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643356366912.png)
+
+同时我们在“console output”页面可以看到整个控制台输出内容。
+
+![1643356470898](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643356470898.png)
+
+![1643356532538](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643356532538.png)
+
+在“源码管理”配置部分，我们可以配置从分支获取代码，也可以配置从标签获取代码。
+
+#### 10.5.7 用 linux 脚本实现部署
+
+##### 10.5.7.1 **配置** **ssh** 免密登录
+
+因为我们要使用脚本将 ci-node2 上的程序代码推送到 ci-node1 上，所以需要配置ci-node2 到 ci-node1 的 ssh 免密码登录。
+
+```powershell
+ssh-copy-id -i /root/.ssh/id_rsa.pub root@192.168.88.128
+ssh 192.168.88.128
+```
+
+**部署脚本如下：**deploy.sh
+
+```powershell
+#!/bin/bash
+#目标服务器 IP 地址
+host=$1
+#job 名称
+job_name=$2
+#包名
+name=web-$(date +%F)-$(($RANDOM+10000))
+#打包
+cd /var/lib/jenkins/workspace/${job_name} && tar czf
+/opt/${name}.tar.gz ./*
+#发送包到目标服务器
+ssh ${host} "cd /var/www/ && mkdir ${name}"
+scp /opt/${name}.tar.gz $host:/var/www/${name}
+#解包
+ssh ${host} "cd /var/www/${name} && tar xf ${name}.tar.gz && rm -f
+${name}.tar.gz"
+#使用软链接方式部署服务
+ssh ${host} "cd /var/www && rm -rf html && ln -s /var/www/${name}
+/var/www/html"
+```
+
+**Jenkins配置构建：**
+
+接下来我们在 Jenkins 上配置构建执行我们编写的部署脚本，回到 My-freestyle-job 配置页面，配置构建：
+
+![1643360440022](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643360440022.png)
+
+保存配置，回到 job 主页面，点击“立即构建”后，访问 httpd 服务的主页面，我们发现服务已经部署成功。
+
+#### 10.5.8 Git push 触发自动构建
+
+在上面的 job 中，我们已经成功实现了将 Gitlab 中的代码部署到 httpd服务中，但是每次部署需要我们手动去点击“立即构建”，下面我们将实现当 Gitlab 收到push 请求后，就触发 Jenkins 构建，将仓库的变化部署到 httpd 服务中。
+
+##### 10.5.8.1 **Jenkins job** 配置构建触发器
+
+回到 My-freestyle-job 的配置页面，下拉到构建触发器部分，
+
+![1643369634258](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643369634258.png)
+
+勾选 gitlab 触发选项，进入具体配置页面
+
+![1643369924879](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643369924879.png)
+
+配置完成后保存
+
+![1643370081437](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643370081437.png)
+
+进入集成配置页面，复制 jenkins 触发器配置页面的 url 及 Token，配置完成后，在客户端执行push操作。
+
+#### 10.5.9 配置构建后操作
+
+构建完成后，jenkins 可以把构建的结果反馈给 Gitlab，这样在 Gitlab 上就可以查看每一次 push 后构建的执行结果。
+
+首先在 Jenkins 上配置，可以访问 Gitlab，打开 jenkins 系统管理--系统设置页面，下拉找到 Gitlab 部分
+
+![1643371647983](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643371647983.png)
+
+生成API Token
+
+![1643371764280](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643371764280.png)
+
+添加认证
+
+![1643371909657](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643371909657.png)
+
+![1643371997992](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643371997992.png)
+
+其次，在 job 配置页面添加构建后操作
+
+![1643372103642](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643372103642.png)
+
+保存 job 配置，回到 job 主页面，执行“立即构建”。构建成功后，在 Gitlab 仓库，commits 列表页面。
 
 
 

@@ -206,4 +206,3 @@ for i in range(2, 101):
     else:
         total += i
 print(total)
-

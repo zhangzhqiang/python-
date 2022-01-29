@@ -1948,6 +1948,9 @@ set3 = {'1','alex',2,True,(1,2,[2,3,4])} # 报错
 
 ### 4.9 深浅拷贝
 
+- **浅拷贝(copy)：** 拷贝父对象，不会拷贝对象的内部的子对象。
+- **深拷贝(deepcopy)：** copy 模块的 deepcopy 方法，完全拷贝了父对象及其子对象 
+
 - 浅拷贝
 
   ```python
@@ -4371,7 +4374,7 @@ res = data_type()
 print(res)
 ```
 
-注意:函数咋吃执行过程中只要遇到return语句,就会停止执行并返回结果,可以理解为return语句代表函数结束,如果未咋吃函数中指定return,那这个函数的返回值默认为None.
+注意:函数执行过程中只要遇到return语句,就会停止执行并返回结果,可以理解为return语句代表函数结束,如果未定义函数中指定return,那这个函数的返回值默认为None.
 
 返回值与print的区别：
 
@@ -4460,7 +4463,7 @@ None
         print(x)
         ```
 
-    - 作用域中查找数据规则：优先在自己的作用域找数据，自己没有就去 "父级" -> "父级" -> 直到全局，全部么有就报错。
+    - 作用域中查找数据规则：优先在自己的作用域找数据，自己没有就去 "父级" -> "父级" -> 直到全局，全部没有就报错。
 
         ```python
         x = 10
@@ -5175,7 +5178,7 @@ info[4]()
 
 ### 6.10 闭包
 
-闭包，简而言之就是将数据封装在一个包（区域）中，使用时再去里面取。（本质上 闭包是基于函数嵌套搞出来一个中特殊嵌套）
+闭包，简而言之就是将数据封装在一个包（区域）中，使用时再去里面取。（本质上闭包是基于函数嵌套搞出来一个特殊嵌套）
 
 返回的函数对象，不仅仅是一个函数对象，在该函数外还包裹了一层作用域，这使得，该函数无论在何处调用，优先使用自己外层包裹的作用域
 
@@ -5442,101 +5445,47 @@ v = func()
 
 - 必须有一个明确的结束条件
 - 每次进入更深一层递归时，问题规模相比上次递归都应有所减少
-- 递归效率不高，递归层次过多会导致栈溢出（在计算机中，函数
-    调用是通过栈（stack）这种数据结构实现的，每当进入一个函数
-    调用，栈就会加一层栈帧，每当函数返回，栈就会减一层栈帧。
-    由于栈的大小不是无限的，所以，递归调用的次数过多，会导致栈溢出）
+- 递归效率不高，递归层次过多会导致栈溢出（在计算机中，函数调用是通过栈（stack）这种数据结构实现的，每当进入一个函数调用，栈就会加一层栈帧，每当函数返回，栈就会减一层栈帧。由于栈的大小不是无限的，所以，递归调用的次数过多，会导致栈溢出）
 
 ### 6.13 装饰器
 
-实现原理：基于@语法和函数闭包，将原函数封装再闭包中，然后将函数赋值为一个新的函数（内层函数），执行函数时，再在内层函数中执行闭包中的原函数。
+实现原理：基于@语法和函数闭包，将原函数封装在闭包中，然后将函数赋值为一个新的函数（内层函数），执行函数时，再在内层函数中执行闭包中的原函数。
 
 实现效果：可以在不改变原函数内部代码和调用方式的前提下，实现在函数执行和执行扩展功能。
 
 适用场景：多个函数系统统一在执行前后自定义一些功能。
 
-普通示例一:
-
-```python
-v = 1
-v = 2 
-# ########################
-def func():
-    pass 
-v = 10
-v = func
-print(v)  # <function func at 0x000001BD14B01EA0>  
-
-# ##########################
-def base():
-    print(1)
-
-def bar():
-    print(2)
-
-bar = base
-bar()  # 1
-```
-
-普通示例二:
+现在给你一个函数，在不修改函数源码的前提下，实现在函数执行前和执行后分别输入 "before" 和 "after"。
 
 ```python
 def func():
-    def inner():
-        pass
-    return inner 
-
-v = func()
-print(v) # inner函数
-# #########################################
-def func(arg):
-    def inner():
-        print(arg)
-    return inner 
-
-v1 = func(1)
-v2 = func(2)
-
-# #########################################
-def func(arg):
-    def inner():
-        arg()
-    return inner
-
-def f1():
-    print(123)
-
-v1 = func(f1)
-v1()
-# ###########################################
-def func(arg):  # arg = f1
-    def inner():
-        arg()  # 执行arg 就等于执行 f1
-    return inner
-
-def f1():
-    print(123)
-    return 666
-
-v1 = func(f1)
-result = v1() # 执行inner函数 / f1含函数 -> 123 
-print(result) # None
-# ###########################################
-def func(arg):
-    def inner():
-        return arg()
-    return inner
-
-def f1():
-    print(123)
-    return 666
-
-v1 = func(f1)
-result = v1() # 执行inner函数 / f1含函数 -> 123
-print(result) # 666
+    print("我是func函数")
+    value = (11,22,33,44) 
+    return value
+    
+result = func()
+print(result)
 ```
 
-示例三:
+#### 6.13.1 第一回合
+
+你的实现思路：
+
+```python
+def func():
+    print("before")
+    
+    print("我是func函数")
+    value = (11,22,33,44) 
+    
+    print("after")
+    
+    return value
+    
+result = func()
+```
+
+实现思路：
 
 ```python
 def func():
@@ -5557,213 +5506,215 @@ func = outer(func)
 result = func()
 ```
 
-- 装饰器:在不改变原函数内部代码的基础上，在函数执行之前和之后自动执行某个功能。 
+处理返回值：
 
 ```python
-def func(arg):
+def func():
+    print("我是func函数")
+    value = (11, 22, 33, 44)
+    return value
+
+
+def outer(origin):
     def inner():
-        print('before')
-        v = arg()
-        print('after')
-        return v 
-    return inner 
-
-def index():
-    print('123')
-    return '666'
-
-
-# 示例一
-"""
-v1 = index() # 执行index函数，打印123并返回666赋值给v1.
-"""
-# 示例二
-"""
-v2 = func(index) # arg=index函数, v2是inner函数
-index = 666 
-v3 = v2()
-"""
-# 示例三
-"""
-v4 = func(index)
-index = v4  # index ==> inner 
-index()
-"""
-
-# 示例四
-index = func(index)
-index()
-```
-
-```python
-def func(arg):
-    def inner():
-        v = arg()
-        return v 
-    return inner 
-
-# 第一步：执行func函数并将下面的函数参数传递，相当于：func(index)
-# 第二步：将func的返回值重新赋值给下面的函数名。 index = func(index)
-@func 
-def index():
-    print(123)
-    return 666
-
-print(index)
-```
-
-应用：
-
-```python
-# 计算函数执行时间
-
-def wrapper(func):
-    def inner():
-        start_time = time.time()
-        v = func()
-        end_time = time.time()
-        print(end_time-start_time)
-        return v
+        print('inner')
+        res = origin()
+        print("after")
+        return res
     return inner
 
-@wrapper
-def func1():
-    time.sleep(2)
-    print(123)
-@wrapper
-def func2():
-    time.sleep(1)
-    print(123)
-
-def func3():
-    time.sleep(1.5)
-    print(123)
-
-func1()
+func = outer(func)
+result = func()
 ```
 
-- 装饰器普通参数格式
+#### 6.13.2 第二回合
+
+在Python中有个一个特殊的语法糖：
+
+```python
+def outer(origin):
+    def inner():
+        print('inner')
+        res = origin()
+        print("after")
+        return res
+    return inner
+
+
+@outer
+def func():
+    print("我是func函数")
+    value = (11, 22, 33, 44)
+    return value
+
+
+func()
+```
+
+#### 6.13.3 第三回合
+
+请在这3个函数执行前和执行后分别输入 "before" 和 "after"
+
+```python
+def func1():
+    print("我是func1函数")
+    value = (11, 22, 33, 44)
+    return value
+    
+    
+def func2():
+    print("我是func2函数")
+    value = (11, 22, 33, 44)
+    return value
+    
+def func3():
+    print("我是func3函数")
+    value = (11, 22, 33, 44)
+    return value
+    
+func1()
+func2()
+func3()
+```
+
+你的实现思路：
+
+```python
+def func1():
+    print('before')
+    print("我是func1函数")
+    value = (11, 22, 33, 44)
+    print("after")
+    return value
+    
+    
+def func2():
+    print('before')
+    print("我是func2函数")
+    value = (11, 22, 33, 44)
+    print("after")
+    return value
+    
+def func3():
+    print('before')
+    print("我是func3函数")
+    value = (11, 22, 33, 44)
+    print("after")
+    return value
+    
+func1()
+func2()
+func3()
+```
+
+我的实现思路：
+
+```python
+def outer(origin):
+    def inner():
+        print("before 110")
+        res = origin()  # 调用原来的func函数
+        print("after")
+        return res
+
+    return inner
+
+
+@outer
+def func1():
+    print("我是func1函数")
+    value = (11, 22, 33, 44)
+    return value
+
+
+@outer
+def func2():
+    print("我是func2函数")
+    value = (11, 22, 33, 44)
+    return value
+
+
+@outer
+def func3():
+    print("我是func3函数")
+    value = (11, 22, 33, 44)
+    return value
+
+
+func1()
+func2()
+func3()
+```
+
+装饰器，在不修改原函数内容的前提下，通过@函数可以实现在函数前后自定义执行一些功能（批量操作会更有意义）。
+
+**优化**
+
+优化以支持多个参数的情况。
+
+```python
+def outer(origin):
+    def inner(*args, **kwargs):
+        print("before 110")
+        res = origin(*args, **kwargs)  # 调用原来的func函数
+        print("after")
+        return res
+
+    return inner
+
+
+@outer  # func1 = outer(func1)
+def func1(a1):
+    print("我是func1函数")
+    value = (11, 22, 33, 44)
+    return value
+
+
+@outer  # func2 = outer(func2)
+def func2(a1, a2):
+    print("我是func2函数")
+    value = (11, 22, 33, 44)
+    return value
+
+
+@outer  # func3 = outer(func3)
+def func3(a1):
+    print("我是func3函数")
+    value = (11, 22, 33, 44)
+    return value
+
+
+func1(1)
+func2(11, a2=22)
+func3(999)
+```
+
+- 其中，我的那种写法就称为装饰器。
+
+    - 实现原理：基于@语法和函数闭包，将原函数封装在闭包中，然后将函数赋值为一个新的函数（内层函数），执行函数时再在内层函数中执行闭包中的原函数。
+
+    - 实现效果：可以在不改变原函数内部代码 和 调用方式的前提下，实现在函数执行和执行扩展功能。
+
+    - 适用场景：多个函数系统统一在 执行前后自定义一些功能。
+
+    - 装饰器示例
 
     ```python
-    def x(func):
-        def inner(a1,a2):
-            return func(a1,a2)
-        return inner 
+    def outer(origin):
+        def inner(*args, **kwargs):
+    		# 执行前
+            res = origin(*args, **kwargs)  # 调用原来的func函数
+            # 执行后
+            return res
+        return inner
     
-    @x
-    def index(a1,a2):
-    	pass
     
-    # index = inner
-    index(1,2)
-    
-    # ################################### 参数统一的目的是为了给原来的index函数传参
-    def x(func):
-        def inner(a1,a2):
-            return func()
-        return inner 
-    
-    @x
-    def index():
-    	pass
-    # func = 原来的index函数u
-    # index = inner
-    index(1,2)
-    ```
-
-- 装饰器万能参数格式
-
-    ```python
-    def x1(func):
-        def inner(*args,**kwargs):
-            return func(*args,**kwargs)
-        return inner 
-    
-    @x1
-    def f1():
+    @outer
+    def func():
         pass
     
-    @x1
-    def f2(a1):
-        pass
-    @x1
-    def f3(a1,a2):
-        pass 
+    func()
     ```
-
-- 关于装饰器返回值
-
-    ```python
-    # 示例一:
-    def x1(func):
-        def inner(*args,**kwargs):
-            data = func(*args,**kwargs)
-            return data
-        return inner 
-    
-    @x1
-    def f1():
-        print(123)
-        
-    v1 = f1()
-    print(v1)
-    
-    # 示例二:
-    def x1(func):
-        def inner(*args,**kwargs):
-            data = func(*args,**kwargs)
-            return data
-        return inner 
-    
-    @x1
-    def f1():
-        print(123)
-        return 666
-    v1 = f1()
-    print(v1)
-    
-    # 示例三:
-    def x1(func):
-        def inner(*args,**kwargs):
-            data = func(*args,**kwargs)
-        return inner 
-    
-    @x1
-    def f1():
-        print(123)
-        return 666
-    
-    v1 = f1()
-    print(v1)
-    ```
-
-- 装饰器建议写法:
-
-    ```python
-    def x1(func):
-        def inner(*args,**kwargs):
-            data = func(*args,**kwargs)
-            return data
-        return inner 
-    ```
-
-    - 关于前后
-
-        ```python
-        def x1(func):
-            def inner(*args,**kwargs):
-                print('调用原函数之前')
-                data = func(*args,**kwargs) # 执行原函数并获取返回值
-                print('调用员函数之后')
-                return data
-            return inner 
-        
-        @x1
-        def index():
-            print(123)
-            
-        index()
-        ```
 
 - 带参数的装饰器
 
@@ -10137,6 +10088,351 @@ f = Open('settings.py')
 del f  # f.__del__()
 print('------mian------')  # del f  # f.__del__()
 ```
+
+在Python的类中存在一些特殊的方法，这些方法都是 `__方法__` 格式，这种方法在内部均有特殊的含义，接下来我们来讲一些常见的特殊成员：
+
+- `__init__`，初始化方法
+
+```python
+class Foo(object):
+    def __init__(self, name):
+        self.name = name
+
+
+obj = Foo("武沛齐")
+```
+
+- `__new__`，构造方法
+
+```python
+class Foo(object):
+    def __init__(self, name):
+        print("第二步：初始化对象，在空对象中创建数据")
+        self.name = name
+
+    def __new__(cls, *args, **kwargs):
+        print("第一步：先创建空对象并返回")
+        return object.__new__(cls)
+
+
+obj = Foo("武沛齐")
+```
+
+- `__call__`
+
+```python
+class Foo(object):
+    def __call__(self, *args, **kwargs):
+        print("执行call方法")
+
+
+obj = Foo()
+obj()
+```
+
+- `__dict__`
+
+```python
+class Foo(object):
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+
+obj = Foo("武沛齐",19)
+print(obj.__ict__)
+```
+
+- `__enter__`、`__exit__`
+
+```python
+class Foo(object):
+
+    def __enter__(self):
+        print("进入了")
+        return 666
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        print("出去了")
+
+
+        obj = Foo()
+        with obj as data:
+            print(data)
+```
+
+```python
+超前知识：数据连接，每次对远程的数据进行操作时候都必须经历。
+1.连接 = 连接数据库
+2.操作数据库
+3.关闭连接
+```
+
+```python
+class SqlHelper(object):
+
+    def __enter__(self):
+        self.连接 = 连接数据库
+        return 连接
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.连接.关闭
+
+        
+        
+with SqlHelper() as 连接:
+    连接.操作..
+    
+    
+with SqlHelper() as 连接:
+    连接.操作...
+```
+
+```python
+# 面试题（补充代码，实现如下功能）
+
+class Context:
+    
+    def do_something(self):
+        print('内部执行')
+
+
+with Context() as ctx:
+    print('内部执行')
+    ctx.do_something()
+
+```
+
+上下文管理的语法。
+
+- `__add__` 等。
+
+```python
+class Foo(object):
+    def __init__(self, name):
+        self.name = name
+
+    def __add__(self, other):
+        return "{}-{}".format(self.name, other.name)
+
+
+v1 = Foo("alex")
+v2 = Foo("sb")
+
+# 对象+值，内部会去执行 对象.__add__方法，并将+后面的值当做参数传递过去。
+v3 = v1 + v2
+print(v3)
+```
+
+- `__iter__`
+
+  - 迭代器
+
+    ```python
+    # 迭代器类型的定义：
+        1.当类中定义了 __iter__ 和 __next__ 两个方法。
+        2.__iter__ 方法需要返回对象本身，即：self
+        3. __next__ 方法，返回下一个数据，如果没有数据了，则需要抛出一个StopIteration的异常。
+    	官方文档：https://docs.python.org/3/library/stdtypes.html#iterator-types
+            
+    # 创建 迭代器类型 ：
+    	class IT(object):
+            def __init__(self):
+                self.counter = 0
+    
+            def __iter__(self):
+                return self
+    
+            def __next__(self):
+                self.counter += 1
+                if self.counter == 3:
+                    raise StopIteration()
+                return self.counter
+    
+    # 根据类实例化创建一个迭代器对象：
+        obj1 = IT()
+        
+        # v1 = obj1.__next__()
+        # v2 = obj1.__next__()
+        # v3 = obj1.__next__() # 抛出异常
+        
+        v1 = next(obj1) # obj1.__next__()
+        print(v1)
+    
+        v2 = next(obj1)
+        print(v2)
+    
+        v3 = next(obj1)
+        print(v3)
+    
+    
+        obj2 = IT()
+        for item in obj2:  # 首先会执行迭代器对象的__iter__方法并获取返回值，一直去反复的执行 next(对象) 
+            print(item)
+            
+    迭代器对象支持通过next取值，如果取值结束则自动抛出StopIteration。
+    for循环内部在循环时，先执行__iter__方法，获取一个迭代器对象，然后不断执行的next取值（有异常StopIteration则终止循环）。
+    ```
+
+  - 生成器
+
+    ```python
+    # 创建生成器函数
+        def func():
+            yield 1
+            yield 2
+        
+    # 创建生成器对象（内部是根据生成器类generator创建的对象），生成器类的内部也声明了：__iter__、__next__ 方法。
+        obj1 = func()
+        
+        v1 = next(obj1)
+        print(v1)
+    
+        v2 = next(obj1)
+        print(v2)
+    
+        v3 = next(obj1)
+        print(v3)
+    
+    
+        obj2 = func()
+        for item in obj2:
+            print(item)
+    
+    如果按照迭代器的规定来看，其实生成器类也是一种特殊的迭代器类（生成器也是一个中特殊的迭代器）。
+    ```
+
+  - 可迭代对象
+
+    ```python
+    # 如果一个类中有__iter__方法且返回一个迭代器对象 ；则我们称以这个类创建的对象为可迭代对象。
+    
+    class Foo(object):
+        
+        def __iter__(self):
+            return 迭代器对象(生成器对象)
+        
+    obj = Foo() # obj是 可迭代对象。
+    
+    # 可迭代对象是可以使用for来进行循环，在循环的内部其实是先执行 __iter__ 方法，获取其迭代器对象，然后再在内部执行这个迭代器对象的next功能，逐步取值。
+    for item in obj:
+        pass
+    ```
+
+    ```python
+    class IT(object):
+        def __init__(self):
+            self.counter = 0
+    
+        def __iter__(self):
+            return self
+    
+        def __next__(self):
+            self.counter += 1
+            if self.counter == 3:
+                raise StopIteration()
+            return self.counter
+    
+    
+    class Foo(object):
+        def __iter__(self):
+            return IT()
+    
+    
+    obj = Foo() # 可迭代对象
+    
+    
+    for item in obj: # 循环可迭代对象时，内部先执行obj.__iter__并获取迭代器对象；不断地执行迭代器对象的next方法。
+        print(item)
+    ```
+
+    ```python
+    # 基于可迭代对象&迭代器实现：自定义range
+    class IterRange(object):
+        def __init__(self, num):
+            self.num = num
+            self.counter = -1
+    
+        def __iter__(self):
+            return self
+    
+        def __next__(self):
+            self.counter += 1
+            if self.counter == self.num:
+                raise StopIteration()
+            return self.counter
+    
+    
+    class Xrange(object):
+        def __init__(self, max_num):
+            self.max_num = max_num
+    
+        def __iter__(self):
+            return IterRange(self.max_num)
+    
+    
+    obj = Xrange(100)
+    
+    for item in obj:
+        print(item)
+    ```
+
+    ```python
+    class Foo(object):
+        def __iter__(self):
+            yield 1
+            yield 2
+    
+    
+    obj = Foo()
+    for item in obj:
+        print(item)
+    ```
+
+    ```python
+    # 基于可迭代对象&生成器 实现：自定义range
+    
+    class Xrange(object):
+        def __init__(self, max_num):
+            self.max_num = max_num
+    
+        def __iter__(self):
+            counter = 0
+            while counter < self.max_num:
+                yield counter
+                counter += 1
+    
+    
+    obj = Xrange(100)
+    for item in obj:
+        print(item)
+    ```
+
+    常见的数据类型：
+
+    ```python
+    v1 = list([11,22,33,44])
+    
+    v1是一个可迭代对象，因为在列表中声明了一个 __iter__ 方法并且返回一个迭代器对象。
+    ```
+
+    ```python
+    from collections.abc import Iterator, Iterable
+    
+    v1 = [11, 22, 33]
+    print( isinstance(v1, Iterator) )  # false，判断是否是迭代器；判断依据是__iter__ 和 __next__。
+    v2 = v1.__iter__()
+    print( isinstance(v2, Iterator) )  # True
+    
+    
+    
+    v1 = [11, 22, 33]
+    print( isinstance(v1, Iterable) )  # True，判断依据是是否有 __iter__且返回迭代器对象。
+    
+    v2 = v1.__iter__()
+    print( isinstance(v2, Iterable) )  # True，判断依据是是否有 __iter__且返回迭代器对象。
+    ```
+
 
 ### 8.15 元类
 
