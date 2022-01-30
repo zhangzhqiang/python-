@@ -115,7 +115,7 @@
 
 - 3.根据操作系统选择对应的安装包
 
-- 4.安装,勾选 Add Python 3.3 to PATH.
+- 4.安装，勾选 Add Python 3.3 to PATH
 
 <img src="https://pythonav.com/media/uploads/2019/02/21/1548322161259.png" alt="img" style="zoom:50%;" />
 
@@ -131,15 +131,15 @@
 
 <img src="https://pythonav.com/media/uploads/2019/02/21/1548322916218.png" alt="img" style="zoom:50%;" />
 
-- 8.进行验证,打开终端,输入python,进入到交互模式,说明安装成功
+- 8.进行验，打开终端,输入python，进入到交互模式,说明安装成功
 
 ![1639296246484](J:\homework\Python学习笔记\Python_notes.assets\1639296246484.png)
 
 #### 2.3.2 开发工具安装
 
 - 下载`Pycharm`
-  - 1.官网:`<http://www.jetbrains.com/pycharm/download/#section=windows>`,选择专业版下载<img src="J:\homework\Python学习笔记\Python_notes.assets\1548323345533.png" alt="img" style="zoom:50%;" />
-- 2.双击安装,一路下一步,显示下图为成功<img src="J:\homework\Python学习笔记\Python_notes.assets\1548324124987.png" alt="img" style="zoom:50%;" />
+  - 1.官网:`<http://www.jetbrains.com/pycharm/download/#section=windows>`，选择专业版下载<img src="J:\homework\Python学习笔记\Python_notes.assets\1548323345533.png" alt="img" style="zoom:50%;" />
+- 2.双击安装，一路下一步,显示下图为成功<img src="J:\homework\Python学习笔记\Python_notes.assets\1548324124987.png" alt="img" style="zoom:50%;" />
 - 3.首次使用![img](J:\homework\Python学习笔记\Python_notes.assets\1548326046866.png)
 - 4.用户许可选择Accept![img](J:\homework\Python学习笔记\Python_notes.assets\1548326092371.png)
 - 5.激活`Pycharm`
@@ -169,8 +169,8 @@
 print('我是pytho2')
 ```
 
-- 建议:编写文件时,保存文件要用`utf-8`格式保存.
-- 注意:以什么编码保存,就要用什么编码方式打开,否则会出现乱码.
+- 建议：编写文件时，保存文件要用`utf-8`格式保存。
+- 注意：以什么编码保存，就要用什么编码方式打开，否则会出现乱码。
 
 在`linux`上有一种特殊的执行方法：
 
@@ -180,9 +180,9 @@ print('我是pytho2')
 print('hello world')
 ```
 
-环境头只在`linux`上生效:
+环境头只在`linux`上生效：
 
-运行:解释器+文件路径
+运行：解释器+文件路径
 
 - 给文件赋予一个可执行的权限
 - `./a.py ` 通过文件的第一行找python解释器 = `/usr/bin/env/python a.py`
@@ -204,7 +204,7 @@ print("hello")
 
 ### 2.6 输入
 
-在生活中,我们访问一个网页或登录`QQ`,第一步都需要输入账号和密码,在python中input就是输入内容的语法;
+在生活中，我们访问一个网页或登录`QQ`，第一步都需要输入账号和密码，在python中input就是输入内容的语法
 
 - `python3`的写法
 
@@ -224,18 +224,27 @@ print(msg)
 
 ### 2.7 变量
 
-变量是可变的，一旦定义后会加载到内容,方便以后的调用，变量定义不仅可以使用数字，还可以使用任意数据类型，但是我们一般定义的时候要遵循一定的规范，在代码中会更清晰,更整洁,容易理解。
+变量是可变的，一旦定义后会加载到内存，方便以后的调用，变量定义不仅可以使用数字，还可以使用任意数据类型，但是我们一般定义的时候要遵循一定的规范，在代码中会更清晰，更整洁,容易理解。
 
-变量定义规范:
+变量定义规范：
 
 - 变量只能包含数字、字母、下划线
-- 变量不能以数字开头
-- 变量不能使用python关键字 **`[‘and’, ‘as’, ‘assert’, ‘break’, ‘class’, ‘continue’, ‘def’, ‘del’, ‘elif’, ‘else’, ‘except’, ‘exec’, ‘finally’, ‘for’, ‘from’, ‘global’, ‘if’, ‘import’, ‘in’, ‘is’, ‘lambda’, ‘not’, ‘or’, ‘pass’, ‘print’, ‘raise’, ‘return’, ‘try’, ‘while’, ‘with’, ‘yield’]`**
-- 变量一般使用英文，不要使用拼音
-- 变量要以下划线连接两个英文单词
-- 变量可以使用驼峰式命名：`BaseName = 'ike'`，但一般是使用下划线
 
-建议：变量命名要见名知意，比如:name = `"ike"`  age = 18
+- 变量不能以数字开头
+
+- 变量不能使用python内置函数关键字 
+
+  ```python
+  [‘and’, ‘as’, ‘assert’, ‘break’, ‘class’, ‘continue’, ‘def’, ‘del’, ‘elif’, ‘else’, ‘except’, ‘exec’, ‘finally’, ‘for’, ‘from’, ‘global’, ‘if’, ‘import’, ‘in’, ‘is’, ‘lambda’, ‘not’, ‘or’, ‘pass’, ‘print’, ‘raise’, ‘return’, ‘try’, ‘while’, ‘with’, ‘yield’]
+  ```
+
+- 变量一般使用英文，不要使用拼音
+
+- 变量要以下划线连接两个英文单词
+
+- 变量可以使用驼峰式命名：BaseName = 'ike'，但一般是使用下划线
+
+建议：变量命名要见名知意，比如:name = "ike"  age = 18
 
 ```python
 # 第一题
@@ -294,7 +303,7 @@ print(USER_LIST)
 
 在我们学习中，经常会对一些不好理解的东西在旁边会加一些标记或说明，在我们的代码中也是这样的。
 
-我们写代码的时候，有些逻辑过于复杂，我们在写的时候能看懂，但随着代码量的增加，回头再让你看某一段代码。也学你不是一下能看明白的。所以在写代码的时候，我们要养成加注释的习惯。
+我们写代码的时候，有些逻辑过于复杂，我们在写的时候能看懂，但随着代码量的增加，回头再让你看某一段代码。也许你不是一下能看明白的。所以在写代码的时候，我们要养成加注释的习惯。
 
 ```python
 # print('hello') 这样就是对这个代码进行注释,并且这个代码不会执行
@@ -307,7 +316,7 @@ print(2)
 
 ### 2.10 流程控制
 
-1.初级条件语句	
+1.初级条件语句
 
 ```python
 # 请事先一个功能:让用户输入性别,如果是男,输出再见,如果是女,输出来呀来呀!
@@ -319,7 +328,7 @@ while True:
         print('来呀来呀!')
 ```
 
-2.`elif`条件
+2.elif条件
 
 ```python
 # 请事先一个功能:让用户输入性别,如果是男,输出再见,如果是女,输出来呀来呀!如果是人妖,找alex去,否则,滚
@@ -365,6 +374,8 @@ else:
     print('用户名或密码错误!')
 ```
 
+---
+
 ## 第三章 基础和运算符
 
 ### 3.1 while循环
@@ -379,7 +390,7 @@ else:
   # 无限循环
   ```
 
-- 通过循环,让count每次循环+1,控制循环次数
+- 通过循环，让count每次循环+1，控制循环次数
 
   ```python
   count = 1
@@ -388,7 +399,7 @@ else:
       count += 1
   ```
 
-- 通过循环,打印1-10
+- 通过循环，打印1-10
 
   ```python
 count = 1
@@ -399,7 +410,7 @@ count = 1
       count += 1
   ```
 
-- 通过循环,打印1-10,但不打印7
+- 通过循环，打印1-10，但不打印7
 
   ```python
   count = 1
@@ -411,7 +422,7 @@ count = 1
 
 #### 3.1.2 break
 
-- break代表终止当前循环,代码运行到break即终止
+- break代表终止当前循环，代码运行到break即终止
 
   ```python
   count = 1
@@ -425,7 +436,7 @@ count = 1
 
 #### 3.1.3 continue
 
-- continue退出当前循环,进行下一次循环
+- continue退出当前循环，进行下一次循环
 
 ```python
 count = 1
@@ -435,7 +446,7 @@ while count <= 10:
 count += 1
 ```
 
-- 练习:continue打印1-10,不打印7
+- 练习：continue打印1-10，不打印7
 
 ```python
 count = 1
@@ -449,7 +460,7 @@ while count <= 10:
 
 #### 3.1.4 while else
 
-- while else结构,while条件不满足,则执行else中的内容,break终止循环则不执行else
+- while else结构，while条件不满足，则执行else中的内容，break终止循环则不执行else
 
   ```python
   count = 1
@@ -462,7 +473,7 @@ while count <= 10:
 
 ### 3.2 格式化输出
 
-- %s,占位符,指的是字符串
+- %s,占位符，指的是字符串
 
   ```python
   name = input('请输入姓名:')
@@ -479,7 +490,7 @@ while count <= 10:
   print(msg%(name,name,age,job,hobby))
   ```
 
-- %d,占位符,指的是数字
+- %d,占位符，指的是数字
 
   ```python
   name = input('>>>')
@@ -487,14 +498,14 @@ while count <= 10:
   print(s1)
   ```
 
-- %%,在需求中要求有%符号,在代码中要用2个%来转义
+- %%，在需求中要求有%符号，在代码中要用2个%来转义
 
   ```python
   name = 'alex'
   print('%s的手机电量是100%%' % name)
   ```
 
-- %f,占位符,指的是小数
+- %f，占位符，指的是小数
 
   ```python
   name = input('>>>:')
@@ -504,7 +515,7 @@ while count <= 10:
 
 ### 3.3 运算符
 
-计算机可以进行的运算有很多种，可不只加减乘除这么简单，运算按种类可分为算数运算、比较运算、逻辑运算、赋值运算、成员运算、身份运算、位运算.
+计算机可以进行的运算有很多种，可不只加减乘除这么简单，运算按种类可分为算数运算、比较运算、逻辑运算、赋值运算、成员运算、身份运算、位运算。
 
 #### 3.3.1 算数运算
 
@@ -540,7 +551,7 @@ while count <= 10:
   print(a / b)
   ```
 
-- %(取模,只取余数)
+- %(取模，只取余数)
 
   ```python
   value = 11 % 3
@@ -599,7 +610,7 @@ while count <= 10:
   print(a == b)
   ```
 
-- `=!` 或` <>`(不相等)
+- `!=` 或` <>`(不相等)
 
   ```python
   a = 10
@@ -759,7 +770,7 @@ while count <= 10:
   v1 = 1 and 9 or 0 and 6
   ```
 
-  总结:优先级在没有()的情况下,not优先级最高,and优先级高于or,优先级的顺序为
+  总结：优先级在没有()的情况下，not优先级最高，and优先级高于or，优先级的顺序为
 
   ```python
   # () > not > and > or
@@ -767,7 +778,7 @@ while count <= 10:
 
 #### 3.3.5 成员运算
 
-- 判断子元素是否在原字符串/字典/列表/集合中:
+- 判断子元素是否在原字符串/字典/列表/集合中：
 
 - in
 
@@ -814,17 +825,17 @@ while count <= 10:
   1YB=1024ZB
   ```
 
-- `GBK`和`GB2312`
+- **GBK和GB2312**
 
-  `GBK`, 国标码占用2个字节. 对应ASCII码 `GBK`直接兼容. 因为计算机底层是用英文写的. 你不支持英文肯定不行. 而英文已经使用了`ASCII`码. 所以`GBK`要兼容`ASCII`.
-  这里`GBK`国标码. 前⾯的ASCII码部分. 由于使⽤两个字节. 所以对于ASCII码⽽言. 前9位都是0
+  `GBK`，国标码占用2个字节。 对应ASCII码 `GBK`直接兼容。因为计算机底层是用英文写的。你不支持英文肯定不行。而英文已经使用了`ASCII`码。所以`GBK`要兼容`ASCII`。
+  这里`GBK`国标码，前⾯的ASCII码部分。由于使⽤两个字节，所以对于ASCII码⽽言。前9位都是0
 
   ```python
   字母A:0100 0001 # ASCII字母A:0000 0000 0100 0001 # 国标码
   ```
 
   随着全球化的普及，发展到欧洲，亚洲等国家，发现这些根本不够用，所以创建了万国码。
-  因为全球语言很多,`ascii`不足以存储这么多对应关系,创建了一个超级密码本:万国码`unicode`
+  因为全球语言很多，`ascii`不足以存储这么多对应关系，创建了一个超级密码本：万国码`unicode`
 
   ```python
   8 位 == 1个字节.hello h一个字符,e一个字符,he就不是一个字符.中国:中是一个字符,国是一个字符.
@@ -832,23 +843,23 @@ while count <= 10:
 
   Unicode
 
-  Unicode:万国码 可以统计世界上的所有语言,一般用于内存计算,最少2个字节,最多4个字节
+  Unicode：万国码 可以统计世界上的所有语言，一般用于内存计算，最少2个字节，最多4个字节
 
   - `ecs2 `   2**16
   - `ecs4`    2**32
 
-- `UTF-8`
+- **UTF-8**
 
-  对Unicode进行升级: `utf-8`
-  `utf-8 `用最少用8位数,去表示一个字符.
-  英文: 8位,1个字节表示.
-  欧洲文字: 16位,两个字节表示一个字符. 
-  中文,亚洲文字: 24位,三个字节表示.
+  对Unicode进行升级： utf-8，utf-8 用最少用8位数，去表示一个字符。
+  英文：8位，1个字节表示。
+  欧洲文字：16位，两个字节表示一个字符。 
+  中文，亚洲文字：24位，三个字节表示。
+  
+utf-16 用最少用16位数。
+  
+gbk：国标，只能中国人自己用，一个中文用16位，两个字节表示。
 
-  `utf-16` 用最少用16位数。
-
-  `gbk`:
-  国标,只能中国人自己用, 一个中文用16位,两个字节表示。
+---
 
 ## 第四章 数据类型
 
@@ -858,11 +869,11 @@ while count <= 10:
 age = 18
 ```
 
-- `python2`
+- python2
 
   - int
 
-    - 32位电脑:-2147483648～2147483647
+    - 32位电脑：-2147483648～2147483647
     - 64位电脑：-9223372036854775808～9223372036854775807
     - 超出范围后python自动将其转换成long（长整形）
 
@@ -874,24 +885,24 @@ age = 18
     print(v)
     ```
 
-- `python3`
+- python3
 
   - 只有int
   - 整型除法只能保留所有
 
-### 4.2 布尔值(`bool`)
+### 4.2 布尔值(bool)
 
-判断真假:
+判断真假：
 
-- 只有两个值:True/False
+- 只有两个值：True/False
 - 转换
   - 数字转布尔：0是False，其他都是True
   - 字符串转布尔：“”是False，其他都是True
   - 空列表[]/元组()/空字典{}/空集合set()都是False
 
-### 4.3 字符串(`str`)
+### 4.3 字符串(str)
 
-字符串是写代码中最常见的，python内存中的字符串是按照：`unicode` 编码存储。对于字符串是不可变,有序的数据类型.
+字符串是写代码中最常见的，python内存中的字符串是按照：`unicode` 编码存储。对于字符串是不可变，有序的数据类型。
 
 #### 4.3.1 字符串方法
 
@@ -1186,7 +1197,7 @@ age = 18
 
 ### 4.4 列表
 
-列表是python的基础数据类型之一 ,它是以[ ]括起来, 每个元素用 "," 隔开而且可以存放各种数据类型.列表相比于字符串，不仅可以储存不同的数据类型，而且可以储存大量数据，列表是有序的,可变的数据类型.
+列表是python的基础数据类型之一，它是以[ ]括起来, 每个元素用 "," 隔开而且可以存放各种数据类型。列表相比于字符串，不仅可以储存不同的数据类型，而且可以储存大量数据，列表是有序的,可变的数据类型。
 
 - 如果想要表示两个同学 user = "张三","李四"
 
@@ -1365,11 +1376,11 @@ age = 18
   print(n)
   ```
 
-### 4.5 元组
+### 4.5 元祖
 
 对于容器型数据类型list，无论谁都可以对其增删改查，那么有一些重要的数据放在list中是不安全的，所以需要一种容器类的数据类型存放重要的数据，创建之初只能查看而不能增删改，这种数据类型就是元祖。
 
-元祖:俗称不可变的列表,又被成为只读列表,元祖也是python的基本数据类型之一,元组是不可变,有序数据类型。
+元祖：俗称不可变的列表，又被成为只读列表,元祖也是python的基本数据类型之一，元组是不可变，有序数据类型。
 
 #### 4.5.1 元组的方法
 
@@ -1442,9 +1453,9 @@ age = 18
 
 ### 4.6 字典
 
-字典(`dict`)是python中唯一的一个映射类型.他是以{ }括起来的键值对组成.
+字典(`dict`)是python中唯一的一个映射类型。他是以{ }括起来的键值对组成。
 
-字典中的key是可哈希的,不可变的,字典是无序的数据类型.
+字典中的key是可哈希的，不可变的，字典是无序的数据类型。
 
 #### 4.6.1 字典的方法
 
@@ -1455,7 +1466,7 @@ age = 18
   # 请输出:我的名字叫%s,几年%s岁,性别%s,喜欢%s
   ```
 
-- 字典格式:
+- 字典格式：
 
   ```python
   info = {"name": "WuSir", "age": 18, "gender": "男", "hobby": "同桌"} # 键值对
@@ -1687,9 +1698,9 @@ age = 18
 
 ### 4.7 集合
 
-set集合是python的一个基本数据类型,set中的元素是不重复的.无序的,里边的元素必须是可hash的(`int`, `str`, `tuple`,`bool`).
+set集合是python的一个基本数据类型，set中的元素是不重复的。无序的，里边的元素必须是可hash的(`int`, `str`, `tuple`,`bool`)。
 
-注意:set本身是不可hash的.set是可变的.
+注意：set本身是不可hash的，set是可变的。
 
 #### 4.7.1 集合的方法
 
@@ -1703,7 +1714,7 @@ set3 = {'1','alex',2,True,(1,2,[2,3,4])} # 报错
 # TypeError: unhashable type: 'list'
 ```
 
-- set中的元素是不重复的, 且无序的.
+- set中的元素是不重复的，且无序的。
 
   ```python
   s = {"周杰伦", "周杰伦", "周星星"}
@@ -1712,7 +1723,7 @@ set3 = {'1','alex',2,True,(1,2,[2,3,4])} # 报错
   {'周星星', '周杰伦'}
   ```
 
-- 使用这个特性.我们可以使用set来去掉重复
+- 使用这个特性。我们可以使用set来去掉重复
 
   ```python
   # 给list去重复
@@ -1840,7 +1851,7 @@ set3 = {'1','alex',2,True,(1,2,[2,3,4])} # 报错
 
 ### 4.8 内存相关
 
-- 示例一:
+- 示例一：
 
   ```python
   v1 = [11, 22, 33]
@@ -1856,7 +1867,7 @@ set3 = {'1','alex',2,True,(1,2,[2,3,4])} # 报错
   2.字符串: "alex",'asfasd asdf asdf d_asdf '   "f_*" * 3  ---python机制会重新开辟内存。
   ```
 
-- 示例二:
+- 示例二：
 
   ```python
   v1 = [11, 22, 33, 44]
@@ -1865,7 +1876,7 @@ set3 = {'1','alex',2,True,(1,2,[2,3,4])} # 报错
   print(v1)
   ```
 
-- 示例三:
+- 示例三：
 
   ```python
   v1 = [88, 99]
@@ -1890,7 +1901,7 @@ set3 = {'1','alex',2,True,(1,2,[2,3,4])} # 报错
   print(v2)
   ```
 
-- 示例四:
+- 示例四：
 
   ```python
   v1 = [1, 2, 3]
@@ -1913,7 +1924,7 @@ set3 = {'1','alex',2,True,(1,2,[2,3,4])} # 报错
   print(v1)  # [1, 2, 3]
   ```
 
-- 示例五:
+- 示例五：
 
   ```python
   v1 = [1, 2]
@@ -1949,6 +1960,7 @@ set3 = {'1','alex',2,True,(1,2,[2,3,4])} # 报错
 ### 4.9 深浅拷贝
 
 - **浅拷贝(copy)：** 拷贝父对象，不会拷贝对象的内部的子对象。
+
 - **深拷贝(deepcopy)：** copy 模块的 deepcopy 方法，完全拷贝了父对象及其子对象 
 
 - 浅拷贝
@@ -1971,6 +1983,30 @@ set3 = {'1','alex',2,True,(1,2,[2,3,4])} # 报错
   print(id(v1), id(v2))
   print(id(v1[4]), id(v2[4]))
   ```
+
+示例：浅拷贝
+
+```python
+>>>a = {1: [1,2,3]}
+>>> b = a.copy()
+>>> a, b
+({1: [1, 2, 3]}, {1: [1, 2, 3]})
+>>> a[1].append(4)
+>>> a, b
+({1: [1, 2, 3, 4]}, {1: [1, 2, 3, 4]})
+```
+
+深拷贝：
+
+```python
+>>>import copy
+>>> c = copy.deepcopy(a)
+>>> a, c
+({1: [1, 2, 3, 4]}, {1: [1, 2, 3, 4]})
+>>> a[1].append(5)
+>>> a, c
+({1: [1, 2, 3, 4, 5]}, {1: [1, 2, 3, 4]})
+```
 
 - 练习
 
@@ -2022,6 +2058,8 @@ set3 = {'1','alex',2,True,(1,2,[2,3,4])} # 报错
   v3 = copy.deepcopy(v1)
   print(id(v1), id(v3))
   ```
+
+---
 
 ## 第五章 文件操作
 
@@ -2086,7 +2124,7 @@ with open('a.txt',mode='a',encoding='utf-8') as v:
   - 存在，尾部追加。
   - 不存在，创建再写。
 
-注意:rb/wb/ab:以二进制打开文件，不必指定编码（指定报错），用于读取/写入图片，音频，视频等文件;
+注意：rb/wb/ab：以二进制打开文件，不必指定编码（指定报错），用于读取/写入图片，音频，视频等文件;
 
 ```python
 ========= ===============================================================
@@ -2131,7 +2169,7 @@ The default mode is 'rt' (open for reading text).
   file_object.close()
   ```
 
-  - rd表示读取三个字节
+  - rb表示读取字节
 
   ```python
   obj = open('a.txt',mode='rb')
@@ -2342,8 +2380,8 @@ print(content)
 file_object.close()
 ```
 
-- 读:默认从0的光标开始读,可以通过seek调整光标的位置
-- 写:从光标所在的位置开始写,默认光标的位置在开始的位置,直接写入,会从光标开始的位置替换到后边的内容
+- 读：默认从0的光标开始读，可以通过seek调整光标的位置
+- 写：从光标所在的位置开始写,默认光标的位置在开始的位置,直接写入，会从光标开始的位置替换到后边的内容
 - 可以通过seek调整光标的位置,进行写入
 
 #### 5.4.2 写读
@@ -2370,8 +2408,8 @@ print(data)
 file_object.close()
 ```
 
-- 读:默认光标在写入到最后或0,可以通过seek调整光标的位置
-- 写:在原文件先清空文件再写,不是原文件会新建一个文件
+- 读：默认光标在写入到最后或0，可以通过seek调整光标的位置
+- 写：在原文件先清空文件再写，不是原文件会新建一个文件
 
 #### 5.4.3 追加读
 
@@ -2391,8 +2429,8 @@ print(data)
 file_object.close()
 ```
 
-- 读:默认光标在最后,可以通过seek调整光标的位置,然后再去读
-- 写:永远在最后追加
+- 读：默认光标在最后，可以通过seek调整光标的位置，然后再去读
+- 写：永远在最后追加
 
 ```python
 file_obj = open("user_info.txt", mode="a", encoding="utf-8")
@@ -2409,7 +2447,7 @@ file_obj.close()
 
 ### 5.5  移动光标
 
-- seek(光标按字节移动)，无论模式是否带b，都是按照字节进行处理;
+- seek(光标按字节移动)，无论模式是否带b，都是按照字节进行处理
 
 ```python
 obj = open('a.txt',mode='r',encoding='utf-8')  # 读模式打开
@@ -2428,7 +2466,7 @@ print(data)
 
 ### 5.6  光标位置
 
-- tell(), 获取光标当前所在的字节位置;
+- tell()，获取光标当前所在的字节位置
 
 ```python
 obj = open('a.txt',mode='rb')
@@ -2453,7 +2491,7 @@ while True:
 v.close()
 ```
 
-- flush，强制将缓存区中的数据写入到硬盘;
+- flush，强制将缓存区中的数据写入到硬盘
 
 ```python
 v = open('user_info.txt',mode='a',encoding='utf-8')
@@ -2467,9 +2505,9 @@ v.close()
 
 ### 5.8 文件内容修改
 
-- 若要修改文件内容,需要先将文件内容读到内存,在内存中修改后,再重新写入文件;
+- 若要修改文件内容，需要先将文件内容读到内存，在内存中修改后，再重新写入文件；
 
-- 若文件过大,可以打开两个文件,边修改边写入;
+- 若文件过大，可以打开两个文件，边修改边写入；
 
   ```python
   f1 = open("test1.txt",mode="r",encoding="utf-8")
@@ -2587,47 +2625,47 @@ with open("练习题/gupiap.log", "r", encoding="utf-8") as file_obj:
 
 5. 根据要求修改文件的内容，原文件内容如下：`ha.conf`  
 
-   ```python
-   global
-           log 127.0.0.1 local2
-           daemon
-           maxconn 256
-           log 127.0.0.1 local2 info
-   defaults
-           log global
-           mode http
-           timeout connect 5000ms
-           timeout client 50000ms
-           timeout server 50000ms
-           option  dontlognull
-   
-   listen stats :8888
-           stats enable
-           stats uri       /admin
-           stats auth      admin:1234
-   
-   frontend oldboy.org
-           bind 0.0.0.0:80
-           option httplog
-           option httpclose
-           option  forwardfor
-           log global
-           acl www hdr_reg(host) -i www.pythonav.org
-           use_backend www.pythonav.com if www
-   
-   backend www.pythonav.com
-           server 100.1.7.9 100.1.7.9 weight 20 maxconn 3000
-   ...
-   ```
+```python
+global
+        log 127.0.0.1 local2
+        daemon
+        maxconn 256
+        log 127.0.0.1 local2 info
+defaults
+        log global
+        mode http
+        timeout connect 5000ms
+        timeout client 50000ms
+        timeout server 50000ms
+        option  dontlognull
 
-   请将文件中的 `luffycity`修改为 `pythonav` 。
+listen stats :8888
+        stats enable
+        stats uri       /admin
+        stats auth      admin:1234
 
-   ```python
-   with open("练习题/ha.conf", "r", encoding="utf-8") as f1, open("练习题/new_ha.conf", "w", encoding="utf-8")as f2:
-       for line in f1:
-           new = line.replace("luffycity", "pythonav")
-           f2.write(new)
-   ```
+frontend oldboy.org
+        bind 0.0.0.0:80
+        option httplog
+        option httpclose
+        option  forwardfor
+        log global
+        acl www hdr_reg(host) -i www.pythonav.org
+        use_backend www.pythonav.com if www
+
+backend www.pythonav.com
+        server 100.1.7.9 100.1.7.9 weight 20 maxconn 3000
+...
+```
+
+请将文件中的 `luffycity`修改为 `pythonav` 。
+
+```python
+with open("练习题/ha.conf", "r", encoding="utf-8") as f1, open("练习题/new_ha.conf", "w", encoding="utf-8")as f2:
+    for line in f1:
+        new = line.replace("luffycity", "pythonav")
+        f2.write(new)
+```
 
 ### 6.1 其他格式文件操作
 
@@ -3517,20 +3555,20 @@ data = input('>>>:')
 value = int(data) if data.isdecimal() else None
 ```
 
-注意:先做出来,再思考如何简化.
+注意：先做出来，再思考如何简化。
 
 ### 6.2 函数和函数名
 
 #### 6.2.1 函数
 
-对于函数编程:
+对于函数编程：
 
-- 本质:将N行代码拿到别处并给他起个名字,以后通过名字就可以找到这段代码并执行.
-- 场景:
+- 本质：将N行代码拿到别处并给他起个名字，以后通过名字就可以找到这段代码并执行。
+- 场景：
   - 代码重复执行
-  - 代码量特别多,超过一屏,key选择通过函数进行代码的分割.
+  - 代码量特别多，超过一屏，key选择通过函数进行代码的分割。
 
-函数的基本结构:
+函数的基本结构：
 
 ```python
 # 函数的定义
@@ -3542,7 +3580,7 @@ def 函数名():
 函数名()
 ```
 
-示例一:
+示例一：
 
 ```python
 def get_list():
@@ -3552,7 +3590,7 @@ get_list()
 # 注意:函数如果不被调用,则内部代码永远不会执行
 ```
 
-示例二:
+示例二：
 
 ```python
 # 假如:管理员/业务员/老板用的是同一个邮箱,可以这样写
@@ -3570,7 +3608,7 @@ if user_input == '老板':
 
 > 函数可被哈希，所以函数名通常也可以当作集合的元素、字典的值、列表的元素
 
-截至目前:面向过程编程【缺点：可读性差/可重用性差】
+截至目前：面向过程编程【缺点：可读性差/可重用性差】
 
 ```python
 # 面向过程编程
@@ -3749,7 +3787,7 @@ get_dta(1)
 get_dta(2)
 ```
 
-示例:
+示例：
 
 ```python
 def send_email(to_email):
@@ -3780,7 +3818,6 @@ if user_input == '老板':
 
 ```python
 # 1. 请写一个函数，函数计算列表 info = [11,22,33,44,55] 中所有元素的和
-
 def val_sum():
     info = [11,22,33,44,55]
     data = 0
@@ -3791,7 +3828,6 @@ def val_sum():
 val_sum()
 
 # 2. 请写一个函数，函数计算列表中所有元素的和。
-
 def get_list_sum(a1):
    	data = 0
     for item in a1:
@@ -3805,7 +3841,6 @@ v1 = [8712,123,123]
 get_list_sum(v1)
 
 # 3. 请写一个函数，函数将两个列表拼接起来。
-
 def join_list(l1, l2):
     res = []
     res.extend(l1)
@@ -3826,7 +3861,6 @@ len(data)
 
 
 # 5. 发邮件的示例
-          
 def send_email(role,to):
     template = "要给%s%s发送邮件" %(role,to,)
     print(template)
@@ -3854,7 +3888,7 @@ def func(a1,a2):
 func(1,3)
 ```
 
-#### 6.3.3关键字传参(调用函数执行并传入参数)
+#### 6.3.3 关键字传参(调用函数执行并传入参数)
 
 > 调用时传入参数
 
@@ -3876,7 +3910,7 @@ def func1(a1, a2, a3):
 
 #### 6.3.4 默认参数(定义函数时,写入)
 
-> 定义函数时,写入
+> 定义函数时，写入
 
 ```python
 def func(a1,a2,a3=9,a4=10):
@@ -3891,7 +3925,7 @@ func(11,a2=22,a3=10,a4=100)
 func(a1=11,a2=22,a3=10,a4=100)
 ```
 
-注意:对于函数的默认值慎用可变类型
+注意：对于函数的默认值慎用可变类型
 
 ```python
 # 如果要给value设置默认是空列表
@@ -3905,7 +3939,7 @@ def func(data, value = None):
         value = []
 ```
 
-示例一:
+示例一：
 
 ```python
 def func(a, b = []):
@@ -3919,7 +3953,7 @@ v3 = func(3)
 print(v1,v2,v3)
 ```
 
-示例二:
+示例二：
 
 ```python
 def func(a, b = []):
@@ -3986,19 +4020,19 @@ v3 = "我是{},年龄{}".format(*["joker", 18])
 v4 = "我是{name},年龄{age}".format(**{"name":"joker", "age":18})
 ```
 
-- 综合使用:(`*args`, `**kwargs`)无敌
+- 综合使用：(`*args`, `**kwargs`)无敌
 
-    ```python
-    def func(*args,**kwargs):
-        print(args,kwargs)
-    
-    func(1,2,3,4,5,k1=2,k5=9,k19=999)
-    func(*[1,2,3],k1=2,k5=9,k19=999)
-    func(*[1,2,3],**{'k1':1,'k2':3})
-    func(111,222,*[1,2,3],k11='joker',**{'k1':1,'k2':3})
-    ```
+```python
+def func(*args,**kwargs):
+    print(args,kwargs)
 
-参数重点:
+func(1,2,3,4,5,k1=2,k5=9,k19=999)
+func(*[1,2,3],k1=2,k5=9,k19=999)
+func(*[1,2,3],**{'k1':1,'k2':3})
+func(111,222,*[1,2,3],k11='joker',**{'k1':1,'k2':3})
+```
+
+**参数重点：**
 
 ```python
 # 定义函数
@@ -4019,12 +4053,12 @@ def func3(*args,**kwargs):
 Python参数的这一特性有两个好处：
 
 - 节省内存
-- 对于可变类型且函数种修改元素的内容，所有的地方都会修改，可变类型包括：列表、字典、集合
+- 对于可变类型且在函数中修改元素的内容，所有的地方都会修改，可变类型包括：列表、字典、集合
 
 ```python
 # 可变类型可在函数内修改
 def func(data):
-    data.append(999)
+    data.append(666)
     
 v1 = [11,22,33]
 func(v1)
@@ -4061,10 +4095,10 @@ func(new_v1)
 print(v1)  # [11,22,33]
 ```
 
-参数练习题，这个知识点在面试题中出现概率比较高，但实际开发中用的比较少
+参数练习题，这个知识点在面试题中出现概率比较高，但实际开发中用的比较少。
 
 ```python
-def  func(a1, a2=20):
+def func(a1, a2=20):
     print(a1, a2)
     print(id(a1), id(a2))
 ```
@@ -4145,6 +4179,7 @@ def func():
 v = func()
 print(v)
 
+# 返回列表
 def func():
     data = [11, 22, 33]
     return data
@@ -4180,7 +4215,6 @@ print(v2, id(v2))  # [11, 22, 33] 1567715479496
 
 ```python
 # 1. 让用户输入一段字符串，计算字符串中有多少A字符的个数。有多少个就在文件a.txt中写多少个“Python”.
-
 def get_count(data):
     sum_count = 0
     for i in data:
@@ -4208,7 +4242,7 @@ else:
 
 ```
 
-总结:
+总结：
 
 ```python
 # 情况一:
@@ -4233,7 +4267,7 @@ def f4(a1,a2):
 v2 = f4(1,7)
 ```
 
-练习题:
+练习题：
 
 ```python
 '''# 1. 写函数，计算一个列表中有多少个数字，打印： 列表中有%s个数字。
@@ -4275,7 +4309,7 @@ def count_lis(data):
 res = count_lis([1, 2, 3, 4, 5, 6, 8, 7, 4, 5])
 print(res)
 
-#　方式二
+# 方式二
 
 def count_lis(data):
     lis = []
@@ -4374,7 +4408,7 @@ res = data_type()
 print(res)
 ```
 
-注意:函数执行过程中只要遇到return语句,就会停止执行并返回结果,可以理解为return语句代表函数结束,如果未定义函数中指定return,那这个函数的返回值默认为None.
+注意：函数执行过程中只要遇到return语句，就会停止执行并返回结果，可以理解为return语句代表函数结束，如果未定义函数中指定return，那这个函数的返回值默认为None。
 
 返回值与print的区别：
 
@@ -4428,9 +4462,9 @@ None
 
 作用域，可以理解为一块空间，这块空间的数据是可以共享的。通俗点来说，作用域就类似于一个房子，房子中的东西归里面的所有人共享，其他房子的人无法获取。
 
-- python文件:全局作用域
+- python文件：全局作用域
 
-- 函数 :局部作用域
+- 函数：局部作用域
 
     ```python
     a = 1
@@ -4451,177 +4485,178 @@ None
     s2()
     ```
 
-- 总结:
 
-    - 一个函数是一个作用域
+**总结：**
 
-        ```python
-        def func():
-            x = 9
-            print(x)
-        func()
+- 一个函数是一个作用域
+
+    ```python
+    def func():
+        x = 9
         print(x)
-        ```
+    func()
+    print(x)
+    ```
 
-    - 作用域中查找数据规则：优先在自己的作用域找数据，自己没有就去 "父级" -> "父级" -> 直到全局，全部没有就报错。
+- 作用域中查找数据规则：优先在自己的作用域找数据，自己没有就去 "父级" -> "父级" -> 直到全局，全部没有就报错。
 
-        ```python
-        x = 10
-        def func():
-            x = 9
-            print(x)
-        
-        func()
-        ```
+    ```python
+    x = 10
+    def func():
+        x = 9
+        print(x)
+    
+    func()
+    ```
 
-    - 练习题
+- 练习题
 
-        ```python
-        # 第一题
+    ```python
+    # 第一题
+    x = 10
+    def func():
+        x = 9
+        print(x)
+        def x1():
+            x = 999
+            print(x)
+    func()  # 9
+    
+    # 第二题
+    x = 10
+    def func():
+        x = 9
+        print(x)
+        def x1():
+            x = 999
+            print(x)
+        x1()
+    func()  # 9 999
+    
+    # 第三题
+    x = 10
+    def func():
+        x = 9
+        print(x)
+        def x1():
+            x = 999
+            print(x)
+        print(x)
+        x1()
+    
+    func()  # 9 9 999
+    
+    # 第四题
+    x = 10
+    def func():
+        x = 8
+        print(x)
+        def x1():
+            x = 999
+            print(x)
+        x1()
+        print(x)
+    
+    func()  # 8 999 8
+    
+    
+    # 第五题
+    x = 10
+    def func():
+        x = 8
+        print(x)
+        def x1():
+            print(x)
+        x1()
+        print(x)
+    
+    func()  # 8 8 8
+    
+    
+    # 第六题
+    x = 10
+    def func():
+        x = 8
+        print(x)
+        def x1():
+            print(x)
+        x = 9
+        x1()
         x = 10
-        def func():
-            x = 9
+        print(x)
+    
+    func()  # 8 9 10
+    
+    # 第七题
+    x = 10
+    def func():
+        x = 8
+        print(x)
+        def x1():
             print(x)
-            def x1():
-                x = 999
-                print(x)
-        func()  # 9
-        
-        # 第二题
+    
+        x1()
+        x = 9
+        x1()
         x = 10
-        def func():
-            x = 9
-            print(x)
-            def x1():
-                x = 999
-                print(x)
-            x1()
-        func()  # 9 999
-        
-        # 第三题
-        x = 10
-        def func():
-            x = 9
-            print(x)
-            def x1():
-                x = 999
-                print(x)
-            print(x)
-            x1()
-        
-        func()  # 9 9 999
-        
-        # 第四题
-        x = 10
-        def func():
-            x = 8
-            print(x)
-            def x1():
-                x = 999
-                print(x)
-            x1()
-            print(x)
-        
-        func()  # 8 999 8
-        
-        
-        # 第五题
-        x = 10
-        def func():
-            x = 8
-            print(x)
-            def x1():
-                print(x)
-            x1()
-            print(x)
-        
-        func()  # 8 8 8
-        
-        
-        # 第六题
-        x = 10
-        def func():
-            x = 8
-            print(x)
-            def x1():
-                print(x)
-            x = 9
-            x1()
-            x = 10
-            print(x)
-        
-        func()  # 8 9 10
-        
-        # 第七题
-        x = 10
-        def func():
-            x = 8
-            print(x)
-            def x1():
-                print(x)
-        
-            x1()
-            x = 9
-            x1()
-            x = 10
-            print(x)
-        
-        func()  # 8 8 9 10
-        ```
+        print(x)
+    
+    func()  # 8 8 9 10
+    ```
 
-    - 子作用域中只能找到父级中的值 ，默认无法重新为父级/全局的变量进行赋值。(global/nonlocal可以强制做)
+- 子作用域中只能找到父级中的值 ，默认无法重新为父级/全局的变量进行赋值。(global/nonlocal可以强制做)
 
-        ```python
-        # 没有对全局变量赋值
-        # 示例一:
-        name = '在学校'
-        def func():
-            name = '写作业' # 在自己作用域再创建一个这样的值。
-            print(name)
-        func()
+    ```python
+    # 没有对全局变量赋值
+    # 示例一:
+    name = '在学校'
+    def func():
+        name = '写作业' # 在自己作用域再创建一个这样的值。
         print(name)
-        
-        # 示例二:
-        name = [1,2,43]
-        def func():
-            name.append(999)
-            print(name)
-        func()
+    func()
+    print(name)
+    
+    # 示例二:
+    name = [1,2,43]
+    def func():
+        name.append(999)
         print(name)
-        
-        # 对全局变量进行赋值
-        # 示例一:global
-        name = ["我好饿",'alex']
-        def func():
-            global name
-            name = '哈哈'
-        func()
+    func()
+    print(name)
+    
+    # 对全局变量进行赋值
+    # 示例一:global
+    name = ["我好饿",'alex']
+    def func():
+        global name
+        name = '哈哈'
+    func()
+    print(name)
+    
+    # 示例二:global
+    name = "老男孩"
+    def func():
+        name = 'alex'
+        def inner():
+            global name  # 找到全局的name，重新赋值全局的name，局部作用域的没有修改
+            name = 999
+        inner()
         print(name)
-        
-        # 示例二:global
-        name = "老男孩"
-        def func():
-            name = 'alex'
-            def inner():
-                global name  # 找到全局的name
-                name = 999
-            inner()
-            print(name)
-        func()
+    func()
+    print(name)
+    
+    # 示例三:nonlocal
+    name = "老男孩"
+    def func():
+        name = 'alex'
+        def inner():
+            nonlocal name # 找到上一级的name，重新赋值上一级的name，全局的name没有修改
+            name = 999
+        inner()
         print(name)
-        
-        # 示例三:nonlocal
-        name = "老男孩"
-        def func():
-            name = 'alex'
-            def inner():
-                nonlocal name # 找到上一级的name
-                name = 999
-            inner()
-            print(name)
-        func()
-        print(name)
-        ```
+    func()
+    print(name)
+    ```
 
 ### 6.6 函数小高级
 
@@ -5029,7 +5064,7 @@ print(v3)
             
             
             # 2. 请将 ip = "192.168.12.79" 中的每个十进制数转换成二进制: 
-            #          0010100100001010010001010010001010010 -> 十进制的值。
+            #   0010100100001010010001010010001010010 -> 十进制的值。
             
             # 3232238671
             ```
@@ -5038,7 +5073,7 @@ print(v3)
 
 #### 6.9.1 函数可以做返回值
 
-示例一:
+示例一：
 
 ```python
 def func():
@@ -5052,7 +5087,7 @@ v = bar()
 v()
 ```
 
-示例二:
+示例二：
 
 ```python
 name = 'oldboy'
@@ -5067,7 +5102,7 @@ v = bar()
 v()
 ```
 
-示例三:
+示例三：
 
 ```python
 def bar():
@@ -5078,7 +5113,7 @@ v = bar()
 v()
 ```
 
-示例四:
+示例四：
 
 ```python
 name = 'oldboy'
@@ -5091,7 +5126,7 @@ v = bar()
 v()
 ```
 
-示例五:
+示例五：
 
 ```python
 name = 'oldboy'
@@ -5105,7 +5140,7 @@ v1()
 v2()
 ```
 
-练习题:
+练习题：
 
 ```python
 # 第一题
@@ -5144,7 +5179,7 @@ base()
 
 注意：函数在何时被谁创建？
 
-示例一:
+示例一：
 
 ```python
 info = []
@@ -5158,7 +5193,7 @@ for item in range(10):
 info[0]()
 ```
 
-实例二:
+实例二：
 
 ```python
 info = []
@@ -5182,7 +5217,7 @@ info[4]()
 
 返回的函数对象，不仅仅是一个函数对象，在该函数外还包裹了一层作用域，这使得，该函数无论在何处调用，优先使用自己外层包裹的作用域
 
-闭包函数必须满足两个条件:
+闭包函数必须满足两个条件：
 
 - 函数内部定义的函数
 
@@ -5379,7 +5414,7 @@ POOL.shutdown()
 
 函数自己调用自己(效率低)
 
-示例一:
+示例一：
 
 ```python
 def func():
@@ -5388,7 +5423,7 @@ def func():
 func()
 ```
 
-示例二:
+示例二：
 
 ```python
 def func(i):
@@ -5397,7 +5432,7 @@ def func(i):
 func(1)
 ```
 
-示例三:
+示例三：
 
 ```python
 import time
@@ -5409,7 +5444,7 @@ func(0, 1)
 # 实现斐波那契
 ```
 
-示例四:
+示例四：
 
 ```python
 def func(a):
@@ -5441,7 +5476,7 @@ def func():
 v = func()
 ```
 
-递归与栈的关系总结:
+递归与栈的关系总结：
 
 - 必须有一个明确的结束条件
 - 每次进入更深一层递归时，问题规模相比上次递归都应有所减少
@@ -5695,9 +5730,9 @@ func3(999)
 
     - 实现效果：可以在不改变原函数内部代码 和 调用方式的前提下，实现在函数执行和执行扩展功能。
 
-    - 适用场景：多个函数系统统一在 执行前后自定义一些功能。
+    - 适用场景：多个函数系统统一在执行前后自定义一些功能。
 
-    - 装饰器示例
+- 装饰器示例：
 
     ```python
     def outer(origin):
@@ -5719,18 +5754,6 @@ func3(999)
 - 带参数的装饰器
 
     ```python
-    # 第一步：执行 ret = xxx(index)
-    # 第二步：将返回值赋值给 index = ret 
-    @xxx
-    def index():
-        pass
-    
-    # 第一步：执行 v1 = uuu(9)
-    # 第二步：ret = v1(index)
-    # 第三步：index = ret 
-    @uuu(9)
-    def index():
-        pass
     # ################## 普通装饰器 #####################
     def wrapper(func):
         def inner(*args,**kwargs):
@@ -5757,9 +5780,9 @@ func3(999)
     def index():
         pass
     ```
-
+    
     练习题:
-
+    
     ```python
     # 写一个带参数的装饰器，实现：参数是多少，被装饰的函数就要执行多少次，把每次结果添加到列表中，最终返回列表。
     def xxx(counter):
@@ -5769,9 +5792,9 @@ func3(999)
             def inner(*args,**kwargs):
                 v = []
                 for i in range(counter):
-                    data = func(*args,**kwargs) # 执行原函数并获取返回值
+                data = func(*args,**kwargs) # 执行原函数并获取返回值
                     v.append(data)
-                return v
+            return v
             return inner
         return wrapper
     
@@ -5846,9 +5869,9 @@ func3(999)
 
 总结：
 
-- 目的：在不改变原函数的基础上，再函数执行前后自定义功能。
+- 目的：在不改变原函数的基础上，在函数执行前后自定义功能。
 
-- 编写装饰器 和应用
+- 编写装饰器和应用
 
     ```python
     # 装饰器的编写
@@ -5974,7 +5997,7 @@ func3(999)
 
 **练习题**
 
-1. 去除列表中每个元素的.p4后缀
+1. 去除列表中每个元素的.mp4后缀
 
 ```python
 data_list = [
@@ -6000,7 +6023,7 @@ res = [item.split(".")[0] for item in data_list]
 print(res)
 ```
 
-2. 将字典中的元素按照 `键-值`格式化，并最终使用 `;`连接起来。
+2. 将字典中的元素按照  键-值 格式化，并最终使用 ；连接起来。
 
 ```python
 info = {
@@ -6013,7 +6036,7 @@ res = ";".join(["{}-{}".format(k, v) for k, v in info.items()])
 print(res)
 ```
 
-3. 将字典按照键从小到大排序，然后在按照如下格式拼接起来。（微信支付API内部处理需求）
+3. 将字典按照键从小到大排序，然后再按照如下格式拼接起来。（微信支付API内部处理需求）
 
 ```python
 info = {
@@ -6088,8 +6111,6 @@ data = []
 for i in range(10):
     for j in range(5):
         data.append( (i,j) )
-
-data = [ [i, j] for j in range(5) for i in range(10)]
 ```
 
 ```python
@@ -6130,15 +6151,15 @@ print(result)
 
 ### 6.15 生成器
 
-在 Python 中，使用了 yield 的函数被称为生成器（generator）。
+> - **在 Python 中，使用了 yield 的函数被称为生成器（generator）。**
+>
+> - **跟普通函数不同的是，生成器是一个返回迭代器的函数，只能用于迭代操作，更简单点理解生成器就是一个迭代器。**
+>
+> - **在调用生成器运行的过程中，每次遇到 yield 时函数会暂停并保存当前所有的运行信息，返回 yield 的值，并在下一次执行 next() 方法时从当前位置继续运行。**
+>
+> - **调用一个生成器函数，返回的是一个迭代器对象。**
 
-跟普通函数不同的是，生成器是一个返回迭代器的函数，只能用于迭代操作，更简单点理解生成器就是一个迭代器。
-
-在调用生成器运行的过程中，每次遇到 yield 时函数会暂停并保存当前所有的运行信息，返回 yield 的值, 并在下一次执行 next() 方法时从当前位置继续运行。
-
-调用一个生成器函数，返回的是一个迭代器对象。
-
-生成器是由函数+yield关键字创造出来的写法，在特定情况下，用他可以帮助我们节省内存。
+<font color="red">**生成器是由函数+yield关键字创造出来的写法，在特定情况下，用他可以帮助我们节省内存。**</font>
 
 - 生成器函数，但函数中有yield存在时，这个函数就是生成器函数。
 
@@ -6211,7 +6232,7 @@ for item in data:
     print(item)
 ```
 
-生成器得特点：记录再函数中得执行位置，下次执行next时，会基于上一次得位置基础上再继续向下执行。
+生成器得特点：记录在函数中的执行位置，下次执行next时，会基于上一次得位置基础上再继续向下执行。
 
 **引用场景**
 
@@ -6226,6 +6247,8 @@ for item in data:
   print(val)
   ```
 
+  第一种方式：
+  
   ```python
   import random
   
@@ -6234,9 +6257,11 @@ for item in data:
       val = random.randint(1000, 999)
       data_list.append(val)
   
-  # 使用时，去data_list中获取
+# 使用时，去data_list中获取
   ```
-
+  
+  第二种方式：
+  
   ```python
   import random
   
@@ -6284,9 +6309,9 @@ n4 = data.send(888)
 print(n4)
 ```
 
-在Python中,边循环边计算的后面元素机制的算法,称为生成器:**generator**.
+在Python中，边循环边计算的后面元素机制的算法，称为生成器：**generator**。
 
-普通生成器:
+普通生成器：
 
 ```python
 f = [x * x for x in range(3)]
@@ -6304,13 +6329,13 @@ print(next(s))  # 报错:# StopIteration
 
 备注:
 
-- 只要把列表生成式的`[]`改成`()`就创建了一个生成器.
-- 可以通过`next()`函数获得生成器的下一个返回值.
-- 元素超出范围后会报一个`StopIteration`的错误.
+- 只要把列表推导式的`[]`改成`()`就创建了一个生成器。
+- 可以通过`next()`函数获得生成器的下一个返回值。
+- 元素超出范围后会报一个`StopIteration`的错误。
 
-函数生成器:
+函数生成器：
 
-函数:斐波那契
+函数：斐波那契
 
 ```python
 def fbnq(num):
@@ -6323,7 +6348,7 @@ def fbnq(num):
 fbnq(10)
 ```
 
-生成器:斐波那契
+生成器：斐波那契
 
 ```python
 def fbnq(num):
@@ -6344,18 +6369,18 @@ print(f.__next__())
 
 备注:
 
-- 把fbnq函数编程生成器,把`print`改成`yield`就可以了
-- 函数是按顺序执行,遇到return或到最后一行就返回,生成器函数每次调用`next`执行,遇到yield语句就会暂停,并且把值返回,程序并没自终止,再次next调用时会接着上次继续执行.
+- 想把fbnq函数变更生成器，把`print`改成`yield`就可以了
+- 函数是按顺序执行，遇到return或到最后一行就返回，生成器函数每次调用`next`执行，遇到yield语句就会暂停，并且把值返回，程序并没自终止，再次next调用时会接着上次继续执行。
 
 ### 6.16 迭代器
 
-迭代是Python最强大的功能之一，是访问集合元素的一种方式。
-
-迭代器是一个可以记住遍历的位置的对象。
-
-迭代器对象从集合的第一个元素开始访问，直到所有的元素被访问完结束。迭代器只能往前不会后退。
-
-迭代器有两个基本的方法：**iter()** 和 **next()**。
+> - **迭代是Python最强大的功能之一，是访问集合元素的一种方式。**
+>
+> - **迭代器是一个可以记住遍历的位置的对象。**
+>
+> - **迭代器对象从集合的第一个元素开始访问，直到所有的元素被访问完结束。迭代器只能往前不会后退。**
+>
+> - **迭代器有两个基本的方法：iter() 和 next()。**
 
 字符串，列表或元组对象都可用于创建迭代器：
 
@@ -6369,7 +6394,7 @@ print(next(it))
 print(next(it))  # 通过 StopIteration 异常标识迭代的完成
 ```
 
-可以直接用于for循环遍历的对象称为可迭代对象：**Iterable**,可迭代的意思就是可循环/遍历.
+可以直接用于for循环遍历的对象称为可迭代对象：**Iterable**，可迭代的意思就是可循环/遍历。
 
 ```python
 list = [1, 2, 3, 4]
@@ -6393,9 +6418,9 @@ while True:
 
 **创建一个迭代器**
 
-把一个类作为一个迭代器使用需要在类中实现两个方法 `__iter__()` 与 `__next__()` 。
+把一个类作为一个迭代器使用需要在类中实现两个方法 `__iter__()` 和 `__next__()` 。
 
-Python的构造函数为 `__init__()` 它会在对象初始化的时候执行。
+Python的初始化函数为 `__init__()` 它会在对象初始化的时候执行。
 
 `__iter__()` 方法返回一个特殊的迭代对象，这个迭代对象实现了 `__next__()` 方法并通过StopLteration异常表示迭代的完成。
 
@@ -6426,7 +6451,7 @@ print(next(myiter))
 
 StopIteration 异常用于标识迭代的完成，防止出现无限循环的情况，在 __next__() 方法中我们可以设置在完成指定循环次数后触发 StopIteration 异常来结束迭代。
 
-判断一个对象是否可迭代:Iterable
+判断一个对象是否可迭代：Iterable
 
 ```python
 from collections import Iterable
@@ -6439,9 +6464,9 @@ print(isinstance(123, Iterable))  # False
 print(isinstance((x for x in range(10)), Iterable))  # True
 ```
 
-可以被next()函数调用并不断返回下一个值的对象称为迭代器：**Iterator**.
+可以被next()函数调用并不断返回下一个值的对象称为迭代器：**Iterator**。
 
-判断一个对象是否是迭代器:lterator
+判断一个对象是否是迭代器：lterator
 
 ```python
 from collections import Iterable,Iterator
@@ -6468,8 +6493,10 @@ print(isinstance((x for x in range(10)), Iterator))  # True
 
 - 凡是可作用于`for`循环的对象都是`Iterable`类型
 - 凡是可作用于`next()`函数的对象都是`Iterator`类型
-- 生成器都是`Iterator`对象，但`list`、`dict`、`str`虽然是`Iterable`，却不是`Iterator`,可以通过`iter()`函数获得一个`Iterator`对象
-- 生成器一定是迭代器,但迭代器不一定是生成器
+- 生成器都是`Iterator`对象，但`list`、`dict`、`str`虽然是`Iterable`，却不是`Iterator`，可以通过`iter()`函数获得一个`Iterator`对象
+- 生成器一定是迭代器，但迭代器不一定是生成器
+
+---
 
 ## 第七章 模块
 
@@ -6478,10 +6505,10 @@ print(isinstance((x for x in range(10)), Iterator))  # True
 模块分为三种：
 
 - 内置标准模块（又称标准库）执行help('modules')查看所有python自带模块列表
-- 第三方开源模块，可通过pip install 模块名 联网安装
+- 第三方开源模块，可通过pip install 模块名，连网安装
 - 自定义模块
 
-### 7.1 `hashlib`
+### 7.1 字符串加密（hashlib）
 
 将指定的 “字符串” 进行加密。
 
@@ -6498,7 +6525,7 @@ val = get_md5('123')
 print(val)
 ```
 
-加盐:
+加盐：
 
 ```python
 import hashlib
@@ -6553,7 +6580,7 @@ else:
     print('登陆失败')
 ```
 
-### 7.2 `getpass`
+### 7.2 不显示密码（getpass）
 
 ```python
 # 密码不显示（只能在终端运行）
@@ -6564,9 +6591,9 @@ if pwd == '123':
     print('输入正确')
 ```
 
-### 7.3 `random`
+### 7.3 随机生成（random）
 
-程序中有很多地方需要用到随机字符，比如登录网站的随机验证码，通过random模块可以很容易生成随机字符串.
+程序中有很多地方需要用到随机字符，比如登录网站的随机验证码，通过random模块可以很容易生成随机字符串。
 
 ```python
 import random
@@ -6585,10 +6612,10 @@ print(code)
 
 
 import random # 导入一个模块 
-v = random.randint(起始,终止) # 得到一个随机数
+v = random.randint(起始, 终止) # 得到一个随机数
 ```
 
-### 7.4 `sys`
+### 7.4  运行环境的变量和函数（sys）
 
 python解释器相关的数据。
 
@@ -6660,7 +6687,7 @@ python解释器相关的数据。
 
 - `sys.path`
 
-### 7.5 `os`
+### 7.5 操作系统相关（os）
 
 和操作系统相关的数据。
 
@@ -6725,7 +6752,7 @@ python解释器相关的数据。
 
 - 补充：
 
-    - 两种转义方式,推荐第一种
+    - 两种转义方式，推荐第一种
 
         ```python
         v1 = r"D:\code\s21day14\n1.mp4"  (推荐)
@@ -6736,7 +6763,7 @@ python解释器相关的数据。
         print(v2)
         ```
 
-### 7.6 `shutil`
+### 7.6 文件相关处理模块（shutil）
 
 - `shutil.rmtree`，递归删除目录
 
@@ -6769,7 +6796,7 @@ import shutil
 shutil.move('folder1', 'folder3')
 ```
 
-### 7.7 `time`&`datetime`
+### 7.7 时间处理模块
 
 - UTC/GMT：世界时间
 - 本地时间：本地时区的时间
@@ -6906,7 +6933,7 @@ print(v2)  # 1623924093.286256
     8     tm_isdst（是否是夏令时）            默认为-1
     ```
 
-示例:
+示例：
 
 ```python
 import time
@@ -6934,7 +6961,7 @@ tdelta = datetime.timedelta(days=12)
 print(dt + tdelta)
 ```
 
-### 7.8 `json`&`pickle`
+### 7.8 数据格式转换模块
 
 #### 7.8.1 json
 
@@ -7119,11 +7146,11 @@ json格式，是一种数据格式（本质上就是字符串，常用于网路�
 - `pickle.loads()`把字节格式转化成python的数据类型
 - 把`uincode`通过`utf-8`，`gbk`.........等压缩得到的被称为字节，一般前面带b的就是字节类型
 
-### 7.9 `shelve`
+### 7.9 持久化文件模块（shelve）
 
 shelve模块是一个简单的k,v将内存数据通过文件持久化的模块，可以持久化任何pickle可支持的python数据格式.
 
-序列化:
+序列化：
 
 ```python
 import shelve
@@ -7139,7 +7166,7 @@ f['info_dic'] = info
 f.close()
 ```
 
-反序列化:
+反序列化：
 
 ```python
 import shelve
@@ -7153,7 +7180,7 @@ print(d['info_dic'])
 #del d['test'] #还可以删除
 ```
 
-### 7.10 `xml`
+### 7.10 数据交换（xml）
 
 `xml`是实现不同语言或程序之间进行数据交换的协议，跟`json`差不多，但`json`使用起来更简单，不过，以前，在`json`还没诞生的年代，大家只能选择用`xml`，至今很多传统公司如金融行业的很多系统的接口还主要是`xml`。
 
@@ -7252,14 +7279,13 @@ et.write("test.xml", encoding="utf-8",xml_declaration=True)
 ET.dump(new_xml) #打印生成的格式
 ```
 
-### 7.11 `ConfigParser`
+### 7.11 修改配置文档（ConfigParser）
 
 此模块用于生成和修改常见配置文档
 
 settings：
 
-~~~python
-```cnf
+~~~ini
 [DEFAULT]
 ServerAliveInterval = 45   
 Compression = yes
@@ -7272,13 +7298,11 @@ User = hg
 [topsecret.server.com]
 Port = 50022
 ForwardX11 = no
-```
 ~~~
 
 解析配置文件：
 
 ~~~python
-```py
 >>> import configparser # 导入模块
 >>> config = configparser.ConfigParser()  #实例化(生成对象)
 >>> config.sections()  #调用sections方法
@@ -7309,13 +7333,13 @@ compression
 forwardx11
 >>> config['bitbucket.org']['ForwardX11']
 'yes'
-```
+
 ~~~
 
 其它增删改查语法：
 
 ~~~python
-```python
+
 [group1] # 支持的两种分隔符“=”, “:”
 k1 = v1
 k2:v2
@@ -7357,9 +7381,9 @@ config.read('i.cfg')
 ```
 ~~~
 
-### 7.12 `subprocess`
+### 7.12 进程执行命令（subprocess）
 
-subprocess模块是python从2.4版本开始引入的模块。主要用来取代 一些旧的模块方法，如`os.system`、`os.spawn`*、`os.popen`*、`commands`.*等。subprocess通过子进程来执行外部指令，并通过input/output/error管道，获取子进程的执行的返回信息。
+subprocess模块是python从2.4版本开始引入的模块。主要用来取代 一些旧的模块方法，如`os.system`、`os.spawn`、`os.popen`、`commands`等。subprocess通过子进程来执行外部指令，并通过input/output/error管道，获取子进程的执行的返回信息。
 
 `subprocess.call()`：执行命令，并返回执行状态，其中shell参数为False时，命令需要通过列表的方式传入，当shell为True时，可直接传入命令
 
@@ -7480,7 +7504,7 @@ Wait for child process to terminate. Returns returncode attribute.
 
 `pid` 拿到所启动进程的进程号
 
-### 7.13 `logging`
+### 7.13 日志模块（logging）
 
 很多程序都有记录日志的需求，并且日志中包含的信息即有正常的程序访问日志，还可能有错误、警告等信息输出，python的logging模块提供了标准的日志接口，你可以通过它存储各种格式的日志，logging的日志可以分为 `debug(), info(), warning(), error() and critical()`5个级别，下面我们看一下怎么用。
 
@@ -7506,7 +7530,7 @@ CRITICAL:root:server is down
 | :--------- | :----------------------------------------------------------- |
 | `DEBUG`    | Detailed information, typically of interest only when diagnosing problems. |
 | `INFO`     | Confirmation that things are working as expected.            |
-| `WARNING`  | An indication that something unexpected happened, or indicative of some problem in the near future (e.g. ‘disk space low’). The software is still working as expected. |
+| `WARNING`  | An indication that something unexpected happened, or indicative of some problem in the near future (eg. ‘disk space low’). The software is still working as expected. |
 | `ERROR`    | Due to a more serious problem, the software has not been able to perform some function. |
 | `CRITICAL` | A serious error, indicating that the program itself may be unable to continue running. |
 
@@ -7536,7 +7560,7 @@ import logging
 logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
 logging.warning('is when this event was logged.')
 
-#输出
+# 输出
 12/12/2010 11:46:36 AM is when this event was logged.
 ```
 
@@ -7589,9 +7613,9 @@ LOG=logging.getLogger(”chat.kernel”)
 还可以绑定handler和filters
 
 ```python
-Logger.setLevel(lel):指定最低的日志级别，低于lel的级别将被忽略。debug是最低的内置级别，critical为最高
-Logger.addFilter(filt)、Logger.removeFilter(filt):添加或删除指定的filter
-Logger.addHandler(hdlr)、Logger.removeHandler(hdlr)：增加或删除指定的handler
+Logger.setLevel(lel) # 指定最低的日志级别，低于lel的级别将被忽略。debug是最低的内置级别，critical为最高
+Logger.addFilter(filt)、Logger.removeFilter(filt) # 添加或删除指定的filter
+Logger.addHandler(hdlr)、Logger.removeHandler(hdlr) # 增加或删除指定的handler
 ```
 
 Logger.debug()、Logger.info()、Logger.warning()、Logger.error()、Logger.critical()：可以设置的日志级别
@@ -7601,9 +7625,9 @@ Logger.debug()、Logger.info()、Logger.warning()、Logger.error()、Logger.crit
 handler对象负责发送相关的信息到指定目的地。Python的日志系统有多种Handler可以使用。有些Handler可以把信息输出到控制台，有些Handler可以把信息输出到文件，还有些 Handler可以把信息发送到网络上。如果觉得不够用，还可以编写自己的Handler。可以通过addHandler()方法添加多个多handler
 
 ```python
-Handler.setLevel(lel):指定被处理的信息级别，低于lel级别的信息将被忽略
-Handler.setFormatter()：给这个handler选择一个格式
-Handler.addFilter(filt)、Handler.removeFilter(filt)：新增或删除一个filter对象
+Handler.setLevel(lel) # 指定被处理的信息级别，低于lel级别的信息将被忽略
+Handler.setFormatter() # 给这个handler选择一个格式
+Handler.addFilter(filt)、Handler.removeFilter(filt) # 新增或删除一个filter对象
 ```
 
 每个Logger可以附加多个Handler。接下来我们就来介绍一些常用的Handler：
@@ -7668,7 +7692,7 @@ class IgnoreBackupLogFilter(logging.Filter):
         return   "db backup" not in record.getMessage()
 ```
 
-> 注意filter函数会返加True or False，logger根据此值决定是否输出此日志
+> 注意：filter函数会返加True or False，logger根据此值决定是否输出此日志
 
 然后把这个filter添加到logger中：
 
@@ -7691,14 +7715,10 @@ logger.error("test error ....")
 import logging
 
 
-
 class IgnoreBackupLogFilter(logging.Filter):
     """忽略带db backup 的日志"""
     def filter(self, record): #固定写法
         return   "db backup" not in record.getMessage()
-
-
-
 
 #console handler
 ch = logging.StreamHandler()
@@ -7706,7 +7726,6 @@ ch.setLevel(logging.INFO)
 #file handler
 fh = logging.FileHandler('mysql.log')
 #fh.setLevel(logging.WARNING)
-
 
 #formatter
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -7717,11 +7736,9 @@ fh.setFormatter(formatter)
 logger = logging.getLogger("Mysql")
 logger.setLevel(logging.DEBUG) #logger 优先级高于其它输出途径的
 
-
 #add handler   to logger instance
 logger.addHandler(ch)
 logger.addHandler(fh)
-
 
 
 #add filter
@@ -7746,7 +7763,6 @@ log_file = "timelog.log"
 #fh = handlers.RotatingFileHandler(filename=log_file,maxBytes=10,backupCount=3)
 fh = handlers.TimedRotatingFileHandler(filename=log_file,when="S",interval=5,backupCount=3)
 
-
 formatter = logging.Formatter('%(asctime)s %(module)s:%(lineno)d %(message)s')
 
 fh.setFormatter(formatter)
@@ -7760,11 +7776,11 @@ logger.warning("test13")
 logger.warning("test14")
 ```
 
-### 7.14 `re`
+### 7.14 正则匹配模块（re）
 
 正则表达式就是字符串的匹配规则，在多数编程语言里都有相应的支持，python里对应的模块是re
 
-**常用的表达式规则:**
+**常用的表达式规则：**
 
 ```python
 '.'     默认匹配除\n之外的任意一个字符，若指定flag DOTALL,则匹配任意字符，包括换行
@@ -8250,7 +8266,7 @@ if __name__ == '__main__':			  # 7.主文件调试代码
 
 参照以下目录架构来存放代码及数据
 
-```
+```powershell
 crm
 ├── app.py        文件，程序的主文件（尽量精简）
 ├── config.py     文件，配置文件（放相关配置信息，代码中读取配置信息，如果想要修改配置，即可以在此修改，不用再去代码中逐一修改了）
@@ -8262,7 +8278,7 @@ crm
 
 - 多可执行文件
 
-```
+```powershell
 killer
 ├── bin					文件夹，存放多个主文件（可运行）
 │   ├── app1.py
@@ -8277,6 +8293,8 @@ killer
 └── utils               包，公共功能
     └── __init__.py
 ```
+
+---
 
 ## 第八章 面向对象
 
@@ -11022,7 +11040,7 @@ if 'egon' == info['name'] and 18 == info['age']:
 
   ![1643078023700](J:\homework\Python学习笔记\Python_notes.assets\1643078023700.png)
 
- 这张图展示了建立TCP连接所需的三次握手过程。
+这张图展示了建立TCP连接所需的三次握手过程。
 
 首先需要明确，三次握手的目的是建立可靠的通信信道，即双方确认彼此的信息发送与接收是正常的。
 
