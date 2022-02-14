@@ -6491,9 +6491,9 @@ print(isinstance((x for x in range(10)), Iterator))  # True
 
 备注:
 
-- 凡是可作用于`for`循环的对象都是`Iterable`类型
-- 凡是可作用于`next()`函数的对象都是`Iterator`类型
-- 生成器都是`Iterator`对象，但`list`、`dict`、`str`虽然是`Iterable`，却不是`Iterator`，可以通过`iter()`函数获得一个`Iterator`对象
+- 凡是可作用于 `for` 循环的对象都是 `Iterable` 类型
+- 凡是可作用于 `next()` 函数的对象都是 `Iterator` 类型
+- 生成器都是 `Iterator` 对象，但 `list` 、 `dict` 、`str` 虽然是 `Iterable` ，却不是 `Iterator` ，可以通过`iter()` 函数获得一个 `Iterator` 对象
 - 生成器一定是迭代器，但迭代器不一定是生成器
 
 ---
@@ -10070,8 +10070,8 @@ class People:
 obj = People('ike', 18)
 
 # 判断有没有属性
-print(hasattr(obj, 'sex'))  # obj.name  # obj.__dict__['name']
-print(hasattr(obj, 'talk'))  # obj.talk
+print(hasattr(obj, 'sex'))
+print(hasattr(obj, 'talk'))
 
 # 获取
 print(getattr(obj, 'op', None))  # None没有属性不会报错,返回None
@@ -10115,7 +10115,7 @@ obj.run()
 
 **isinstance和issubclass**：
 
-isinstance(obj,cls)检查是否obj是否是类 cls 的对象
+isinstance(obj,cls)检查obj是否是类 cls 的对象，判断一个对象是否是一个已知的类型，类似 type()
 
 ```python
 class Foo(object):
@@ -10141,7 +10141,7 @@ class Bar(Foo):
 print(issubclass(Bar, Foo))
 ```
 
-**tiem系列**：
+**item系列**：
 
 示例：
 
@@ -10182,13 +10182,13 @@ del obj['name']  # 现在删除
 print(obj.__dict__)
 ```
 
-**`__str__`,`__repr__`,`__format__`**
+**`__str__`，`__repr__`，`__format__`**
 
-`__str__`的功能与用法：
+`__str__` 的功能与用法：
 
-- `__str__`功能：将实例对象按照自定义的格式用字符串的形式显示出来，提高可读性
-- 实例化的对象在打印时会默认调用`__str__`方法，如果类没有重写这个方法，默认调用父类object的`__str__`方法
-- object的`__str__`方法内部是pass，所以打印的是内存地址。如果当前类重写了这个方法，会自动调用重写后的方法
+- `__str__` 功能：将实例对象按照自定义的格式用字符串的形式显示出来，提高可读性
+- 实例化的对象在打印时会默认调用 `__str__` 方法，如果类没有重写这个方法，默认调用父类object的`__str__` 方法
+- object的 `__str__` 方法内部是pass，所以打印的是内存地址。如果当前类重写了这个方法，会自动调用重写后的方法
 
 ```python
 class People(object):
@@ -10209,41 +10209,100 @@ s1 = People("ike", 19)
 print(s1)  # print(s1)时，默认会调用用户重写后的s1.__str__方法。
 ```
 
-`__repr__`的功能与用法
+`__repr__` 的功能与用法：
 
-- `__repr__`如果用IDE软件操作，功能与`__str__`完全一样，都是实例可视化显示
-- 开发中如果用户需要可视化实例内容，只需要重写`__str__`或者`__repr__`方法之一即可。如果两个都有的话，默认调用`__str__`.
+- `__repr__` 如果用IDE软件操作，功能与 `__str__` 完全一样，都是实例可视化显示
+- 开发中如果用户需要可视化实例内容，只需要重写 `__str__` 或者 `__repr__` 方法之一即可。如果两个都有的话，默认调用 `__str__` 。
 
 两者的区别：
 
-- `__str__`是面向用户显示的，若重构`__str__`则使用print(Object)可以显示想显示的内容
-- `__repr__`是面向程序员显示的，若重构`__repr__`，则直接输出类对象和print(Object)均可以显示想显示的内容。
+- `__str__` 是面向用户显示的，若重构 `__str__` 则使用print(Object)可以显示想显示的内容
+- `__repr__` 是面向程序员显示的，若重构 `__repr__`，则直接输出类对象和print(Object)均可以显示想显示的内容。
 
-**`__del__`**
+**`__del__`** 销毁实例方法，当对象在内存中被释放时，自动触发执行：
 
-析构方法，当对象在内存中被释放时，自动触发执行
+我们知道，Python 通过调用 __init__() 方法构造当前类的实例化对象，而本节要学的 __del__() 方法，功能正好和 __init__() 相反，其用来销毁实例化对象。事实上在编写程序时，如果之前创建的类实例化对象后续不再使用，最好在适当位置手动将其销毁，释放其占用的内存空间（整个过程称为垃圾回收（简称GC））。
 
-示例：
+> 大多数情况下，Python 开发者不需要手动进行垃圾回收，因为 Python 有自动的垃圾回收机制（下面会讲），能自动将不需要使用的实例对象进行销毁
+
+无论是手动销毁，还是 Python 自动帮我们销毁，都会调用 __del__() 方法。举个例子：
 
 ```python
-class Open:
-    def __init__(self, filename):
-        print('open file......')
-        self.filename = filename
-
+class CLanguage:
+    def __init__(self):
+        print("调用 __init__() 方法构造对象")
     def __del__(self):
-        print('回收操作系统资源:self.close')
+        print("调用__del__() 销毁对象，释放其空间")
+clangs = CLanguage()
+del clangs
 
+# 运行结果
+调用 __init__() 方法构造对象
+调用__del__() 销毁对象，释放其空间
+```
 
-f = Open('settings.py')
-	
-del f  # f.__del__()
-print('------mian------')  # del f  # f.__del__()
+⚠注意，千万不要误认为，只要为该实例对象调用 __del__() 方法，该对象所占用的内存空间就会被释放。举个例子：
+
+```python
+class CLanguage:
+    def __init__(self):
+        print("调用 __init__() 方法构造对象")
+    def __del__(self):
+        print("调用__del__() 销毁对象，释放其空间")
+clangs = CLanguage()
+# 添加一个引用clangs对象的实例对象
+cl = clangs
+del clangs
+print("***********")
+
+# 运行结果
+调用 __init__() 方法构造对象
+***********
+调用__del__() 销毁对象，释放其空间
+```
+
+> 注意，最后一行输出信息，是程序执行即将结束时调用 __del__() 方法输出的。
+
+可以看到，当程序中有其它变量（比如这里的 cl）引用该实例对象时，即便手动调用 __del__() 方法，该方法也不会立即执行。这和 Python 的垃圾回收机制的实现有关。
+
+Python 采用自动引用计数（简称 ARC）的方式实现垃圾回收机制。该方法的核心思想是：每个 Python 对象都会配置一个计数器，初始 Python 实例对象的计数器值都为 0，如果有变量引用该实例对象，其计数器的值会加 1，依次类推；反之，每当一个变量取消对该实例对象的引用，计数器会减 1。如果一个 Python 对象的的计数器值为 0，则表明没有变量引用该 Python 对象，即证明程序不再需要它，此时 Python 就会自动调用 __del__() 方法将其回收。
+
+以上面程序中的 clangs 为例，实际上构建 clangs 实例对象的过程分为 2 步，先使用 CLanguage() 调用该类中的 __init__() 方法构造出一个该类的对象（将其称为 C，计数器为 0），并立即用 clangs 这个变量作为所建实例对象的引用（ C 的计数器值 + 1）。在此基础上，又有一个 c1 变量引用 clangs（其实相当于引用 CLanguage()，此时 C 的计数器再 +1 ），这时如果调用`del clangs`语句，只会导致 C 的计数器减 1（值变为 1），因为 C 的计数器值不为 0，因此 C 不会被销毁（不会执行 __del__() 方法）。
+
+如果在上面程序结尾，添加如下语句：
+
+```python
+del cl
+print("-----------")
+
+# 运行结果
+调用 __init__() 方法构造对象
+***********
+调用__del__() 销毁对象，释放其空间
+-----------
+```
+
+可以看到，当执行 del cl 语句时，其应用的对象实例对象 C 的计数器继续 -1（变为 0），对于计数器为 0 的实例对象，Python 会自动将其视为垃圾进行回收。
+
+需要额外说明的是，如果我们重写子类的 __del__() 方法（父类为非 object 的类），则必须显式调用父类的 __del__() 方法，这样才能保证在回收子类对象时，其占用的资源（可能包含继承自父类的部分资源）能被彻底释放。为了说明这一点，这里举一个反例：
+
+```python
+class CLanguage:
+    def __del__(self):
+        print("调用父类 __del__() 方法")
+class cl(CLanguage):
+    def __del__(self):
+        print("调用子类 __del__() 方法")
+c = cl()
+del c
+
+# 运行结果
+调用子类 __del__() 方法
 ```
 
 在Python的类中存在一些特殊的方法，这些方法都是 `__方法__` 格式，这种方法在内部均有特殊的含义，接下来我们来讲一些常见的特殊成员：
 
-- `__init__`，初始化方法
+- `__init__` 初始化方法
 
 ```python
 class Foo(object):
@@ -10254,7 +10313,7 @@ class Foo(object):
 obj = Foo("武沛齐")
 ```
 
-- `__new__`，构造方法
+- `__new__` 构造方法
 
 ```python
 class Foo(object):
@@ -10270,7 +10329,7 @@ class Foo(object):
 obj = Foo("武沛齐")
 ```
 
-- `__call__`
+- `__call__` 该方法的功能类似于在类中重载 () 运算符，使得类实例对象可以像调用普通函数那样，以“对象名()”的形式使用。
 
 ```python
 class Foo(object):
@@ -10282,7 +10341,7 @@ obj = Foo()
 obj()
 ```
 
-- `__dict__`
+- `__dict__` 查看类中包含哪些属性
 
 ```python
 class Foo(object):
@@ -10308,9 +10367,9 @@ class Foo(object):
         print("出去了")
 
 
-        obj = Foo()
-        with obj as data:
-            print(data)
+obj = Foo()
+with obj as data:
+    print(data)
 ```
 
 ```python
@@ -10451,7 +10510,7 @@ print(v3)
         for item in obj2:
             print(item)
     
-    如果按照迭代器的规定来看，其实生成器类也是一种特殊的迭代器类（生成器也是一个中特殊的迭代器）。
+    # 如果按照迭代器的规定来看，其实生成器类也是一种特殊的迭代器类（生成器也是一个特殊的迭代器）。
     ```
 
   - 可迭代对象
@@ -10744,7 +10803,7 @@ class Chinese(object, metaclass=Mymeta):
 
 ```
 
-示例二：在元类的实例中定义一个`__call__`方法，元类实例化后调用类执行，进而控制实例化的过程
+示例二：在元类的实例中定义一个 `__call__` 方法，元类实例化后调用类执行，进而控制实例化的过程
 
 ```python
 class Mymeta(type):
@@ -10879,7 +10938,7 @@ print(s1 is s2)  # True
 
 ### 8.16 异常
 
-异常是错误发生的信号,一旦程序出错,并且程序没有处理这个错误,那么就会抛出异常,并且程序的运行随之终止。
+异常是错误发生的信号，一旦程序出错，并且程序没有处理这个错误，那么就会抛出异常，并且程序的运行随之终止。
 
 一、错误分为两种：
 
@@ -10936,7 +10995,7 @@ print(s1 is s2)  # True
 
 常见的异常：
 
-```python
+```powershell
 AttributeError 试图访问一个对象没有的树形，比如foo.x，但是foo没有属性x
 IOError 输入/输出异常；基本上是无法打开文件
 ImportError 无法引入模块或包；基本上是路径问题或名称错误
@@ -10945,16 +11004,15 @@ IndexError 下标索引超出序列边界，比如当x只有三个元素，却�
 KeyError 试图访问字典里不存在的键
 KeyboardInterrupt Ctrl+C被按下
 NameError 使用一个还未被赋予对象的变量
-SyntaxError Python代码非法，代码不能编译(个人认为这是语法错误，写错了）
+SyntaxError Python 代码非法，代码不能编译(个人认为这是语法错误，写错了）
 TypeError 传入对象类型与要求的不符合
-UnboundLocalError 试图访问一个还未被设置的局部变量，基本上是由于另有一个同名的全局变量，
-导致你以为正在访问它
+UnboundLocalError 试图访问一个还未被设置的局部变量，基本上是由于另有一个同名的全局变量，导致你以为正在访问它
 ValueError 传入一个调用者不期望的值，即使值的类型是正确的
 ```
 
 更多的异常：
 
-```python
+```powershell
 ArithmeticError
 AssertionError
 AttributeError
@@ -11013,7 +11071,7 @@ ZeroDivisionError
 AGE=10
 while True:
     age=input('>>: ').strip()
-    if age.isdigit(): #只有在age为字符串形式的整数时,下列代码才不会出错,该条件是可预知的
+    if age.isdigit(): # 只有在age为字符串形式的整数时,下列代码才不会出错,该条件是可预知的
         age=int(age)
         if age == AGE:
             print('you got it')
@@ -11067,7 +11125,7 @@ except IndexError as w:
 print('下面的代码正常执行')
 ```
 
-- 万能异常：Exception,也可以在最后加一个
+- 万能异常：Exception，也可以在最后加一个
 
 ```python
 # 被监测的代码抛出的异常有多种可能性，针对所有的异常类型都只用一种处理逻辑，就只用Exception
@@ -11111,7 +11169,7 @@ else:
     print('被监测的代码没有发生异常的时候执行')
 
 finally:
-    print('无论被监测的代码没有发生异常都执行')
+    print('无论被监测的代码有没有发生异常都执行')
 ```
 
 - 主动触发异常：raise 异常类型（值）
@@ -11159,6 +11217,8 @@ assert ('name' in info and 'age' in info)
 if 'egon' == info['name'] and 18 == info['age']:
     print('欢迎！')
 ```
+
+---
 
 ## 第九章 网络编程
 
@@ -11589,7 +11649,7 @@ while True:
             total_size = len(stdout)+len(stderr)
             header = struct.pack('i', total_size)
 
-            # 第二步:发报头发个客户端
+            # 第二步:把报头发给客户端
             conn.send(header)
 
             # 第三步:再发送真实的数据
@@ -11835,6 +11895,8 @@ while True:
 client.close()
 ```
 
+---
+
 ## 第十章 并发编程
 
 ### 10.1 操作系统发展史
@@ -11887,7 +11949,7 @@ client.close()
 #### 10.2.3 并行与并发
 
 - 并行
-    - 两个程序，两个cpu,每个程序分别占用一个cpu自己执行自己的
+    - 两个程序，两个cpu，每个程序分别占用一个cpu自己执行自己的
     - 看起来是同时执行，实际在每一个时间点上都在各自执行着
 - 并发
     - 两个程序，一个cpu，两个程序交替的在一个cpu上执行
@@ -11941,12 +12003,12 @@ if __name__ == '__main__':
     p = Process(target=task, args=('紫禁城',))
     p = Process(target=task, kwargs={'name':'紫禁城'})
     p.start()  # 给操作系统发送一个信号
-    # 异步--调用开启进程的方法,但是并不等待这个进程是否开启，只是负责通知操作系统进行，开启进程后，主进程和子进程，各自进行
+    # 异步--调用开启进程的方法，但是并不等待这个进程是否开启，只是负责通知操作系统进行，开启进程后，主进程和子进程，各自进行
     print('主进程/主线程')
 ```
 
-- 几乎是t.start ()的同时就将线程开启了，然后先打印出了hello，证明线程的创建开销极小
-- p.start ()将开启进程的信号发给操作系统后，操作系统要申请内存空间，让好拷贝父进程地址空间到子进程，开销远大于线程
+- 几乎是t.start ()的同时就将线程开启了，然后先打印出了 主进程/主线程，证明线程的创建开销极小
+- p.start ()将开启进程的信号发给操作系统后，操作系统要申请内存空间，然后拷贝父进程地址空间到子进程，开销远大于线程
 
 方式二：使用面向对象重写Process方法
 
@@ -12004,7 +12066,7 @@ if __name__ == '__main__':
 
 #### 10.2.6 进程的数据隔离
 
-- 主进程没结束:等待子进程结束
+- 主进程没结束：等待子进程结束
 - 在pycharm中启动的所有py程序都是pycharm的子进程
 - 主进程会等待所有的子进程结束以后才结束，目的是为了回收资源，如果子进程执行结束，主进程没有回收资源，那么这个子进程会变成一个僵尸进程。
 
@@ -40285,7 +40347,7 @@ $ git commit -m "新功能上线"
 
 GitHub，一个基于Git实现的代码托管的平台，可以将内容以及版本记录在远程也保存一份，这样就不用U盘咯（类似于云盘）。PS: 类似GitHub的产品还有许多，如：GitLab、Bitbucket、码云等。
 
-<img src="https://images2017.cnblogs.com/blog/425762/201708/425762-20170811191610632-470737695.png" alt="img" style="zoom: 50%;" />
+<img src="/Users/zhangzhiqiang/python全栈/python-/Python学习笔记/Python_notes.assets/425762-20170811191610632-470737695.png" alt="img" style="zoom: 50%;" />
 
 基于GitHub实现代码托管：
 
