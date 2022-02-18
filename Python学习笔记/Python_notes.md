@@ -11160,6 +11160,8 @@ if 'egon' == info['name'] and 18 == info['age']:
     print('欢迎！')
 ```
 
+---
+
 ## 第九章 网络编程
 
 计算机基础知识：
@@ -11311,7 +11313,7 @@ TCP/IP五层协议：
 
 - Socket是应用层与传输层的中间软件抽象层，它是一组接口，可以帮我们完成所有信息的组织和拼接
 
-- 通过socket建立起2台机器的连接后，本质上socket只干2件事，一是收数据，一是发数据，没数据时就等着。
+- 通过socket建立起2台机器的连接后，本质上socket只干2件事，一是收数据，一是发数据，没数据时就等着
 
 - 通过python的socket模块完成socket的功能
 
@@ -11835,6 +11837,8 @@ while True:
 client.close()
 ```
 
+---
+
 ## 第十章 并发编程
 
 ### 10.1 操作系统发展史
@@ -11844,7 +11848,7 @@ client.close()
 - 多道操作系统：在一个任务中遇到IO操作让出CPU
     - 数据隔离概念
     - 时空复用概念
-    - 能够在一个任务遇到io操作的时候动把CPU让出来,给其他的任务使用
+    - 能够在一个任务遇到io操作的时候动把CPU让出来，给其他的任务使用
 - 分时操作系统：
     - 短作业优先算法
     - 先来先服务算法
@@ -11865,16 +11869,22 @@ client.close()
 
 #### 10.2.1 概念
 
+进程是计算机中资源分配的最小单元；一个进程中可以有多个线程，同一个进程中的线程共享资源；
+
+进程与进程之间则是相互隔离。
+
+Python中通过多进程可以利用CPU的多核优势，计算密集型操作适用于多进程。
+
 - 定义：运行中的程序叫做进程
 - 程序和进程之间的区别：程序只是一个文件，进程代表这个文件被cpu运行起来的过程
 - 进程是计算机中最小的资源分配单位，进程的pid（port id）并不与程序绑定，每次随机分配
 - 在操作系统中得唯一标识符是pid
 
-#### 10.2.2 进程调度
+**进程调度**
 
 - 操作系统调度进程的算法
     - 短作业优先
-        - 根据来的任务的任务量大小来划分谁先谁后执行。
+        - 根据任务量大小来划分谁先谁后执行。
     - 先来先服务
         - 哪个任务先来，哪个任务先执行，其他需要等待。
     - 时间片轮转
@@ -11884,16 +11894,16 @@ client.close()
         - 对于N个作业，先来先服务，再来的等待，此时最先来的任务如果进行到规定时间片还没有执行完毕，会被重新放回到下一个队列等待，如果在Q2中此任务还不能完成，再依次放到下一个。
         - 单个队列遵循，先来先服务和时间片轮转原则，队列之间遵循短作业优先，Q1一定比Q2时间片短，且Q1优先级最高，依次类推。即使第QN个有N个人物在等待，第1~N-1个作业中有任意一个还在运行，此N任务中作业就不执行，只有上述全部处理完毕，才执行QN。
 
-#### 10.2.3 并行与并发
+**并行与并发**
 
 - 并行
-    - 两个程序，两个cpu,每个程序分别占用一个cpu自己执行自己的
+    - 两个程序，两个cpu，每个程序分别占用一个cpu自己执行自己的
     - 看起来是同时执行，实际在每一个时间点上都在各自执行着
 - 并发
     - 两个程序，一个cpu，两个程序交替的在一个cpu上执行
     - 看起来是在同时执行，但是实际上仍然是串行
 
-#### 10.2.4 同步和异步
+**同步和异步**
 
 - 同步
     - 程序1调用程序2时，程序1停止工作，直到程序2完成后，程序1才继续工作
@@ -11921,7 +11931,7 @@ client.close()
     
     ![1643078171945](J:\homework\Python学习笔记\Python_notes.assets\1643078171945.png)
 
-#### 10.2.5 开启进程的两种方式
+#### 10.2.2 进程介绍
 
 方式一：
 
@@ -11938,14 +11948,14 @@ def task(name):
 
 if __name__ == '__main__':
     # 在主进程下开启子进程
-    p = Process(target=task, args=('紫禁城',))
-    p = Process(target=task, kwargs={'name':'紫禁城'})
+    p = Process(target=task, args=('子进程',))
+    p = Process(target=task, kwargs={'name':'子进程'})
     p.start()  # 给操作系统发送一个信号
     # 异步--调用开启进程的方法,但是并不等待这个进程是否开启，只是负责通知操作系统进行，开启进程后，主进程和子进程，各自进行
     print('主进程/主线程')
 ```
 
-- 几乎是t.start ()的同时就将线程开启了，然后先打印出了hello，证明线程的创建开销极小
+- 几乎是t.start ()的同时就将线程开启了，然后先打印出了 主进程/主线程，证明线程的创建开销极小
 - p.start ()将开启进程的信号发给操作系统后，操作系统要申请内存空间，让好拷贝父进程地址空间到子进程，开销远大于线程
 
 方式二：使用面向对象重写Process方法
@@ -11967,7 +11977,7 @@ class MyProcess(Process):
 
 
 if __name__ == '__main__':
-    p = MyProcess('紫禁城')
+    p = MyProcess('子进程')
     p.start()
     print('ok')
 ```
@@ -12002,37 +12012,310 @@ if __name__ == '__main__':
 
 - 在主进程下开启子进程，子进程的ppid就是主进程的pid
 
-#### 10.2.6 进程的数据隔离
+关于在Python中基于multiprocessiong模块操作的进程：
 
-- 主进程没结束:等待子进程结束
-- 在pycharm中启动的所有py程序都是pycharm的子进程
-- 主进程会等待所有的子进程结束以后才结束，目的是为了回收资源，如果子进程执行结束，主进程没有回收资源，那么这个子进程会变成一个僵尸进程。
+Depending on the platform, [`multiprocessing`](https://docs.python.org/3/library/multiprocessing.html#module-multiprocessing) supports three ways to start a process. These *start methods* are
 
-#### 10.2.7 主进程的结束逻辑
+> - *fork*，【“拷贝”几乎所有资源】【支持文件对象/线程锁等传参】【unix】【任意位置开始】【快】
+>
+> The parent process uses [`os.fork()`](https://docs.python.org/3/library/os.html#os.fork) to fork the Python interpreter. The child process, when it begins, is effectively identical to the parent process. All resources of the parent are inherited by the child process. Note that safely forking a multithreaded process is problematic.Available on Unix only. The default on Unix.
+>
+> - *spawn*，【run参数传必备资源】【不支持文件对象/线程锁等传参】【unix、win】【main代码块开始】【慢】
+>
+> The parent process starts a fresh python interpreter process. The child process will only inherit those resources necessary to run the process object’s [`run()`](https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Process.run) method. In particular, unnecessary file descriptors and handles from the parent process will not be inherited. Starting a process using this method is rather slow compared to using *fork* or *forkserver*.Available on Unix and Windows. The default on Windows and macOS.
+>
+> - *forkserver*，【run参数传必备资源】【不支持文件对象/线程锁等传参】【部分unix】【main代码块开始】
+>
+> When the program starts and selects the *forkserver* start method, a server process is started. From then on, whenever a new process is needed, the parent process connects to the server and requests that it fork a new process. The fork server process is single threaded so it is safe for it to use [`os.fork()`](https://docs.python.org/3/library/os.html#os.fork). No unnecessary resources are inherited.Available on Unix platforms which support passing file descriptors over Unix pipes.
 
-- 主进程的代码结束
-- 所有的子进程结束
-- 给子进程回收资源
-- 主进程结束
+```python
+import multiprocessing
+multiprocessing.set_start_method("spawn")
+```
 
-进程开启的过程中windows和linux/ios之间的区别：
+*Changed in version 3.8:* On macOS, the *spawn* start method is now the default. The *fork* start method should be considered unsafe as it can lead to crashes of the subprocess. See [bpo-33725](https://bugs.python.org/issue33725).
 
-- window中，需要相当于在子进程中把主进程文件又从头到尾执行了一遍，除了放在if`__name__` == '`__main__`'下的代码
-- linux中 不执行代码,而是把当前代码全部加载到内存，直接执行调用内存中的func函数
+*Changed in version 3.4:* *spawn* added on all unix platforms, and *forkserver* added for some unix platforms. Child processes no longer inherit all of the parents inheritable handles on Windows.
 
-主程序的结束逻辑：
+On Unix using the *spawn* or *forkserver* start methods will also start a *resource tracker* process which tracks the unlinked named system resources (such as named semaphores or [`SharedMemory`](https://docs.python.org/3/library/multiprocessing.shared_memory.html#multiprocessing.shared_memory.SharedMemory) objects) created by processes of the program. When all processes have exited the resource tracker unlinks any remaining tracked object. Usually there should be none, but if a process was killed by a signal there may be some “leaked” resources. (Neither leaked semaphores nor shared memory segments will be automatically unlinked until the next reboot. This is problematic for both objects because the system allows only a limited number of named semaphores, and shared memory segments occupy some space in the main memory.)
 
-- 主进程的代码结束
-- 所有的子进程结束
-- 给子进程回收资源
-- 主进程结束
+官方文档：https://docs.python.org/3/library/multiprocessing.html
 
-#### 10.2.8 join方法
+示例一：fork模式，“拷贝”几乎所有资源
 
-- 作用:阻塞,直到子进程结束就结束
-- 把一个进程结束时间封装成一个join方法
-- 执行join方法的效果就是阻塞，直到这个子进程执行结束就结束阻塞
-- 在多个子进程中使用join
+```python
+import multiprocessing
+import time
+
+"""
+def task():
+    print(name)
+    name.append(123)
+
+
+if __name__ == '__main__':
+    multiprocessing.set_start_method("fork")  # fork、spawn、forkserver
+    name = []
+
+    p1 = multiprocessing.Process(target=task)
+    p1.start()
+
+    time.sleep(2)
+    print(name)  # []
+
+# 设置进程为fork模式，子进程会拷贝主进程全部资源，他们之间的资源是相互隔离的，所以子进程append123后，主进程打印name还是空的列表
+"""
+"""
+def task():
+    print(name) # [123]
+
+
+if __name__ == '__main__':
+    multiprocessing.set_start_method("fork")  # fork、spawn、forkserver
+    name = []
+    name.append(123)
+
+    p1 = multiprocessing.Process(target=task)
+    p1.start()
+    
+# 主进程先append123后，开了一个子进程，这时子进程name列表里存在了123
+"""
+
+"""
+def task():
+    print(name)  # []
+
+
+if __name__ == '__main__':
+    multiprocessing.set_start_method("fork")  # fork、spawn、forkserver
+    name = []
+    
+    p1 = multiprocessing.Process(target=task)
+    p1.start()
+
+    name.append(123)
+   
+# 主进程name是空的时候，开了一个子进程，这时子进程name列表是空
+"""
+```
+
+示例二：spawn模式和forkserver模式，run参数传必备资源
+
+```python
+import multiprocessing
+import time
+
+"""
+def task(data):
+    print(data)
+    data.append(999)
+
+
+if __name__ == '__main__':
+    multiprocessing.set_start_method("spawn")  # fork、spawn、forkserver
+    name = []
+
+    p1 = multiprocessing.Process(target=task, args=(name, ))
+    p1.start()
+
+    time.sleep(2)
+    print(name) # []
+"""
+
+def task(data):
+    print(data)
+    data.append(999)
+
+
+if __name__ == '__main__':
+    multiprocessing.set_start_method("forkserver")  # fork、spawn、forkserver
+    name = []
+
+    p1 = multiprocessing.Process(target=task, args=(name, ))
+    p1.start()
+
+    time.sleep(2)
+    print(name) # []
+# 设置进程为spawn/forkserver模式，参数传必备的资源，子进程会拷贝参数传入的资源，他们之间的资源是相互隔离的，所以子进程append999后，主进程打印name还是空的列表
+```
+
+示例三：fork模式，支持文件对象/线程锁等传参
+
+```python
+import multiprocessing
+import threading
+import time
+
+def task():
+    print(file_object, lock)
+
+
+if __name__ == '__main__':
+    multiprocessing.set_start_method("fork")  # fork、spawn、forkserver
+
+    name = []
+    file_object = open('x1.txt', mode='a+', encoding='utf-8')
+    lock = threading.RLock()
+
+    p1 = multiprocessing.Process(target=task)
+    p1.start()
+    
+# 设置进程为for模式，支持文件对象/线程锁等传参，子进程会拷贝主进程全部资源，他们之间的资源是相互隔离的
+```
+
+示例四：spawn模式和forkserver模式，不支持文件对象/线程锁等传参
+
+```python
+import multiprocessing
+import threading
+import time
+
+def task():
+    print(file_object, lock)
+
+
+if __name__ == '__main__':
+    multiprocessing.set_start_method("fork")  # fork、spawn、forkserver
+
+    name = []
+    file_object = open('x1.txt', mode='a+', encoding='utf-8')
+    lock = threading.RLock()
+
+    p1 = multiprocessing.Process(target=task, args=(file_object, lock,))
+    p1.start()
+# 会报错，不支持文件对象/线程锁传参，TypeError: cannot serialize '_io.TextIOWrapper' object
+
+# 正确的做法：子进程中单独写入自己的文件对象/线程锁
+def task():
+    file_object = open('x1.txt', mode='a+', encoding='utf-8')
+    lock = threading.RLock()
+
+
+if __name__ == '__main__':
+    multiprocessing.set_start_method("spawn")  # fork、spawn、forkserver
+
+    name = []
+    file_object = open('x1.txt', mode='a+', encoding='utf-8')
+    lock = threading.RLock()
+
+    p1 = multiprocessing.Process(target=task)
+    p1.start()
+```
+
+案例：
+
+```python
+import multiprocessing
+
+
+def task():
+    print(name)  # 123 abc 123
+    file_object.write("abc\n")
+    file_object.flush()
+
+
+if __name__ == '__main__':
+    multiprocessing.set_start_method("fork")
+    
+    name = []
+    file_object = open('x1.txt', mode='a+', encoding='utf-8')
+    file_object.write("123\n")  # 写入到内存，没有写入文件，开子进程时拷贝主进程写入内存的值
+
+    p1 = multiprocessing.Process(target=task)
+    p1.start()
+
+# 主进程的写入内存后，开了子进程，子进程拷贝了主进程写入内存的值，然后子进程写入自己的内容，强制写入文件后，主进程也执行完成，主进程的内存中的值也写入文件，所以文件内容为123 abc 123
+```
+
+```python
+import multiprocessing
+
+
+def task():
+    print(name)
+    file_object.write("abc\n")
+    file_object.flush()
+
+
+if __name__ == '__main__':
+    multiprocessing.set_start_method("fork")
+    
+    name = []
+    file_object = open('x1.txt', mode='a+', encoding='utf-8')
+    file_object.write("123\n")
+    file_object.flush()
+
+    p1 = multiprocessing.Process(target=task)
+    p1.start()
+    
+# 主进程的写入文件后，开了子进程，子进程拷贝了主进程写入文件的值，然后子进程写入自己的内容，强制写入文件后，主进程也执行完成，所以文件内容为123 abc
+```
+
+```python
+import multiprocessing
+import threading
+import time
+
+def func():
+    print("来了")
+    with lock:  # 获取锁
+        print(666)
+        time.sleep(1)
+
+def task():
+    # 拷贝的锁也是被申请走的状态
+    # 被谁申请走了? 被子进程中的主线程申请走了
+    print(lock)
+    # 锁子进程中除了主线程，其他的线程
+    for i in range(10):
+        t = threading.Thread(target=func)
+        t.start()
+    time.sleep(2)
+    lock.release()  # 释放了锁，func函数中锁的代码可以正常执行官
+
+
+if __name__ == '__main__':
+    multiprocessing.set_start_method("fork")
+    name = []
+    lock = threading.RLock()
+    lock.acquire()
+    # print(lock)
+    # lock.acquire() # 申请锁
+    # print(lock)
+    # lock.release()
+    # print(lock)
+    # lock.acquire()  # 申请锁
+    # print(lock)
+
+    p1 = multiprocessing.Process(target=task)
+    p1.start()
+```
+
+#### 10.2.3 常见功能
+
+进程常见方法：
+
+- `p.start()`，当前进程准备就绪，等待被CPU调度（工作单元其实是进程中的线程）。
+- `p.join()`，等待当前子进程任务执行完毕后再向下继续执行，执行join方法的效果就是阻塞，直到这个子进程执行结束就结束阻塞
+
+```python
+import time
+from multiprocessing import Process
+
+
+def task(arg):
+    time.sleep(2)
+    print("执行中...")
+
+
+if __name__ == '__main__':
+    multiprocessing.set_start_method("spawn")
+    p = Process(target=task, args=('xxx',))
+    p.start()
+    p.join()
+
+    print("继续执行...")
+```
 
 ```python
 def task():
@@ -12060,20 +12343,84 @@ def task(name, n):
 
 if __name__ == '__main__':
     start = time.time()
-    p1 = Process(target=task, args=('紫禁城1', 5))
-    p2 = Process(target=task, args=('紫禁城2', 3))
-    p3 = Process(target=task, args=('紫禁城3', 2))
-    p4 = Process(target=task, args=('紫禁城4', 1))
+    p1 = Process(target=task, args=('子进程1', 5))
+    p2 = Process(target=task, args=('子进程2', 3))
+    p3 = Process(target=task, args=('子进程3', 2))
+    p4 = Process(target=task, args=('子进程4', 1))
 
     p_l = [p1, p2, p3, p4]
     for p in p_l:
         p.start()
     for p in p_l:
         p.join()
-    print('主进程', (time.time()-start))
+    print('主进程', (time.time() - start))
 ```
 
-#### 10.2.9 守护进程
+- 进程名称的设置和获取
+
+```python
+import os
+import time
+import threading
+import multiprocessing
+
+
+def func():
+    time.sleep(3)
+
+
+def task(arg):
+    for i in range(10):
+        t = threading.Thread(target=func)
+        t.start()
+    print("子进程：{}".format(os.getpid()), "主进程{}".format(os.getppid()))
+    print("线程个数:", len(threading.enumerate()))
+    time.sleep(2)
+    print("当前进程的名称：", multiprocessing.current_process().name)
+
+
+if __name__ == '__main__':
+    print("主进程{}".format(os.getpid()))
+    multiprocessing.set_start_method("spawn")
+    p = multiprocessing.Process(target=task, args=('xxx',))
+    p.name = "哈哈哈哈"
+    p.start()
+
+    print("继续执行...")
+```
+
+- 自定义进程类，直接将线程需要做的事写到run方法中
+
+```python
+import multiprocessing
+
+
+class MyProcess(multiprocessing.Process):
+    def run(self):
+        print('执行此进程', self._args)
+
+
+if __name__ == '__main__':
+    multiprocessing.set_start_method("spawn")
+    p = MyProcess(args=('xxx',))
+    p.start()
+    print("继续执行...")
+
+```
+
+- CPU个数，程序一般创建多少个进程？（利用CPU多核优势）。
+
+```python
+import multiprocessing
+
+if __name__ == '__main__':
+    count = multiprocessing.cpu_count()
+    for i in range(count - 1):
+        p = multiprocessing.Process(target=xxxx)
+        p.start()
+```
+
+#### 10.2.4 守护进程
 
 daemon把进程设置为守护进程
 
@@ -12082,6 +12429,11 @@ daemon把进程设置为守护进程
 - 需要强调的是：运行完毕并非终止运行
 - 对主进程来说，运行完毕指的是主进程代码运行完毕
 - 主进程在其代码结束后就已经算运行完毕了（守护进程在此时就被回收），然后主进程会一直等非守护的子进程都运行完毕后回收子进程的资源(否则会产生僵尸进程)，才会结束
+
+`p.daemon = 布尔值`，守护进程（必须放在start之前）
+
+- `p.daemon =True`，设置为守护进程，主进程执行完毕后，子进程也自动关闭。
+- `p.daemon =False`，设置为非守护进程，主进程等待子进程执行完毕后，主进程才结束。
 
 示例一：
 
@@ -12097,10 +12449,10 @@ def task(name):
 
 if __name__ == '__main__':
     p = Process(target=task, args=('子进程',))
-    p.daemon = True  # 一定要在p.start()前设置,设置p为守护进程,禁止p创建子进程,并且父进程代码执行结束,p即终止运行
+    p.daemon = True  # 一定要在p.start()前设置,设置p为守护进程,禁止p创建子进程,并且主进程代码执行结束,p即终止运行
     p.start()
 
-    p.join()
+    p.join()  # 等待子进程结束后继续执行
     print('主')  # 只要终端打印出这一行内容，那么守护进程p也就跟着结束掉了
 ```
 
@@ -12129,98 +12481,106 @@ if __name__ == '__main__':
     print('main---------')
 ```
 
-#### 10.2.10 互斥锁
+#### 10.2.5 进程之间数据共享
 
-互斥锁的原理，就是把并发改成穿行，降低了效率，但保证了数据安全不错乱
+##### 10.2.5.1 共享
+
+进程是资源分配最小单元，每个进程中都维护自己独立的数据，不共享，如果想让他们之间进行共享，可以借助一些特殊的东西来实现。
+
+**Shared memory**
+
+Data can be stored in a shared memory map using [`Value`](https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Value) or [`Array`](https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Array). For example, the following code
+
+```
+    'c': ctypes.c_char,  'u': ctypes.c_wchar,
+    'b': ctypes.c_byte,  'B': ctypes.c_ubyte, 
+    'h': ctypes.c_short, 'H': ctypes.c_ushort,
+    'i': ctypes.c_int,   'I': ctypes.c_uint,  （其u表示无符号）
+    'l': ctypes.c_long,  'L': ctypes.c_ulong, 
+    'f': ctypes.c_float, 'd': ctypes.c_double
+```
 
 ```python
-# 由并发变成了串行,牺牲了运行效率,但避免了竞争
-import time
-from multiprocessing import Process, Lock
+from multiprocessing import Process, Value, Array
 
 
-def task(name, mentu):
-    mentu.acquire()  # 加锁
-    print('%s 1' % name)
-    time.sleep(1)
-    print('%s 2' % name)
-    time.sleep(2)
-    print('%s 3' % name)
-    time.sleep(3)
-    mentu.release()  # 解锁
+def func(n, m1, m2):
+    n.value = 888
+    m1.value = 'a'.encode('utf-8')
+    m2.value = "武"
 
 
 if __name__ == '__main__':
-    mentu = Lock()
-    for i in range(3):
-        p = Process(target=task, args=('进程%s' % i, mentu))
-        p.start()
+    num = Value('i', 666)
+    v1 = Value('c')
+    v2 = Value('u')
 
+    p = Process(target=func, args=(num, v1, v2))
+    p.start()
+    p.join()
+
+    print(num.value)  # 888
+    print(v1.value)  # a
+    print(v2.value)  # 武
 ```
 
-练习一：模拟抢票
-
 ```python
-# 把文件db.txt的内容重置为：{"count":1}
-
-def search(name):
-    time.sleep(1)
-    dict = json.load(open('db.json', 'r', encoding='utf-8'))
-    print('<%s>查看到剩余票数{%s}' % (name, dict['count']))
+from multiprocessing import Process, Value, Array
 
 
-def get(name):
-    time.sleep(1)
-    dict = json.load(open('db.json', 'r', encoding='utf-8'))
-    if dict['count'] > 0:
-        dict['count'] -= 1
-        json.dump(dict, open('db.json', 'w', encoding='utf-8'))
-        print('<%s> 购票成功!' % name)
-    else:
-        print('没有足够的票!')
-
-
-def task(name, mutex):
-    search(name)
-    with mutex:  # 相当于lock.acquire(),执行完自代码块自动执行lock.release()
-        get(name)
+def f(data_array):
+    data_array[0] = 666
 
 
 if __name__ == '__main__':
-    mutex = Lock()
-    for i in range(10):  # 模拟10个人并发抢票
-        p = Process(target=task, args=('路人%s' % i, mutex))
-        p.start()
+    arr = Array('i', [11, 22, 33, 44]) # 数组：元素类型必须是int; 只能是这么几个数据。
+
+    p = Process(target=f, args=(arr,))
+    p.start()
+    p.join()
+
+    print(arr[:])
 ```
 
-1. 在数据安全的基础上,才考虑效率问题
-2. 同步存在的意义:数据的安全性
-3. 在主进程中实例化 mutex = Lock()
-4. 把这个锁传递给子进程
-5. 在子进程中,对需要加锁的代码进行 with lock:with lock相当于lock.acquire()和lock.release
-6. 在进程中需要加锁的场景:
-    1. 共享的数据资源(文件,数据库)
-    2. 对资源进行修改,删除操作
-7. 加锁之后能保证数据的安全性,但是也降低了程序的执行效率
+**Server process**
 
-互斥锁与join的区别：
+A manager object returned by `Manager()` controls a server process which holds Python objects and allows other processes to manipulate them using proxies.
 
-- 互斥锁和join都是把并发变成串行
-- join是把所有的代码都变成串行，互斥锁是把部分的代码变成串行
+```python
+from multiprocessing import Process, Manager
 
-#### 10.2.11 队列
+def f(d, l):
+    d[1] = '1'
+    d['2'] = 2
+    d[0.25] = None
+    l.append(666)
+
+if __name__ == '__main__':
+    with Manager() as manager:
+        d = manager.dict()
+        l = manager.list()
+
+        p = Process(target=f, args=(d, l))
+        p.start()
+        p.join()
+
+        print(d)
+        print(l)
+```
+
+##### 10.2.5.2 交换
 
 进程彼此之间互相隔离，要实现进程间通信（IPC），multiprocessing模块支持两种形式：队列和管道，这两种方式都是使用消息传递的。
 
 **创建队列的类（底层就是以管道和锁定的方式实现）**：
 
-```python
+```powershell
 Queue([maxsize]):创建共享的进程队列，Queue是多进程安全的队列，可以使用Queue实现多进程之间的数据传递。
 ```
 
 **参数介绍：**
 
-```python
+```powershell
 maxsize是队列中允许最大项数，省略则无大小限制。
 但需要明确：
     1、队列内存放的是消息而非大数据
@@ -12229,7 +12589,7 @@ maxsize是队列中允许最大项数，省略则无大小限制。
 
 **主要方法介绍：**
 
-```
+```powershell
 q.put方法用以插入数据到队列中。
 q.get方法可以从队列读取并且删除一个元素。
 ```
@@ -12255,7 +12615,59 @@ print(q.empty())  # 判断是否空了
 # print(q.get())  # 再取就阻塞住了，卡死
 ```
 
-#### 10.2.12 生产者与消费者模型
+```python
+import multiprocessing
+
+
+def task(q):
+    for i in range(10):
+        q.put(i)
+
+
+if __name__ == '__main__':
+    queue = multiprocessing.Queue()
+    
+    p = multiprocessing.Process(target=task, args=(queue,))
+    p.start()
+    p.join()
+
+    print("主进程")
+    print(queue.get())
+    print(queue.get())
+    print(queue.get())
+    print(queue.get())
+    print(queue.get())
+```
+
+**管道的使用：**
+
+```python
+import time
+import multiprocessing
+
+
+def task(conn):
+    time.sleep(1)
+    conn.send([111, 22, 33, 44])
+    data = conn.recv() # 阻塞
+    print("子进程接收:", data)
+    time.sleep(2)
+
+
+if __name__ == '__main__':
+    parent_conn, child_conn = multiprocessing.Pipe()
+
+    p = multiprocessing.Process(target=task, args=(child_conn,))
+    p.start()
+
+    info = parent_conn.recv() # 阻塞
+    print("主进程接收：", info)
+    parent_conn.send(666)
+```
+
+上述都是Python内部提供的进程之间数据共享和交换的机制，作为了解即可，在项目开发中很少使用，后期项目中一般会借助第三方的来做资源的共享，例如：MySQL、redis等。
+
+生产者与消费者模型
 
 **为什么要使用生产者消费者模型**
 
@@ -12316,102 +12728,411 @@ if __name__ == '__main__':
     print('主')
 ```
 
-上述在有多个生产者和多个消费者时，我们则需要用一个很low的方式去解决,有几个消费者就需要发送几次结束信号：相当low！
+上述再有多个生产者和多个消费者时，我们则需要用一个很low的方式去解决，有几个消费者就需要发送几次结束信号：相当low！
 
-#### 10.2.13 **JoinableQueue([maxsize])**
+#### 10.2.6 进程锁
 
-```
-这就像是一个Queue对象，但队列允许项目的使用者通知生成者项目已经被成功处理。通知进程是使用共享的信号和条件变量来实现的。
-```
+如果多个进程抢占式去做某些操作时候，为了防止操作出问题，可以通过进程锁来避免。
 
-**参数介绍**：
-
-```
-maxsize是队列中允许最大项数，省略则无大小限制。
-```
-
-**方法介绍**：
-
-```
-JoinableQueue的实例p除了与Queue对象相同的方法之外还具有：
-q.task_done()：使用者使用此方法发出信号，表示q.get()的返回项目已经被处理。如果调用此方法的次数大于从队列中删除项目的数量，将引发ValueError异常
-q.join():生产者调用此方法进行阻塞，直到队列中所有的项目均被处理。阻塞将持续到队列中的每个项目均调用q.task_done（）方法
-```
-
-基于JoinableQueue实现生产者消费者模型：
+互斥锁的原理，就是把并发改成串行，降低了效率，但保证了数据安全不错乱
 
 ```python
-from multiprocessing import Process, JoinableQueue
+# 由并发变成了串行,牺牲了运行效率,但避免了竞争
 import time
+from multiprocessing import Process, Lock
 
 
-def producer(q):
-    for i in range(2):
-        res = '包子%s' % i
-        time.sleep(0.5)
-        print('生产者生产了%s' % res)
-
-        q.put(res)
-    q.join()
-
-
-def consumer(q):
-    while True:
-        res = q.get()
-        if res is None: break
-        time.sleep(1)
-        print('消费者吃了%s' % res)
-        q.task_done()
+def task(name, mentu):
+    mentu.acquire()  # 加锁
+    print('%s 1' % name)
+    time.sleep(1)
+    print('%s 2' % name)
+    time.sleep(2)
+    print('%s 3' % name)
+    time.sleep(3)
+    mentu.release()  # 解锁
 
 
 if __name__ == '__main__':
-    # 容器
-    q = JoinableQueue()
-
-    # 生产者们
-    p1 = Process(target=producer, args=(q,))
-    p2 = Process(target=producer, args=(q,))
-    p3 = Process(target=producer, args=(q,))
-
-    # 消费者们
-    c1 = Process(target=consumer, args=(q,))
-    c2 = Process(target=consumer, args=(q,))
-    c1.daemon = True
-    c2.daemon = True
-
-    p1.start()
-    p2.start()
-    p3.start()
-    c1.start()
-    c2.start()
-
-    p1.join()
-    p2.join()
-    p3.join()
-    print('主')
+    mentu = Lock()
+    for i in range(3):
+        p = Process(target=task, args=('进程%s' % i, mentu))
+        p.start()
 
 ```
 
-总结：
+练习一：模拟抢票
 
-- 程序中有两类角色
+```python
+# 把文件db.json的内容重置为：{"count":1}
+
+def search(name):
+    time.sleep(1)
+    dict = json.load(open('db.json', 'r', encoding='utf-8'))
+    print('<%s>查看到剩余票数{%s}' % (name, dict['count']))
+
+
+def get(name):
+    time.sleep(1)
+    dict = json.load(open('db.json', 'r', encoding='utf-8'))
+    if dict['count'] > 0:
+        dict['count'] -= 1
+        json.dump(dict, open('db.json', 'w', encoding='utf-8'))
+        print('<%s> 购票成功!' % name)
+    else:
+        print('没有足够的票!')
+
+
+def task(name, mutex):
+    search(name)
+    with mutex:  # 相当于lock.acquire(),执行完自代码块自动执行lock.release()
+        get(name)
+
+
+if __name__ == '__main__':
+    mutex = Lock()
+    for i in range(10):  # 模拟10个人并发抢票
+        p = Process(target=task, args=('路人%s' % i, mutex))
+        p.start()
+```
+
+1. 在数据安全的基础上,才考虑效率问题
+2. 同步存在的意义：数据的安全性
+3. 在主进程中实例化 mutex = Lock()
+4. 把这个锁传递给子进程
+5. 在子进程中，对需要加锁的代码进行 with lock:with lock相当于lock.acquire()和lock.release
+6. 在进程中需要加锁的场景:
+    1. 共享的数据资源(文件，数据库)
+    2. 对资源进行修改，删除操作
+7. 加锁之后能保证数据的安全性，但是也降低了程序的执行效率
+
+互斥锁与join的区别：
+
+- 互斥锁和join都是把并发变成串行
+- join是把所有的代码都变成串行，互斥锁是把部分的代码变成串行
+
+练习二：模拟抢票
+
+```python
+import time
+import multiprocessing
+
+
+def task(lock):
+    print("开始")
+    lock.acquire()
+    # 假设文件中保存的内容就是一个值：10
+    with open('f1.txt', mode='r', encoding='utf-8') as f:
+        current_num = int(f.read())
+
+    print("排队抢票了")
+    time.sleep(0.5)
+    current_num -= 1
+
+    with open('f1.txt', mode='w', encoding='utf-8') as f:
+        f.write(str(current_num))
+    lock.release()
+
+
+if __name__ == '__main__':
+    multiprocessing.set_start_method("spawn")
+    
+    lock = multiprocessing.RLock() # 进程锁
+    
+    for i in range(10):
+        p = multiprocessing.Process(target=task, args=(lock,))
+        p.start()
+
+    # spawn模式，需要特殊处理。
+    time.sleep(7)
+
 
 ```
-一类负责生产数据（生产者）
-一类负责处理数据（消费者）
+
+```python
+import time
+import multiprocessing
+import os
+
+
+def task(lock):
+    print("开始")
+    lock.acquire()
+    # 假设文件中保存的内容就是一个值：10
+    with open('f1.txt', mode='r', encoding='utf-8') as f:
+        current_num = int(f.read())
+
+    print(os.getpid(), "排队抢票了")
+    time.sleep(0.5)
+    current_num -= 1
+
+    with open('f1.txt', mode='w', encoding='utf-8') as f:
+        f.write(str(current_num))
+    lock.release()
+
+
+if __name__ == '__main__':
+    multiprocessing.set_start_method("spawn")
+    lock = multiprocessing.RLock()
+
+    process_list = []
+    for i in range(10):
+        p = multiprocessing.Process(target=task, args=(lock,))
+        p.start()
+        process_list.append(p)
+
+    # spawn模式，需要特殊处理。
+    for item in process_list:
+        item.join()
 ```
 
-- 引入生产者消费者模型为了解决的问题是
+```python
+import time
+import multiprocessing
+
+def task(lock):
+    print("开始")
+    lock.acquire()
+    # 假设文件中保存的内容就是一个值：10
+    with open('f1.txt', mode='r', encoding='utf-8') as f:
+        current_num = int(f.read())
+
+    print("排队抢票了")
+    time.sleep(1)
+    current_num -= 1
+
+    with open('f1.txt', mode='w', encoding='utf-8') as f:
+        f.write(str(current_num))
+    lock.release()
+
+
+if __name__ == '__main__':
+    multiprocessing.set_start_method('fork')
+    lock = multiprocessing.RLock()
+    for i in range(10):
+        p = multiprocessing.Process(target=task, args=(lock,))
+        p.start()
+```
+
+#### 10.2.7 进程池
+
+```python
+import time
+from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
+
+
+def task(num):
+    print("执行", num)
+    time.sleep(2)
+
+
+if __name__ == '__main__':
+    # 修改模式
+    pool = ProcessPoolExecutor(4)
+    for i in range(10):
+        pool.submit(task, i)
+	print(1)
+	print(2)
+```
+
+```python
+from concurrent.futures import ProcessPoolExecutor
+import time
+
+
+def task(num):
+    print("执行", num)
+    time.sleep(2)
+
+
+if __name__ == '__main__':
+
+    pool = ProcessPoolExecutor(4)
+    for i in range(10):
+        pool.submit(task, i)
+    # 等待进程池中的任务都执行完毕后，再继续往后执行。
+    pool.shutdown(True)
+    print(1)
+```
+
+```python
+import time
+from concurrent.futures import ProcessPoolExecutor
+import multiprocessing
+
+
+def task(num):
+    print("执行", num)
+    time.sleep(2)
+    return num
+
+
+def done(res):
+    print(multiprocessing.current_process())
+    time.sleep(1)
+    print(res.result())
+    time.sleep(1)
+
+
+if __name__ == '__main__':
+    pool = ProcessPoolExecutor(4)
+    for i in range(50):
+        fur = pool.submit(task, i)
+        fur.add_done_callback(done)  # done的调用由主进程处理（与线程池不同）
+
+    print(multiprocessing.current_process())
+    pool.shutdown(True)
 
 ```
-平衡生产者与消费者之间的速度差
-程序解开耦合
+
+注意：如果在进程池中要使用进程锁，则需要基于Manager中的Lock和RLock来实现。
+
+```python
+import time
+import multiprocessing
+from concurrent.futures.process import ProcessPoolExecutor
+
+
+def task(lock):
+    print("开始")
+    # lock.acquire()
+    # lock.relase()
+    with lock:
+        # 假设文件中保存的内容就是一个值：10
+        with open('f1.txt', mode='r', encoding='utf-8') as f:
+            current_num = int(f.read())
+
+        print("排队抢票了")
+        time.sleep(1)
+        current_num -= 1
+
+        with open('f1.txt', mode='w', encoding='utf-8') as f:
+            f.write(str(current_num))
+
+
+if __name__ == '__main__':
+    pool = ProcessPoolExecutor()
+    # lock_object = multiprocessing.RLock() # 不能使用
+    manager = multiprocessing.Manager()
+    lock_object = manager.RLock() # Lock
+    for i in range(10):
+        pool.submit(task, lock_object)
 ```
 
-- 如何实现生产者消费者模型
+**案例：计算每天用户访问情况。**
 
+![image-20210326132114601](J:\homework\Python学习笔记\Python_notes.assets\image-20210326132114601.png)
+
+示例一：
+
+```python
+import os
+import time
+from concurrent.futures import ProcessPoolExecutor
+from multiprocessing import Manager
+
+
+def task(file_name, count_dict):
+    ip_set = set()
+    total_count = 0
+    ip_count = 0
+    file_path = os.path.join("files", file_name)
+    file_object = open(file_path, mode='r', encoding='utf-8')
+    for line in file_object:
+        if not line.strip():
+            continue
+        user_ip = line.split(" - -", maxsplit=1)[0].split(",")[0]
+        total_count += 1
+        if user_ip in ip_set:
+            continue
+        ip_count += 1
+        ip_set.add(user_ip)
+    count_dict[file_name] = {"total": total_count, 'ip': ip_count}
+    time.sleep(1)
+
+
+def run():
+    # 根据目录读取文件并初始化字典
+    """
+        1.读取目录下所有的文件，每个进程处理一个文件。
+    """
+
+    pool = ProcessPoolExecutor(4)
+    with Manager() as manager:
+        """
+        count_dict={
+        	"20210322.log":{"total":10000,'ip':800},
+        }
+        """
+        count_dict = manager.dict()
+        
+        for file_name in os.listdir("files"):
+            pool.submit(task, file_name, count_dict)
+            
+            
+        pool.shutdown(True)
+        for k, v in count_dict.items():
+            print(k, v)
+
+
+if __name__ == '__main__':
+    run()
 ```
-生产者<--->队列<--->消费者
+
+示例二：
+
+```python
+import os
+import time
+from concurrent.futures import ProcessPoolExecutor
+
+
+def task(file_name):
+    ip_set = set()
+    total_count = 0
+    ip_count = 0
+    file_path = os.path.join("files", file_name)
+    file_object = open(file_path, mode='r', encoding='utf-8')
+    for line in file_object:
+        if not line.strip():
+            continue
+        user_ip = line.split(" - -", maxsplit=1)[0].split(",")[0]
+        total_count += 1
+        if user_ip in ip_set:
+            continue
+        ip_count += 1
+        ip_set.add(user_ip)
+    time.sleep(1)
+    return {"total": total_count, 'ip': ip_count}
+
+
+def outer(info, file_name):
+    def done(res, *args, **kwargs):
+        info[file_name] = res.result()
+
+    return done
+
+
+def run():
+    # 根据目录读取文件并初始化字典
+    """
+        1.读取目录下所有的文件，每个进程处理一个文件。
+    """
+    info = {}
+    
+    pool = ProcessPoolExecutor(4)
+
+    for file_name in os.listdir("files"):
+        fur = pool.submit(task, file_name)
+        fur.add_done_callback(  outer(info, file_name)  ) # 回调函数：主进程
+
+    pool.shutdown(True)
+    for k, v in info.items():
+        print(k, v)
+
+
+if __name__ == '__main__':
+    run()
 ```
 
 ### 10.3 线程
@@ -12422,10 +13143,10 @@ if __name__ == '__main__':
 
 线程的特点：
 
-- 线程是进程中的一部分
-- 每一个进程中至少有一个线程,线程是负责执行具体代码的
-- 线程是计算机中能被CPU调度的最小单位(进程是负责圈资源的，线程负责执行具体代码)
-- 一个进程的多个线程是可以共享这个进程的数据的，即数据共享
+> 线程，是计算机中可以被cpu调度的最小单元（真正在工作）。
+> 进程，是计算机资源分配的最小单元（进程为线程提供资源）。
+>
+> 一个进程中可以有多个线程同一个进程中的线程可以共享此进程中的资源。
 
 线程的开销：
 
@@ -12434,14 +13155,115 @@ if __name__ == '__main__':
     - 进程：数据隔离， 开销大，同时执行几段代码
     - 线程：数据共享，开销小，同时执行几段代码
 
-#### 10.3.2 进程与线程的区别
+类比：
 
-1. 同一个进程内的多个线程共享该进程内的地址资源
-2. 创建线程的开销要远小于创建进程的开销（创建一个进程，就是创建一个车间，涉及到申请空间，而且在该空间内建至少一条流水线，但创建线程，就只是在一个车间内造一条流水线，无需申请空间，所以创建开销小）
+- 一个**工厂**，至少有一个**车间**，一个车间中至少有一个**工人**，最终是工人在工作。
 
-#### 10.3.3 开启线程的两种方式
+- 一个**程序**，至少有一个**进程**，一个进程中至少有一个**线程**，最终是线程在工作。
 
-multiprocess模块的完全模仿了threading模块的接口，二者在使用层面，有很大的相似性。
+```powershell
+上述串行的代码示例就是一个程序，在使用python xx.py 运行时，内部就创建一个进程（主进程），在进程中创建了一个线程（主线程），由线程逐行运行代码。
+```
+
+**1. 多线程：**
+
+基于多线程对上述串行示例进行优化：
+
+- 一个**工厂**，创建一个**车间**，这个车间中创建 **3个工人**，并行处理任务。
+- 一个**程序**，创建一个**进程**，这个进程中创建 **3个线程**，并行处理任务。
+
+```python
+import time
+import requests
+
+url_list = [
+    ("东北F4模仿秀.mp4", "https://aweme.snssdk.com/aweme/v1/playwm/?video_id=v0300f570000bvbmace0gvch7lo53oog"),
+    ("卡特扣篮.mp4", "https://aweme.snssdk.com/aweme/v1/playwm/?video_id=v0200f3e0000bv52fpn5t6p007e34q1g"),
+    ("罗斯mvp.mp4", "https://aweme.snssdk.com/aweme/v1/playwm/?video_id=v0200f240000buuer5aa4tij4gv6ajqg")
+]
+
+for file_name, url in url_list:
+    res = requests.get(url)
+    with open(file_name, mode='wb') as f:
+        f.write(res.content)
+```
+
+```python
+import time
+import requests
+import threading
+"""
+def func(a1,a2,a3):
+    pass
+
+t = threaing.Thread(target=func,args=(11,22,33))
+t.start()
+"""
+
+url_list = [
+    ("东北F4模仿秀.mp4", "https://aweme.snssdk.com/aweme/v1/playwm/?video_id=v0300f570000bvbmace0gvch7lo53oog"),
+    ("卡特扣篮.mp4", "https://aweme.snssdk.com/aweme/v1/playwm/?video_id=v0200f3e0000bv52fpn5t6p007e34q1g"),
+    ("罗斯mvp.mp4", "https://aweme.snssdk.com/aweme/v1/playwm/?video_id=v0200f240000buuer5aa4tij4gv6ajqg")
+]
+
+
+def task(file_name, video_url):
+    res = requests.get(video_url)
+    with open(file_name, mode='wb') as f:
+        f.write(res.content)
+    print(time.time())
+
+
+for name, url in url_list:
+    # 创建线程，让每个线程都去执行task函数（参数不同）
+    t = threading.Thread(target=task, args=(name, url))
+    t.start()
+```
+
+**2. 多进程：**
+
+基于多进程对上述串行示例进行优化：
+
+- 一个**工厂**，创建 **三个车间**，每个车间 **一个工人（共3人）**，并行处理任务。
+- 一个**程序**，创建 **三个进程**，每个进程 **一个线程（共3人）**，并行处理任务。
+
+```python
+import time
+import requests
+import multiprocessing
+
+# 进程创建之后，在进程中还会创建一个线程。
+# t = multiprocessing.Process(target=函数名, args=(name, url))
+# t.start()
+    
+    
+
+url_list = [
+    ("东北F4模仿秀.mp4", "https://aweme.snssdk.com/aweme/v1/playwm/?video_id=v0300f570000bvbmace0gvch7lo53oog"),
+    ("卡特扣篮.mp4", "https://aweme.snssdk.com/aweme/v1/playwm/?video_id=v0200f3e0000bv52fpn5t6p007e34q1g"),
+    ("罗斯mvp.mp4", "https://aweme.snssdk.com/aweme/v1/playwm/?video_id=v0200f240000buuer5aa4tij4gv6ajqg")
+]
+
+
+def task(file_name, video_url):
+    res = requests.get(video_url)
+    with open(file_name, mode='wb') as f:
+        f.write(res.content)
+    print(time.time())
+
+
+if __name__ == '__main__':
+    print(time.time())
+    for name, url in url_list:
+        t = multiprocessing.Process(target=task, args=(name, url))
+        t.start()
+```
+
+综上所述，大家会发现 **多进程** 的开销比 **多线程** 的开销大。那是不是使用多线程要比多进程更好呀？
+
+接下来，给大家再来介绍一个Python内置的GIL锁的知识，然后再根据 进程 和 线程 各自的特点总结各自适合应用场景。
+
+**开启线程的两种方式：**
 
 方式一：
 
@@ -12478,23 +13300,22 @@ class MyThread(Thread):
 
     def run(self):
         print('%s piaoing' % self.name)
-
         time.sleep(random.randrange(1, 5))
         print('%s piao end' % self.name)
 
 
 if __name__ == '__main__':
-    t1 = MyThread('egon')
+    t1 = MyThread('ike')
     t1.start()
     print('主') 
 ```
 
-#### 10.3.4 进程与线程的区别
+#### 10.3.2 进程与线程的区别
 
 1. 同一个进程内的多个线程共享该进程内的地址空间
 2. 创建线程的开销要远小于创建进程的开销（创建一个进程，就是创建一个车间，涉及到申请空间，而且在该空间内建至少一条流水线，但创建线程，就只是在一个车间内造一条流水线，无需申请空间，所以创建开销小）
 
-**开进程的开销远大于开线程**：
+**开进程的开销远大于开线程：**
 
 1.主进程下开子进程：
 
@@ -12514,15 +13335,14 @@ if __name__ == '__main__':
     p1.start()
     print('主进程')
     
-'''
-执行结果：
-主线程
+'''执行结果：
+主进程
 ike running
 ike running end
 '''
 ```
 
-备注：p.start ()将开启进程的信号发给操作系统后，操作系统要申请内存空间，让好拷贝父进程地址空间到子进程，开销远大于线程
+备注：p.start ()将开启进程的信号发给操作系统后，操作系统要申请内存空间，然后拷贝父进程地址空间到子进程，开销远大于线程
 
 2.主线程下开子线程：
 
@@ -12537,17 +13357,22 @@ def piao(name):
 
 
 if __name__ == '__main__':
-
-    t1 = Thread(target=piao, args=('egon',))
+    t1 = Thread(target=piao, args=('ike',))
     t1.start()
     print('主线程')
+    
+'''执行结果：
+ike running
+主线程
+ike running end
+'''
 ```
 
-备注：几乎是t.start ()的同时就将线程开启了，然后先打印出了ike running，证明线程的创建开销极小
+备注：几乎是t.start ()同时就将线程开启了，然后先打印出了ike running，证明线程的创建开销极小
 
 示例：同一进程内的多个线程共享该进程的地址空间
 
-**进程与线程的地址空间**：
+**进程与线程的地址空间：**
 
 1.进程之间的地址空间是隔离的：
 
@@ -12559,6 +13384,7 @@ n = 100
 def task():
     global n
     n = 0
+    print(n)
 
 if __name__ == '__main__':
     p1=Process(target=task,)
@@ -12568,7 +13394,7 @@ if __name__ == '__main__':
     print('主进程', n)
 ```
 
-备注：进程p已经将自己的全局的n改成了0，但改的仅仅是它自己的,查看父进程的n仍然为100
+备注：进程p已经将自己的全局的n改成了0，但改的仅仅是它自己的，查看父进程的n仍然为100
 
 2.同一进程内开启的多个线程是共享该进程地址空间的：
 
@@ -12581,8 +13407,8 @@ def task():
     global n
     n = 0
 
+    
 if __name__ == '__main__':
-
     t1 = Thread(target=task, )
     t1.start()
     t1.join()
@@ -12591,11 +13417,11 @@ if __name__ == '__main__':
 
 ```
 
-备注： 查看结果为0,因为同一进程内的线程之间共享进程内的数据
+备注： 查看结果为0，因为同一进程内的线程之间共享进程内的数据
 
-**进程与线程的PID**：
+**进程与线程的PID：**
 
-1.开启多个进程,每个进程的PID都不一样：
+1.开启多个进程，每个进程的PID都不一样：
 
 ```python
 from multiprocessing import Process, current_process
@@ -12624,7 +13450,7 @@ if __name__ == '__main__':
 
 备注：主进程和子进程不属于同一个进程
 
-2.在主进程下开启多个线程,每个线程都跟主进程的PID一样：
+2.在主进程下开启多个线程，每个线程都跟主进程的PID一样：
 
 ```python
 from threading import Thread
@@ -12651,7 +13477,7 @@ if __name__ == '__main__':
 
 备注：因为他们同属于一个进程
 
-#### 10.3.5 Thread对象的其他属性
+#### 10.3.3 Thread对象的其他属性
 
 - getName()：获取线程名
 - setName()：设置线程名
@@ -12684,7 +13510,7 @@ if __name__ == '__main__':
     currentThread().setName('主线程1')
 
     # 查看线程是否存活
-    t.join()  # 执行这行代码后，线程已运行完，返货就是False
+    t.join()  # 执行这行代码后，线程已运行完，返回就是False
     print(t.is_alive())
 
     # 线程活跃数
@@ -12698,7 +13524,7 @@ if __name__ == '__main__':
     print('主线程', currentThread().getName())
 ```
 
-#### 10.3.6 守护线程
+#### 10.3.4 守护线程
 
 守护线程会在主线程代码执行结束后就终止
 
@@ -12706,6 +13532,10 @@ if __name__ == '__main__':
     - 对主进程来说，运行完毕指的是主进程代码运行完毕
     - 对主线程来说，运行完毕指的是主线程所在的进程内所有非守护线程全部运行完毕，主线程才算运行完毕
     - 主线程在其他非守护线程运行完毕后才算运行完毕（守护线程在此时就被回收）。因为主线程的结束意味着进程的结束，进程整体的资源都将被回收，而进程必须保证非守护线程都运行完毕后才能结束
+
+- `t.setDaemon(布尔值)` ，守护线程（必须放在start之前）
+  - `t.setDaemon(True)`，设置为守护线程，主线程执行完毕后，子线程也自动关闭。
+  - `t.setDaemon(False)`，设置为非守护线程，主线程等待子线程，子线程执行完毕后，主线程才结束。（默认）
 
 示例一：
 
@@ -12732,6 +13562,10 @@ if __name__ == '__main__':
 示例二：
 
 ```python
+from threading import Thread
+import time
+
+
 def Foo():
     print(123)
     time.sleep(1)
@@ -12745,8 +13579,8 @@ def Bar():
 
 
 if __name__ == '__main__':
-    p1 = Process(target=Foo)
-    p2 = Process(target=Bar)
+    p1 = Thread(target=Foo)
+    p2 = Thread(target=Bar)
 
     p1.daemon = True
     p1.start()
@@ -12756,31 +13590,488 @@ if __name__ == '__main__':
 
 因为非守护线程没有运行完，所以打印了end123
 
-#### 10.3.7 GIL解释器锁
+#### 10.3.5 GIL解释器锁
 
-##### 10.3.7.1 GIL锁介绍
+##### 10.3.5.1 GIL锁介绍
 
 GIL本质就是一把互斥锁，既然是互斥锁，所有互斥锁的本质都一样，都是将并发运行变成串行，以此来控制同一时间内共享数据只能被一个任务所修改，进而保证数据安全。
 
-**保护不同的数据的安全，就应该加不同的锁。**
+GIL全局解释器锁（Global Interpreter Lock），是CPython解释器特有一个玩意，让一个进程中同一个时刻只能有一个线程可以被CPU调用。
+
+![1644832594283](J:\homework\Python学习笔记\Python_notes.assets\1644832594283.png)
+
+如果程序想利用 计算机的多核优势，让CPU同时处理一些任务，适合用多进程开发（即使资源开销大）。
+
+![1644832641686](J:\homework\Python学习笔记\Python_notes.assets\1644832641686.png)
+
+如果程序不利用 计算机的多核优势，适合用多线程开发。
+
+![1644832724915](J:\homework\Python学习笔记\Python_notes.assets\1644832724915.png)
+
+常见的程序开发中，计算操作需要使用CPU多核优势，IO操作不需要利用CPU的多核优势，所以，就有这一句话：
+
+- 计算密集型，用多进程，例如：大量的数据计算【累加计算示例】。
+- IO密集型，用多线程，例如：文件读写、网络数据传输【下载抖音视频示例】。
+
+累加计算示例（计算密集型）：
+
+- 串行处理
+
+  ```python
+  import time
+  
+  start = time.time()
+  
+  result = 0
+  for i in range(100000000):
+      result += i
+  print(result)
+  
+  end = time.time()
+  
+  print("耗时：", end - start) # 耗时： 9.522780179977417
+  ```
+
+- 多进程处理
+
+  ```python
+  import time
+  import multiprocessing
+  
+  
+  def task(start, end, queue):
+      result = 0
+      for i in range(start, end):
+          result += i
+      queue.put(result)
+  
+  
+  if __name__ == '__main__':
+      queue = multiprocessing.Queue()
+  
+      start_time = time.time()
+  
+      p1 = multiprocessing.Process(target=task, args=(0, 50000000, queue))
+      p1.start()
+  
+      p2 = multiprocessing.Process(target=task, args=(50000000, 100000000, queue))
+      p2.start()
+  
+      v1 = queue.get(block=True) #阻塞
+      v2 = queue.get(block=True) #阻塞
+      print(v1 + v2)
+  
+      end_time = time.time()
+  
+      print("耗时:", end_time - start_time) # 耗时: 2.6232550144195557
+  ```
+
+
+当然，在程序开发中 多线程 和 多进程 是可以结合使用，例如：创建2个进程（建议与CPU个数相同），每个进程中创建3个线程。
+
+```python
+import multiprocessing
+import threading
+
+
+def thread_task():
+    pass
+
+
+def task(start, end):
+    t1 = threading.Thread(target=thread_task)
+    t1.start()
+
+    t2 = threading.Thread(target=thread_task)
+    t2.start()
+
+    t3 = threading.Thread(target=thread_task)
+    t3.start()
+
+
+if __name__ == '__main__':
+    p1 = multiprocessing.Process(target=task, args=(0, 50000000))
+    p1.start()
+
+    p2 = multiprocessing.Process(target=task, args=(50000000, 100000000))
+    p2.start()
+```
+
+##### 10.3.5.2 多线程开发
+
+```python
+import threading
+
+def task(arg):
+	pass
+
+
+# 创建一个Thread对象（线程），并封装线程被CPU调度时应该执行的任务和相关参数。
+t = threading.Thread(target=task,args=('xxx',))
+# 线程准备就绪（等待CPU调度），代码继续向下执行。
+t.start()
+
+print("继续执行...") # 主线程执行完所有代码，不结束（等待子线程）
+```
+
+线程的常见方法：
+
+- `t.start()`，当前线程准备就绪（等待CPU调度，具体时间是由CPU来决定）。
+
+  ```python
+  import threading
+  
+  loop = 10000000
+  number = 0
+  
+  def _add(count):
+      global number
+      for i in range(count):
+          number += 1
+  
+  t = threading.Thread(target=_add,args=(loop,))
+  t.start()
+  
+  print(number)
+  ```
+
+- `t.join()`，等待当前线程的任务执行完毕后再向下继续执行。
+
+  ```python
+  import threading
+  
+  number = 0
+  
+  def _add():
+      global number
+      for i in range(10000000):
+          number += 1
+  
+  t = threading.Thread(target=_add)
+  t.start()
+  
+  t.join() # 主线程等待中...
+  
+  print(number)
+  ```
+
+  ```python
+  import threading
+  
+  number = 0
+  
+  
+  def _add():
+      global number
+      for i in range(10000000):
+          number += 1
+  
+  
+  def _sub():
+      global number
+      for i in range(10000000):
+          number -= 1
+  
+  
+  t1 = threading.Thread(target=_add)
+  t2 = threading.Thread(target=_sub)
+  t1.start()
+  t1.join()  # t1线程执行完毕,才继续往后走
+  t2.start()
+  t2.join()  # t2线程执行完毕,才继续往后走
+  
+  print(number)
+  
+  ```
+
+  ```python
+  import threading
+  
+  loop = 10000000
+  number = 0
+  
+  
+  def _add(count):
+      global number
+      for i in range(count):
+          number += 1
+  
+  
+  def _sub(count):
+      global number
+      for i in range(count):
+          number -= 1
+  
+  
+  t1 = threading.Thread(target=_add, args=(loop,))
+  t2 = threading.Thread(target=_sub, args=(loop,))
+  t1.start()
+  t2.start()
+  
+  t1.join()  # t1线程执行完毕,才继续往后走
+  t2.join()  # t2线程执行完毕,才继续往后走
+  
+  print(number)
+  ```
+
+- `t.setDaemon(布尔值)` ，守护线程（必须放在start之前）
+
+  - `t.setDaemon(True)`，设置为守护线程，主线程执行完毕后，子线程也自动关闭。
+  - `t.setDaemon(False)`，设置为非守护线程，主线程等待子线程，子线程执行完毕后，主线程才结束。（默认）
+
+  ```python
+  import threading
+  import time
+  
+  def task(arg):
+      time.sleep(5)
+      print('任务')
+  
+  t = threading.Thread(target=task, args=(11,))
+  t.setDaemon(True) # True/False
+  t.start()
+  
+  print('END')
+  ```
+
+- 线程名称的设置和获取
+
+  ```python
+  import threading
+  
+  
+  def task(arg):
+      # 获取当前执行此代码的线程
+      name = threading.current_thread().getName()
+      print(name)
+  
+  
+  for i in range(10):
+      t = threading.Thread(target=task, args=(11,))
+      t.setName('日魔-{}'.format(i))
+      t.start()
+  ```
+
+- 自定义线程类，直接将线程需要做的事写到run方法中。
+
+  ```python
+  import threading
+  
+  
+  class MyThread(threading.Thread):
+      def run(self):
+          print('执行此线程', self._args)
+  
+  
+  t = MyThread(args=(100,))
+  t.start()
+  ```
+
+  ```python
+  import requests
+  import threading
+  
+  
+  class DouYinThread(threading.Thread):
+      def run(self):
+          file_name, video_url = self._args
+          res = requests.get(video_url)
+          with open(file_name, mode='wb') as f:
+              f.write(res.content)
+  
+  
+  url_list = [
+      ("东北F4模仿秀.mp4", "https://aweme.snssdk.com/aweme/v1/playwm/?video_id=v0300f570000bvbmace0gvch7lo53oog"),
+      ("卡特扣篮.mp4", "https://aweme.snssdk.com/aweme/v1/playwm/?video_id=v0200f3e0000bv52fpn5t6p007e34q1g"),
+      ("罗斯mvp.mp4", "https://aweme.snssdk.com/aweme/v1/playwm/?video_id=v0200f240000buuer5aa4tij4gv6ajqg")
+  ]
+  for item in url_list:
+      t = DouYinThread(args=(item[0], item[1]))
+      t.start()
+  
+  ```
+
+##### 10.3.5.3 线程安全
+
+一个进程中可以有多个线程，且线程共享所有进程中的资源。
+
+多个线程同时去操作一个"东西"，**可能**会存在数据混乱的情况，例如：
+
+- 示例1
+
+  ```python
+  import threading
+  
+  loop = 10000000
+  number = 0
+  
+  
+  def _add(count):
+      global number
+      for i in range(count):
+          number += 1
+  
+  
+  def _sub(count):
+      global number
+      for i in range(count):
+          number -= 1
+  
+  
+  t1 = threading.Thread(target=_add, args=(loop,))
+  t2 = threading.Thread(target=_sub, args=(loop,))
+  t1.start()
+  t2.start()
+  
+  t1.join()  # t1线程执行完毕,才继续往后走
+  t2.join()  # t2线程执行完毕,才继续往后走
+  
+  print(number)
+  ```
+
+  ```python
+  import threading
+  
+  lock_object = threading.RLock()
+  
+  loop = 10000000
+  number = 0
+  
+  
+  def _add(count):
+      lock_object.acquire() # 加锁
+      global number
+      for i in range(count):
+          number += 1
+      lock_object.release() # 释放锁
+  
+  
+  def _sub(count):
+      lock_object.acquire() # 申请锁（等待）
+      global number
+      for i in range(count):
+          number -= 1
+      lock_object.release() # 释放锁
+  
+  
+  t1 = threading.Thread(target=_add, args=(loop,))
+  t2 = threading.Thread(target=_sub, args=(loop,))
+  t1.start()
+  t2.start()
+  
+  t1.join()  # t1线程执行完毕,才继续往后走
+  t2.join()  # t2线程执行完毕,才继续往后走
+  
+  print(number)
+  
+  ```
+
+- 示例2：
+
+  ```python
+  import threading
+  
+  num = 0
+  
+  def task():
+      global num
+      for i in range(1000000):
+          num += 1
+      print(num)
+  
+  
+  for i in range(2):
+      t = threading.Thread(target=task)
+      t.start()
+  ```
+
+  ```python
+  import threading
+  
+  num = 0
+  lock_object = threading.RLock()
+  
+  
+  def task():
+      print("开始")
+      lock_object.acquire()  # 第1个抵达的线程进入并上锁，其他线程就需要再此等待。
+      global num
+      for i in range(1000000):
+          num += 1
+      lock_object.release()  # 线程出去，并解开锁，其他线程就可以进入并执行了
+      print(num)
+  
+  
+  for i in range(2):
+      t = threading.Thread(target=task)
+      t.start()
+  ```
+
+  ```python
+  import threading
+  
+  num = 0
+  lock_object = threading.RLock()
+  
+  
+  def task():
+      print("开始")
+      with lock_object: # 基于上下文管理，内部自动执行 acquire 和 release
+          global num
+          for i in range(1000000):
+              num += 1
+      print(num)
+  
+  
+  for i in range(2):
+      t = threading.Thread(target=task)
+      t.start()
+  ```
+
+
+在开发的过程中要注意有些操作默认都是 线程安全的（内部集成了锁的机制），我们在使用的时无需再通过锁再处理，例如：
+
+```python
+import threading
+
+data_list = []
+
+lock_object = threading.RLock()
+
+
+def task():
+    print("开始")
+    for i in range(1000000):
+        data_list.append(i)
+    print(len(data_list))
+
+
+for i in range(2):
+    t = threading.Thread(target=task)
+    t.start()
+```
+
+![image-20210225102151570](J:\homework\Python学习笔记\Python_notes.assets\image-20210225102151570.png)
+
+所以，要多注意看一些开发文档中是否标明线程安全。
 
 每次执行python程序，都会产生一个独立的进程。例如python test.py，python aaa.py，python bbb.py会产生3个不同的python进程。
 
 示例：
 
 ```python
-#test.py内容
+# test.py内容
 import os,time
 print(os.getpid())
 time.sleep(1000)
 
-#打开终端执行
+# 打开终端执行
 python3 test.py
 
-#在windows下查看
+# 在windows下查看
 tasklist |findstr python
 
-#在linux下下查看
+# 在linux下下查看
 ps aux |grep python
 ```
 
@@ -12802,13 +14093,13 @@ ps aux |grep python
 
 ![1643078259276](J:\homework\Python学习笔记\Python_notes.assets\1643078259276.png)
 
-##### 10.3.7.2 GIL与LOCK的区别
+##### 10.3.5.4 线程锁
 
 共同点：将并发运行变成串行，锁的目的是为了保护共享的数据，同一时间只能有一个线程来修改共享的数据。
 
 结论：保护不同的数据就应该加不同的锁。
 
-总结：GIL 与Lock是两把锁，保护的数据不一样
+总结：GIL 与Lock是两把锁Lock 和 RLock。，保护的数据不一样
 
 - GIL是解释器级别的，保护的就是解释器级别的数据，比如垃圾回收的数据
 - Lock保护自己开发的程序的数据，分工明确
@@ -12822,113 +14113,59 @@ ps aux |grep python
 4. 线程1又夺回权限，开始上一次暂停的位置继续执行，直到lock锁被释放lock.release()
 5. 其他的线程重复执行这一系列的步骤
 
-示例：
+- Lock，同步锁。
 
-```python
-from threading import Thread, Lock
-import time
+  ```python
+  import threading
+  
+  num = 0
+  lock_object = threading.Lock()
+  
+  
+  def task():
+      print("开始")
+      lock_object.acquire()  # 第1个抵达的线程进入并上锁，其他线程就需要再此等待。
+      global num
+      for i in range(1000000):
+          num += 1
+      lock_object.release()  # 线程出去，并解开锁，其他线程就可以进入并执行了
+      
+      print(num)
+  
+  
+  for i in range(2):
+      t = threading.Thread(target=task)
+      t.start()
+  
+  ```
 
+- RLock，递归锁。
 
-def work():
-    global n
-    lock.acquire()
-    temp = n
-    time.sleep(0.1)
-    n = temp - 1
-    lock.release()
+  ```python
+  import threading
+  
+  num = 0
+  lock_object = threading.RLock()
+  
+  
+  def task():
+      print("开始")
+      lock_object.acquire()  # 第1个抵达的线程进入并上锁，其他线程就需要再此等待。
+      global num
+      for i in range(1000000):
+          num += 1
+      lock_object.release()  # 线程出去，并解开锁，其他线程就可以进入并执行了
+      print(num)
+  
+  
+  for i in range(2):
+      t = threading.Thread(target=task)
+      t.start()
+  ```
 
+#### 10.3.6 死锁与递归锁
 
-if __name__ == '__main__':
-    lock = Lock()
-    n = 100
-    l = []
-    for i in range(100):
-        p = Thread(target=work)
-        l.append(p)
-        p.start()
-    for p in l:
-        p.join()
-
-    print(n)
-# 结果为0，由原来的并发执行变成串行，牺牲了执行效率保证了数据安全，不加锁则结果可能为99
-```
-
-##### 10.3.7.3 GIL与多线程
-
-- 多线程用于IO密集型
-- 多进程用于计算密集型
-- 单核：
-    - 计算密集型适用一个进程下开多个线程，因为没有多核并行计算，单核创建进程增加开销
-    - IO密集型适用一个进程下开多个线程，因为单核创建进程增加开销，切进程的速度慢于开线程
-- 多核：
-    - 计算密集型适用开多个进程，因为可以并行计算
-    - IO密集型适用一个进程下开多个线程，因为再多的核也解决不了IO问题
-
-总结：现在的计算机基本上都是多核，python对于计算密集型的任务开多线程的效率并不能带来多大性能上的提升，甚至不如串行(没有大量切换)，但是，对于IO密集型的任务效率还是有显著提升的。
-
-示例一：**如果并发的多个任务是计算密集型：多进程效率高**
-
-```python
-# 计算密集型：用多进程
-from multiprocessing import Process
-from threading import Thread
-import os, time
-
-# 模拟计算密集型
-def work():
-    res = 0
-    for i in range(100000000):
-        res *= i
-
-
-if __name__ == '__main__':
-    l = []
-    print(os.cpu_count())  # 本机为8核
-    start = time.time()
-    for i in range(8):
-        p = Process(target=work)  # 耗时14s多
-        # p = Thread(target=work)  # 耗时47s多
-        l.append(p)
-        p.start()
-    for p in l:
-        p.join()
-    stop = time.time()
-    print('run time is %s' % (stop - start))
-```
-
-示例二：**如果并发的多个任务是I/O密集型：多线程效率高**
-
-```python
-# IO密集型：用多线程
-from multiprocessing import Process
-from threading import Thread
-import threading
-import os, time
-
-
-# 模仿IO密集型
-def work():
-    time.sleep(2)
-
-
-if __name__ == '__main__':
-    l = []
-    print(os.cpu_count())  # 本机为8核
-    start = time.time()
-    for i in range(400):
-        # p = Process(target=work)  # 耗时15.140多,大部分时间耗费在创建进程上
-        p = Thread(target=work)  # 耗时2.066多
-        l.append(p)
-        p.start()
-    for p in l:
-        p.join()
-    stop = time.time()
-    print('run time is %s' % (stop - start))
-```
-
-#### 10.3.8 死锁与递归锁
-
-##### 10.3.8.1 死锁
+##### 10.3.6.1 死锁
 
 是指两个或两个以上的进程或线程在执行过程中，因争夺资源而造成的一种互相等待的现象，这些永远在互相等待的进程称为死锁进程。
 
@@ -12937,56 +14174,68 @@ if __name__ == '__main__':
 死锁示例：
 
 ```python
-from threading import Thread, Lock
-import time
+import threading
 
-mutexA = Lock()
-mutexB = Lock()
-
-
-class MyThread(Thread):
-    def run(self):
-        self.f1()
-        self.f2()
-
-    def f1(self):
-        mutexA.acquire()
-        print('%s 拿到了A锁' % self.name)
-
-        mutexB.acquire()
-        print('%s 拿到了B锁' % self.name)
-        mutexB.release()
-
-        mutexA.release()
-
-    def f2(self):
-        mutexB.acquire()
-        print('%s 拿到了B锁' % self.name)
-        time.sleep(0.1)
-
-        mutexA.acquire()
-        print('%s 拿到了A锁' % self.name)
-        mutexA.release()
-
-        mutexB.release()
+num = 0
+lock_object = threading.Lock()
 
 
-if __name__ == '__main__':
-    for i in range(10):
-        t = MyThread()
-        t.start()
-'''
-结果：
-Thread-1 拿到了A锁
-Thread-1 拿到了B锁
-Thread-1 拿到了B锁
-Thread-2 拿到了A锁
-'''
+def task():
+    print("开始")
+    lock_object.acquire()  # 第1个抵达的线程进入并上锁，其他线程就需要再此等待。
+    lock_object.acquire()  # 第1个抵达的线程进入并上锁，其他线程就需要再此等待。
+    global num
+    for i in range(1000000):
+        num += 1
+    lock_object.release()  # 线程出去，并解开锁，其他线程就可以进入并执行了
+    lock_object.release()  # 线程出去，并解开锁，其他线程就可以进入并执行了
+    
+    print(num)
+
+
+for i in range(2):
+    t = threading.Thread(target=task)
+    t.start()
 ```
 
-备注：Thread-1第二次拿到了B，但是一直没释放，这种现象就是死锁现象。
+```python
+import threading
+import time 
 
-##### 10.3.8.2 递归锁
+lock_1 = threading.Lock()
+lock_2 = threading.Lock()
+
+
+def task1():
+    lock_1.acquire()
+    time.sleep(1)
+    lock_2.acquire()
+    print(11)
+    lock_2.release()
+    print(111)
+    lock_1.release()
+    print(1111)
+
+
+def task2():
+    lock_2.acquire()
+    time.sleep(1)
+    lock_1.acquire()
+    print(22)
+    lock_1.release()
+    print(222)
+    lock_2.release()
+    print(2222)
+
+
+t1 = threading.Thread(target=task1)
+t1.start()
+
+t2 = threading.Thread(target=task2)
+t2.start()
+```
+
+##### 10.3.6.2 递归锁
 
 在Python中为了支持在同一线程中多次请求同一资源，python提供了可重入锁RLock。
 
@@ -12997,53 +14246,55 @@ RLock内部维护着一个Lock和一个counter变量，counter记录了acquire�
 - 递归锁可以连续acquire多次
 - 互斥锁只能acquire一次
 
-递归锁示例：
+RLock支持多次申请锁和多次释放，Lock不支持。例如：
 
 ```python
-# 递归锁:可以连续acquire多次，每acquire一次计数器+1，只有计数为0时，才能被抢到acquire
-from threading import Thread, RLock
+import threading
 import time
 
-mutexB = mutexA = RLock()
+lock_object = threading.RLock()
 
 
-class MyThread(Thread):
-    def run(self):
-        self.f1()
-        self.f2()
-
-    def f1(self):
-        mutexA.acquire()
-        print('%s 拿到了A锁' % self.name)
-
-        mutexB.acquire()
-        print('%s 拿到了B锁' % self.name)
-        mutexB.release()
-
-        mutexA.release()
-
-    def f2(self):
-        mutexB.acquire()
-        print('%s 拿到了B锁' % self.name)
-        time.sleep(7)
-
-        mutexA.acquire()
-        print('%s 拿到了A锁' % self.name)
-        mutexA.release()
-
-        mutexB.release()
+def task():
+    print("开始")
+    lock_object.acquire()
+    lock_object.acquire()
+    print(123)
+    lock_object.release()
+    lock_object.release()
 
 
-if __name__ == '__main__':
-    for i in range(10):
-        t = MyThread()
-        t.start()
-
+for i in range(3):
+    t = threading.Thread(target=task)
+    t.start()
 ```
 
-#### 10.3.9 信号量
+```python
+import threading
+lock = threading.RLock()
 
-信号量也是一把锁，信号量可以指定一个数，比如：5。
+# 程序员A开发了一个函数，函数可以被其他开发者调用，内部需要基于锁保证数据安全。
+def func():
+	with lock:
+		pass
+        
+# 程序员B开发了一个函数，可以直接调用这个函数。
+def run():
+    print("其他功能")
+    func() # 调用程序员A写的func函数，内部用到了锁。
+    print("其他功能")
+    
+# 程序员C开发了一个函数，自己需要加锁，同时也需要调用func函数。
+def process():
+    with lock:
+		print("其他功能")
+        func() # ----------------> 此时就会出现多次锁的情况，只有RLock支持（Lock不支持）。
+		print("其他功能")
+```
+
+#### 10.3.7 信号量
+
+信号量也是一把锁，信号量可以指定一个数，比如：5
 
 互斥锁与信号量对比：
 
@@ -13077,15 +14328,13 @@ if __name__ == '__main__':
     for i in range(10):
         t = Thread(target=task)
         t.start()
-
-
 ```
 
-#### 10.3.10 Even事件
+#### 10.3.8 Even事件
 
 Python提供了Event对象用于线程间通信，它是由线程设置的信号标志，在初始情况下，Event对象中的信号标志被设置为假，如果有线程等待一个Event对象, 而这个Event对象的标志为假，那么这个线程将会被一直阻塞直至该标志为真。一个线程如果将一个Event对象的信号标志设置为真,它将唤醒所有等待这个Event对象的线程。
 
-```
+```python
 from threading import Event
 
 event.isSet()：返回event的状态值；
@@ -13171,7 +14420,7 @@ if __name__ == '__main__':
     t.start()
 ```
 
-#### 10.3.11 计时器
+#### 10.3.9 计时器
 
 这个类实现了隔一段调用函数，在Timer调用的函数中，进行设置。Timer是Thread的一个派生类。
 
@@ -13213,7 +14462,7 @@ obj = Code()
 obj.check()
 ```
 
-#### 10.3.12 线程队列
+#### 10.3.10 线程队列
 
 三种不同的用法：
 
@@ -13271,18 +14520,18 @@ print(q.get())
 
 备注：存储数据时可设置优先级的队列
 
-#### 10.3.13 进程池与线程池
+#### 10.3.11 进程池与线程池
 
 基于多进程或多线程实现并发的套接字通信，这种实现方式的致命缺陷是：服务的开启的进程数或线程数都会随着并发的客户端数目地增多而增多，这会对服务端主机带来巨大的压力，甚至于不堪重负而瘫痪。于是我们必须对服务端开启的进程数或线程数加以控制，让机器在一个自己可以承受的范围内运行，这就是进程池或线程池的用途。例如进程池，就是用来存放进程的池子，本质还是基于多进程，只不过是对开启进程的数目加上了限制。
 
-```
+```powershell
 ThreadPoolExecutor：线程池，提供异步调用
 ProcessPoolExecutor: 进程池，提供异步调用
 ```
 
 基本方法：
 
-```python
+```powershell
 1、submit(fn, *args, **kwargs)
 异步提交任务
 
@@ -13326,30 +14575,277 @@ if __name__ == '__main__':
     print('主')
 ```
 
-示例二：线程池
+Python3中官方才正式提供线程池。
+
+线程不是开的越多越好，开的多了可能会导致系统的性能更低了，例如：如下的代码是不推荐在项目开发中编写。
+
+**不建议**：无限制的创建线程。
 
 ```python
-from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
-import os, time, random
+import threading
 
 
-def task(name):
-    print('name:%s pid:%s run' % (name, os.getpid()))
-    time.sleep(random.randint(1, 3))
+def task(video_url):
+    pass
 
+url_list = ["www.xxxx-{}.com".format(i) for i in range(30000)]
 
-if __name__ == '__main__':
-    pool = ThreadPoolExecutor(5)
+for url in url_list:
+    t = threading.Thread(target=task, args=(url,))
+    t.start()
 
-    for i in range(10):
-        pool.submit(task, 'egon%s' % i)
-    # 相当于进程池的pool.close()+pool.join()操作
-    pool.shutdown(wait=True)
-
-    print('主')
+# 这种每次都创建一个线程去操作，创建任务的太多，线程就会特别多，可能效率反倒降低了。
 ```
 
-#### 10.3.14 map方法
+**建议**：使用线程池
+
+示例1：
+
+```python
+import time
+from concurrent.futures import ThreadPoolExecutor
+
+# pool = ThreadPoolExecutor(100)
+# pool.submit(函数名,参数1，参数2，参数...)
+
+
+def task(video_url,num):
+    print("开始执行任务", video_url)
+    time.sleep(5)
+
+# 创建线程池，最多维护10个线程。
+pool = ThreadPoolExecutor(10)
+
+url_list = ["www.xxxx-{}.com".format(i) for i in range(300)]
+
+for url in url_list:
+    # 在线程池中提交一个任务，线程池中如果有空闲线程，则分配一个线程去执行，执行完毕后再将线程交还给线程池；如果没有空闲线程，则等待。
+    pool.submit(task, url,2)
+    
+print("END")
+```
+
+示例2：等待线程池的任务执行完毕。
+
+```python
+import time
+from concurrent.futures import ThreadPoolExecutor
+
+
+def task(video_url):
+    print("开始执行任务", video_url)
+    time.sleep(5)
+
+
+# 创建线程池，最多维护10个线程。
+pool = ThreadPoolExecutor(10)
+
+url_list = ["www.xxxx-{}.com".format(i) for i in range(300)]
+for url in url_list:
+    # 在线程池中提交一个任务，线程池中如果有空闲线程，则分配一个线程去执行，执行完毕后再将线程交还给线程池；如果没有空闲线程，则等待。
+    pool.submit(task, url)
+
+print("执行中...")
+pool.shutdown(True)  # 等待线程池中的任务执行完毕后，在继续执行
+print('继续往下走')
+```
+
+示例3：任务执行完任务，再干点其他事。
+
+```python
+import time
+import random
+from concurrent.futures import ThreadPoolExecutor, Future
+
+
+def task(video_url):
+    print("开始执行任务", video_url)
+    time.sleep(2)
+    return random.randint(0, 10)
+
+
+def done(response):
+    print("任务执行后的返回值", response.result())
+
+
+# 创建线程池，最多维护10个线程。
+pool = ThreadPoolExecutor(10)
+
+url_list = ["www.xxxx-{}.com".format(i) for i in range(15)]
+
+for url in url_list:
+    # 在线程池中提交一个任务，线程池中如果有空闲线程，则分配一个线程去执行，执行完毕后再将线程交还给线程池；如果没有空闲线程，则等待。
+    future = pool.submit(task, url)
+    future.add_done_callback(done) # 是子主线程执行
+    
+# 可以做分工，例如：task专门下载，done专门将下载的数据写入本地文件。
+```
+
+示例4：最终统一获取结果。
+
+```python
+import time
+import random
+from concurrent.futures import ThreadPoolExecutor,Future
+
+
+def task(video_url):
+    print("开始执行任务", video_url)
+    time.sleep(2)
+    return random.randint(0, 10)
+
+
+# 创建线程池，最多维护10个线程。
+pool = ThreadPoolExecutor(10)
+
+future_list = []
+
+url_list = ["www.xxxx-{}.com".format(i) for i in range(15)]
+for url in url_list:
+    # 在线程池中提交一个任务，线程池中如果有空闲线程，则分配一个线程去执行，执行完毕后再将线程交还给线程池；如果没有空闲线程，则等待。
+    future = pool.submit(task, url)
+    future_list.append(future)
+    
+pool.shutdown(True)
+for fu in future_list:
+    print(fu.result())
+```
+
+案例：基于线程池下载豆瓣图片。
+
+```csv
+26044585,Hush,https://hbimg.huabanimg.com/51d46dc32abe7ac7f83b94c67bb88cacc46869954f478-aP4Q3V
+19318369,柒十一,https://hbimg.huabanimg.com/703fdb063bdc37b11033ef794f9b3a7adfa01fd21a6d1-wTFbnO
+15529690,Law344,https://hbimg.huabanimg.com/b438d8c61ed2abf50ca94e00f257ca7a223e3b364b471-xrzoQd
+18311394,Jennah·,https://hbimg.huabanimg.com/4edba1ed6a71797f52355aa1de5af961b85bf824cb71-px1nZz
+18009711,可洛爱画画,https://hbimg.huabanimg.com/03331ef39b5c7687f5cc47dbcbafd974403c962ae88ce-Co8AUI
+30574436,花姑凉~,https://hbimg.huabanimg.com/2f5b657edb9497ff8c41132e18000edb082d158c2404-8rYHbw
+17740339,小巫師,https://hbimg.huabanimg.com/dbc6fd49f1915545cc42c1a1492a418dbaebd2c21bb9-9aDqgl
+18741964,桐末tonmo,https://hbimg.huabanimg.com/b60cee303f62aaa592292f45a1ed8d5be9873b2ed5c-gAJehO
+30535005,TANGZHIQI,https://hbimg.huabanimg.com/bbd08ee168d54665bf9b07899a5c4a4d6bc1eb8af77a4-8Gz3K1
+31078743,你的老杨,https://hbimg.huabanimg.com/c46fbc3c9a01db37b8e786cbd7174bbd475e4cda220f4-F1u7MX
+25519376,尺尺寸,https://hbimg.huabanimg.com/ee29ee198efb98f970e3dc2b24c40d89bfb6f911126b6-KGvKes
+21113978,C-CLong,https://hbimg.huabanimg.com/7fa6b2a0d570e67246b34840a87d57c16a875dba9100-SXsSeY
+24674102,szaa,https://hbimg.huabanimg.com/0716687b0df93e8c3a8e0925b6d2e4135449cd27597c4-gWdv24
+30508507,爱起床的小灰灰,https://hbimg.huabanimg.com/4eafdbfa21b2f300a7becd8863f948e5e92ef789b5a5-1ozTKq
+12593664,yokozen,https://hbimg.huabanimg.com/cd07bbaf052b752ed5c287602404ea719d7dd8161321b-cJtHss
+16899164,一阵疯,https://hbimg.huabanimg.com/0940b557b28892658c3bcaf52f5ba8dc8402100e130b2-G966Uz
+847937,卩丬My㊊伴er彎,https://hbimg.huabanimg.com/e2d6bb5bc8498c6f607492a8f96164aa2366b104e7a-kWaH68
+31010628,慢慢即漫漫,https://hbimg.huabanimg.com/c4fb6718907a22f202e8dd14d52f0c369685e59cfea7-82FdsK
+13438168,海贼玩跑跑,https://hbimg.huabanimg.com/1edae3ce6fe0f6e95b67b4f8b57c4cebf19c501b397e-BXwiW6
+28593155,源稚生,https://hbimg.huabanimg.com/626cfd89ca4c10e6f875f3dfe1005331e4c0fd7fd429-9SeJeQ
+28201821,合伙哼哼,https://hbimg.huabanimg.com/f59d4780531aa1892b80e0ec94d4ec78dcba08ff18c416-769X6a
+28255146,漫步AAA,https://hbimg.huabanimg.com/3c034c520594e38353a039d7e7a5fd5e74fb53eb1086-KnpLaL
+30537613,配䦹,https://hbimg.huabanimg.com/efd81d22c1b1a2de77a0e0d8e853282b83b6bbc590fd-y3d4GJ
+22665880,日后必火,https://hbimg.huabanimg.com/69f0f959979a4fada9e9e55f565989544be88164d2b-INWbaF
+16748980,keer521521,https://hbimg.huabanimg.com/654953460733026a7ef6e101404055627ad51784a95c-B6OFs4
+30536510,“西辞”,https://hbimg.huabanimg.com/61cfffca6b2507bf51a507e8319d68a8b8c3a96968f-6IvMSk
+30986577,艺成背锅王,https://hbimg.huabanimg.com/c381ecc43d6c69758a86a30ebf72976906ae6c53291f9-9zroHF
+26409800,CsysADk7,https://hbimg.huabanimg.com/bf1d22092c2070d68ade012c588f2e410caaab1f58051-ahlgLm
+30469116,18啊全阿,https://hbimg.huabanimg.com/654953460733026a7ef6e101404055627ad51784a95c-B6OFs4
+17473505,椿の花,https://hbimg.huabanimg.com/0e38d810e5a24f91ebb251fd3aaaed8bb37655b14844c-pgNJBP
+19165177,っ思忆゜♪,https://hbimg.huabanimg.com/4815ea0e4905d0f3bb82a654b481811dadbfe5ce2673-vMVr0B
+16059616,格林熊丶,https://hbimg.huabanimg.com/8760a2b08d87e6ed4b7a9715b1a668176dbf84fec5b-jx14tZ
+30734152,sCWVkJDG,https://hbimg.huabanimg.com/f31a5305d1b8717bbfb897723f267d316e58e7b7dc40-GD3e22
+24019677,虚无本心,https://hbimg.huabanimg.com/6fdfa9834abe362e978b517275b06e7f0d5926aa650-N1xCXE
+16670283,Y-雨后天空,https://hbimg.huabanimg.com/a3bbb0045b536fc27a6d2effa64a0d43f9f5193c177f-I2vHaI
+21512483,汤姆2,https://hbimg.huabanimg.com/98cc50a61a7cc9b49a8af754ffb26bd15764a82f1133-AkiU7D
+16441049,笑潇啸逍小鱼,https://hbimg.huabanimg.com/ae8a70cd85aff3a8587ff6578d5cf7620f3691df13e46-lmrIi9
+24795603,⁢⁢⁢⁢⁢v,https://hbimg.huabanimg.com/a7183cc3a933aa129d7b3230bf1378fd8f5857846cc5-3tDtx3
+29819152,妮玛士珍多,https://hbimg.huabanimg.com/ca4ecb573bf1ff0415c7a873d64470dedc465ea1213c6-RAkArS
+19101282,陈勇敢❤,https://hbimg.huabanimg.com/ab6d04ebaff3176e3570139a65155856871241b58bc6-Qklj2E
+28337572,爱意随风散,https://hbimg.huabanimg.com/117ad8b6eeda57a562ac6ab2861111a793ca3d1d5543-SjWlk2
+17342758,幸运instant,https://hbimg.huabanimg.com/72b5f9042ec297ae57b83431123bc1c066cca90fa23-3MoJNj
+18483372,Beau染,https://hbimg.huabanimg.com/077115cb622b1ff3907ec6932e1b575393d5aae720487-d1cdT9
+22127102,栽花的小蜻蜓,https://hbimg.huabanimg.com/6c3cbf9f27e17898083186fc51985e43269018cc1e1df-QfOIBG
+13802024,LoveHsu,https://hbimg.huabanimg.com/f720a15f8b49b86a7c1ee4951263a8dbecfe3e43d2d-GPEauV
+22558931,白驹过隙丶梨花泪う,https://hbimg.huabanimg.com/e49e1341dfe5144da5c71bd15f1052ef07ba7a0e1296b-jfyfDJ
+11762339,cojoy,https://hbimg.huabanimg.com/5b27f876d5d391e7c4889bc5e8ba214419eb72b56822-83gYmB
+30711623,雪碧学长呀,https://hbimg.huabanimg.com/2c288a1535048b05537ba523b3fc9eacc1e81273212d1-nr8M4t
+18906718,西霸王,https://hbimg.huabanimg.com/7b02ad5e01bd8c0a29817e362814666a7800831c154a6-AvBDaG
+31037856,邵阳的小哥哥,https://hbimg.huabanimg.com/654953460733026a7ef6e101404055627ad51784a95c-B6OFs4
+26830711,稳健谭,https://hbimg.huabanimg.com/51547ade3f0aef134e8d268cfd4ad61110925aefec8a-NKPEYX
+```
+
+```python
+import os
+import requests
+from concurrent.futures import ThreadPoolExecutor
+
+
+def download(file_name, image_url):
+    res = requests.get(
+        url=image_url,
+        headers={
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"
+        }
+    )
+    # 检查images目录是否存在？不存在，则创建images目录
+    if not os.path.exists("images"):
+        # 创建images目录
+        os.makedirs("images")
+    file_path = os.path.join("images", file_name)
+    # 2.将图片的内容写入到文件
+    with open(file_path, mode='wb') as img_object:
+        img_object.write(res.content)
+
+
+# 创建线程池，最多维护10个线程。
+pool = ThreadPoolExecutor(10)
+
+with open("mv.csv", mode='r', encoding='utf-8') as file_object:
+    for line in file_object:
+        nid, name, url = line.split(",")
+        file_name = "{}.png".format(name)
+        pool.submit(download, file_name, url)
+```
+
+```python
+import os
+import requests
+from concurrent.futures import ThreadPoolExecutor
+
+
+def download(image_url):
+    res = requests.get(
+        url=image_url,
+        headers={
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"
+        }
+    )
+    return res
+
+
+def outer(file_name):
+    def save(response):
+        res = response.result()
+        # 写入本地
+        # # 检查images目录是否存在？不存在，则创建images目录
+        if not os.path.exists("images"):
+            # 创建images目录
+            os.makedirs("images")
+
+        file_path = os.path.join("images", file_name)
+
+        # # 2.将图片的内容写入到文件
+        with open(file_path, mode='wb') as img_object:
+            img_object.write(res.content)
+
+    return save
+
+
+# 创建线程池，最多维护10个线程。
+pool = ThreadPoolExecutor(10)
+
+with open("mv.csv", mode='r', encoding='utf-8') as file_object:
+    for line in file_object:
+        nid, name, url = line.split(",")
+        file_name = "{}.png".format(name)
+        fur = pool.submit(download, url)
+        fur.add_done_callback(outer(file_name))
+```
+
+#### 10.3.12 map方法
 
 map取代了for循环+submit
 
@@ -13376,9 +14872,9 @@ if __name__ == '__main__':
     executor.map(task, range(1, 3))  # map取代了for+submit
 ```
 
-#### 10.3.15 调用的两种方式
+#### 10.3.13 调用的两种方式
 
-同步调用：提交完任务后，就在原地等待任务执行完毕，拿到结果，再执行下一行代码,导致程序是串行执行
+同步调用：提交完任务后，就在原地等待任务执行完毕，拿到结果，再执行下一行代码，导致程序是串行执行
 
 示例：
 
@@ -13450,9 +14946,125 @@ if __name__ == '__main__':
 # la拿到的是一个返回对象obj，需要用obj.result()拿到结果
 ```
 
+#### 10.3.14 面试题
+
+1. 简述进程和线程的区别以及应用场景。
+
+2. 什么是GIL锁
+
+3. 手写单例模式
+
+4. 程序从flag a执行到falg b的时间大致是多少秒？
+
+   ```python
+   import threading
+   import time
+   def _wait():
+   	time.sleep(60)
+   # flag a
+   t = threading.Thread(target=_wait)
+   t.setDaemon(False)
+   t.start()
+   # flag b
+   ```
+
+5. 程序从flag a执行到falg b的时间大致是多少秒？
+
+   ```python
+   import threading
+   import time
+   def _wait():
+   	time.sleep(60)
+   # flag a
+   t = threading.Thread(target=_wait)
+   t.setDaemon(True)
+   t.start()
+   # flag b
+   ```
+
+6. 程序从flag a执行到falg b的时间大致是多少秒？
+
+   ```python
+   import threading
+   import time
+   def _wait():
+   	time.sleep(60)
+   # flag a
+   t = threading.Thread(target=_wait)
+   t.start()
+   t.join()
+   # flag b
+   ```
+
+7. 读程序，请确认执行到最后number是否一定为0
+
+   ```python
+   import threading
+   loop = int(1E7)
+   def _add(loop = 1):
+   	global number
+   	for _ in range(loop):
+   		number += 1
+   def _sub(loop = 1):
+   	global number
+   	for _ in range(loop):
+   		number -= 1
+   number = 0
+   ta = threading.Thread(target=_add,args=(loop,))
+   ts = threading.Thread(target=_sub,args=(loop,))
+   ta.start()
+   ta.join()
+   ts.start()
+   ts.join()
+   ```
+
+8. 读程序，请确认执行到最后number是否一定为0
+
+   ```python
+   import threading
+   loop = int(1E7)
+   number = 0
+   
+   def _add(loop = 1):
+   	global number
+   	for _ in range(loop):
+   		number += 1
+   def _sub(loop = 1):
+   	global number
+   	for _ in range(loop):
+   		number -= 1
+   
+   ta = threading.Thread(target=_add,args=(loop,))
+   ts = threading.Thread(target=_sub,args=(loop,))
+   ta.start()
+   ts.start()
+   ta.join()
+   ts.join()
+   ```
+
+9. data.txt 文件中共有 10000 条数据，请为每 100行 数据创建一个线程，并在线程中把当前100条数据的num列相加并打印。
+
+   ```
+   subscription_id,erotic,num
+   ASDFOKASDJF423KASDFJASDF,5,1
+   FSD23R23SFSDF4DFGDFGDFGDF,5,99
+   ASDDSFGWERTCERT44GFGDSFG,5,2
+   FFFFFFSDSVFG5RTFGDDFFFFA,5,11
+   ASDFASDF3234XCVWEGDFGSAF,5,1
+   ...
+   ```
+
+
 ### 10.4 协程
 
-是单线程下的并发，又称微线程，纤程。英文名Coroutine。一句话说明什么是协程：**协程是一种用户态的轻量级线程，即协程是由用户程序自己控制调度的。**
+计算机中提供了：线程、进程 用于实现并发编程（真实存在）。
+
+协程（Coroutine），是程序员通过代码搞出来的一个东西（非真实存在）。
+
+协程是单线程下的并发，又称微线程，纤程。英文名Coroutine。一句话说明什么是协程：**协程是一种用户态的轻量级线程，即协程是由用户程序自己控制调度的。**
+
+> 协程也可以被称为微线程，是一种用户态内的上下文切换技术。
+> 简而言之，其实就是通过一个线程实现代码块相互切换执行（来回跳着执行）。
 
 强调：
 
@@ -13463,7 +15075,7 @@ if __name__ == '__main__':
 
 优点：
 
-- 协程的切换开销更小，属于程序级别的切换，操作系统完全感知不到，因而更加轻量级、
+- 协程的切换开销更小，属于程序级别的切换，操作系统完全感知不到，因而更加轻量级
 - 单线程内就可以实现并发的效果，最大限度地利用cpu
 
 缺点：
@@ -13541,7 +15153,7 @@ g1.switch('aaa')
 
 #### 10.4.2 gevent模块
 
-Gevent 是一个第三方库，可以轻松通过gevent实现并发同步或异步编程，在gevent中用到的主要模式是**Greenlet**, 它是以C扩展模块形式接入Python的轻量级协程。 Greenlet全部运行在主程序操作系统进程的内部，但它们被协作式地调度。
+Gevent 是一个第三方库，可以轻松通过gevent实现并发同步或异步编程，在gevent中用到的主要模式是**Greenlet**，它是以C扩展模块形式接入Python的轻量级协程。 Greenlet全部运行在主程序操作系统进程的内部，但它们被协作式地调度。
 
 用法：
 
@@ -13706,6 +15318,7 @@ def func2():
     print(3)
     ...
     print(4)
+    
 func1()
 func2()
 ```
@@ -13889,9 +15502,29 @@ if __name__ == '__main__':
     loop.run_until_complete(main())
 ```
 
+<font color="red">**协程、线程、进程的区别：**</font>  
+
+> 参考文章：https://pythonav.com/wiki/detail/6/91/
+>
+> 参考视频： https://www.bilibili.com/video/BV1NA411g7yf
+
+> - 线程，是计算机中可以被cpu调度的最小单元。
+> - 进程，是计算机资源分配的最小单元（进程为线程提供资源）。
+> - 一个进程中可以有多个线程，同一个进程中的线程可以共享此进程中的资源。
+>
+> 由于CPython中GIL的存在：
+>  - 线程，适用于IO密集型操作。
+>
+> - 进程，适用于计算密集型操作。
+>
+> 协程，协程也可以被称为微线程，是一种用户态内的上下文切换技术，在开发中结合遇到IO自动切换，就可以通过一个线程实现并发操作。
+>
+>
+> 所以，在处理IO操作时，协程比线程更加节省开销（协程的开发难度大一些）。
+
 ##### 10.4.3.5 快速上手
 
-协程函数，定义函数时候，`async def`函数名。
+协程函数，定义函数时候，`async def` 函数名。
 
 协程对象，执行协程函数()得到的协程对象。
 
@@ -41081,7 +42714,180 @@ git push origin master
 - issues：文档以及任务的管理
 - wiki：项目文档管理
 
+### 16.4 垃圾回收机制
 
+引用计数器为主，标记清除和分代回收为辅 + 缓存机制
+
+- 引用计数器
+- 标记清除
+- 分代回收
+- 缓存机制
+- Python的C源码（3.8.2版本）
+
+#### 16.4.1 引用计数器
+
+##### 16.4.1.1 环状双向链表 refchain
+
+在python程序中创建的任何对象都会放在refchain链表中。
+
+```python
+name = "ike"
+age = 18
+hobby = ["篮球", "美女"]
+```
+
+```python
+内部会创建一些数据【上一个对象、下一个对象、类型、引用个数】
+name = "ike"
+new = name
+
+内部会创建一些数据【上一个对象、下一个对象、类型、引用个数、val = 18】
+age = 18
+
+内部会创建一些数据【上一个对象、下一个对象、类型、引用个数、item = 元素、元素个数】
+hobby = ["篮球", "美女"]
+```
+
+![1645069079709](Python_notes.assets\1645069079709.png)
+
+在C语言源码中如何体现每个对象中都有相同的值：PyObject结构体（封装了3个值）
+
+有多个元素组成的对象：PyObject结构体（4个值） + ob_size
+
+![1645070099424](J:\homework\Python学习笔记\Python_notes.assets\1645070099424.png)
+
+##### 16.4.1.2 类型封装结构体
+
+```python
+data = 3.14
+
+内部会创建：
+	_ob_next = refchain中的上一个对象
+    _ob_prev = refchain中的下以一个对象
+    ob_refcnt = 1
+    ob_type = float
+    ob_fval = 3.14
+```
+
+
+
+![1645070191810](J:\homework\Python学习笔记\Python_notes.assets\1645070191810.png)
+
+##### 16.4.1.3 引用计数器
+
+```python
+v1 = 3.14
+v2 = 999
+v3 = (1,2,3)
+```
+
+当python程序运行时，会根据数据类型的不同找到对应的结构体，根据结构体中的字段来进行创建相关的数据，然后将对象添加到refchain双向链表中。
+
+在C源码中有两个关键的结构体：PyObject、PyVarObject
+
+PyObject存放公共的上一个、下一个及类型和引用个数，每一个对象都有
+
+PyVarObject存放多个元素组成的时候存在公共的值，比如int类型
+
+每个对象中有ob_refcnt就是引用计数器，值默认为1，当有其他变量引用对象时，引用计数器就会发生变化。
+
+- 引用
+
+```python
+a = 999
+b = a
+```
+
+- 删除引用
+
+```python
+a = 999
+b = a
+del b  # b变量删除；b对应对象引用计数器-1
+del a  # a变量删除；a对应对象引用计数器-1
+
+# 当一个对象的引用计数器为0时，意味着没有人在使用这个对象了，这个对象就是垃圾，需要垃圾回收。
+# 回收：1.对象从refchain链表移除； 2.将对象销毁，内存归还。
+```
+
+![1645074000461](J:\homework\Python学习笔记\Python_notes.assets\1645074000461.png)
+
+##### 16.4.1.4 循环引用问题
+
+在不重启的情况下，删除后，计数器为1，不会当成垃圾回收，那么这两个列表一直常驻在内存中，永远不会销毁，导致程序一直在运行，内存一直在消耗，时间长了内存就满了，就会产生爆栈，导致内存泄漏，如果重启，则程序终止运行，释放内存。
+
+![1645073973255](J:\homework\Python学习笔记\Python_notes.assets\1645073973255.png)
+
+#### 16.4.2 标记清除
+
+目的：为了解决引用计数器循环引用的不足。
+
+实现：在python的底层，再维护一个链表，这个链表中放可能存在循环引用的对象（列表/字典/集合/元组）。
+
+![1645095066309](J:\homework\Python学习笔记\Python_notes.assets\1645095066309.png)
+
+在Python内部，某种情况下触发，回去扫描 可能存在循环引用的链表中的每个元素，检查是否有循环引用，如果有则让双方的引用计数器各自减一，如果结果是0则垃圾回收。
+
+问题：
+
+- 某种情况：什么时候扫描？
+- 可能存在循环引用的链表扫描代价大，每次扫描耗时久。
+
+#### 16.4.3 分代回收
+
+![1645180479470](J:\homework\Python学习笔记\Python_notes.assets\1645180479470.png)
+
+将可能存在循环引用的对象维护成三个链表：
+
+- 0代：0代对象个数达到700个扫描一次，扫描过程中如果是垃圾数据则回收，如果不是则上升到1代
+- 1代：0代扫描10次，则1代扫描一次，1代扫描过程中如果是垃圾数据则回收，如果不是则上升到2代
+- 2代：1代扫描10次，则2代扫描一次，2代扫描过程中如果是垃圾数据则回收，如果不是则上升到链表
+
+分代回收解决了在什么时候扫描和扫描耗时久的问题。
+
+#### 16.4.4 小结
+
+在Python中维护了一个refchain的双向环状链表，这个链表中存储程序创建的所有对象，每种类型中对象中都有一个ob_refcnt引用计数器的值，引用个数 +1、-1，最后当引用计数器变为0时，则会进行垃圾回收（对象销毁、refchain中移除）。
+
+但是，在Python对于那些可以有多个元素组成的对象，可能会存在循环引用的问题，为了解决这个问题python又引入了标记清除和分代回收。在其内部维护了4个链表，分别是：
+
+- refchain：维护所有的对象
+- 2代：1代扫10次，这三代专门为了解决由多个元素组成的对象
+- 1代：0代扫10次
+- 0代：700个
+
+在源码的内部当达到各自的阈值时，就会触发扫描链表标记清除动作（由循环则各自 -1），因为扫描的对象比较多，通过加上0、1、2代，加上了优先级。
+
+But，源码内部在上述的流程中提出了优化机制。
+
+#### 16.4.5 Python缓存
+
+##### 16.4.5.1. 池(int、字符串)
+
+在Python中为了避免重复创建和销毁一些常见对象，会维护一个池。
+
+```python
+# 启动解释器时，python内部帮我们创建一个小数据池：-5、-4....257
+v1 = 7	# 内部不会开辟内存，直接去池中获取
+v2 = 9	# 内部不会开辟内存，直接去池中获取
+v3 = 9	# 内部不会开辟内存，直接去池中获取
+print(id(v2), id(v3))
+
+# 超出范围则新开辟一块内存
+v4 = 666
+v5 = 999
+```
+
+##### 16.4.5.2 free_list机制
+
+当一个对象的引用计数器为0时，按理说应该回收，在Python内部为了优化它，不会直接回收，而是将对象添加到free_list链表中当缓存，以后再去创建对象时，不再重新开辟内存，而是直接使用free_list。
+
+```python
+v1 = 3.14  # 开辟内存，内部存储结构体中定义那几个值，并皴法哦refchain中。
+del v1  # refchain中移除，将对象添加到 free_list 中（80个），如果free_list中满了则销毁。
+
+v9 = 99.9  # 不会重新开辟内存，去free_list中获取对象，对象内部数据初始化，再放到refchain中。
+```
 
 
 
