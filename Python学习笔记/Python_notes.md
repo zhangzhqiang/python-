@@ -11890,7 +11890,7 @@ Python中通过多进程可以利用CPU的多核优势，计算密集型操作�
     - 时间片轮转
         - 来的每个任务都轮流执行固定N分钟。
     - 多级反馈算法
-        - 主要工作机制，设有N个队列（Q1,Q2....QN），其中各个队列对于处理机制的优先级是不一样的，也就是说位于各个队列中的作业(进程)的优先级也是不一样的。
+        - 主要工作机制，设有N个队列（Q1,Q2....QN），其中各个队列对于处理机制的优先级是不一样的，也就是说对于各个队列中的作业(进程)的优先级也是不一样的。
         - 对于N个作业，先来先服务，再来的等待，此时最先来的任务如果进行到规定时间片还没有执行完毕，会被重新放回到下一个队列等待，如果在Q2中此任务还不能完成，再依次放到下一个。
         - 单个队列遵循，先来先服务和时间片轮转原则，队列之间遵循短作业优先，Q1一定比Q2时间片短，且Q1优先级最高，依次类推。即使第QN个有N个人物在等待，第1~N-1个作业中有任意一个还在运行，此N任务中作业就不执行，只有上述全部处理完毕，才执行QN。
 
@@ -11956,7 +11956,7 @@ if __name__ == '__main__':
 ```
 
 - 几乎是t.start ()的同时就将线程开启了，然后先打印出了 主进程/主线程，证明线程的创建开销极小
-- p.start ()将开启进程的信号发给操作系统后，操作系统要申请内存空间，让好拷贝父进程地址空间到子进程，开销远大于线程
+- p.start ()将开启进程的信号发给操作系统后，操作系统要申请内存空间，然后拷贝父进程地址空间到子进程，开销远大于线程
 
 方式二：使用面向对象重写Process方法
 
@@ -12170,12 +12170,13 @@ import multiprocessing
 import threading
 import time
 
+"""
 def task():
     print(file_object, lock)
 
 
 if __name__ == '__main__':
-    multiprocessing.set_start_method("fork")  # fork、spawn、forkserver
+    multiprocessing.set_start_method("spawn")  # fork、spawn、forkserver
 
     name = []
     file_object = open('x1.txt', mode='a+', encoding='utf-8')
@@ -12184,6 +12185,7 @@ if __name__ == '__main__':
     p1 = multiprocessing.Process(target=task, args=(file_object, lock,))
     p1.start()
 # 会报错，不支持文件对象/线程锁传参，TypeError: cannot serialize '_io.TextIOWrapper' object
+"""
 
 # 正确的做法：子进程中单独写入自己的文件对象/线程锁
 def task():
@@ -12266,7 +12268,7 @@ def task():
     # 拷贝的锁也是被申请走的状态
     # 被谁申请走了? 被子进程中的主线程申请走了
     print(lock)
-    # 锁子进程中除了主线程，其他的线程
+    # 只锁了子进程中除了主线程外其他的线程
     for i in range(10):
         t = threading.Thread(target=func)
         t.start()
@@ -12318,6 +12320,11 @@ if __name__ == '__main__':
 ```
 
 ```python
+import os
+import time
+from multiprocessing import Process
+
+
 def task():
     print('%s is running, parent is <%s>====%s' % (os.getpid(), os.getppid(), os.getppid()))
     time.sleep(3)
@@ -12328,7 +12335,7 @@ if __name__ == '__main__':
     p = Process(target=task,)
     p.start()  # 给操作系统发送一个信号
 
-    p.join()  # 子进程先执行
+    p.join()  # 阻塞,子进程执行完毕后继续执行
     print('主流程', os.getpid(), os.getppid())
     print(p.pid)
 ```
@@ -12428,7 +12435,7 @@ daemon把进程设置为守护进程
 
 - 需要强调的是：运行完毕并非终止运行
 - 对主进程来说，运行完毕指的是主进程代码运行完毕
-- 主进程在其代码结束后就已经算运行完毕了（守护进程在此时就被回收），然后主进程会一直等非守护的子进程都运行完毕后回收子进程的资源(否则会产生僵尸进程)，才会结束
+- 主进程在其代码结束后就已经算运行完毕了（守护进程在此时就被回收），然后主进程会一直等非守护的子进程都运行完毕后回收子进程的资源（否则会产生僵尸进程），才会结束
 
 `p.daemon = 布尔值`，守护进程（必须放在start之前）
 
@@ -12581,7 +12588,7 @@ Queue([maxsize]):创建共享的进程队列，Queue是多进程安全的队列�
 **参数介绍：**
 
 ```powershell
-maxsize是队列中允许最大项数，省略则无大小限制。
+maxsize 是队列中允许最大项数，省略则无大小限制。
 但需要明确：
     1、队列内存放的是消息而非大数据
     2、队列占用的是内存空间，因而maxsize即便是无大小限制也受限于内存大小
@@ -12590,8 +12597,8 @@ maxsize是队列中允许最大项数，省略则无大小限制。
 **主要方法介绍：**
 
 ```powershell
-q.put方法用以插入数据到队列中。
-q.get方法可以从队列读取并且删除一个元素。
+q.put 方法用以插入数据到队列中。
+q.get 方法可以从队列读取并且删除一个元素。
 ```
 
 **队列的使用**：
@@ -12796,7 +12803,7 @@ if __name__ == '__main__':
         p.start()
 ```
 
-1. 在数据安全的基础上,才考虑效率问题
+1. 在数据安全的基础上，才考虑效率问题
 2. 同步存在的意义：数据的安全性
 3. 在主进程中实例化 mutex = Lock()
 4. 把这个锁传递给子进程
@@ -12845,8 +12852,6 @@ if __name__ == '__main__':
 
     # spawn模式，需要特殊处理。
     time.sleep(7)
-
-
 ```
 
 ```python
@@ -12946,7 +12951,6 @@ def task(num):
 
 
 if __name__ == '__main__':
-
     pool = ProcessPoolExecutor(4)
     for i in range(10):
         pool.submit(task, i)
@@ -12982,7 +12986,6 @@ if __name__ == '__main__':
 
     print(multiprocessing.current_process())
     pool.shutdown(True)
-
 ```
 
 注意：如果在进程池中要使用进程锁，则需要基于Manager中的Lock和RLock来实现。
@@ -13150,7 +13153,7 @@ if __name__ == '__main__':
 
 线程的开销：
 
-- 线程的创建,也需要一些开销(一个存储局部变量的结构,记录状态)
+- 线程的创建，也需要一些开销(一个存储局部变量的结构,记录状态)
     - 线程的创建、切换和销毁开销远远小于进程
     - 进程：数据隔离， 开销大，同时执行几段代码
     - 线程：数据共享，开销小，同时执行几段代码
