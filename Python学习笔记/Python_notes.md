@@ -49,7 +49,7 @@
 
 - 通过编程,使软件代替人类的行为活动,提高人类工作效率,推动人类的发展；
 
-![img](https://pythonav.com/media/uploads/2019/03/26/%E8%A7%A3%E9%87%8A%E5%99%A8.png)
+![1655518828743](./Python_notes.assets/1655518828743.png)
 
 ### 1.6 进制
 
@@ -117,34 +117,34 @@
 
 - 4.安装，勾选 Add Python 3.3 to PATH
 
-<img src="https://pythonav.com/media/uploads/2019/02/21/1548322161259.png" alt="img" style="zoom:50%;" />
+![1655518881053](./Python_notes.assets/1655518881053.png)
 
 - 5.下一步
 
-<img src="https://pythonav.com/media/uploads/2019/02/21/1548322484875.png" alt="img" style="zoom:50%;" />
+![1655518910774](./Python_notes.assets/1655518910774.png)
 
 - 6.勾选并安装
 
-<img src="https://pythonav.com/media/uploads/2019/02/21/1548322828889.png" alt="img" style="zoom:50%;" />
+![1655518940910](./Python_notes.assets/1655518940910.png)
 
 - 7.安装成功
 
-<img src="https://pythonav.com/media/uploads/2019/02/21/1548322916218.png" alt="img" style="zoom:50%;" />
+![1655519177719](./Python_notes.assets/1655519177719.png)
 
 - 8.进行验，打开终端,输入python，进入到交互模式,说明安装成功
 
-![1639296246484](\Python_notes.assets\1639296246484.png)
+![1639296246484](./Python_notes.assets./1639296246484.png)
 
 #### 2.3.2 开发工具安装
 
 - 下载`Pycharm`
-  - 1.官网:`<http://www.jetbrains.com/pycharm/download/#section=windows>`，选择专业版下载<img src="J:\homework\Python学习笔记\Python_notes.assets\1548323345533.png" alt="img" style="zoom:50%;" />
-- 2.双击安装，一路下一步,显示下图为成功<img src="J:\homework\Python学习笔记\Python_notes.assets\1548324124987.png" alt="img" style="zoom:50%;" />
-- 3.首次使用![img](J:\homework\Python学习笔记\Python_notes.assets\1548326046866.png)
-- 4.用户许可选择Accept![img](J:\homework\Python学习笔记\Python_notes.assets\1548326092371.png)
+  - 1.官网:`<http://www.jetbrains.com/pycharm/download/#section=windows>`，选择专业版下载<img src="./Python_notes.assets/1548323345533.png" alt="img" style="zoom:50%;" />
+- 2.双击安装，一路下一步,显示下图为成功<img src="./Python_notes.assets/1548324124987.png" alt="img" style="zoom:50%;" />
+- 3.首次使用![img](./Python_notes.assets/1548326046866.png)
+- 4.用户许可选择Accept![img](./Python_notes.assets/1548326092371.png)
 - 5.激活`Pycharm`
-  - 激活详情`<http://idea.lanyus.com/>`页面![img](J:\homework\Python学习笔记\Python_notes.assets\1548326302535.png)
-- 6.启动成功![img](J:\homework\Python学习笔记\Python_notes.assets\1548326451573.png)
+  - 激活详情`<http://idea.lanyus.com/>`页面![img](./Python_notes.assets/1548326302535.png)
+- 6.启动成功![img](./Python_notes.assets/1548326451573.png)
 
 ### 2.4 编码基础
 
@@ -2218,9 +2218,9 @@ The default mode is 'rt' (open for reading text).
 
 - 相对路径：运行程序中写的文件路径为相对路径，在终端运行可能报找不到文件路径
 
-![image-20210531133025734](j:\homework\Python学习笔记\Python_notes.assets\image-20210531133025734.png)
+![image-20210531133025734](j:\homework\Python学习笔记\Python_notes.assets/image-20210531133025734.png)
 
-![image-20210531132954308](j:\homework\Python学习笔记\Python_notes.assets\image-20210531132954308.png)
+![image-20210531132954308](j:\homework\Python学习笔记\Python_notes.assets/image-20210531132954308.png)
 
 解决：
 
@@ -2242,7 +2242,7 @@ a.close()
 
 - 绝对路径：windows中文件绝对路径容易出现问题，需要加r或双\\
 
-![image-20210531133237191](j:\homework\Python学习笔记\Python_notes.assets\image-20210531133237191.png)
+![image-20210531133237191](j:\homework\Python学习笔记\Python_notes.assets/image-20210531133237191.png)
 
 #### 5.3.2 写文件
 
@@ -2857,7 +2857,7 @@ root = ET.XML(content)
 print(root)  # <Element 'data' at 0x00000217E6955778>
 ```
 
-![image-20210601141917428](j:\homework\Python学习笔记\Python_notes.assets\image-20210601141917428.png)
+![image-20210601141917428](j:\homework\Python学习笔记\Python_notes.assets/image-20210601141917428.png)
 
 ##### 6.1.3.2 读取节点数据
 
@@ -3173,7 +3173,7 @@ sheet = wb.worksheets[0]
 
 - 读取合并单元格的数据
 
-![image-20210602201719149](j:\homework\Python学习笔记\Python_notes.assets\image-20210602201719149.png)
+![image-20210602201719149](j:\homework\Python学习笔记\Python_notes.assets/image-20210602201719149.png)
 
 ```python
 # 读取合并单元格
@@ -5349,7 +5349,7 @@ POOL.shutdown()
 
 ### 6.11 内置函数
 
-![image-20201230201618164](j:\homework\Python学习笔记\Python_notes.assets\image-20201230201618164.png)
+![image-20201230201618164](j:\homework\Python学习笔记\Python_notes.assets/image-20201230201618164.png)
 
 - 编码相关
 
@@ -6910,7 +6910,7 @@ v2 = v1.timestamp()
 print(v2)  # 1623924093.286256
 ```
 
-![image-20210104171741529](j:\homework\Python学习笔记\Python_notes.assets\image-20210104171741529.png)
+![image-20210104171741529](j:\homework\Python学习笔记\Python_notes.assets/image-20210104171741529.png)
 
 时间相关的操作，时间有三种表示方式：
 
@@ -11172,9 +11172,9 @@ if 'egon' == info['name'] and 18 == info['age']:
 
 三次握手
 
- ![三次握手](J:\homework\Python学习笔记\Python_notes.assets\format,png) 
+ ![三次握手](./Python_notes.assets/format,png) 
 
-  ![1643078023700](J:\homework\Python学习笔记\Python_notes.assets\1643078023700.png)
+  ![1643078023700](./Python_notes.assets/1643078023700.png)
 
 这张图展示了建立TCP连接所需的三次握手过程。
 
@@ -11194,9 +11194,9 @@ if 'egon' == info['name'] and 18 == info['age']:
 
 四次挥手：
 
-  ![四次挥手](J:\homework\Python学习笔记\Python_notes.assets\format1,png) 
+  ![四次挥手](./Python_notes.assets/format1,png) 
 
- ![1643078043420](J:\homework\Python学习笔记\Python_notes.assets\1643078043420.png)
+ ![1643078043420](./Python_notes.assets/1643078043420.png)
 
 这张图展示了断开TCP连接所需的四次挥手过程。
 
@@ -11929,7 +11929,7 @@ Python中通过多进程可以利用CPU的多核优势，计算密集型操作�
   
     - 就绪、运行、阻塞
     
-    ![1643078171945](J:\homework\Python学习笔记\Python_notes.assets\1643078171945.png)
+    ![1643078171945](./Python_notes.assets/1643078171945.png)
 
 #### 10.2.2 进程介绍
 
@@ -13024,7 +13024,7 @@ if __name__ == '__main__':
 
 **案例：计算每天用户访问情况。**
 
-![image-20210326132114601](J:\homework\Python学习笔记\Python_notes.assets\image-20210326132114601.png)
+![image-20210326132114601](./Python_notes.assets/image-20210326132114601.png)
 
 示例一：
 
@@ -13601,15 +13601,15 @@ GIL本质就是一把互斥锁，既然是互斥锁，所有互斥锁的本质�
 
 GIL全局解释器锁（Global Interpreter Lock），是CPython解释器特有一个玩意，让一个进程中同一个时刻只能有一个线程可以被CPU调用。
 
-![1644832594283](J:\homework\Python学习笔记\Python_notes.assets\1644832594283.png)
+![1644832594283](./Python_notes.assets/1644832594283.png)
 
 如果程序想利用 计算机的多核优势，让CPU同时处理一些任务，适合用多进程开发（即使资源开销大）。
 
-![1644832641686](J:\homework\Python学习笔记\Python_notes.assets\1644832641686.png)
+![1644832641686](./Python_notes.assets/1644832641686.png)
 
 如果程序不利用 计算机的多核优势，适合用多线程开发。
 
-![1644832724915](J:\homework\Python学习笔记\Python_notes.assets\1644832724915.png)
+![1644832724915](./Python_notes.assets/1644832724915.png)
 
 常见的程序开发中，计算操作需要使用CPU多核优势，IO操作不需要利用CPU的多核优势，所以，就有这一句话：
 
@@ -14054,7 +14054,7 @@ for i in range(2):
     t.start()
 ```
 
-![image-20210225102151570](J:\homework\Python学习笔记\Python_notes.assets\image-20210225102151570.png)
+![image-20210225102151570](./Python_notes.assets/image-20210225102151570.png)
 
 所以，要多注意看一些开发文档中是否标明线程安全。
 
@@ -14094,7 +14094,7 @@ ps aux |grep python
 
 解决这个问题就是加GIL锁处理，保证python解释器同一时间只能执行一个任务的代码，如图：
 
-![1643078259276](J:\homework\Python学习笔记\Python_notes.assets\1643078259276.png)
+![1643078259276](./Python_notes.assets/1643078259276.png)
 
 ##### 10.3.5.4 线程锁
 
@@ -16269,7 +16269,7 @@ if __name__ == '__main__':
 
 socket默认情况下都是blocking，一个典型的读操作流程是这样的：
 
-![1643078596539](J:\homework\Python学习笔记\Python_notes.assets\1643078596539.png)
+![1643078596539](./Python_notes.assets/1643078596539.png)
 
 当用户进程调用了recvfrom这个系统调用，kernel就开始了IO的第一个阶段：准备数据。对于network io来说，很多时候数据在一开始还没有到达，这个时候kernel就要等待足够的数据到来。
 
@@ -16376,7 +16376,7 @@ client.close()
 
 通过设置socket使其变为non-blocking。当对一个non-blocking socket执行读操作时，流程是这个样子：
 
-![1643078400826](J:\homework\Python学习笔记\Python_notes.assets\1643078400826.png)
+![1643078400826](./Python_notes.assets/1643078400826.png)
 
 非阻塞的recvform系统调用调用之后，进程并没有被阻塞，内核马上返回给进程，如果数据还没准备好，此时会返回一个error。进程在返回之后，可以干点别的事情，然后再发起recvform系统调用。重复上面的过程，循环往复的进行recvform系统调用。这个过程通常被称之为轮询。
 
@@ -16480,7 +16480,7 @@ IO multiplexing这个词可能有点陌生，但是如果我说select/epoll，�
 
 select/epoll的好处就在于单个process就可以同时处理多个网络连接的IO。它的基本原理就是select/epoll这个function会不断的轮询所负责的所有socket，当某个socket有数据到达了，就通知用户进程。
 
-![1643078336325](J:\homework\Python学习笔记\Python_notes.assets\1643078336325.png)
+![1643078336325](./Python_notes.assets/1643078336325.png)
 
 当用户进程调用了select，那么整个进程会被block，而同时，kernel会“监视”所有select负责的socket，当任何一个socket中的数据准备好了，select就会返回。这个时候用户进程再调用read操作，将数据从kernel拷贝到用户进程。这个图和blocking IO的图其实并没有太大的不同，事实上还更差一些。因为这里需要使用两个系统调用\(select和recvfrom\)，而blocking IO只调用了一个系统调用\(recvfrom\)。但是，用select的优势在于它可以同时处理多个connection。
 
@@ -16661,7 +16661,7 @@ while True:
 
 asynchronous IO其实用得不多，从内核2.6版本才开始引入。先看一下它的流程：
 
-![1643078454115](J:\homework\Python学习笔记\Python_notes.assets\1643078454115.png)
+![1643078454115](./Python_notes.assets/1643078454115.png)
 
 用户进程发起read操作之后，立刻就可以开始去做其它的事。而另一方面，从kernel的角度，当它受到一个asynchronous read之后，首先它会立刻返回，所以不会对用户进程产生任何block。然后，kernel会等待数据准备完成，然后将数据拷贝到用户内存，当这一切都完成之后，kernel会给用户进程发送一个signal，告诉它read操作完成了。
 
@@ -24796,19 +24796,19 @@ React-native inoic
 
 以var x = 12，y=5来演示示例：
 
-![1643078679798](J:\homework\Python学习笔记\Python_notes.assets\1643078679798.png)
+![1643078679798](./Python_notes.assets/1643078679798.png)
 
 算数运算符：
 
 var a = 5，b=2
 
-![1643078694572](J:\homework\Python学习笔记\Python_notes.assets\1643078694572.png)
+![1643078694572](./Python_notes.assets/1643078694572.png)
 
 比较运算符：
 
 var x = 5；
 
-![1643078665588](J:\homework\Python学习笔记\Python_notes.assets\1643078665588.png)
+![1643078665588](./Python_notes.assets/1643078665588.png)
 
 注意：==比较的是值的相同，===比较的是值和数据类型（内存地址）
 
@@ -25882,7 +25882,7 @@ Browser Object Model ，简称（BOM）浏览器内核主要指的是浏览器�
 
 BOM骨架图:
 
-![1643078868914](J:\homework\Python学习笔记\Python_notes.assets\1643078868914.png)
+![1643078868914](./Python_notes.assets/1643078868914.png)
 
 - **window对象是BOM的顶层(核心)对象**，所有对象都是通过它延伸出来的，也可以称为window的子对象。
 - document 对象，文档对象；
@@ -26126,7 +26126,7 @@ HTML加载完毕，渲染引擎会在内存中把HTML文档，生成一个DOM树
 
 **DOM骨架树（一切皆是节点）**
 
-![1643078838013](J:\homework\Python学习笔记\Python_notes.assets\1643078838013.png)
+![1643078838013](./Python_notes.assets/1643078838013.png)
 
 - **元素节点**：HMTL标签。
 - **文本节点**：标签中的文字（比如标签之间的空格、换行）
@@ -29465,17 +29465,17 @@ jquery的$.ajax()方法 是做ajax技术经常使用的一个方法。
 
 - 请求格式
 
-     ![img](J:\homework\Python学习笔记\Python_notes.assets\Python学习笔记.md) 
+     ![img](./Python_notes.assets/Python学习笔记.md) 
 
     请求首行与请求头的部分用\r\n分隔,请求头与请求体以\r\n\r\n分隔
 
 - 响应格式
 
-      ![img](J:\homework\Python学习笔记\Python_notes.assets\yuan_6.png) 
+      ![img](./Python_notes.assets/yuan_6.png) 
 
 django请求生命周期：
 
- <img src="J:\homework\Python学习笔记\Python_notes.assets\202011130830231.png" alt="202011130830231.png"  /> 
+ <img src="./Python_notes.assets/202011130830231.png" alt="202011130830231.png"  /> 
 
 1. wsgi，他就是socket服务端，用于接收用户请求并将请求进行初次封装，然后将请求交给web框架
 2. 中间件，帮助我们对请求进行校验或在请求对象中添加其他相关数据，例如：csrf
@@ -30900,7 +30900,7 @@ ORM的方法论基于三个核心原则：
 - 传达性：数据库结构被任何人都能理解的语言文档化
 - 精确性：基于数据模型创建正确标准化了的结构。 
 
-![1639297421284](J:\homework\Python学习笔记\Python_notes.assets\1639297421284.png)
+![1639297421284](./Python_notes.assets/1639297421284.png)
 
 ```python
 #sql中的表                                                      
@@ -32062,11 +32062,11 @@ Django 模型类的Meta是一个内部类，它用于定义一些Django模型类
 
   如果verbose_name 后面没有_plural选项，则会在网站上类名后面自动拼接一个‘s'，效果如下：
 
-  ![image-20210930143230212](j:\homework\Python学习笔记\Python_notes.assets\image-20210930143230212.png)
+  ![image-20210930143230212](j:\homework\Python学习笔记\Python_notes.assets/image-20210930143230212.png)
 
   将verbose_name = 'hello'改为verbose_name_plural = 'hello'，效果如下：
 
-  ![image-20210930143338661](j:\homework\Python学习笔记\Python_notes.assets\image-20210930143338661.png)
+  ![image-20210930143338661](j:\homework\Python学习笔记\Python_notes.assets/image-20210930143338661.png)
 
 
 
@@ -33383,7 +33383,7 @@ class CustomerMiddleware2(SecurityMiddleware):
 
 流程图：
 
-![1643078499115](J:\homework\Python学习笔记\Python_notes.assets\1643078499115.png)
+![1643078499115](./Python_notes.assets/1643078499115.png)
 
 自定义中间件2：process_view
 
@@ -33429,7 +33429,7 @@ class CustomerMiddleware2(SecurityMiddleware):
 
 流程图：
 
-![1643078536810](J:\homework\Python学习笔记\Python_notes.assets\1643078536810.png)
+![1643078536810](./Python_notes.assets/1643078536810.png)
 
 之定义中间件3：process_exception
 
@@ -33477,7 +33477,7 @@ class CustomerMiddleware2(SecurityMiddleware):
 
 流程图：
 
-![1643078563298](J:\homework\Python学习笔记\Python_notes.assets\1643078563298.png)
+![1643078563298](./Python_notes.assets/1643078563298.png)
 
 
 
@@ -33504,7 +33504,7 @@ class CustomerMiddleware2(SecurityMiddleware):
 
 君子协议：robots.txt协议规定了网站中那些数据可以被爬虫爬取，那些数据不可以被爬取。
 
-![image-20210620152318684](j:\homework\Python学习笔记\Python_notes.assets\image-20210620152318684.png)
+![image-20210620152318684](j:\homework\Python学习笔记\Python_notes.assets/image-20210620152318684.png)
 
 http协议：就是服务器和客户端进行数据交互的一种形式。
 
@@ -35217,7 +35217,7 @@ IMAGES_STORE = './8.scrapy/imgPro/imgs'
 
 #### 18.8.4 五大核心组件
 
-![image-20210721114046503](j:\homework\Python学习笔记\Python_notes.assets\image-20210721114046503.png)
+![image-20210721114046503](j:\homework\Python学习笔记\Python_notes.assets/image-20210721114046503.png)
 
 爬虫（Spider）：爬虫是主要干活的，用于特定的网页中提取自己需要的信息，即所谓的实体（item），用户也可以从中提取出链接，让Scrapy继续抓取下一个页面。
 
@@ -35637,17 +35637,17 @@ class SunproPipeline:
 
 在前面我们已经实现了Scrapy爬虫，虽然爬虫是异步加多线程的，但是我们只能在一台主机上运行，所以爬取效率还是有限的，分布式爬虫则是将多台主机组合起来，共同完成一个爬取任务，这将大大提高爬取的效率。
 
-![20180525220702269](j:\homework\Python学习笔记\Python_notes.assets\20180525220702269.png)
+![20180525220702269](j:\homework\Python学习笔记\Python_notes.assets/20180525220702269.png)
 
 Scrapy单机爬虫中有一个本地爬取队列Queue，这个队列是利用deque模块实现的。如果新的Request生成就会放到队列里面，随后Request被Scheduler调度。之后，Request交给Downloader执行爬取，简单的调度架构如下图所示。
 
-![20180525220738869](j:\homework\Python学习笔记\Python_notes.assets\20180525220738869.png)
+![20180525220738869](j:\homework\Python学习笔记\Python_notes.assets/20180525220738869.png)
 
 如果两个Scheduler同时从队列里面取Request，每个Scheduler都有其对应的Downloader，那么在带宽足够、正常爬取且不考虑队列存取压力的情况下，爬取效率会有什么变化？没错，爬取效率会翻倍。
 
 这样，Scheduler可以扩展多个，Downloader也可以扩展多个。而爬取队列Queue必须始终为一个，也就是所谓的共享爬取队列。这样才能保证Scheduer从队列里调度某个Request之后，其他Scheduler不会重复调度此Request，就可以做到多个Schduler同步爬取。这就是分布式爬虫的基本雏形，简单调度架构如下图所示。
 
-![20180525220747525](j:\homework\Python学习笔记\Python_notes.assets\20180525220747525.png)
+![20180525220747525](j:\homework\Python学习笔记\Python_notes.assets/20180525220747525.png)
 
 我们需要做的就是在多台主机上同时运行爬虫任务协同爬取，而协同爬取的前提就是共享爬取队列。这样各台主机就不需要各自维护爬取队列，而是从共享爬取队列存取Request。但是各台主机还是有各自的Scheduler和Downloader，所以调度和下载功能分别完成。如果不考虑队列存取性能消耗，爬取效率还是会成倍提高。
 
@@ -36006,11 +36006,11 @@ class ZlsPipeline(object):
 
 1. **前后端不分离**：客户端看到的内容和所有界面效果都是由服务端提供出来的，这种情况下，前端页面中会出现很多涉及到服务器端的模板语法。
 
-![depended_frontend_backend](j:\homework\Python学习笔记\Python_notes.assets\depended_frontend_backend.png)
+![depended_frontend_backend](j:\homework\Python学习笔记\Python_notes.assets/depended_frontend_backend.png)
 
 2. **前后端分离**：把前端的界面效果（html，css，js分离到另一个项目中，python服务端只需要返回数据即可。）前端形成一个独立的网站，服务端构成一个独立的网站。
 
-![indepent_frontend_backend](j:\homework\Python学习笔记\Python_notes.assets\indepent_frontend_backend.png)
+![indepent_frontend_backend](j:\homework\Python学习笔记\Python_notes.assets/indepent_frontend_backend.png)
 
 django，一般都是做Web网站，如果可以利用django实现前后端分离，则django就可以完成地铁站的运营调度系统，路由的终端系统，pos机的服务端系统，游戏的服务端后台，软件的服务端后台。
 
@@ -36041,7 +36041,7 @@ django，一般都是做Web网站，如果可以利用django实现前后端分�
 
 ### 15.3 RESTful API规范
 
-![restful](j:\homework\Python学习笔记\Python_notes.assets\restful.gif)
+![restful](j:\homework\Python学习笔记\Python_notes.assets/restful.gif)
 
 REST全称是Representational State Transfer，中文意思是表述（编者注：通常译为表征）性状态转移。 它首次出现在2000年Roy Fielding的博士论文中。  
 
@@ -36304,7 +36304,7 @@ Django REST framework是一个建立在Django基础之上的Web 应用开发框�
 
 在REST framework中，提供了序列化器对象Serialzier的定义，可以帮助我们简化序列化与反序列化的过程，不仅如此，还提供丰富的类视图、扩展类、视图集来简化视图的编写工作。REST framework还提供了认证、权限、限流、过滤、分页、接口文档等功能支持。REST framework提供了一个用于测试API接口 的可视化Web界面【可以浏览器直接访问接口，drf的api接口测试页面非常美观】。
 
-![drf_logo](j:\homework\Python学习笔记\Python_notes.assets\drf_logo.png)
+![drf_logo](j:\homework\Python学习笔记\Python_notes.assets/drf_logo.png)
 
 中文文档：
 
@@ -36648,29 +36648,29 @@ python manage.py run server
 
 1）在浏览器中输入`http://127.0.0.1:8000/app01/`，可以看到drf提供的api web浏览页面
 
-![image-20210817223350583](j:\homework\Python学习笔记\Python_notes.assets\image-20210817223350583.png)
+![image-20210817223350583](j:\homework\Python学习笔记\Python_notes.assets/image-20210817223350583.png)
 
 2）输入 `http://127.0.0.1:8000/app01/student/`，获取所有数据接口
 
-![image-20210817223521767](j:\homework\Python学习笔记\Python_notes.assets\image-20210817223521767.png)
+![image-20210817223521767](j:\homework\Python学习笔记\Python_notes.assets/image-20210817223521767.png)
 
 3）在页面底部可以访问添加学生的接口，
 
-![image-20210817223610516](j:\homework\Python学习笔记\Python_notes.assets\image-20210817223610516.png)
+![image-20210817223610516](j:\homework\Python学习笔记\Python_notes.assets/image-20210817223610516.png)
 
 4）添加学生后输入`http://127.0.0.1:8000/app01/student/3/`，可以访问获取单个学生信息的接口
 
-![image-20210817223729027](j:\homework\Python学习笔记\Python_notes.assets\image-20210817223729027.png)
+![image-20210817223729027](j:\homework\Python学习笔记\Python_notes.assets/image-20210817223729027.png)
 
 
 
 5）获取单个学生信息后，可以修改访问修改学生的接口
 
-![image-20210817223916174](j:\homework\Python学习笔记\Python_notes.assets\image-20210817223916174.png)
+![image-20210817223916174](j:\homework\Python学习笔记\Python_notes.assets/image-20210817223916174.png)
 
 6）点delete按钮，可以访问删除学生的接口
 
-![image-20210817223949348](j:\homework\Python学习笔记\Python_notes.assets\image-20210817223949348.png)
+![image-20210817223949348](j:\homework\Python学习笔记\Python_notes.assets/image-20210817223949348.png)
 
 ### 15.7 序列化器-Serializer
 
@@ -37316,9 +37316,9 @@ response["company"] = "testing"
 return response
 ```
 
-![image-20210831152058256](j:\homework\Python学习笔记\Python_notes.assets\image-20210831152058256.png)
+![image-20210831152058256](j:\homework\Python学习笔记\Python_notes.assets/image-20210831152058256.png)
 
-![image-20210831152144117](j:\homework\Python学习笔记\Python_notes.assets\image-20210831152144117.png)
+![image-20210831152144117](j:\homework\Python学习笔记\Python_notes.assets/image-20210831152144117.png)
 
 ### 15.9 视图
 
@@ -38502,11 +38502,11 @@ class BookMixinViewSet(ModelViewSet):
 
 1. SimpleRouter
 
-![SimpleRouter](j:\homework\Python学习笔记\Python_notes.assets\SimpleRouter.png)
+![SimpleRouter](j:\homework\Python学习笔记\Python_notes.assets/SimpleRouter.png)
 
 2. DefaultRouter
 
-![DefaultRouter](j:\homework\Python学习笔记\Python_notes.assets\DefaultRouter.png)
+![DefaultRouter](j:\homework\Python学习笔记\Python_notes.assets/DefaultRouter.png)
 
 DefaultRouter与SimpleRouter的区别是，DefaultRouter会多附带一个默认的API根视图，返回一个包含所有列表视图的超链接响应数据。
 
@@ -39108,7 +39108,7 @@ class ExceptionAPIView(ModelViewSet):
         return Response("ok")
 ```
 
-![image-20210930101648428](j:\homework\Python学习笔记\Python_notes.assets\image-20210930101648428.png)
+![image-20210930101648428](j:\homework\Python学习笔记\Python_notes.assets/image-20210930101648428.png)
 
 在主应用的配置文件settings.py中声明自定义的异常处理
 
@@ -39258,7 +39258,7 @@ REST framework可以自动帮助我们生成接口文档。
 
 浏览器访问 `127.0.0.1:8000/docs/`，即可看到自动生成的接口文档。
 
-![image-20210930113831669](j:\homework\Python学习笔记\Python_notes.assets\image-20210930113831669.png)
+![image-20210930113831669](j:\homework\Python学习笔记\Python_notes.assets/image-20210930113831669.png)
 
 **两点说明：**
 
@@ -39304,7 +39304,7 @@ python manage.py createsuperuser
 
 访问地址：http://127.0.0.1:8000/admin，访问效果如下：
 
-![image-20210930154641861](j:\homework\Python学习笔记\Python_notes.assets\image-20210930154641861.png)
+![image-20210930154641861](j:\homework\Python学习笔记\Python_notes.assets/image-20210930154641861.png)
 
 admin站点默认并没有提供其他的操作给我们，所以一切功能都需要我们进行配置，在项目中，我们每次创建子应用的时候都会存在一个admin.py文件，这个文件就是用于配置admin站点功能的文件。
 
@@ -39733,7 +39733,7 @@ redis 是一个开源（BSD许可）的，内存中的数据结构存储系统�
 
 Redis 中缓存热点数据，能够保护数据库，提高查询效率。如下图所示，我们在碰到需要执行耗时特别久，且结果不频繁变动的SQL，就特别适合将运行结果放入缓存。这样，后面的请求就去缓存中读取，使得请求能够迅速响应。
 
-![img](j:\homework\Python学习笔记\Python_notes.assets\20180531085918614.jpeg)
+![img](j:\homework\Python学习笔记\Python_notes.assets/20180531085918614.jpeg)
 
 （二）并发
 
@@ -40929,7 +40929,7 @@ MQ全称为Message Queue 消息队列（MQ）是一种应用程序对应用程�
 
 接下来利用一个外卖系统的消息推送给大家解释下MQ的意义。
 
-![1639297222548](J:\homework\Python学习笔记\Python_notes.assets\1639297222548.png)
+![1639297222548](./Python_notes.assets/1639297222548.png)
 
 **RabbitMQ**
 
@@ -41468,7 +41468,7 @@ Git本身完全可以做到版本控制，但其所有内容以及版本记录�
     git log
     ```
 
-<img src="j:\homework\Python学习笔记\Python_notes.assets\425762-20170811093733792-860907399.png" alt="img" style="zoom:67%;" />
+<img src="j:\homework\Python学习笔记\Python_notes.assets/425762-20170811093733792-860907399.png" alt="img" style="zoom:67%;" />
 
 **版本库**：工作区检测到有文件发生变化，那么意味着较上一个版本之后对程序进行了修改，修改完成之后，可以当做下一版本进行提交，那么就是执行 【git add .】 将所有文件提交到暂存区，然后再执行【git commit -m '又一个版本'】提交到版本库的分支即可，之后可以使用【git log】命令查看版本记录。
 
@@ -41515,7 +41515,7 @@ git commit -m "短视频"
     git 
     ```
 
-    <img src="j:\homework\Python学习笔记\Python_notes.assets\425762-20170811110830683-181174888.png" alt="img" style="zoom:67%;" />
+    <img src="j:\homework\Python学习笔记\Python_notes.assets/425762-20170811110830683-181174888.png" alt="img" style="zoom:67%;" />
 
 示例：
 
@@ -41672,7 +41672,7 @@ print("提交短视频")
 
 分支学习：branch称为分支，默认仅有一个名为master的分支。一般开发新功能流程为：开发新功能时会在分支dev上进行，开发完毕后再合并到master分支。
 
-![img](j:\homework\Python学习笔记\Python_notes.assets\425762-20170811152733617-1247689823.png)
+![img](j:\homework\Python学习笔记\Python_notes.assets/425762-20170811152733617-1247689823.png)
 
 **命令总结**：
 
@@ -41784,7 +41784,7 @@ $ git branch
 
 学习参考上图，小P也可以按照着这样的流程进行开发，如果遇到上文开发到一般需要临时修复Bug的情况，可以按照下图的流程进行：
 
-![1639276593788](J:\homework\Python学习笔记\Python_notes.assets\1639276593788.png)
+![1639276593788](./Python_notes.assets/1639276593788.png)
 
 ```shell
 Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/git-dbhot (master)
@@ -41930,9 +41930,9 @@ GitHub，一个基于Git实现的代码托管的平台，可以将内容以及�
 - 创建完后，会生成一个仓库地址
 - git可以是用该URL进行向远程推送版本信息或获取版本信息
 
-![1639276866245](J:\homework\Python学习笔记\Python_notes.assets\1639276866245.png)
+![1639276866245](./Python_notes.assets/1639276866245.png)
 
-![1639276940571](J:\homework\Python学习笔记\Python_notes.assets\1639276940571.png)
+![1639276940571](./Python_notes.assets/1639276940571.png)
 
 <img src="https://images2017.cnblogs.com/blog/425762/201708/425762-20170812194454960-1674213106.png" alt="img" style="zoom:50%;" />
 
@@ -42286,7 +42286,7 @@ To https://github.com/zhangzhqiang/dbhot.git
 git pull db-hot dev 等于 git fetch db-hot dev 加 git merge db-hot dev
 ```
 
-![1639278963127](J:\homework\Python学习笔记\Python_notes.assets\1639278963127.png)
+![1639278963127](./Python_notes.assets/1639278963127.png)
 
 ###### 16.3.2.5.1 rebase的作用
 
@@ -42468,21 +42468,21 @@ git log --graph --pretty=format:"%h %s"
 
     > https://docs.github.com/cn/account-and-profile/setting-up-and-managing-your-github-user-account/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository
 
-![1639279335914](J:\homework\Python学习笔记\Python_notes.assets\1639279335914.png)
+![1639279335914](./Python_notes.assets/1639279335914.png)
 
 2. 组织：将成员邀请进入组织，组织下可以创建多个仓库，组织成员可以向组织下仓库提交代码。
 
-![1639279591028](J:\homework\Python学习笔记\Python_notes.assets\1639279591028.png)
+![1639279591028](./Python_notes.assets/1639279591028.png)
 
-![1639279910643](J:\homework\Python学习笔记\Python_notes.assets\1639279910643.png)
+![1639279910643](./Python_notes.assets/1639279910643.png)
 
-![1639280079225](J:\homework\Python学习笔记\Python_notes.assets\1639280079225.png)
+![1639280079225](./Python_notes.assets/1639280079225.png)
 
-![1639280182089](J:\homework\Python学习笔记\Python_notes.assets\1639280182089.png)
+![1639280182089](./Python_notes.assets/1639280182089.png)
 
-![1639280256781](J:\homework\Python学习笔记\Python_notes.assets\1639280256781.png)
+![1639280256781](./Python_notes.assets/1639280256781.png)
 
-![1639280294887](J:\homework\Python学习笔记\Python_notes.assets\1639280294887.png)
+![1639280294887](./Python_notes.assets/1639280294887.png)
 
 ```shell
 git add .
@@ -42503,17 +42503,17 @@ git clone -b v3.0 地址  # 指定tag下载代码
 
 **1. 邀请新人加入组织，组织默认只有读的权限，可以去看其他项目的代码，但不可以写**
 
-![1639371179037](J:\homework\Python学习笔记\Python_notes.assets\1639371179037.png)
+![1639371179037](./Python_notes.assets/1639371179037.png)
 
 **2. 邀请加入项目，针对项目给写的权限**
 
-![1639280471746](J:\homework\Python学习笔记\Python_notes.assets\1639280471746.png)
+![1639280471746](./Python_notes.assets/1639280471746.png)
 
-![1639280536295](J:\homework\Python学习笔记\Python_notes.assets\1639280536295.png)
+![1639280536295](./Python_notes.assets/1639280536295.png)
 
 邀请新成员成为项目的协作者，在项目中添加成员，并给予写的权限，在组织内只有查的权限，无法写其他的项目
 
-![1639280570502](J:\homework\Python学习笔记\Python_notes.assets\1639280570502.png)
+![1639280570502](./Python_notes.assets/1639280570502.png)
 
 ###### 16.3.2.6.3 新人下载代码开发
 
@@ -42559,19 +42559,19 @@ git push origin tongchengre
 
 1. 先配置代码review后，才能合并到dev分支
 
-![1639375742980](J:\homework\Python学习笔记\Python_notes.assets\1639375742980.png)
+![1639375742980](./Python_notes.assets/1639375742980.png)
 
-![1639375841685](J:\homework\Python学习笔记\Python_notes.assets\1639375841685.png)
+![1639375841685](./Python_notes.assets/1639375841685.png)
 
 2. 小弟提交code review申请
 
-![1639375945589](J:\homework\Python学习笔记\Python_notes.assets\1639375945589.png)
+![1639375945589](./Python_notes.assets/1639375945589.png)
 
-![1639379748254](J:\homework\Python学习笔记\Python_notes.assets\1639379748254.png)
+![1639379748254](./Python_notes.assets/1639379748254.png)
 
 3. 组长做code review后可以删除分支
 
-![1639380027265](J:\homework\Python学习笔记\Python_notes.assets\1639380027265.png)
+![1639380027265](./Python_notes.assets/1639380027265.png)
 
 ###### 16.2.6.5 提测上线（预发布）
 
@@ -42621,7 +42621,7 @@ git clone -b v2.0 地址
 
 1. fork源代码，将别人的源代码拷贝到自己的远程仓库
 
-![1639380158307](J:\homework\Python学习笔记\Python_notes.assets\1639380158307.png)
+![1639380158307](./Python_notes.assets/1639380158307.png)
 2. 在自己的仓库进行修改代码
 
 ```shell
@@ -42751,13 +42751,13 @@ age = 18
 hobby = ["篮球", "美女"]
 ```
 
-![1645069079709](Python_notes.assets\1645069079709.png)
+![1645069079709](Python_notes.assets/1645069079709.png)
 
 在C语言源码中如何体现每个对象中都有相同的值：PyObject结构体（封装了3个值）
 
 有多个元素组成的对象：PyObject结构体（4个值） + ob_size
 
-![1645070099424](J:\homework\Python学习笔记\Python_notes.assets\1645070099424.png)
+![1645070099424](./Python_notes.assets/1645070099424.png)
 
 ##### 16.4.1.2 类型封装结构体
 
@@ -42774,7 +42774,7 @@ data = 3.14
 
 
 
-![1645070191810](J:\homework\Python学习笔记\Python_notes.assets\1645070191810.png)
+![1645070191810](./Python_notes.assets/1645070191810.png)
 
 ##### 16.4.1.3 引用计数器
 
@@ -42813,13 +42813,13 @@ del a  # a变量删除；a对应对象引用计数器-1
 # 回收：1.对象从refchain链表移除； 2.将对象销毁，内存归还。
 ```
 
-![1645074000461](J:\homework\Python学习笔记\Python_notes.assets\1645074000461.png)
+![1645074000461](./Python_notes.assets/1645074000461.png)
 
 ##### 16.4.1.4 循环引用问题
 
 在不重启的情况下，删除后，计数器为1，不会当成垃圾回收，那么这两个列表一直常驻在内存中，永远不会销毁，导致程序一直在运行，内存一直在消耗，时间长了内存就满了，就会产生爆栈，导致内存泄漏，如果重启，则程序终止运行，释放内存。
 
-![1645073973255](J:\homework\Python学习笔记\Python_notes.assets\1645073973255.png)
+![1645073973255](./Python_notes.assets/1645073973255.png)
 
 #### 16.4.2 标记清除
 
@@ -42827,7 +42827,7 @@ del a  # a变量删除；a对应对象引用计数器-1
 
 实现：在python的底层，再维护一个链表，这个链表中放可能存在循环引用的对象（列表/字典/集合/元组）。
 
-![1645095066309](J:\homework\Python学习笔记\Python_notes.assets\1645095066309.png)
+![1645095066309](./Python_notes.assets/1645095066309.png)
 
 在Python内部，某种情况下触发，回去扫描 可能存在循环引用的链表中的每个元素，检查是否有循环引用，如果有则让双方的引用计数器各自减一，如果结果是0则垃圾回收。
 
@@ -42838,7 +42838,7 @@ del a  # a变量删除；a对应对象引用计数器-1
 
 #### 16.4.3 分代回收
 
-![1645180479470](J:\homework\Python学习笔记\Python_notes.assets\1645180479470.png)
+![1645180479470](./Python_notes.assets/1645180479470.png)
 
 将可能存在循环引用的对象维护成三个链表：
 
@@ -43355,11 +43355,11 @@ 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
 参考博客：https://blog.csdn.net/m0_46332820/article/details/119708248
 ```
 
-![1639373585717](J:\homework\Python学习笔记\Python_notes.assets\1639373585717.png)
+![1639373585717](./Python_notes.assets/1639373585717.png)
 
 **报错2：**
 
-![1639379354254](J:\homework\Python学习笔记\Python_notes.assets\1639379354254.png)
+![1639379354254](./Python_notes.assets/1639379354254.png)
 
 ```powershell
 # 1.检查是否设置review代码，如果设置删除

@@ -14,11 +14,11 @@ Linux 能运行主要的 UNIX 工具软件、应用程序和网络协议。它�
 
 Linux 的发行版说简单点就是将 Linux 内核与应用软件做一个打包。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\1511849829609658.jpg)
+![img](./Linux学习笔记.assets/1511849829609658.jpg)
 
 目前市面上较知名的发行版有：Ubuntu、RedHat、CentOS、Debian、Fedora、SuSE、OpenSUSE、Arch Linux、SolusOS 等。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\wKioL1bvVPWAu7hqAAEyirVUn3c446.jpg-wh_651x-s_3197843091.jpg)
+![img](./Linux学习笔记.assets/wKioL1bvVPWAu7hqAAEyirVUn3c446.jpg-wh_651x-s_3197843091.jpg)
 
 **Linux 应用领域：**
 
@@ -77,7 +77,7 @@ Linux是一个全面、丰富多彩的生态圈，主流的IT技术都是各路�
 
 Windows的使用由于美观，便捷，早已深入人心，但是也仅限在PC端耀武扬威，由于Linux的开源、稳定、安全性、开发灵活性，同时因为WIndows系统的自身缺陷，也奠定了Linux操作系统在服务端的位置。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\28.jpeg)
+![img](./Linux学习笔记.assets/28.jpeg)
 
 虽说如此，普通用户想要转变Windows的使用，转变使用Linux还是比较费劲的，因为你曾经的点点点...全部变成了 `命令行` 形式。必须系统的、全面的学习Linux基础知识，方可使用。
 
@@ -110,13 +110,13 @@ Windows的使用由于美观，便捷，早已深入人心，但是也仅限在P
 
 ### 1.2 计算机基础
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\43.gif)
+![img](./Linux学习笔记.assets/43.gif)
 
 如果计算机是一个人体，那么计算机也是有胳膊腿的
 
--  `CPU=脑袋瓜子` ：每个人会作的事情都不一样（微指令集的差异），但主要都是通过脑袋瓜子来进行判断与控制身体各部分的活动；
+-  `CPU=脑袋瓜子` ：每个人会作的事情都不一样（微指令集的差异），但主要都是通过脑袋瓜子来进行判断与控制身体各部分的活动。
 -  `内存=脑袋中放置正在被思考的数据的区块` ：在实际活动过程中，我们的脑袋瓜子需要有外界刺激的数据 （例如光线、环境、语言等） 来分析，那这些互动数据暂时存放的地方就是内存，主要是用来提供给脑袋瓜子判断用的信息。
--  `硬盘=脑袋中放置回忆的记忆区块` ：跟刚刚的内存不同，内存是提供脑袋目前要思考与处理的信息，但是有些生活琐事或其他没有要立刻处理的事情， 就当成回忆先放置到脑袋的记忆深处吧！那就是硬盘！主要目的是将重要的数据记录起来，以便未来将这些重要的经验再次的使用；
+-  `硬盘=脑袋中放置回忆的记忆区块` ：跟刚刚的内存不同，内存是提供脑袋目前要思考与处理的信息，但是有些生活琐事或其他没有要立刻处理的事情， 就当成回忆先放置到脑袋的记忆深处吧！那就是硬盘！主要目的是将重要的数据记录起来，以便未来将这些重要的经验再次的使用。
 - `主板=神经系统`：好像人类的神经一样，将所有重要的元件连接起来，包括手脚的活动都是脑袋瓜子发布命令后， 通过神经（主板）传导给手脚来进行活动啊！
 -  `各项周边设备=人体与外界沟通的手、脚、皮肤、眼睛等` ：就好像手脚一般，是人体与外界互动的重要关键！
 -  `显卡=脑袋中的影像` ：将来自眼睛的刺激转成影像后在脑袋中呈现，所以显卡所产生的数据来源也是CPU控制的。
@@ -136,19 +136,19 @@ Windows的使用由于美观，便捷，早已深入人心，但是也仅限在P
 - 输出设备：屏幕
 - 主机部分：机箱、机箱内的零件
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\37.jpeg)
+![img](./Linux学习笔记.assets/37.jpeg)
 
 我们主要通过键盘鼠标将数据输入到主机里面，再由主机的处理器进行计算，输出图像或是文本信息输出到屏幕中。
 
-![img](http://book.luffycity.com/linux-book/pic/36.jpeg)
+![img](./Linux学习笔记.assets/36.jpeg)
 
 计算机硬件分类：
 
-![image-20211008181018527](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211008181018527.png)
+![image-20211008181018527](./Linux学习笔记.assets/image-20211008181018527.png)
 
 其他系统硬件：
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\55-16336876836319.jpeg)
+![img](./Linux学习笔记.assets/55-16336876836319.jpeg)
 
 主板上有很多接口，包括网卡、显卡、磁盘阵列等，以及与游戏玩家最看重的显卡，它控制着游戏画面、色彩、分辨率，以及存储相关，包括内存条、硬盘、软盘、光驱等。
 
@@ -162,7 +162,7 @@ Windows的使用由于美观，便捷，早已深入人心，但是也仅限在P
 
 超级计算机是运行速度最快的电脑，但是他的维护、操作费用也最高！主要是用于需要有高速计算的计划中。 例如：国防军事、气象预测、太空科技，用在仿真的领域较多。
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\57.jpeg" alt="img" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/57.jpeg" alt="img" style="zoom:50%;" />
 
 
 
@@ -170,19 +170,19 @@ Windows的使用由于美观，便捷，早已深入人心，但是也仅限在P
 
 大型计算机通常也具有数个高速的CPU，功能上虽不及超级计算机，但也可用来处理大量数据与复杂的运算。 例如大型企业的主机、全国性的证券交易所等每天需要处理数百万笔数据的企业机构， 或者是大型企业的数据库服务器等等。
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\58.jpeg" alt="img" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/58.jpeg" alt="img" style="zoom:50%;" />
 
 `工作站:`
 
 工作站的价格又比迷你电脑便宜许多，是针对特殊用途而设计的电脑。在个人电脑的性能还没有提升到目前的状况之前， 工作站电脑的性能/价格比是所有电脑当中较佳的，因此在学术研究与工程分析方面相当常见。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\59.jpeg)
+![img](./Linux学习笔记.assets/59.jpeg)
 
 `微型电脑:`
 
 属于个人笔记本、台式机等
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\60.jpeg)
+![img](./Linux学习笔记.assets/60.jpeg)
 
 **计算机单位：**
 
@@ -196,7 +196,7 @@ Windows的使用由于美观，便捷，早已深入人心，但是也仅限在P
 
 同样的，由于计算机存储越来越大，Byte也太小了，计算机又出现简化的单位KB、MB、GB、TB
 
-![image-20211008181435739](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211008181435739-163368807701515.png)
+![image-20211008181435739](./Linux学习笔记.assets/image-20211008181435739-163368807701515.png)
 
 `速度单位:`
 
@@ -204,7 +204,7 @@ CPU的运算单位通常用MHz或者GHz这样的单位，Hz意味 `秒分之一`
 
 网络传输数据中以bit为单位，因此网络单位通常是 ** `Mbps（Mbits per second） 每秒多少Mbit` **
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\63.jpg" alt="img" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/63.jpg" alt="img" style="zoom:50%;" />
 
 如图3000Mbps传输速度理论上是除以8，5G速度也就是375MByte每秒下载速度。
 
@@ -218,15 +218,15 @@ CPU的运算单位通常用MHz或者GHz这样的单位，Hz意味 `秒分之一`
 
 #### 1.2.1 CPU
 
-服务器的 CPU 相当于人体的大脑，负责计算机的运算和控制，是服务器性能效率的最核心部件。 常见品牌:Intel，AMD
+服务器的 CPU 相当于人体的大脑，负责计算机的运算和控制，是服务器性能效率的最核心部件。 常见品牌：Intel，AMD
 
 一般企业里的服务器，CPU 个(颗)数为 2-4 颗，单个(颗)CPU 是四核，内存总量一般是 16G-256G(32G， 64G)
 
 做虚拟化的宿主机(eg:安装 vmware(虚拟化软件)的服务器)，CPU 颗数 4-8 颗，内存总量一般是 48G-128G，6- 10 个虚拟机。
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\134.jpg" alt="img" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/134.jpg" alt="img" style="zoom:50%;" />
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\42.gif)
+![img](./Linux学习笔记.assets/42.gif)
 
 无论是手机还是电脑，整个机器的最核心部件就是 `中央处理器(Central Processing Unit, CPU)` 
 
@@ -236,17 +236,17 @@ CPU工作主要在于调度与运算，在CPU内部主要分为两个单元：`�
 
 -  `算术逻辑单元(arithmetic and logic unit)` 是能实现多组算术运算和逻辑运算的组合逻辑电路，简称ALU。
 
-![image-20211008182614318](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211008182614318-163368877672419.png)
+![image-20211008182614318](./Linux学习笔记.assets/image-20211008182614318-163368877672419.png)
 
 -  `控制单元（Control Unit）` 负责程序的流程管理。正如工厂的物流分配部门，控制单元是整个CPU的指挥控制中心，由指令寄存器IR(Instruction Register)、指令译码器ID(Instruction Decoder)和操作控制器OC(Operation Controller)三个部件组成，对协调整个电脑有序工作极为重要。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\47.jpg)
+![img](./Linux学习笔记.assets/47.jpg)
 
 CPU读取的数据都是从内存而来，内存中的数据从键盘等输入单元而来。
 
 CPU处理完毕的数据也必须写回内存中，最后到输出设备
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\48.png)
+![img](./Linux学习笔记.assets/48.png)
 
 如图的流向，所有的数据都是经过内存再转出去，这个出/入是CPU发出的控制命令
 
@@ -266,11 +266,11 @@ CPU要处理的数据完全来自于内存，无论是应用程序还是文件�
 
 常见的`RISC`微指令集CPU有甲骨文`Oracle`公司的SPARC系列、IDM公司的Power Architecture 系列、安某公司的ARM CPU系列。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\50.jpeg)
+![img](./Linux学习笔记.assets/50.jpeg)
 
 日常生活离不开CPU，华为的麒麟芯片基于ARM的架构之上，进行了自主研发的芯片，世界上95%的电子产品都是使用的ARM的架构，包括手机与平板，诸如 `苹果、高通、三星、华为` 、这些企业的产品都是在ARM上发展起来的。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\51.jpeg)
+![img](./Linux学习笔记.assets/51.jpeg)
 
 **复杂指令集（Complex Instruction Set Computer, CISC）**
 
@@ -280,17 +280,17 @@ CISC微指令集每个小指令都可以执行一些底层的硬件操作，指�
 
 x86架构的CPU大量使用在 `PC个人电脑` 上面。
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\52.jpeg" alt="img" style="zoom: 33%;" />
+<img src="./Linux学习笔记.assets/52.jpeg" alt="img" style="zoom: 33%;" />
 
 想必大家用电脑这么久了，也听过32位、64位这样的词，这是2003年以前Intel开发的x86架构的CPU由8位升级到16、32位、后来最新的64位，个人笔记本CPU也被称作是x86_64的架构。
 
 这里的位指的是CPU一次能够读取数据的最大量，64位CPU表示一次可以读写64bit的数据，而32位则是32bit的数据，因此从内存中读取数据是有限制的，32位的CPU最多只能搭配4G的内存。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\53.jpeg)
+![img](./Linux学习笔记.assets/53.jpeg)
 
 不同的x86架构的CPU差异在于微指令集的不同，先进的微指令集可以加速多媒体程序的解析，如4k视频加速，也能加强虚拟化技术(Intel-VT)的性能，再如节省电量损耗，省点电费也是不错的。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\54.jpeg)
+![img](./Linux学习笔记.assets/54.jpeg)
 
 **Intel主板架构：**
 
@@ -298,12 +298,12 @@ x86架构的CPU大量使用在 `PC个人电脑` 上面。
 
 早期的芯片组通常分为两个桥接器来控制各个元件的沟通。
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\65.jpg" alt="img" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/65.jpg" alt="img" style="zoom:50%;" />
 
 - 北桥：负责链接速度较快的CPU、内存条、显卡等
 - 南桥：负责连接速度较慢的硬盘、USB、网卡等
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\66.png" alt="img" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/66.png" alt="img" style="zoom:50%;" />
 
 由于CPU需要大量运算，因此发热量很高，必须安装一颗风扇主动进行散热。
 
@@ -321,7 +321,7 @@ PGA的全称叫做“pin grid array”，或者叫“插针网格阵列封装”
 
 PGA的特点就是针脚在CPU上，而主板上是一片小洞洞（针孔）
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\67.jpg" alt="img" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/67.jpg" alt="img" style="zoom:50%;" />
 
 **LGA：**
 
@@ -329,7 +329,7 @@ LGA的全称叫做“land grid array”，或者叫“平面网格阵列封装�
 
 LGA去掉了钎料和铜柱针脚，只留触点，针脚是在主板上的。
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\68.jpg" alt="img" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/68.jpg" alt="img" style="zoom:50%;" />
 
 **BGA：**
 
@@ -337,7 +337,7 @@ BGA的全称叫做“ball grid array”，或者叫“球柵网格阵列封装�
 
 BGA封装也就是焊接的。 焊接方法就是通过植球板将焊锡球先用热风枪吹在CPU触点上，然后对准主板PCB加热即可。
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\69.jpg" alt="img" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/69.jpg" alt="img" style="zoom:50%;" />
 
 ---
 
@@ -351,7 +351,7 @@ BGA封装也就是焊接的。 焊接方法就是通过植球板将焊锡球先�
 
 为了提升效率，一般在开机或者软件在运行的时候，会将常用数据直接从硬盘直接读入内存，以待后续CPU使用，提高计算机运行效率。
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\78.jpg" alt="img" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/78.jpg" alt="img" style="zoom:50%;" />
 
 - 内存是电脑的一个临时存储器，它只负责电脑数据的中转而不能永久保存。
 
@@ -359,7 +359,7 @@ BGA封装也就是焊接的。 焊接方法就是通过植球板将焊锡球先�
 
   理结果送回内存
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\71.png)
+![img](./Linux学习笔记.assets/71.png)
 
 **特点：**
 
@@ -386,7 +386,7 @@ CPU使用的所有数据都来自于内存(main memory)，无论是软件或是�
 - DDR3
 - DDR4
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\70.jpeg)
+![img](./Linux学习笔记.assets/70.jpeg)
 
 **多通道设计：**
 
@@ -400,17 +400,17 @@ CPU使用的所有数据都来自于内存(main memory)，无论是软件或是�
 
 台式机内存：
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\72.jpg)
+![img](./Linux学习笔记.assets/72.jpg)
 
 
 
 笔记本内存：
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\73.gif)
+![img](./Linux学习笔记.assets/73.gif)
 
 **程序、进程、守护进程：**
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\135.gif)
+![img](./Linux学习笔记.assets/135.gif)
 
 程序：python / golang语言编写的代码文件，存放在磁盘中的静态数据
 
@@ -438,13 +438,13 @@ CPU使用的所有数据都来自于内存(main memory)，无论是软件或是�
   - UPS(一组蓄电池)不间断供电(持续供电 10 分钟，IDC 数据中心机房-UPS 1 小时)。 UPS (Uninterruptible Power System/Uninterruptible Power Supply)，即不间断电源，是将蓄电池(多 为铅酸免维护蓄电池)与主机相连接，通过主机逆变器等模块电路将直流电转换成市电的系统 设备。
   - 选双路电的机房，使用双电源、分别接不同路的电，服务器要放到不同的机柜、地区。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\136.jpg)
+![img](./Linux学习笔记.assets/136.jpg)
 
 `中小企业案例：`
 
 对于并发不是很大、数据也不是特别大的网站，读多写少的业务，会先把数据写入到磁盘，然后再通过程序把写到磁盘的数据读入到内存里，再对外通过读内存提供访问服务。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\137.jpg)
+![img](./Linux学习笔记.assets/137.jpg)
 
 核心思想就是，由于内存特性，将数据放入内存读写，比磁盘要快的多。
 
@@ -456,7 +456,7 @@ CPU使用的所有数据都来自于内存(main memory)，无论是软件或是�
 
 显卡对于图像的显示至关重要，因为图像的显示会占用内存，因此显卡一般都会有一个内存的容量，这个显存容量的大小影响到屏幕分辨率与色彩的深度。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\80.gif)
+![img](./Linux学习笔记.assets/80.gif)
 
 早期一些3D运算工作还是交给CPU完成，但是CPU的任务太多，无力再去处理大量的图形计算，显卡厂家在显卡中嵌入了GPU加速的芯片。
 
@@ -480,7 +480,7 @@ CPU使用的所有数据都来自于内存(main memory)，无论是软件或是�
 
 而矿池则是由多个“个体户”加入一个组织一起挖矿，无论谁找到答案挖出虚拟币，所有人同时按贡献的计算能力获得相应的报酬，这种方式能使“个体户”收入更稳定。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\84.jpg)
+![img](./Linux学习笔记.assets/84.jpg)
 
 举一个通俗的例子：
 
@@ -499,9 +499,9 @@ CPU使用的所有数据都来自于内存(main memory)，无论是软件或是�
 
 显卡与主机连接的接口如下：
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\85.jpg)
+![img](./Linux学习笔记.assets/85.jpg)
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\86.jpg)
+![img](./Linux学习笔记.assets/86.jpg)
 
 - VGA，模拟信号传输，主要为15针的连接，较老
 - DVI，常与液晶屏幕的连接
@@ -528,7 +528,7 @@ CPU使用的所有数据都来自于内存(main memory)，无论是软件或是�
 - U盘
 - ...
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\87.jpg)
+![img](./Linux学习笔记.assets/87.jpg)
 
 **由于计算机在工作时，CPU、输入输出设备与存储器之间要大量地交换数据，因此存储器的 存取速度和容量也是影响计算机运行速度的主要因素之一。特别是在服务器优化场景，硬盘的性能 是决定网站性能的重要因素。**
 
@@ -550,7 +550,7 @@ CPU使用的所有数据都来自于内存(main memory)，无论是软件或是�
 
 **机械硬盘：**
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\88.jpg)
+![img](./Linux学习笔记.assets/88.jpg)
 
 常见的硬盘内部构造如图，由圆形盘片、磁头臂、磁头、主轴马达组成。
 
@@ -561,7 +561,7 @@ CPU使用的所有数据都来自于内存(main memory)，无论是软件或是�
 
 **盘片数据：**
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\90.jpg)
+![img](./Linux学习笔记.assets/90.jpg)
 
 磁盘数据有三个核心概念，分别是
 
@@ -583,7 +583,7 @@ CPU使用的所有数据都来自于内存(main memory)，无论是软件或是�
 
 **磁盘分区：**
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\327.jpg)
+![img](./Linux学习笔记.assets/327.jpg)
 
 **磁盘接口：**
 
@@ -597,7 +597,7 @@ CPU使用的所有数据都来自于内存(main memory)，无论是软件或是�
 
 SATA是Serial ATA的缩写，即串行ATA。它是一种电脑总线，主要功能是用作主板和大量存储设备(如硬盘及光盘驱动器)之间的数据传输之用。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\91.jpg)
+![img](./Linux学习笔记.assets/91.jpg)
 
 SATA是市场目前主流的接口，在机械硬盘上使用广泛，且主要分三代：
 
@@ -611,7 +611,7 @@ SATA是市场目前主流的接口，在机械硬盘上使用广泛，且主要�
 
 **SAS接口：**
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\92.jpg)
+![img](./Linux学习笔记.assets/92.jpg)
 
 SAS(Serial Attached SCSI)即串行连接SCSI，是新一代的SCSI技术，和现在流行的Serial ATA(SATA)硬盘相同，都是采用串行技术以获得更高的传输速度，并通过缩短连结线改善内部空间等。
 
@@ -633,7 +633,7 @@ USB即通用串行总线是连接计算机系统与外部设备的一种串口�
 
 如果磁盘是外接式的接口，那么与主板连接的就是USB接口了。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\93.jpg)
+![img](./Linux学习笔记.assets/93.jpg)
 
 传统USB2.0速度较慢，新一代USB3.0则快很多了
 
@@ -648,7 +648,7 @@ USB即通用串行总线是连接计算机系统与外部设备的一种串口�
 
 **固态磁盘：**
 
-![image-20211008211604470](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211008211604470-163369896686012.png)
+![image-20211008211604470](./Linux学习笔记.assets/image-20211008211604470-163369896686012.png)
 
 传统机械磁盘由于在启动的时候，需要驱动马达转动磁盘片，然后再确定数据再哪个扇区，再让磁头正确的读取数据，整个读取速度延迟是很高的！并且机械磁盘由于马达转动，工作时候会有震动伴随着些噪音。
 
@@ -668,9 +668,9 @@ Linux**在设计时是一切接文件**
 
 **零散文件整理：**
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\95.jpg)
+![img](./Linux学习笔记.assets/95.jpg)
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\96.jpg)
+![img](./Linux学习笔记.assets/96.jpg)
 
 想必同学们曾经使用过这个碎片整理功能，那会你可知道为什么要碎片整理吗？
 
@@ -688,7 +688,7 @@ Linux**在设计时是一切接文件**
 
 磁盘阵列还能利用同位检查（Parity Check）的观念，在数组中任意一个硬盘故障时，仍可读出数据，在数据重构时，将数据经计算后重新置入新硬盘中。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\139.jpg)
+![img](./Linux学习笔记.assets/139.jpg)
 
 **你有很多土地，单独管理不方便，且效率很低，整合到一块，统一管理，发挥最大性能。**
 
@@ -727,9 +727,9 @@ RAID有多种整合方式
 
 现在主板一般情况下都集成了三卡(显卡、网卡、声卡)，也有的只集成了声卡和网卡。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\98.jpg)
+![img](./Linux学习笔记.assets/98.jpg)
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\145.jpg)
+![img](./Linux学习笔记.assets/145.jpg)
 
 **BIOS：**
 
@@ -737,11 +737,11 @@ RAID有多种整合方式
 
 但是由于频率非正常速度，可能会造成死机蓝屏。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\75.jpg)
+![img](./Linux学习笔记.assets/75.jpg)
 
 这样的修改动作是被记录到主板上的一个CMOS的芯片上，这个芯片需要额外的供电才可以达到记录功能，这就是为什么主板上有一块电池的原因！
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\74.jpg)
+![img](./Linux学习笔记.assets/74.jpg)
 
 
 
@@ -783,7 +783,7 @@ Tip：
 - 生产中一般单个服务器核心业务最好使用双电源 **AB** 线路。
 - 如果集群(一堆机器做一件事)的情况可以不用双电源。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\133.jpg)
+![img](./Linux学习笔记.assets/133.jpg)
 
 **UPS不间断电源：**
 
@@ -797,9 +797,9 @@ UPS（Uninterruptible Power System/Uninterruptible Power Supply），即不间�
 
 UPS 设备通常对电压过高或电压过低都能提供保护。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\102.jpg)
+![img](./Linux学习笔记.assets/102.jpg)
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\103.jpg)
+![img](./Linux学习笔记.assets/103.jpg)
 
 ---
 
@@ -815,7 +815,7 @@ UPS 设备通常对电压过高或电压过低都能提供保护。
 
 平时我们所见到的PC机上的网卡主要是将PC机和LAN（局域网）相连接，而服务器网卡，一般是用于服务器与交换机等网络设备之间的连接。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\105.jpg)
+![img](./Linux学习笔记.assets/105.jpg)
 
 **无线网卡：**
 
@@ -827,15 +827,15 @@ UPS 设备通常对电压过高或电压过低都能提供保护。
 
 - USB无线上网卡
 
-  ![image-20211008212924691](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211008212924691-163369976673726.png)
+  ![image-20211008212924691](./Linux学习笔记.assets/image-20211008212924691-163369976673726.png)
 
 - 台式机的PCI无线接口网卡
 
-  ![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\236.jpeg)
+  ![img](./Linux学习笔记.assets/236.jpeg)
 
 - 笔记本电脑内置的 MINI-PCI 无线网卡。
 
-  ![image-20211008212953586](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211008212953586-163369979478727.png)
+  ![image-20211008212953586](./Linux学习笔记.assets/image-20211008212953586-163369979478727.png)
 
 **常见网卡故障：**
 
@@ -866,21 +866,21 @@ UPS 设备通常对电压过高或电压过低都能提供保护。
 
 服务器对比普通PC、`稳定性`、`安全性`、`性能`、`可扩展性`、`可管理性`等方面要求更高。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\106.gif)
+![img](./Linux学习笔记.assets/106.gif)
 
 我们能够7*24小时的访问淘宝网，这是因为服务器强大的稳定性，它甚至可以十年不关机，因为你无法保证某一个时段没有用户在购买商品，并且能够承受大量用户并发的访问网站压力。
 
 因此服务器的硬件配置更加强悍，需要大量的进行计算、处理，服务器可以安装多个处理器、更多的内存、更多的磁盘，因此主板、机箱都较大。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\112.jpg)
+![img](./Linux学习笔记.assets/112.jpg)
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\109.jpg)
+![img](./Linux学习笔记.assets/109.jpg)
 
 服务器对于屏幕显示的要求很低，基本上都是无显示器，通过`远程管理`的方式即可，因此服务器基本都是集成显卡，而无需单独装显卡。
 
 我们很难见识到真实的物理服务器，因为服务器一般都防止在`机房`托管，闲人免进，比如appe.com苹果公司网站的数据就放在了 `云上贵州`的服务器机房。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\111.png)
+![img](./Linux学习笔记.assets/111.png)
 
 **服务器分类：**
 
@@ -898,13 +898,13 @@ UPS 设备通常对电压过高或电压过低都能提供保护。
 - 邮件服务器
 - 视频点播服务器
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\240.jpeg)
+![img](./Linux学习笔记.assets/240.jpeg)
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\241.jpg)
+![img](./Linux学习笔记.assets/241.jpg)
 
 **服务器以外形分类：**
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\113.jpg)
+![img](./Linux学习笔记.assets/113.jpg)
 
 **`机架式服务器：`**
 
@@ -913,7 +913,7 @@ UPS 设备通常对电压过高或电压过低都能提供保护。
 
 机架式服务器如下图所示。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\124.jpg)
+![img](./Linux学习笔记.assets/124.jpg)
 
 **`刀片式服务器：`**
 
@@ -926,7 +926,7 @@ UPS 设备通常对电压过高或电压过低都能提供保护。
 
 不过，管理员可以使用系统软件将这些母板集合成一个服 务器集群。在集群模式下，所有的母板可以连接起来提供高速的网络环境，并同时共享资源， 为相同的用户群服务。在集群中插入新的"刀片"，就可以提高整体性能。而由于每块"刀片"都是热插拔的，所以，系统可以轻松地进行替换，并且将维护时间减少到最小。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\125.jpg)
+![img](./Linux学习笔记.assets/125.jpg)
 
 **`塔式服务器-更强壮的服务器：`**
 
@@ -934,7 +934,7 @@ UPS 设备通常对电压过高或电压过低都能提供保护。
 - 因为它的外形以及结构都跟立式 PC 差不多，当然，由于服务器的主板扩展性较强、插槽也多出一堆，所以个头比普通主板大一些，因此塔式服务器的主机机箱也比标准的 ATX 机箱要大，一般都会预留足够的内部空间以便日后进行硬盘和电源的冗余扩展。
 - 但这种类型服务器也有不少局限性，在需要采用多台服务器同时工作以满足较高的服务器应用需求时，由于其个体比较大，占用空间多，也不方便管理，便显得很不适合。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\126.jpg)
+![img](./Linux学习笔记.assets/126.jpg)
 
 **服务器尺寸：**
 
@@ -949,11 +949,11 @@ UPS 设备通常对电压过高或电压过低都能提供保护。
 - 浪潮
 - 联想
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\114.jpeg)
+![img](./Linux学习笔记.assets/114.jpeg)
 
 **服务器品牌与型号：**
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\127-163370013259140.jpg)
+![img](./Linux学习笔记.assets/127-163370013259140.jpg)
 
 Dell服务器品牌：
 
@@ -963,15 +963,15 @@ https://www.dell.com/zh-cn/work/shop/category/servers
 
 **Dell R720：**
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\128.jpg)
+![img](./Linux学习笔记.assets/128.jpg)
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\129.jpg)
+![img](./Linux学习笔记.assets/129.jpg)
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\130.jpg)
+![img](./Linux学习笔记.assets/130.jpg)
 
 **Dell R620：**
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\131.jpg)
+![img](./Linux学习笔记.assets/131.jpg)
 
 IBM品牌：
 
@@ -990,7 +990,7 @@ HP品牌：
 
 **DL380G7：**
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\132.jpg)
+![img](./Linux学习笔记.assets/132.jpg)
 
 **机房托管：**
 
@@ -1016,9 +1016,9 @@ HP品牌：
 
 3. 技术和业务口碑都比较好的机房更能提供好的技术服务和安全防护
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\115.jpg)
+![img](./Linux学习笔记.assets/115.jpg)
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\116.gif)
+![img](./Linux学习笔记.assets/116.gif)
 
 **云服务器：**
 
@@ -1044,15 +1044,15 @@ HP品牌：
 
 当然，除开这些显著特点以外，更重要的是要选择一个知名的服务商，这样云服务器才能更加简便高效，不会给企业带来不必要的损失。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\107.gif)
+![img](./Linux学习笔记.assets/107.gif)
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\239.jpg)
+![img](./Linux学习笔记.assets/239.jpg)
 
 **服务器与远程管理卡：**
 
 远程管理卡是安装在服务器上的硬件设备，提供一个以太网接口，使它可以连接到局域网内，提供远程访问。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\140.jpg)
+![img](./Linux学习笔记.assets/140.jpg)
 
 远程管理卡有服务器自带的，也有独立的。
 
@@ -1064,17 +1064,17 @@ HP品牌：
 
 大客户有 KVM 远程管理，特大客户会有自己的人员驻扎机房。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\141.jpg)
+![img](./Linux学习笔记.assets/141.jpg)
 
 **机房服务器布线：**
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\142.jpg)
+![img](./Linux学习笔记.assets/142.jpg)
 
 **专业和非专业：**
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\143.jpg)
+![img](./Linux学习笔记.assets/143.jpg)
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\144.jpg)
+![img](./Linux学习笔记.assets/144.jpg)
 
 ---
 
@@ -1102,7 +1102,7 @@ HP品牌：
 1TB=1024GB，1PB=1024TB，1EB=1024PB，1ZB=1024EB
 ```
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\117.jpg)
+![img](./Linux学习笔记.assets/117.jpg)
 
 早期的电脑利用真空管是否通电的特性，如果通电就是1，没通电就是0，言传至今，只有0/1的环境称之为二进制（binary）。
 
@@ -1143,7 +1143,7 @@ HP品牌：
 > 3.重复操作，一直到商为小于1时为止
 > 4.然后将得到的所有余数全部排列起来，再将它反过来（逆序排列），切记一定要反过来！
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\v2-8a76f66b03a3d63176194f2cb4f96ca2_720w.jpg)
+![img](./Linux学习笔记.assets/v2-8a76f66b03a3d63176194f2cb4f96ca2_720w.jpg)
 
 **字符编码：**
 
@@ -1151,7 +1151,7 @@ HP品牌：
 
 **软件编译运行：**
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\119.gif)
+![img](./Linux学习笔记.assets/119.gif)
 
 计算机插上电之后，只是一堆机器而已，想要赋予灵魂，还得安装软件、操作系统。
 
@@ -1170,11 +1170,11 @@ HP品牌：
 
 或者，你也立刻让这名翻译辅助你阅读，让他一句一句给你翻译，如果你想往回看某个章节，他也得重新给你翻译。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\120.png)
+![img](./Linux学习笔记.assets/120.png)
 
 **操作系统：**
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\121.jpeg)
+![img](./Linux学习笔记.assets/121.jpeg)
 
 操作系统（Operating System, OS）其实也是一组程序， 这组程序的重点在于管理电脑的所有活动以及驱动系统中的所有硬件。
 
@@ -1186,7 +1186,7 @@ HP品牌：
 
 操作系统通常会提供好一组开发接口给程序员，程序员只需要遵循该接口就可以轻易的调用系统功能，例如python语言调用相关函数，操作系统核心就会主动将python语言转换成系统可以理解的语言。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\122.jpg)
+![img](./Linux学习笔记.assets/122.jpg)
 
 - 操作系统核心是参考硬件的调用，所以同一个操作系统不能在不同的硬件架构下运行，好比Windows操作系统无法直接给手机使用
 - 操作系统只是在管理硬件资源，如CPU、内存、文件系统等，只是让计算机处于准备工作的状态，想要达到如游戏、视频、浏览器等需求，还得额外开发软件
@@ -1198,7 +1198,7 @@ HP品牌：
 
 ### 2.1 Linux系统诞生
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\19.gif)
+![img](./Linux学习笔记.assets/19.gif)
 
 **操作系统：是一个人与计算机硬件的中介。**
 
@@ -1210,13 +1210,13 @@ HP品牌：
 
 同时，它也负责对计算机系统中各类软件资源的管理。例如各类应用软件的安装、运行环境设置等。下图给出了操作系统 与计算机硬件、软件之间的关系示意图。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\147.jpg)
+![img](./Linux学习笔记.assets/147.jpg)
 
 操作系统就是处于用户与计算机硬件之间用于传递信息的系统程序软件。
 
 操作系统在接收到用户输入后，将其传递给计算机系统硬件核心进行处理，然后再讲计算机硬件的处理结果返回给用户。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\148.jpg)
+![img](./Linux学习笔记.assets/148.jpg)
 
 目前 PC（Intel x86 系列）计算机上比较常见的操作系统有 Windows、Linux、DOS、Unix 等。
 
@@ -1237,7 +1237,7 @@ Linux主要用在服务器端、嵌入式开发和个人PC桌面中，服务器�
 - 可自由传播，无任何商业化版权制约;
 - 适合 Intel 等 x86 CPU 系列架构的计算机，可移植性很高
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\u=1831492981,10389919&fm=26&fmt=auto.jpeg)
+![img](./Linux学习笔记.assets/u=1831492981,10389919&fm=26&fmt=auto.jpeg)
 
 **Unix历史：**
 
@@ -1249,7 +1249,7 @@ Unix系统在1969年的AT&T的贝尔实验室诞生，20世纪70年代，它逐�
 - IBM公司的AIX
 - HP公司的HP UNIX
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\151.jpg)
+![img](./Linux学习笔记.assets/151.jpg)
 
 在上图中可以看到，本章的“主人公”Linux 系统，诞生于 1991 年左右，因此，可以说 Linux 是从 Unix 发展而来的。
 
@@ -1274,17 +1274,17 @@ Unix系统在1969年的AT&T的贝尔实验室诞生，20世纪70年代，它逐�
 
 这个 GNU 系统后来没有流行起来。现在的 GNU 系统通常是使用 Linux 系统的内核， 以及使用了GNU项目贡献的一些组件加上其它相关程序组成，这样的组合被称为 `GNU/Linux`操作 系统。
 
-![image-20211009101245720](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009101245720-16337455667788.png)
+![image-20211009101245720](./Linux学习笔记.assets/image-20211009101245720-16337455667788.png)
 
 **Linux系统诞生：**
 
- ![img](J:\149.jpeg) 
+ ![img](./Linux学习笔记.assets/149.jpeg) 
 
 Linux 系统的诞生开始于芬兰赫尔辛基大学的一位计算机系的学生，名字为 Linus Torvalds。
 
 Linux 的标志和吉祥物为一只名字叫作 Tux 的企鹅——Torvalds’Unix，下图所示。
 
- ![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\150.jpg) 
+ ![img](./Linux学习笔记.assets/150.jpg) 
 
 Linux Torvalds 林纳斯·托瓦兹1988年进入赫尔辛基大学选读计算机科学，他在学校接触到Unix这个操作系统，当时的Unix只提供16个终端，早期的计算机只有运算功能，终端提供输入输出，光是等待Unix的时间就很长，林纳斯这样的大神就决定自己开发一个操作系统！
 
@@ -1305,7 +1305,7 @@ Linux Torvalds 林纳斯·托瓦兹1988年进入赫尔辛基大学选读计算�
 
 我们一定要向前辈们致以深深地敬意，没有他们，就没有今天的 Linux 优秀系统存在了(下图所示)。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\152.jpg)
+![img](./Linux学习笔记.assets/152.jpg)
 
 **Linux核心概念**
 
@@ -1329,7 +1329,7 @@ FSF 的主要项目是 GNU 项目。
 
 GNU 项目本身产生的主要软件包括：`Emacs 编辑软件` 、 `gcc 编译软件` 、 `bash命令解释程序` 和 `编程语言` ，以及  `gawk (GNU’s awk)` 等。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\157.jpeg)
+![img](./Linux学习笔记.assets/157.jpeg)
 
 **GNU知识：**
 
@@ -1341,7 +1341,7 @@ GNU，GNU 计划，又称 **革奴计划** ，是由Richard Stallman 在 1984 �
 
 在 Linus Torvalds 和其他开发人员的努力下， GNU 项目的部分组件又运行到了 Linux 内核之上，例如：GNU 项目里的 Emacs、gcc、bash、gawk 等，至今都是 Linux 系统中很重要的基础软件。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\158.jpeg)
+![img](./Linux学习笔记.assets/158.jpeg)
 
 **GPL知识：**
 
@@ -1367,7 +1367,7 @@ Linux 操作系统=linux 内核+GNU 软件及系统软件+必要的应用程序�
 | --------------------- | ----------------------------------- | ---------------------------------------- |
 | 开发者 Linus Torvalds | 项目发起人 Richard Stallman(斯托曼) | BSD Unix和X Windows 以及成千上万的程序员 |
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\154.jpg)
+![img](./Linux学习笔记.assets/154.jpg)
 
 **Linux特点：**
 
@@ -1400,7 +1400,7 @@ Linux 作为企业级服务器的应用十分广泛，利用 Linux 系统可以�
 
 例如，在 `智能手机领域` ， `Android Linux` 已经在智能手机 开发平台牢牢地占据了一席之地。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\u=3742930320,3001723047&fm=26&fmt=auto.jpeg)
+![img](./Linux学习笔记.assets/u=3742930320,3001723047&fm=26&fmt=auto.jpeg)
 
 **个人桌面 Linux 应用领域：**
 
@@ -1415,7 +1415,7 @@ Linux 作为企业级服务器的应用十分广泛，利用 Linux 系统可以�
 
 虽然 Linux 个人桌面系统的支持已经很广泛了，但是在当前的桌面市场份额还远远无法与 Windows系统竞争，这其中的障碍可能不在于 Linux 桌面系统产品本身，而在于用户的使用观念、操作习惯 和应用技能，以及曾经在 Windows 上开发的软件的移植问题。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\160.gif)
+![img](./Linux学习笔记.assets/160.gif)
 
 **Linux的发行版本介绍：**
 
@@ -1427,11 +1427,11 @@ Linux 的发行商包括 Slackware、Redhat、Debian、Fedora、TurboLinux、Man
 
 **Red Hat**：Red Hat Linux 9.0 的内核为 2.4.20。在版本 9.0 后，Red Hat 不再遵循 GPL 协议，成为收费 产品(但仍开源)，发展的新版本依次为 Red Hat 3.x、Red Hat 4.x、Red Hat 5.x、Red Hat 6.x、Red Hat 7.x、Red Hat Enterprise 6.x。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\161.jpeg)
+![img](./Linux学习笔记.assets/161.jpeg)
 
 **Fedora**：为 Red Hat 的一个分支，仍遵循 GPL 协议，可以认为是 Red Hat 预发布版。(游戏公测)
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\162.jpg)
+![img](./Linux学习笔记.assets/162.jpg)
 
 **CentOS (Community Enterprise Operating System)**：与 redhat 做到二进制级别的一模一样。
 
@@ -1466,7 +1466,7 @@ CentOS Linux 是国内互联网公司使用最多的 Linux 系统版本，后面
 
 **查看操作系统发行版本**
 
-![image-20211009114334858](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009114334858.png)
+![image-20211009114334858](./Linux学习笔记.assets/image-20211009114334858.png)
 
 **下载CentOS系统ISO镜像：**
 
@@ -1500,7 +1500,7 @@ Downloads->Mirrors 链接
 
   当然，此时 32位的操作系统是无法发挥64位硬件性能的。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\164.jpg)
+![img](./Linux学习笔记.assets/164.jpg)
 
 - 运算速度不同：
 
@@ -1510,7 +1510,7 @@ Downloads->Mirrors 链接
 
   64 位CPU GPRs(General-Purpose Registers，通用寄存器)的数据宽度为64 位，64 位指令集可以运行64位数据指令，也就是说处理器一次可提取64位数据(只要两个指令，一次提取8个字节的数据)，比32位提高了一倍(32位需要四个指令，一次只能提取4个字节的数据)，性能会相应提升。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\165.jpg)
+![img](./Linux学习笔记.assets/165.jpg)
 
 - 寻址能力不同：
 
@@ -1571,7 +1571,7 @@ VMWare是真正“同时”运行，多个操作系统在主系统的平台上�
 
 安装在VMware操作系统性能上比直接安装在硬盘上的系统低不少，因此，比较适合学习操作系统使用。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\166.jpg)
+![img](./Linux学习笔记.assets/166.jpg)
 
 **VMware优点：**
 
@@ -1600,7 +1600,7 @@ vmware系统服务必须开启：
 win键+r 输入services.msc
 ```
 
-![image-20211009123319912](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009123319912.png)
+![image-20211009123319912](./Linux学习笔记.assets/image-20211009123319912.png)
 
 **安装CentOS 7操作系统：**
 
@@ -1608,11 +1608,11 @@ win键+r 输入services.msc
 
 1. 在 VMware 软件中，单击左上角的“文件”，在下拉菜单中选择“新建虚拟机”。
 
-   ![image-20211009134026300](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009134026300-163375802881623.png)
+   ![image-20211009134026300](./Linux学习笔记.assets/image-20211009134026300-163375802881623.png)
 
 2. 在弹出的“新建虚拟机向导”选项卡里面，选择“自定义(高级)”。选择完毕后，点击“下一步”。
 
-   ![image-20211009134117008](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009134117008-163375807955824.png)
+   ![image-20211009134117008](./Linux学习笔记.assets/image-20211009134117008-163375807955824.png)
 
 **选择虚拟机硬件兼容性**===**购买主机箱**
 
@@ -1620,19 +1620,19 @@ win键+r 输入services.msc
 
    如果使用的是 VMware14 版本，那此处就选择 Workstation14.0。 选择完毕后，点击“下一步”。
 
-![image-20211009150048522](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009150048522-163376285004025.png)
+![image-20211009150048522](./Linux学习笔记.assets/image-20211009150048522-163376285004025.png)
 
 **安装客户机操作系统**
 
 4. 我们后面要自己定制化安装 CentOS7 系统，所以此处选择“稍后安装操作系统”。选择完毕后，点击“下一步”。
 
-![image-20211009150116180](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009150116180-163376287759826.png)
+![image-20211009150116180](./Linux学习笔记.assets/image-20211009150116180-163376287759826.png)
 
 **选择客户机操作系统**===**安装什么样的系统**
 
 5. 我们要学习的是 linux 系统，CentOS 也属于 Linux 系统的一种，所以此处当然要选择“Linux”，版本选择“CentOS 64 位”。选择完毕后，点击“下一步”。
 
-![image-20211009150148136](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009150148136-163376291010227.png)
+![image-20211009150148136](./Linux学习笔记.assets/image-20211009150148136-163376291010227.png)
 
 **命名虚拟机**===**专业规范**
 
@@ -1640,13 +1640,13 @@ win键+r 输入services.msc
 
    位置一项，点击“浏览”后选择 事先规划好的位置即可。选择完毕后，点击“下一步”。
 
-![image-20211009151228321](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009151228321-163376354946729.png)
+![image-20211009151228321](./Linux学习笔记.assets/image-20211009151228321-163376354946729.png)
 
 **虚拟机硬件配置**
 
 7. 我们学习的时候都是在自己的笔记本电脑上安装虚拟机，所以处理器(其实就是 CPU 的意思)都给1个就可以。选择完毕后，点击“下一步”。
 
-![image-20211009151301150](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009151301150-163376358252230.png)
+![image-20211009151301150](./Linux学习笔记.assets/image-20211009151301150-163376358252230.png)
 
 **内存配置**
 
@@ -1654,13 +1654,13 @@ win键+r 输入services.msc
 
    此处可以在左边的树状条直接用鼠标点击选择内存大小，也可以在右边的框内手动输入数字，需要注意单位是 MB，所以 2G 内存需要输入的数字是 2048，而不是2。选择完毕后，点击“下一步”。
 
-![image-20211009151441075](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009151441075-163376368214731.png)
+![image-20211009151441075](./Linux学习笔记.assets/image-20211009151441075-163376368214731.png)
 
 **选择网络类型**
 
 9. 为了方便学习，“网络类型”这项，必须选择“使用网络地址转换(**NAT**)”，想要尝试其余几种网络类型的话，等变成 linux老鸟之后，再自行研究。选择完毕后，点击“下一步”。
 
-![image-20211009151523549](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009151523549-163376372473032.png)
+![image-20211009151523549](./Linux学习笔记.assets/image-20211009151523549-163376372473032.png)
 
 - VMware虚拟机常见的网络类型有 `bridged(桥接)`、 `**NAT**(地址转换`)、 `host-only(仅主机)` 3种，在分析如何选择之前，先要简单和大家介绍下这三种网络类型。
 - 每家每户都有家庭住址号。
@@ -1679,7 +1679,7 @@ NAT(Network Address Translation)，网络地址转换，NAT模式是比较简单
 
 VMWare DHCP Service 负责为虚拟机分配 IP 地址。NAT 网络类型的原理逻辑图如图所示。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\179.jpg)
+![img](./Linux学习笔记.assets/179.jpg)
 
 NAT 网络特别适合于家庭里电脑直接连接网线的情况，当然办公室的局域网环境也是适合的，优势就是不会和其他物理主机 IP 冲突，且在没有路由器的环境下也可以通过 SSH NAT 连接虚拟机学习，换了网络环境虚拟机 IP 等不影响，这是推荐的选择。
 
@@ -1695,7 +1695,7 @@ NAT 网络特别适合于家庭里电脑直接连接网线的情况，当然办�
 
 Bridged 网络类型的原理逻辑图如图所示。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\180.jpg)
+![img](./Linux学习笔记.assets/180.jpg)
 
 Bridged网络类型适合的场景：
 
@@ -1708,7 +1708,7 @@ Bridged网络类型适合的场景：
 
 Host-only 网络类型的原理逻辑图如图所示。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\181.jpg)
+![img](./Linux学习笔记.assets/181.jpg)
 
 ----
 
@@ -1716,13 +1716,13 @@ Host-only 网络类型的原理逻辑图如图所示。
 
 10. “I/O 控制器类型”这一项，直接默认默认即可，不需要改动。选择完毕后，点击“下一步”。
 
-    ![image-20211009152603581](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009152603581-163376436489736.png)
+    ![image-20211009152603581](./Linux学习笔记.assets/image-20211009152603581-163376436489736.png)
 
 **选择磁盘类型：**
 
 11. “磁盘类型”这一项，也直接默认即可，不需要改动。选择完毕后，点击“下一步”。
 
-    ![image-20211009152627283](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009152627283-163376438835137.png)
+    ![image-20211009152627283](./Linux学习笔记.assets/image-20211009152627283-163376438835137.png)
 
 **选择磁盘**
 
@@ -1732,7 +1732,7 @@ Host-only 网络类型的原理逻辑图如图所示。
 
     选择完毕后，点击“下一步”。
 
-    ![image-20211009152739850](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009152739850-163376446100138.png)
+    ![image-20211009152739850](./Linux学习笔记.assets/image-20211009152739850-163376446100138.png)
 
 
 
@@ -1742,37 +1742,37 @@ Host-only 网络类型的原理逻辑图如图所示。
 
     建议将磁盘存储为单个文件，比较方便，但这里不是硬性要求，看个人喜好。选择完毕后，点击“下一步”。
 
-![image-20211009153009174](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009153009174.png)
+![image-20211009153009174](./Linux学习笔记.assets/image-20211009153009174.png)
 
 **指定磁盘文件===存放vwware虚拟机系统文件**
 
 14. “磁盘文件”的名字，保持默认的即可。选择完毕后，点击“下一步”。
 
-![image-20211009153114363](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009153114363.png)
+![image-20211009153114363](./Linux学习笔记.assets/image-20211009153114363.png)
 
 **完成创建虚拟机----完成配置准备付款购买**
 
 15. 此时，一台新虚拟机的硬件就全部配置完毕了，检查确认无误后，就可以开机装系统了。确认完毕后，点击“完成”。
 
-![image-20211009153217998](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009153217998-163376474008640.png)
+![image-20211009153217998](./Linux学习笔记.assets/image-20211009153217998-163376474008640.png)
 
 **挂载 CentOS 镜像====光驱放入了DVD系统光盘**
 
 16. 在“硬件”选项卡里面，还需要配置一下要使用的操作系统 iso 文件。在左侧选中“新CD/DVD(SATA)”，在右侧选中“使用 ISO 映像文件”，点击“浏览”按钮，在弹出的窗口中找到本地的 CentOS 系统 iso文件。选择完毕后，点击“关闭”。
 
-![image-20211009153424417](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009153424417.png)
+![image-20211009153424417](./Linux学习笔记.assets/image-20211009153424417.png)
 
 **开启虚拟机：**
 
 17. 安装系统的第一步，要从开机开始。开机之前，请再次确认一下两块网卡的类型，一定要确保分别 是NAT。确认完毕硬件后，点击“开启此虚拟机”。
 
-![image-20211009153600966](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009153600966.png)
+![image-20211009153600966](./Linux学习笔记.assets/image-20211009153600966.png)
 
 **开始安装CentOS 7.5操作系统：**
 
 18. 虚拟机开机后，选择“Install CentOS7”这一项。此时鼠标是不好用的，都是使用键盘的上下箭头来进行操作的，选好后按键盘上的回车键即可。
 
-![image-20211016211646571](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211016211646571.png)
+![image-20211016211646571](./Linux学习笔记.assets/image-20211016211646571.png)
 
 **修改CentOS7网卡命名规则，仍然以eth0命名：**
 
@@ -1784,43 +1784,43 @@ Host-only 网络类型的原理逻辑图如图所示。
 
     输入完成后检查，并按下回车继续安装系统
 
-![image-20211016211646571](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211016211646571.png)
+![image-20211016211646571](./Linux学习笔记.assets/image-20211016211646571.png)
 
 **选择安装使用的语言**
 
 20. 作为一个 linux 的学习者，要适应英文环境，所以强烈建议此处选择英文，而不选择中文。 选择完毕后，点击“Continue”。
 
-    <img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\192.jpg" alt="img" style="zoom:50%;" />
+    <img src="./Linux学习笔记.assets/192.jpg" alt="img" style="zoom:50%;" />
 
 **设置时区**
 
 21. 配置时区，点击“DATE&TIME”。
 
-    <img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\193.jpg" alt="img" style="zoom: 50%;" />
+    <img src="./Linux学习笔记.assets/193.jpg" alt="img" style="zoom: 50%;" />
 
     ​	我们生活在中国嘛，所以时区选择“亚洲-上海”。时间不用管，待装完系统后，同步一下即可。 选择完毕后，点击“Done”。
 
-    <img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\194.jpg" alt="img" style="zoom:50%;" />
+    <img src="./Linux学习笔记.assets/194.jpg" alt="img" style="zoom:50%;" />
 
 **最小化安装系统**
 
 22. 选择需要安装的软件，点击“SOFTWARE SELECTION”。
 
-    <img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\195.jpg" alt="img" style="zoom:50%;" />
+    <img src="./Linux学习笔记.assets/195.jpg" alt="img" style="zoom:50%;" />
 
     安装 linux 系统，一般都采用最小化安装的原则，在初始时，只选择必要的几个软件包即可。学习期间，请点击跟下图中的红色框里的选择一模一样。选择完毕后，点击“Done”。
 
-    <img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\196.jpg" alt="img" style="zoom:50%;" />
+    <img src="./Linux学习笔记.assets/196.jpg" alt="img" style="zoom:50%;" />
 
 **关闭KDUMP**
 
 23. 配置“KDUMP”，这是一个内核崩溃时使用的东西，暂时不需要开启，把它关闭掉。
 
-    <img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\197.jpg" alt="img" style="zoom:50%;" />
+    <img src="./Linux学习笔记.assets/197.jpg" alt="img" style="zoom:50%;" />
 
     把“Enable kdump”的勾选去掉即可。选择完毕后，点击“Done”。
 
-    <img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\198.jpg" alt="img" style="zoom:50%;" />
+    <img src="./Linux学习笔记.assets/198.jpg" alt="img" style="zoom:50%;" />
 
 ----
 
@@ -1872,47 +1872,47 @@ Host-only 网络类型的原理逻辑图如图所示。
 
 24. 配置磁盘，`点击“INSTALLATION DESTTINATION”。`
 
-    <img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\199.jpg" alt="img" style="zoom:50%;" />
+    <img src="./Linux学习笔记.assets/199.jpg" alt="img" style="zoom:50%;" />
 
     选中磁盘后，选择“I will configure partitioning”。选择完毕后，点击“Done”。
 
-    <img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\200.jpg" alt="img" style="zoom:50%;" />
+    <img src="./Linux学习笔记.assets/200.jpg" alt="img" style="zoom:50%;" />
 
 **分区方式**
 
 25. 在左侧中间的下拉菜单里面，选择“Standard Partition”。然后点击左下方的“+”号，添加/boot 分区。
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\201.jpg" alt="img" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/201.jpg" alt="img" style="zoom:50%;" />
 
 ​	在弹出的对话框中，请按照下图中的内容配置。选择完毕后，点击“Add mount point”。
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\202.jpg" alt="img" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/202.jpg" alt="img" style="zoom:50%;" />
 
 ​	再次点击左下角的“+”号，添加 swap 分区。
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\203.jpg" alt="img" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/203.jpg" alt="img" style="zoom:50%;" />
 
 ​	在弹出的对话框中，请按照下图中的内容配置。选择完毕后，点击“Add mount point”。
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\204.jpg" alt="img" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/204.jpg" alt="img" style="zoom:50%;" />
 
 ​	再次点击左下角的“+”号，添加根分区。
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\205.jpg" alt="img" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/205.jpg" alt="img" style="zoom:50%;" />
 
 ​	在弹出的对话框中，请按照下图中的内容配置。选择完毕后，点击“Add mount point”。
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\206.jpg" alt="img" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/206.jpg" alt="img" style="zoom:50%;" />
 
 ​	/boot、/、swap 三个分区都添加完毕后，检查确认无误，就可以写入磁盘了。确认完毕后，点击“Done”
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\207.jpg" alt="img" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/207.jpg" alt="img" style="zoom:50%;" />
 
 **最终结果**
 
 26. 再次确认分区无误后，选择同意更改，即可将分区设置写入磁盘了。选择完毕后，点击“Accept Changes”。
 
-    <img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\208.jpg" alt="img" style="zoom:50%;" />
+    <img src="./Linux学习笔记.assets/208.jpg" alt="img" style="zoom:50%;" />
 
     **提示：**这里采用的是生产环境中集群节点下的节点服务器的分区方式，即系统坏掉后硬盘数据不需要保留。此分区方式也适合大多数生产环境的服务器，如果是数据库以及存储等有重要数据的特殊业务服务，一般会单独分存放数据的分区如 /data。
 
@@ -1928,19 +1928,19 @@ Host-only 网络类型的原理逻辑图如图所示。
 
 27. 配置网络，点击“NETWORK$HOSTNAME”。
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\209.jpg" alt="img" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/209.jpg" alt="img" style="zoom:50%;" />
 
 ​	**选择完毕后，点击“Begin Installation”。****设置root登录密码**
 
 ​	给 root 用户设置密码，点击“ROOT PASSWORD”。
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\210.jpg" alt="img" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/210.jpg" alt="img" style="zoom:50%;" />
 
 ​		学习期间为了练习方便，root 用户的密码简单的设置为 123456 即可。但工作环境中，无论什么用 户，密码一定要设置得复杂些，增加安全性。
 
 ​		配置完后，点击“Done”。
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\211.jpg" alt="img" style="zoom:50%;" />**提示：**如果是生产环境，root 口令要尽量复杂。比如，设置 8 位以上包含数字字母大小写甚至是特殊字符的口令。在企业运维工作中安全是至关重要的一环，安全要从每一件小事做起。
+<img src="./Linux学习笔记.assets/211.jpg" alt="img" style="zoom:50%;" />**提示：**如果是生产环境，root 口令要尽量复杂。比如，设置 8 位以上包含数字字母大小写甚至是特殊字符的口令。在企业运维工作中安全是至关重要的一环，安全要从每一件小事做起。
 
 **安装结束重启**
 
@@ -1952,7 +1952,7 @@ Host-only 网络类型的原理逻辑图如图所示。
 
     需要输入用户及其密码后，方可登录进入系统。
 
-![image-20211009160055734](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009160055734-163376645684763.png)
+![image-20211009160055734](./Linux学习笔记.assets/image-20211009160055734-163376645684763.png)
 
 **安装额外系统开发包：**
 
@@ -2021,39 +2021,39 @@ yum install -y bash-completion vim lrzsz wget expect net-tools nc nmap tree dos2
 
 安装完毕之后界面长这个样。
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009175301379.png" alt="image-20211009175301379" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/image-20211009175301379.png" alt="image-20211009175301379" style="zoom:50%;" />
 
 **3.创建SSH session**
 
 点击菜单栏 「sessions」 --> 「SSH」，即可弹出 「session setting」 对话框。由上面那一大串的连接方式我们就可以知道Moba的强大之处。
 
-![image-20211009175525256](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009175525256.png)
+![image-20211009175525256](./Linux学习笔记.assets/image-20211009175525256.png)
 
 点击确定后，输入密码(输入密码时并不会显示，只管输入后按确定即可，第一次登陆成功后会提示保存密码，一般选择同意)，就可以连接上虚拟机了。而且边上虚拟机之后，它会自动通过FTP也连接到虚拟机，直接拖拽就可以进行文件复制了。
 
 登陆后界面主要分两块，左边的是主机的文件，右边是终端。勾选左下角的 “Follow terminal folder” 可以让两个的工作路径保持一致。
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009175843579.png" alt="image-20211009175843579"  />
+<img src="./Linux学习笔记.assets/image-20211009175843579.png" alt="image-20211009175843579"  />
 
 **4.个性化设置，设置终端字体，右键复制、文件保存路径等**
 
-![image-20211009180308642](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009180308642.png)
+![image-20211009180308642](./Linux学习笔记.assets/image-20211009180308642.png)
 
 **5.快捷键配置**
 
-![image-20211009181119252](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009181119252.png)
+![image-20211009181119252](./Linux学习笔记.assets/image-20211009181119252.png)
 
-![image-20211009181127400](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009181127400.png)
+![image-20211009181127400](./Linux学习笔记.assets/image-20211009181127400.png)
 
 **6.同时操作多个终端**
 
-![image-20211009181206664](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009181206664.png)
+![image-20211009181206664](./Linux学习笔记.assets/image-20211009181206664.png)
 
-![image-20211009181216606](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009181216606.png)
+![image-20211009181216606](./Linux学习笔记.assets/image-20211009181216606.png)
 
 **7.支持搜到目录及文件**
 
-![image-20211009181314233](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009181314233.png)
+![image-20211009181314233](./Linux学习笔记.assets/image-20211009181314233.png)
 
 
 
@@ -2076,7 +2076,7 @@ yum install -y bash-completion vim lrzsz wget expect net-tools nc nmap tree dos2
 
 **Linux命令行：**
 
-![image-20211009182411116](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009182411116.png)
+![image-20211009182411116](./Linux学习笔记.assets/image-20211009182411116.png)
 
 ```powershell
 # 超级用户身份提示符
@@ -2087,11 +2087,11 @@ $ 普通用户身份提示符
 
 windows平台命令行目录分隔符：
 
-![image-20211009184120031](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009184120031.png)
+![image-20211009184120031](./Linux学习笔记.assets/image-20211009184120031.png)
 
 linux平台命令行目录分隔符：
 
-![image-20211009184207986](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009184207986.png)
+![image-20211009184207986](./Linux学习笔记.assets/image-20211009184207986.png)
 
 **Linux与Windows的目录结构比较：**
 
@@ -2105,7 +2105,7 @@ ls /
 
 结果如图：
 
-![image-20211009185240940](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009185240940.png)
+![image-20211009185240940](./Linux学习笔记.assets/image-20211009185240940.png)
 
 在Linux底下，所有的文件与目录都是由根目录开始，是目录与文件的源头，然后一个个的分支下来，如同树枝状，因此称为这种目录配置为：**目录树**。
 
@@ -2122,7 +2122,7 @@ Linux与windows区别
 - windows特点：E:\学习视频\高清视频\
 - Linux目录特点：/etc/hosts /root/data/test.txt
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\248.jpg" alt="img" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/248.jpg" alt="img" style="zoom:50%;" />
 
 **Linux** 系统目录结构基本特点：
 
@@ -2140,14 +2140,14 @@ Linux与windows区别
 
 对于Linux系统来说，一切接文件，所有文件都放在以`根目录`为起点的树形目录结构中，任何硬件设备也都是文件形式。
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\321.jpg" alt="img" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/321.jpg" alt="img" style="zoom:50%;" />
 
 如图所示，是U盘存储设备和Linux系统自己的文件系统结构，此时Linux想要使用U盘的硬件设备，必须将Linux **本身的目录**和硬件设备的文件目录合二为一，此过程就称之为**挂载**。
 
 > 挂载操作会隐藏原本Linux目录中的文件，因此选择Linux本身的目录，最好是新建空目录用于挂载
 > 挂载之后，这个目录被称为挂载点
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\322.jpg" alt="img" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/322.jpg" alt="img" style="zoom:50%;" />
 
 此时U盘文件系统已经是Linux文件系统的一部分，访问/sdb-u文件夹，即是访问访问U盘系统中的文件夹。
 
@@ -2155,7 +2155,7 @@ Linux与windows区别
 
 **Linux目录结构：**
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\251.png" alt="img" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/251.png" alt="img" style="zoom:50%;" />
 
 - **/dev**：dev是Device(设备)的缩写, 该目录下存放的是Linux的外部设备，在Linux中访问设备的方式和访问文件的方式是相同的。
 
@@ -2266,7 +2266,7 @@ cd 是 change directory 的缩写，这是用来变换工作目录的命令，�
 > 结论：ls - list directory contens (列出目录内容)
 > ls -la /  以竖状格式化显示列出 / 目录所有内容
 
-![image-20211009210615709](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009210615709.png)
+![image-20211009210615709](./Linux学习笔记.assets/image-20211009210615709.png)
 
 #### 3.3.2 **tree命令**
 
@@ -2331,9 +2331,9 @@ ls -d */    列出当前所有目录
 ll -hS ./*    显示出当前目录下所有内容详细，且以kb,mb,gb单位从大到小排序
 ```
 
-![image-20211009211748709](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009211748709.png)
+![image-20211009211748709](./Linux学习笔记.assets/image-20211009211748709.png)
 
-![image-20211009212124186](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009212124186-163378568572770.png)
+![image-20211009212124186](./Linux学习笔记.assets/image-20211009212124186-163378568572770.png)
 
 #### 3.3.4 **mkdir命令**
 
@@ -2359,7 +2359,7 @@ mkdir bb1 bb2  # 创建少量连续目录
 mkdir -p test1/test2/test3  # 创建递归目录
 ```
 
-![image-20211009213114704](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009213114704.png)
+![image-20211009213114704](./Linux学习笔记.assets/image-20211009213114704.png)
 
 #### 3.3.5 **touch命令**
 
@@ -2382,7 +2382,7 @@ mkdir -p test1/test2/test3  # 创建递归目录
 > -r, --reference=文件   # 使用指定文件的时间属性替代当前文件时间
 > ```
 
-![image-20211010110233510](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211010110233510.png)
+![image-20211010110233510](./Linux学习笔记.assets/image-20211010110233510.png)
 
 ```shell
 修改文件时间
@@ -2390,7 +2390,7 @@ touch -t 10011010 test1.txt    # 修改test1.txt文件的时间是 10月1号10�
 touch -r test1.txt test2.txt   # 把test2.txt的时间改成test1.txt 一样
 ```
 
-![image-20211010110430699](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211010110430699.png)
+![image-20211010110430699](./Linux学习笔记.assets/image-20211010110430699.png)
 
 #### 3.3.6 **cp命令**
 
@@ -2437,9 +2437,9 @@ cp main.py main.py.bak
 cp -r  文件1  文件2  文件夹a   文件夹c
 ```
 
-![image-20211010112934869](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211010112934869.png)
+![image-20211010112934869](./Linux学习笔记.assets/image-20211010112934869.png)
 
-![image-20211010113133343](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211010113133343.png)
+![image-20211010113133343](./Linux学习笔记.assets/image-20211010113133343.png)
 
 取消cp别名的方式
 
@@ -2497,7 +2497,7 @@ scp  -r local_dir username@servername:remote_dir
 
 ```powershell
 # 把192.168.0.101上的/var/www/test.txt 的文件下载到/var/www/local_dir（本地目录）
-scp root@192.168.0.101:/var/www/test.txt
+scp root@192.168.0.101:/var/www/test.txt /var/www/local_dir
 
 # 把本机/var/www/目录下的test.php文件上传到192.168.0.101这台服务器上的/var/www/目录中
 scp /var/www/test.php  root@192.168.0.101:/var/www/
@@ -2545,7 +2545,7 @@ mv命令就是move的缩写，作用是移动或是重命名文件
 -u, --update                  # 只在源文件文件比目标文件新，或目标文件不存在时才进行移动
 ```
 
-![image-20211010115944683](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211010115944683.png)
+![image-20211010115944683](./Linux学习笔记.assets/image-20211010115944683.png)
 
 #### 3.4.0 **rm命令**
 
@@ -2568,7 +2568,7 @@ Linux在使用rm（删除）、cp（覆盖）、mv（搬家）等命令的时候
       --version       # 显示版本信息并退出
 ```
 
-![image-20211010121501619](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211010121501619.png)
+![image-20211010121501619](./Linux学习笔记.assets/image-20211010121501619.png)
 
 **炸弹命令**
 
@@ -2593,7 +2593,7 @@ rm -rf 文件夹
 已删除目录："./q"
 ```
 
-![image-20211010121744645](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211010121744645.png)
+![image-20211010121744645](./Linux学习笔记.assets/image-20211010121744645.png)
 
 **注意文件恢复**
 
@@ -2623,7 +2623,7 @@ man  ls
 # 进入man帮助文档后，按下q退出
 ```
 
-![image-20211010122036216](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211010122036216.png)
+![image-20211010122036216](./Linux学习笔记.assets/image-20211010122036216.png)
 
 #### 3.4.2 **echo命令**
 
@@ -2743,7 +2743,7 @@ echo $PATH
 
 PATH(一定是大写的)这个变量是由一堆目录组成，分隔符是":"号，而不同于windows的";"号。
 
-![image-20211012113727856](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211012113727856.png)
+![image-20211012113727856](./Linux学习笔记.assets/image-20211012113727856.png)
 
 **修改linux的全局配置文件**
 
@@ -2823,7 +2823,7 @@ Linux下特别注意文件名/路径的写法，可以将所谓的路径(path)�
 
 作为一个运维人，必须得保障服务器正确工作，机器宕机了，也得明确是什么问题，从何查起，那么了解启动流程就能够对症下药，排查问题。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\275.jpg)
+![img](./Linux学习笔记.assets/275.jpg)
 
 - BIOS自检
 
@@ -2871,7 +2871,7 @@ Linux下特别注意文件名/路径的写法，可以将所谓的路径(path)�
 
 **centos7启动流程**
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\276.jpg)
+![img](./Linux学习笔记.assets/276.jpg)
 
 CentOS7 和 CentOS6 启动流程差不多，只不过到 init 程序时候，改为了 systemd，因此详细解释一下 systemd 后的启动流程。
 
@@ -2935,7 +2935,7 @@ Vim是从 vi 发展出来的一个文本编辑器。代码补完、编译及错�
 
 底行模式：按下:(冒号)之后进入到的模式
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\282.png" alt="img"  />
+<img src="./Linux学习笔记.assets/282.png" alt="img"  />
 
 **vim基础用法**
 
@@ -2957,7 +2957,7 @@ Vim是从 vi 发展出来的一个文本编辑器。代码补完、编译及错�
 
 此状态下敲击键盘动作会被Vim识别为命令，而非输入字符。比如我们此时按下i，并不会输入一个字符，i被当作了一个命令。
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\283.jpg)
+![img](./Linux学习笔记.assets/283.jpg)
 
 **移动光标**
 
@@ -3297,7 +3297,7 @@ cat /proc/cpuinfo | grep "flags" | wc -l
 
 grep是linux强大的三剑客之一，从文本中，过滤有用信息的命令
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\291.png)
+![img](./Linux学习笔记.assets/291.png)
 
 ```powershell
 # 1.语法
@@ -3990,7 +3990,7 @@ Change: 2021-10-10 16:11:19.143268379 +0800
 > - **修改时间**（-mtime/天，-mmin/分钟）：文件最后一次修改时间（数据变动）。
 > - **变化时间**（-ctime/天，-cmin/分钟）：文件数据元（例如权限等）最后一次修改时间。
 >
-> ![image-20211010165239759](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211010165239759.png)
+> ![image-20211010165239759](./Linux学习笔记.assets/image-20211010165239759.png)
 >
 > - 文件任何数据改变，change变化，无论是元数据变动，或是对文件mv，cp等
 > - 文件内容被修改时，modify和change更新
@@ -4244,7 +4244,7 @@ sed是linux中提供的一个外部命令，它是一个行(流)编辑器，非�
 
  **sed数据处理原理** 
 
- ![sed处理数据原理.png](J:\homework\Python学习笔记\Python_notes.assets\1601961286169.png) 
+ ![sed处理数据原理.png](J:\homework\Python学习笔记\Python_notes.assets/1601961286169.png) 
 
 **1. sed语法**
 
@@ -5229,7 +5229,7 @@ print sum}' num2
 - 归属的用户和用户组
 - 最新修改时间
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\297.jpg)
+![img](./Linux学习笔记.assets/297.jpg)
 
 图解：
 
@@ -5377,7 +5377,7 @@ python: /usr/bin/python /usr/bin/python2.7 /usr/lib/python2.7 /usr/lib64/python2
 
 #### 4.3.5 **tar命令**
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\304.jpg)
+![img](./Linux学习笔记.assets/304.jpg)
 
 tar命令在linux系统里，可以实现对多个文件进行，压缩、打包、解包
 
@@ -5878,7 +5878,7 @@ Root用户登录系统后可以做很多事。
 
 多用户多任务：
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\300.jpg)
+![img](./Linux学习笔记.assets/300.jpg)
 
 多个用户使用同一个操作系统，每个人做自己的事；
 
@@ -5894,7 +5894,7 @@ Linux系统不同用户权限不一样，好比小张想用我的服务器，我
 
 用户角色划分：root、普通、虚拟用户
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\301.jpg)
+![img](./Linux学习笔记.assets/301.jpg)
 
 现代操作系统一般属于多用户的操作系统，也就是说，同一台机器可以为多个用户建立账户，一般这些用户都是为普通用户，这些普通用户能同时登录这台计算机，计算机对这些用户分配一定的资源。
 
@@ -5968,7 +5968,7 @@ tsh unix
 
 /etc/passwd 文件内容
 
-![image-20211013184552966](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211013184552966.png)
+![image-20211013184552966](./Linux学习笔记.assets/image-20211013184552966.png)
 
 | 字段名      | 解释                                                         |
 | ----------- | ------------------------------------------------------------ |
@@ -6254,7 +6254,7 @@ ike  joker  like
 uid=789(test2) gid=1015(test2) 组=1015(test2),0(root),1001(ike)
 ```
 
-![image-20211014004622193](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211014004622193.png)
+![image-20211014004622193](./Linux学习笔记.assets/image-20211014004622193.png)
 
 **-D参数用来修改配置文件 `/etc/default/useradd` 文件的默认值**
 
@@ -6684,7 +6684,7 @@ sudo配置文件
 
 ### 4.5 Linux文件/夹权限
 
-![image-20211014180130276](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211014180130276.png)
+![image-20211014180130276](./Linux学习笔记.assets/image-20211014180130276.png)
 
 **文件权限**
 
@@ -6705,7 +6705,7 @@ sudo配置文件
 
 **文件权限与数字转化**
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\315.png)
+![img](./Linux学习笔记.assets/315.png)
 
 ```shell
 # rwx权限表示
@@ -6738,7 +6738,7 @@ chmod命令用来变更文件或目录的权限。
 
 符号连接的权限无法变更，如果用户对符号连接修改权限，其改变会作用在被连接的原始文件。
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\316.jpg" alt="img" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/316.jpg" alt="img" style="zoom:50%;" />
 
 ```shell
 # 权限范围：
@@ -7216,7 +7216,7 @@ Address: 220.181.38.148
 
 #### 4.6.0 **crontab定时任务**
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211016184727254.png" alt="image-20211016184727254" style="zoom: 25%;" />
+<img src="./Linux学习笔记.assets/image-20211016184727254.png" alt="image-20211016184727254" style="zoom: 25%;" />
 
 crond定时任务服务，提供了一个客户端管理命令crontab
 
@@ -7317,7 +7317,7 @@ linux平台的软件安装形式，有三个：
 
 **更换yum源**
 
-![image-20211016191224707](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211016191224707-16343827464062.png)
+![image-20211016191224707](./Linux学习笔记.assets/image-20211016191224707-16343827464062.png)
 
 yum源的默认仓库文件夹是  `/etc/yum.repos.d/` ，只有在这个目录 `第一层` 的*.repo结尾的文件，才会被yum读取
 
@@ -7640,7 +7640,7 @@ django-admin  startproject  dj1
     from django.shortcuts import render,HttpResponse
 
     def hello(requests):
-    return HttpResponse("hello world!")
+    	return HttpResponse("hello world!")
 
 
 # 6. 进行数据库迁移
@@ -7755,7 +7755,7 @@ WSGI 是作为 Web 服务器与 Web 应用程序或应用框架之间的一种�
 
 也就是说，WSGI就像是一座桥梁，一边连着web服务器，另一边连着用户的应用。但是呢，这个桥的功能很弱，有时候还需要别的桥来帮忙才能进行处理。WSGI 的作用如图所示：
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\20160509174237093.png)
+![img](./Linux学习笔记.assets/20160509174237093.png)
 
 **WSGI的作用**
 
@@ -7946,15 +7946,15 @@ supervisorctl -c /etc/supervisord.conf
 
 6.supervisorctl的管理命令
 
-![image-20211019231158128](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211019231158128.png)
+![image-20211019231158128](./Linux学习笔记.assets/image-20211019231158128.png)
 
 7.uwsgi异常崩溃的话，supervisor会立即重启uwsgi
 
-![image-20211019230609875](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211019230609875.png)
+![image-20211019230609875](./Linux学习笔记.assets/image-20211019230609875.png)
 
 ### 5.6 nginx
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20181014124743540-1325157612.png" alt="img"  />
+<img src="./Linux学习笔记.assets/1132884-20181014124743540-1325157612.png" alt="img"  />
 
  想必我们大多数人都是通过访问网站而开始接触互联网的吧。我们平时访问的网站服务 就是 Web 网络服务，一般是指允许用户通过浏览器访问到互联网中各种资源的服务。
 
@@ -7967,7 +7967,7 @@ Web 网络服务是一种被动访问的服务程序，即只有接收到互联�
 nginx**是一个开源的**，支持高性能，高并发的www服务和代理服务软件。它是一个俄罗斯人lgor sysoev开发的，作者将源代码开源出来供全球使用。
 nginx比它大哥apache性能改进许多，nginx占用的系统资源更少，支持更高的并发连接，有更高的访问效率。nginx不但是一个优秀的web服务软件，还可以作为反向代理，负载均衡，以及缓存服务使用。安装更为简单，方便，灵活。nginx可以说是非常nb了。
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20180813155012063-443835808.png" alt="img" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/1132884-20180813155012063-443835808.png" alt="img" style="zoom:50%;" />
 
 Tengine是由淘宝网发起的Web服务器项目。它在Nginx的基础上，针对大访问量网站的需求，添加了很多高级功能和特性。Tengine的性能和稳定性已经在大型的网站如淘宝网，天猫商城等得到了很好的检验。它的最终目标是打造一个高效、稳定、安全、易用的Web平台。
 
@@ -8636,17 +8636,17 @@ $http_x_forwarded_for　　# 记录客户端的来源真实ip 97.64.34.118，机
 - 内网服务器发布场景
 - 缓存场景
 
-![1639293901196](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639293901196.png)
+![1639293901196](./Linux学习笔记.assets/1639293901196.png)
 
-![1639293922891](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639293922891.png)
+![1639293922891](./Linux学习笔记.assets/1639293922891.png)
 
-![1639293934357](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639293934357.png)
+![1639293934357](./Linux学习笔记.assets/1639293934357.png)
 
-![1639293943870](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639293943870.png)
+![1639293943870](./Linux学习笔记.assets/1639293943870.png)
 
 **nginx实现反向代理**
 
-![image-20211021220239420](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211021220239420-16348249609553.png)
+![image-20211021220239420](./Linux学习笔记.assets/image-20211021220239420-16348249609553.png)
 
 **反向代理原理**
 
@@ -8729,7 +8729,7 @@ server_name  _;
 # 5.测试访问代理服务器，查看页面效果
 ```
 
-![image-20211021215953107](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211021215953107.png)
+![image-20211021215953107](./Linux学习笔记.assets/image-20211021215953107.png)
 
 #### 5.6.5 限速
 
@@ -8744,7 +8744,7 @@ server_name  _;
 
 **限速原理**
 
-![1639293988653](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639293988653.png)
+![1639293988653](./Linux学习笔记.assets/1639293988653.png)
 
 算法思想：
 
@@ -8947,7 +8947,7 @@ http {
 # 2.访问192.168.254.131
 ```
 
-![1639294074414](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639294074414.png)
+![1639294074414](./Linux学习笔记.assets/1639294074414.png)
 
 **if and return 指令**：判断和返回数据	
 
@@ -9096,7 +9096,7 @@ break:接口返回状态码302
 last:见下图
 ```
 
-![1639294112119](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639294112119.png)
+![1639294112119](./Linux学习笔记.assets/1639294112119.png)
 
 根据⽤户浏览器重写访问⽬录：如果是chrome浏览器 就将 http://192.168.254.131/$URI 重写为 http://192.168.254.131/chrome/$URI
 
@@ -9387,7 +9387,7 @@ Nginx集群其实是：虚拟主机+反向代理+upstream分发模块组成的
 
 ##### 5.6.6.3 集群的实现
 
-![1639294233000](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639294233000.png)
+![1639294233000](./Linux学习笔记.assets/1639294233000.png)
 
 方案一：单点故障解决方案
 
@@ -9407,7 +9407,7 @@ Nginx集群其实是：虚拟主机+反向代理+upstream分发模块组成的
 >
 > 2.多机阵列---集群模式
 
-![1639294220464](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639294220464.png)
+![1639294220464](./Linux学习笔记.assets/1639294220464.png)
 
 **集群实现**
 
@@ -9973,7 +9973,7 @@ http {
 
 **高可用介绍**
 
-![1639294313132](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639294313132.png)
+![1639294313132](./Linux学习笔记.assets/1639294313132.png)
 
 - 分发器宕机怎么办
 - 数据服务器宕机怎么办
@@ -10813,7 +10813,7 @@ SELINUX=disabled
 
 前后端分离部署示意图：
 
-![image-20211023183620148](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211023183620148.png)
+![image-20211023183620148](./Linux学习笔记.assets/image-20211023183620148.png)
 
 #### 5.8.1 部署前端
 
@@ -11282,7 +11282,7 @@ config set "xxxxxx"
 
 ### 6.4 redis数据同步复制
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20180922122856003-755522114.png" alt="img" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/1132884-20180922122856003-755522114.png" alt="img" style="zoom:50%;" />
 
 1. 从服务器向主服务器发送 SYNC 命令。
 
@@ -11466,21 +11466,21 @@ Redis-Sentinel是redis官方推荐的高可用性解决方案，当用redis作ma
 
 那么这个问题，redis-sentinel就可以解决了
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20180928114913282-867816204-163582532667312.png" alt="img" style="zoom: 33%;" />
+<img src="./Linux学习笔记.assets/1132884-20180928114913282-867816204-163582532667312.png" alt="img" style="zoom: 33%;" />
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20180928115021716-2071889796-163582532212110.png" alt="img" style="zoom:33%;" />
+<img src="./Linux学习笔记.assets/1132884-20180928115021716-2071889796-163582532212110.png" alt="img" style="zoom:33%;" />
 
 **Redis Sentinel架构：**
 
 redis的一个进程，但是不存储数据，只是监控redis。
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20181124181822218-1125753774-16358253160028.png" alt="img" style="zoom: 50%;" />
+<img src="./Linux学习笔记.assets/1132884-20181124181822218-1125753774-16358253160028.png" alt="img" style="zoom: 50%;" />
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20180928115711245-1503702880-16358253106106.png" alt="img" style="zoom: 67%;" />
+<img src="./Linux学习笔记.assets/1132884-20180928115711245-1503702880-16358253106106.png" alt="img" style="zoom: 67%;" />
 
 <img src="https://img2018.cnblogs.com/blog/1132884/201809/1132884-20180928145626051-1360651849.png" alt="img" style="zoom: 67%;" />
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20180928145734973-1288883859-163582538011315.png" alt="img" style="zoom:67%;" />
+<img src="./Linux学习笔记.assets/1132884-20180928145734973-1288883859-163582538011315.png" alt="img" style="zoom:67%;" />
 
 **补充知识：**
 
@@ -11660,7 +11660,7 @@ slave0:ip=127.0.0.1,port=6381,state=online,offset=136117,lag=0
 
 2. 正确的应该是考虑分布式，加机器。把数据分到不同的位置，分摊集中式的压力，**一堆机器做一件事**
 
-![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20181024161047230-851823170.png)
+![img](./Linux学习笔记.assets/1132884-20181024161047230-851823170.png)
 
 **客户端分片**
 
@@ -11670,7 +11670,7 @@ slave0:ip=127.0.0.1,port=6381,state=online,offset=136117,lag=0
 
 **数据分布原理图**
 
- ![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20181125134928388-1528161304.png) 
+ ![img](./Linux学习笔记.assets/1132884-20181125134928388-1528161304.png) 
 
 **数据分布理论**
 
@@ -11684,11 +11684,11 @@ slave0:ip=127.0.0.1,port=6381,state=online,offset=136117,lag=0
 
 **顺序分区原理图**
 
-![1639294725729](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639294725729.png)
+![1639294725729](./Linux学习笔记.assets/1639294725729.png)
 
 **哈希分区原理图**
 
-![1639294763567](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639294763567.png)
+![1639294763567](./Linux学习笔记.assets/1639294763567.png)
 
 例如按照节点取余的方式，分三个节点
 
@@ -11715,7 +11715,7 @@ slave0:ip=127.0.0.1,port=6381,state=online,offset=136117,lag=0
 # 4.每个节点负责一定数量的槽。
 ```
 
-![1639294819755](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639294819755.png)
+![1639294819755](./Linux学习笔记.assets/1639294819755.png)
 
 #### 6.6.1 搭建redis cluster
 
@@ -11733,7 +11733,7 @@ redis-cluster集群架构
 # 3.ruby的脚本自动就把分配槽位这事做了
 ```
 
- ![img](J:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20181024170727913-1418417703.png) 
+ ![img](./Linux学习笔记.assets/1132884-20181024170727913-1418417703.png) 
 
 **安装方式**
 
@@ -12332,7 +12332,7 @@ redis.conf详解--补充--
 
 我们先看看之前，服务器是怎么部署应用的
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\1132884-20180922153951410-114250843.png" alt="img" style="zoom: 25%;" />
+<img src="./Linux学习笔记.assets/1132884-20180922153951410-114250843.png" alt="img" style="zoom: 25%;" />
 
 由于物理机的诸多问题，后来出现了虚拟机
 
@@ -12344,7 +12344,7 @@ redis.conf详解--补充--
 
 **docker与虚拟机的区别**
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211105112934600.png" alt="image-20211105112934600" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/image-20211105112934600.png" alt="image-20211105112934600" style="zoom:50%;" />
 
 | 特性       | 容器（docker）     | 虚拟机（VM） |
 | ---------- | ------------------ | ------------ |
@@ -12753,7 +12753,7 @@ docker logs -f  容器id   # 实时刷新容器内的日志，例如检测nginx�
 docker port  容器id  # 查看容器的端口转发
 ```
 
-<img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211106105949792.png" alt="image-20211106105949792" style="zoom:50%;" />
+<img src="./Linux学习笔记.assets/image-20211106105949792.png" alt="image-20211106105949792" style="zoom:50%;" />
 
 ### 7.3 Dockerfile
 
@@ -13082,7 +13082,7 @@ Run 'docker COMMAND --help' for more information on a command.  #运行docker命
 
 传统的IT运维是将数据中⼼中的⽹络设备、服务器、数据 库、中间件、存储、虚拟化、硬件等资源进⾏统⼀监 控，当资源出现告警时，运维⼈员通过⼯具或者基于经验进⾏排查，找出问题并加以解决。但是，随着互联⽹+时代的到来，移动互联⽹、云计算和⼤数据技术得到了 ⼴泛应⽤，从⽽导致企业所管理的IT架构不断扩⼤，服务 器、虚拟化、存储设备的数量越来越多，⽹络也变得更加复杂，业务流程越来越繁琐，传统的运维管理也越来越⼒不从⼼。
 
-![1639295365737](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639295365737.png)
+![1639295365737](./Linux学习笔记.assets/1639295365737.png)
 
 **⾃动化运维**
 
@@ -13112,7 +13112,7 @@ Run 'docker COMMAND --help' for more information on a command.  #运行docker命
 
 - ⼤批量配置⾃动化 
 
-![1639295446358](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639295446358.png)
+![1639295446358](./Linux学习笔记.assets/1639295446358.png)
 
 > SALTSTACK: https://docs.saltstack.com/en/latest/
 >
@@ -13120,7 +13120,7 @@ Run 'docker COMMAND --help' for more information on a command.  #运行docker命
 >
 > ANSIBIE: https://www.ansible.com/
 
-![1639295392252](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639295392252.png)
+![1639295392252](./Linux学习笔记.assets/1639295392252.png)
 
 ### 8.2 Saltstack部署
 
@@ -13130,7 +13130,7 @@ Run 'docker COMMAND --help' for more information on a command.  #运行docker命
 - 采⽤订阅者模式的分布式管理⼯具 管理节点【发命令】——>被管理节点 【去执⾏ 返回结果】
 - 采⽤⾃定义协议zeromq ⽐SSH（⼀对⼀）速度更快
 
-![1639295473334](J:\homework\Linux学习笔记\Linux学习笔记.assets\1639295473334.png)
+![1639295473334](./Linux学习笔记.assets/1639295473334.png)
 
 **salt ⼯作原理**
 
@@ -13409,11 +13409,11 @@ minion-01:
 - 日志分析，繁琐又复杂的日志分析让机器取做吧。
 - 三方软件模块插件的编写：根据业务定制三方软件的功能，更贴合自己的业务。
 
- ![shell学习路线图.png](J:\homework\Linux学习笔记\Linux学习笔记.assets\1600908281266.png) 
+ ![shell学习路线图.png](./Linux学习笔记.assets/1600908281266.png) 
 
 **成长路径**
 
-  ![shell编程掌握等级图.png](J:\homework\Linux学习笔记\Linux学习笔记.assets\1600908316400.png) 
+  ![shell编程掌握等级图.png](./Linux学习笔记.assets/1600908316400.png) 
 
 ```shell
 # 1.能看到代码实现的算法、原理
@@ -13779,7 +13779,7 @@ root    x       /bin/bash
 
  shell在计算机中起到什么作用呢？为什么要求shell呢，我们可以看看计算机操作系统的组成： 
 
-  <img src="J:\homework\Linux学习笔记\Linux学习笔记.assets\1600050867343.png" alt="OS分层.png" style="zoom:50%;" /> 
+  <img src="./Linux学习笔记.assets/1600050867343.png" alt="OS分层.png" style="zoom:50%;" /> 
 
 看图之前问大家个问题，两个人在电话聊天：只会说法语的法国人，只会说汉语的你。如何沟通呢？
 
@@ -13799,7 +13799,7 @@ shell就是我们找来的翻译。
 
 shell是一个程序，采用C语言编写，是用户和linux内核沟通的桥梁。它既是一种命令语言，又是一种解释性的编程语言。通过一个图表来查看一下shell的作用。
 
-  ![00_shell.png](J:\homework\Linux学习笔记\Linux学习笔记.assets\1600050927043.png) 
+  ![00_shell.png](./Linux学习笔记.assets/1600050927043.png) 
 
 **bash shell基本特性**
 
@@ -13888,7 +13888,7 @@ su - harry -c "echo 'hello world' > /tmp/zutuanxue/README"
 
 shell脚本组成
 
-  ![shell程序组成.png](J:\homework\Linux学习笔记\Linux学习笔记.assets\1600051087772.png) 
+  ![shell程序组成.png](./Linux学习笔记.assets/1600051087772.png) 
 
 - 脚本命名
   nginx_install.sh 脚本名称 脚本扩展名 .sh
@@ -14024,7 +14024,7 @@ d、释放内存
 从内存跟踪表中将记录删除，下次存数据直接覆盖
 ```
 
-  ![变量存储.png](J:\homework\Linux学习笔记\Linux学习笔记.assets\1600685218168.png) 
+  ![变量存储.png](./Linux学习笔记.assets/1600685218168.png) 
 
 ```
 CHAR1(0x3)=A
@@ -14153,7 +14153,7 @@ name=joker
 >
 > export命令将使系统在创建每一个新的shell时定义这个变量的一个拷贝。这个过程称之为变量输出。
 
-  ![shell父子关系.png](J:\homework\Linux学习笔记\Linux学习笔记.assets\1600685550727.png) 
+  ![shell父子关系.png](./Linux学习笔记.assets/1600685550727.png) 
 
 - 全局变量
 
@@ -15158,7 +15158,7 @@ answer: 加入判断
 > 注：格式非常重要，条件判断一定要注意前后空格
 > ```
 
-  ![流程判断11.png](J:\homework\Linux学习笔记\Linux学习笔记.assets\1601016825298.png) 
+  ![流程判断11.png](./Linux学习笔记.assets/1601016825298.png) 
 
 示例：
 
@@ -15187,7 +15187,7 @@ if [ $USER != "root" ]
 > fi  
 > ```
 
-  ![流程判断2.png](J:\homework\Linux学习笔记\Linux学习笔记.assets\1601016994805.png) 
+  ![流程判断2.png](./Linux学习笔记.assets/1601016994805.png) 
 
 示例：
 
@@ -15223,7 +15223,7 @@ fi
 > fi 					   结束判断
 > ```
 
-  ![流程判断3.png](J:\homework\Linux学习笔记\Linux学习笔记.assets\1601017300715.png) 
+  ![流程判断3.png](./Linux学习笔记.assets/1601017300715.png) 
 
 案例需求：
 判断内存的使用率
@@ -16225,13 +16225,13 @@ menu
 
 持续集成的目的，就是让产品可以快速迭代，同时还能保持高质量。它的核心措施是，代码集成到主干之前，必须通过自动化测试。只要有一个测试用例失败，就不能集成。 持续集成并不能消除 Bug，而是让它们非常容易的发现和改正。 
 
-![1642994536826](J:\homework\Linux学习笔记\Linux学习笔记.assets\1642994536826.png)
+![1642994536826](./Linux学习笔记.assets/1642994536826.png)
 
 **2. 持续交付**
 
 持续交付（Continuous delivery）指的是，频繁地将软件的新版本，交付给质量团队或者用户，以供评审。如果评审通过，代码就进入生产阶段。 持续交付可以看作持续集成的下一步，它强调的是，不管怎么更新，软件是随时随地可以交付的。
 
-![1642994556738](J:\homework\Linux学习笔记\Linux学习笔记.assets\1642994556738.png)
+![1642994556738](./Linux学习笔记.assets/1642994556738.png)
 
 **3. 持续部署**
 
@@ -16293,7 +16293,7 @@ DevOps 一词的来自于 Development 和 Operations 的组合，突出重视软
 
 现在的 IT 技术架构随着系统的复杂化不断的革新，从最期的所有服务在一个系统中，发展到现在的微服务架构、从纯手动操作到全自动流程、从单台物理机到云平台。
 
-![1643008013285](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643008013285.png)
+![1643008013285](./Linux学习笔记.assets/1643008013285.png)
 
 **3. DevOps如何落地**
 
@@ -16305,7 +16305,7 @@ DevOps 一词的来自于 Development 和 Operations 的组合，突出重视软
 - 持续交付和部署
 - 不断学习和创新
 
-![1643008234612](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643008234612.png)
+![1643008234612](./Linux学习笔记.assets/1643008234612.png)
 
 敏捷管理：一支训练有素的敏捷开发团队是成功实施 DevOps 的关键。
 
@@ -16313,7 +16313,7 @@ DevOps 一词的来自于 Development 和 Operations 的组合，突出重视软
 
 通过技术工具，把传统的手工操作转变为自动化流程，这不仅有利于提高产品开发、运维部署的效率，还将减少人为因素引起的失误和事故，提早发现问题并及时地解决问题，这样也保证了产品的质量。下图展示了 DevOps 自动化的流程：
 
-![1643008343092](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643008343092.png)
+![1643008343092](./Linux学习笔记.assets/1643008343092.png)
 
 IT 服务管理：可持续的、高可用的 IT 服务是保障业务正常的关键要素，它与业务是一个整体。
 
@@ -16681,9 +16681,9 @@ gitlab-ctl tail <service name>	# 查看服务的日志
 
 由于我们Gitlab系统是私有仓库，一般用户都是由管理员创建和分派的，所以我们需要关闭注册。
 
-![1643026716504](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643026716504.png)
+![1643026716504](./Linux学习笔记.assets/1643026716504.png)
 
-![1643026767340](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643026767340.png)
+![1643026767340](./Linux学习笔记.assets/1643026767340.png)
 
 
 
@@ -16691,9 +16691,9 @@ gitlab-ctl tail <service name>	# 查看服务的日志
 
 group（项目）下面可以创建subgroup，创建project（项目下的具体工程），添加user。group就是把相关的project或者user放在一起，进行统一的权限管理。
 
-![1643026806614](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643026806614.png)
+![1643026806614](./Linux学习笔记.assets/1643026806614.png)
 
-![1643026915121](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643026915121.png)
+![1643026915121](./Linux学习笔记.assets/1643026915121.png)
 
 visibility Level：选择谁可以访问该组：我们默认选择private,因为我建设的是私有仓库
 
@@ -16705,23 +16705,23 @@ Public：只要可以访问gitlab web页面的人就可以看到
 
 **3. 创建项目**
 
-![1643027943935](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643027943935.png)
+![1643027943935](./Linux学习笔记.assets/1643027943935.png)
 
 选择对应的组
 
-![1643027917707](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643027917707.png)
+![1643027917707](./Linux学习笔记.assets/1643027917707.png)
 
 **4. 创建用户**
 
-![1643027614970](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643027614970.png)
+![1643027614970](./Linux学习笔记.assets/1643027614970.png)
 
 添加用户到组
 
-![1643027656004](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643027656004.png)
+![1643027656004](./Linux学习笔记.assets/1643027656004.png)
 
 选择角色
 
-![1643027687961](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643027687961.png)
+![1643027687961](./Linux学习笔记.assets/1643027687961.png)
 
 **5. 添加SSH Key**
 
@@ -16735,9 +16735,9 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCuDQc9AnjAuRbJ891lJlzDKmdojxhG7rB9ZmhY2tri
 
 绑定到root用户
 
-![1643028551476](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643028551476.png)
+![1643028551476](./Linux学习笔记.assets/1643028551476.png)
 
-![1643028572522](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643028572522.png)
+![1643028572522](./Linux学习笔记.assets/1643028572522.png)
 
 把代码推到gitlab
 
@@ -16767,9 +16767,9 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDLaRtrkYgDWNvWcD8O0Rcn9uhTvGckIzLCs8XHuopd
 
 **7. root用户设置master分支保护**
 
-![1643099304281](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643099304281.png)
+![1643099304281](./Linux学习笔记.assets/1643099304281.png)
 
-![1643099392703](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643099392703.png)
+![1643099392703](./Linux学习笔记.assets/1643099392703.png)
 
 ```powershell
 # dev用户不允许推master分支，dev用户没有master和owner权限
@@ -16783,13 +16783,13 @@ error: failed to push some refs to 'git@192.168.88.128:test_Gitlab/git_test.git'
 
 **8. 用户提交dev分支代码，提合并代码申请**
 
-![1643100181876](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643100181876.png)
+![1643100181876](./Linux学习笔记.assets/1643100181876.png)
 
-![1643100255343](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643100255343.png)
+![1643100255343](./Linux学习笔记.assets/1643100255343.png)
 
 root用户进行合并
 
-![1643100912718](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643100912718.png)
+![1643100912718](./Linux学习笔记.assets/1643100912718.png)
 
 #### 10.4.4 Gitlab备份管理
 
@@ -16818,7 +16818,7 @@ total 2812
 
 测试：删库再恢复
 
-![1643102320577](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643102320577.png)
+![1643102320577](./Linux学习笔记.assets/1643102320577.png)
 
 GitLab 的恢复只能还原到与备份文件相同的 gitlab 版本的系统中，恢复时，停止连接到数据库的进程（也就是停止数据写入服务），但是保持 GitLab 是运行的。
 
@@ -16901,7 +16901,7 @@ tcp6       0      0 :::8080                 :::*                    LISTEN      
 
 浏览器输入 http://您服务器的ip地址:8080，访问 jenkins 服务
 
-![1643116431683](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643116431683.png)
+![1643116431683](./Linux学习笔记.assets/1643116431683.png)
 
 查看默认密码
 
@@ -16912,15 +16912,15 @@ tcp6       0      0 :::8080                 :::*                    LISTEN      
 
 此页面要用户选择初始化安装的插件，我们选择跳过此步，后面我们采用其他方式安装插件。
 
-![1643117194496](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643117194496.png)
+![1643117194496](./Linux学习笔记.assets/1643117194496.png)
 
 点击Jenkins安装配置
 
-![1643117593143](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643117593143.png)
+![1643117593143](./Linux学习笔记.assets/1643117593143.png)
 
 进入Jenkins页面
 
-![1643117502811](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643117502811.png)
+![1643117502811](./Linux学习笔记.assets/1643117502811.png)
 
 #### 10.5.2 Jenkins插件管理
 
@@ -16928,11 +16928,11 @@ Jenkins 本身是一个引擎、一个框架，只是提供了很简单功能，
 
 **1. 自动安装**
 
-![1643120871088](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643120871088.png)
+![1643120871088](./Linux学习笔记.assets/1643120871088.png)
 
 进入插件管理页面，点击可选插件，选择你需要安装的插件
 
-![1643120922700](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643120922700.png)
+![1643120922700](./Linux学习笔记.assets/1643120922700.png)
 
 **2. 手动安装插件**
 
@@ -16942,13 +16942,13 @@ Jenkins 本身是一个引擎、一个框架，只是提供了很简单功能，
 >
 > 国内的源：https://mirrors.tuna.tsinghua.edu.cn/jenkins/plugins/
 
-![1643125495364](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643125495364.png)
+![1643125495364](./Linux学习笔记.assets/1643125495364.png)
 
-![1643125621374](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643125621374.png)
+![1643125621374](./Linux学习笔记.assets/1643125621374.png)
 
 下载完成后，手动上传
 
-![1643125698207](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643125698207.png)
+![1643125698207](./Linux学习笔记.assets/1643125698207.png)
 
 #### 10.5.3 覆盖插件安装
 
@@ -16970,7 +16970,7 @@ total 0
 
 重启到我们在插件管理页面可以看到我们已经安装的插件
 
-![1643126492015](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643126492015.png)
+![1643126492015](./Linux学习笔记.assets/1643126492015.png)
 
 #### 10.5.4 Jenkins 常用目录及文件
 
@@ -16991,7 +16991,7 @@ total 0
 
 /etc/sysconfig/jenkins是Jenkins的主配置文件：我们在这里主要配置Jenkins的工作目录、启动用户、启动端口。
 
-![1643127237682](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643127237682.png)
+![1643127237682](./Linux学习笔记.assets/1643127237682.png)
 
 Jenkins默认的用户为jenkins,强烈建议生产环境使用jenkins用户，然后使用sudo进行授权。
 
@@ -17026,25 +17026,25 @@ drwxr-xr-x.   2 jenkins jenkins     6 Jan 26 23:59 workflow-libs
 
 #### 10.5.5 创建一个freestyle
 
-![1643130887221](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643130887221.png)
+![1643130887221](./Linux学习笔记.assets/1643130887221.png)
 
 勾选丢弃旧的构建：
 
-![1643131044560](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643131044560.png)
+![1643131044560](./Linux学习笔记.assets/1643131044560.png)
 
 由于每次构建都会生成很多构建产物，如果频繁构建会占用很多的空间，我们可以通过这几个选项控制构建产物的保留。一般建议选择保留最近5-10的构建为适宜，他会保留最后一次成功构建的job。
 
-![1643131222322](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643131222322.png)
+![1643131222322](./Linux学习笔记.assets/1643131222322.png)
 
 保存后构建
 
-![1643131419806](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643131419806.png)
+![1643131419806](./Linux学习笔记.assets/1643131419806.png)
 
-![1643131748202](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643131748202.png)
+![1643131748202](./Linux学习笔记.assets/1643131748202.png)
 
 构建成功
 
-![1643131855836](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643131855836.png)
+![1643131855836](./Linux学习笔记.assets/1643131855836.png)
 
 在 /var/lib/jenkins/jobs/my-freestyle-job 目录可以看到具体的配置及构建的目录文件。
 
@@ -17052,11 +17052,11 @@ drwxr-xr-x.   2 jenkins jenkins     6 Jan 26 23:59 workflow-libs
 
 我们使用上面的 job 进行配置，在“源码管理”部分配置拉取 Gitlab 上的 monitor 仓库，该仓库是一个纯 html 代码项目，首先在 Gitlab 上复制仓库地址。
 
-![1643354202322](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643354202322.png)
+![1643354202322](./Linux学习笔记.assets/1643354202322.png)
 
 然后回到 Jenkins 上 My-freestyle-job 配置页面，下拉到“源码管理”部分，勾选 git选项
 
-![1643354421340](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643354421340.png)
+![1643354421340](./Linux学习笔记.assets/1643354421340.png)
 
 如果报错有以下两种情况：
 
@@ -17064,25 +17064,25 @@ drwxr-xr-x.   2 jenkins jenkins     6 Jan 26 23:59 workflow-libs
 
 2.key认证失败，需要配置ssh认证
 
-![1643355344574](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643355344574.png)
+![1643355344574](./Linux学习笔记.assets/1643355344574.png)
 
-![1643354689050](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643354689050.png)
+![1643354689050](./Linux学习笔记.assets/1643354689050.png)
 
 根据提示信息显示为 key 认证失败，因为我们使用的 SSH 方式连接仓库，所以需要配置SSH 认证，实际上在前面我们学习 Gitlab 的时候，我们已经配置了 ci-node2 这台机子的 root用户的公钥在 Gitlab 上的 dev 用户。
 
 根据提示添加用户认证后，回到配置仓库页面，选择认证方式为新添加的认证，错误消失。
 
-![1643356282095](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643356282095.png)
+![1643356282095](./Linux学习笔记.assets/1643356282095.png)
 
 保存配置后，回到 job 主页面，点击“立即构建”，构建完成后，我们在工作空间内可以看到从 Gitlab 仓库拉到的代码。
 
-![1643356366912](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643356366912.png)
+![1643356366912](./Linux学习笔记.assets/1643356366912.png)
 
 同时我们在“console output”页面可以看到整个控制台输出内容。
 
-![1643356470898](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643356470898.png)
+![1643356470898](./Linux学习笔记.assets/1643356470898.png)
 
-![1643356532538](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643356532538.png)
+![1643356532538](./Linux学习笔记.assets/1643356532538.png)
 
 在“源码管理”配置部分，我们可以配置从分支获取代码，也可以配置从标签获取代码。
 
@@ -17125,7 +17125,7 @@ ssh ${host} "cd /var/www && rm -rf html && ln -s /var/www/${name}
 
 接下来我们在 Jenkins 上配置构建执行我们编写的部署脚本，回到 My-freestyle-job 配置页面，配置构建：
 
-![1643360440022](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643360440022.png)
+![1643360440022](./Linux学习笔记.assets/1643360440022.png)
 
 保存配置，回到 job 主页面，点击“立即构建”后，访问 httpd 服务的主页面，我们发现服务已经部署成功。
 
@@ -17137,15 +17137,15 @@ ssh ${host} "cd /var/www && rm -rf html && ln -s /var/www/${name}
 
 回到 My-freestyle-job 的配置页面，下拉到构建触发器部分，
 
-![1643369634258](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643369634258.png)
+![1643369634258](./Linux学习笔记.assets/1643369634258.png)
 
 勾选 gitlab 触发选项，进入具体配置页面
 
-![1643369924879](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643369924879.png)
+![1643369924879](./Linux学习笔记.assets/1643369924879.png)
 
 配置完成后保存
 
-![1643370081437](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643370081437.png)
+![1643370081437](./Linux学习笔记.assets/1643370081437.png)
 
 进入集成配置页面，复制 jenkins 触发器配置页面的 url 及 Token，配置完成后，在客户端执行push操作。
 
@@ -17155,21 +17155,21 @@ ssh ${host} "cd /var/www && rm -rf html && ln -s /var/www/${name}
 
 首先在 Jenkins 上配置，可以访问 Gitlab，打开 jenkins 系统管理--系统设置页面，下拉找到 Gitlab 部分
 
-![1643371647983](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643371647983.png)
+![1643371647983](./Linux学习笔记.assets/1643371647983.png)
 
 生成API Token
 
-![1643371764280](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643371764280.png)
+![1643371764280](./Linux学习笔记.assets/1643371764280.png)
 
 添加认证
 
-![1643371909657](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643371909657.png)
+![1643371909657](./Linux学习笔记.assets/1643371909657.png)
 
-![1643371997992](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643371997992.png)
+![1643371997992](./Linux学习笔记.assets/1643371997992.png)
 
 其次，在 job 配置页面添加构建后操作
 
-![1643372103642](J:\homework\Linux学习笔记\Linux学习笔记.assets\1643372103642.png)
+![1643372103642](./Linux学习笔记.assets/1643372103642.png)
 
 保存 job 配置，回到 job 主页面，执行“立即构建”。构建成功后，在 Gitlab 仓库，commits 列表页面。
 
@@ -17187,7 +17187,7 @@ ssh ${host} "cd /var/www && rm -rf html && ln -s /var/www/${name}
 yum install xorg-x11-xauth -y
 ```
 
-![image-20211009183345880](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211009183345880.png)
+![image-20211009183345880](./Linux学习笔记.assets/image-20211009183345880.png)
 
 打了绿色的勾说明已经解决
 
@@ -17214,7 +17214,7 @@ sudo fuser -k 8001/tcp  # (8001需要填你的端口)
 
 启动docker报错，查看docker状态报错信息如下：
 
-![image-20211106101208350](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211106101208350.png)
+![image-20211106101208350](./Linux学习笔记.assets/image-20211106101208350.png)
 
 解决方案：卸载docker重新安装新的docker
 
@@ -17242,7 +17242,7 @@ yum intall docker -y
 [root@localhost lib]# systemctl status docker
 ```
 
-![image-20211106101500854](J:\homework\Linux学习笔记\Linux学习笔记.assets\image-20211106101500854.png)
+![image-20211106101500854](./Linux学习笔记.assets/image-20211106101500854.png)
 
 #### 4. elink命令
 
