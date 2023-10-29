@@ -131,7 +131,7 @@
 
 ![1655519177719](./Python_notes.assets/1655519177719.png)
 
-- 8.进行验，打开终端,输入python，进入到交互模式,说明安装成功
+- 8.进行验证，打开终端,输入python，进入到交互模式,说明安装成功
 
 ![1639296246484](./Python_notes.assets./1639296246484.png)
 
@@ -357,7 +357,7 @@ if gender == '男':
 4.练习题
 
 ```python
-# 第一题:让用户输入一个数字,猜:如果数字>50,则输入大了;如果数字<=50,则输出小了.
+# 第一题:让用户输入一个数字,猜:如果数字>50,则输出大了;如果数字<=50,则输出小了.
 while True:
     num = input('输入数字:').strip()
     number = int(num)
@@ -384,55 +384,55 @@ else:
 
 - 循环打印"人生苦短,我用Python'"
 
-  ```python
-  while True:
-  	print('人生苦短,我用Python!')
-  # 无限循环
-  ```
+```python
+while True:
+	print('人生苦短,我用Python!')
+# 无限循环
+```
 
 - 通过循环，让count每次循环+1，控制循环次数
 
-  ```python
-  count = 1
-  while count < 11:
-      print(count)
-      count += 1
-  ```
+```python
+count = 1
+while count < 11:
+    print(count)
+    count += 1
+```
 
 - 通过循环，打印1-10
 
-  ```python
+```python
 count = 1
-  while True:
-      print(count)
-      if count == 10:
-          break
-      count += 1
-  ```
+while True:
+    print(count)
+    if count == 10:
+        break
+    count += 1
+```
 
 - 通过循环，打印1-10，但不打印7
 
-  ```python
-  count = 1
-  while count <11:
-  	if count != 7:
-  		print(count)
-  	count += 1
-  ```
+```python
+count = 1
+while count <11:
+	if count != 7:
+		print(count)
+	count += 1
+```
 
 #### 3.1.2 break
 
 - break代表终止当前循环，代码运行到break即终止
 
-  ```python
-  count = 1
-  while True:
-      print(count)
-      if count == 10:
-          break  # break 终止当前循环
-      count += 1
-  print('完了')
-  ```
+```python
+count = 1
+while True:
+    print(count)
+    if count == 10:
+        break  # break 终止当前循环
+    count += 1
+print('完了')
+```
 
 #### 3.1.3 continue
 
@@ -451,7 +451,7 @@ count += 1
 ```python
 count = 1
 while count <= 10:
-    if count == 7:  # 循环到7,不再往下走,回到while条件位置继续执行.
+    if count == 7:  # 循环到7,+1,不再往下走,回到while条件位置继续执行.
         count += 1
         continue
     print(count)
@@ -462,18 +462,18 @@ while count <= 10:
 
 - while else结构，while条件不满足，则执行else中的内容，break终止循环则不执行else
 
-  ```python
-  count = 1
-  while count <= 10:
-      print(count)
-      count += 1
-  else:
-      print('已结束')
-  ```
+```python
+count = 1
+while count <= 10;
+	print(count)
+    count +=  1
+else:
+    print("已结束")
+```
 
 ### 3.2 格式化输出
 
-- %s,占位符，指的是字符串
+- %s，占位符，指的是字符串
 
   ```python
   name = input('请输入姓名:')
@@ -490,7 +490,7 @@ while count <= 10:
   print(msg%(name,name,age,job,hobby))
   ```
 
-- %d,占位符，指的是数字
+- %d，占位符，指的是数字
 
   ```python
   name = input('>>>')
@@ -740,7 +740,7 @@ while count <= 10:
   ```python
   # 第一个值如果是转换成布尔值,如果是真,则value=第一个值
   # 第一个值如果是转换成布尔值,如果是假,则value=第二个值
-  # 如果有多个or条件,则从坐左到右依次进行上述的流程
+  # 如果有多个or条件,则从左到右依次进行上述的流程
   # 注意:0在or中为假
   # 示例:
       v1 = 0 or 1
@@ -835,13 +835,13 @@ while count <= 10:
   ```
 
   随着全球化的普及，发展到欧洲，亚洲等国家，发现这些根本不够用，所以创建了万国码。
-  因为全球语言很多，`ascii`不足以存储这么多对应关系，创建了一个超级密码本：万国码`unicode`
+  因为全球语言很多，`ASCII`不足以存储这么多对应关系，创建了一个超级密码本：万国码`unicode`
 
   ```python
   8 位 == 1个字节.hello h一个字符,e一个字符,he就不是一个字符.中国:中是一个字符,国是一个字符.
   ```
 
-  Unicode
+- **Unicode**
 
   Unicode：万国码 可以统计世界上的所有语言，一般用于内存计算，最少2个字节，最多4个字节
 
@@ -854,7 +854,6 @@ while count <= 10:
   英文：8位，1个字节表示。
   欧洲文字：16位，两个字节表示一个字符。 
   中文，亚洲文字：24位，三个字节表示。
-  
 
 utf-16 用最少用16位数。
 
@@ -898,7 +897,7 @@ age = 18
 - 只有两个值：True/False
 - 转换
   - 数字转布尔：0是False，其他都是True
-  - 字符串转布尔：“”是False，其他都是True
+  - 字符串转布尔：“ ”是False，其他都是True
   - 空列表[]/元组()/空字典{}/空集合set()都是False
 
 ### 4.3 字符串(str)
@@ -1152,15 +1151,7 @@ age = 18
   for item in name:
       print(item)
       break
-      print(234)
-  ```
-
-  ```python
-  name = 'alex'
-  for item in name:
-      print(item)
-      continue
-      print(234)
+      print(234)  # 不执行这行
   ```
 
   ```python
@@ -1170,7 +1161,7 @@ age = 18
       if i == 7:
           pass
       else:
-          print(i)
+        print(i)
   ```
 
 注意：for和while的应用场景，有穷尽优先使用for，无穷尽用while
@@ -1269,8 +1260,8 @@ age = 18
 - 步长
 
   ```python
-  user ＝ ["张三","李四",89]
-  val ＝ user[0:2:2]
+  user = ["张三","李四",89]
+  val = user[0:2:2]
   print(val) 
   ```
 
@@ -1304,16 +1295,12 @@ age = 18
   
   user = input('username:').strip()
   pwd = input('password:').strip()
-  for item in users:
-      res = item.split(',')
-      print(res)
-      username = res[0]
-      password = res[1]
-      if user == username and pwd == password:
-          print('登录成功')
-          break
+  if user == users[0] and pwd == users[1]:
+      print("登录成功")
+  else:
+      print("用户名或密码错误")
   ```
-
+  
 - insert()添加
 
   ```python
@@ -1369,6 +1356,17 @@ age = 18
   print(v1)
   ```
 
+- 找到列表中最大的数字
+
+  ```python
+  a = [1, 2, 3, 4, 5]
+  max_num = a[0]
+  for i in a:
+      if i > max_num:
+          max_num = i
+  print(max_num)
+  ```
+
 - index()索引取值
 
   ```python
@@ -1407,7 +1405,7 @@ age = 18
   print(users[0:3])
   ```
 
-- 步长（排除：`int`、`bool`）
+  - ; M,*~#1KM`899999999989 88888888888步长（排除：`int`、`bool`）
 
   ```python
   users = ("张三", "李四", "王五", "王五")
@@ -1538,7 +1536,7 @@ age = 18
     # print(info)
     ```
 
-    - update--->键不存在,则添加,存在,则更新
+    - update--->键不存在，则添加，存在，则更新
 
     ```python
     info = {'k1': 'v1', 'k2': 'v2'}
@@ -1650,7 +1648,7 @@ age = 18
     print(flag)
     
     # 方式二
-    if 'v2 in list(v.valuse())  # 强制转换成列表['v1', 'v2', 'v3'...]
+    if v2 in list(v.valuse())  # 强制转换成列表['v1', 'v2', 'v3'...]
     	pass
     # 请判断:k2,v2是否在其中
     val = v.get('k2')
@@ -1750,7 +1748,7 @@ set3 = {'1','alex',2,True,(1,2,[2,3,4])} # 报错
   print(v)
   ```
 
-- update()批量添加,更新
+- update()批量添加，更新
 
   ```python
   v = {1, 2, 'zhangsan'}
@@ -1960,9 +1958,9 @@ set3 = {'1','alex',2,True,(1,2,[2,3,4])} # 报错
 
 ### 4.9 深浅拷贝
 
-- **浅拷贝(copy)：** 拷贝父对象，不会拷贝对象的内部的子对象。
+- **浅拷贝(copy)：** 浅拷贝指的是创建一个新对象，但是只是复制原对象的引用，不会复制原对象内部的子对象，也就是说，新对象和原对象共享内部子对象，当原对象的内部子对象发生改变时，新对象也会发生改变。
 
-- **深拷贝(deepcopy)：** copy 模块的 deepcopy 方法，完全拷贝了父对象及其子对象 
+- **深拷贝(deepcopy)：** 深拷贝指的是创建一个新对象，并且复制原对象内部所有的子对象，也就是说，新对象的原对象互相独立，当原对象的内部子对象发生改变时，新对象不会受到影响。
 
 - 浅拷贝
 
@@ -2489,19 +2487,8 @@ while True:
     v.write(val)
     v.flush()
 
-v.close()
-```
-
-- flush，强制将缓存区中的数据写入到硬盘
-
-```python
-v = open('user_info.txt',mode='a',encoding='utf-8')
-while True:
-    val = input('请输入：')
-    v.write(val)
-    v.flush()  # 
-
-v.close()
+v.cl
+ose()
 ```
 
 ### 5.8 文件内容修改
@@ -2617,7 +2604,6 @@ with open("练习题/access.log", "r", encoding="utf-8") as file_obj:
 
 ```python
 with open("练习题/gupiap.log", "r", encoding="utf-8") as file_obj:
-    print(file_obj.readline())
     for line in file_obj:
         ret = float(line.split(",")[2])
         if ret > 20:
@@ -2691,7 +2677,6 @@ ID,用户名,头像
 
 ```python
 with open("files/mv.csv", "r", encoding="utf-8")as file_obj:
-    file_obj.readline()
     for line in file_obj:
         user_id, username, avatar_url = line.strip().split(",")
         if not os.path.exists("images"):
@@ -2707,7 +2692,7 @@ with open("files/mv.csv", "r", encoding="utf-8")as file_obj:
 
 #### 6.1.2 ini格式文件
 
-ini文件是Initialization File的缩写，平时用于存储软件的的配置文件。例如：MySQL数据库的配置文件。
+ini文件是Initialization File的缩写，平时用于存储软件的配置文件。例如：MySQL数据库的配置文件。
 
 ```ini
 [mysqld]
@@ -4272,7 +4257,7 @@ v2 = f4(1,7)
 
 ```python
 '''# 1. 写函数，计算一个列表中有多少个数字，打印： 列表中有%s个数字。
-#    提示：type('x') == int 判断是否是数字。'''
+# 提示：type('x') == int 判断是否是数字。'''
 
 
 # 方式一:
@@ -4748,19 +4733,20 @@ func(show)
 def func(arg):
     v1 = arg()
     print(v1)
-    
+
+
 def show():
-    print(666)
-    
-result = func(show)
-print(result)
+    return "ces"
+
+
+func(show)
 ```
 
 面试题：
 
 ```python
 def func():
-    print('花费查询')
+    print('话费查询')
 
 
 def bar():
@@ -4891,6 +4877,15 @@ v3 = func_list[2](1,2)
 print(v3)
 ```
 
+- 找出列表中最大的数字
+
+```python
+from functools import reduce
+a=[1,2,3,4,5]
+max_num=reduce(lambda x,y:x if x>y else y,a)
+print(max_num)
+```
+
 ### 6.8 内置函数
 
 - 自定义函数
@@ -5001,7 +4996,7 @@ print(v3)
                     end = pager * per_page_count
                     data = USER_LIST[start:end]
                     for item in data:
-                        print(item)
+            
             ```
 
     - 进制转换相关
@@ -5208,6 +5203,7 @@ for item in range(10):
     info.append(func(item))
 
 info[0]()
+
 info[1]()
 info[4]()
 ```
@@ -5385,7 +5381,7 @@ POOL.shutdown()
             if type(x) == int:
                 return True
             return False
-        result = filter(func,v1) # [11,]
+        result = filter(func,v1)  # [11,22,33,44]
         print(list(result))
         
         
@@ -5451,10 +5447,11 @@ func(0, 1)
 def func(a):
 	if a == 5:
 		return 10000
-	result  = func(a+1) + 10
-	return result
+	result = func(a+1) + 10
+	return result  # 当a==5时，递归返回4,3,2,1
 
 v = func(1)
+print(v)  # 10040
 ```
 
 示例五:
@@ -5465,6 +5462,7 @@ def func(a):
 	if a == 5:
 		return 10000
 	result = func(a+1) + 10
+    return result
 	
 v = func(1)
 
@@ -5475,6 +5473,7 @@ def func():
 	return inner
 
 v = func()
+print(v())
 ```
 
 递归与栈的关系总结：
@@ -5489,7 +5488,7 @@ v = func()
 
 实现效果：可以在不改变原函数内部代码和调用方式的前提下，实现在函数执行和执行扩展功能。
 
-适用场景：多个函数系统统一在执行前后自定义一些功能。
+适用场景：多个函数统一在执行前后自定义一些功能。
 
 现在给你一个函数，在不修改函数源码的前提下，实现在函数执行前和执行后分别输入 "before" 和 "after"。
 
@@ -5731,7 +5730,7 @@ func3(999)
 
     - 实现效果：可以在不改变原函数内部代码 和 调用方式的前提下，实现在函数执行和执行扩展功能。
 
-    - 适用场景：多个函数系统统一在执行前后自定义一些功能。
+    - 适用场景：多个函数统一在执行前后自定义一些功能。
 
 - 装饰器示例：
 
@@ -5788,20 +5787,26 @@ func3(999)
     # 写一个带参数的装饰器，实现：参数是多少，被装饰的函数就要执行多少次，把每次结果添加到列表中，最终返回列表。
     def xxx(counter):
         print('x函数')
+    
         def wrapper(func):
             print('wrapper函数')
-            def inner(*args,**kwargs):
+    
+            def inner(*args, **kwargs):
                 v = []
                 for i in range(counter):
-                data = func(*args,**kwargs) # 执行原函数并获取返回值
+                    data = func(*args, **kwargs)  # 执行原函数并获取返回值
                     v.append(data)
-            return v
+                return v
             return inner
+    
         return wrapper
+    
     
     @xxx(5)
     def index():
+        print("index函数")
         return 8
+    
     
     v = index()
     print(v)
@@ -29471,9 +29476,9 @@ jquery的$.ajax()方法 是做ajax技术经常使用的一个方法。
 
 - 响应格式
 
-      ![img](./Python_notes.assets/yuan_6.png) 
+  ![1655907113034](./Python_notes.assets/1655907113034.png)
 
-django请求生命周期：
+**Django请求生命周期：**
 
  <img src="./Python_notes.assets/202011130830231.png" alt="202011130830231.png"  /> 
 
@@ -29510,7 +29515,7 @@ django请求生命周期：
 
 - Web框架------>socket服务端
 
-    Web框架（Web framework）是一种开发框架，用来支持动态网站、网络应用和网络服务的开发。这大多数的Web框架提供了一套开发和部署网站的方式，也为Web行为提供了一套通用的方法。Web框架已经实现了很多功能，开发人员使用框架提供的方法并且完成自己的业务逻辑，就能快速开发web应用了。浏览器和服务器的是基于HTTP协议进行通信的。也可以说Web框架就是在以上十几行代码基础张扩展出来的，有很多简单方便使用的方法，大大提高了开发的效率。
+    Web框架（Web framework）是一种开发框架，用来支持动态网站、网络应用和网络服务的开发。为大多数的Web框架提供了一套开发和部署网站的方式，也为Web行为提供了一套通用的方法。Web框架已经实现了很多功能，开发人员使用框架提供的方法并且完成自己的业务逻辑，就能快速开发web应用了。浏览器和服务器的是基于HTTP协议进行通信的。也可以说Web框架就是在以上十几行代码基础张扩展出来的，有很多简单方便使用的方法，大大提高了开发的效率。
 
 ```python
 import socket
@@ -29540,37 +29545,37 @@ while True:
 
     wagiref（Web Server Gateway Interface）的简称，封装了socket服务端与客户端的交互，我们可以直接调用其功能，省去了大量的时间。
 
-    ```python
-    from wsgiref.simple_server import make_server
-    
-    
-    def application(eviron, start_response):
-    
-        # 按着http请求协议解析数据:eviron
-        # 按着http响应协议组装数据:start_response
-        print(eviron)
-        print(type(eviron))
-    
-        # 专注与web业务开发
-        # 获取当前路径
-        path = eviron.get('PATH_INFO')
-        start_response('200 OK', [('Content-Type', 'text/html')])
-        if path == '/login':
-            with open('login.html', 'r')as f:
-                data = f.read()
-            return [data.encode('gbk')]
-        elif path == '/index.html':
-            with open('index.html', 'r')as f:
-                data = f.read()
-            return [data.encode('gbk')]
-    
-    
-    # 封装socket链接前三步
-    httped = make_server("", 8061, application)
-    
-    # 等待用户链接 conn,addr = sock.accept()
-    httped.serve_forever()
-    ```
+```python
+from wsgiref.simple_server import make_server
+
+
+def application(eviron, start_response):
+
+    # 按着http请求协议解析数据:eviron
+    # 按着http响应协议组装数据:start_response
+    print(eviron)
+    print(type(eviron))
+
+    # 专注与web业务开发
+    # 获取当前路径
+    path = eviron.get('PATH_INFO')
+    start_response('200 OK', [('Content-Type', 'text/html')])
+    if path == '/login':
+        with open('login.html', 'r')as f:
+            data = f.read()
+        return [data.encode('gbk')]
+    elif path == '/index.html':
+        with open('index.html', 'r')as f:
+            data = f.read()
+        return [data.encode('gbk')]
+
+
+# 封装socket链接前三步
+httped = make_server("", 8061, application)
+
+# 等待用户链接 conn,addr = sock.accept()
+httped.serve_forever()
+```
 
 ### 13.3 django的下载与基本命令
 
@@ -41403,9 +41408,9 @@ Linux 内核开源项目有着为数众多的参与者。 绝大多数的 Linux 
 - 完全分布式
 - 有能力高效管理类似 Linux 内核一样的超大规模项目（速度和数据量）
 
-自诞生于 2005 年以来，Git 日臻成熟完善，在高度易用的同时，仍然保留着初期设定的目标。 它的速度飞快，极其适合管理大项目，有着令人难以置信的非线性分支管理系统
+自诞生于 2005 年以来，Git 日臻成熟完善，在高度易用的同时，仍然保留着初期设定的目标。 它的速度飞快，极其适合管理大项目，有着令人难以置信的非线性分支管理系统。
 
-**Git** 是一个开源的分布式版本控制软件,用以有效、高速的处理从很小到非常大的项目版本管理。 Git 最初是由*Linus Torvalds*设计开发的，用于管理Linux内核开发。Git 是根据GNU通用公共许可证版本2的条款分发的自由/免费软件，安装参见：https://git-scm.com/book/zh
+**Git** 是一个开源的分布式版本控制软件，用以有效、高速的处理从很小到非常大的项目版本管理。 Git 最初是由*Linus Torvalds*设计开发的，用于管理Linux内核开发。Git 是根据GNU通用公共许可证版本2的条款分发的自由/免费软件，安装参见：https://git-scm.com/book/zh
 
 **GitHub** 是一个基于Git的远程文件托管平台（同GitCafe、BitBucket和GitLab等）。
 
@@ -41666,7 +41671,7 @@ print("提交短视频")
 
 ###### 16.3.2.4.1 分支
 
-分支可以给使用者提供多个环境，意味着你可以把你的工作从主线上分离出来，以免影响发开主线。
+分支可以给使用者提供多个环境，意味着你可以把你的工作从主线上分离出来，以免影响主线开发。
 
 ###### 16.3.2.4.2 紧急修复bug
 
@@ -41782,7 +41787,7 @@ Administrator@74NTQEQTP61QRX3 MINGW64 /g/homework/dbhot (master)
 $ git branch
 ```
 
-学习参考上图，小P也可以按照着这样的流程进行开发，如果遇到上文开发到一般需要临时修复Bug的情况，可以按照下图的流程进行：
+学习参考上图，小P也可以按照着这样的流程进行开发，如果遇到上文开发到一半需要临时修复Bug的情况，可以按照下图的流程进行：
 
 ![1639276593788](./Python_notes.assets/1639276593788.png)
 
@@ -42751,7 +42756,7 @@ age = 18
 hobby = ["篮球", "美女"]
 ```
 
-![1645069079709](Python_notes.assets/1645069079709.png)
+![1645069079709](./Python_notes.assets/1645069079709.png)
 
 在C语言源码中如何体现每个对象中都有相同的值：PyObject结构体（封装了3个值）
 
@@ -42790,7 +42795,7 @@ v3 = (1,2,3)
 
 PyObject存放公共的上一个、下一个及类型和引用个数，每一个对象都有
 
-PyVarObject存放多个元素组成的时候存在公共的值，比如int类型
+PyVARObject存放多个元素组成的时候存在公共的值，比如int类型
 
 每个对象中有ob_refcnt就是引用计数器，值默认为1，当有其他变量引用对象时，引用计数器就会发生变化。
 
