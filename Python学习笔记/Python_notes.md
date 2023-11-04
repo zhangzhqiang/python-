@@ -6899,9 +6899,9 @@ print(type(v2))  # <class 'str'>
 - 时间戳
 
 ```python
-# 时间戳戈斯和--->转换为datetime格式
+# 时间戳--->转换为datetime格式
 import time
-form datetime import datetime
+from datetime import datetime
 ctime = time.time()
 print(ctime)  # 1623923966.2895925
 v1 = datetime.fromtimestamp(ctime)
@@ -6927,16 +6927,16 @@ print(v2)  # 1623924093.286256
 - 结构化时间          元组包含了：年、日、星期等... `time.struct_time`    即：`time.localtime()`
 
     ```python
-    索引（Index）    属性（Attribute）    值（Values）
-    0     tm_year（年）                 比如2011 
-    1     tm_mon（月）             1 - 12
-    2     tm_mday（日）                 1 - 31
-    3     tm_hour（时）                 0 - 23
-    4     tm_min（分）             0 - 59
-    5     tm_sec（秒）             0 - 61
-    6     tm_wday（weekday）            0 - 6（0表示周日）
-    7     tm_yday（一年中的第几天）    1 - 366
-    8     tm_isdst（是否是夏令时）            默认为-1
+    索引（Index）    属性（Attribute）    		值（Values）
+    0     		    tm_year（年）              比如2011 
+    1     		    tm_mon（月）               1 - 12
+    2     		    tm_mday（日）              1 - 31
+    3     		    tm_hour（时）              0 - 23
+    4     		    tm_min（分）             	0 - 59
+    5     		    tm_sec（秒）               0 - 61
+    6     		    tm_wday（weekday）         0 - 6（0表示周日）
+    7     		    tm_yday（一年中的第几天）     1 - 366
+    8     		    tm_isdst（是否是夏令时）      默认为-1
     ```
 
 示例：
@@ -6952,9 +6952,9 @@ print(time.gmtime())  # 是将一个时间戳转换为UTC时区（0时区）的s
 print(time.localtime())  # 将一个时间戳转换为当前时区的struct_time。secs参数未提供，则以当前时间为准。
 print(time.strptime('2019-06-23 12:53:26', '%Y-%m-%d %H:%M:%S'))  # 把一个格式化时间字符串转化为struct_time
 
-print(time.strftime('%Y-%m-%d'))  # 默认当前时间
+print(time.strftime('%Y-%m-%d'))  # 默认当前日期
 print(time.strftime('%Y-%m-%d', time.localtime()))  # 默认当前时间
-print(time.asctime())  # 年月日,星期,当前时间
+print(time.asctime())  # 星期，月日,当前时间，年
 
 import datetime
 
@@ -6981,7 +6981,7 @@ json格式，是一种数据格式（本质上就是字符串，常用于网路�
 >
 > 1.用python开发的系统，有列表类型和字典等类型的数据
 >
-> 2.用java开发的系统，有数据和map等l欸行的数据
+> 2.用java开发的系统，有数据和map的数据
 >
 > 语言不同，基础数据类型格式都不同，为了方便数据传输，大家约定一个格式，json格式，每种语言都是将自身的数据类型转换为json格式，也可以将json格式转换为自身的数据类型。
 
@@ -7046,7 +7046,7 @@ json格式，是一种数据格式（本质上就是字符串，常用于网路�
     data = [
         {
             "id": 1,
-            "name": "joker",
+            "name": "joker人",
             "age": 18
         },
         {
@@ -7059,17 +7059,16 @@ json格式，是一种数据格式（本质上就是字符串，常用于网路�
     print(type(data))
     
     ret = json.dumps(data)
-    print(ret)  # <class 'list'>
+    print(ret)  # [{"id": 1, "name": "joker\u4eba", "age": 18}, {"id": 1, "name": "iker", "age": 18}]
     print(type(ret))  # <class 'str'>
-    
     
     ret = json.dumps(data, ensure_ascii=False)
     print(ret)  # '[{"id": 1, "name": "joker", "age": 18}, {"id": 1, "name": "iker", "age": 18}]
     ```
-
-    实例：json格式数据类型转化为python格式
-
-    ```python
+    
+实例：json格式数据类型转化为python格式
+    
+```python
     import json
     
     data_str = '[{"id": 1,"name": "joker","age": 18},{"id": 1,"name": "iker","age": 18}]'
@@ -7079,7 +7078,7 @@ json格式，是一种数据格式（本质上就是字符串，常用于网路�
     print(data_list)  # [{'id': 1, 'name': 'joker', 'age': 18}, {'id': 1, 'name': 'iker', 'age': 18}]
     print(type(data_list))  # <class 'list'>
     ```
-
+    
 - python的数据类型转换为json格式，对数据类型是有要求的，默认只支持：
 
     ```
@@ -7139,12 +7138,10 @@ json格式，是一种数据格式（本质上就是字符串，常用于网路�
     print(ret)  # [{"id": 1, "name": "joker", "age": 18, "size": "18.99", "ctime": "2021-06-17"}, {"id": 1, "name": "iker", "age": 18, "size": "8.17", "ctime": "2021-06-17"}]
     ```
 
-    
-
 - `json`和`picke`：
 
-    - `json`：所有语言通用，缺点只能转化基本数据类型
-    - `pickle`：有点python所有东西都能数据化，缺点只能python反序列化
+    - `json`：优点所有语言通用，缺点只能转化基本数据类型
+    - `pickle`：优点python所有东西都能数据化，缺点只能python反序列化
 
 ####  7.8.2 pickle
 
@@ -7218,7 +7215,7 @@ xml的格式如下，就是通过<>节点来区别数据结构的:
 </data>
 ```
 
-xml协议在各个语言里的都 是支持的，在python中可以用以下模块操作xml 　　
+xml协议在各个语言里的都是支持的，在python中可以用以下模块操作xml 　　
 
 ```python
 import xml.etree.ElementTree as ET
@@ -7353,37 +7350,45 @@ k2:v2
 [group2]
 k1 = v1
 
-import ConfigParser
+import configparser
 
-config = ConfigParser.ConfigParser()
+config = configparser.ConfigParser()
 config.read('i.cfg')
 
 # ########## 读 ##########
-#secs = config.sections()
-#print(secs)
-#options = config.options('group2') # 获取指定section的keys
-#print(options)
+#读取配置文件的节点
+secs = config.sections()
+print(secs)
 
-#item_list = config.items('group2') # 获取指定 section 的 keys & values ,key value 以元组的形式
-#print(item_list)
+# 获取指定section的keys
+options = config.options('group2') 
+print(options)
 
-#val = config.get('group1','key') # 获取指定的key 的value
-#val = config.getint('group1','key')
+# 获取指定 section 的 keys & values ,key value 以元组的形式展示
+item_list = config.items('group2')
+print(item_list)
+
+# 获取指定的key 的value
+val = config.get('group1','k1')
+print(val)
 
 # ########## 改写 ##########
-#sec = config.remove_section('group1') # 删除section 并返回状态(true, false)
-#config.write(open('i.cfg', "w")) # 对应的删除操作要写入文件才会生效
+# 删除section 并返回状态(true, false)
+sec = config.remove_section('group1')
+# 对应的删除操作要写入文件才会生效
+config.write(open('i.cfg', "w")) 
 
-#sec = config.has_section('wupeiqi')
-#sec = config.add_section('wupeiqi')
-#config.write(open('i.cfg', "w")) # 
+# 添加完要写入文件才会生效
+sec = config.has_section('wupeiqi')
+sec = config.add_section('wupeiqi')
+config.write(open('i.cfg', "w"))
 
 
-#config.set('group2','k1',11111)
-#config.write(open('i.cfg', "w"))
+config.set('group2','k1',11111)
+config.write(open('i.cfg', "w"))
 
-#config.remove_option('group2','age')
-#config.write(open('i.cfg', "w"))
+config.remove_option('group2','age')
+config.write(open('i.cfg', "w"))
 ```
 ~~~
 
@@ -7551,7 +7556,7 @@ logging.info('So should this')
 logging.warning('And this, too')
 ```
 
-其中下面这句中的level=loggin.INFO意思是，把日志纪录级别设置为INFO，也就是说，只有比日志是INFO或比INFO级别更高的日志才会被纪录到文件里，在这个例子， 第一条日志是不会被纪录的，如果希望纪录debug的日志，那把日志级别改成DEBUG就行了。
+其中下面这句中的level=loggin.INFO意思是，把日志纪录级别设置为INFO，也就是说，只有比日志是INFO或比INFO级别更高的日志才会被纪录到文件里，在这个例子，第一条日志是不会被纪录的，如果希望纪录debug的日志，那把日志级别改成DEBUG就行了。
 
 ```python
 logging.basicConfig(filename='example.log',level=logging.INFO)
@@ -7563,7 +7568,7 @@ logging.basicConfig(filename='example.log',level=logging.INFO)
 
 ```python
 import logging
-logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
+logging.basicConfig(format="%(asctime)s %(message)s", datefmt="%Y/%m/%d %H:%M:%S %p")
 logging.warning('is when this event was logged.')
 
 # 输出
@@ -7791,7 +7796,9 @@ logger.warning("test14")
 ```python
 '.'     默认匹配除\n之外的任意一个字符，若指定flag DOTALL,则匹配任意字符，包括换行
 '^'     匹配字符开头，若指定flags MULTILINE,这种也可以匹配上(r"^a","\nabc\neee",flags=re.MULTILINE)
-'$'     匹配字符结尾， 若指定flags MULTILINE ,re.search('foo.$','foo1\nfoo2\n',re.MULTILINE).group() 会匹配到foo1
+
+'$'     匹配字符结尾， 若指定flags MULTILINE re.search('foo.$','foo1\nfoo2\n',re.MULTILINE).group() 会匹配到foo1
+
 '*'     匹配*号前的字符0次或多次， re.search('a*','aaaabac')  结果'aaaa'
 '+'     匹配前一个字符1次或多次，re.findall("ab+","ab+cd+abb+bba") 结果['ab', 'abb']
 '?'     匹配前一个字符1次或0次 ,re.search('b?','alex').group() 匹配b 0次
@@ -7861,7 +7868,7 @@ data_list = re.findall("[a-z]", text)
 print(data_list)  # ['a', 's', 'd', 'f', 'l', 'm', 'n', 'v']
 ```
 
-- 匹配除换行以外的任意字符
+- 匹配除换行以外的带t字符
 
 ```python
 import re
@@ -8058,7 +8065,7 @@ else:
 ```
 
 **5.特殊字符**
-由于正则表达式中`*.{}()`等都具有特殊的含义，所以如果想要再正则中匹配这种指定的字符，需要转义，例如：
+由于正则表达式中`*.{}()`等都具有特殊的含义，所以如果想要在正则中匹配这种指定的字符，需要转义，例如：
 
 ```python
 import re
@@ -8131,7 +8138,7 @@ else:
     print(content)
 ```
 
-- serach，浏览挣个字符串去匹配第一个，未匹配成功返回None
+- serach，浏览整个字符串去匹配第一个，未匹配成功返回None
 
 ```python
 import re
@@ -8306,7 +8313,7 @@ killer
 
 ### 8.1 面向对象程序设计
 
-编程范式
+**编程范式**
 
 一个程序是程序员为了得到一个任务结果而编写的一组指令的集合，正所谓条条大路通罗马，实现一个任务的方式有很多种不同的方式， 对这些不同的编程方式的特点进行归纳总结得出来的编程方式类别，即为编程范式。
 
@@ -8318,7 +8325,7 @@ killer
 
 面向过程又被称为top-down languages， 就是程序从上到下一步步执行，一步步从上到下，从头到尾的解决问题 。核心是过程二字，过程指的是解决问题的步骤，设计一条流水线,机械式的思维方式。
 
-优点：复杂的问题流程化,进而简单化
+优点：复杂的问题流程化，进而简单化
 
 缺点：可扩展性差
 
@@ -8384,7 +8391,7 @@ if __name__ == '__main__':
     main()
 ```
 
-建议：如果你只是写一些简单的脚本，去做一些一次性任务，用面向过程的方式是极好的，但如果你要处理的任务是复杂的，且需要不断迭代和维护 的， 那还是用面向对象最方便了。
+建议：如果你只是写一些简单的脚本，去做一些一次性任务，用面向过程的方式是极好的，但如果你要处理的任务是复杂的，且需要不断迭代和维护的， 那还是用面向对象最方便了。
 
 #### 8.1.2 面向对象编程(Object Oriented Programing)
 
@@ -8438,7 +8445,7 @@ print(stu3)
 
 - 什么是面向对象？
 
-  **面向过程：**将需要解决的问题按步骤划分，一步一步完成每一个步骤，而且     步骤之间有联系。
+  **面向过程：**将需要解决的问题按步骤划分，一步一步完成每一个步骤，而且步骤之间有联系。
 
   优点：复杂问题可以分步完成
 
@@ -8472,9 +8479,9 @@ print(stu3)
 
   在编程中：先有类，才能创建符合类特征的对象
 
-总结：面对对象的思想就是用类和对象来解决问题
+总结：面向对象的思想就是用类和对象来解决问题
 
-面对对象编程的本质：通过使用不同的对象来完成程序
+面向对象编程的本质：通过使用不同的对象来完成程序
 
 #### 8.1.4 名词解释
 
@@ -8484,7 +8491,7 @@ print(stu3)
 
 **方法：**人类不止有身高、年龄、性别这些属性，还能做好多事情，比如说话、走路、吃饭等，相比较于属性是名词，说话、走路是动词，这些动词用程序来描述就叫做方法。
 
-**实例(对象)：**一个对象即是一个类的实例化后实例，一个类必须经过实例化后方可在程序中调用，一个类可以实例化多个对象，每个对象亦可以有不同的属性，就像人类是指所有人，每个人是指具体的对象，人与人之前有共性，亦有不同
+**实例(对象)：**一个对象即是一个类的实例化后的实例，一个类必须经过实例化后方可在程序中调用，一个类可以实例化多个对象，每个对象亦可以有不同的属性，就像人类是指所有人，每个人是指具体的对象，人与人之前有共性，亦有不同
 
 **实例化：**把一个类转变为一个对象的过程就叫实例化
 
@@ -8494,7 +8501,7 @@ print(stu3)
 
 ```python
 class LuffyStudent:
-    shool = 'luffycitry'  # 数据属性
+    school = 'luffycitry'  # 数据属性
 
     def learn(self):  # 函数属性
         print('is learning')
@@ -8514,13 +8521,13 @@ class LuffyStudent:
 ```python
 # 查看类的名称空间
 print(LuffyStudent.__dict__)
-print(LuffyStudent.__dict__['shool'])
+print(LuffyStudent.__dict__['school'])
 print(LuffyStudent.__dict__['eat'])
 
 # 注意：
   1.类中可以有任意python代码，这些代码在类定义阶段便会执行
   2.因而会产生新的名称空间，用来存放类的变量名与函数名，可以通过ThisIsPerson.__dict__查看
-  3.对于经典类来说我们可以通过该字典操作类名称空间的名字（新式类有限制），但python为我们提供专门的.语法
+  3.对于经典类来说我们可以通过该字典操作类名称空间的名字（新式类有限制），但python为我们提供专门的语法.
   4.点是访问属性的语法，类中定义的名字，都是类的属性
 ```
 
@@ -8529,7 +8536,7 @@ print(LuffyStudent.__dict__['eat'])
 ```python
 # 查看
 print(LuffyStudent.shool)  # 等同于 print(LuffyStudent.__dict__['shool'])
-print(LuffyStudent.learn)  # 等同于 print(LuffyStudent.__dict__['eat'])
+print(LuffyStudent.learn)  # 等同于 print(LuffyStudent.__dict__['learn'])
 
 # 增加
 LuffyStudent.county = 'China'
