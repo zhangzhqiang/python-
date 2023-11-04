@@ -5239,7 +5239,7 @@ v2()
 - 闭包应用场景1：封装数据防止污染全局
 
 ```python
-name = "joker"
+name = "joker"  # 污染全局
 
 def f1():
     print(name)
@@ -5255,7 +5255,7 @@ def f4():
 ```
 
 ```python
-def func(age):
+def func(age):  # 闭包实现
     name = "joker"
     def f1():
     	print(name, age)
@@ -5788,20 +5788,24 @@ func3(999)
     # 写一个带参数的装饰器，实现：参数是多少，被装饰的函数就要执行多少次，把每次结果添加到列表中，最终返回列表。
     def xxx(counter):
         print('x函数')
+    
         def wrapper(func):
             print('wrapper函数')
-            def inner(*args,**kwargs):
+    
+            def inner(*args, **kwargs):
                 v = []
                 for i in range(counter):
-                data = func(*args,**kwargs) # 执行原函数并获取返回值
-                    v.append(data)
-            return v
+                    data = func(*args, **kwargs)  # 执行原函数并获取返回值
+                v.append(data)
+                return v
             return inner
         return wrapper
+    
     
     @xxx(5)
     def index():
         return 8
+    
     
     v = index()
     print(v)
@@ -5959,7 +5963,9 @@ func3(999)
     v4 = [func for i in range(10)]
     
     v5 = [lambda : 100 for i in range(10)]
-    result = v5[9]()
+    for i in v5:
+        ret = i()
+        print(ret)
     
     def func():
         return i
@@ -6608,7 +6614,7 @@ def get_random_code(length=6):
 
 
 code = get_random_code()
-print(code)
+print(code)  # SQEKYI
 
 
 import random # 导入一个模块 
@@ -41985,8 +41991,11 @@ $ git commit -m "新功能上线"
 
 GitHub，一个基于Git实现的代码托管的平台，可以将内容以及版本记录在远程也保存一份，这样就不用U盘咯（类似于云盘）。PS: 类似GitHub的产品还有许多，如：GitLab、Bitbucket、码云等。
 
+<<<<<<< HEAD
 <img src="Python_notes.assets/425762-20170811191610632-470737695.png" alt="img" style="zoom: 50%;" />
 
+=======
+>>>>>>> dev
 基于GitHub实现代码托管：
 
 - 注册一个GitHub账号
@@ -42724,6 +42733,28 @@ git config --system user.name "joker"
 git config --system user.email "zq15010008824@163.com"
 
 # 注：需要由root权限
+```
+
+- 查看全局配置用户名和邮箱
+
+```python
+git config --global user.name
+git config --global user.email
+```
+
+- 查看当前仓库配置用户名和邮箱
+
+```python
+git config user.name
+git config user.email
+```
+
+- 查看提交历史中的作者和提交者
+
+```python
+git log --pretty=format:"%an <%ae>"
+git log --pretty=format:"%cn <%ce>"
+# 第一条命令将显示提交历史中的作者，第二条命令将显示提交历史中的提交者。
 ```
 
 应用场景：
