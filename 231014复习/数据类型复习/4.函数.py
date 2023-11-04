@@ -317,6 +317,34 @@
 #         print('wrapper函数')
 #
 #         def inner(*args, **kwargs):
+#             v = []
+#             for i in range(counter):
+#                 data = func(*args, **kwargs)  # 执行原函数并获取返回值
+#             v.append(data)
+#             return v
+#
+#         return inner
+#
+#     return wrapper
+#
+#
+# @xxx(5)
+# def index():
+#     print("index函数")
+#     return 8
+#
+#
+# v = index()
+# print(type(v))
+# print(v)
+
+# def xxx(counter):
+#     print('x函数')
+#
+#     def wrapper(func):
+#         print('wrapper函数')
+#
+#         def inner(*args, **kwargs):
 #             value = 0
 #             for i in range(counter):
 #                 data = func(*args, **kwargs)  # 执行原函数并获取返回值
@@ -354,3 +382,125 @@
 # a = [1, 2, 3, 4, 5, 5]
 # max_num = reduce(lambda x, y: x if x > y else y, a)
 # print(max_num)
+
+# 推导式
+# v3 = [99 if i>5 else 66  for i in range(10)]
+# print(v3)
+
+# v5 = [lambda: 100 for i in range(10)]
+# # result = v5[2]()
+# for i in v5:
+#     ret = i()
+#     print(ret)
+
+# v8 = [lambda x: x * i for i in range(10)]
+# ret = v8[7](2)
+# print(ret)
+
+# v9 = [i for i in range(10) if i > 5]
+# print(v9)
+#
+# v1 = {'k' + str(i): i for i in range(10)}
+# print(v1)
+
+# info = {
+#     "name": "武沛齐",
+#     "email": "xxx@live.com",
+#     "gender": "男",
+# }
+#
+# res = ";".join(["{}-{}".format(k, v) for k, v in info.items()])
+# print(res)
+#
+# def func():
+#     print(123)
+#
+#
+# data_list = [func for i in range(10)]
+#
+# print(data_list)
+
+# def num():
+#     return (lambda x: i * x for i in range(4))
+#
+#
+# # 1. num()并获取返回值  生成器对象
+# # 2. for循环返回值
+# # 3. 返回值的每个元素(2)
+# result = [m(2) for m in num()]  # [0,2,4,6 ]
+# print(result)
+
+
+# 生成器
+
+# def func():
+#     print(111)
+#     yield 1
+#
+#     print(222)
+#     yield 2
+#
+#     print(333)
+#     yield 3
+#
+#     print(444)
+#
+#
+# data = func()
+# for item in data:
+#     print(item)
+
+# import random
+#
+# def get_random_num(max_count):
+#     counter = 0
+#     while counter < max_count:
+#         yield random.randint(1000, 9999)
+#         counter += 1
+# data_list = get_random_num(2000000)
+# print(next(data_list))
+# # 使用时，去data_list中获取
+
+# def func():
+#     print(111)
+#     v1 = yield 1
+#     print(v1)
+#
+#     print(222)
+#     v2 = yield 2
+#     print(v2)
+#
+#     print(333)
+#     v3 = yield 3
+#     print(v3)
+#
+#     print(444)
+#
+#
+# data = func()
+#
+# n1 = data.send(None)
+# print(n1)
+#
+# n2 = data.send(666)
+# print(n2)
+#
+# n3 = data.send(777)
+# print(n3)
+#
+# n4 = data.send(888)
+# print(n4)
+
+
+import random
+
+
+def get_random_code(length=6):
+    data = []
+    for i in range(length):
+        v = random.randint(65, 90)
+        data.append(chr(v))
+    return "".join(data)
+
+ret = get_random_code()
+print(ret)
