@@ -7665,7 +7665,7 @@ pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple virtualenv
 
 # 2.通过命令创建虚拟环境，通过pip安装的第三方库会放到虚拟环境中
 --python=python3：指定venv虚拟解释器，以哪个解释器为本体
-这个命令如果你用相对陆路径，就得注意你在哪执行的此命令
+这个命令如果你用相对路径，就得注意你在哪执行的此命令
 [root@localhost bin]# virtualenv --python=python3  venv1
 
 # 3.创建好venv1之后，需要激活方可使用，这个激活其实就是在修改PATH而已
@@ -7685,7 +7685,7 @@ setuptools 58.1.0
 
 
 # 5.在venv1中安装django1
-(venv1) [root@s25linux opt]# pip3 install -i https://pypi.douban.com/simple django==1.11.9
+(venv1) [root@s25linux opt]# pip3 install -i https://pypi.douban.com/simple  django==1.11.25
 
 # 6.再开一个ssh窗口，再创建venv2，用于运行django2 版本
 virtualenv --python=python  venv2
